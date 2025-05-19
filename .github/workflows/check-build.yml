@@ -1,4 +1,4 @@
-name: Check and Update PatchNotesText.lua
+name: Check WoW Version/Build
 
 on:
   schedule:
