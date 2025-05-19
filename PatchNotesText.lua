@@ -5,10 +5,14 @@
 -- License: NA
 -- For more information, visit the project repository.
 
+-- Variables used by check_build.py
+PatchNotesDelivered_PatchVersion = "11.1.5"
+PatchNotesDelivered_Build = 00000  -- numeric, without quotes
+
 -- Initialize the global patch notes variable
 PatchNotesDelivered_Text = {
-    version = "11.1.5",
-    build = "00000", -- /script print(GetBuildInfo())
+    version = PatchNotesDelivered_PatchVersion,
+    build = PatchNotesDelivered_Build,
     gameChanges = [[
         • <Game Changes>
     ]],
