@@ -20,13 +20,13 @@ PatchNotesDelivered = AceAddon:NewAddon("PatchNotesDelivered", "AceConsole-3.0",
 local dataBroker = LDB:NewDataObject("PatchNotesDelivered", {
     type = "data source",
     text = "PND",
-    -- TODO: Replace with custom icon
+    -- @TODO: Replace with custom icon
     icon = "Interface\\AddOns\\PatchNotesDelivered\\icon",
     OnClick = function(_, button)
         if button == "LeftButton" then
             PatchNotesDelivered:ShowPatchNotes()
         elseif button == "RightButton" then
-            -- TODO: Add right click options menu
+            -- @TODO: Add right click options menu
             print("PatchNotesDelivered: Right-click menu coming soon!")
         end
     end,
@@ -63,7 +63,7 @@ function PatchNotesDelivered:OnInitialize()
                 if button == "LeftButton" then
                     self:TogglePatchNotes()
                 elseif button == "RightButton"
-                    -- TODO: Add right click options menu
+                    -- @TODO: Add right click options menu
                     self:Print("PatchNotesDelivered: Right-click menu coming soon!")
                 end
             end,
