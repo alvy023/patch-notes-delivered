@@ -1,16 +1,16 @@
 # Third-Party Notices
 
 This project includes the following third-party libraries. Each library is the property of its respective authors and is included under its own license terms.
-
-<br>
+<br><br>
 
 ## Ace3
 
+**Authors:** Ace3 Development Team <br>
 **Repository:** https://github.com/Stanzilla/Ace3  
 **Components Used:** AceAddon-3.0, AceConsole-3.0, AceDB-3.0, AceEvent-3.0, CallbackHandler-1.0, LibStub  
 **License:**
-<br>
-"Copyright (c) 2007, Ace3 Development Team 
+<br><br>
+Copyright (c) 2007, Ace3 Development Team 
 
 All rights reserved.
 
@@ -38,22 +38,41 @@ PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR
 PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF
 LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
 NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
-SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE."
-
-<br>
+SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+<br><br>
 
 ## LibDataBroker-1.1
 
+**Authors:** Tekkub <br>
 **Repository:** https://www.wowace.com/projects/libdatabroker-1-1  
-**License:** MIT
+**License:** 
+<br><br>
+Public Domain
 
-<br>
+This software has been released into the public domain by the author(s).
+You may use, modify, and distribute it freely for any purpose, commercial or non-commercial, with or without attribution.
+<br><br>
 
 ## LibDBIcon-1.0
 
+**Authors:** Nevcairiel, the LibDBIcon contributors <br>
 **Repository:** https://www.wowace.com/projects/libdbicon-1-0  
-**License:** MIT
+**License:**
+<br><br>
+LGPL v2.1 or later
 
-<br>
+This library is free software; you can redistribute it and/or modify it
+under the terms of the GNU Lesser General Public License as published by
+the Free Software Foundation; either version 2.1 of the License, or
+(at your option) any later version.
+
+This library is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+Lesser General Public License for more details.
+
+You should have received a copy of the GNU Lesser General Public License
+along with this library; if not, see <http://www.gnu.org/licenses/>.
+<br><br>
 
 These libraries are used in accordance with their respective licenses. No changes were made to the source code of the above libraries.
