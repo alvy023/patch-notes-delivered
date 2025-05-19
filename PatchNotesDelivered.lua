@@ -10,9 +10,32 @@ local AceAddon = LibStub("AceAddon-3.0")
 local AceConsole = LibStub("AceConsole-3.0")
 local AceDB = LibStub("AceDB-3.0")
 local AceEvent = LibStub("AceEvent-3.0")
+local LDB = LibStub("LibDataBroker-1.1")
+local LDBIcon = LibStub("LibDBIcon-1.0")
 
 -- Initialize PND as AceAddon module
 PatchNotesDelivered = AceAddon:NewAddon("PatchNotesDelivered", "AceConsole-3.0", "AceDB-3.0", "AceEvent-3.0")
+
+-- Initialize minimap button
+local dataBroker = LDB:NewDataObject("PatchNotesDelivered", {
+    type = "data source",
+    text = "PND",
+    -- TODO: Replace with custom icon
+    icon = "Interface\\AddOns\\PatchNotesDelivered\\icon",
+    OnClick = function(_, button)
+        if button == "LeftButton" then
+            PatchNotesDelivered:ShowPatchNotes()
+        elseif button == "RightButton" then
+            -- You could add settings toggle here in the future
+            print("PatchNotesDelivered: Right-click menu coming soon!")
+        end
+    end,
+    OnTooltipShow = function(tooltip)
+        tooltip:AddLine("Patch Notes Delivered")
+        tooltip:AddLine("Left-click to show notes")
+        tooltip:AddLine("Right-click for options")
+    end,
+})
 
 -- Get global patch notes variable from file
 local PATCH_NOTES = PatchNotesDelivered_Text
@@ -24,13 +47,10 @@ function PatchNotesDelivered:OnInitialize()
         profile = {
             lastSeenVersion = nil,
             minimap = { hide = false },
-            addonCompartment = { hide = false },
+            addonCompartment = { hide = true },
         }
     }, true)
-end
-
--- Description: OnEnable event handler
-function PatchNotesDelivered:OnEnable()
+    LDBIcon:Register("PatchNotesDelivered", dataBroker, self.db.profile.minimap)
     self:RegisterEvent("PLAYER_LOGIN")
 end
 
@@ -43,7 +63,9 @@ function PatchNotesDelivered:PLAYER_LOGIN()
     end
 end
 
-function PatchNotes:ShowPatchNotes()
+-- Functions
+-- Description: Show the patch notes frame
+function PatchNotesDelivered:ShowPatchNotes()
     if notesFrame then
         notesFrame:Show()
         return
@@ -79,3 +101,18 @@ function PatchNotes:ShowPatchNotes()
 
     notesFrame = f
 end
+
+-- Description: Toggle the minimap button
+function PatchNotesDelivered:ToggleMinimapButton()
+    local hide = not self.db.profile.minimap.hide
+    self.db.profile.minimap.hide = hide
+    if hide then
+        LDBIcon:Hide("PatchNotesDelivered")
+    else
+        LDBIcon:Show("PatchNotesDelivered")
+    end
+end
+
+-- Slash Commands
+PatchNotesDelivered:RegisterChatCommand("pnd", "ShowPatchNotes")
+PatchNotesDelivered:RegisterChatCommand("pnd-mini", "ToggleMinimapButton")
