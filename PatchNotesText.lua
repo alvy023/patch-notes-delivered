@@ -6,8 +6,10 @@
 -- For more information, visit the project repository.
 
 -- Initialize the global patch notes variable
-PatchNotesDelivered_Text = [[
-|cffffd200Patch Notes Delivered - v0.1.0|r
-• Displays patch notes once per addon version
-• Addon updated with the latest patch notes
-]]
+PatchNotesDelivered_Text = {
+    version = "11.1.5",
+    build = "00000", -- /script print(GetBuildInfo())
+    notes = [[
+    • Notes here
+    ]]
+}
