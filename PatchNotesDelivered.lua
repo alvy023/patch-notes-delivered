@@ -26,8 +26,7 @@ local dataBroker = LDB:NewDataObject("PatchNotesDelivered", {
         if button == "LeftButton" then
             PatchNotesDelivered:ShowPatchNotes()
         elseif button == "RightButton" then
-            -- @TODO: Add right click options menu
-            print("PatchNotesDelivered: Right-click menu coming soon!")
+            PatchNotesDelivered:ShowOptionsMenu()
         end
     end,
     OnTooltipShow = function(tooltip)
@@ -36,6 +35,9 @@ local dataBroker = LDB:NewDataObject("PatchNotesDelivered", {
         tooltip:AddLine("Right-click for options")
     end,
 })
+
+-- Initialize the options menu
+local menuFrame = CreateFrame("Frame", "PNDOptionsMenu", UIParent, "UIDropDownMenuTemplate")
 
 -- Get global patch notes variable from file
 local PATCH_NOTES = PatchNotesDelivered_Text
@@ -63,8 +65,7 @@ function PatchNotesDelivered:OnInitialize()
                 if button == "LeftButton" then
                     self:TogglePatchNotes()
                 elseif button == "RightButton"
-                    -- @TODO: Add right click options menu
-                    self:Print("PatchNotesDelivered: Right-click menu coming soon!")
+                    self:ShowOptionsMenu()
                 end
             end,
             function(tooltip)
@@ -128,6 +129,48 @@ function PatchNotesDelivered:ShowPatchNotes()
     scrollFrame:SetScrollChild(editBox)
 
     notesFrame = f
+end
+
+--- Description: Show the options menu
+--- @param: anchorFrame (Frame to attach the options to)
+--- @return:
+function PatchNotesDelivered:ShowOptionsMenu(anchorFrame)
+    local info = {}
+
+    -- Clear existing menu
+    EasyMenu(nil, menuFrame, "cursor", 0 , 0, "MENU")
+
+    -- Minimap Checkbox
+    info = {
+        text = "Show Minimap Button",
+        checked = not self.db.profile.minimap.hide,
+        func = function()
+            self.db.profile.minimap.hide = not self.db.profile.minimap.hide
+            if LibStub("LibDBIcon-1.0", true) then
+                if self.db.profile.minimap.hide then
+                    LibStub("LibDBIcon-1.0"):Hide("PatchNotesDelivered")
+                else
+                    LibStub("LibDBIcon-1.0"):Show("PatchNotesDelivered")
+                end
+            end
+        end,
+        isNotRadio = true,
+        keepShownOnClick = true,
+    }
+    UIDropDownMenu_AddButton(info)
+
+    -- Addon Compartment Checkbox
+    info = {
+        text = "Show Addon Compartment",
+        checked = not self.db.profile.addonCompartment.hide,
+        func = function()
+            self.db.profile.addonCompartment.hide = not self.db.profile.addonCompartment.hide
+            self:Print("PatchNotesDelivered: Please /reload to apply changes.")
+        end,
+        isNotRadio = true,
+        keepShownOnClick = true,
+    }
+    UIDropDownMenu_AddButton(info)
 end
 
 --- Description: Toggle the minimap button
