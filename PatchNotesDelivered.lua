@@ -26,7 +26,7 @@ local dataBroker = LDB:NewDataObject("PatchNotesDelivered", {
         if button == "LeftButton" then
             PatchNotesDelivered:ShowPatchNotes()
         elseif button == "RightButton" then
-            -- You could add settings toggle here in the future
+            -- TODO: Add right click options menu
             print("PatchNotesDelivered: Right-click menu coming soon!")
         end
     end,
@@ -41,20 +41,46 @@ local dataBroker = LDB:NewDataObject("PatchNotesDelivered", {
 local PATCH_NOTES = PatchNotesDelivered_Text
 
 -- Event Handlers
--- Description: OnInitialize event handler
+--- Description: OnInitialize event handler
+--- @param:
+--- @return:
 function PatchNotesDelivered:OnInitialize()
     self.db = AceDB:New("PatchNotesDB", {
         profile = {
             lastSeenVersion = nil,
             minimap = { hide = false },
-            addonCompartment = { hide = true },
+            addonCompartment = { hide = false },
         }
     }, true)
+    --- Register minimap button
     LDBIcon:Register("PatchNotesDelivered", dataBroker, self.db.profile.minimap)
+    --- Register addon compartment
+    if C_AddOns and C_AddOns.RegisterAddonCompartment and not self.db.profile.addonCompartment.hide then
+        C_AddOns.RegisterAddonCompartment(
+            "PatchNotesDelivered",
+            function()
+                local button = GetMouseButtonClicked()
+                if button == "LeftButton" then
+                    self:TogglePatchNotes()
+                elseif button == "RightButton"
+                    -- TODO: Add right click options menu
+                    self:Print("PatchNotesDelivered: Right-click menu coming soon!")
+                end
+            end,
+            function(tooltip)
+                tooltip:SetText("Patch Notes Delivered", 1, 1, 1)
+                tooltip:AddLine("Left-click to show notes", 0.9, 0.9, 0.9)
+                tooltip:AddLine("Right-click for options", 0.9, 0.9, 0.9)
+            end
+        )
+    end
+    --- Register addon for login event notification
     self:RegisterEvent("PLAYER_LOGIN")
 end
 
--- Description: PLAYER_LOGIN event handler
+--- Description: PLAYER_LOGIN event handler
+--- @param:
+--- @return:
 function PatchNotesDelivered:PLAYER_LOGIN()
     local currentVersion = GetAddOnMetadata("PatchNotesDelivered", "Version")
     if self.db.profile.lastSeenVersion ~= currentVersion then
@@ -64,7 +90,9 @@ function PatchNotesDelivered:PLAYER_LOGIN()
 end
 
 -- Functions
--- Description: Show the patch notes frame
+--- Description: Show the patch notes frame
+--- @param:
+--- @return:
 function PatchNotesDelivered:ShowPatchNotes()
     if notesFrame then
         notesFrame:Show()
@@ -102,7 +130,9 @@ function PatchNotesDelivered:ShowPatchNotes()
     notesFrame = f
 end
 
--- Description: Toggle the minimap button
+--- Description: Toggle the minimap button
+--- @param:
+--- @return:
 function PatchNotesDelivered:ToggleMinimapButton()
     local hide = not self.db.profile.minimap.hide
     self.db.profile.minimap.hide = hide
