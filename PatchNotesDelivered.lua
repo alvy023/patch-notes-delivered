@@ -49,7 +49,7 @@ local PATCH_NOTES = PatchNotesDelivered_Text
 function PatchNotesDelivered:OnInitialize()
     self.db = AceDB:New("PatchNotesDB", {
         profile = {
-            lastSeenVersion = nil,
+            lastSeenBuild = nil,
             minimap = { hide = false },
             addonCompartment = { hide = false },
         }
@@ -83,14 +83,28 @@ end
 --- @param:
 --- @return:
 function PatchNotesDelivered:PLAYER_LOGIN()
-    local currentVersion = GetAddOnMetadata("PatchNotesDelivered", "Version")
-    if self.db.profile.lastSeenVersion ~= currentVersion then
+    if self:ShouldShowPatchNotes() then
         self:ShowPatchNotes()
-        self.db.profile.lastSeenVersion = currentVersion
     end
 end
 
 -- Functions
+--- Description: Check if we should show the patch notes
+--- @param:
+--- @return:
+function PatchNotesDelivered:ShouldShowPatchNotes()
+    local version, build, date, tocVersion = GetBuildInfo()
+    local notesBuild = PATCH_NOTES.build
+
+    if build == notesBuild and self.db.profile.lastSeenGameBuild ~= build then
+        self.db.profile.lastSeenBuild = build
+        return true
+    end
+
+    return false
+end
+
+
 --- Description: Show the patch notes frame
 --- @param:
 --- @return:
@@ -122,7 +136,7 @@ function PatchNotesDelivered:ShowPatchNotes()
     editBox:SetMultiLine(true)
     editBox:SetFontObject("GameFontHighlight")
     editBox:SetWidth(360)
-    editBox:SetText(NOTES_TEXT)
+    editBox:SetText(PATCH_NOTES.notes)
     editBox:SetAutoFocus(false)
     editBox:EnableMouse(false)
 
