@@ -7,12 +7,12 @@
 
 -- Load Libraries
 local AceAddon = LibStub("AceAddon-3.0")
+local AceConsole = LibStub("AceConsole-3.0")
 local AceDB = LibStub("AceDB-3.0")
 local AceEvent = LibStub("AceEvent-3.0")
-local AceConsole = LibStub("AceConsole-3.0")
 
 -- Initialize PND as AceAddon module
-PatchNotesDelivered = AceAddon:NewAddon("PatchNotesDelivered", "AceDB-3.0", "AceEvent-3.0", "AceConsole-3.0")
+PatchNotesDelivered = AceAddon:NewAddon("PatchNotesDelivered", "AceConsole-3.0", "AceDB-3.0", "AceEvent-3.0")
 
 -- Get global patch notes variable from file
 local PATCH_NOTES = PatchNotesDelivered_Text
