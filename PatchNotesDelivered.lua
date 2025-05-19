@@ -136,7 +136,12 @@ function PatchNotesDelivered:ShowPatchNotes()
     editBox:SetMultiLine(true)
     editBox:SetFontObject("GameFontHighlight")
     editBox:SetWidth(360)
-    editBox:SetText(PATCH_NOTES.notes)
+    editBox:SetText(
+        "Patch Notes Delivered v" .. PATCH_NOTES.version .. "\n" ..
+        "WoW Build: " .. PATCH_NOTES.build .. "\n\n" ..
+        "Game Changes:\n" .. PATCH_NOTES.gameChanges .. "\n" ..
+        "Addon Changes:\n" .. PATCH_NOTES.addonChanges
+    )
     editBox:SetAutoFocus(false)
     editBox:EnableMouse(false)
 
