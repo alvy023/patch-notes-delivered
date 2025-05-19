@@ -1,0 +1,8 @@
+## Interface: 100207
+## Title: Patch Notes Delivered
+## Version: 0.1.0
+## Notes: Displays patch notes on login and notifies of new versions.
+## SavedVariables: PatchNotesDB
+PatchNotesDelivered.lua
+Libs/LibDBIcon-1.0/LibDBIcon-1.0.lua
+Libs/LibDataBroker-1.1/LibDataBroker-1.1.lua
