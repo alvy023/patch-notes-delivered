@@ -1,48 +1,55 @@
-local addonName, addonTable = ...
-local currentVersion = GetAddOnMetadata(addonName, "Version")
-local LATEST_KNOWN_VERSION = "0.1.0"
+-- Patch Notes Delivered Addon
+-- Author: alvy023
+-- File: PatchNotesDelivered.lua
+-- Description: Core functionality for the PND addon.
+-- License: NA
+-- For more information, visit the project repository.
 
-local PATCH_NOTES = [[
-|cffffd200Patch Notes Delivered - v0.1.0|r
-• Initial release of Patch Notes Delivered!
-• Displays patch notes on login.
-• Alerts you when a newer version is available.
-• Patch notes only appear once per version.
-• Now with a minimap button!
-]]
+-- Load Libraries
+local AceAddon = LibStub("AceAddon-3.0")
+local AceDB = LibStub("AceDB-3.0")
+local AceEvent = LibStub("AceEvent-3.0")
+local AceConsole = LibStub("AceConsole-3.0")
 
-local frame = CreateFrame("Frame")
-frame:RegisterEvent("PLAYER_LOGIN")
+-- Initialize PND as AceAddon module
+PatchNotesDelivered = AceAddon:NewAddon("PatchNotesDelivered", "AceDB-3.0", "AceEvent-3.0", "AceConsole-3.0")
 
-local patchNotesFrame -- reference for toggling
+-- Get global patch notes variable from file
+local PATCH_NOTES = PatchNotesDelivered_Text
 
-frame:SetScript("OnEvent", function(self, event)
-    if event == "PLAYER_LOGIN" then
-        if not PatchNotesDB then PatchNotesDB = {} end
+-- Event Handlers
+-- Description: OnInitialize event handler
+function PatchNotesDelivered:OnInitialize()
+    self.db = AceDB:New("PatchNotesDB", {
+        profile = {
+            lastSeenVersion = nil,
+            minimap = { hide = false },
+            addonCompartment = { hide = false },
+        }
+    }, true)
+end
 
-        -- Show patch notes if new version
-        if PatchNotesDB.lastSeenVersion ~= currentVersion then
-            ShowPatchNotes()
-            PatchNotesDB.lastSeenVersion = currentVersion
-        end
+-- Description: OnEnable event handler
+function PatchNotesDelivered:OnEnable()
+    self:RegisterEvent("PLAYER_LOGIN")
+end
 
-        -- Notify of new version
-        if IsNewerVersion(LATEST_KNOWN_VERSION, currentVersion) then
-            print("|cffff0000[Patch Notes Delivered]|r A newer version is available! Current: " .. currentVersion .. ", Latest: " .. LATEST_KNOWN_VERSION)
-        end
-
-        -- Setup minimap button
-        SetupMinimapButton()
+-- Description: PLAYER_LOGIN event handler
+function PatchNotesDelivered:PLAYER_LOGIN()
+    local currentVersion = GetAddOnMetadata("PatchNotesDelivered", "Version")
+    if self.db.profile.lastSeenVersion ~= currentVersion then
+        self:ShowPatchNotes()
+        self.db.profile.lastSeenVersion = currentVersion
     end
-end)
+end
 
-function ShowPatchNotes()
-    if patchNotesFrame then
-        patchNotesFrame:Show()
+function PatchNotes:ShowPatchNotes()
+    if notesFrame then
+        notesFrame:Show()
         return
     end
 
-    local f = CreateFrame("Frame", "PatchNotesDeliveredFrame", UIParent, "BasicFrameTemplateWithInset")
+    local f = CreateFrame("Frame", "PNDFrame", UIParent, "BasicFrameTemplateWithInset")
     f:SetSize(400, 300)
     f:SetPoint("CENTER")
     f:SetMovable(true)
@@ -64,62 +71,11 @@ function ShowPatchNotes()
     editBox:SetMultiLine(true)
     editBox:SetFontObject("GameFontHighlight")
     editBox:SetWidth(360)
-    editBox:SetText(PATCH_NOTES)
+    editBox:SetText(NOTES_TEXT)
     editBox:SetAutoFocus(false)
     editBox:EnableMouse(false)
 
     scrollFrame:SetScrollChild(editBox)
 
-    patchNotesFrame = f
-end
-
-function TogglePatchNotes()
-    if patchNotesFrame then
-        if patchNotesFrame:IsShown() then
-            patchNotesFrame:Hide()
-        else
-            patchNotesFrame:Show()
-        end
-    else
-        ShowPatchNotes()
-    end
-end
-
-function IsNewerVersion(latest, current)
-    local function splitVersion(ver)
-        local major, minor, patch = string.match(ver, "(%d+)%.(%d+)%.(%d+)")
-        return tonumber(major), tonumber(minor), tonumber(patch)
-    end
-
-    local lMaj, lMin, lPatch = splitVersion(latest)
-    local cMaj, cMin, cPatch = splitVersion(current)
-
-    if lMaj > cMaj then return true end
-    if lMaj == cMaj and lMin > cMin then return true end
-    if lMaj == cMaj and lMin == cMin and lPatch > cPatch then return true end
-
-    return false
-end
-
--- 📍 Minimap Button Setup
-local LDB = LibStub("LibDataBroker-1.1"):NewDataObject("PatchNotesDelivered", {
-    type = "launcher",
-    text = "Patch Notes Delivered",
-    icon = "Interface\\Icons\\INV_Scroll_03", -- Change this to whatever icon you'd like
-
-    OnClick = function(self, button)
-        TogglePatchNotes()
-    end,
-
-    OnTooltipShow = function(tooltip)
-        tooltip:AddLine("Patch Notes Delivered")
-        tooltip:AddLine("Click to toggle patch notes.", 1, 1, 1)
-    end,
-})
-
-function SetupMinimapButton()
-    if not PatchNotesDB.minimap then
-        PatchNotesDB.minimap = { hide = false }
-    end
-    LibStub("LibDBIcon-1.0"):Register("PatchNotesDelivered", LDB, PatchNotesDB.minimap)
+    notesFrame = f
 end
