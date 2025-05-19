@@ -2,26 +2,30 @@ name: Check WoW Build
 
 on:
   schedule:
-    - cron: '30 7 * * *'  # every day at noon UTC
-  workflow_dispatch:  # allows you to manually trigger the check
+    # Run daily at 7:30 UTC (12:30 PST)
+    - cron: "30 7 * * *"
+  workflow_dispatch:  # allows manual trigger
 
 jobs:
-  check_build:
+  check-build:
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout repo
-        uses: actions/checkout@v4
+        uses: actions/checkout@v3
 
       - name: Set up Python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v4
         with:
-          python-version: '3.11'
+          python-version: '3.x'
 
       - name: Install dependencies
-        run: pip install requests
+        run: pip install requests PyGithub
 
-      - name: Run build check script
+      - name: Check for WoW Build Update and create PR
         env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: python scripts/check_wow_build.py
+          BLIZZARD_CLIENT_ID: ${{ secrets.BLIZZARD_CLIENT_ID }}
+          BLIZZARD_CLIENT_SECRET: ${{ secrets.BLIZZARD_CLIENT_SECRET }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
+        run: python check_build.py
