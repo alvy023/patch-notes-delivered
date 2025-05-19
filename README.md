@@ -2,6 +2,8 @@
 
 Patch Notes Delivered (PND) is a lightweight World of Warcraft addon that displays official game patch notes and addon-specific updates on login. Perfect for players who want to stay up to date with the latest changes without checking external websites.
 
+<br>
+
 ## ✨ Features
 
 - 📌 **Patch Notes on Login**  
@@ -23,6 +25,8 @@ Patch Notes Delivered (PND) is a lightweight World of Warcraft addon that displa
 - 💾 **Persistent Tracking**  
   Remembers the last seen version/build, so notes only pop up when something is new.
 
+<br>
+
 ## 📋 Usage
 
 - **Left Click** minimap button or addon compartment icon: Show patch notes  
@@ -31,35 +35,30 @@ Patch Notes Delivered (PND) is a lightweight World of Warcraft addon that displa
   - `/pnd` – Show patch notes  
   - `/pnd-mini` – Toggle minimap button  
 
-## 🧩 Libraries Used
+<br>
 
-This addon uses the following libraries (some included as submodules in `/libs/Ace3`):
+## 📁 Project Structure
+```
+patch-notes-delivered
+├── Assets/
+│   └── PatchNotesDeliveredIcon.tga
+├── Libs/
+│   ├── Ace3/
+│   ├── LibDataBroker-1.1/
+│   └── LibDBIcon-1.0/
+├── PatchNotesDelivered/
+│   ├── PatchNotesDelivered.lua
+│   ├── PatchNotesDelivered.toc
+│   └── PatchNotesText.lua
+├── README.md
+└── ThirdPartyNotices.md
+```
 
-- [Ace3](https://www.wowace.com/projects/ace3)/AceAddon-3.0
-- Ace3/AceConsole-3.0  
-- Ace3/AceDB-3.0  
-- Ace3/AceEvent-3.0  
-- Ace3/LibStub  
-- Ace3/CallbackHandler  
-- [LibDataBroker-1.1](https://www.wowace.com/projects/libdatabroker-1-1)  
-- [LibDBIcon-1.0](https://www.wowace.com/projects/libdbicon-1-0)
+<br>
 
-## 📦 Patch Notes Format
+## 👤 Authors
+- alvy023 - core developer
 
-Patch notes are defined in `PatchNotesDelivered_Text.lua` using this structure:
+<br>
 
-```lua
-PatchNotesDelivered_Text = {
-    version = "11.1.5",
-    build = "12345",
-
-    gameChanges = [[
-        • Example game fix or balance change.
-        • Another bullet point.
-    ]],
-
-    addonChanges = [[
-        • Example addon feature added.
-        • Bug fixes or improvements.
-    ]],
-}
+For third-party libraries and licenses, see [ThirdPartyNotices.md](./ThirdPartyNotices.md).
