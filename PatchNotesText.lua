@@ -9,7 +9,11 @@
 PatchNotesDelivered_Text = {
     version = "11.1.5",
     build = "00000", -- /script print(GetBuildInfo())
-    notes = [[
-    • Notes here
-    ]]
+    gameChanges = [[
+        • <Game Changes>
+    ]],
+
+    addonChanges = [[
+        • <Addon Changes>
+    ]],
 }
