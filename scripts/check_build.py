@@ -3,7 +3,7 @@ import sys
 import requests
 import re
 
-PATCH_NOTES_FILE = "PatchNotesDelivered/PatchNotesText.lua"
+PATCH_NOTES_FILE = "../PatchNotesDelivered/PatchNotesText.lua"
 
 def fail(msg):
     print(f"ERROR: {msg}")
@@ -12,8 +12,10 @@ def fail(msg):
 def get_credentials():
     client_id = os.getenv("BLIZZARD_CLIENT_ID")
     client_secret = os.getenv("BLIZZARD_CLIENT_SECRET")
-    if not client_id or not client_secret:
-        fail("Missing Blizzard API credentials (BLIZZARD_CLIENT_ID or BLIZZARD_CLIENT_SECRET).")
+    if not client_id:
+        fail("Missing BLIZZARD_CLIENT_ID")
+    if not client_secret:
+        fail("Missing BLIZZARD_CLIENT_SECRET")
     return client_id, client_secret
 
 def get_access_token(client_id, client_secret):
