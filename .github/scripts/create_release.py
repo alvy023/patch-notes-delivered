@@ -18,7 +18,7 @@ def parse_local_version_and_build():
         print("❌ Failed to find local game build in PatchNotesText.lua")
         sys.exit(1)
 
-    return version_match.group(1), build_match.group(1)
+    return local_game_version.group(1), local_game_build.group(1)
 
 if __name__ == "__main__":
     local_game_version, local_game_build = parse_local_version_and_build()
