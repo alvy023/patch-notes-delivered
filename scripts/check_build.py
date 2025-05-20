@@ -30,8 +30,9 @@ def parse_local_version_and_build():
 
     return version_match.group(1), build_match.group(1)
 
-def update_patch_notes_file(new_version):
-    new_build = new_version.split(".")[-1]
+def update_patch_notes_file(new_version_build):
+    new_version = ".".join(new_version_build.split(".")[:-1])
+    new_build = new_version_build.split(".")[-1]
     with open(PATCH_NOTES_FILE, "r", encoding="utf-8") as f:
         content = f.read()
 
