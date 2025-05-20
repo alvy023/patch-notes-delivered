@@ -1,0 +1,59 @@
+name: Create Release
+
+on:
+  workflow_dispatch:
+
+jobs:
+  release:
+    name: Package and Release Addon
+    runs-on: ubuntu-latest
+
+    env:
+      ADDON_VERSION: ${{ vars.ADDON_VERSION }}
+      ADDON_NAME: PatchNotesDelivered
+
+    steps:
+      - name: Checkout main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: 3.x
+
+      - name: Create Release
+        id: create_release
+        run: |
+          echo "Fetching local game version/build"
+          python create_release.py
+
+      - name: Set full version string
+        id: versioning
+        run: |
+          RELEASE_TAG="v${ADDON_VERSION}-wow-${{ steps.create_release.outputs.local_game_version_build }}"
+          echo "release_tag=${RELEASE_TAG}" >> $GITHUB_OUTPUT
+        shell: bash
+
+      - name: Zip addon folder
+        run: |
+          mkdir dist
+          zip -r "dist/${{ env.ADDON_NAME }}-${{ steps.versioning.outputs.release_tag }}.zip" "${{ env.ADDON_NAME }}/"
+
+      - name: Create Git tag
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git tag "${{ steps.versioning.outputs.release_tag }}"
+          git push origin "${{ steps.versioning.outputs.release_tag }}"
+
+      - name: Create GitHub release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ steps.versioning.outputs.release_tag }}
+          name: ${{ steps.versioning.outputs.release_tag }}
+          files: dist/${{ env.ADDON_NAME }}-${{ steps.versioning.outputs.release_tag }}.zip
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  
