@@ -64,7 +64,7 @@ function PatchNotesDelivered:OnInitialize()
                 local button = GetMouseButtonClicked()
                 if button == "LeftButton" then
                     self:TogglePatchNotes()
-                elseif button == "RightButton"
+                elseif button == "RightButton" then
                     self:ShowOptionsMenu()
                 end
             end,
