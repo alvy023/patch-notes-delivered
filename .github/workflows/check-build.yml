@@ -54,7 +54,7 @@ jobs:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Create Pull Request
-        if: steps.check_build.outputs.updated == 'true'
+        if: steps.check_build.outputs.updated == 'true' and steps.check_existing_pr.exists == 'false'
         uses: peter-evans/create-pull-request@v5
         with:
           commit-message: "Update PatchNotesText.lua to latest build"
