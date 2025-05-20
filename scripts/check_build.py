@@ -59,3 +59,6 @@ if __name__ == "__main__":
     print(f"🔄 Update detected: {local_version}.{local_build} → {remote_version}")
     update_patch_notes_file(remote_version)
     print("✅ PatchNotesText.lua updated.")
+
+    with open(os.environ["GITHUB_OUTPUT"], "a") as gh_out:
+        print("updated=true", file=gh_out)
