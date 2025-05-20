@@ -2,64 +2,36 @@ name: Check WoW Version/Build
 
 on:
   schedule:
-    - cron: "30 19 * * *"  # 07:30 PM UTC daily
+    - cron: '30 19 * * *'  # Runs daily at 7:30 PM UTC
   workflow_dispatch:
 
 jobs:
-  check-build:
+  check-version:
     runs-on: ubuntu-latest
-    env:
-      BLIZZARD_CLIENT_ID: ${{ secrets.BLIZZARD_CLIENT_ID }}
-      BLIZZARD_CLIENT_SECRET: ${{ secrets.BLIZZARD_CLIENT_SECRET }}
 
     steps:
-      - name: Checkout repo
-        uses: actions/checkout@v3
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
-      - name: Verify Blizzard API Tokens present
-        run: |
-          if [ -z "${{ secrets.BLIZZARD_CLIENT_ID }}" ]; then
-            echo "Error: BLIZZARD_CLIENT_ID is not set!"
-            exit 1
-          fi
-          if [ -z "${{ secrets.BLIZZARD_CLIENT_SECRET }}" ]; then
-            echo "Error: BLIZZARD_CLIENT_SECRET is not set!"
-            exit 1
-          fi
-
-      - name: Setup Python
-        uses: actions/setup-python@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
         with:
-          python-version: "3.x"
+          python-version: '3.x'
 
-      - name: Install requests package
-        run: python -m pip install requests
+      - name: Install dependencies
+        run: pip install requests
 
-      - name: Run build check script
-        id: checkbuild
-        run: python scripts/check_build.py
-
-      - name: Configure git
+      - name: Run version check
+        id: check_build
         run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
+          python scripts/check_build.py
 
-      - name: Create update branch
-        id: create_branch
-        run: |
-          BRANCH="update-patchnotes-${{ github.run_number }}"
-          git checkout -b $BRANCH
-          git add PatchNotesDelivered/PatchNotesText.lua
-          git commit -m "Update PatchNotesText.lua to latest build/version"
-          git push --set-upstream origin $BRANCH
-          echo "::set-output name=branch::$BRANCH"
-
-      - name: Create Pull Request
+      - name: Create PR for version update
+        if: success() && steps.check_build.outcome == 'success'
         uses: peter-evans/create-pull-request@v5
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          commit-message: "Update PatchNotesText.lua to latest build/version"
-          branch: ${{ steps.create_branch.outputs.branch }}
-          title: "Update PatchNotesText.lua to latest build/version"
-          body: |
-            Automated update of PatchNotesText.lua with latest Blizzard build and version.
+          commit-message: "Update PatchNotesText.lua to latest build"
+          branch: "update/patchnotes-$(date +'%Y%m%d%H%M%S')"
+          title: "Update PatchNotesText.lua to latest build"
+          body: "Automated update via workflow. Please review changes."
+          labels: "automated-update"
