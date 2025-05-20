@@ -27,7 +27,7 @@ jobs:
         id: create_release
         run: |
           echo "Fetching local game version/build"
-          python create_release.py
+          python .github/scripts/create_release.py
 
       - name: Set full version string
         id: versioning
