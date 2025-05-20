@@ -2,11 +2,11 @@ import requests
 import sys
 import re
 
-# PatchNotesText.lua file path
 PATCH_NOTES_FILE = "PatchNotesDelivered/PatchNotesText.lua"
+PRODUCT = "wow"
 
-def fetch_latest_version():
-    url = "https://wago.tools/api/builds/wow/latest"
+def fetch_latest_version(product):
+    url = "https://wago.tools/api/builds/"+product+"/latest"
     try:
         response = requests.get(url, timeout=10)
         response.raise_for_status()
@@ -16,32 +16,46 @@ def fetch_latest_version():
         print(f"❌ Failed to fetch version from Wago.Tools: {e}")
         sys.exit(1)
 
-def parse_local_version():
+def parse_local_version_and_build():
     with open(PATCH_NOTES_FILE, "r", encoding="utf-8") as f:
         content = f.read()
-    version_match = re.search(r'version\s*=\s*"([^"]+)"', content)
-    if not version_match:
-        print("❌ Failed to find local version in PatchNotesText.lua")
+
+    version_match = re.search(r'PatchNotesDelivered_PatchVersion\s*=\s*"([^"]+)"', content)
+    build_match = re.search(r'PatchNotesDelivered_Build\s*=\s*(\d+)', content)
+
+    if not version_match or not build_match:
+        print("❌ Failed to find local version or build in PatchNotesText.lua")
         sys.exit(1)
-    return version_match.group(1)
+
+    return version_match.group(1), build_match.group(1)
 
 def update_patch_notes_file(new_version):
-    build = new_version.split(".")[-1]
+    new_build = new_version.split(".")[-1]
     with open(PATCH_NOTES_FILE, "r", encoding="utf-8") as f:
         content = f.read()
-    content = re.sub(r'version\s*=\s*"[^"]+"', f'version = "{new_version}"', content)
-    content = re.sub(r'build\s*=\s*"[^"]+"', f'build = "{build}"', content)
+
+    content = re.sub(
+        r'PatchNotesDelivered_PatchVersion\s*=\s*"[^"]+"',
+        f'PatchNotesDelivered_PatchVersion = "{new_version}"',
+        content,
+    )
+    content = re.sub(
+        r'PatchNotesDelivered_Build\s*=\s*\d+',
+        f'PatchNotesDelivered_Build = {new_build}',
+        content,
+    )
+
     with open(PATCH_NOTES_FILE, "w", encoding="utf-8") as f:
         f.write(content)
 
 if __name__ == "__main__":
-    new_version = fetch_latest_version()
-    local_version = parse_local_version()
+    remote_version = fetch_latest_version(PRODUCT)
+    local_version, local_build = parse_local_version_and_build()
 
-    if new_version == local_version:
-        print(f"✅ No update needed. Local version is up to date: {local_version}")
+    if remote_version == f"{local_version}.{local_build}":
+        print(f"✅ No update needed. Local version is up to date: {remote_version}")
         sys.exit(0)
 
-    print(f"🔄 Update detected: {local_version} → {new_version}")
-    update_patch_notes_file(new_version)
+    print(f"🔄 Update detected: {local_version}.{local_build} → {remote_version}")
+    update_patch_notes_file(remote_version)
     print("✅ PatchNotesText.lua updated.")
