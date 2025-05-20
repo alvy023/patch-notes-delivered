@@ -27,7 +27,7 @@ jobs:
 
       - name: Run build check
         id: check_build
-        run: python scripts/check_build.py
+        run: python .github/scripts/check_build.py
 
       - name: Commit updated build number
         if: steps.check_build.outputs.updated == 'true'
