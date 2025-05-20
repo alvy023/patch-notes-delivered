@@ -37,6 +37,22 @@ jobs:
           git add PatchNotesDelivered/PatchNotesText.lua
           git commit -m "Update PatchNotesText.lua to latest build"
 
+      - name: Check for existing Open Pull Request
+        id: check_existing_pr
+        if: steps.check_build.outputs.updated == 'true'
+        run: |
+          BRANCH_NAME="update/patchnotes-${{ steps.check_build.outputs.branch_name }}"
+          # Check for OPEN pull requests originating from this branch
+          if gh pr list --head "$BRANCH_NAME" --state open --json number --limit 1 | grep -q '[0-9]'; then
+            echo "An open PR for branch $BRANCH_NAME already exists."
+            echo "exists=true" >> $GITHUB_OUTPUT
+          else
+            echo "No open PR for branch $BRANCH_NAME found."
+            echo "exists=false" >> $GITHUB_OUTPUT
+          fi
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
       - name: Create Pull Request
         if: steps.check_build.outputs.updated == 'true'
         uses: peter-evans/create-pull-request@v5
