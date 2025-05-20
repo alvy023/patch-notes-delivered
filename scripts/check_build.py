@@ -1,6 +1,7 @@
 import requests
 import sys
 import re
+import os
 
 PATCH_NOTES_FILE = "PatchNotesDelivered/PatchNotesText.lua"
 PRODUCT = "wow"
