@@ -44,4 +44,4 @@ jobs:
           commit-message: "Update PatchNotesText.lua to latest build"
           title: "Update PatchNotesText.lua to latest build"
           body: "Automatically created PR to update to latest WoW build."
-          branch: update/patchnotes-${{ github.run_id }}
+          branch: update/patchnotes-${{ steps.check_build.outputs.branch_name }}
