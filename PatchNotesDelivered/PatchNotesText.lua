@@ -19,5 +19,6 @@ PatchNotesDelivered_Text = {
 
     addonChanges = [[
         • <Addon Changes>
+        • test change
     ]],
 }
