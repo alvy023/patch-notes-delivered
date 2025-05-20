@@ -2,12 +2,13 @@
 -- Author: alvy023
 -- File: PatchNotesDelivered.lua
 -- Description: Core functionality for the PND addon.
--- License: NA
+-- License: License.txt
 -- For more information, visit the project repository.
 
 -- Load Libraries
 local AceAddon = LibStub("AceAddon-3.0")
 local AceDB = LibStub("AceDB-3.0")
+local AceGUI = LibStub("AceGUI-3.0")
 local LDB = LibStub("LibDataBroker-1.1")
 local LDBIcon = LibStub("LibDBIcon-1.0")
 
@@ -124,24 +125,15 @@ end
 --- @param:
 --- @return:
 function PatchNotesDelivered:ShowPatchNotes()
-    if notesFrame then
-        notesFrame:Show()
+    if PatchNotesFrame then
+        PatchNotesFrame:Show()
         return
     end
 
-    local f = CreateFrame("Frame", "PNDFrame", UIParent, "BasicFrameTemplateWithInset")
-    f:SetSize(400, 300)
-    f:SetPoint("CENTER")
-    f:SetMovable(true)
-    f:EnableMouse(true)
-    f:RegisterForDrag("LeftButton")
-    f:SetScript("OnDragStart", f.StartMoving)
-    f:SetScript("OnDragStop", f.StopMovingOrSizing)
-
-    f.title = f:CreateFontString(nil, "OVERLAY")
-    f.title:SetFontObject("GameFontHighlight")
-    f.title:SetPoint("LEFT", f.TitleBg, "LEFT", 5, 0)
-    f.title:SetText("Patch Notes Delivered")
+    local f = AceGUI:Create("Window-PND")
+    f:SetTitle("|cffffcc00Patch Notes Delivered|r")
+    f:SetTitleFont("Fonts\\FRIZQT__.TTF", 14, "OUTLINE")
+    f:SetTitleAlignment("LEFT")
 
     local scrollFrame = CreateFrame("ScrollFrame", nil, f, "UIPanelScrollFrameTemplate")
     scrollFrame:SetPoint("TOPLEFT", 10, -30)
@@ -150,7 +142,7 @@ function PatchNotesDelivered:ShowPatchNotes()
     local editBox = CreateFrame("EditBox", nil, scrollFrame)
     editBox:SetMultiLine(true)
     editBox:SetFontObject("GameFontHighlight")
-    editBox:SetWidth(360)
+    editBox:SetWidth(560)
     editBox:SetText(
         "Patch Notes Delivered v" .. PATCH_NOTES.version .. "\n" ..
         "WoW Build: " .. PATCH_NOTES.build .. "\n\n" ..
@@ -162,7 +154,7 @@ function PatchNotesDelivered:ShowPatchNotes()
 
     scrollFrame:SetScrollChild(editBox)
 
-    notesFrame = f
+    PatchNotesFrame = f
 end
 
 --- Description: Show the options menu
