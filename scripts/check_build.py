@@ -3,7 +3,7 @@ import sys
 import re
 
 # PatchNotesText.lua file path
-PATCH_NOTES_FILE = "../PatchNotesDelivered/PatchNotesText.lua"
+PATCH_NOTES_FILE = "../../PatchNotesDelivered/PatchNotesText.lua"
 
 def fetch_latest_version():
     url = "https://wago.tools/api/builds/wow/latest"
