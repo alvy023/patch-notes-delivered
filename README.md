@@ -57,7 +57,7 @@ patch-notes-delivered
 
 <br>
 
-## 👤 Authors
+## 🧑 Authors
 - alvy023 - core developer
 
 <br>
