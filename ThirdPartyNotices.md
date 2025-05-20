@@ -75,4 +75,5 @@ You should have received a copy of the GNU Lesser General Public License
 along with this library; if not, see <http://www.gnu.org/licenses/>.
 <br><br>
 
+##
 These libraries are used in accordance with their respective licenses. No changes were made to the source code of the above libraries.
