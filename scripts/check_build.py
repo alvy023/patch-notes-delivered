@@ -2,6 +2,7 @@ import requests
 import sys
 import re
 import os
+import datetime
 
 PATCH_NOTES_FILE = "PatchNotesDelivered/PatchNotesText.lua"
 PRODUCT = "wow"
@@ -61,5 +62,9 @@ if __name__ == "__main__":
     update_patch_notes_file(remote_version)
     print("✅ PatchNotesText.lua updated.")
 
+    timestamp = datetime.datetime.utcnow().strftime("%Y%m%d%H%M%S")
+    branch_name = remote_version+"-"+timestamp
+
     with open(os.environ["GITHUB_OUTPUT"], "a") as gh_out:
         print("updated=true", file=gh_out)
+        print("branch_name="+str(branch_name), file=gh_out)
