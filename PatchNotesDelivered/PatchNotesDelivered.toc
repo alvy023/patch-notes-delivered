@@ -2,7 +2,12 @@
 ## Title: Patch Notes Delivered
 ## Version: 0.1.0
 ## Notes: Displays patch notes on login and notifies of new versions.
+## Author: alvy023
 ## SavedVariables: PatchNotesDB
+## AddonCompartmentFunc: PatchNotesDelivered_OnAddonCompartmentClick
+## AddonCompartmentFuncOnEnter: PatchNotesDelivered_OnAddonCompartmentEnter
+## AddonCompartmentFuncOnLeave: PatchNotesDelivered_OnAddonCompartmentLeave
+## IconTexture: Interface\Icons\TEMP.blp
 
 # Libraries
 libs/Ace3/AceAddon-3.0/AceAddon-3.0.lua

@@ -7,14 +7,12 @@
 
 -- Load Libraries
 local AceAddon = LibStub("AceAddon-3.0")
-local AceConsole = LibStub("AceConsole-3.0")
 local AceDB = LibStub("AceDB-3.0")
-local AceEvent = LibStub("AceEvent-3.0")
 local LDB = LibStub("LibDataBroker-1.1")
 local LDBIcon = LibStub("LibDBIcon-1.0")
 
 -- Initialize PND as AceAddon module
-PatchNotesDelivered = AceAddon:NewAddon("PatchNotesDelivered", "AceConsole-3.0", "AceDB-3.0", "AceEvent-3.0")
+PatchNotesDelivered = AceAddon:NewAddon("PatchNotesDelivered", "AceConsole-3.0", "AceEvent-3.0")
 
 -- Initialize minimap button
 local dataBroker = LDB:NewDataObject("PatchNotesDelivered", {
@@ -38,6 +36,10 @@ local dataBroker = LDB:NewDataObject("PatchNotesDelivered", {
 
 -- Initialize the options menu
 local menuFrame = CreateFrame("Frame", "PNDOptionsMenu", UIParent, "UIDropDownMenuTemplate")
+local UIDropDownMenu_Initialize = UIDropDownMenu_Initialize
+local UIDropDownMenu_CreateInfo = UIDropDownMenu_CreateInfo
+local UIDropDownMenu_AddButton = UIDropDownMenu_AddButton
+local ToggleDropDownMenu = ToggleDropDownMenu
 
 -- Get global patch notes variable from file
 local PATCH_NOTES = PatchNotesDelivered_Text
@@ -56,25 +58,6 @@ function PatchNotesDelivered:OnInitialize()
     }, true)
     --- Register minimap button
     LDBIcon:Register("PatchNotesDelivered", dataBroker, self.db.profile.minimap)
-    --- Register addon compartment
-    if C_AddOns and C_AddOns.RegisterAddonCompartment and not self.db.profile.addonCompartment.hide then
-        C_AddOns.RegisterAddonCompartment(
-            "PatchNotesDelivered",
-            function()
-                local button = GetMouseButtonClicked()
-                if button == "LeftButton" then
-                    self:TogglePatchNotes()
-                elseif button == "RightButton" then
-                    self:ShowOptionsMenu()
-                end
-            end,
-            function(tooltip)
-                tooltip:SetText("Patch Notes Delivered", 1, 1, 1)
-                tooltip:AddLine("Left-click to show notes", 0.9, 0.9, 0.9)
-                tooltip:AddLine("Right-click for options", 0.9, 0.9, 0.9)
-            end
-        )
-    end
     --- Register addon for login event notification
     self:RegisterEvent("PLAYER_LOGIN")
 end
@@ -86,6 +69,38 @@ function PatchNotesDelivered:PLAYER_LOGIN()
     if self:ShouldShowPatchNotes() then
         self:ShowPatchNotes()
     end
+end
+
+--- Description: Global function to handle addon compartment click
+--- @param:
+--- @return:
+function PatchNotesDelivered_OnAddonCompartmentClick()
+    local clickedButton = GetMouseButtonClicked()
+
+    if clickedButton == "LeftButton" then
+        PatchNotesDelivered:ShowPatchNotes()
+    elseif clickedButton == "RightButton" then
+        PatchNotesDelivered:ShowOptionsMenu()
+    end
+end
+
+--- Description: Global function to handle addon compartment tooltip
+--- @param: tooltip (Tooltip frame)
+--- @return:
+function PatchNotesDelivered_OnAddonCompartmentEnter()
+    local tooltip = GameTooltip
+    tooltip:SetOwner(UIParent, "ANCHOR_CURSOR")
+    tooltip:SetText("Patch Notes Delivered", 1, 1, 1)
+    tooltip:AddLine("Left-click to show notes", 0.9, 0.9, 0.9)
+    tooltip:AddLine("Right-click for options", 0.9, 0.9, 0.9)
+    tooltip:Show()
+end
+
+--- Description: Global function to handle addon compartment leave
+--- @param:
+--- @return:
+function PatchNotesDelivered_OnAddonCompartmentLeave()
+    GameTooltip:Hide()
 end
 
 -- Functions
@@ -154,42 +169,44 @@ end
 --- @param: anchorFrame (Frame to attach the options to)
 --- @return:
 function PatchNotesDelivered:ShowOptionsMenu(anchorFrame)
-    local info = {}
+    if not menuFrame then
+        menuFrame = CreateFrame("Frame", "PNDOptionsMenu", UIParent, "UIDropDownMenuTemplate")
+    end
 
-    -- Clear existing menu
-    EasyMenu(nil, menuFrame, "cursor", 0 , 0, "MENU")
+    UIDropDownMenu_Initialize(menuFrame, function(frame, level, menuList)
+        local info = UIDropDownMenu_CreateInfo()
 
-    -- Minimap Checkbox
-    info = {
-        text = "Show Minimap Button",
-        checked = not self.db.profile.minimap.hide,
-        func = function()
+        -- Minimap Checkbox
+        info.text = "Show Minimap Button"
+        info.checked = not self.db.profile.minimap.hide
+        info.func = function()
             self.db.profile.minimap.hide = not self.db.profile.minimap.hide
-            if LibStub("LibDBIcon-1.0", true) then
+            if LDBIcon then
                 if self.db.profile.minimap.hide then
-                    LibStub("LibDBIcon-1.0"):Hide("PatchNotesDelivered")
+                    LDBIcon:Hide("PatchNotesDelivered")
                 else
-                    LibStub("LibDBIcon-1.0"):Show("PatchNotesDelivered")
+                    LDBIcon:Show("PatchNotesDelivered")
                 end
             end
-        end,
-        isNotRadio = true,
-        keepShownOnClick = true,
-    }
-    UIDropDownMenu_AddButton(info)
+        end
+        info.isNotRadio = true
+        info.keepShownOnClick = true
+        UIDropDownMenu_AddButton(info, level)
 
-    -- Addon Compartment Checkbox
-    info = {
-        text = "Show Addon Compartment",
-        checked = not self.db.profile.addonCompartment.hide,
-        func = function()
+        -- Addon Compartment Checkbox
+        info = UIDropDownMenu_CreateInfo()
+        info.text = "Show Addon Compartment"
+        info.checked = not self.db.profile.addonCompartment.hide
+        info.func = function()
             self.db.profile.addonCompartment.hide = not self.db.profile.addonCompartment.hide
-            self:Print("PatchNotesDelivered: Please /reload to apply changes.")
-        end,
-        isNotRadio = true,
-        keepShownOnClick = true,
-    }
-    UIDropDownMenu_AddButton(info)
+            self:Print("PatchNotesDelivered: Please /reload to apply addon compartment changes")
+        end
+        info.isNotRadio = true
+        info.keepShownOnClick = true
+        UIDropDownMenu_AddButton(info, level)
+    end)
+
+    ToggleDropDownMenu(1, nil, menuFrame, "cursor", 0, 0)
 end
 
 --- Description: Toggle the minimap button
@@ -205,6 +222,48 @@ function PatchNotesDelivered:ToggleMinimapButton()
     end
 end
 
+--- Description: Debug function to print addon information
+--- @param: input (string) - Any additional command arguments
+--- @return: none
+function PatchNotesDelivered:Debug(input)
+    local version, build, date, tocVersion = GetBuildInfo()
+
+    self:Print("|cFF00FFFFPatch Notes Delivered - Debug Information|r")
+
+    -- Game information
+    self:Print("Game Version: " .. version)
+    self:Print("Game Build: " .. build)
+    self:Print("Game Date: " .. date)
+    self:Print("TOC Version: " .. tocVersion)
+
+    -- Addon information
+    self:Print("Addon Version: " .. (PATCH_NOTES.version or "Unknown"))
+    self:Print("Patch Notes Build: " .. (PATCH_NOTES.build or "Unknown"))
+
+    -- Database information
+    self:Print("Last Seen Build: " .. (self.db.profile.lastSeenBuild or "None"))
+
+    -- Options states
+    self:Print("Minimap Button: " .. (self.db.profile.minimap.hide and "Hidden" or "Shown"))
+    self:Print("Addon Compartment: " .. (self.db.profile.addonCompartment.hide and "Hidden" or "Shown"))
+
+    -- UI States
+    self:Print("Notes Frame: " .. (notesFrame and (notesFrame:IsShown() and "Showing" or "Hidden") or "Not Created"))
+
+    -- LibDBIcon status
+    self:Print("LDBIcon Registered: " .. (LDBIcon:IsRegistered("PatchNotesDelivered") and "Yes" or "No"))
+
+    -- Compartment registration status
+    local c_api_available = (C_AddOns and C_AddOns.RegisterAddonCompartment) and true or false
+    local frame_api_available = (AddonCompartmentFrame and AddonCompartmentFrame.RegisterAddon) and true or false
+
+    self:Print("C_AddOns Compartment API: " .. (c_api_available and "Available" or "Not Available"))
+    self:Print("AddonCompartmentFrame API: " .. (frame_api_available and "Available" or "Not Available"))
+    self:Print("Any Compartment API Available: " .. (self.hasCompartmentAPI and "Yes" or "No"))
+    self:Print("Compartment Setting: " .. (self.db.profile.addonCompartment.hide and "Hidden" or "Shown"))
+end
+
 -- Slash Commands
 PatchNotesDelivered:RegisterChatCommand("pnd", "ShowPatchNotes")
 PatchNotesDelivered:RegisterChatCommand("pnd-mini", "ToggleMinimapButton")
+PatchNotesDelivered:RegisterChatCommand("pnd-debug", "Debug")

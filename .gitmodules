@@ -1,0 +1,6 @@
+[submodule "PatchNotesDelivered/libs/Ace3"]
+	path = PatchNotesDelivered/libs/Ace3
+	url = git@github.com:Stanzilla/Ace3.git
+[submodule "PatchNotesDelivered/libs/LibDataBroker-1.1"]
+	path = PatchNotesDelivered/libs/LibDataBroker-1.1
+	url = git@github.com:tekkub/libdatabroker-1-1.git
