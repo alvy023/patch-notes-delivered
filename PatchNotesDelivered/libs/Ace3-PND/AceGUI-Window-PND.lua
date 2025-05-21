@@ -64,11 +64,11 @@ end
 local function SetTitleAlignment(self, align)
     self.titleLabel:ClearAllPoints()
     if align == "LEFT" then
-        self.titleLabel:SetPoint("TOPLEFT", self.frame, "TOPLEFT", 10, -10)
+        self.titleLabel:SetPoint("LEFT", self.titleArea, "LEFT", 10, 0)
     elseif align == "CENTER" then
-        self.titleLabel:SetPoint("TOP", self.frame, "TOP", 0, -10)
+        self.titleLabel:SetPoint("CENTER", self.titleArea, "CENTER", 0, 0)
     elseif align == "RIGHT" then
-        self.titleLabel:SetPoint("TOPRIGHT", self.frame, "TOPRIGHT", -10, -10)
+        self.titleLabel:SetPoint("RIGHT", self.titleArea, "RIGHT", -10, 0)
     end
 end
 
@@ -91,26 +91,45 @@ local function Constructor()
     local frame = CreateFrame("Frame", nil, UIParent, "BackdropTemplate")
     frame:SetSize(800, 600)
     frame:SetPoint("CENTER")
-    frame:SetBackdrop({ bgFile = "Interface\\DialogFrame\\UI-DialogBox-Background" })
     frame:SetMovable(true)
     frame:EnableMouse(true)
     frame:RegisterForDrag("LeftButton")
     frame:SetScript("OnDragStart", frame.StartMoving)
     frame:SetScript("OnDragStop", frame.StopMovingOrSizing)
+    frame:SetBackdrop({
+        bgFile = "Interface\\DialogFrame\\UI-DialogBox-Background",
+        tile = true, tileSize = 32, edgeSize = 32,
+    })
+
+    -- Create title bar with darker inset background
+    local titleArea = CreateFrame("Frame", nil, frame, "BackdropTemplate")
+    titleArea:SetPoint("TOPLEFT", frame, "TOPLEFT", 14, -14)
+    titleArea:SetPoint("TOPRIGHT", frame, "TOPRIGHT", -14, -14)
+    titleArea:SetHeight(30)
+    titleArea:SetBackdrop({
+        bgFile = "Interface\\DialogFrame\\UI-DialogBox-Background-Dark",
+        tile = true, tileSize = 16, edgeSize = 16,
+        insets = { left = -3, right = -3, top = -3, bottom = -3 }
+    })
 
     -- Create the 'content' frame that AceGUI expects
-    local content = CreateFrame("Frame", nil, frame)
-    content:SetPoint("TOPLEFT", 10, -40)
-    content:SetPoint("BOTTOMRIGHT", -10, 10)
+    local content = CreateFrame("Frame", nil, frame, "BackdropTemplate")
+    content:SetPoint("TOPLEFT", frame, "TOPLEFT", 14, -48)
+    content:SetPoint("BOTTOMRIGHT", frame, "BOTTOMRIGHT", -14, 14)
+    content:SetBackdrop({
+        bgFile = "Interface\\DialogFrame\\UI-DialogBox-Background-Dark",
+        tile = true, tileSize = 16, edgeSize = 16,
+        insets = { left = -3, right = -3, top = 3, bottom = -3 }
+    })
 
-    -- Create the title label
-    local titleLabel = frame:CreateFontString(nil, "OVERLAY", "GameFontNormal")
-    titleLabel:SetPoint("TOP", frame, "TOP", 0, -10)
+    -- Create the title label on the title area
+    local titleLabel = titleArea:CreateFontString(nil, "OVERLAY", "GameFontNormal")
+    titleLabel:SetPoint("LEFT", titleArea, "LEFT", 10, 0)
     titleLabel:SetText("Default Title")
 
-    -- Create the button bar container
-    local buttonBar = CreateFrame("Frame", nil, frame)
-    buttonBar:SetPoint("TOPRIGHT", frame, "TOPRIGHT", -10, -5)
+    -- Create the button bar container on the title area
+    local buttonBar = CreateFrame("Frame", nil, titleArea)
+    buttonBar:SetPoint("RIGHT", titleArea, "RIGHT", -10, 0)
     buttonBar:SetSize(100, 24)
 
     -- Create the close button using IconButton-PND
@@ -132,6 +151,7 @@ local function Constructor()
         frame = frame,
         content = content,
         titleLabel = titleLabel,
+        titleArea = titleArea,
         buttonBar = buttonBar,
         type = Type,
         Close = CloseWindow,

@@ -125,31 +125,39 @@ end
 --- @param:
 --- @return:
 function PatchNotesDelivered:ShowPatchNotes()
-    if PatchNotesFrame then
+    if PatchNotesFrame and PatchNotesFrame:IsShown() then
+        PatchNotesFrame:Hide()
+        return
+    elseif PatchNotesFrame then
         PatchNotesFrame:Show()
         return
     end
 
     local f = AceGUI:Create("Window-PND")
-    f:SetTitle("|cffffcc00Patch Notes Delivered|r")
+    f:SetTitle("|cffffcc00Patch Notes Delivered, Game Build: |r" .. PATCH_NOTES.version .. "." .. PATCH_NOTES.build)
     f:SetTitleFont("Fonts\\FRIZQT__.TTF", 14, "OUTLINE")
-    f:SetTitleAlignment("LEFT")
+    f:SetTitleAlignment("CENTER")
 
     local scroll = AceGUI:Create("ScrollFrame")
     scroll:SetLayout("Flow")
     scroll:SetFullWidth(true)
     scroll:SetFullHeight(true)
+    scroll:SetUserData("padding", 12)
     f:AddChild(scroll)
 
     local text = AceGUI:Create("Label")
     text:SetText(
-        "|cffffcc00Patch Notes Delivered v" .. PATCH_NOTES.version .. "|r\n" ..
-        "WoW Build: " .. PATCH_NOTES.build .. "\n\n" ..
-        "|cff00ff00Game Changes:|r\n" .. PATCH_NOTES.gameChanges .. "\n\n" ..
-        "|cff00ff00Addon Changes:|r\n" .. PATCH_NOTES.addonChanges
+        "|cff00ff00GAME CHANGES|r\n" ..
+        PATCH_NOTES.gameChanges .. "\n\n" ..
+        "|cff00ff00ADDON CHANGES|r\n" ..
+        PATCH_NOTES.addonChanges
     )
     text:SetFontObject(GameFontHighlight)
     text:SetFullWidth(true)
+    text:SetRelativeWidth(1.0)
+    text:SetUserData("topPadding", 8)
+    text:SetUserData("leftPadding", 10)
+    text:SetUserData("rightPadding", 10)
     scroll:AddChild(text)
 
     PatchNotesFrame = f
