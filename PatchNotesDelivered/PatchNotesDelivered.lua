@@ -135,24 +135,22 @@ function PatchNotesDelivered:ShowPatchNotes()
     f:SetTitleFont("Fonts\\FRIZQT__.TTF", 14, "OUTLINE")
     f:SetTitleAlignment("LEFT")
 
-    local scrollFrame = CreateFrame("ScrollFrame", nil, f, "UIPanelScrollFrameTemplate")
-    scrollFrame:SetPoint("TOPLEFT", 10, -30)
-    scrollFrame:SetPoint("BOTTOMRIGHT", -30, 10)
+    local scroll = AceGUI:Create("ScrollFrame")
+    scroll:SetLayout("Flow")
+    scroll:SetFullWidth(true)
+    scroll:SetFullHeight(true)
+    f:AddChild(scroll)
 
-    local editBox = CreateFrame("EditBox", nil, scrollFrame)
-    editBox:SetMultiLine(true)
-    editBox:SetFontObject("GameFontHighlight")
-    editBox:SetWidth(560)
-    editBox:SetText(
-        "Patch Notes Delivered v" .. PATCH_NOTES.version .. "\n" ..
+    local text = AceGUI:Create("Label")
+    text:SetText(
+        "|cffffcc00Patch Notes Delivered v" .. PATCH_NOTES.version .. "|r\n" ..
         "WoW Build: " .. PATCH_NOTES.build .. "\n\n" ..
-        "Game Changes:\n" .. PATCH_NOTES.gameChanges .. "\n" ..
-        "Addon Changes:\n" .. PATCH_NOTES.addonChanges
+        "|cff00ff00Game Changes:|r\n" .. PATCH_NOTES.gameChanges .. "\n\n" ..
+        "|cff00ff00Addon Changes:|r\n" .. PATCH_NOTES.addonChanges
     )
-    editBox:SetAutoFocus(false)
-    editBox:EnableMouse(false)
-
-    scrollFrame:SetScrollChild(editBox)
+    text:SetFontObject(GameFontHighlight)
+    text:SetFullWidth(true)
+    scroll:AddChild(text)
 
     PatchNotesFrame = f
 end

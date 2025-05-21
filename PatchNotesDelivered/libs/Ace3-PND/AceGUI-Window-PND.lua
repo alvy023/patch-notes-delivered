@@ -78,7 +78,7 @@ end
 local function AddButtonToBar(self, button)
     local numButtons = #self.buttonBar.buttons
     button.frame:SetParent(self.buttonBar)
-    button.frame:SetPoint("RIGHT", self.buttonBar, "RIGHT", -numButtons * 26, 0)  -- Adjust spacing as needed
+    button.frame:SetPoint("RIGHT", self.buttonBar, "RIGHT", -numButtons * 26, 0)
     button.frame:Show()
     table.insert(self.buttonBar.buttons, button)
 end
@@ -100,7 +100,7 @@ local function Constructor()
 
     -- Create the 'content' frame that AceGUI expects
     local content = CreateFrame("Frame", nil, frame)
-    content:SetPoint("TOPLEFT", 10, -40)  -- Adjust the Y offset to add more space
+    content:SetPoint("TOPLEFT", 10, -40)
     content:SetPoint("BOTTOMRIGHT", -10, 10)
 
     -- Create the title label
@@ -110,14 +110,14 @@ local function Constructor()
 
     -- Create the button bar container
     local buttonBar = CreateFrame("Frame", nil, frame)
-    buttonBar:SetPoint("TOPRIGHT", frame, "TOPRIGHT", -5, -5)
-    buttonBar:SetSize(100, 24)  -- Adjust the width as needed
+    buttonBar:SetPoint("TOPRIGHT", frame, "TOPRIGHT", -10, -5)
+    buttonBar:SetSize(100, 24)
 
-    -- Create the close button using IconButton-MPA
-    local closeButton = AceGUI:Create("IconButton-MPA")
+    -- Create the close button using IconButton-PND
+    local closeButton = AceGUI:Create("IconButton-PND")
     closeButton:SetImage("Interface\\AddOns\\PatchNotesDelivered\\Assets\\CustomIcon-White-X.tga")
     closeButton:SetTooltip("Close")
-    closeButton:SetSize(16, 16)
+    closeButton:SetSize(14, 14)
     closeButton:SetCallback("OnClick", function()
         frame:Hide()
     end)
@@ -126,11 +126,11 @@ local function Constructor()
     closeButton.frame:Show()
 
     buttonBar.buttons = {}
-    table.insert(buttonBar.buttons, closeButton)  -- Insert the close button into the buttonBar table
+    table.insert(buttonBar.buttons, closeButton)
 
     local widget = {
         frame = frame,
-        content = content,  -- Important: AceGUI expects this field
+        content = content,
         titleLabel = titleLabel,
         buttonBar = buttonBar,
         type = Type,
@@ -142,10 +142,9 @@ local function Constructor()
         OnRelease = OnRelease,
         Hide = Hide,
         Show = Show,
-        AddButton = AddButtonToBar,  -- Add the AddButton method
+        AddButton = AddButtonToBar,
     }
 
-    -- Ensure the widget properly inherits from AceGUI.WidgetContainerBase
     AceGUI:RegisterAsContainer(widget)
     return widget
 end
