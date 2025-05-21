@@ -2,7 +2,7 @@ name: Update Patch Notes Metadata
 
 on:
   schedule:
-    - cron: '30 19 * * 2'  # Every hour
+    - cron: '30 19 * * 2'  # Every Tuesday at 19:30 UTC (12:30 PST)
   workflow_dispatch:
 
 permissions:
