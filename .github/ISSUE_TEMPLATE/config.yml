@@ -1,5 +1,5 @@
 blank_issues_enabled: false
 contact_links:
   - name: Contact Us
-    url: https://github.com/alvy023/patch-notes-delivered/discussions
-    about: Please use Discussions or an issue template for any feedback or support.
+    url: https://github.com/alvy023/patch-notes-delivered/issues
+    about: Please use an issue template for any bugs or feature requests.
