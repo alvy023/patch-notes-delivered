@@ -57,17 +57,191 @@ PatchNotesDelivered_Text = {
     version = PatchNotesDelivered_PatchVersion,
     build = PatchNotesDelivered_Build,
     gameChanges = [[
-        • <Game Changes>
-        • Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis neque neque, euismod sed risus et, vulputate dictum mauris. Integer ultricies eu leo nec vehicula. Praesent et luctus risus. Mauris enim quam, rutrum venenatis lobortis at, porta vitae eros. Donec in bibendum ex. Curabitur sollicitudin lectus ac fringilla consequat. Duis scelerisque est et ipsum volutpat consequat. Donec lorem felis, volutpat vel luctus a, eleifend ac tortor. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aliquam ut eros metus. Pellentesque nec massa non mi dignissim aliquam quis in enim. Cras vel luctus nibh, nec varius mi. Cras id laoreet felis.
-        • Maecenas ut est ut tortor egestas porttitor in id sem. Maecenas porttitor maximus purus, vitae varius justo viverra dapibus. Phasellus maximus mattis diam, nec ultricies lectus bibendum non. Suspendisse ultrices iaculis urna, sed ornare ex accumsan in. Ut eget lobortis lacus. Maecenas molestie ullamcorper ligula. Ut tempor eros sit amet elementum aliquam. Proin porta lacinia nisl egestas tincidunt. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse a porta ligula, pharetra volutpat ipsum. Integer leo enim, rutrum vitae aliquet nec, varius et turpis. In aliquam tortor nunc, eu volutpat nisi suscipit non.
-        • Nam ac interdum tellus. In suscipit posuere ligula, aliquet molestie urna iaculis et. Aenean efficitur aliquam aliquam. Donec hendrerit ex sit amet lectus facilisis venenatis egestas eu turpis. Quisque nibh lacus, mattis eu sollicitudin sit amet, ultricies vitae orci. Sed porta, nisl in rhoncus luctus, metus purus varius nulla, in euismod tortor ipsum ut leo. Ut consequat arcu id mauris fringilla, in malesuada odio mattis. Nunc at aliquet ex. Aliquam viverra ante a purus bibendum sodales. Phasellus nulla mi, sodales at neque ut, pellentesque elementum diam. Vestibulum varius leo nunc, eu tempor turpis cursus vitae. Nam a porttitor erat. Vestibulum sit amet urna feugiat, porttitor lectus vel, accumsan est. Morbi fringilla blandit lacus at rhoncus. Phasellus non condimentum ex. Pellentesque consequat placerat sapien ut dapibus.
-        • Aliquam erat volutpat. Sed metus velit, eleifend ut placerat et, lacinia quis ex. Pellentesque feugiat dictum dolor, interdum ullamcorper nulla scelerisque non. Proin efficitur leo a bibendum vulputate. Pellentesque libero lorem, mattis quis mattis sit amet, vestibulum sed est. Duis in nisl ante. Pellentesque dictum iaculis dui, ac vulputate neque sollicitudin ut. Pellentesque sollicitudin egestas odio a ullamcorper. Quisque luctus orci quis ullamcorper pretium. Donec mi massa, venenatis a orci ac, egestas rhoncus augue. Cras non felis purus.
-        • Etiam semper massa faucibus ante maximus, a vulputate dolor vulputate. Curabitur est felis, auctor sed consequat eu, vestibulum non dolor. Aenean placerat mollis tellus eu facilisis. Praesent velit elit, finibus eu sollicitudin sit amet, lacinia eu risus. Morbi elit dolor, venenatis tempus mollis in, fringilla ac ipsum. Vivamus pellentesque magna id tincidunt maximus. Ut porta placerat mauris in luctus. Phasellus id quam mi. Quisque ullamcorper sem nec eros semper condimentum. Mauris vulputate elit et urna vehicula suscipit.
-        • Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Fusce placerat elit vel eros ornare, ut lacinia nunc efficitur. Nulla interdum dictum turpis a congue. Nam laoreet eu augue facilisis vehicula. Duis pellentesque magna turpis, ac convallis risus posuere sed. Donec bibendum ligula a molestie aliquam. Morbi elit lorem, tempor vitae sem in, ullamcorper aliquet ante. Duis vulputate nec dolor fermentum vulputate. Quisque semper, mauris a fermentum volutpat, elit risus malesuada elit, ac imperdiet sapien velit nec mi. Sed mauris dolor, pulvinar sed mollis vitae, pharetra a nulla. Sed vulputate nulla at velit consectetur, quis finibus lectus posuere. Aliquam tempor tincidunt tortor a bibendum.
-        • Donec accumsan sapien a efficitur molestie. Nunc erat est, sagittis in enim et, suscipit laoreet orci. Vestibulum non pulvinar lectus. Curabitur pulvinar tempor nisi ut gravida. Cras vitae mauris at felis porttitor ullamcorper et ut mi. Ut pharetra arcu et convallis finibus. Proin consequat faucibus ex, a imperdiet est auctor ac. Proin et augue facilisis, tempor neque ac, consectetur libero. Nulla viverra neque ac dui ullamcorper egestas. Curabitur porttitor condimentum imperdiet. Integer eu mollis augue. Quisque facilisis neque non ex malesuada luctus. Aliquam consectetur at velit id sollicitudin.
-        • Aliquam tincidunt ullamcorper pharetra. Donec a faucibus neque. Curabitur dapibus elementum dolor, ut sodales lacus porta ac. Curabitur at dolor est. Etiam viverra, sem nec ultrices posuere, diam dolor faucibus justo, in varius augue orci a odio. Phasellus vel urna faucibus, efficitur lectus sit amet, finibus est. Nulla molestie efficitur tellus, et congue ex ultrices in. Vivamus maximus urna velit, eget ullamcorper justo sagittis nec. Nunc condimentum urna et tincidunt iaculis. Vestibulum venenatis dictum ultrices. Donec ac ultricies nulla. Praesent efficitur, sem in aliquam faucibus, felis dui maximus tortor, nec sagittis eros dolor in elit. Curabitur egestas nunc a dolor pellentesque, ut tincidunt mi dictum. Praesent dictum velit dui, vel vestibulum erat laoreet ac.
-        • Ut sem mauris, tempor in maximus vel, malesuada in lacus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Donec dapibus consectetur nisl. Donec non tempor ante. Nullam suscipit quis neque sit amet maximus. Ut vitae nisl a eros dignissim faucibus et vel quam. Vivamus ac purus lacus. Etiam purus ligula, bibendum sit amet convallis ut, mattis in tortor. Fusce eu dui ac justo suscipit ultricies. Vestibulum egestas felis vitae bibendum blandit. Phasellus et risus eget tortor iaculis interdum eu dapibus neque. Cras id tortor aliquam, ullamcorper ligula nec, porta quam. Quisque laoreet tristique nunc, at laoreet dolor.
-        • Nunc ac porta turpis. Praesent est erat, pulvinar ut magna sit amet, imperdiet semper ligula. Aliquam erat volutpat. Duis urna risus, elementum tempus pharetra sed, sodales in justo. Donec elementum, enim eu gravida placerat, augue lacus hendrerit metus, nec sodales nisl leo nec ipsum. Ut molestie urna ac purus gravida, quis convallis lacus euismod. Phasellus ullamcorper, risus vitae ultrices luctus, arcu nisl cursus mi, iaculis porta mauris lectus vitae lectus. Pellentesque ac orci vitae leo maximus consequat non porta nibh. Pellentesque lobortis vehicula facilisis. Curabitur consequat sagittis consequat. Curabitur sed lacus posuere, commodo ex cursus, pretium magna. Phasellus eget purus ornare, viverra quam id, varius risus. Phasellus sit amet diam vehicula, lobortis turpis id, fermentum nibh. Nulla vel bibendum ante, sed imperdiet purus. Mauris tellus risus, accumsan eu varius vel, elementum eget urna.
+        --------------
+        |_ Hotfixes _|
+
+        May 16, 2025
+            Classes
+                • Paladin 
+                    > Retribution 
+                        - An issue with Radiant Glory and Avenging Wrath interaction has been resolved.
+                • Hunter
+                    > Marksmanship
+                        - Fixed an issue where dying while channeling Rapid Fire could keep Hunters in combat upon resurrecting.
+    
+            Dungeons 
+                • Priory of the Sacred Flame 
+                    - Addressed an issue where Captain Dailcry can sometimes be rooted after Savage Mauling.
+
+            Player versus Player
+                • Warrior
+                    - Wrecking Throw’s damage increase to shields is now 75% less effective in PvP combat (was 30% less effective).
+                     -Shattering Throw’s damage increase to shields is now 75% less effective in PvP combat (was 30%).
+
+            Trading Post
+                - Earning reputation with the Flame’s Radiance and The Cartels of Undermine factions now counts for the Trading Post activity "Earn Reputation Throughout Khaz Algar", as intended.
+    
+        May 9, 2025
+            Dungeons and Raids
+                • Liberation of Undermine
+                    - Lentil Sprocket now sends players to a slightly different location for the X-Treme transit One Armed Bandit shortcut within the Gallagio.
+
+        May 8, 2025
+            Classes
+                • Hunter
+                    > Survival
+                        - Fixed an issue where Aspect of the Eagle variants of Raptor Strike and Mongoose Bite were dealing less damage than intended.
+                        - Fixed an issue where casting Coordinated Assault at greater than 30 yards away could grant Howl of the Pack Leader twice.
+                        - Fixed an issue where Aspect of the Eagle was not correctly extending the range of Spirit Bond.
+    
+            Dungeons and Raids
+                • Liberation of Undermine
+                    > Mug’zee
+                        - Fixed an issue where placing Hot Mess on the stairs of the encounter would cause it to sometimes not reach the arena floor.
+
+            Player versus Player
+                • Hunter
+                    - Master's Call now applies its effect to you and your pet when targeting your own pet.
+                    - Master's Call now correctly applies to you and your pet if you are targeting an enemy.
+                    - Master's Call now correctly applies to you and your pet if you are targeting nothing.
+                    - Command Pet will now maintain its overridden spell when entering arenas and other instances.
+                    > Survival
+                        - Fixed an issue causing Raptor Strike and Mongoose Bite to not deal damage when cast onto targets in breakable crowd control.
+                        - Flanking Strike will now correctly fail to cast and not go on cooldown if your pet is rooted or crowd-controlled.
+    
+            User Interface and Accessibility
+                - Players in Random Battleground matches can no longer see the names of opposing members until the match begins.
+                - Developers' notes: We have reinforced the measures taken to prevent players from obtaining information about their potential PvP opponents in advance of a battleground. This is applicable to all rated battlegrounds, unrated battlegrounds, rated brawls, and unrated brawls. 
+    
+        May 6, 2025
+            Classes
+                • Demon Hunter
+                    > Aldrachi Reaver
+                        - Fixed an issue where stacks of Art of the Glaive were not correctly being tracked on the Cooldown Manager.
+                    > Havoc
+                        - Fixed an issue that prevented A Fire Inside from dynamically updating the damage bonus granted to Immolation Aura based on your current Mastery amount, like when activating a trinket that increases Mastery.
+                • Druid
+                    > Guardian
+                        - Bristling Fur and several PvP talents added to the Cooldown Manager.
+                        - Tooth and Claw added to Tracked Buffs.
+                        - Maul now only displays on the Cooldown Manager when either Tooth and Claw or Ravage is known.
+                • Evoker
+                    > Augmentation
+                        - Fixed an issue where Mass Eruption would not benefit from other effects that increased the damage of Eruption.
+                        - Fixed an issue where Mass Eruption and Bombardments could trigger from Eruptions cast from Overlord while not talented into Breath of Eons.
+                • Monk
+                    - Zen Flight no longer restricts casting.
+                    - Fixed an issue that caused physical damage modifiers to reduce the healing magical damage transfers through Ancient Teachings.
+                    - Fixed an issue that caused Aspect of Harmony to not apply to targets with a healing absorb present.
+                    - Fixed an issue that caused Unity Within to not automatically trigger if no enemy targets are present when the channel ends for Windwalker Monks.
+                • Paladin
+                    > Protection
+                        - Added support for Sentinel and several PvP talents to the Cooldown Manager.
+        
+            Dungeons and Raids
+                • Liberation of Undermine
+                    - Stix Bunkjunker health reduced by 5% on Mythic difficulty.
+                    - Scrapmaster health reduced by 10% on Mythic difficulty.
+                    - Polarized Catastro-Blast damage reduced by 60%.
+                    - Reel Assistant health reduced by 10% on all difficulties.
+                    - Reward: Coin and Bomb health bonus reduced by 25% on all difficulties.
+                    - Scattered Payout damage reduced by 10% on all difficulties.
+                    - Traveling Flames damage reduced by 19% on Mythic and 7% on Heroic difficulty.
+                    - Crushed! damage reduced by 47% on Mythic and 20% on Heroic difficulty.
+                • Darkflame Cleft
+                    - Fixed an issue where Ol' Waxbeard can unexpectedly reset during the encounter.
+        
+            Items
+                - When casting Reins of Anu'relos you will now be awarded the bonus items if you need them. If you have the item in your inventory or already have the tracking quest completed, you will not be given that matching item. Each item is checked separately.
+                - The Feather of the Blazing Somnowl can now be destroyed if you have a duplicate.
+        
+            Player versus Player
+                • Hunter
+                    > Marksmanship
+                        - Spotter's Marks applied via Ohn'ahran Winds will now correctly obey PvP multipliers.
+                • Monk
+                    > Mistweaver
+                        - Fixed an issue that caused Feather Feet to not function with Song of Chi-Ji.
+
+        May 5, 2025
+            Nightfall Event
+                - Dissenter Troosilver and Whisperer Bravefort have now joined the Sureki assault in eastern Hallowfall.
+
+            Player versus Player
+                • Shaman
+                    > Elemental
+                        - Fixed an issue that caused Storm Conduit to not grant its interrupt protection or cooldown reduction on Tempest casts.
+
+        May 2, 2025
+            Achievements
+                - Fixed a bug preventing completion of Gilded of the Undermine. If you have attained item level 675 but have not yet received the achievement, log out in a zone from The War Within (such as Dornogal) and then log back in.
+
+            Classes
+                • Warrior
+                    > Protection
+                        - Fixed a bug causing Shield Charge to deal damage extra times or to targets near their starting position.
+
+            Dungeons
+                • Priory of the Sacred Flame
+                    - Resolved a Captain Dailcry issue where Hurl Spear could damage players that were not in the indicated path of his spear.
+
+            Items
+                - Carved Blazikon Wax bonus Versatility increased by 150%.
+                - Entropic Skardyn Core Intellect increased by 15% and fragments will attempt to return to the core.
+                - Soulletting Ruby Critical Strike increased by 10%.
+
+            Mounts
+                - Fixed a bug that caused Ground Skimming during Skyriding to recover less vigor than intended.
+
+            Nightfall Event
+                - Increased all Flame’s Radiance reputation gains by 100%, including first time completion, Quest, and Weekly Quest reputation rewards.
+                - Nightfall Item vendors now offer all Arathi Abbot’s, Arathi Cleric’s, Arathi Crusader’s, and Arathi Zealot’s weapons and shields.
+
+            Transmogrification
+                - Fixed an issue where the Mythic and Elite variants of the Shaman Liberation of Undermine class set gloves were missing additional lightning visual effects.
+
+        April 30, 2025
+            Classes
+                • Priest
+                    > Discipline
+                        - Resolved an issue causing the Cooldown Manager to track the duration of Power Word: Shield on the Priest instead of tracking its cooldown.
+                    > Holy
+                        - Fixed an issue causing Prayer of Healing to be able to be displayed on the Cooldown Manager when not talented.
+                • Rogue
+                    - Trickster: Fixed an issue that prevented Blade Flurry and Nimble Flurry from dealing increased damage to targets with the Fazed debuff applied.
+                    > Assassination
+                        - Kingsbane can no longer be parried.
+                    > Outlaw
+                        - Fixed an issue that could cause Blade Flurry to strike below the maximum number of available targets when fighting near dead enemies.
+                        - Fixed an issue that caused Blade Flurry to deal an incorrect amount of damage with the Deft Maneuvers talent selected.
+                        - Fixed an issue that prevented Roll the Bones' Grand Melee buff from updating Blade Flurry's damage output dynamically when gaining or losing the buff.
+                    > Subtlety
+                        - Trickster: Fixed an issue that could cause Nimble Flurry to strike below the maximum number of available targets when fighting near dead enemies.
+                • Shaman
+                    > Restoration
+                        - Fixed an issue causing damage from Acid Rain to not generate threat or aggro enemies.
+                • Warlock
+                    - Hellcaller: Fixed an issue where Blackened Soul would not generate a stack if two Soul Shard spenders were cast in quick succession.
+                    - Hellcaller: Fixed an issue where Wither would not pandemic when refreshed with no stacks.
+                    > Demonology
+                        - Fixed an issue where Shadow Bolt would appear on the essential cooldown bar without Diabolic Ritual being learned.
+                        - Fixed an issue where Hand of Gul'dan would appear on the essential cooldown bar without Secrets of the Coven being learned.
+                        - Fixed an issue where Hand of Gul'dan and Chaos Bolt would glow whenever Demonic Art was active.
+                • Warrior
+                    > Arms
+                        - Colossus Smash can no longer be parried.
+    
+            Dungeons
+                • Darkflame Cleft
+                    - Addressed an issue where Eerie Molds' damage fails to count towards damage taken spells like Rewind and Death Strike.
+            
+            Quests
+                - Resolved an issue preventing looting the quest object after another player looted it first in "Preserve the Legacy" from the Fate of the Kirin Tor questline.
+
+        ------------------
+        |_ Patch 11.1.5 _|
+
+        
     ]],
 
     addonChanges = [[
