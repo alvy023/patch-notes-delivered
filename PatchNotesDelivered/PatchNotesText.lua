@@ -46,6 +46,20 @@ local function GetCurrencyLink(currencyID, customName)
     return string.format("|cffffffff|Hcurrency:%d|h[%s]|h|r", currencyID, linkText)
 end
 
+local function GetFactionLink(factionID, customName)
+    local name = GetFactionInfoByID(factionID)
+    if not name then return customName or ("Unknown Faction: " .. factionID) end
+    local linkText = customName or name
+    return string.format("|cffffff00|Hfaction:%d|h[%s]|h|r", factionID, linkText)
+end
+
+local function GetInstanceLink(instanceID, customName)
+    local name = EJ_GetInstanceInfo(instanceID)
+    if not name then return customName or ("Unknown Instance: " .. instanceID) end
+    local linkText = customName or name
+    return string.format("|cffffd100|Hjournal:2:%d|h[%s]|h|r", instanceID, linkText)
+end
+
 local function GetEncounterLink(encounterID, customName)
     local name = EJ_GetEncounterInfo(encounterID)
     if not name then return customName or ("Unknown Encounter: " .. encounterID) end
@@ -78,7 +92,7 @@ PatchNotesDelivered_Text = {
             Player versus Player
                 • Warrior
                     - Wrecking Throw’s damage increase to shields is now 75% less effective in PvP combat (was 30% less effective).
-                     - Shattering Throw’s damage increase to shields is now 75% less effective in PvP combat (was 30%).
+                    - Shattering Throw’s damage increase to shields is now 75% less effective in PvP combat (was 30%).
 
             Trading Post
                 - Earning reputation with the Flame’s Radiance and The Cartels of Undermine factions now counts for the Trading Post activity "Earn Reputation Throughout Khaz Algar", as intended.
