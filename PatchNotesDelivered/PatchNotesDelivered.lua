@@ -19,8 +19,7 @@ PatchNotesDelivered = AceAddon:NewAddon("PatchNotesDelivered", "AceConsole-3.0",
 local dataBroker = LDB:NewDataObject("PatchNotesDelivered", {
     type = "data source",
     text = "PND",
-    -- @TODO: Replace with custom icon
-    icon = "Interface\\AddOns\\PatchNotesDelivered\\icon",
+    icon = "Interface\\AddOns\\PatchNotesDelivered\\assets\\pnd-icon.tga",
     OnClick = function(_, button)
         if button == "LeftButton" then
             PatchNotesDelivered:ShowPatchNotes()
@@ -134,7 +133,8 @@ function PatchNotesDelivered:ShowPatchNotes()
     end
 
     local f = AceGUI:Create("Window-PND")
-    f:SetTitle("|cffffcc00Patch Notes Delivered, Game Build: |r" .. PATCH_NOTES.version .. "." .. PATCH_NOTES.build)
+    f:SetTitle("|cff00B4FFPatch Notes Delivered, Game Build: |r|cffffffff" ..
+        PATCH_NOTES.version .. "." .. PATCH_NOTES.build .. "|r")
     f:SetTitleFont("Fonts\\FRIZQT__.TTF", 14, "OUTLINE")
     f:SetTitleAlignment("CENTER")
 
@@ -142,22 +142,22 @@ function PatchNotesDelivered:ShowPatchNotes()
     scroll:SetLayout("Flow")
     scroll:SetFullWidth(true)
     scroll:SetFullHeight(true)
-    scroll:SetUserData("padding", 12)
     f:AddChild(scroll)
+
+    local spacer = AceGUI:Create("Label")
+    spacer:SetFullWidth(true)
+    spacer:SetHeight(5)
+    scroll:AddChild(spacer)
 
     local text = AceGUI:Create("Label")
     text:SetText(
-        "|cff00ff00GAME CHANGES|r\n" ..
+        "|cff00B4FFGame Changes|r\n\n" ..
         PATCH_NOTES.gameChanges .. "\n\n" ..
-        "|cff00ff00ADDON CHANGES|r\n" ..
+        "|cff00B4FFAddon Changes|r\n\n" ..
         PATCH_NOTES.addonChanges
     )
     text:SetFontObject(GameFontHighlight)
-    text:SetFullWidth(true)
-    text:SetRelativeWidth(1.0)
-    text:SetUserData("topPadding", 8)
-    text:SetUserData("leftPadding", 10)
-    text:SetUserData("rightPadding", 10)
+    text:SetRelativeWidth(0.96)
     scroll:AddChild(text)
 
     PatchNotesFrame = f

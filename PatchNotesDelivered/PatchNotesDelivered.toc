@@ -7,7 +7,7 @@
 ## AddonCompartmentFunc: PatchNotesDelivered_OnAddonCompartmentClick
 ## AddonCompartmentFuncOnEnter: PatchNotesDelivered_OnAddonCompartmentEnter
 ## AddonCompartmentFuncOnLeave: PatchNotesDelivered_OnAddonCompartmentLeave
-## IconTexture: Interface\Icons\TEMP.blp
+## IconTexture: Interface\AddOns\PatchNotesDelivered\assets\pnd-icon.tga
 
 # Libraries
 libs/Ace3/AceAddon-3.0/AceAddon-3.0.lua
