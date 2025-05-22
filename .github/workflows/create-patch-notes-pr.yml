@@ -1,4 +1,4 @@
-name: Creates the Patch Notes PR
+name: Create Patch Notes PR
 
 on:
   schedule:
