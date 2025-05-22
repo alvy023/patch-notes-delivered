@@ -1,4 +1,4 @@
-name: Create Bug Branch from Approved Issue
+name: Promote Issue to Bug Branch
 
 on:
   issues:
