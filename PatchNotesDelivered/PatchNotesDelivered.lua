@@ -220,47 +220,6 @@ function PatchNotesDelivered:ToggleMinimapButton()
     end
 end
 
---- Description: Debug function to print addon information
---- @param: input (string) - Any additional command arguments
---- @return: none
-function PatchNotesDelivered:Debug(input)
-    local version, build, date, tocVersion = GetBuildInfo()
-
-    self:Print("|cFF00FFFFPatch Notes Delivered - Debug Information|r")
-
-    -- Game information
-    self:Print("Game Version: " .. version)
-    self:Print("Game Build: " .. build)
-    self:Print("Game Date: " .. date)
-    self:Print("TOC Version: " .. tocVersion)
-
-    -- Addon information
-    self:Print("Addon Version: " .. (PATCH_NOTES.version or "Unknown"))
-    self:Print("Patch Notes Build: " .. (PATCH_NOTES.build or "Unknown"))
-
-    -- Database information
-    self:Print("Last Seen Build: " .. (self.db.profile.lastSeenBuild or "None"))
-
-    -- Options states
-    self:Print("Minimap Button: " .. (self.db.profile.minimap.hide and "Hidden" or "Shown"))
-    self:Print("Addon Compartment: " .. (self.db.profile.addonCompartment.hide and "Hidden" or "Shown"))
-
-    -- UI States
-    self:Print("Notes Frame: " .. (notesFrame and (notesFrame:IsShown() and "Showing" or "Hidden") or "Not Created"))
-
-    -- LibDBIcon status
-    self:Print("LDBIcon Registered: " .. (LDBIcon:IsRegistered("PatchNotesDelivered") and "Yes" or "No"))
-
-    -- Compartment registration status
-    local c_api_available = (C_AddOns and C_AddOns.RegisterAddonCompartment) and true or false
-    local frame_api_available = (AddonCompartmentFrame and AddonCompartmentFrame.RegisterAddon) and true or false
-
-    self:Print("C_AddOns Compartment API: " .. (c_api_available and "Available" or "Not Available"))
-    self:Print("AddonCompartmentFrame API: " .. (frame_api_available and "Available" or "Not Available"))
-    self:Print("Any Compartment API Available: " .. (self.hasCompartmentAPI and "Yes" or "No"))
-    self:Print("Compartment Setting: " .. (self.db.profile.addonCompartment.hide and "Hidden" or "Shown"))
-end
-
 -- Slash Commands
 PatchNotesDelivered:RegisterChatCommand("pnd", "ShowPatchNotes")
 PatchNotesDelivered:RegisterChatCommand("pnd-mini", "ToggleMinimapButton")
