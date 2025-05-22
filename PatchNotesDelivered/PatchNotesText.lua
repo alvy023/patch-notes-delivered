@@ -78,7 +78,7 @@ PatchNotesDelivered_Text = {
             Player versus Player
                 • Warrior
                     - Wrecking Throw’s damage increase to shields is now 75% less effective in PvP combat (was 30% less effective).
-                     -Shattering Throw’s damage increase to shields is now 75% less effective in PvP combat (was 30%).
+                     - Shattering Throw’s damage increase to shields is now 75% less effective in PvP combat (was 30%).
 
             Trading Post
                 - Earning reputation with the Flame’s Radiance and The Cartels of Undermine factions now counts for the Trading Post activity "Earn Reputation Throughout Khaz Algar", as intended.

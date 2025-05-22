@@ -142,7 +142,7 @@ function PatchNotesDelivered:ShowPatchNotes()
 
     local f = AceGUI:Create("Window-PND")
     f:SetTitle("|cff00B4FFPatch Notes Delivered, Game Build: |r|cffffffff" ..
-        PATCH_NOTES.version .. "." .. PATCH_NOTES.build .. PATCH_NOTES.hotfix .. "|r")
+        PATCH_NOTES.version .. "." .. PATCH_NOTES.build .. "." .. PATCH_NOTES.hotfix .. "|r")
     f:SetTitleFont("Fonts\\FRIZQT__.TTF", 14, "OUTLINE")
     f:SetTitleAlignment("CENTER")
 
