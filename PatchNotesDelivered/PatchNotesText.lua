@@ -7,7 +7,8 @@
 
 -- Variables used by check_build.py
 PatchNotesDelivered_PatchVersion = "11.1.5"
-PatchNotesDelivered_Build = 60822  -- numeric, without quotes
+PatchNotesDelivered_Build = 60822
+PatchNotesDelivered_Hotfix = 7
 
 -- Link Helper Functions
 local function GetSpellLink(spellID, customName)
@@ -56,6 +57,7 @@ end
 PatchNotesDelivered_Text = {
     version = PatchNotesDelivered_PatchVersion,
     build = PatchNotesDelivered_Build,
+    hotfix = PatchNotesDelivered_Hotfix,
     gameChanges = [[
         --------------
         |_ Hotfixes _|
