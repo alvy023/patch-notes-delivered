@@ -241,7 +241,74 @@ PatchNotesDelivered_Text = {
         ------------------
         |_ Patch 11.1.5 _|
 
-        
+        THE WINDS OF MYSTERIOUS FORTUNE ARE IN YOUR FAVOR
+            - Beginning on April 22, 2025, through May 20, 2025, players can take advantage of the Winds of Mysterious Fortune 20% experience buff to get up to speed with their new or alternate characters levels 10 through 79.
+            - This buff will also provide +200% major faction renown in Dragonflight zones and +100% select major faction renown in The War Within zones.
+
+            DRAGONFLIGHT FACTIONS INCLUDED:    THE WAR WITHIN FACTIONS INCLUDED:
+                Dragonscale Expedition             Hallowfall Arathi
+                Maruuk Centaur                     The Assembly of the Deeps
+                Iskaara Tuskarr                    The General
+                Valdrakken Accord                  The Vizier
+                Loamm Niffen                       The Weaver
+                Dream Wardens
+                Sabellian
+                Wrathion
+                Cobalt Assembly
+                Council of Dornogal
+
+            *Undermine factions are excluded from benefitting from this buff.
+            
+            - During this period, players below level 80 will also have a chance to gain Mysterious Satchels while looting creatures or as a bonus reward from quests. These satchels contain a variety of fun and useful items that can grant temporary stat boosts or visual alterations. These satchels can sometimes also include bonus gear appropriate to your level and specialization, and 2 hour 10% experience potions that stack with the 20% experience buff to a maximum of 30%.
+            - Experience potions are a Warband-bound item and can be consumed during the event or saved until after the event is over to be used on characters from level 10-79. Any stat potion effects or elemental potion effects will not work in Mythic+, Raids or rated PvP content.
+
+        DEFEND THE ARATHI IN THE NIGHTFALL SCENARIO
+            - Players will take up arms beside a new faction, Flame’s Radiance, to defend the Arathi against the Sureki forces following the defeat of Queen Ansurek. This faction consists of volunteer militia led veterans Thaed Pyremaker and Mylton Wyldbraun. As you rise through the ranks, you will earn up to ten levels of Renown and unlock new rewards.
+            - Alongside the Flame’s Radiance, players will be split between task forces within the Nightfall public scenario to clear the battlefield and push back the Sureki. You’ll also be able to strike back against Sureki forces throughout Hallowfall and Azj-Kahet to continue to earn Renown and rewards with additional quests and activities available between the scenarios.
+            - Players can expect a variety of rewards for taking part in the scenario and quests including— new armor sets, a tabard that will update visually as you progress through the ranks of the Flame’s Radiance, weapons, a new color variation of the Delver’s Dirigible, and more. As your rank increases, you can also expect to earn buffs which will help you become stronger while in Hallowfall and Azj-Kahet.
+
+        NEW COOLDOWN MANAGER
+            - Players can enable a new Cooldown Manager within their UI by opening the Game Menu (Escape), selecting Options, then opening Advanced Options to see the new feature Enable Cooldown Manager: Toggle on to view important cooldowns and buffs in separate customizable HUD elements for the selected specialization.
+            - Cooldown abilities will show up automatically in the center of our screen and include a visual countdown of when your ability is available to use again.
+            - To customize the Cooldown Manager, open the Game Menu (Escape), select the Edit Mode to access the HUD Edit Mode, then select Advanced Options. You can select “Cooldown Manager” from the options then adjust the Utility Cooldown Options bar, Essential Cooldowns bar, Tracked Buffs bar, and Tracked Bars by clicking on them and adjusting their visual elements to your preference.
+
+        HORRIFIC VISIONS REVISITED - Week of May 20
+            - Return to N’Zoth’s corrupted versions of Stormwind and Orgrimmar, complete objectives, and take on the challenges within. As you make your way through these encounters, you’ll need to maintain your sanity or ultimately fail.
+            - You will be able to go it alone or create a party of allies to join you. Players who want to experience Horrific Visions alone or need an additional helping hand in their party will also be able to invite a Construct of Soridormi companion to join them. This follower will be able to Tank, DPS, or Heal and will not be affected by sanity.
+            - For players looking for a bigger challenge, you’ll be able to activate higher difficulties of play for additional gear up to Heroic difficulty items. Horrific Vision Masks are also returning including: Mask of Pain, Mask of Dark Imagination, Mask of the Long Night, Mask of the Burned Bridge, and Mask of the Daredevil. Three additional new masks, Mask of Vengeance, Mask of Multitudes, and the Mask of the Nemesis will also be available to discover and conquer!
+            - A new currency to collect becomes available to spend at the vendor for new and previous rewards—Displaced Corrupted Mementos. Players will be able to earn new and returning rewards in Horrific Visions such as mounts, toys, transmogs, weapon enchantments, and more.
+            - Whether you’re playing a new max-level alternate character or experiencing it for the first time, you can experience this content shortly after the launch of the 11.1.5 update.
+
+        DASTARDLY DUOS - Week of June 3
+            - Later in the patch cycle, players will be able to experience a new six-week event providing a variety of cosmetics, toys, and even some dungeon items based on the bosses you encounter.
+            - Vinnie Sweets, showrunner, and announcer, is promoting Dastardly Duos where players can step up to take on ‘animatronic’ versions of past bosses, gain powerups, and strive for higher and higher scores for bragging rights. You and your party will fight two (or more) bosses at a time to rack up your highest score.
+            - There will be three hubs for Dastardly Duos that players can visit. One in Stormwind, one in Orgrimmar, and one in Dornogal. While Vinnie Sweets is running the show, you’ll need to speak with Xyggie Marou to queue for the fight in the Dastardly Dome. A visit with Wodin, the Troll-Servant vendor, will also get you access over the weeks to some additional powerups or items that can help you in the fight.
+            - In week one, there will be four bosses available to fight and each week thereafter additional bosses will be added up to a total of ten total bosses to face.
+            - Earning specific achievements will also provide additional game effects from them within the Dastardly Duo.
+            - Earn points for kills, damage done, and much more. Rack up a high score with your party for bragging rights and see how far you can go!
+
+        Classes
+            • Monk
+                > Mistweaver
+                    - Fixed an issue that caused Mending Proliferation to not function with a variety of Mistweaver healing spells.
+            • Warrior
+                > Arms
+                    - The visuals for the Warbreaker ability have been updated.
+
+        Reputation and Renown
+            - Increased the reputation gains for Bilgewater Cartel, Blackwater Cartel, Steamwheedle Cartel, and the Venture Company from rares, side gigs, weekly quests, and world quests by 100%.
+            - The following reputations from Shadowlands have been converted to be warband-wide: The Ascended, The Undying Army, The Wild Hunt, Court of Night, Court of Harvesters, The Avowed, Death's Advance, The Archivists' Codex, The Enlightened, Ve'nari.
+
+        User Interface and Accessibility
+            - Guilds can now be renamed with gold at the Guild Master NPCs in major cities.
+            - Shopping cart functionality has been added to the Trading Post, allowing players to add multiple items into their shopping cart before confirming a purchase.
+            - New color blind option allows players to custom set the various Item Rarity colors.
+            - There is now a filter "Show Collected Only" for Warband Campsites collection.
+            - Fixed an issue where players cannot select "Auto and Key Press" option under the Self Cast settings.
+            - Flyouts for action bars should update its direction correctly.
+            - Using the search bar in the character select screen should no longer cause the character to visually disappear or cause issues to the campsite frame.
+            - Fixed an issue where the premade group dungeon filter would not save.
+            - Fixed an issue where the notification icon on the micromenu for Guilds and Communities would not honor filter settings.
     ]],
 
     addonChanges = [[
