@@ -159,10 +159,9 @@ function PatchNotesDelivered:ShowPatchNotes()
 
     local text = AceGUI:Create("Label")
     text:SetText(
-        "|cff00B4FFGame Changes|r\n\n" ..
-        PATCH_NOTES.gameChanges .. "\n\n" ..
-        "|cff00B4FFAddon Changes|r\n\n" ..
-        PATCH_NOTES.addonChanges
+        "    |cff00B4FFHotfix Changes|r\n\n" .. PATCH_NOTES.gameChangesHotfixes .. "\n\n" ..
+        "    |cff00B4FFPatch Changes|r\n\n" .. PATCH_NOTES.gameChangesPatch .. "\n\n" ..
+        "    |cff00B4FFAddon Changes|r\n\n" .. PATCH_NOTES.addonChanges
     )
     text:SetFontObject(GameFontHighlight)
     text:SetRelativeWidth(0.96)
