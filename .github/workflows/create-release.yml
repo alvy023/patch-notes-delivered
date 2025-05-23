@@ -32,7 +32,7 @@ jobs:
       - name: Set full version string
         id: versioning
         run: |
-          RELEASE_TAG="v${ADDON_VERSION}-wow-${{ steps.create_release.outputs.local_game_version_build }}"
+          RELEASE_TAG="v${ADDON_VERSION}-wow-retail-${{ steps.create_release.outputs.local_game_version_build_hf }}"
           echo "release_tag=${RELEASE_TAG}" >> $GITHUB_OUTPUT
         shell: bash
 

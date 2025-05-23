@@ -52,6 +52,7 @@ function PatchNotesDelivered:OnInitialize()
     self.db = AceDB:New("PatchNotesDB", {
         profile = {
             lastSeenBuild = nil,
+            lastSeenHotfix = nil,
             minimap = { hide = false },
             addonCompartment = { hide = false },
         }
@@ -110,9 +111,16 @@ end
 function PatchNotesDelivered:ShouldShowPatchNotes()
     local version, build, date, tocVersion = GetBuildInfo()
     local notesBuild = PATCH_NOTES.build
+    local noteHotfix = PATCH_NOTES.hotfix
 
-    if build == notesBuild and self.db.profile.lastSeenGameBuild ~= build then
+    if build == notesBuild and self.db.profile.lastSeenBuild ~= build then
         self.db.profile.lastSeenBuild = build
+        self.db.profile.lastSeenHotfix = noteHotfix
+        return true
+    end
+
+    if build == notesBuild and self.db.profile.lastSeenBuild == build and self.db.profile.lastSeenHotfix ~= noteHotfix then
+        self.db.profile.lastSeenHotfix = noteHotfix
         return true
     end
 
@@ -134,7 +142,7 @@ function PatchNotesDelivered:ShowPatchNotes()
 
     local f = AceGUI:Create("Window-PND")
     f:SetTitle("|cff00B4FFPatch Notes Delivered, Game Build: |r|cffffffff" ..
-        PATCH_NOTES.version .. "." .. PATCH_NOTES.build .. "|r")
+        PATCH_NOTES.version .. "." .. PATCH_NOTES.build .. "." .. PATCH_NOTES.hotfix .. "|r")
     f:SetTitleFont("Fonts\\FRIZQT__.TTF", 14, "OUTLINE")
     f:SetTitleAlignment("CENTER")
 
@@ -151,10 +159,9 @@ function PatchNotesDelivered:ShowPatchNotes()
 
     local text = AceGUI:Create("Label")
     text:SetText(
-        "|cff00B4FFGame Changes|r\n\n" ..
-        PATCH_NOTES.gameChanges .. "\n\n" ..
-        "|cff00B4FFAddon Changes|r\n\n" ..
-        PATCH_NOTES.addonChanges
+        "    |cff00B4FFHotfix Changes|r\n\n" .. PATCH_NOTES.gameChangesHotfixes .. "\n\n" ..
+        "    |cff00B4FFPatch Changes|r\n\n" .. PATCH_NOTES.gameChangesPatch .. "\n\n" ..
+        "    |cff00B4FFAddon Changes|r\n\n" .. PATCH_NOTES.addonChanges
     )
     text:SetFontObject(GameFontHighlight)
     text:SetRelativeWidth(0.96)
