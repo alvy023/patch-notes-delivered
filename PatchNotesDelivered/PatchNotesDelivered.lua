@@ -42,7 +42,7 @@ local UIDropDownMenu_AddButton = UIDropDownMenu_AddButton
 local ToggleDropDownMenu = ToggleDropDownMenu
 
 -- Get global patch notes variable from file
-local PATCH_NOTES = PatchNotesDelivered_Text
+local PATCH_NOTES = nil
 
 -- Event Handlers
 --- Description: OnInitialize event handler
@@ -67,6 +67,9 @@ end
 --- @param:
 --- @return:
 function PatchNotesDelivered:PLAYER_LOGIN()
+    if PATCH_NOTES == nil then
+        PATCH_NOTES = BuildPatchNotes()
+    end
     if self:ShouldShowPatchNotes() then
         self:ShowPatchNotes()
     end
@@ -127,7 +130,6 @@ function PatchNotesDelivered:ShouldShowPatchNotes()
     return false
 end
 
-
 --- Description: Show the patch notes frame
 --- @param:
 --- @return:
@@ -157,15 +159,16 @@ function PatchNotesDelivered:ShowPatchNotes()
     spacer:SetHeight(5)
     scroll:AddChild(spacer)
 
-    local text = AceGUI:Create("Label")
-    text:SetText(
+    local textWidget = AceGUI:Create("Label")
+    textWidget:SetText(
         "    |cff00B4FFHotfix Changes|r\n\n" .. PATCH_NOTES.gameChangesHotfixes .. "\n\n" ..
         "    |cff00B4FFPatch Changes|r\n\n" .. PATCH_NOTES.gameChangesPatch .. "\n\n" ..
         "    |cff00B4FFAddon Changes|r\n\n" .. PATCH_NOTES.addonChanges
     )
-    text:SetFontObject(GameFontHighlight)
-    text:SetRelativeWidth(0.96)
-    scroll:AddChild(text)
+    textWidget:SetFontObject(GameFontHighlight)
+    textWidget:SetRelativeWidth(0.96)
+
+    scroll:AddChild(textWidget)
 
     PatchNotesFrame = f
 end
