@@ -142,17 +142,27 @@ function PatchNotesDelivered:ShowPatchNotes()
         return
     end
 
-    local f = AceGUI:Create("Window-PND")
-    f:SetTitle("|cff00B4FFPatch Notes Delivered, Game Build: |r|cffffffff" ..
+    local pnd = AceGUI:Create("Window-PND")
+    pnd:SetTitle("|cff00B4FFPatch Notes Delivered, Game Build: |r|cffffffff" ..
         PATCH_NOTES.version .. "." .. PATCH_NOTES.build .. "." .. PATCH_NOTES.hotfix .. "|r")
-    f:SetTitleFont("Fonts\\FRIZQT__.TTF", 14, "OUTLINE")
-    f:SetTitleAlignment("CENTER")
+    pnd:SetTitleFont("Fonts\\FRIZQT__.TTF", 14, "OUTLINE")
+    pnd:SetTitleAlignment("CENTER")
+
+    --- Create the reset button using IconButton-PND
+    local resetButton = AceGUI:Create("IconButton-PND")
+    resetButton:SetImage("Interface\\AddOns\\PatchNotesDelivered\\assets\\CustomIcon-White-Reset.tga")
+    resetButton:SetTooltip("Reset Size")
+    resetButton:SetSize(14, 14)
+    resetButton:SetCallback("OnClick", function()
+        PatchNotesFrame.frame:SetSize(800, 600)
+    end)
+    pnd:AddButton(resetButton)
 
     local scroll = AceGUI:Create("ScrollFrame")
     scroll:SetLayout("Flow")
     scroll:SetFullWidth(true)
     scroll:SetFullHeight(true)
-    f:AddChild(scroll)
+    pnd:AddChild(scroll)
 
     local spacer = AceGUI:Create("Label")
     spacer:SetFullWidth(true)
@@ -170,7 +180,7 @@ function PatchNotesDelivered:ShowPatchNotes()
 
     scroll:AddChild(textWidget)
 
-    PatchNotesFrame = f
+    PatchNotesFrame = pnd
 end
 
 --- Description: Show the options menu
