@@ -59,14 +59,27 @@ function PatchNotesDelivered:OnInitialize()
     }, true)
     --- Register minimap button
     LDBIcon:Register("PatchNotesDelivered", dataBroker, self.db.profile.minimap)
-    --- Register addon for login event notification
+    --- Register addon for event notifications
     self:RegisterEvent("PLAYER_LOGIN")
+    self:RegisterEvent("PLAYER_ENTERING_WORLD")
 end
 
 --- Description: PLAYER_LOGIN event handler
 --- @param:
 --- @return:
 function PatchNotesDelivered:PLAYER_LOGIN()
+    if PATCH_NOTES == nil then
+        PATCH_NOTES = BuildPatchNotes()
+    end
+    if self:ShouldShowPatchNotes() then
+        self:ShowPatchNotes()
+    end
+end
+
+--- Description: Player reload event handler
+--- @param:
+--- @return:
+function PatchNotesDelivered:PLAYER_ENTERING_WORLD()
     if PATCH_NOTES == nil then
         PATCH_NOTES = BuildPatchNotes()
     end
@@ -115,6 +128,12 @@ function PatchNotesDelivered:ShouldShowPatchNotes()
     local version, build, date, tocVersion = GetBuildInfo()
     local notesBuild = PATCH_NOTES.build
     local noteHotfix = PATCH_NOTES.hotfix
+
+    if self.db.profile.lastSeenBuild == nil or self.db.profile.lastSeenHotfix == nil then
+        self.db.profile.lastSeenBuild = build
+        self.db.profile.lastSeenHotfix = noteHotfix
+        return true
+    end
 
     if build == notesBuild and self.db.profile.lastSeenBuild ~= build then
         self.db.profile.lastSeenBuild = build
