@@ -42,7 +42,7 @@ local UIDropDownMenu_AddButton = UIDropDownMenu_AddButton
 local ToggleDropDownMenu = ToggleDropDownMenu
 
 -- Get global patch notes variable from file
-local PATCH_NOTES = PatchNotesDelivered_Text
+local PATCH_NOTES = nil
 
 -- Event Handlers
 --- Description: OnInitialize event handler
@@ -52,20 +52,37 @@ function PatchNotesDelivered:OnInitialize()
     self.db = AceDB:New("PatchNotesDB", {
         profile = {
             lastSeenBuild = nil,
+            lastSeenHotfix = nil,
             minimap = { hide = false },
             addonCompartment = { hide = false },
         }
     }, true)
     --- Register minimap button
     LDBIcon:Register("PatchNotesDelivered", dataBroker, self.db.profile.minimap)
-    --- Register addon for login event notification
+    --- Register addon for event notifications
     self:RegisterEvent("PLAYER_LOGIN")
+    self:RegisterEvent("PLAYER_ENTERING_WORLD")
 end
 
 --- Description: PLAYER_LOGIN event handler
 --- @param:
 --- @return:
 function PatchNotesDelivered:PLAYER_LOGIN()
+    if PATCH_NOTES == nil then
+        PATCH_NOTES = BuildPatchNotes()
+    end
+    if self:ShouldShowPatchNotes() then
+        self:ShowPatchNotes()
+    end
+end
+
+--- Description: Player reload event handler
+--- @param:
+--- @return:
+function PatchNotesDelivered:PLAYER_ENTERING_WORLD()
+    if PATCH_NOTES == nil then
+        PATCH_NOTES = BuildPatchNotes()
+    end
     if self:ShouldShowPatchNotes() then
         self:ShowPatchNotes()
     end
@@ -110,15 +127,27 @@ end
 function PatchNotesDelivered:ShouldShowPatchNotes()
     local version, build, date, tocVersion = GetBuildInfo()
     local notesBuild = PATCH_NOTES.build
+    local noteHotfix = PATCH_NOTES.hotfix
 
-    if build == notesBuild and self.db.profile.lastSeenGameBuild ~= build then
+    if self.db.profile.lastSeenBuild == nil or self.db.profile.lastSeenHotfix == nil then
         self.db.profile.lastSeenBuild = build
+        self.db.profile.lastSeenHotfix = noteHotfix
+        return true
+    end
+
+    if build == notesBuild and self.db.profile.lastSeenBuild ~= build then
+        self.db.profile.lastSeenBuild = build
+        self.db.profile.lastSeenHotfix = noteHotfix
+        return true
+    end
+
+    if build == notesBuild and self.db.profile.lastSeenBuild == build and self.db.profile.lastSeenHotfix ~= noteHotfix then
+        self.db.profile.lastSeenHotfix = noteHotfix
         return true
     end
 
     return false
 end
-
 
 --- Description: Show the patch notes frame
 --- @param:
@@ -132,35 +161,45 @@ function PatchNotesDelivered:ShowPatchNotes()
         return
     end
 
-    local f = AceGUI:Create("Window-PND")
-    f:SetTitle("|cff00B4FFPatch Notes Delivered, Game Build: |r|cffffffff" ..
-        PATCH_NOTES.version .. "." .. PATCH_NOTES.build .. "|r")
-    f:SetTitleFont("Fonts\\FRIZQT__.TTF", 14, "OUTLINE")
-    f:SetTitleAlignment("CENTER")
+    local pnd = AceGUI:Create("Window-PND")
+    pnd:SetTitle("|cff00B4FFPatch Notes Delivered, Game Build: |r|cffffffff" ..
+        PATCH_NOTES.version .. "." .. PATCH_NOTES.build .. "." .. PATCH_NOTES.hotfix .. "|r")
+    pnd:SetTitleFont("Fonts\\FRIZQT__.TTF", 14, "OUTLINE")
+    pnd:SetTitleAlignment("CENTER")
+
+    --- Create the reset button using IconButton-PND
+    local resetButton = AceGUI:Create("IconButton-PND")
+    resetButton:SetImage("Interface\\AddOns\\PatchNotesDelivered\\assets\\CustomIcon-White-Reset.tga")
+    resetButton:SetTooltip("Reset Size")
+    resetButton:SetSize(14, 14)
+    resetButton:SetCallback("OnClick", function()
+        PatchNotesFrame.frame:SetSize(800, 600)
+    end)
+    pnd:AddButton(resetButton)
 
     local scroll = AceGUI:Create("ScrollFrame")
     scroll:SetLayout("Flow")
     scroll:SetFullWidth(true)
     scroll:SetFullHeight(true)
-    f:AddChild(scroll)
+    pnd:AddChild(scroll)
 
     local spacer = AceGUI:Create("Label")
     spacer:SetFullWidth(true)
     spacer:SetHeight(5)
     scroll:AddChild(spacer)
 
-    local text = AceGUI:Create("Label")
-    text:SetText(
-        "|cff00B4FFGame Changes|r\n\n" ..
-        PATCH_NOTES.gameChanges .. "\n\n" ..
-        "|cff00B4FFAddon Changes|r\n\n" ..
-        PATCH_NOTES.addonChanges
+    local textWidget = AceGUI:Create("Label")
+    textWidget:SetText(
+        "    |cff00B4FFHotfix Changes|r\n\n" .. PATCH_NOTES.gameChangesHotfixes .. "\n\n" ..
+        "    |cff00B4FFPatch Changes|r\n\n" .. PATCH_NOTES.gameChangesPatch .. "\n\n" ..
+        "    |cff00B4FFAddon Changes|r\n\n" .. PATCH_NOTES.addonChanges
     )
-    text:SetFontObject(GameFontHighlight)
-    text:SetRelativeWidth(0.96)
-    scroll:AddChild(text)
+    textWidget:SetFontObject(GameFontHighlight)
+    textWidget:SetRelativeWidth(0.96)
 
-    PatchNotesFrame = f
+    scroll:AddChild(textWidget)
+
+    PatchNotesFrame = pnd
 end
 
 --- Description: Show the options menu

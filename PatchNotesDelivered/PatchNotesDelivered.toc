@@ -19,9 +19,10 @@ libs/Ace3/CallbackHandler-1.0/CallbackHandler-1.0.lua
 libs/Ace3/LibStub/LibStub.lua
 libs/Ace3-PND/AceGUI-IconButton-PND.lua
 libs/Ace3-PND/AceGUI-Window-PND.lua
-libs/libdatabroker-1-1/LibDataBroker-1.1.lua
+libs/LibDataBroker-1.1/LibDataBroker-1.1.lua
 libs/LibDBIcon-1.0/LibDBIcon-1.0.lua
 
 # Addon Files
+SpellDictionary.lua
 PatchNotesText.lua
 PatchNotesDelivered.lua
