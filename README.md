@@ -23,8 +23,8 @@ Patch Notes Delivered (PND) is a lightweight World of Warcraft addon that displa
 
 ## 📋 Usage
 
-- **Left Click** minimap button or addon compartment icon: Show patch notes  
-- **Right Click** minimap button or addon compartment icon: Open options menu  
+- [**Left Click**] the minimap button or addon compartment icon -> Show patch notes  
+- [**Right Click**] the minimap button or addon compartment icon -> Open options menu  
 - **Slash Commands**:
   - `/pnd` – Show patch notes  
   - `/pnd-mini` – Toggle minimap button  
