@@ -262,4 +262,3 @@ end
 -- Slash Commands
 PatchNotesDelivered:RegisterChatCommand("pnd", "ShowPatchNotes")
 PatchNotesDelivered:RegisterChatCommand("pnd-mini", "ToggleMinimapButton")
-PatchNotesDelivered:RegisterChatCommand("pnd-debug", "Debug")
