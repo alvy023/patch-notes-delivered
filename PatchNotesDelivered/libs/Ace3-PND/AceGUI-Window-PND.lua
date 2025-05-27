@@ -9,7 +9,7 @@
 local AceGUI = LibStub("AceGUI-3.0")
 
 -- Constants
-local Type, Version = "Window-PND", 3
+local Type, Version = "Window-PND", 1
 
 -- Functions
 --- Description: Hides the window.
