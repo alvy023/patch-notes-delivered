@@ -22,10 +22,14 @@ def parse_local_version_and_build():
         content = f.read()
 
     version_match = re.search(r'PatchNotesDelivered_PatchVersion\s*=\s*"([^"]+)"', content)
-    build_match = re.search(r'PatchNotesDelivered_Build\s*=\s*(\d+)', content)
+    build_match = re.search(r'PatchNotesDelivered_Build\s*=\s*"(\d+)"', content)
 
-    if not version_match or not build_match:
-        print("❌ Failed to find local version or build in PatchNotesText.lua")
+    if not version_match:
+        print("❌ Failed to find local version in PatchNotesText.lua")
+        sys.exit(1)
+
+    if not build_match:
+        print("❌ Failed to find local build in PatchNotesText.lua")
         sys.exit(1)
 
     return version_match.group(1), build_match.group(1)
