@@ -8,7 +8,7 @@
 -- Variables used by check_build.py
 PatchNotesDelivered_PatchVersion = "11.1.5"
 PatchNotesDelivered_Build = "61122"
-PatchNotesDelivered_Hotfix = 7
+PatchNotesDelivered_Hotfix = 9
 PatchNotesDelivered_Text = nil
 
 -- Link Helper Functions
@@ -108,6 +108,133 @@ function BuildPatchNotes()
         build = PatchNotesDelivered_Build,
         hotfix = PatchNotesDelivered_Hotfix,
         gameChangesHotfixes = [[
+            May 27, 2025
+
+                Classes
+                    • Evoker
+                        > Augmentation
+                            - Nerub-ar Palace 2-piece class set increases Upheaval damage by 15% (was 30%) and Eruption damage by 15% per stack (was 30%).
+                            - Developers’ notes: With recent buffs to Augmentation’s personal damage, this older class set became stronger than intended.
+                        > Preservation
+                            - Healing of all spells and abilities increased by 4%. Does not affect PvP combat.
+                            - Living Flame healing increased by 30%.
+                            - Spiritbloom healing increased by 20%.
+                            - Echo’s base healing increased by 100%. This only affects the raw healing, not how strong copied spells are.
+                    • Hunter
+                        > Survival
+                            - Explosive Shot damage increased by 15%.
+                            - Fury of the Eagle damage increased by 25%.
+                    • Mage
+                        > Frost
+                            - All damage dealt increased by 3%. Does not affect PvP.
+                    • Paladin
+                        > Holy
+                            - Lightsmith: Blessing of the Forge healing increased by 15%.
+                            - Lightsmith: Hammer and Anvil healing increased by 20%.
+                    • Priest
+                        > Shadow
+                            - Psychic Link now causes direct damage to inflict 35% of damage dealt to targets afflicted by Vampiric Touch (was 30%).
+                            - Halo damage increased by 30%.
+                            - Voidweaver: Entropic Rift damage increased by 12%.
+                    • Rogue
+                        > Subtlety
+                            - All damage increased by 5%. Does not affect PvP combat.
+                    • Shaman
+                        > Restoration
+                            - Farseer: Elemental Reverb now increases Riptide healing by 20% (was 10%). Not applied to PvP combat.
+                            - Farseer: Maelstrom Supremacy now increases the healing of Healing Wave, Healing Surge, Wellspring, Downpour, and Chain Heal by 25% (was 15%). Not applied to PvP combat.
+                            - Farseer: Offering from Beyond now reduces the cooldown of Riptide by 3 seconds (was 2 seconds). Not applied to PvP combat.
+                            - Farseer: Primordial Capacity now increases maximum mana by 10% (was 5%). Not applied to PvP combat.
+                            - Farseer: Hydrobubble absorption increased by 25%. Not applied to PvP combat.
+                            - Farseer: Hydrobubble now lasts for 15 seconds (was 10 seconds).
+                    • Warlock
+                        > Destruction
+                            - Diabolist: Ruination damage increased 35%.
+                            - Diabolist: Wicked Cleave damage increased 15%.
+                            - Diabolist: Chaos Salvo damage increased 15%.
+                            - Diabolist: Felseeker damage increased 15%.
+                            - Diabolist: Gloom of Nathreza now causes enemies marked by your Havoc to take 7% increased damage from your single target spells (was 5%).
+                    • Warrior
+                        > Arms
+                            - Whirlwind damage increased by 100%.
+                        > Fury
+                            - Whirlwind damage increased by 120%.
+                            - Thunder Clap damage increased by 25%.
+                            - Odyn’s Fury damage increased by 30%.
+                            - Mountain Thane: Thunder Blast damage increased by 25%.
+        
+                Dungeons and Raids
+                    • Operation Mechagon: Workshop
+                        - Addressed an issue where Junkyard D.0.G. being rooted can prevent other D.0.G.s from casting Fiery Jaws.
+                    • Liberation of Undermine
+                        > Chrome King Gallywix
+                            - Reduced the required minimum number of players in Fused and Tick-Tock Canisters to 1 on Normal and Heroic difficulties.
+        
+                Player versus Player
+                    • Druid
+                        > Balance
+                            - Wrath damage increased by 15% in PvP combat.
+                            - Keeper of the Grove: Blooming Infusion now increases the damage of your next Wrath or Starfire by 25% (was 100%) in PvP combat.
+                        > Restoration
+                            - Keeper of the Grove: Blooming Infusion now increases the damage of your next Wrath or Starfire by 25% (was 100%) in PvP combat.
+                    • Death Knight
+                        > Improved Death Strike is no longer reduced by 50% in PvP combat.
+                        > Frost
+                            - Frost Strike damage increased by 12% in PvP combat.
+                            - Obliterate damage increased by 12% in PvP combat.
+                        > Unholy
+                            - Magus of the Dead’s Shadow Bolt damage is no longer reduced by 50% in PvP combat.
+                            - Festering Strike damage increased by 100% in PvP combat.
+                    • Mage
+                        > Frost
+                            - Frostfire: Overpowered Barrier now causes Blazing Barrier to reflect 40% of damage absorbed (was 60%).
+                        > Fire
+                            - Overpowered Barrier now causes Blazing Barrier to reflect 40% of damage absorbed (was 60%).
+                            - Pyroblast damage increased by 20% in PvP combat.
+                            - Fire Blast damage increased by 15% in PvP combat.
+                            - Fireball damage increased by 15% in PvP combat.
+                            - Scorch damage increased by 15% in PvP combat.
+                            - Frostfire: Isothermic Core now causes Meteor to call down a Comet Storm at 200% effectiveness (was 250%).
+                            - Frostfire: Frostfire Bolt damage increased by 15% in PvP combat.
+                    • Priest
+                        > Discipline
+                            - Power Word: Radiance healing is no longer reduced by 10% in PvP combat.
+                            - Ultimate Penitence damage and healing increased by 35% in PvP combat.
+                    • Rogue
+                        > Outlaw
+                            - Combat Stamina now increases Stamina by 18% in PvP combat (was 12%).
+                    • Shaman
+                        > Restoration
+                            - Earth Shield healing increased by 20% in PvP combat.
+                            - Earthliving Weapon healing increased by 20% in PvP combat.
+                            - Healing Rain healing increased by 15% in PvP combat.
+                            - Totemic: Surging Totem healing increased by 15% in PvP combat.
+                            - Totemic: Lively Totems now casts a free Chain Heal at 150% effectiveness in PvP combat (was 100%).
+                    • Warlock
+                        - Demon Skin’s armor increase is now 30% more effective in PvP combat.
+                    • Warrior
+                        > Arms
+                            - Execute damage reduced by 15% in PvP combat.
+                            - Rend damage increased by 15% in PvP combat.
+        
+            May 22, 2025
+
+                Classes
+                    • Death Knight
+                        > Unholy
+                            - Resolved an issue where certain bonuses could be retained by despawning and respawning the Death Knight’s pet.
+                    • Paladin
+                        > Retribution
+                            - An issue causing Avenging Wrath to not function properly when talented into Radiant Glory has been resolved.
+                    • Warlock
+                        > Hellcaller: Fixed an issue where Vile Taint would trigger Blackened Soul more times than intended.
+                        > Destruction
+                            - Fixed an issue where Crashing Chaos would persist after the start of a Mythic+ run.
+                
+                Horrific Visions
+                    - Fixed a bug where if you destroyed the Voidfire Deathcycle that Haymar the Devout is riding too fast it would fail to go out of control and let you bring it out with you.
+                    - Torie’s items no longer require the achievement We Have the Memories.
+        
             May 16, 2025
 
                 Classes
