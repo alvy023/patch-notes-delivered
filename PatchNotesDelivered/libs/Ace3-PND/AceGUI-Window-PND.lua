@@ -9,7 +9,7 @@
 local AceGUI = LibStub("AceGUI-3.0")
 
 -- Constants
-local Type, Version = "Window-PND", 3
+local Type, Version = "Window-PND", 1
 
 -- Functions
 --- Description: Hides the window.
@@ -30,8 +30,6 @@ end
 --- @param:
 --- @return:
 local function OnAcquire(self)
-    self:SetWidth(800)
-    self:SetHeight(600)
     self.frame:Show()
 end
 
@@ -92,6 +90,7 @@ local function Constructor()
     frame:SetSize(800, 600)
     frame:SetPoint("CENTER")
     frame:SetMovable(true)
+    frame:SetResizable(true)
     frame:EnableMouse(true)
     frame:RegisterForDrag("LeftButton")
     frame:SetScript("OnDragStart", frame.StartMoving)
@@ -101,7 +100,13 @@ local function Constructor()
         tile = true, tileSize = 32, edgeSize = 32,
     })
 
-    -- Create title bar with darker inset background
+    --- Define size limits
+    local minWidth = 400
+    local minHeight = 300
+    local maxWidth = 1200
+    local maxHeight = 900
+
+    --- Create title bar with darker inset background
     local titleArea = CreateFrame("Frame", nil, frame, "BackdropTemplate")
     titleArea:SetPoint("TOPLEFT", frame, "TOPLEFT", 14, -14)
     titleArea:SetPoint("TOPRIGHT", frame, "TOPRIGHT", -14, -14)
@@ -112,7 +117,7 @@ local function Constructor()
         insets = { left = -3, right = -3, top = -3, bottom = -3 }
     })
 
-    -- Create the 'content' frame that AceGUI expects
+    --- Create the 'content' frame that AceGUI expects
     local content = CreateFrame("Frame", nil, frame, "BackdropTemplate")
     content:SetPoint("TOPLEFT", frame, "TOPLEFT", 14, -48)
     content:SetPoint("BOTTOMRIGHT", frame, "BOTTOMRIGHT", -14, 14)
@@ -122,19 +127,19 @@ local function Constructor()
         insets = { left = -3, right = -3, top = 3, bottom = -3 }
     })
 
-    -- Create the title label on the title area
+    --- Create the title label on the title area
     local titleLabel = titleArea:CreateFontString(nil, "OVERLAY", "GameFontNormal")
     titleLabel:SetPoint("LEFT", titleArea, "LEFT", 10, 0)
     titleLabel:SetText("Default Title")
 
-    -- Create the button bar container on the title area
+    --- Create the button bar container on the title area
     local buttonBar = CreateFrame("Frame", nil, titleArea)
     buttonBar:SetPoint("RIGHT", titleArea, "RIGHT", -10, 0)
     buttonBar:SetSize(100, 24)
 
-    -- Create the close button using IconButton-PND
+    --- Create the close button using IconButton-PND
     local closeButton = AceGUI:Create("IconButton-PND")
-    closeButton:SetImage("Interface\\AddOns\\PatchNotesDelivered\\Assets\\CustomIcon-White-X.tga")
+    closeButton:SetImage("Interface\\AddOns\\PatchNotesDelivered\\assets\\CustomIcon-White-X.tga")
     closeButton:SetTooltip("Close")
     closeButton:SetSize(14, 14)
     closeButton:SetCallback("OnClick", function()
@@ -147,6 +152,38 @@ local function Constructor()
     buttonBar.buttons = {}
     table.insert(buttonBar.buttons, closeButton)
 
+    --- Create resize handle button
+    local resizeButton = AceGUI:Create("IconButton-PND")
+    resizeButton:SetImage("Interface\\AddOns\\PatchNotesDelivered\\assets\\CustomIcon-White-Resize.tga")
+    resizeButton:SetTooltip("Resize")
+    resizeButton:SetSize(14, 14)
+    resizeButton.frame:SetParent(frame)
+    resizeButton.frame:SetPoint("BOTTOMRIGHT",frame,"BOTTOMRIGHT",-3,3)
+    resizeButton.frame:SetScript("OnMouseDown", function(self_button, mouseButton)
+        frame:StartSizing("BOTTOMRIGHT")
+        SetCursor("SIZERESIZEBOTTOMRIGHT")
+    end)
+    resizeButton.frame:SetScript("OnMouseUp", function(self_button, mouseButton)
+        frame:StopMovingOrSizing()
+        SetCursor(nil)
+        local currentWidth = frame:GetWidth()
+        local currentHeight = frame:GetHeight()
+        if currentWidth < minWidth then
+            currentWidth = minWidth
+        end
+        if currentHeight < minHeight then
+            currentHeight = minHeight
+        end
+        if currentWidth > maxWidth then
+            currentWidth = maxWidth
+        end
+        if currentHeight > maxHeight then
+            currentHeight = maxHeight
+        end
+        frame:SetSize(currentWidth, currentHeight)
+    end)
+    resizeButton.frame:Show()
+
     local widget = {
         frame = frame,
         content = content,
@@ -154,7 +191,7 @@ local function Constructor()
         titleArea = titleArea,
         buttonBar = buttonBar,
         type = Type,
-        Close = CloseWindow,
+        Close = Hide,
         SetTitle = SetTitle,
         SetTitleFont = SetTitleFont,
         SetTitleAlignment = SetTitleAlignment,

@@ -1,6 +1,6 @@
 ## Interface: 110105
 ## Title: Patch Notes Delivered
-## Version: 0.1.0
+## Version: 1.0.0
 ## Notes: Displays patch notes on login and notifies of new versions.
 ## Author: alvy023
 ## SavedVariables: PatchNotesDB
@@ -19,9 +19,10 @@ libs/Ace3/CallbackHandler-1.0/CallbackHandler-1.0.lua
 libs/Ace3/LibStub/LibStub.lua
 libs/Ace3-PND/AceGUI-IconButton-PND.lua
 libs/Ace3-PND/AceGUI-Window-PND.lua
-libs/libdatabroker-1-1/LibDataBroker-1.1.lua
+libs/LibDataBroker-1.1/LibDataBroker-1.1.lua
 libs/LibDBIcon-1.0/LibDBIcon-1.0.lua
 
 # Addon Files
+SpellDictionary.lua
 PatchNotesText.lua
 PatchNotesDelivered.lua
