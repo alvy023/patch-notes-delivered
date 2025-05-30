@@ -119,13 +119,20 @@ local function Constructor()
 
     --- Create the 'content' frame that AceGUI expects
     local content = CreateFrame("Frame", nil, frame, "BackdropTemplate")
-    content:SetPoint("TOPLEFT", frame, "TOPLEFT", 14, -48)
+    content:SetPoint("TOPLEFT", frame, "TOPLEFT", 14, -52)
     content:SetPoint("BOTTOMRIGHT", frame, "BOTTOMRIGHT", -14, 14)
     content:SetBackdrop({
         bgFile = "Interface\\DialogFrame\\UI-DialogBox-Background-Dark",
         tile = true, tileSize = 16, edgeSize = 16,
-        insets = { left = -3, right = -3, top = 3, bottom = -3 }
+        insets = { left = -3, right = -3, top = 0, bottom = -3 }
     })
+
+    --- Create the window icon in the title area
+    local icon = titleArea:CreateTexture(nil, "OVERLAY")
+    icon:SetSize(24, 24)
+    icon:SetPoint("LEFT", titleArea, "LEFT", 10, 0)
+    icon:SetTexture("Interface\\AddOns\\PatchNotesDelivered\\assets\\pnd-icon.tga")
+    icon:SetTexCoord(0.1, 0.9, 0.1, 0.85)
 
     --- Create the title label on the title area
     local titleLabel = titleArea:CreateFontString(nil, "OVERLAY", "GameFontNormal")

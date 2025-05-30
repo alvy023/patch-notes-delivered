@@ -46,8 +46,8 @@ def update_patch_notes_file(new_version_build):
         content,
     )
     content = re.sub(
-        r'PatchNotesDelivered_Build\s*=\s*\d+',
-        f'PatchNotesDelivered_Build = {new_build}',
+        r'PatchNotesDelivered_Build\s*=\s*"\d+"',
+        f'PatchNotesDelivered_Build = "{new_build}"',
         content,
     )
 
