@@ -1,4 +1,4 @@
-name: WoW News Scraper
+name: Scrape News
 
 # Trigger the workflow
 on:

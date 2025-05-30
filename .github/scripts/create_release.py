@@ -9,7 +9,7 @@ def parse_local_version_build_hf():
         content = f.read()
 
     local_game_version = re.search(r'PatchNotesDelivered_PatchVersion\s*=\s*"([^"]+)"', content)
-    local_game_build = re.search(r'PatchNotesDelivered_Build\s*=\s*(\d+)', content)
+    local_game_build = re.search(r'PatchNotesDelivered_Build\s*=\s*"(\d+)"', content)
     local_game_hotfix = re.search(r'PatchNotesDelivered_Hotfix\s*=\s*(\d+)', content)
 
     if not local_game_version:
