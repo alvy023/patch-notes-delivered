@@ -1,0 +1,123 @@
+name: WoW News Scraper
+
+# Trigger the workflow
+on:
+  # Manual trigger
+  workflow_dispatch:
+    inputs:
+      url:
+        description: 'URL to scrape (optional - will use default if not provided)'
+        required: false
+        default: 'https://worldofwarcraft.blizzard.com/en-us/news/24201420/'
+  
+  # Scheduled trigger - runs daily at 1400 UTC -> 9 AM PST
+  schedule:
+    - cron: '0 14 * * *'
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      with:
+        ref: dev
+    
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.9'
+    
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r .github/scripts/requirements.txt
+    
+    - name: Run scraper
+      id: scrape
+      run: |
+        URL="${{ github.event.inputs.url || 'https://worldofwarcraft.blizzard.com/en-us/news/24201420/' }}"
+        echo "Scraping URL: $URL"
+        python .github/scripts/scraper.py "$URL"
+    
+    - name: Create branch and commit results
+      run: |
+        # Create timestamp for branch name
+        TIMESTAMP=$(date +"%Y%m%d_%H%M%S")
+        BRANCH_NAME="scraped-news-${TIMESTAMP}"
+        
+        echo "Creating branch: ${BRANCH_NAME}"
+        
+        # Configure git
+        git config --global user.name "github-actions[bot]"
+        git config --global user.email "github-actions[bot]@users.noreply.github.com"
+        
+        # Create and checkout new branch
+        git checkout -b "${BRANCH_NAME}"
+        
+        # Add the scraped data files
+        git add .github/data/
+        
+        # Check if there are changes to commit
+        if git diff --staged --quiet; then
+          echo "No changes to commit"
+        else
+          # Get the article title for commit message
+          TITLE="Unknown"
+          if [ -f ".github/data/scraped_data.json" ]; then
+            TITLE=$(python3 -c "import json; data=json.load(open('scraped_data.json')); print(data.get('title', 'Unknown'))" 2>/dev/null || echo "Unknown")
+          fi
+          
+          git commit -m "Add scraped news data: ${TITLE}" -m "Scraped at: $(date)" -m "Branch: ${BRANCH_NAME}" -m "Files added to .github/data/"
+          
+          # Push the new branch
+          git push origin "${BRANCH_NAME}"
+          
+          echo "✅ Successfully created branch '${BRANCH_NAME}' with scraped data"
+          echo "🔗 View at: https://github.com/${{ github.repository }}/tree/${BRANCH_NAME}"
+        fi
+        
+        # Set output for other steps
+        echo "branch_name=${BRANCH_NAME}" >> $GITHUB_OUTPUT
+        echo "timestamp=${TIMESTAMP}" >> $GITHUB_OUTPUT
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    
+    - name: Display results
+      run: |
+        echo "=== SCRAPING RESULTS ==="
+        if [ -f ".github/data/scraped_data_$(date +%Y%m%d)_"*.json ]; then
+          echo "✅ JSON data files created in .github/data/"
+          ls -la .github/data/scraped_data_*.json | tail -1
+        fi
+        
+        if [ -f ".github/data/scraped_content_$(date +%Y%m%d)_"*.txt ]; then
+          echo "✅ Text content files created in .github/data/"
+          ls -la .github/data/scraped_content_*.txt | tail -1
+        fi
+        
+        echo ""
+        echo "=== LATEST CONTENT PREVIEW ==="
+        if [ -f "scraped_content.txt" ]; then
+          head -20 scraped_content.txt
+        fi
+
+  # Optional: Send notification (requires setup of notification secrets)
+  notify:
+    runs-on: ubuntu-latest
+    needs: scrape
+    if: always()
+    steps:
+    - name: Notify on success
+      if: needs.scrape.result == 'success'
+      run: |
+        echo "✅ Scraping completed successfully!"
+        echo "Branch created: scraped-news-$(date +%Y%m%d_%H%M%S)"
+        # Add your notification logic here (Slack, Discord, email, etc.)
+    
+    - name: Notify on failure
+      if: needs.scrape.result == 'failure'
+      run: |
+        echo "❌ Scraping failed!"
+        # Add your notification logic here
