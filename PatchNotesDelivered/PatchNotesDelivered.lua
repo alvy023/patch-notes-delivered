@@ -162,12 +162,11 @@ function PatchNotesDelivered:ShowPatchNotes()
     end
 
     local pnd = AceGUI:Create("Window-PND")
-    pnd:SetTitle("|cff00B4FFPatch Notes Delivered, Game Build: |r|cffffffff" ..
+    pnd:SetTitle("|cff00B4FFThe Weekly Mrrgl, |r|cffffffff" ..
         PATCH_NOTES.version .. "." .. PATCH_NOTES.build .. "." .. PATCH_NOTES.hotfix .. "|r")
     pnd:SetTitleFont("Fonts\\FRIZQT__.TTF", 14, "OUTLINE")
     pnd:SetTitleAlignment("CENTER")
 
-    --- Create the reset button using IconButton-PND
     local resetButton = AceGUI:Create("IconButton-PND")
     resetButton:SetImage("Interface\\AddOns\\PatchNotesDelivered\\assets\\CustomIcon-White-Reset.tga")
     resetButton:SetTooltip("Reset Size")
@@ -183,21 +182,32 @@ function PatchNotesDelivered:ShowPatchNotes()
     scroll:SetFullHeight(true)
     pnd:AddChild(scroll)
 
-    local spacer = AceGUI:Create("Label")
-    spacer:SetFullWidth(true)
-    spacer:SetHeight(5)
-    scroll:AddChild(spacer)
-
-    local textWidget = AceGUI:Create("Label")
-    textWidget:SetText(
-        "    |cff00B4FFHotfix Changes|r\n\n" .. PATCH_NOTES.gameChangesHotfixes .. "\n\n" ..
-        "    |cff00B4FFPatch Changes|r\n\n" .. PATCH_NOTES.gameChangesPatch .. "\n\n" ..
-        "    |cff00B4FFAddon Changes|r\n\n" .. PATCH_NOTES.addonChanges
+    local hotfixLabel = AceGUI:Create("Label")
+    hotfixLabel:SetText(
+        "\n    |cffF89406Hotfix Changes|r\n\n" .. PATCH_NOTES.gameChangesHotfixes .. "\n\n"
     )
-    textWidget:SetFontObject(GameFontHighlight)
-    textWidget:SetRelativeWidth(0.96)
+    hotfixLabel:SetFontObject(GameFontHighlight)
+    hotfixLabel:SetRelativeWidth(0.96)
 
-    scroll:AddChild(textWidget)
+    scroll:AddChild(hotfixLabel)
+
+    local patchLabel = AceGUI:Create("Label")
+    patchLabel:SetText(
+        "    |cff00B4FFPatch Changes|r\n\n" .. PATCH_NOTES.gameChangesPatch .. "\n\n"
+    )
+    patchLabel:SetFontObject(GameFontHighlight)
+    patchLabel:SetRelativeWidth(0.96)
+
+    scroll:AddChild(patchLabel)
+
+    local addonLabel = AceGUI:Create("Label")
+    addonLabel:SetText(
+        "    |cff32CD32Addon Changes|r\n\n" .. PATCH_NOTES.addonChanges
+    )
+    addonLabel:SetFontObject(GameFontHighlight)
+    addonLabel:SetRelativeWidth(0.96)
+
+    scroll:AddChild(addonLabel)
 
     PatchNotesFrame = pnd
 end
