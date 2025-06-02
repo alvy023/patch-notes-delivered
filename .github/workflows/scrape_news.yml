@@ -39,7 +39,7 @@ jobs:
       run: |
         URL="${{ github.event.inputs.url || 'https://worldofwarcraft.blizzard.com/en-us/news/24201420/' }}"
         echo "Scraping URL: $URL"
-        python .github/scripts/scraper.py "$URL"
+        python .github/scripts/scrape_news.py "$URL"
     
     - name: Create branch and commit results
       run: |
