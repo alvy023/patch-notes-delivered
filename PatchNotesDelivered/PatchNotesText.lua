@@ -7,7 +7,7 @@
 
 -- Variables used by check_build.py
 PatchNotesDelivered_PatchVersion = "11.1.5"
-PatchNotesDelivered_Build = "61122"
+PatchNotesDelivered_Build = "61188"
 PatchNotesDelivered_Hotfix = 9
 PatchNotesDelivered_Text = nil
 
