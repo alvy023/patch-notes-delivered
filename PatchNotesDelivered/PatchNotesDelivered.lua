@@ -149,7 +149,45 @@ function PatchNotesDelivered:ShouldShowPatchNotes()
     return false
 end
 
---- Description: Show the patch notes frame
+--- Description: Create the Accordion for a given text section
+--- @param:
+--- @return:
+local function CreateAccordionEntry(parent, title, body, defaultOpen)
+    local group = AceGUI:Create("InlineGroup")
+    group:SetTitle(title)
+    group:SetFullWidth(true)
+    group:SetLayout("Flow")
+
+    local shown = defaultOpen or false
+    local label = AceGUI:Create("Label")
+    label:SetText(body)
+    label:SetFullWidth(true)
+    label:SetFontObject(GameFontHighlight)
+    label:SetJustifyH("LEFT")
+    if not shown then
+        label.frame:Hide()
+    end
+
+    local button = AceGUI:Create("Button")
+    button:SetText(shown and "[-]" or "[+]")
+    button:SetWidth(40)
+    button:SetCallback("OnClick", function()
+        shown = not shown
+        if shown then
+            button:SetText("[-]")
+            label.frame:Show()
+        else
+            button:SetText("[+]")
+            label.frame:Hide()
+        end
+    end)
+
+    group:AddChild(button)
+    group:AddChild(label)
+    parent:AddChild(group)
+end
+
+--- Description: Show the patch notes frame (tabs + accordions)
 --- @param:
 --- @return:
 function PatchNotesDelivered:ShowPatchNotes()
@@ -176,39 +214,41 @@ function PatchNotesDelivered:ShowPatchNotes()
     end)
     pnd:AddButton(resetButton)
 
-    local scroll = AceGUI:Create("ScrollFrame")
-    scroll:SetLayout("Flow")
-    scroll:SetFullWidth(true)
-    scroll:SetFullHeight(true)
-    pnd:AddChild(scroll)
+    local tabGroup = AceGUI:Create("TabGroup")
+    tabGroup:SetTabs({
+        { text = "Hotfixes", value = "hotfixes" },
+        { text = "Major Patch", value = "patch" },
+        { text = "Addon Changes", value = "addon" },
+    })
+    tabGroup:SetFullWidth(true)
+    pnd:AddChild(tabGroup)
 
-    local hotfixLabel = AceGUI:Create("Label")
-    hotfixLabel:SetText(
-        "\n    |cffF89406Hotfix Changes|r\n\n" .. PATCH_NOTES.gameChangesHotfixes .. "\n\n"
-    )
-    hotfixLabel:SetFontObject(GameFontHighlight)
-    hotfixLabel:SetRelativeWidth(0.96)
+    local function ShowNotesSection(container, section)
+        container:ReleaseChildren()
+        local scroll = AceGUI:Create("ScrollFrame")
+        scroll:SetLayout("Flow")
+        scroll:SetFullWidth(true)
+        scroll:SetFullHeight(true)
+        container:AddChild(scroll)
 
-    scroll:AddChild(hotfixLabel)
+        local notesList = PATCH_NOTES[section]
+        if type(notesList) == "table" then
+            for i, entry in ipairs(notesList) do
+                CreateAccordionEntry(scroll, entry.date, entry.text, i == 1)
+            end
+        else
+            local label = AceGUI:Create("Label")
+            label:SetText(PATCH_NOTES[section == "hotfixes" and "gameChangesHotfixes" or section == "patch" and "gameChangesPatch" or "addonChanges"])
+            label:SetFullWidth(true)
+            scroll:AddChild(label)
+        end
+    end
 
-    local patchLabel = AceGUI:Create("Label")
-    patchLabel:SetText(
-        "    |cff00B4FFPatch Changes|r\n\n" .. PATCH_NOTES.gameChangesPatch .. "\n\n"
-    )
-    patchLabel:SetFontObject(GameFontHighlight)
-    patchLabel:SetRelativeWidth(0.96)
+    tabGroup:SetCallback("OnGroupSelected", function(widget, event, group)
+        ShowNotesSection(widget.container, group)
+    end)
 
-    scroll:AddChild(patchLabel)
-
-    local addonLabel = AceGUI:Create("Label")
-    addonLabel:SetText(
-        "    |cff32CD32Addon Changes|r\n\n" .. PATCH_NOTES.addonChanges
-    )
-    addonLabel:SetFontObject(GameFontHighlight)
-    addonLabel:SetRelativeWidth(0.96)
-
-    scroll:AddChild(addonLabel)
-
+    tabGroup:SelectTab("hotfixes")
     PatchNotesFrame = pnd
 end
 
@@ -223,7 +263,6 @@ function PatchNotesDelivered:ShowOptionsMenu(anchorFrame)
     UIDropDownMenu_Initialize(menuFrame, function(frame, level, menuList)
         local info = UIDropDownMenu_CreateInfo()
 
-        -- Minimap Checkbox
         info.text = "Show Minimap Button"
         info.checked = not self.db.profile.minimap.hide
         info.func = function()
@@ -240,7 +279,6 @@ function PatchNotesDelivered:ShowOptionsMenu(anchorFrame)
         info.keepShownOnClick = true
         UIDropDownMenu_AddButton(info, level)
 
-        -- Addon Compartment Checkbox
         info = UIDropDownMenu_CreateInfo()
         info.text = "Show Addon Compartment"
         info.checked = not self.db.profile.addonCompartment.hide
