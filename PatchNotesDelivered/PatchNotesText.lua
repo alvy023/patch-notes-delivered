@@ -7,8 +7,8 @@
 
 -- Variables used by check_build.py
 PatchNotesDelivered_PatchVersion = "11.1.5"
-PatchNotesDelivered_Build = "61122"
-PatchNotesDelivered_Hotfix = 9
+PatchNotesDelivered_Build = "61188"
+PatchNotesDelivered_Hotfix = 10
 PatchNotesDelivered_Text = nil
 
 -- Link Helper Functions
@@ -108,6 +108,30 @@ function BuildPatchNotes()
         build = PatchNotesDelivered_Build,
         hotfix = PatchNotesDelivered_Hotfix,
         gameChangesHotfixes = [[
+            June 3, 2025
+        
+                Delves
+                    - Fixed an issue where the Big Wheel of Cheese would not grant experience to Brann.
+                
+                Dungeons and Raids
+                    • Darkflame Cleft
+                        - Fixed an issue where one of the Shuffling Horror can fall through the world.
+                        - Updated the visual of Rank Overseer’s Wild Wallop to match with the actual impact area.
+                
+                Liberation of Undermine
+                    • Chrome King Gallywix
+                        - Increased the lifetime of Giga Bombs on Mythic difficulty by 30 seconds.
+                
+                Horrific Visions
+                    - Nemesis Shards are now Warbound and can be mailed to you if you miss looting them.
+                    - Performing a full clear now also grants the Incremental Progress
+                    - Fixed a bug where in some very rare cases, players could receive Corrupted Mementos instead of Displaced Corrupted 
+                      Mementos.
+            
+                Items and Rewards
+                    - The Rune Dispenser should now dispense the intended quantities of Crystallized Augment Runes based on Gallagio Loyalty 
+                      Rewards rank.
+        
             May 27, 2025
 
                 Classes
@@ -237,7 +261,7 @@ function BuildPatchNotes()
                         > Retribution
                             - An issue causing Avenging Wrath to not function properly when talented into Radiant Glory has been resolved.
                     • Warlock
-                        > Hellcaller: Fixed an issue where Vile Taint would trigger Blackened Soul more times than intended.
+                        - Hellcaller: Fixed an issue where Vile Taint would trigger Blackened Soul more times than intended.
                         > Destruction
                             - Fixed an issue where Crashing Chaos would persist after the start of a Mythic+ run.
                 
@@ -593,16 +617,16 @@ function BuildPatchNotes()
         ]],
 
         addonChanges = [[
-        May 29, 2025
+            May 29, 2025
 
-            • First Patch Notes Delivered (PND) release!
-            • Displays official WoW patch notes and addon updates on login
-            • Adds a minimap button and Addon Compartment entry for quick access
-                - Left-click to show patch notes
-                - Right-click for options menu (hide minimap button, hide Addon Compartment entry)
-            • Slash commands:
-                - "/pnd" – Show patch notes
-                - "/pnd-mini" – Toggle minimap button
+                • First Patch Notes Delivered (PND) release!
+                • Displays official WoW patch notes and addon updates on login
+                • Adds a minimap button and Addon Compartment entry for quick access
+                    - Left-click to show patch notes
+                    - Right-click for options menu (hide minimap button, hide Addon Compartment entry)
+                • Slash commands:
+                    - "/pnd" – Show patch notes
+                    - "/pnd-mini" – Toggle minimap button
         ]],
     }
 
