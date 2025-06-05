@@ -617,16 +617,16 @@ function BuildPatchNotes()
         ]],
 
         addonChanges = [[
-        May 29, 2025
+            May 29, 2025
 
-            • First Patch Notes Delivered (PND) release!
-            • Displays official WoW patch notes and addon updates on login
-            • Adds a minimap button and Addon Compartment entry for quick access
-                - Left-click to show patch notes
-                - Right-click for options menu (hide minimap button, hide Addon Compartment entry)
-            • Slash commands:
-                - "/pnd" – Show patch notes
-                - "/pnd-mini" – Toggle minimap button
+                • First Patch Notes Delivered (PND) release!
+                • Displays official WoW patch notes and addon updates on login
+                • Adds a minimap button and Addon Compartment entry for quick access
+                    - Left-click to show patch notes
+                    - Right-click for options menu (hide minimap button, hide Addon Compartment entry)
+                • Slash commands:
+                    - "/pnd" – Show patch notes
+                    - "/pnd-mini" – Toggle minimap button
         ]],
     }
 
