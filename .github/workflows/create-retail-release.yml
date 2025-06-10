@@ -42,6 +42,10 @@ jobs:
           mkdir dist
           zip -r "dist/${{ env.ADDON_NAME }}-${{ steps.versioning.outputs.release_tag }}.zip" "${{ env.ADDON_NAME }}/"
 
+      - name: Wait for file system to sync
+        run: sleep 5
+        shell: bash
+      
       - name: Create Git tag
         run: |
           git config user.name "github-actions[bot]"
