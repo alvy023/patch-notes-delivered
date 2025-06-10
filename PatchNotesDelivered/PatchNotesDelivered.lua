@@ -214,40 +214,71 @@ function PatchNotesDelivered:ShowPatchNotes()
     end)
     pnd:AddButton(resetButton)
 
+    local tabContainer = AceGUI:Create("SimpleGroup")
+    tabContainer:SetFullWidth(true)
+    tabContainer:SetFullHeight(true)
+    tabContainer:SetLayout("Flow")
+
     local tabGroup = AceGUI:Create("TabGroup")
+    tabGroup:SetFullWidth(true)
     tabGroup:SetTabs({
         { text = "Hotfixes", value = "hotfixes" },
         { text = "Major Patch", value = "patch" },
         { text = "Addon Changes", value = "addon" },
     })
-    tabGroup:SetFullWidth(true)
-    pnd:AddChild(tabGroup)
 
-    local function ShowNotesSection(container, section)
-        container:ReleaseChildren()
-        local scroll = AceGUI:Create("ScrollFrame")
-        scroll:SetLayout("Flow")
-        scroll:SetFullWidth(true)
-        scroll:SetFullHeight(true)
-        container:AddChild(scroll)
+    tabGroup:SetCallback("OnGroupSelected", function(tabGroupWidget, _, section)
+            -- tabContainer is the SimpleGroup you created
+            tabContainer:ReleaseChildren()
 
-        local notesList = PATCH_NOTES[section]
-        if type(notesList) == "table" then
-            for i, entry in ipairs(notesList) do
-                CreateAccordionEntry(scroll, entry.date, entry.text, i == 1)
+            local scroll = AceGUI:Create("ScrollFrame")
+            scroll:SetLayout("Flow")
+            scroll:SetFullWidth(true)
+            scroll:SetFullHeight(true)
+            -- It's generally better to add the scroll to the container *after* it's populated.
+
+            local notesList = PATCH_NOTES[section]
+
+            if type(notesList) == "table" then
+                if #notesList == 0 then
+                    -- Handle empty list for the section
+                    local emptyLabel = AceGUI:Create("Label")
+                    emptyLabel:SetText("No entries for this section.")
+                    emptyLabel:SetFullWidth(true)
+                    scroll:AddChild(emptyLabel)
+                else
+                    for i, entry in ipairs(notesList) do
+                        if type(entry) == "table" and entry.heading and entry.text then
+                            CreateAccordionEntry(scroll, entry.heading, entry.text, i == 1)
+                        else
+                            -- Log an error if an entry is malformed
+                            PatchNotesDelivered:Print(string.format("PND Warning: Invalid data format for section '%s' at entry index %d.", tostring(section), i))
+                            local errorLabel = AceGUI:Create("Label")
+                            errorLabel:SetText("Error: Content for this entry is missing or malformed.")
+                            errorLabel:SetFullWidth(true)
+                            scroll:AddChild(errorLabel)
+                        end
+                    end
+                end
+            elseif notesList ~= nil then
+                -- Handle cases where notesList might be a single string (e.g., a general message)
+                local textLabel = AceGUI:Create("Label")
+                textLabel:SetText(tostring(notesList))
+                textLabel:SetFullWidth(true)
+                scroll:AddChild(textLabel)
+            else
+                -- Handle cases where notesList is nil (no data for the section)
+                local noDataLabel = AceGUI:Create("Label")
+                noDataLabel:SetText("No information available for this section.")
+                noDataLabel:SetFullWidth(true)
+                scroll:AddChild(noDataLabel)
             end
-        else
-            local label = AceGUI:Create("Label")
-            label:SetText(PATCH_NOTES[section == "hotfixes" and "gameChangesHotfixes" or section == "patch" and "gameChangesPatch" or "addonChanges"])
-            label:SetFullWidth(true)
-            scroll:AddChild(label)
-        end
-    end
 
-    tabGroup:SetCallback("OnGroupSelected", function(widget, event, group)
-        ShowNotesSection(widget.container, group)
-    end)
+            tabContainer:AddChild(scroll) -- Add the populated (or message-filled) scroll frame
+        end)
 
+    tabGroup:AddChild(tabContainer)
+    pnd:AddChild(tabGroup)
     tabGroup:SelectTab("hotfixes")
     PatchNotesFrame = pnd
 end
