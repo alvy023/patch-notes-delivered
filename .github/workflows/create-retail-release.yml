@@ -49,21 +49,21 @@ jobs:
           git tag "${{ steps.versioning.outputs.release_tag }}"
           git push origin "${{ steps.versioning.outputs.release_tag }}"
 
-      # - name: Create GitHub release
-      #   uses: softprops/action-gh-release@v2
-      #   with:
-      #     tag_name: ${{ steps.versioning.outputs.release_tag }}
-      #     name: ${{ steps.versioning.outputs.release_tag }}
-      #     files: dist/${{ env.ADDON_NAME }}-${{ steps.versioning.outputs.release_tag }}.zip
-      #   env:
-      #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Create GitHub Release
-        uses: ncipollo/release-action@v1
+      - name: Create GitHub release
+        uses: softprops/action-gh-release@v2.2.2
         with:
-          tag: ${{ steps.versioning.outputs.release_tag }}
+          tag_name: ${{ steps.versioning.outputs.release_tag }}
           name: ${{ steps.versioning.outputs.release_tag }}
-          artifacts: "dist/${{ env.ADDON_NAME }}-${{ steps.versioning.outputs.release_tag }}.zip"
-          token: ${{ secrets.GITHUB_TOKEN }}
+          files: dist/${{ env.ADDON_NAME }}-${{ steps.versioning.outputs.release_tag }}.zip
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      # - name: Create GitHub Release
+      #   uses: ncipollo/release-action@v1
+      #   with:
+      #     tag: ${{ steps.versioning.outputs.release_tag }}
+      #     name: ${{ steps.versioning.outputs.release_tag }}
+      #     artifacts: "dist/${{ env.ADDON_NAME }}-${{ steps.versioning.outputs.release_tag }}.zip"
+      #     token: ${{ secrets.GITHUB_TOKEN }}
 
   
