@@ -149,45 +149,7 @@ function PatchNotesDelivered:ShouldShowPatchNotes()
     return false
 end
 
---- Description: Create the Accordion for a given text section
---- @param:
---- @return:
-local function CreateAccordionEntry(parent, title, body, defaultOpen)
-    local group = AceGUI:Create("InlineGroup")
-    group:SetTitle(title)
-    group:SetFullWidth(true)
-    group:SetLayout("Flow")
-
-    local shown = defaultOpen or false
-    local label = AceGUI:Create("Label")
-    label:SetText(body)
-    label:SetFullWidth(true)
-    label:SetFontObject(GameFontHighlight)
-    label:SetJustifyH("LEFT")
-    if not shown then
-        label.frame:Hide()
-    end
-
-    local button = AceGUI:Create("Button")
-    button:SetText(shown and "[-]" or "[+]")
-    button:SetWidth(40)
-    button:SetCallback("OnClick", function()
-        shown = not shown
-        if shown then
-            button:SetText("[-]")
-            label.frame:Show()
-        else
-            button:SetText("[+]")
-            label.frame:Hide()
-        end
-    end)
-
-    group:AddChild(button)
-    group:AddChild(label)
-    parent:AddChild(group)
-end
-
---- Description: Show the patch notes frame (tabs + accordions)
+--- Description: Show the patch notes frame
 --- @param:
 --- @return:
 function PatchNotesDelivered:ShowPatchNotes()
@@ -226,56 +188,40 @@ function PatchNotesDelivered:ShowPatchNotes()
         { text = "Major Patch", value = "patch" },
         { text = "Addon Changes", value = "addon" },
     })
-
+    
     tabGroup:SetCallback("OnGroupSelected", function(tabGroupWidget, _, section)
-            -- tabContainer is the SimpleGroup you created
-            tabContainer:ReleaseChildren()
+        tabContainer:ReleaseChildren()
 
-            local scroll = AceGUI:Create("ScrollFrame")
-            scroll:SetLayout("Flow")
-            scroll:SetFullWidth(true)
-            scroll:SetFullHeight(true)
-            -- It's generally better to add the scroll to the container *after* it's populated.
+        local scroll = AceGUI:Create("ScrollFrame")
+        scroll:SetLayout("Flow")
+        scroll:SetFullWidth(true)
+        scroll:SetFullHeight(true)
 
-            local notesList = PATCH_NOTES[section]
+        local notesList = PATCH_NOTES[section]
 
-            if type(notesList) == "table" then
-                if #notesList == 0 then
-                    -- Handle empty list for the section
-                    local emptyLabel = AceGUI:Create("Label")
-                    emptyLabel:SetText("No entries for this section.")
-                    emptyLabel:SetFullWidth(true)
-                    scroll:AddChild(emptyLabel)
-                else
-                    for i, entry in ipairs(notesList) do
-                        if type(entry) == "table" and entry.heading and entry.text then
-                            CreateAccordionEntry(scroll, entry.heading, entry.text, i == 1)
-                        else
-                            -- Log an error if an entry is malformed
-                            PatchNotesDelivered:Print(string.format("PND Warning: Invalid data format for section '%s' at entry index %d.", tostring(section), i))
-                            local errorLabel = AceGUI:Create("Label")
-                            errorLabel:SetText("Error: Content for this entry is missing or malformed.")
-                            errorLabel:SetFullWidth(true)
-                            scroll:AddChild(errorLabel)
-                        end
-                    end
-                end
-            elseif notesList ~= nil then
-                -- Handle cases where notesList might be a single string (e.g., a general message)
+        if #notesList == 0 then
+            local emptyLabel = AceGUI:Create("Label")
+            emptyLabel:SetText("No entries for this section.")
+            emptyLabel:SetFullWidth(true)
+            scroll:AddChild(emptyLabel)
+        else
+            for _, entry in ipairs(notesList) do
+                local group = AceGUI:Create("InlineGroup")
+                group:SetTitle(entry.heading)
+                group:SetFullWidth(true)
+                group:SetLayout("Flow")
+
                 local textLabel = AceGUI:Create("Label")
-                textLabel:SetText(tostring(notesList))
+                textLabel:SetText(entry.text)
                 textLabel:SetFullWidth(true)
-                scroll:AddChild(textLabel)
-            else
-                -- Handle cases where notesList is nil (no data for the section)
-                local noDataLabel = AceGUI:Create("Label")
-                noDataLabel:SetText("No information available for this section.")
-                noDataLabel:SetFullWidth(true)
-                scroll:AddChild(noDataLabel)
+                
+                group:AddChild(textLabel)
+                scroll:AddChild(group)
             end
+        end
 
-            tabContainer:AddChild(scroll) -- Add the populated (or message-filled) scroll frame
-        end)
+        tabContainer:AddChild(scroll)
+    end)
 
     tabGroup:AddChild(tabContainer)
     pnd:AddChild(tabGroup)
