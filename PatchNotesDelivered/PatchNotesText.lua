@@ -7,8 +7,8 @@
 
 -- Variables used by check_build.py
 PatchNotesDelivered_PatchVersion = "11.1.5"
-PatchNotesDelivered_Build = "61188"
-PatchNotesDelivered_Hotfix = 10
+PatchNotesDelivered_Build = "61265"
+PatchNotesDelivered_Hotfix = 11
 PatchNotesDelivered_Text = nil
 
 -- Link Helper Functions
@@ -108,6 +108,18 @@ function BuildPatchNotes()
         build = PatchNotesDelivered_Build,
         hotfix = PatchNotesDelivered_Hotfix,
         gameChangesHotfixes = [[
+            June 6, 2025
+        
+                Dastardly Duos
+                    - Rewards have been moved to Wodin the Troll Servant. Each reward listed with Wodin will show the quest that’s 
+                      required to obtain it and which week it will become available.
+                    - Dastardly Prize Purses now contain 250 Resonance Crystals.
+                    - The bug causing Dastardly Duo match player's Play Nice, Play Fair aura to force very low item level has been 
+                      fixed.
+                
+                Horrific Visions Revisited
+                    - Constructs of Soridormi will no longer try to join a full group if she was summoned previously.
+        
             June 3, 2025
         
                 Delves
