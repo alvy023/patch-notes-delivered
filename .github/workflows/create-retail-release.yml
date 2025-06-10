@@ -74,12 +74,21 @@ jobs:
         with:
           node-version: 18
 
-      - name: Create GitHub release
-        uses: softprops/action-gh-release@v2
+      # - name: Create GitHub release
+      #   uses: softprops/action-gh-release@v2
+      #   with:
+      #     tag_name: ${{ steps.versioning.outputs.release_tag }}
+      #     name: ${{ steps.versioning.outputs.release_tag }}
+      #     files: dist/${{ env.ADDON_NAME }}-${{ steps.versioning.outputs.release_tag }}.zip
+      #   env:
+      #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Create GitHub Release
+        uses: ncipollo/release-action@v1
         with:
-          tag_name: ${{ steps.versioning.outputs.release_tag }}
+          tag: ${{ steps.versioning.outputs.release_tag }}
           name: ${{ steps.versioning.outputs.release_tag }}
-          files: dist/${{ env.ADDON_NAME }}-${{ steps.versioning.outputs.release_tag }}.zip
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          artifacts: "dist/${{ env.ADDON_NAME }}-${{ steps.versioning.outputs.release_tag }}.zip"
+          token: ${{ secrets.GITHUB_TOKEN }}
+
   
