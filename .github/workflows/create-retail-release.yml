@@ -57,13 +57,4 @@ jobs:
           files: dist/${{ env.ADDON_NAME }}-${{ steps.versioning.outputs.release_tag }}.zip
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-      # - name: Create GitHub Release
-      #   uses: ncipollo/release-action@v1
-      #   with:
-      #     tag: ${{ steps.versioning.outputs.release_tag }}
-      #     name: ${{ steps.versioning.outputs.release_tag }}
-      #     artifacts: "dist/${{ env.ADDON_NAME }}-${{ steps.versioning.outputs.release_tag }}.zip"
-      #     token: ${{ secrets.GITHUB_TOKEN }}
-
   
