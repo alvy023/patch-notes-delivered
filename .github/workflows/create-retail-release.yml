@@ -69,6 +69,11 @@ jobs:
           git tag "${{ steps.versioning.outputs.release_tag }}"
           git push origin "${{ steps.versioning.outputs.release_tag }}"
 
+      - name: Setup Node.js 18
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+
       - name: Create GitHub release
         uses: softprops/action-gh-release@v2
         with:
