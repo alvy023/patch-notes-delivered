@@ -45,6 +45,22 @@ jobs:
       - name: Wait for file system to sync
         run: sleep 5
         shell: bash
+
+      - name: Debug Zipped File
+        run: |
+          echo "Listing contents of dist/:"
+          ls -la dist/
+          echo "Attempting to list contents of the generated ZIP file:"
+          # Use 'unzip -l' to list contents, which also performs a basic integrity check
+          # The '|| true' allows the workflow to continue even if unzip -l fails,
+          # so you can see the error in the logs.
+          unzip -l "dist/${{ env.ADDON_NAME }}-${{ steps.versioning.outputs.release_tag }}.zip" || true
+          echo "Attempting to extract the generated ZIP file to a temporary directory:"
+          mkdir /tmp/test_unzip
+          unzip "dist/${{ env.ADDON_NAME }}-${{ steps.versioning.outputs.release_tag }}.zip" -d /tmp/test_unzip || true
+          echo "Contents of extracted temporary directory:"
+          ls -laR /tmp/test_unzip || true
+        shell: bash
       
       - name: Create Git tag
         run: |
