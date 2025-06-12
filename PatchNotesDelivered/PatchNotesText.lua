@@ -8,7 +8,7 @@
 -- Variables used by check_build.py
 PatchNotesDelivered_PatchVersion = "11.1.5"
 PatchNotesDelivered_Build = "61265"
-PatchNotesDelivered_Hotfix = 11
+PatchNotesDelivered_Hotfix = 12
 PatchNotesDelivered_Text = nil
 
 -- Link Helper Functions
@@ -108,6 +108,13 @@ function BuildPatchNotes()
         build = PatchNotesDelivered_Build,
         hotfix = PatchNotesDelivered_Hotfix,
         gameChangesHotfixes = [[
+            June 10, 2025
+                
+                Renown
+                    - Fixed an issue where players could become capped on Gallagio Loyalty Rewards reputation earlier than intended. 
+                      For players who have killed a boss that would have rewarded reputation properly but didn't, defeating that boss 
+                      on a separate character this week will yield the intended amount of reputation.
+
             June 6, 2025
         
                 Dastardly Duos
