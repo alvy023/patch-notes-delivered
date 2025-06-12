@@ -8,7 +8,7 @@
 -- Variables used by check_build.py
 PatchNotesDelivered_PatchVersion = "11.1.5"
 PatchNotesDelivered_Build = "61265"
-PatchNotesDelivered_Hotfix = 12
+PatchNotesDelivered_Hotfix = 13
 PatchNotesDelivered_Text = nil
 
 -- Link Helper Functions
@@ -108,6 +108,13 @@ function BuildPatchNotes()
         build = PatchNotesDelivered_Build,
         hotfix = PatchNotesDelivered_Hotfix,
         gameChangesHotfixes = [[
+            June 11, 2025
+                
+                Classes
+                    - Increased threat generation of all tank specializations by 15%.
+                    - Developer’s notes: We're finding that tanks are having difficulty gaining and holding threat, so we are 
+                      adjusting tank threat generation in order to address this issue.
+        
             June 10, 2025
                 
                 Renown
