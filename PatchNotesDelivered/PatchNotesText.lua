@@ -5,7 +5,7 @@
 -- License: License.txt
 -- For more information, visit the project repository.
 
--- Variables used by check_build.py
+-- Variables used by BuildPatchNotes()
 PatchNotesDelivered_Pointer = PatchNotesDelivered_Notes_1117
 PatchNotesDelivered_Text = nil
 
