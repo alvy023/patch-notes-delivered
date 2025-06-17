@@ -42,16 +42,17 @@ jobs:
         id: check_build
         run: |
           NOTES="${{ github.event.inputs.notes || env.NOTES_FILE }}"
-          echo "Scraping URL: $NOTES"
+          echo "Notes File: $NOTES"
           python .github/scripts/update_patch_notes.py "$NOTES"
 
       - name: Commit updated build number
         if: steps.check_build.outputs.updated == 'true'
         run: |
+          NOTES="${{ github.event.inputs.notes || env.NOTES_FILE }}"
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git add PatchNotesDelivered/PatchNotesText.lua
-          git commit -m "Update PatchNotesText.lua to latest build"
+          git add PatchNotesDelivered/notes/$NOTES
+          git commit -m "Update $NOTES to latest build"
 
       - name: Check for existing Open Pull Request
         id: check_existing_pr
@@ -73,7 +74,7 @@ jobs:
         if: steps.check_build.outputs.updated == 'true' && steps.check_existing_pr.outputs.exists == 'false'
         uses: peter-evans/create-pull-request@v5
         with:
-          commit-message: "Update PatchNotesText.lua to latest build"
+          commit-message: "Update notes file to latest build"
           title: "Update PatchNotesText.lua to latest build"
           body: "Automatically created PR to update to latest WoW build."
           branch: update/patchnotes-${{ steps.check_build.outputs.branch_name }}
