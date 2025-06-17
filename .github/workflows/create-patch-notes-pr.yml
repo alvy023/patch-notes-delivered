@@ -1,9 +1,17 @@
 name: Create Patch Notes PR
 
 on:
-  schedule:
-    - cron: '30 19 * * 2'  # Every Tuesday at 19:30 UTC (12:30 PST)
+  # Manual Trigger, with input
   workflow_dispatch:
+    inputs:
+      notes:
+        description: 'Notes file to update (optional - will use default if not provided)'
+        required: false
+        default: 'patch-11.1.7.lua'
+
+  # Scheduled Trigger, Every Tuesday at 17:15 UTC (10:15 PST)
+  schedule:
+    - cron: '15 17 * * 2'
 
 permissions:
   contents: write
@@ -12,6 +20,9 @@ permissions:
 jobs:
   check-build:
     runs-on: ubuntu-latest
+
+    env:
+      NOTES_FILE: ${{ vars.NOTES_FILE }}
 
     steps:
       - name: Checkout repo
@@ -29,7 +40,10 @@ jobs:
 
       - name: Run build check
         id: check_build
-        run: python .github/scripts/update_patch_notes.py
+        run: |
+          NOTES="${{ github.event.inputs.notes || env.NOTES_FILE }}"
+          echo "Scraping URL: $NOTES"
+          python .github/scripts/update_patch_notes.py "$NOTES"
 
       - name: Commit updated build number
         if: steps.check_build.outputs.updated == 'true'
