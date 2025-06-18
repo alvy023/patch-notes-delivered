@@ -75,7 +75,7 @@ jobs:
         uses: peter-evans/create-pull-request@v5
         with:
           commit-message: "Update notes file to latest build"
-          title: "Update PatchNotesText.lua to latest build"
-          body: "Automatically created PR to update to latest WoW build."
+          title: "Update notes file to latest build"
+          body: "Automatically created PR to update the specific notes file to latest WoW build."
           branch: update/patchnotes-${{ steps.check_build.outputs.branch_name }}
           base: dev
