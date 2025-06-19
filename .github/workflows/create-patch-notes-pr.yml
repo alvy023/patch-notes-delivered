@@ -1,9 +1,17 @@
 name: Create Patch Notes PR
 
 on:
-  schedule:
-    - cron: '30 19 * * 2'  # Every Tuesday at 19:30 UTC (12:30 PST)
+  # Manual Trigger, with input
   workflow_dispatch:
+    inputs:
+      notes:
+        description: 'Notes file to update (optional - will use default if not provided)'
+        required: false
+        default: 'patch-11.1.7.lua'
+
+  # Scheduled Trigger, Every Tuesday at 17:15 UTC (10:15 PST)
+  schedule:
+    - cron: '15 17 * * 2'
 
 permissions:
   contents: write
@@ -12,6 +20,9 @@ permissions:
 jobs:
   check-build:
     runs-on: ubuntu-latest
+
+    env:
+      NOTES_FILE: ${{ vars.NOTES_FILE }}
 
     steps:
       - name: Checkout repo
@@ -29,15 +40,19 @@ jobs:
 
       - name: Run build check
         id: check_build
-        run: python .github/scripts/update_patch_notes.py
+        run: |
+          NOTES="${{ github.event.inputs.notes || env.NOTES_FILE }}"
+          echo "Notes File: $NOTES"
+          python .github/scripts/update_patch_notes.py "$NOTES"
 
       - name: Commit updated build number
         if: steps.check_build.outputs.updated == 'true'
         run: |
+          NOTES="${{ github.event.inputs.notes || env.NOTES_FILE }}"
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git add PatchNotesDelivered/PatchNotesText.lua
-          git commit -m "Update PatchNotesText.lua to latest build"
+          git add PatchNotesDelivered/notes/"$NOTES"
+          git commit -m "Update $NOTES to latest build"
 
       - name: Check for existing Open Pull Request
         id: check_existing_pr
@@ -59,8 +74,8 @@ jobs:
         if: steps.check_build.outputs.updated == 'true' && steps.check_existing_pr.outputs.exists == 'false'
         uses: peter-evans/create-pull-request@v5
         with:
-          commit-message: "Update PatchNotesText.lua to latest build"
-          title: "Update PatchNotesText.lua to latest build"
-          body: "Automatically created PR to update to latest WoW build."
+          commit-message: "Update notes file to latest build"
+          title: "Update notes file to latest build"
+          body: "Automatically created PR to update the specific notes file to latest WoW build."
           branch: update/patchnotes-${{ steps.check_build.outputs.branch_name }}
           base: dev
