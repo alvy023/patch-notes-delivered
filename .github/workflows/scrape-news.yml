@@ -17,6 +17,9 @@ on:
 jobs:
   scrape:
     runs-on: ubuntu-latest
+
+    env: 
+      NEWS_URL: ${{ vars.NEWS_URL }}
     
     steps:
     - name: Checkout repository
@@ -37,7 +40,7 @@ jobs:
     - name: Run scraper
       id: scrape
       run: |
-        URL="${{ github.event.inputs.url || 'https://worldofwarcraft.blizzard.com/en-us/news/24201420/' }}"
+        URL="${{ github.event.inputs.url || env.NEWS_URL }}"
         echo "Scraping URL: $URL"
         python .github/scripts/scrape_news.py "$URL"
     
