@@ -11,6 +11,7 @@ jobs:
     env:
       ADDON_VERSION: ${{ vars.ADDON_VERSION }}
       ADDON_NAME: PatchNotesDelivered
+      NOTES_FILE: ${{ vars.NOTES_FILE }}
 
     steps:
       - name: Checkout main
@@ -28,7 +29,7 @@ jobs:
         id: create_release
         run: |
           echo "Fetching local game version/build"
-          python .github/scripts/create_release.py
+          python .github/scripts/create_retail_release.py "$NOTES_FILE"
 
       - name: Set full version string
         id: versioning
@@ -54,7 +55,7 @@ jobs:
         with:
           tag_name: ${{ steps.versioning.outputs.release_tag }}
           name: ${{ steps.versioning.outputs.release_tag }}
+          body_path: ${{ steps.create_release.outputs.release_notes_path }}
           files: dist/${{ env.ADDON_NAME }}-${{ steps.versioning.outputs.release_tag }}.zip
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-  
