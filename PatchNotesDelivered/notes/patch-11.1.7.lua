@@ -12,6 +12,7 @@ PatchNotesDelivered_Notes_1117 = {
     build = "61491",
     hotfix = 0,
     gameChangesHotfixes = [[
+        - Everything is working as intended.
     ]],
 
     gameChangesPatch = [[
@@ -34,9 +35,9 @@ PatchNotesDelivered_Notes_1117 = {
                 
                 • Xal’atath: Xal’atath, the Harbinger, was once known as the Blade of the Black Empire. Her history is a well-kept secret. 
                   But her words and deeds have affected so many that she is impossible to ignore. Her story must be told.
-                • Ethereals: Mysterious and elusive, the ethereals that have traveled our world speak little of their history. Yet there is
+                • Ethereals: Mysterious and elusive, the ethereals that have traveled our world speak little of their history. Yet there is
                   much to be learned from the few things they do choose to share...
-                • The Lich King: Arthas Menethil. It is said that when he was born, the very forests of Lordaeron whispered his name. But 
+                • The Lich King: Arthas Menethil. It is said that when he was born, the very forests of Lordaeron whispered his name. But
                   did the forests of his youth know what he would eventually grow to become?
 
             - Each quest series provides additional rewards beyond gold and experience for completing them including three new toys:
@@ -48,8 +49,9 @@ PatchNotesDelivered_Notes_1117 = {
 
         OVERCHARGED DELVES
             
-            - Power up with Titan machinery to explore new depths and face new challenges within six Delves throughout Khaz Algar in the Legacy
-              of Arathor content update. You’ll be able to amp up the challenge with a new Delve-specific affix and earn some shiny loot.
+            - Power up with Titan machinery to explore new depths and face new challenges within six Delves throughout Khaz Algar in the
+              Legacy of Arathor content update. You’ll be able to amp up the challenge with a new Delve-specific affix and earn some shiny
+              loot.
                 
                 • Fungal Folly: Isle of Dorn
                 • Kriegval’s Rest: Isle of Dorn
@@ -68,23 +70,24 @@ PatchNotesDelivered_Notes_1117 = {
 
         NEW UI OPTIONS: ASSISTED HIGHLIGHT AND SINGLE-BUTTON ASSISTANT
 
-            - Assisted Highlight is a new feature coming to the game that highlights the recommended next ability based on resources and the 
-              situation your character is in. This feature is designed to help new players, players who are trying out a new specialization, 
-              or those looking for additional guidance on the abilities they should use without the need to turn to third party apps or outside 
-              guides. This new feature is configured as an additional option that is part of the base UI to assist you with a damage rotation 
-              no matter which specialization you’re using.
-            - In addition, a Single-Button Assistant can be used to cast the next recommended ability in the sequence. This assistant is designed
-              to have a small additional global cooldown added between abilities so that it is still useful for learning new skills, aiding those 
-              who are looking for additional help, or for those who want to experience the story or game on a more casual basis. It will also 
-              detect when an Area of Effect (AoE) spell or multi-target ability should be used.
-            - Both of these new options should aid in lowering the barrier of entry for new players or players looking to explore new characters in
-              a way that’s meaningful to them. As with the new Cooldown Manager added in the 11.1.5 content, it will continue to evolve over time. 
-              To enable Assisted Highlight and Single-Button Assistant, head to the Game Menu and select Options then Gameplay Enhancements.
+            - Assisted Highlight is a new feature coming to the game that highlights the recommended next ability based on resources and
+              the situation your character is in. This feature is designed to help new players, players who are trying out a new
+              specialization, or those looking for additional guidance on the abilities they should use without the need to turn to third
+              party apps or outside guides. This new feature is configured as an additional option that is part of the base UI to assist
+              you with a damage rotation no matter which specialization you’re using.
+            - In addition, a Single-Button Assistant can be used to cast the next recommended ability in the sequence. This assistant is
+              designed to have a small additional global cooldown added between abilities so that it is still useful for learning new
+              skills, aiding those who are looking for additional help, or for those who want to experience the story or game on a more
+              casual basis. It will also detect when an Area of Effect (AoE) spell or multi-target ability should be used.
+            - Both of these new options should aid in lowering the barrier of entry for new players or players looking to explore new
+              characters in a way that’s meaningful to them. As with the new Cooldown Manager added in the 11.1.5 content, it will continue
+              to evolve over time. To enable Assisted Highlight and Single-Button Assistant, head to the Game Menu and select Options then
+              Gameplay Enhancements.
 
         SLIP INTO THE TURBULENT TIMEWAYS WITH BATTLE FOR AZEROTH
 
-            - Beginning the week of June 17, we’re refreshing Turbulent Timeways with the addition of Battle for Azeroth in the rotation. This event 
-              will span seven weeks, beginning and ending with Battle for Azeroth.
+            - Beginning the week of June 17, we’re refreshing Turbulent Timeways with the addition of Battle for Azeroth in the rotation.
+              This event will span seven weeks, beginning and ending with Battle for Azeroth.
 
                 • Week 1: Battle for Azeroth
                 • Week 2: Mists of Pandaria
@@ -94,30 +97,34 @@ PatchNotesDelivered_Notes_1117 = {
                 • Week 6: Classic
                 • Week 7: Battle for Azeroth
 
-            - We’ll have six new Timewalking Dungeons for players to undertake— Atal’Dazar, Freehold, King’s Rest, Shrine of the Storm, Temple of 
-              Sethraliss, and Waycrest Manor. Players can also shop at a new Battle for Azeroth vendor that can be found in the harbors of Boralus and 
-              Dazar’Alor.
+            - We’ll have six new Timewalking Dungeons for players to undertake— Atal’Dazar, Freehold, King’s Rest, Shrine of the Storm,
+              Temple of Sethraliss, and Waycrest Manor. Players can also shop at a new Battle for Azeroth vendor that can be found in the
+              harbors of Boralus and Dazar’Alor.
             - Master the timeways and you can also earn the new Chrono Corsair skyriding mount... and more.
 
         THE GREEDY EMISSARY RETURNS THE WEEK OF JULY 1
 
-            - Treasure Goblins are back for the Greedy Emissary event! During this event you’ll be able to encounter even more of these deviously greedy
-              emissaries in Stormwind, Orgrimmar, Dornogal, and Undermine for new diabolical rewards— including a mount. But be warned, these Treasure 
-              Goblins are back with a vengeance and are now equipped with random affixes that make them more powerful than before. You won’t want to miss
-              some truly iconic rewards including recolors of classic Tier 2 armor sets for your characters.
-            - Alongside this event, we are also providing a Collector’s Bounty buff which will aid players in the hunt for legacy loot by increasing drops
-              in legacy content throughout Azeroth. We’ll share more details when we are closer to its release.
+            - Treasure Goblins are back for the Greedy Emissary event! During this event you’ll be able to encounter even more of these
+              deviously greedy emissaries in Stormwind, Orgrimmar, Dornogal, and Undermine for new diabolical rewards— including a mount.
+              But be warned, these Treasure Goblins are back with a vengeance and are now equipped with random affixes that make them more
+              powerful than before. You won’t want to miss some truly iconic rewards including recolors of classic Tier 2 armor sets for
+              your characters.
+            - Alongside this event, we are also providing a Collector’s Bounty buff which will aid players in the hunt for legacy loot by
+              increasing drops in legacy content throughout Azeroth. We’ll share more details when we are closer to its release.
 
         CLASSES
-            - New Ability: Recuperate – Take a breather, prepare some food and have a meal. Restores 50% of your maximum health over 10 seconds.
+
+            - New Ability: Recuperate – Take a breather, prepare some food and have a meal. Restores 50% of your maximum health over 10
+              seconds.
 
         TIMEWALKING DUNGEONS
             
-            - Developers' notes: These changes aim to make it possible to experience Timewalking dungeons more authentically, giving players the 
-              opportunity to use more abilities and practice their class's damage rotations, healing spells, or defensives. When players wish to use 
-              Timewalking dungeons to level up, we want you to learn your class in realistic combat encounters, especially boss encounters. This also 
-              acknowledges and rewards players who take the time to acquire powerful gear, since better gear increases your damage, healing, and 
-              survivability. We will actively monitor testing and feedback and we will make further adjustments as needed.
+            - Developers' notes: These changes aim to make it possible to experience Timewalking dungeons more authentically, giving players
+              the opportunity to use more abilities and practice their class's damage rotations, healing spells, or defensives. When players
+              wish to use Timewalking dungeons to level up, we want you to learn your class in realistic combat encounters, especially boss
+              encounters. This also acknowledges and rewards players who take the time to acquire powerful gear, since better gear increases
+              your damage, healing, and survivability. We will actively monitor testing and feedback and we will make further adjustments
+              as needed.
             - Enemy health increased in all Timewalking dungeons.
             - Boss health significantly increased in all Timewalking dungeons.
             - Adjusted difficulty scaling via the following changes:
@@ -130,9 +137,10 @@ PatchNotesDelivered_Notes_1117 = {
         USER INTERFACE AND ACCESSIBILITY
 
             COOLDOWN MANAGER
-                - The Essential Cooldowns and Utility Cooldowns portions of the Cooldown Manager now display information for Totems (such as Earthbind 
-                  Totem, Healing Stream Totem) and players summons that are also tracked on the Totem frame (such as Earth Elemental and Call 
-                  Dreadstalkers).
+
+                - The Essential Cooldowns and Utility Cooldowns portions of the Cooldown Manager now display information for Totems (such
+                  as Earthbind Totem, Healing Stream Totem) and players summons that are also tracked on the Totem frame (such as Earth
+                  Elemental and Call Dreadstalkers).
                 - Removed the Help Tip for minimizing the Spellbook.
     ]],
 
@@ -149,4 +157,3 @@ PatchNotesDelivered_Notes_1117 = {
                 • "/pnd-mini" – Toggle minimap button
     ]],
 }
-        
