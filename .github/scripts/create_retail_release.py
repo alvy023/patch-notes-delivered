@@ -1,6 +1,7 @@
 import sys
 import re
 import os
+from textwrap import dedent
 
 
 def parse_local_version_build_hf(notes):
@@ -12,16 +13,30 @@ def parse_local_version_build_hf(notes):
     local_game_hotfix = re.search(r'hotfix\s*=\s*(\d+)', content)
 
     if not local_game_version:
-        print("❌ Failed to find local game version in PatchNotesText.lua")
+        print("❌ Failed to find local game version in " + notes)
         sys.exit(1)
     if not local_game_build:
-        print("❌ Failed to find local game build in PatchNotesText.lua")
+        print("❌ Failed to find local game build in " + notes)
         sys.exit(1)
     if not local_game_hotfix:
-        print("❌ Failed to find local game hotfix in PatchNotesText.lua")
+        print("❌ Failed to find local game hotfix in " + notes)
         sys.exit(1)
 
     return local_game_version.group(1), local_game_build.group(1), local_game_hotfix.group(1)
+
+def generate_release_notes(game_version, game_build, game_hotfix, addon_version):
+    notes = f"""
+        # Release Notes
+
+        ## Game Version
+        - **Patch:** {game_version}
+        - **Build:** {game_build}
+        - **Hotfix:** {game_hotfix}
+
+        ## Addon Version
+        - **Version:** {addon_version}
+    """
+    return dedent(notes).strip()
 
 if __name__ == "__main__":
     if len(sys.argv) < 2:
@@ -30,10 +45,21 @@ if __name__ == "__main__":
         sys.exit(1)
 
     notes = sys.argv[1]
-    notes = "PatchNotesDelivered/notes/"+notes
+    notes_path = "PatchNotesDelivered/notes/" + notes
 
-    local_game_version, local_game_build, local_game_hotfix = parse_local_version_build_hf(notes)
+    addon_version = os.environ.get("ADDON_VERSION")
+    if not addon_version:
+        print("❌ ADDON_VERSION environment variable not set.")
+        sys.exit(1)
+
+    local_game_version, local_game_build, local_game_hotfix = parse_local_version_build_hf(notes_path)
     local_game_version_build_hf = f"{local_game_version}.{local_game_build}.{local_game_hotfix}"
 
+    release_notes_content = generate_release_notes(local_game_version, local_game_build, local_game_hotfix, addon_version)
+    release_notes_file = "RELEASE_NOTES.md"
+    with open(release_notes_file, "w", encoding="utf-8") as f:
+        f.write(release_notes_content)
+
     with open(os.environ["GITHUB_OUTPUT"], "a") as gh_out:
-        print("local_game_version_build_hf="+str(local_game_version_build_hf), file=gh_out)
+        print("local_game_version_build_hf=" + str(local_game_version_build_hf), file=gh_out)
+        print("release_notes_path=" + release_notes_file, file=gh_out)
