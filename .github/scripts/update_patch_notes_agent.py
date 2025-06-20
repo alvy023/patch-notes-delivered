@@ -108,8 +108,8 @@ def generate_notes_from_text(scraped_text, existing_notes):
             model="gemini-2.5-flash", 
             contents=prompt,
             config={
-                "response_mime_type"="application/json",
-                "thinking_config"=types.ThinkingConfig(thinking_budget=0), # Disables thinking
+                "response_mime_type": "application/json",
+                "thinking_config": types.ThinkingConfig(thinking_budget=0), # Disables thinking
             }
         )
         
