@@ -175,7 +175,7 @@ def update_lua_file(notes_file_path, combined_notes):
 
 if __name__ == "__main__":
     if len(sys.argv) != 3:
-        print("Usage: python generate_patch_notes.py <scraped_text_file> <notes_file_to_update>")
+        print("Usage: python update_patch_notes_agent.py <scraped_text_file> <notes_file_to_update>")
         sys.exit(1)
 
     scraped_text_file = sys.argv[1]
