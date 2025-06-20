@@ -44,7 +44,7 @@ jobs:
       - name: Scrape latest patch notes
         id: scrape
         run: |
-          SCRAPE_URL = "${{ env.NEWS_URL || github.event.inputs.scrape_url}}"
+          SCRAPE_URL="${{ env.NEWS_URL || github.event.inputs.scrape_url}}"
           echo "Scraping URL: $SCRAPE_URL"
           python .github/scripts/scrape_news.py "${{ env.SCRAPE_URL }}"
           if [ -f "scraped_content.txt" ]; then
