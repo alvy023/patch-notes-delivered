@@ -7,10 +7,101 @@
 
 --- Export global notes variable
 PatchNotesDelivered_Notes_1115 = {
-    version = "11.1.5",
-    build = "61265",
+    version = "11.1.7",
+    build = "61559",
     hotfix = 13,
     gameChangesHotfixes = [[
+        June 10, 2025
+
+            Season of Discovery
+                - The incrementing player buff in Scarlet Enclave now increases by 5% every week (was every 2 weeks).
+                - Developer’s notes: In an effort to support players in Season of Discovery we've decided to advance the incrementing player buff in Scarlet Enclave to go up by 5% every week instead of every 2 weeks. Starting today, June 10, the buff will advance to 10%.
+
+        May 22, 2025
+
+            Season of Discovery
+                • Warrior
+                    - The Scarlet Enclave Protection Warrior Shoulders will no longer have the incorrect item category for one of the effects.
+                    - The Scarlet Enclave Damage Warrior Feet will no longer have the incorrect item category for one of the effects.
+
+        May 16, 2025
+
+            Season of Discovery
+                • Items
+                    - Spire of Sacrifice now prevents being healed by Chain Heal or Healing Rain and no longer damages the wielder with Healing Rain ticks.
+                • Mage
+                    - The Scarlet Enclave 4-piece healer set bonus will now correctly reduce incoming damage.
+                • Rogue
+                    - Carnage will no longer fall off prematurely when Cutthroat's variant of Garrote is used.
+
+        May 9, 2025
+
+            Season of Discovery
+                - Fixed an issue where the Corrupted Ashbringer questline could get soft locked if you died while inside of Mount Hyjal between quests.
+                - Thisalee will allow you to go to Mount Hyjal after completing her quests, and will no longer allow you back into Mount Hyjal once you are finished there.
+                - If you complete the quest “Falling Into Place” and did not accept the follow-up quest “A Difficult Path” before the Will of the Ashbringer despawned, talk to Rix Xizzix in Booty Bay to get a replacement. How this Goblin got the Inert Ashbringer in his possession? We don't know, but you're just glad he found it!
+                • Paladin
+                    - Sunlight will now correctly benefit from the Scarlet Enclave Shockadin 6-set bonus.
+
+        May 8, 2025
+
+            Season of Discovery
+                - The Abandoned Experiment will no longer play its proc sound effect while you are at maximum stacks.
+                • Paladin
+                    - Leonid Barthalomew now temporarily exchanges the Scarlet Enclave Holy to Shockadin tier set (in addition to the Retribution to Shockadin set exchange). These will be removed from the vendor list on May 20.
+                    - The Shockadin 6-piece set bonus has been adjusted – Now grants 8% spell power per stack of Holy Power consumed while using a one-handed weapon, and 18% spell power per stack of Holy Power consumed when using a 2-handed weapon (was 15% spell power per stack of Holy Power consumed).
+                • Enchanting
+                    - Access to the New Avalon Mage Tower now requires Enchanting 280 (was 300), matching the requirements of the rest of the puzzle.
+
+        May 6, 2025
+
+            Cataclysm Classic
+                • Tailoring
+                    - Several previous season recipes for Fireweave and Emberfire items can now be trained from Cataclysm Tailoring trainers.
+            Season of Discovery
+                - Fixed an issue that prevented players who have completed the quest "Decapitation Strike" from being able to view a certain roleplay event that starts at Light's Hope Chapel when another player turns in the quest "Fall of the Grand Crusader".
+                - The proc from Mirage will no longer cause the master to stand up when their Mirage casts Arcane Explosion.
+                • Scarlet Enclave
+                    - Caldoran now drops 1 additional non-tier token piece of loot.
+                    - Lilian Voss now drops a Crusader's Chalice.
+                    - The first boss you loot after Balnazzar now drops a Jostled Chalice Fragment once per week.
+                    - Developers' notes: This means if you did the raid in a linear manner, looting Beatrix would grant you a Jostled Chalice Fragment. But if you forgot to loot her, joined the raid late, or joined a pick up group that was already in progress, the first boss you loot will grant you a Jostled Chalice Fragment.
+
+        May 5, 2025
+
+            Season of Discovery
+                - The buffs granted from Corrupted Ashbringer are no longer Magic effects.
+                • Paladin
+                    - The Scarlet Enclave Protection 6-set bonus now correctly also allows the use of Avenging Wrath while under the effects of Forbearance.
+
+        May 2, 2025
+
+            Season of Discovery
+                - Elemental Invasions now spawn every 1-2 hours (was every 24-48 hours).
+                - The Grand Arcanist and Grand Sorcerer enchants now additionally grant Healing Power equal to the same amount of spell power.
+                - The Grand Arcanist and Grand Sorcerer enchants now have a 0.1 second cooldown on them to prevent players from getting multiple procs of the mana restoration effect on a singular spell cast.
+                - The Grand Arcanist and Grand Sorcerer enchants can now proc from non-periodic healing spells that heal during combat.
+                - The Mirage summoned from the Mirage, Rod of Illusion will no longer attempt to melee attack under certain conditions.
+                - Immolation Traps will no longer Melee during the Alexei the Beastlord encounter.
+                • Classes
+                    • Warlock
+                        - The Naxxramas damage 4-piece bonus will now correctly apply to and activate the Corruption applied by the Scarlet Enclave tank 2-piece bonus.
+                        - The Scarlet Enclave Tank 4-piece bonus now correctly applies its heal from Corruption ticks off the instant tick from the Naxxramas damage 4-piece bonus.
+
+        April 30, 2025
+
+            Season of Discovery
+                - Lucky Doubloon now has a small 1.5 second cooldown, even if you flip heads to clear the cooldown on the item. This is to prevent it from being flipped multiple times unintentionally.
+                - The Quartermaster's Crate is now provided upon acceptance of “Prove Your Worth” from Bryon Steelblade.
+                • Classes
+                    • Paladin
+                        - The Avenging Shield buff granted from the Scarlet Enclave 6-piece set bonus for Protection Paladins correctly lasts the same duration as Avenging Wrath.
+                • Scarlet Enclave
+                    - There are now 3 Torn Pages containing Torn Diary Pages in them in Scarlet Enclave. These should be lootable by and tradable to players who were present for the Reborn Council encounter. Torn Pages should no longer disappear if there is a soft reset after the Reborn Council but before Lillian Voss.
+                    - Berserk Timers for all bosses, except Caldoran, have been increased to 10 minutes.
+                    - Caldoran will now Berserk 6 minutes after Phase 2 begins (was 5 minutes after).
+                    - The aggro radiuses of the Reborn Council have been lowered to allow for easier prepositioning before pulling the boss.
+
         June 11, 2025
             
             Classes
@@ -417,10 +508,10 @@ PatchNotesDelivered_Notes_1115 = {
             Quests
                 - Resolved an issue preventing looting the quest object after another player looted it first in "Preserve the Legacy"
                   from the Fate of the Kirin Tor questline.
-        ]],
+    ]],
 
         gameChangesPatch = [[
-            THE WINDS OF MYSTERIOUS FORTUNE ARE IN YOUR FAVOR
+        THE WINDS OF MYSTERIOUS FORTUNE ARE IN YOUR FAVOR
 
                 - Beginning on April 22, 2025, through May 20, 2025, players can take advantage of the Winds of Mysterious Fortune 20%
                   experience buff to get up to speed with their new or alternate characters levels 10 through 79.
@@ -543,7 +634,7 @@ PatchNotesDelivered_Notes_1115 = {
                   issues to the campsite frame.
                 - Fixed an issue where the premade group dungeon filter would not save.
                 - Fixed an issue where the notification icon on the micromenu for Guilds and Communities would not honor filter settings.
-        ]],
+    ]],
 
         addonChanges = [[
             May 29, 2025
