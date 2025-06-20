@@ -62,10 +62,11 @@ jobs:
           NOTES="PatchNotesDelivered/notes/${{ github.event.inputs.notes_file || env.NOTES_FILE }}"
           echo "Running Update Agent"
           python .github/scripts/update_patch_notes_agent.py scraped_content.txt "$NOTES"
-          echo "llm_run=true" >> $GITHUB_OUTPUT
           echo "Update Agent finished"
+          echo "llm_run=true" >> $GITHUB_OUTPUT
 
       - name: Run build check and update build number
+        if: steps.llm_generate.outputs.llm_run == 'true'
         id: update_version_build
         run: |
           NOTES="${{ github.event.inputs.notes_file || env.NOTES_FILE }}"
@@ -75,16 +76,18 @@ jobs:
 
       - name: Commit updated build number
         if: steps.update_version_build.outputs.updated == 'true'
+        id: commit_changes
         run: |
           NOTES="PatchNotesDelivered/notes/${{ github.event.inputs.notes_file || env.NOTES_FILE }}"
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git add "$NOTES"
           git commit -m "Update $NOTES to latest build"
+          echo "changed=true" >> $GITHUB_OUTPUT
 
       - name: Check for existing Open Pull Request
         id: check_existing_pr
-        if: steps.update_version_build.outputs.updated == 'true'
+        if: steps.commit_changes.outputs.changed == 'true'
         run: |
           BRANCH_NAME="updates/auto-patch-notes-${{ steps.update_version_build.outputs.branch_name }}"
           # Check for OPEN pull requests originating from this branch
@@ -99,10 +102,7 @@ jobs:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Create Pull Request
-        if: 
-          steps.llm_generate.outputs.llm_run == 'true' &&
-          steps.update_version_build.outputs.updated == 'true' &&
-          steps.check_existing_pr.exists == 'false'
+        if: steps.check_existing_pr.outputs.exists == 'false'
         uses: peter-evans/create-pull-request@v5
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
@@ -118,4 +118,3 @@ jobs:
             Please review the changes carefully.
           branch: "updates/auto-patch-notes-${{ steps.update_version_build.outputs.branch_name }}"
           base: dev
-          delete-branch: true
