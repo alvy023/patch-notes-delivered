@@ -107,7 +107,7 @@ def generate_notes_from_text(scraped_text, existing_notes):
         response = client.models.generate_content(
             model="gemini-2.5-flash", 
             contents=prompt,
-            generation_config=types.GenerationConfig(
+            config=types.GenerationConfig(
                 response_mime_type="application/json",
                 thinking_config=types.ThinkingConfig(thinking_budget=0) # Disables thinking
             )
