@@ -10,9 +10,33 @@
 PatchNotesDelivered_Notes_1117 = {
     version = "11.1.7",
     build = "61559",
-    hotfix = 0,
+    hotfix = 1,
     gameChangesHotfixes = [[
-        - Everything is working as intended.
+        June 20, 2025
+            
+            Classes
+                • Paladin
+                    > Templar
+                        - An issue causing Divine Hammer and Shield of the Rightheous to not cast Empyrean Hammer has been resolved.
+                • Shaman
+                    > Enhancement
+                        - An issue causing Static Accumulation to not grant Maelstrom Weapon charges has been resolved.
+                    > Restoration
+                        - Resolved an issue causing Earth Shield to be removed from allies after entering or exiting an instance with
+                          Therazane's Resilience talented.
+                        - Resolved an issue causing Water Shield to have 9 stacks while talented for Therazane's Resilience.
+            
+            Items
+                - Fixed an issue where Cauterizing Bolts from the D.I.S.C. belt was not hitting players outside your party.
+                - Fixed an issue where some delve equipment was not requiring player level 80 to be equipped.
+            
+            Lorewalking
+                - Players that are in both a Timewalking Campaign and Lorewalking should be able to complete their Lorewalking 
+                  experiences as expected.
+            
+            Quests
+                • Exile’s Reach
+                    Fixed an issue where players who were wearing Heirloom gear could not complete “Repair Yourself”.
     ]],
 
     gameChangesPatch = [[
