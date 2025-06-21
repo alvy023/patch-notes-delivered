@@ -9,7 +9,7 @@
 --- Max note length [140] ------------------------------------------------------------------------------------------------------------------
 PatchNotesDelivered_Notes_1117 = {
     version = "11.1.7",
-    build = "61491",
+    build = "61559",
     hotfix = 0,
     gameChangesHotfixes = [[
         - Everything is working as intended.
