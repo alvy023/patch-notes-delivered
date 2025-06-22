@@ -17,7 +17,7 @@ PatchNotesDelivered_Notes_1117 = {
             Classes
                 • Paladin
                     > Templar
-                        - An issue causing Divine Hammer and Shield of the Rightheous to not cast Empyrean Hammer has been resolved.
+                        - An issue causing Divine Hammer and Shield of the Righteous to not cast Empyrean Hammer has been resolved.
                 • Shaman
                     > Enhancement
                         - An issue causing Static Accumulation to not grant Maelstrom Weapon charges has been resolved.
