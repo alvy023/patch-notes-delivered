@@ -146,7 +146,7 @@ def parse_page(html_content):
         print(f"Error parsing HTML: {e}")
         return None
 
-def save_data(data, url):
+def save_data(data, url, output):
     """Save scraped data to files"""
     # Add metadata
     data['url'] = url
