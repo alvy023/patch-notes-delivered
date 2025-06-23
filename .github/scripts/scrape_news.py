@@ -160,24 +160,25 @@ def save_data(data, url):
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
     json_file = os.path.join(data_dir, f'scraped_data_{timestamp}.json')
     text_file = os.path.join(data_dir, f'scraped_content_{timestamp}.txt')
-    
-    # Save to JSON file
-    with open(json_file, 'w', encoding='utf-8') as f:
-        json.dump(data, f, indent=2, ensure_ascii=False)
-    print(f"✅ Data saved to {json_file}")
-    
-    # Save readable text version
-    with open(text_file, 'w', encoding='utf-8') as f:
-        f.write(f"Title: {data['title']}\n")
-        f.write(f"Date: {data['date']}\n")
-        f.write(f"Author: {data['author']}\n")
-        f.write(f"URL: {data['url']}\n")
-        f.write(f"Tags: {', '.join(data['tags'])}\n")
-        f.write(f"Summary: {data['summary']}\n")
-        f.write(f"\n{'='*50}\n")
-        f.write(f"CONTENT:\n{'='*50}\n\n")
-        f.write(data['content'])
-    print(f"✅ Readable content saved to {text_file}")
+
+    if output:
+        # Save to JSON file
+        with open(json_file, 'w', encoding='utf-8') as f:
+            json.dump(data, f, indent=2, ensure_ascii=False)
+        print(f"✅ Data saved to {json_file}")
+        
+        # Save readable text version
+        with open(text_file, 'w', encoding='utf-8') as f:
+            f.write(f"Title: {data['title']}\n")
+            f.write(f"Date: {data['date']}\n")
+            f.write(f"Author: {data['author']}\n")
+            f.write(f"URL: {data['url']}\n")
+            f.write(f"Tags: {', '.join(data['tags'])}\n")
+            f.write(f"Summary: {data['summary']}\n")
+            f.write(f"\n{'='*50}\n")
+            f.write(f"CONTENT:\n{'='*50}\n\n")
+            f.write(data['content'])
+        print(f"✅ Readable content saved to {text_file}")
     
     # Also create temporary files in root for GitHub Actions artifacts
     temp_json = 'scraped_data.json'
@@ -206,7 +207,7 @@ def set_github_output(data):
             f.write(f"title={data['title']}\n")
             f.write(f"scraped=true\n")
 
-def scrape_news_page(url, session):
+def scrape_news_page(url, session, output):
     """Main scraping function"""
     print(f"Starting scrape of: {url}")
     
@@ -221,7 +222,7 @@ def scrape_news_page(url, session):
         return False
     
     # Save the data
-    json_file, text_file = save_data(data, url)
+    json_file, text_file = save_data(data, url, output)
     
     # Set GitHub Actions outputs
     set_github_output(data)
@@ -233,18 +234,26 @@ def scrape_news_page(url, session):
     print(f"Author: {data['author']}")
     print(f"Tags: {', '.join(data['tags']) if data['tags'] else 'None'}")
     print(f"Content length: {len(data['content'])} characters")
-    print(f"Files created: {json_file}, {text_file}")
+    if output:
+        print(f"Files created: {json_file}, {text_file}")
     
     return True
 
 def main():
     """Main function"""
     if len(sys.argv) < 2:
-        print("Usage: python scraper.py <URL>")
-        print("Example: python scraper.py https://worldofwarcraft.blizzard.com/en-us/news/24201420/")
+        print("Usage: python scraper.py <URL> <OUTPUT BOOL>")
+        print("Example: python scraper.py https://worldofwarcraft.blizzard.com/en-us/news/24201420/ false")
         sys.exit(1)
     
     url = sys.argv[1]
+    output = True
+    if len(sys.argv) > 2:
+        arg_two = sys.argv[2]
+        if arg_two.lower() == 'true':
+            output = True
+        elif arg_two.lower() == 'false':
+            output = False
     
     # Validate URL
     if not url.startswith(('http://', 'https://')):
@@ -258,7 +267,7 @@ def main():
     })
     
     # Run the scraper
-    success = scrape_news_page(url, session)
+    success = scrape_news_page(url, session, output)
     
     if success:
         print("\n✅ Scraping completed successfully!")
