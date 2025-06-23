@@ -52,15 +52,18 @@ def generate_notes_from_text(scraped_text, existing_notes):
     You are an expert World of Warcraft player and addon developer. Your task is to process scraped text and update the patch notes for an addon.
 
     **Your Job:**
-    1.  Analyze the "NEW SCRAPED TEXT". Determine if it contains "hotfix" information, "general patch note" information, or neither.
-    2.  Format any new information you find according to the detailed "FORMATTING EXAMPLES" below.
-    3.  You MUST return your response as a JSON object with two keys: "hotfixes" and "patch".
+    1.  Analyze the "NEW SCRAPED TEXT". Determine if it contains "hotfix" information, "patch note" information, or neither.
+    2.  Ignore any information that does not pertain to the current retail expansion: The War Within (i.e. ignore Cataclysm Classic, 
+        Season of Discovery, WoW Classic Era, and Hardcore)
+    3.  Prepend the latest hotfix or patch changes to the existing section (so that the order of dates is most recent to oldest).
+    4.  Format any new information you find according to the detailed "FORMATTING EXAMPLES" below.
+    5.  You MUST return your response as a JSON object with two keys: "hotfixes" and "patch".
         - The value for each key must be ONLY the NEWLY FORMATTED text chunk.
         - Do NOT include the existing notes in your JSON response. Your response should only contain the new additions.
         - If a section has no new content, its value must be an empty string `""`.
 
     --- FORMATTING EXAMPLES ---
-    This is the exact format required. Pay strict attention to indentation, spacing, and bullet styles (`-`, `•`, `>`).
+    This is the exact format required. Pay strict attention to indentation, spacing, and bullet styles (`•`, `>`, `-`).
 
     **Hotfix Example (for recent, dated changes):**
     ```
@@ -73,7 +76,7 @@ def generate_notes_from_text(scraped_text, existing_notes):
                           stack (was 30%).
     ```
 
-    **General Patch Note Example (for major content announcements):**
+    **Patch Note Example (for major content announcements):**
     ```
             DEFEND THE ARATHI IN THE NIGHTFALL SCENARIO
 
