@@ -10,7 +10,11 @@ on:
       scrape_url:
         description: 'URL to scrape for patch notes'
         required: false
-        default: 'https://worldofwarcraft.blizzard.com/en-us/news/'
+        default: 'https://worldofwarcraft.blizzard.com/en-us/news/24201420/'
+      commit_news:
+        description: 'Commit news to the branch'
+        required: false
+        default: 'false'
 
 permissions:
   contents: write
@@ -24,6 +28,7 @@ jobs:
       NEWS_URL: ${{ vars.NEWS_URL }}
       NOTES_FILE: ${{ vars.NOTES_FILE }}
       GOOGLE_API_KEY: ${{ secrets.GOOGLE_API_KEY }}
+      COMMIT_NEWS: 'false'
     
     steps:
       - name: Checkout dev branch
@@ -45,8 +50,9 @@ jobs:
         id: scrape
         run: |
           SCRAPE_URL="${{ github.event.inputs.scrape_url || env.NEWS_URL }}"
+          COMMIT="${{ github.event.inputs.commit_news || env.COMMIT_NEWS }}"
           echo "Scraping URL: $SCRAPE_URL"
-          python .github/scripts/scrape_news.py "$SCRAPE_URL"
+          python .github/scripts/scrape_news.py "$SCRAPE_URL" "$COMMIT"
           if [ -f "scraped_content.txt" ]; then
             echo "scraped=true" >> $GITHUB_OUTPUT
           else
@@ -64,6 +70,12 @@ jobs:
           python .github/scripts/update_patch_notes_agent.py scraped_content.txt "$NOTES"
           echo "Update Agent finished"
           echo "llm_run=true" >> $GITHUB_OUTPUT
+          if [ -f "scraped_content.txt" ]; then
+            rm -f "scraped_content.txt"
+          fi
+          if [ -f "scraped_data.json" ]; then
+            rm -f "scraped_data.json"
+          fi
 
       - name: Run build check and update build number
         if: steps.llm_generate.outputs.llm_run == 'true'
