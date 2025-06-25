@@ -9,9 +9,41 @@
 --- Max note length [140] ------------------------------------------------------------------------------------------------------------------
 PatchNotesDelivered_Notes_1117 = {
     version = "11.1.7",
-    build = "61559",
-    hotfix = 1,
+    build = "61609",
+    hotfix = 2,
     gameChangesHotfixes = [[
+        June 24, 2025
+
+            Achievements
+                - I'm Bringing Nerub-ack and Can You Please Spell "Gobanna?" now count towards earning Azeroth's Next Top Model.
+    
+            Delves
+                • Overcharged Titan Console now spawns in Shadow Realm.
+                • Adjusted some Durable Information Storage Container belt effects:
+                    - Critical Chain increased by 25%.
+                    - Static Charge increased by 50%.
+                    - Charged Crystal decreased by 24%.
+                    - Charged Bolt decreased by 62%.
+                • Developers’ notes: A couple of bug fixes alongside tuning changes caused the power of the Charged Bolt effect to go far
+                  beyond the other choices, so we’re bringing it more in line with the other choices in this week’s restarts. This will
+                  remain top for specs that favor damage procs, but may adjust desired choices for other specs. We’re also buffing Static
+                  Charge a bit after the internal cooldown change put it well behind.
+    
+            Items
+                - Fixed an issue where some BFA Timewalking drops had primary and stamina stats that were higher than intended.
+    
+            Lorewalking
+                - Fixed an issue occasionally causing players to be stuck in Ny'alotha during Xal'atath Lorewalking.
+                - Fixed an issue that would occasionally cause players in Xal'atath Lorewalking to be removed from the Blade in Twilight
+                  artifact acquisition scenario instance after turning in “Lorewalking: The Blade and the High Priest”.
+                - Fixed an issue causing players in Xal'atath Lorewalking to be teleported to Dalaran after viewing certain cutscenes.
+    
+            Quests
+                - Danath and Geya'rah will no longer be invisible while you are on the quest "Faerin's Request".
+                - On “Return to Stromgarde”, Marran's jail cell door should no longer inexplicably open for seemingly no reason.
+                - Fixed a bug in quest "In a Pinch" where the meaty bait was not showing up. Increased the size of the bait for improved
+                  visibility and meatiness.
+
         June 20, 2025
             
             Classes
@@ -36,7 +68,7 @@ PatchNotesDelivered_Notes_1117 = {
             
             Quests
                 • Exile’s Reach
-                    Fixed an issue where players who were wearing Heirloom gear could not complete “Repair Yourself”.
+                    - Fixed an issue where players who were wearing Heirloom gear could not complete “Repair Yourself”.
     ]],
 
     gameChangesPatch = [[
