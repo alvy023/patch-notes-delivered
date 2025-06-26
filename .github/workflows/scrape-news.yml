@@ -11,8 +11,8 @@ on:
         default: 'https://worldofwarcraft.blizzard.com/en-us/news/24201420/'
   
   # Scheduled trigger - runs daily at 1400 UTC -> 9 AM PST
-  schedule:
-    - cron: '0 14 * * *'
+  # schedule:
+  #   - cron: '0 14 * * *'
 
 jobs:
   scrape:
