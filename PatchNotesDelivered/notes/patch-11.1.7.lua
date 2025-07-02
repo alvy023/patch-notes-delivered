@@ -14,27 +14,27 @@ PatchNotesDelivered_Notes_1117 = {
     gameChangesHotfixes = [[
         June 27, 2025
 
-        Classes
-            • Mage
-                > Arcane
-                    - Updated the Single-Button Assistant and the Assisted Highlight recommendations to work with the Leydrinker,
-                      Glorious Incandescence, and Magi's Spark talents. They will also wait for maximum Arcane Charges to recommend
-                      Arcane Barrage.
-
-        Dastardly Duos
-            - Improved the Winner's Podium upgrades to have a better chance from the rewards chest at the end of a match. This
-              chance increases if you open many chests without getting an upgrade.
-
-        Delves
-            - Fixed an issue where the Durable Information Securing Container's Charged Bolts were targeting Breakable Crowd
-              Controlled targets.
-
-        Lorewalking
-            - Fixed an issue where players were able to exit Lorewalking while in combat.
-            - Fixed an issue where players who have not purchased The War Within were unable to enter the Lordaeron Garrison to
-              complete Arthas Lorewalking.
-            - Fixed an issue causing players to be directed to Dornogal to turn in the quest "Lorewalking" despite not being at
-              a high enough level to go to Dornogal.
+            Classes
+                • Mage
+                    > Arcane
+                        - Updated the Single-Button Assistant and the Assisted Highlight recommendations to work with the Leydrinker,
+                          Glorious Incandescence, and Magi's Spark talents. They will also wait for maximum Arcane Charges to recommend
+                          Arcane Barrage.
+    
+            Dastardly Duos
+                - Improved the Winner's Podium upgrades to have a better chance from the rewards chest at the end of a match. This
+                  chance increases if you open many chests without getting an upgrade.
+    
+            Delves
+                - Fixed an issue where the Durable Information Securing Container's Charged Bolts were targeting Breakable Crowd
+                  Controlled targets.
+    
+            Lorewalking
+                - Fixed an issue where players were able to exit Lorewalking while in combat.
+                - Fixed an issue where players who have not purchased The War Within were unable to enter the Lordaeron Garrison to
+                  complete Arthas Lorewalking.
+                - Fixed an issue causing players to be directed to Dornogal to turn in the quest "Lorewalking" despite not being at
+                  a high enough level to go to Dornogal.
 
         June 24, 2025
 
