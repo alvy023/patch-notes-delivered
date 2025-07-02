@@ -95,7 +95,7 @@ jobs:
           echo "Patch notes version and build updated"
 
       - name: Commit updated build number
-        if: steps.update_version_build.outputs.updated == 'true' || override_build_hotfix_check == 'true'
+        if: steps.update_version_build.outputs.updated == 'true' || github.event.inputs.override_build_hotfix_check == 'true'
         id: commit_changes
         run: |
           NOTES="PatchNotesDelivered/notes/${{ github.event.inputs.notes_file || env.NOTES_FILE }}"
