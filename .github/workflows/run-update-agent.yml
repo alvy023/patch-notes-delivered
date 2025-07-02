@@ -15,6 +15,10 @@ on:
         description: 'Commit news to the branch'
         required: false
         default: 'false'
+      override_build_hotfix_check:
+        description: 'Manually override build/hotfix check'
+        required: false
+        default: 'false'
 
   # Scheduled trigger - runs daily at 1400 UTC -> 10 AM EST
   schedule:
@@ -91,7 +95,7 @@ jobs:
           echo "Patch notes version and build updated"
 
       - name: Commit updated build number
-        if: steps.update_version_build.outputs.updated == 'true'
+        if: steps.update_version_build.outputs.updated == 'true' || override_build_hotfix_check == 'true'
         id: commit_changes
         run: |
           NOTES="PatchNotesDelivered/notes/${{ github.event.inputs.notes_file || env.NOTES_FILE }}"
