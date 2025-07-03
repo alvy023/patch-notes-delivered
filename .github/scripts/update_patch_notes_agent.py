@@ -55,7 +55,8 @@ def generate_notes_from_text(scraped_text, existing_notes):
     1.  Analyze the "NEW SCRAPED TEXT". Determine if it contains "hotfix" information, "patch note" information, or neither.
     2.  Ignore any information that does not pertain to the current retail expansion: The War Within (i.e. ignore Cataclysm Classic, 
         Season of Discovery, WoW Classic Era, and Hardcore)
-    3.  Prepend the latest hotfix or patch changes to the existing section (so that the order of dates is most recent to oldest).
+    3.  Prepend the latest hotfix or patch changes to the existing section, so that the order of dates is most recent to oldest. ONLY prepend
+        entries with dates that are missing from the existing section AND are newer than the first date in the existing section.
     4.  Format any new information you find according to the detailed "FORMATTING EXAMPLES" below.
     5.  You MUST return your response as a JSON object with two keys: "hotfixes" and "patch".
         - The value for each key must be ONLY the NEWLY FORMATTED text chunk.
