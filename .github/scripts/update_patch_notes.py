@@ -16,12 +16,13 @@ def fetch_latest_version(product):
         print(f"❌ Failed to fetch version from Wago.Tools: {e}")
         sys.exit(1)
 
-def parse_local_version_and_build(notes):
+def parse_local_version_build_hotfix(notes):
     with open(notes, "r", encoding="utf-8") as f:
         content = f.read()
 
     version_match = re.search(r'version\s*=\s*"([^"]+)"', content)
     build_match = re.search(r'build\s*=\s*"(\d+)"', content)
+    hotfix_match = re.search(r'hotfix\s*=\s*(\d+)', content)
 
     if not version_match:
         print("❌ Failed to find local version in "+notes)
@@ -31,7 +32,11 @@ def parse_local_version_and_build(notes):
         print("❌ Failed to find local build in "+notes)
         sys.exit(1)
 
-    return version_match.group(1), build_match.group(1)
+    if not hotfix_match:
+        print("❌ Failed to find local hotfix in "+notes)
+        sys.exit(1)
+
+    return version_match.group(1), build_match.group(1), int(hotfix_match.group(1))
 
 def update_patch_notes_file(notes, new_version_build):
     new_version = ".".join(new_version_build.split(".")[:-1])
@@ -51,6 +56,11 @@ def update_patch_notes_file(notes, new_version_build):
         content,
         1,
     )
+    
+    hotfix_match = re.search(r'hotfix\s*=\s*(\d+)', content)
+    if hotfix_match:
+        new_hotfix = int(hotfix_match.group(1)) + 1
+        content = re.sub(r'hotfix\s*=\s*\d+', f'hotfix = {new_hotfix}', content, 1)
 
     with open(notes, "w", encoding="utf-8") as f:
         f.write(content)
@@ -65,17 +75,15 @@ if __name__ == "__main__":
     notes = "PatchNotesDelivered/notes/"+notes
     
     remote_version = fetch_latest_version(PRODUCT)
-    local_version, local_build = parse_local_version_and_build(notes)
 
-    if remote_version == f"{local_version}.{local_build}":
-        print(f"✅ No update needed. Local version is up to date: {remote_version}")
-        sys.exit(0)
-
-    print(f"🔄 Update detected: {local_version}.{local_build} → {remote_version}")
+    # Always update version, build, and increment hotfix
     update_patch_notes_file(notes, remote_version)
-    print("✅ "+notes+" updated.")
 
-    branch_name = remote_version
+    # Read new hotfix value for branch name
+    new_version, new_build, new_hotfix = parse_local_version_build_hotfix(notes)
+    branch_name = f"{new_version}.{new_build}.{new_hotfix}"
+    print(f"✅ {notes} updated to {branch_name}.")
+
     with open(os.environ["GITHUB_OUTPUT"], "a") as gh_out:
         print("updated=true", file=gh_out)
-        print("branch_name="+str(branch_name), file=gh_out)
+        print(f"branch_name={branch_name}", file=gh_out)

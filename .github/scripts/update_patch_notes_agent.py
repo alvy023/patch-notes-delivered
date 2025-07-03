@@ -193,9 +193,24 @@ if __name__ == "__main__":
     print("Generating combined formatted notes with Gemini 2.5 Flash...")
     llm_combined_notes = generate_notes_from_text(scraped_text, existing_notes)
 
+    # Read original file content for comparison
+    with open(notes_file_to_update, 'r', encoding='utf-8') as f:
+        original_content = f.read()
+
     print(f"Updating Lua notes file: {notes_file_to_update}")
-    if update_lua_file(notes_file_to_update, llm_combined_notes):
-        print("✅ Successfully updated the lua file.")
-    else:
+    updated = update_lua_file(notes_file_to_update, llm_combined_notes)
+
+    # Read new file content for comparison
+    with open(notes_file_to_update, 'r', encoding='utf-8') as f:
+        new_content = f.read()
+
+    if not updated:
         print("❌ Failed to update the lua file.")
         sys.exit(1)
+
+    if original_content == new_content:
+        print("No changes detected in patch notes file.")
+        sys.exit(2)  # Special code for 'no change'
+
+    print("✅ Successfully updated the lua file.")
+    sys.exit(0)
