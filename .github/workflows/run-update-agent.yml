@@ -92,7 +92,7 @@ jobs:
           echo "Build and hotfix version check completed"
 
       - name: Commit changes
-        if: steps.llm_generate.outputs.update_version_build_hotfix.outputs.updated == 'true'
+        if: steps.update_version_build_hotfix.outputs.updated == 'true'
         id: commit_changes
         run: |
           NOTES="PatchNotesDelivered/notes/${{ github.event.inputs.notes_file || env.NOTES_FILE }}"
