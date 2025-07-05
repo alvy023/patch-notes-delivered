@@ -10,8 +10,57 @@
 PatchNotesDelivered_Notes_1117 = {
     version = "11.1.7",
     build = "61609",
-    hotfix = 3,
+    hotfix = 4,
     gameChangesHotfixes = [[
+        June 11, 2025
+
+            Classes
+                • Increased threat generation of all tank specializations by 15%.
+                • Developer’s notes: We're finding that tanks are having difficulty gaining and holding threat, so we are adjusting tank
+                  threat generation in order to address this issue.
+
+        June 10, 2025
+
+            Renown
+                - Fixed an issue where players could become capped on Gallagio Loyalty Rewards reputation earlier than intended. For
+                  players who have killed a boss that would have rewarded reputation properly but didn't, defeating that boss on a
+                  separate character this week will yield the intended amount of reputation.
+
+        June 6, 2025
+
+            Dastardly Duos
+                - Rewards have been moved to Wodin the Troll Servant. Each reward listed with Wodin will show the quest that’s
+                  required to obtain it and which week it will become available.
+                - Dastardly Prize Purses now contain 250 Resonance Crystals.
+                - The bug causing Dastardly Duo match player's Play Nice, Play Fair aura to force very low item level has been
+                  fixed.
+
+            Horrific Visions Revisited
+                - Constructs of Soridormi will no longer try to join a full group if she was summoned previously.
+
+        June 3, 2025
+
+            Delves
+                - Fixed an issue where the Big Wheel of Cheese would not grant experience to Brann.
+
+            Dungeons and Raids
+                • Darkflame Cleft
+                    - Fixed an issue where one of the Shuffling Horror can fall through the world.
+                    - Updated the visual of Rank Overseer’s Wild Wallop to match with the actual impact area.
+                • Liberation of Undermine
+                    > Chrome King Gallywix
+                        - Increased the lifetime of Giga Bombs on Mythic difficulty by 30 seconds.
+
+            Horrific Visions
+                - Nemesis Shards are now Warbound and can be mailed to you if you miss looting them.
+                - Performing a full clear now also grants the Incremental Progress.
+                - Fixed a bug where in some very rare cases, players could receive Corrupted Mementos instead of Displaced Corrupted
+                  Mementos.
+
+            Items and Rewards
+                - The Rune Dispenser should now dispense the intended quantities of Crystallized Augment Runes based on Gallagio
+                  Loyalty Rewards rank.
+
         June 27, 2025
 
             Classes
