@@ -10,8 +10,8 @@ on:
         default: 'patch-11.1.7.lua'
 
   # Scheduled Trigger, Every Tuesday at 17:15 UTC (10:15 PST)
-  schedule:
-    - cron: '15 17 * * 2'
+  # schedule:
+  #   - cron: '15 17 * * 2'
 
 permissions:
   contents: write
