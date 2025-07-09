@@ -2,6 +2,7 @@ import os
 import sys
 import re
 import json
+import datetime
 from google import genai
 from google.genai import types
 
@@ -36,6 +37,22 @@ def extract_current_notes(notes_file_path):
     
     return notes
 
+def extract_first_and_last_date(note_text):
+    """
+    Extracts the first (most recent) and last (oldest) date from a notes section.
+    Returns (newest_date, oldest_date) as datetime.date objects or None if not found.
+    """
+    date_pattern = re.compile(r"([A-Z][a-z]+ \d{1,2}, \d{4})")
+    matches = date_pattern.findall(note_text)
+    if matches:
+        try:
+            newest = datetime.datetime.strptime(matches[0], "%B %d, %Y").date().strftime("%B %d, %Y")
+            oldest = datetime.datetime.strptime(matches[-1], "%B %d, %Y").date().strftime("%B %d, %Y")
+            return newest, oldest
+        except Exception:
+            return None, None
+    return None, None
+
 def generate_notes_from_text(scraped_text, existing_notes):
     """
     Sends scraped text and existing notes to Gemini, gets back structured JSON,
@@ -48,6 +65,17 @@ def generate_notes_from_text(scraped_text, existing_notes):
 
     client = genai.Client(api_key=api_key)
 
+    # Extract date boundaries for hotfixes and patch
+    hotfix_newest, hotfix_oldest = extract_first_and_last_date(existing_notes["hotfixes"])
+    patch_newest, patch_oldest = extract_first_and_last_date(existing_notes["patch"])
+
+    hotfix_date_instruction = ""
+    if hotfix_newest and hotfix_oldest:
+        hotfix_date_instruction = f"The current hotfix notes span from {hotfix_newest} to {hotfix_oldest}. Only return entries with dates newer than {hotfix_newest}. Ignore any entries with dates before {hotfix_oldest}."
+    patch_date_instruction = ""
+    if patch_newest and patch_oldest:
+        patch_date_instruction = f"The current patch notes span from {patch_newest} to {patch_oldest}. Only return entries with dates newer than {patch_newest}. Ignore any entries with dates before {patch_oldest}."
+
     prompt = f"""
     You are an expert World of Warcraft player and addon developer. Your task is to process scraped text and update the patch notes for an addon.
 
@@ -55,8 +83,14 @@ def generate_notes_from_text(scraped_text, existing_notes):
     1.  Analyze the "NEW SCRAPED TEXT". Determine if it contains "hotfix" information, "patch note" information, or neither.
     2.  Ignore any information that does not pertain to the current retail expansion: The War Within (i.e. ignore Cataclysm Classic, 
         Season of Discovery, WoW Classic Era, and Hardcore)
-    3.  Prepend the latest hotfix or patch changes to the existing section, so that the order of dates is most recent to oldest. ONLY prepend
-        entries with dates that are missing from the existing section AND are newer than the first date in the existing section.
+    3.  For each section (hotfixes and patch notes), you are provided with the oldest and newest dates currently present in the notes:
+        - Only identify entries in the scraped text that are newer than the newest date for that section.
+        - Ignore any entries with dates before the oldest date for that section.
+        - Do not return entries that fall within the existing date range, unless they are strictly newer than the newest date.
+        The date boundaries for each section are provided below:
+        {hotfix_date_instruction}
+        {patch_date_instruction}
+        - Prepend any new entries you find (that are newer than the newest date) to the top of the corresponding section, so the order is most recent to oldest.
     4.  Format any new information you find according to the detailed "FORMATTING EXAMPLES" below.
     5.  You MUST return your response as a JSON object with two keys: "hotfixes" and "patch".
         - The value for each key must be ONLY the NEWLY FORMATTED text chunk.
@@ -68,13 +102,25 @@ def generate_notes_from_text(scraped_text, existing_notes):
 
     **Hotfix Example (for recent, dated changes):**
     ```
-        May 27, 2025
+        May 22, 2025
 
             Classes
-                • Evoker
-                    > Augmentation
-                        - Nerub-ar Palace 2-piece class set increases Upheaval damage by 15% (was 30%) and Eruption damage by 15% per
-                          stack (was 30%).
+                • Death Knight
+                    > Unholy
+                        - Resolved an issue where certain bonuses could be retained by despawning and respawning the Death Knight’s
+                          pet.
+                • Paladin
+                    > Retribution
+                        - An issue causing Avenging Wrath to not function properly when talented into Radiant Glory has been resolved.
+                • Warlock
+                    - Hellcaller: Fixed an issue where Vile Taint would trigger Blackened Soul more times than intended.
+                    > Destruction
+                        - Fixed an issue where Crashing Chaos would persist after the start of a Mythic+ run.
+            
+            Horrific Visions
+                - Fixed a bug where if you destroyed the Voidfire Deathcycle that Haymar the Devout is riding too fast it would fail
+                  to go out of control and let you bring it out with you.
+                - Torie’s items no longer require the achievement We Have the Memories.
     ```
 
     **Patch Note Example (for major content announcements):**
