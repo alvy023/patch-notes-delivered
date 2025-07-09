@@ -46,8 +46,8 @@ def extract_first_and_last_date(note_text):
     matches = date_pattern.findall(note_text)
     if matches:
         try:
-            newest = datetime.datetime.strptime(matches[0], "%B %d, %Y").date().strftime("%B %d, %Y")
-            oldest = datetime.datetime.strptime(matches[-1], "%B %d, %Y").date().strftime("%B %d, %Y")
+            newest = datetime.datetime.strptime(matches[0], "%B %d, %Y").date().strftime("%B %-d, %Y")
+            oldest = datetime.datetime.strptime(matches[-1], "%B %d, %Y").date().strftime("%B %-d, %Y")
             return newest, oldest
         except Exception:
             return None, None
