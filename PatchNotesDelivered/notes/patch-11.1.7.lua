@@ -10,7 +10,7 @@
 PatchNotesDelivered_Notes_1117 = {
     version = "11.1.7",
     build = "61609",
-    hotfix = 3,
+    hotfix = 4,
     gameChangesHotfixes = [[
         June 27, 2025
 
