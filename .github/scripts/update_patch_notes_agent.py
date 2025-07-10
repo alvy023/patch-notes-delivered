@@ -222,6 +222,12 @@ def update_lua_file(notes_file_path, combined_notes):
     except Exception as e:
         print(f"❌ Error updating Lua file: {e}")
         return False
+    
+def set_github_output(updated):
+    """Set GitHub Actions output variables"""
+    if os.getenv('GITHUB_ACTIONS'):
+        with open(os.environ['GITHUB_OUTPUT'], 'a') as f:
+            f.write(f"updated={updated}\n")
 
 if __name__ == "__main__":
     if len(sys.argv) != 3:
@@ -253,11 +259,12 @@ if __name__ == "__main__":
 
     if not updated:
         print("❌ Failed to update the lua file.")
-        sys.exit(1)
-
-    if original_content == new_content:
+        set_github_output("false")
+    elif original_content == new_content:
         print("No changes detected in patch notes file.")
-        sys.exit(2)  # Special code for 'no change'
-
-    print("✅ Successfully updated the lua file.")
+        set_github_output("false")
+    else:
+        print("✅ Successfully updated the lua file.")
+        set_github_output("true")
+    
     sys.exit(0)
