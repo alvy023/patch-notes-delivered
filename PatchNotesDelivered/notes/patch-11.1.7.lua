@@ -9,9 +9,16 @@
 --- Max note length [140] ------------------------------------------------------------------------------------------------------------------
 PatchNotesDelivered_Notes_1117 = {
     version = "11.1.7",
-    build = "61609",
-    hotfix = 3,
+    build = "61967",
+    hotfix = 4,
     gameChangesHotfixes = [[
+        June 11, 2025
+
+        Classes
+            • Increased threat generation of all tank specializations by 15%.
+            - Developer’s notes: We're finding that tanks are having difficulty gaining and holding threat, so we are adjusting tank threat
+              generation in order to address this issue.
+
         June 27, 2025
 
             Classes
