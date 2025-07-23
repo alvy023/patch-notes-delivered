@@ -9,9 +9,19 @@
 --- Max note length [140] ------------------------------------------------------------------------------------------------------------------
 PatchNotesDelivered_Notes_1117 = {
     version = "11.1.7",
-    build = "61609",
-    hotfix = 3,
+    build = "61967",
+    hotfix = 4,
     gameChangesHotfixes = [[
+        July 22, 2025
+
+            Dungeons
+                - Fixed an issue that caused items from Siege of Boralus and Bloodmaul Slag Mines to display the wrong item level when
+                  previewed in the Dungeon Journal.
+                • Jade Temple
+                    - Fixed an issue that would occasionally cause Wise Mari's bubble to fail to burst after Corrupted Living Water was
+                      killed.
+                    - Temple of the Jade Serpent will now correctly grant the achievement for completing it on Heroic.
+
         June 27, 2025
 
             Classes
