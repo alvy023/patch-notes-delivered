@@ -81,7 +81,7 @@ def generate_notes_from_text(scraped_text, existing_notes):
 
     **Your Job:**
     1.  Analyze the "NEW SCRAPED TEXT". Determine if it contains "hotfix" information, "patch note" information, or neither.
-    2.  Ignore any information that does not pertain to the current retail expansion: The War Within (i.e. ignore Cataclysm Classic, 
+    2.  Ignore any information that does not pertain to the current retail expansion: The War Within (i.e. ignore Mists of Pandaria Classic, 
         Season of Discovery, WoW Classic Era, and Hardcore)
     3.  For each section (hotfixes and patch notes), you are provided with the oldest and newest dates currently present in the notes:
         - Only identify entries in the scraped text that are newer than the newest date for that section.
