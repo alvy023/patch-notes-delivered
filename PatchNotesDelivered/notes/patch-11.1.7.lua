@@ -9,9 +9,28 @@
 --- Max note length [140] ------------------------------------------------------------------------------------------------------------------
 PatchNotesDelivered_Notes_1117 = {
     version = "11.1.7",
-    build = "61609",
-    hotfix = 3,
+    build = "61967",
+    hotfix = 4,
     gameChangesHotfixes = [[
+        July 24, 2025
+
+        Classes
+
+        Dastardly Duos
+
+        Delves
+
+        Lorewalking
+
+    July 22, 2025
+
+        Mists of Pandaria Classic
+
+        Dungeons
+            • Jade Temple
+                - Fixed an issue that would occasionally cause Wise Mari's bubble to fail to burst after Corrupted Living Water was killed.
+                - Temple of the Jade Serpent will now correctly grant the achievement for completing it on Heroic.
+
         June 27, 2025
 
             Classes
