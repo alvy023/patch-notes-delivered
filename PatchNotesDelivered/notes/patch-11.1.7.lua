@@ -9,9 +9,38 @@
 --- Max note length [140] ------------------------------------------------------------------------------------------------------------------
 PatchNotesDelivered_Notes_1117 = {
     version = "11.1.7",
-    build = "61609",
-    hotfix = 3,
+    build = "61967",
+    hotfix = 4,
     gameChangesHotfixes = [[
+        July 24, 2025
+
+    Mists of Pandaria Classic
+        - Cranedancer's Staff is now correctly considered a caster weapon.
+        - Crazy for Cats now requires 15 cats (was 20).
+        - Spawn time for Shao-Tien Surveyor reduced for the daily quest.
+        - Rivett Clutchpop should now remain in the Strongarm Airship if "Instant Messaging" is completed before "They're So Thorny!" is turned in.
+        - Wintergrasp quests now reward the correct amounts of Honor.
+        - Recipe: Venerable Potion of Invisibility can now be learned, as intended.
+        - Silvershard Envoy now invites Horde players to fight for the Horde (was incorrectly the Alliance).
+        - "Where are My Reinforcements?" now progresses properly.
+        - Vor’thik Dreadshapers and Vor’thik Fear-Shapers are no longer stuck inside buildings and evading.
+        - Players can once again convert 375 Honor points into 250 Justice points or 375 Justice points into 250 Honor points.
+            > Developers’ notes: These exchange rates were adjusted in the 5.4 patch of original MoP, and we may revisit them again in a future patch of MoP Classic.
+    
+    Archaeology
+        - Mantid archaeology can now be solved.
+            > Developers’ notes: While these were not originally available until the 5.2 patch, we feel that it’s appropriate to get started on them now, rather than waiting.
+    
+    Dungeons and Raids
+        > Dungeon Finder: Mists of Pandaria Normal should once again exist as an option for level 90 characters.
+        • Scholomance
+            - Dark Blaze should no longer disappear, and the spell visual has been improved to be clearer.
+        • Serpentshrine Cavern
+            - Lady Vashj’s Tainted Core no longer roots level 90 players.
+    
+    Pet Battles
+        - Arcane Eye spawn rate slightly increased.
+
         June 27, 2025
 
             Classes
