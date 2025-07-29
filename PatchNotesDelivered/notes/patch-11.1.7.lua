@@ -9,9 +9,44 @@
 --- Max note length [140] ------------------------------------------------------------------------------------------------------------------
 PatchNotesDelivered_Notes_1117 = {
     version = "11.1.7",
-    build = "61609",
-    hotfix = 3,
+    build = "61967",
+    hotfix = 4,
     gameChangesHotfixes = [[
+        July 29, 2025
+
+    Hotfixes: July 28, 2025
+    
+    WoW
+
+July 28, 2025
+
+    Hotfixes
+    
+    July 28, 2025
+
+July 24, 2025
+
+    Archaeology
+        • Mantid archaeology can now be solved.
+        • Developers’ notes: While these were not originally available until the 5.2 patch, we feel that it’s appropriate to get started on them now, rather than waiting.
+    
+    Dungeons and Raids
+        • Dungeon Finder: Mists of Pandaria Normal should once again exist as an option for level 90 characters.
+        • Scholomance
+            - Dark Blaze should no longer disappear, and the spell visual has been improved to be clearer.
+        • Serpentshrine Cavern
+            - Lady Vashj’s Tainted Core no longer roots level 90 players.
+    
+    Pet Battles
+        • Arcane Eye spawn rate slightly increased.
+
+July 22, 2025
+
+    Dungeons
+        • Jade Temple
+            - Fixed an issue that would occasionally cause Wise Mari's bubble to fail to burst after Corrupted Living Water was killed.
+        • Temple of the Jade Serpent will now correctly grant the achievement for completing it on Heroic.
+
         June 27, 2025
 
             Classes
