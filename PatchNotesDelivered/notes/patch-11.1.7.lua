@@ -9,9 +9,21 @@
 --- Max note length [140] ------------------------------------------------------------------------------------------------------------------
 PatchNotesDelivered_Notes_1117 = {
     version = "11.1.7",
-    build = "61609",
-    hotfix = 3,
+    build = "61967",
+    hotfix = 4,
     gameChangesHotfixes = [[
+        July 29, 2025
+
+        Delves
+            - Fixed an issue where the Durable Information Securing Container's Charged Bolts were targeting Breakable Crowd Controlled targets.
+
+        Lorewalking
+            - Fixed an issue where players were able to exit Lorewalking while in combat.
+            - Fixed an issue where players who have not purchased The War Within were unable to enter the Lordaeron Garrison to
+              complete Arthas Lorewalking.
+            - Fixed an issue causing players to be directed to Dornogal to turn in the quest "Lorewalking" despite not being at
+              a high enough level to go to Dornogal.
+
         June 27, 2025
 
             Classes
