@@ -9,9 +9,49 @@
 --- Max note length [140] ------------------------------------------------------------------------------------------------------------------
 PatchNotesDelivered_Notes_1117 = {
     version = "11.1.7",
-    build = "61609",
-    hotfix = 3,
+    build = "61967",
+    hotfix = 4,
     gameChangesHotfixes = [[
+        July 30, 2025
+
+        Classes
+            - Fixed a bug that caused macros for some spells, such as Charge, Jab, and Sprouting Mushrooms to incorrectly return the "Spell not Learned" error.
+            • Druid
+                > Guardian
+                    - Rejuvenation no longer resets the swing timer while Heart of the Wild is active.
+                    - Heart of the Wild's cooldown refund now only triggers if the player is shifting into Bear Form.
+                    - Developers’ notes: This cooldown refund for Guardian druids will now only trigger if the player has been out of Bear Form for at least 3 seconds, and will not trigger if the player has not shifted into Bear Form at all since logging in.
+            • Hunter
+                - The pet ability Growl will now automatically turn off autocasting when entering a dungeon or raid.
+            • Mage
+                - Ring of Frosts cast through Presence of Mind now correctly has a 2 second arming time, which is correctly reduced by Haste.
+            • Monk
+                - Chi Torpedo and Roll can no longer be stopped by a cancelaura macro.
+            • Rogue
+                - Vanishing with Subterfuge talented and then picking up the Shadow Sight debuff in Arena now causes the Rogue to exit stealth.
+        
+        Currencies
+            - The Honor Quartermasters Lok'nor Bloodfist and Hayden Christophen now offer players Motes of Harmony for 400 Honor.
+            - The Justice Quartermaster Lo ping now offer players Motes of Harmony for 600 Justice Points.
+        
+        Items
+            - The Cracked Talisman can no longer be used in combat until the release of the Siege of Orgrimmar content.
+        
+        Quests
+            - Horde players can now correctly use the Shan'ze Dao and Shado-Pan Garrison portals after completing the quest "Through the Portal".
+
+    July 28, 2025
+
+        Mounts
+            - Mounts that previously could not be used as ground-mounts while inside of areas that do not allow flying (such as Cloud-Serpents or Cataclysm Gladiator Mounts) can now be used as ground-mounts.
+
+    July 24, 2025
+
+        Quests
+            - Rivett Clutchpop should now remain in the Strongarm Airship if "Instant Messaging" is completed before "They're So Thorny!" is turned in.
+            - "Where are My Reinforcements?" now progresses properly.
+            - Vor’thik Dreadshapers and Vor’thik Fear-Shapers are no longer stuck inside buildings and evading.
+
         June 27, 2025
 
             Classes
