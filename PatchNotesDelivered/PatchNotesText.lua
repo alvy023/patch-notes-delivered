@@ -6,7 +6,7 @@
 -- For more information, visit the project repository.
 
 -- Variables used by BuildPatchNotes()
-PatchNotesDelivered_Pointer = PatchNotesDelivered_Notes_1117
+PatchNotesDelivered_Pointer = PatchNotesDelivered_Notes_1120
 PatchNotesDelivered_Text = nil
 
 -- Link Helper Functions
