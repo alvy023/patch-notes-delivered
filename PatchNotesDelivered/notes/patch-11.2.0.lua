@@ -8,54 +8,75 @@
 --- Export global notes variable
 --- Max note length [140] ------------------------------------------------------------------------------------------------------------------
 PatchNotesDelivered_Notes_1120 = {
-    version = "11.1.7",
-    build = "61967",
-    hotfix = 1,
+    version = "11.2.0",
+    build = "00000",
+    hotfix = 0,
     gameChangesHotfixes = [[
-        
+        Working as intended?
     ]],
 
     gameChangesPatch = [[
-        Ghosts of K'aresh Content Update Notes
-    July 31st
+        July 31st
 
-        Journey deeper into The War Within campaign in the Ghosts of K’aresh content update arriving on August 5. Explore a new zone, break ground in a new Delve, make an impact in Ecological Succession, and more. The War Within Season 3 also kicks off on August 12 with a new raid, new Mythic+ dungeon pool, and a fresh PvP season.
+            Journey deeper into The War Within campaign in the Ghosts of K’aresh content update arriving on August 5. Explore a new zone, 
+            break ground in a new Delve, make an impact in Ecological Succession, and more. The War Within Season 3 also kicks off on 
+            August 12 with a new raid, new Mythic+ dungeon pool, and a fresh PvP season.
 
-    CONTINUE THE WAR WITHIN CAMPAIGN
+        CONTINUE THE WAR WITHIN CAMPAIGN
 
-        - In Ghosts of K’aresh, the campaign continues as more pieces to a troubling puzzle fall into place. With the release of this content update players will be able to immerse themselves in The War Within story as it leads up to the next chapter of the Worldsoul Saga—Midnight.
-        - There’s some unfinished business to be had on K’aresh and the specter of an old enemy looms large. Forces with ill-intent are determined to bring forth Dimensius, the All-Devouring once more to finish off the ethereals. Should he arise, Azeroth will also be in peril from this dangerous Void Lord.
+            - In Ghosts of K’aresh, the campaign continues as more pieces to a troubling puzzle fall into place. With the release of this 
+              content update players will be able to immerse themselves in The War Within story as it leads up to the next chapter of the 
+              Worldsoul Saga—Midnight.
+            - There’s some unfinished business to be had on K’aresh and the specter of an old enemy looms large. Forces with ill-intent are 
+              determined to bring forth Dimensius, the All-Devouring once more to finish off the ethereals. Should he arise, Azeroth will also 
+              be in peril from this dangerous Void Lord.
 
-    EXPLORE THE SHATTERED WORLD OF K'ARESH
+        EXPLORE THE SHATTERED WORLD OF K'ARESH
 
-        - Home of the ethereals, K'aresh was once a vibrant world, but now it only exists as a fragmented void-touched world waiting for players to explore what remains of this little-known land. Though there are multiple points of interest for heroes to explore, including ethereal Eco-Domes where life still thrives.
-        - With shadowy forces working toward bringing Dimensius back into the world, players will need to gather their allies in a bid to put a stop to him and his followers.
+            - Home of the ethereals, K'aresh was once a vibrant world, but now it only exists as a fragmented void-touched world waiting for 
+              players to explore what remains of this little-known land. Though there are multiple points of interest for heroes to explore, 
+              including ethereal Eco-Domes where life still thrives.
+            - With shadowy forces working toward bringing Dimensius back into the world, players will need to gather their allies in a bid to 
+              put a stop to him and his followers.
 
-    RETURN TO TAZAVESH, THE VEILED MARKET
+        RETURN TO TAZAVESH, THE VEILED MARKET
 
-        - Not just a dungeon in the Ghosts of K’aresh content update, Tazavesh, the Veiled Market has been brought from the Shadowlands to serve as a home base for adventurers. Glowing glimmering shields of energy protect the city from the dangers of the cosmos beyond allowing the many survivors of this land to have a degree of safety behind them.
-        - Once inside the market, find vendors, more quests, and portals. There are even portals to each of the four daily active Bountiful Delves.
-        - A coalition of Broker cartels and ethereals formed to accomplish an impossible goal—save their destroyed world from the All-Devouring. The K'aresh Trust is the seventh major faction of The War Within, and is based out of Tazavesh, located in what remains of K'aresh.
+            - Not just a dungeon in the Ghosts of K’aresh content update, Tazavesh, the Veiled Market has been brought from the Shadowlands to 
+              serve as a home base for adventurers. Glowing glimmering shields of energy protect the city from the dangers of the cosmos beyond 
+              allowing the many survivors of this land to have a degree of safety behind them.
+            - Once inside the market, find vendors, more quests, and portals. There are even portals to each of the four daily active Bountiful 
+              Delves.
+            - A coalition of Broker cartels and ethereals formed to accomplish an impossible goal—save their destroyed world from the All-
+              Devouring. The K'aresh Trust is the seventh major faction of The War Within, and is based out of Tazavesh, located in what remains 
+              of K'aresh.
 
-    RESHII WRAPS UPGRADEABLE ARTIFACT
+        RESHII WRAPS UPGRADEABLE ARTIFACT
 
-        - Harness the power of the ethereals and see the world through their eyes. An artifact cloak, Reshii Wraps, can be used to transform into an energy form, much like the ethereals, to interact with the world in a new way. You'll use these wraps to take on a new type of content—Phase Diving— as well as use them in the Manaforge Omega raid, the open world, delves, and more!
-        - Reshii wraps will upgrade and scale with you, including new visuals as you progress through the content.
+            - Harness the power of the ethereals and see the world through their eyes. An artifact cloak, Reshii Wraps, can be used to transform 
+              into an energy form, much like the ethereals, to interact with the world in a new way. You'll use these wraps to take on a new type 
+              of content—Phase Diving— as well as use them in the Manaforge Omega raid, the open world, delves, and more!
+            - Reshii wraps will upgrade and scale with you, including new visuals as you progress through the content.
 
-    WRAP UP AND GO PHASE DIVING
+        WRAP UP AND GO PHASE DIVING
 
-        - Enter untethered space by using your Reshii Wraps to experience a whole new aspect of K’aresh. You’ll experience new creatures, objectives, world quests, and some new mechanics all within this overlay of the world.
-        - You can expect to see anything you normally would in the world such as treasures, rare creatures, or objects, but there will also be some unique opportunities to be found such as Warrants. Aid the constable of Tazavesh by hunting down notorious monsters for fun… and profit.
+            - Enter untethered space by using your Reshii Wraps to experience a whole new aspect of K’aresh. You’ll experience new creatures, 
+              objectives, world quests, and some new mechanics all within this overlay of the world.
+            - You can expect to see anything you normally would in the world such as treasures, rare creatures, or objects, but there will also be
+              some unique opportunities to be found such as Warrants. Aid the constable of Tazavesh by hunting down notorious monsters for fun… 
+              and profit.
 
-    NEW SYSTEM: ECOLOGICAL SUCCESSION
+        NEW SYSTEM: ECOLOGICAL SUCCESSION
 
-        - Help Ve’nari bring life back to K’aresh with her eco-domes. You’ll help fill them with creatures that thrive within the ecosystem. You’ll scour previously traveled zones to bring back animals to live within the eco-domes and aid them in adjusting to life on K’aresh. It’s up to you to help transform this barren eco-dome into one filled with life and promise for a new future.
+            - Help Ve’nari bring life back to K’aresh with her eco-domes. You’ll help fill them with creatures that thrive within the ecosystem. 
+              You’ll scour previously traveled zones to bring back animals to live within the eco-domes and aid them in adjusting to life on K’aresh. 
+              It’s up to you to help transform this barren eco-dome into one filled with life and promise for a new future.
 
-    THE WAR WITHIN SEASON 3
-
-        MANAFORGE OMEGA RAID
-            - Manaforge Omega, built to harness arcane power from the wastes of K’aresh, now hums with a sinister radiance. Within it, Nexus-King Salhadaar attempts to reawaken Dimensius, the All-Devouring, in a bid for ultimate power. The champions of Azeroth must disrupt Manaforge Omega’s operations or else risk a reborn Dimensius feasting on reality itself.
-            - Raid Bosses
+        MANAFORGE OMEGA RAID (TWW Season 3)
+            
+            - Manaforge Omega, built to harness arcane power from the wastes of K’aresh, now hums with a sinister radiance. Within it, Nexus-King 
+              Salhadaar attempts to reawaken Dimensius, the All-Devouring, in a bid for ultimate power. The champions of Azeroth must disrupt 
+              Manaforge Omega’s operations or else risk a reborn Dimensius feasting on reality itself.
+            - Raid Bosses:
                 • Plexus Sentinel
                 • Loom'ithar
                 • Soulbinder Naazindhri
@@ -64,93 +85,141 @@ PatchNotesDelivered_Notes_1120 = {
                 • Fractillus
                 • Nexus-King Salhadaar
                 • Dimensius, the All-Devouring
-            - Those bold enough to vanquish Dimensius, the All-Devouring, will earn the prestigious Royal Voidwing on Heroic difficulty—and for those who conquer him on Mythic, the elusive Unbound Star-Eater awaits.
-            - Manaforge Omega will also have a Raid Renown Track called Manaforge Vandals, similar to the Gallagio Loyalty Rewards Club, filled with rewards like The Bone Freezer mount, and buffs to use once inside the raid.
+            - Those bold enough to vanquish Dimensius, the All-Devouring, will earn the prestigious Royal Voidwing on Heroic difficulty—and for those 
+              who conquer him on Mythic, the elusive Unbound Star-Eater awaits.
+            - Manaforge Omega will also have a Raid Renown Track called Manaforge Vandals, similar to the Gallagio Loyalty Rewards Club, filled with 
+              rewards like The Bone Freezer mount, and buffs to use once inside the raid.
 
-        ECO-DOME AL'DANI DUNGEON
-            - The storyline of Al'dani takes place following the events of the Manaforge Omega raid. The eco-domes represent the best hope for restoring life to K'aresh, and Eco-Dome Al'dani was built on the site of one of the most sacred locations on K'aresh. A Wastelander invasion has ripped open the dome, exposing it to destruction. Ve'nari has called for help to keep K'aresh's great hope from being destroyed. Join the ethereals' efforts to regain control by clearing the new three-boss dungeon, earning rewards, and exploring the latest content.
-            - Dungeon Bosses
+        ECO-DOME AL'DANI DUNGEON (TWW Season 3)
+            
+            - The storyline of Al'dani takes place following the events of the Manaforge Omega raid. The eco-domes represent the best hope for 
+              restoring life to K'aresh, and Eco-Dome Al'dani was built on the site of one of the most sacred locations on K'aresh. A Wastelander 
+              invasion has ripped open the dome, exposing it to destruction. Ve'nari has called for help to keep K'aresh's great hope from being 
+              destroyed. Join the ethereals' efforts to regain control by clearing the new three-boss dungeon, earning rewards, and exploring the 
+              latest content.
+            - Dungeon Bosses:
                 • Azhiccar
                 • Taah'bat and A'wazj
                 • Soul-Scribe
-            - The new seasonal rewards for Mythic+ include the two new titles: "the Unbound" and "the Unbound Hero", dungeon teleports, and two mounts: Azure Void Flyer and Scarlet Void Flyer.
+            - The new seasonal rewards for Mythic+ include the two new titles: "the Unbound" and "the Unbound Hero", dungeon teleports, and two mounts: 
+              Azure Void Flyer and Scarlet Void Flyer.
 
-        NEW DUNGEON POOL
-            • Ara-Kara, City of Echoes (Azj-Kahet)
-            • The Dawnbreaker (Hallowfall)
-            • Eco-Dome Al'dani (K’aresh)
-            • Halls of Atonement (Revendreth)
-            • Operation: Floodgate (The Ringing Deeps)
-            • Priory of the Sacred Flame (Hallowfall)
-            • Tazavesh, the Veiled Market: Streets of Wonder (K'aresh)
-            • Tazavesh, the Veiled Market: So'leah's Gambit (K'aresh)
-            - Starting the week of August 12th, Tazavesh will also return as a full hard mode mega-dungeon and will count as a Mythic+10 once a week in the Great Vault. This mega-dungeon replaces the Mythic 0 difficulty for the season for both Tazavesh dungeons, and can be accessed by entering the Tazavesh instance and with all players in the party interacting with Al'dalil near the dungeon entrance to confirm they're ready to proceed. All bosses have a chance to drop Hero track loot, and completing the mega-dungeon will also grant players 30 Gilded Crests. An additional weekly reward is available for players who are able to defeat all bosses in the mega-dungeon without anyone in the party dying.
-            - Checkpoints are also evolving into Waystones, with a more visual representation of unlock checkpoints. A new icon will appear on the map showing you where Waystones within the zone can be found as well.
+        NEW DUNGEON POOL (TWW Season 3)
+    
+            - Dungeons:
+                • Ara-Kara, City of Echoes (Azj-Kahet)
+                • The Dawnbreaker (Hallowfall)
+                • Eco-Dome Al'dani (K’aresh)
+                • Halls of Atonement (Revendreth)
+                • Operation: Floodgate (The Ringing Deeps)
+                • Priory of the Sacred Flame (Hallowfall)
+                • Tazavesh, the Veiled Market: Streets of Wonder (K'aresh)
+                • Tazavesh, the Veiled Market: So'leah's Gambit (K'aresh)
+            - Starting the week of August 12th, Tazavesh will also return as a full hard mode mega-dungeon and will count as a Mythic+10 once a week in 
+              the Great Vault. This mega-dungeon replaces the Mythic 0 difficulty for the season for both Tazavesh dungeons, and can be accessed by 
+              entering the Tazavesh instance and with all players in the party interacting with Al'dalil near the dungeon entrance to confirm they're 
+              ready to proceed. All bosses have a chance to drop Hero track loot, and completing the mega-dungeon will also grant players 30 Gilded 
+              Crests. An additional weekly reward is available for players who are able to defeat all bosses in the mega-dungeon without anyone in the 
+              party dying.
+            - Checkpoints are also evolving into Waystones, with a more visual representation of unlock checkpoints. A new icon will appear on the map 
+              showing you where Waystones within the zone can be found as well.
 
-        NEW DELVE: THE ARCHIVAL ASSAULT
-            - Found within the Azure Vaults within the Dragon Isles, you’ll encounter ethereals, ethereal pirates, and brokers who are plundering the Delve. Upgrading and using the Reshii Wraps unlocks unique challenge gateways to powerful bosses and reveals hidden secrets when you revisit your favorite delves across Khaz Algar. You may also get a glimpse of your friends within the Delve as well or even /mourn them as you observe their ghost from where they died.
+        NEW DELVE: THE ARCHIVAL ASSAULT (TWW Season 3)
+    
+            - Found within the Azure Vaults within the Dragon Isles, you’ll encounter ethereals, ethereal pirates, and brokers who are plundering the 
+              Delve. Upgrading and using the Reshii Wraps unlocks unique challenge gateways to powerful bosses and reveals hidden secrets when you revisit 
+              your favorite delves across Khaz Algar. You may also get a glimpse of your friends within the Delve as well or even /mourn them as you 
+              observe their ghost from where they died.
             - There’s unfinished business with Nexus Princess Ky’veza as well and you’ll take her on one on one as this season's Nemesis.
-            - Along the Delver's Journey progression, unlock customizations for your Delver's Mana Skimmer–the newest Delve mount attainable during Season 3–and two new toys, the Delver's Mana-Bound Ethergate–opens a portal to return to the Explorers' League home base in Dornogal, and Etheric Brannmorpher–summons an Ethereal Transmorpher that can change your appearance.
+            - Along the Delver's Journey progression, unlock customizations for your Delver's Mana Skimmer–the newest Delve mount attainable during Season 
+              3–and two new toys, the Delver's Mana-Bound Ethergate–opens a portal to return to the Explorers' League home base in Dornogal, and Etheric 
+              Brannmorpher–summons an Ethereal Transmorpher that can change your appearance.
 
-        NEW WORLD BOSS: RESHANOR, THE UNTETHERED
-            - The ethereals of K'aresh first witnessed this destructive maw of the void after Dimensius's attack. They believe Reshanor has manifested as their eternal punishment - for it comes back around to keep eating them and their planet as he grows infinitely bigger over the years.
+        NEW WORLD BOSS: RESHANOR, THE UNTETHERED (TWW Season 3)
+    
+            - The ethereals of K'aresh first witnessed this destructive maw of the void after Dimensius's attack. They believe Reshanor has manifested as 
+              their eternal punishment - for it comes back around to keep eating them and their planet as he grows infinitely bigger over the years.
 
         SEASON 3 CLASS SETS
-            - With a new season, also comes a new set of class gear. These new sets will feature set bonuses that will align with your chosen Hero Talents instead of your class or specialization.
+    
+            - With a new season, also comes a new set of class gear. These new sets will feature set bonuses that will align with your chosen Hero Talents 
+              instead of your class or specialization.
 
         SEASON 3 PVP
-            - The new season also brings a new PvP Ladder, increased item level gear, and new rewards: Arena title: "Astral Gladiator", Rated Solo Shuffle title: "Astral Legend", Rated Battleground Blitz title: "Astral Marshal" (Alliance) or "Astral Warlord" (Horde), a new weapon illusion: Arcane, tabard, cloak, pennants, weapon appearances, Astral Gladiator's Fel Bat, and new Vicious mounts–Alliance and Horde-themed Void Creepers.
-            - Several PvP talents will be updated with the content update; players will also be able to undertake a new World Quest to vanquish their foes on Vanquisher’s Wake island. This new point of interest is a perfect spot to hang out for those seeking to go toe-to-toe in some outdoor PvP battles. No quest required for entry. Simply turn on War Mode and enter with caution.
+    
+            - The new season also brings a new PvP Ladder, increased item level gear, and new rewards: Arena title: "Astral Gladiator", Rated Solo Shuffle 
+              title: "Astral Legend", Rated Battleground Blitz title: "Astral Marshal" (Alliance) or "Astral Warlord" (Horde), a new weapon illusion: 
+              Arcane, tabard, cloak, pennants, weapon appearances, Astral Gladiator's Fel Bat, and new Vicious mounts–Alliance and Horde-themed Void Creepers.
+            - Several PvP talents will be updated with the content update; players will also be able to undertake a new World Quest to vanquish their foes 
+              on Vanquisher’s Wake island. This new point of interest is a perfect spot to hang out for those seeking to go toe-to-toe in some outdoor PvP 
+              battles. No quest required for entry. Simply turn on War Mode and enter with caution.
 
-        Schedule
-            • Week of August 5
-                > Campaign Chapters 1–3
-                > Season 3 dungeons on Normal, Heroic, and Mythic 0 difficulties (excluding Tazavesh)
-                > New World Boss: Reshanor, The Untethered
-                > All Delve tiers available (excluding Bountiful)
-                > Great Vault credit begins
-            • Week of August 12
-                > Campaign Chapter 4 and The War Within Epilogue
-                > Raid Season 3 Begins: Manaforge Omega Raid – Raid Finder Wing 1, Normal, Heroic, and Mythic difficulties
-                > Mythic+ Season 3 begins, Tazavesh: Street of Wonder and Soleah's Gambit (all difficulties), and Tazavesh, the Veiled Market Hard Mode difficulty become available
-                > Season 3 PvP begins
-                > Delves: Delver's Journey Season 3 begins, Bountiful Delves and Keys, Challenge Boss, New levels and curios for Brann
-                > Great Vault rewards become available
-            • Week of August 19
-                > Manaforge Omega Raid: Raid Finder Wing 2 and Story Mode
-            • Week of August 26
-                > Manaforge Omega Raid: Raid Finder Wing 3
+        SCHEDULE (TWW Season 3)
+    
+            - Week of August 5:
+                • Campaign Chapters 1–3
+                • Season 3 dungeons on Normal, Heroic, and Mythic 0 difficulties (excluding Tazavesh)
+                • New World Boss: Reshanor, The Untethered
+                • All Delve tiers available (excluding Bountiful)
+                • Great Vault credit begins
+            - Week of August 12:
+                • Campaign Chapter 4 and The War Within Epilogue
+                • Raid Season 3 Begins: Manaforge Omega Raid – Raid Finder Wing 1, Normal, Heroic, and Mythic difficulties
+                • Mythic+ Season 3 begins, Tazavesh: Street of Wonder and Soleah's Gambit (all difficulties), and Tazavesh, the Veiled Market Hard Mode 
+                  difficulty become available
+                • Season 3 PvP begins
+                • Delves: Delver's Journey Season 3 begins, Bountiful Delves and Keys, Challenge Boss, New levels and curios for Brann
+                • Great Vault rewards become available
+            - Week of August 19:
+                • Manaforge Omega Raid: Raid Finder Wing 2 and Story Mode
+            - Week of August 26:
+                • Manaforge Omega Raid: Raid Finder Wing 3
 
-    CLASSES
+        CLASSES (TWW Season 3)
 
-        - Developers' notes: We’re making an adjustment to healing cooldowns to increase their strength in smaller group play without affecting their performance at 20 targets. This is intended to be an overall large buff in 5 player content, a medium to small buff between 6-19 players, no change at 20 players, and a nerf beyond 20 players.
-        - We also adjusted some of the outlier Liberation of Undermine tier bonuses and providing some compensation where relevant to ensure a smooth transition into the Manaforge Omega tier bonuses. We’ll continue to monitor the impact of these changes and adjust accordingly.
+            - Developers' notes: We’re making an adjustment to healing cooldowns to increase their strength in smaller group play without affecting 
+              their performance at 20 targets. This is intended to be an overall large buff in 5 player content, a medium to small buff between 6-19 
+              players, no change at 20 players, and a nerf beyond 20 players.
+            - We also adjusted some of the outlier Liberation of Undermine tier bonuses and providing some compensation where relevant to ensure a smooth 
+              transition into the Manaforge Omega tier bonuses. We’ll continue to monitor the impact of these changes and adjust accordingly.
 
         DEATH KNIGHT
-            - Developer’s notes: In Ghosts of K'aresh we are looking at Death Knight's raid utility to help give them a better identity that isn't completely reliant on tuning to make an impact. One immediate change you may notice is that Abomination Limb has been removed, its existence made it incredibly hard for grip to matter in any real capacity because of how potent and easily accessible it became. This led to many raid mobs being immune to grip as way to counter what should normally be one of Death Knight's most powerful tools. This change limits the number of Death Grips available to a raid at any moment and allows us to design more moments for Death Grip to be tactical and powerful when Death Knights choose to use it.
+    
+            - Developer’s notes: In Ghosts of K'aresh we are looking at Death Knight's raid utility to help give them a better identity that isn't completely
+              reliant on tuning to make an impact. One immediate change you may notice is that Abomination Limb has been removed, its existence made it 
+              incredibly hard for grip to matter in any real capacity because of how potent and easily accessible it became. This led to many raid mobs being 
+              immune to grip as way to counter what should normally be one of Death Knight's most powerful tools. This change limits the number of Death Grips
+              available to a raid at any moment and allows us to design more moments for Death Grip to be tactical and powerful when Death Knights choose to 
+              use it.
             - This change should be immediately apparent in the new raid Manaforge Omega.
-            - Secondly, plenty of time has passed since Castle Nathria and it's given us some time to reflect on our change to capping Anti-Magic Zone. In Ghosts of K'aresh, we are returning AMZ to a % magic damage reduction effect with no cap. We have increased the cooldown and reduced the duration and effectiveness downward from what it was prior to the Castle Nathria nerf which should better align with our expected output for a DPS/Tank Damage Reduction cooldown. We hope that by adding this back as a meaningful cooldown alongside their grips that Death Knight's will be able to carve out a spot for themselves in raid compositions.
-            • New Talent: Unholy Momentum – Increases the Death Knight's Haste by 2%.
-            • Anti-Magic Zone has been updated – Places an Anti-Magic Zone for 6 seconds, reducing the magic damage taken by party or raid members by 15%. 4 minute cooldown.
-            • Assimilation has been updated – The cooldown of Anti-Magic Zone is reduced by 60 seconds and its duration is increased by 2 seconds.
-            • The following talents have been removed:
-                > Abomination Limb
-                > Unholy Ground
-            > Hero Talents
+            - Secondly, plenty of time has passed since Castle Nathria and it's given us some time to reflect on our change to capping Anti-Magic Zone. In 
+              Ghosts of K'aresh, we are returning AMZ to a % magic damage reduction effect with no cap. We have increased the cooldown and reduced the duration 
+              and effectiveness downward from what it was prior to the Castle Nathria nerf which should better align with our expected output for a DPS/Tank 
+              Damage Reduction cooldown. We hope that by adding this back as a meaningful cooldown alongside their grips that Death Knight's will be able to 
+              carve out a spot for themselves in raid compositions.
+            - New Talent: Unholy Momentum – Increases the Death Knight's Haste by 2%.
+            - Anti-Magic Zone has been updated – Places an Anti-Magic Zone for 6 seconds, reducing the magic damage taken by party or raid members by 15%. 4 
+              minute cooldown.
+            - Assimilation has been updated – The cooldown of Anti-Magic Zone is reduced by 60 seconds and its duration is increased by 2 seconds.
+            - The following talents have been removed:
+                • Abomination Limb
+                • Unholy Ground
+            - Hero Talents
                 • Deathbringer
                     > Exterminate has been updated:
-                        - First scythe of Exterminate no longer has a chance to apply Reaper's Mark.
-                        - Frost – First scythe of Exterminate has a 100% chance to grant Killing Machine.
-                        - Blood – The first scythe now has a 100% chance to reap a Bonestorm for 2 seconds.
-                    > Developer’s notes: We found that relying on chance for Reaper’s Mark created too much variance in damage output, which made it feel inconsistent and unreliable.
+                        + First scythe of Exterminate no longer has a chance to apply Reaper's Mark.
+                        + Frost – First scythe of Exterminate has a 100% chance to grant Killing Machine.
+                        + Blood – The first scythe now has a 100% chance to reap a Bonestorm for 2 seconds.
+                    > Developer’s notes: We found that relying on chance for Reaper’s Mark created too much variance in damage output, which made it feel 
+                      inconsistent and unreliable.
                     > Reaper's Mark damage increased by 30%.
                     > Frost
-                        - Exterminate first scythe damage reduced by 15%.
-                        - Exterminate second scythe damage has been increased by 20%.
-                        - Bind in Darkness now increases Howling Blast damage on main target when consuming Rime by 60% (was 30%).
-                        - Wave of Souls critical strikes now increase the Shadowfrost damage the target takes by 3% per stack (was 5%).
-                        - Swift and Painful now increases Strength by 5% for 8 seconds when no enemies are struck by Soul Rupture (was 10%).
-                        - Swift and Painful now causes Wave of Souls to be 50% more effective on its main target (was 100%).
+                        + Exterminate first scythe damage reduced by 15%.
+                        + Exterminate second scythe damage has been increased by 20%.
+                        + Bind in Darkness now increases Howling Blast damage on main target when consuming Rime by 60% (was 30%).
+                        + Wave of Souls critical strikes now increase the Shadowfrost damage the target takes by 3% per stack (was 5%).
+                        + Swift and Painful now increases Strength by 5% for 8 seconds when no enemies are struck by Soul Rupture (was 10%).
+                        + Swift and Painful now causes Wave of Souls to be 50% more effective on its main target (was 100%).
                 • Rider of the Apocalypse
                     > Undeath damage reduced by 20%.
                     > Reaper's Mark will no longer automatically explode below 5% health.
@@ -159,37 +228,42 @@ PatchNotesDelivered_Notes_1120 = {
                     > Mograine's Death and Decay damage increased by 50%.
                     > Fixed an issue causing Undeath to benefit only one Death Knight in a group with multiple Death Knights.
                     > Frost
-                        - Mawsworn Menace has been updated – Increases the damage of Obliterate by 10% and Remorseless Winter lasts 2 seconds longer.
-                        - Mograine's Might has been updated – Your damage is increased by 5% and you gain 5% Critical Strike chance while inside Mograine's Death and Decay.
-                        - Trollbane's Icy Fury damage reduced by 30%.
-                        - Frostscythe now shatters Trollbane's Chains of Ice.
-                        - Whitemane's Famine now causes Frostscythe to add a stack to Undeath and spreads it to a nearby enemy.
+                        + Mawsworn Menace has been updated – Increases the damage of Obliterate by 10% and Remorseless Winter lasts 2 seconds longer.
+                        + Mograine's Might has been updated – Your damage is increased by 5% and you gain 5% Critical Strike chance while inside Mograine's 
+                          Death and Decay.
+                        + Trollbane's Icy Fury damage reduced by 30%.
+                        + Frostscythe now shatters Trollbane's Chains of Ice.
+                        + Whitemane's Famine now causes Frostscythe to add a stack to Undeath and spreads it to a nearby enemy.
                     > Unholy
-                        - Whitemane's Death Coil damage increased by 100%.
-                        - Brittle and Unholy Assault now affects Undeath damage.
-                        - The War effect of Rune of the Apocalypse now affects Undeath damage.
-                        - Unholy Aura now increases the damage of Whitemane's Undeath.
-                        - Fixed an issue causing Whitemane's Epidemic to benefit from Mastery twice.
-                        - Fixed an issue causing Mograine's Death and Decay to benefit twice from Unholy Death Knight Mastery.
+                        + Whitemane's Death Coil damage increased by 100%.
+                        + Brittle and Unholy Assault now affects Undeath damage.
+                        + The War effect of Rune of the Apocalypse now affects Undeath damage.
+                        + Unholy Aura now increases the damage of Whitemane's Undeath.
+                        + Fixed an issue causing Whitemane's Epidemic to benefit from Mastery twice.
+                        + Fixed an issue causing Mograine's Death and Decay to benefit twice from Unholy Death Knight Mastery.
                 • San’layn
                     > The Blood is Life has been updated:
-                        - Dark Transformation/Dancing Rune Weapon summons a Blood Beast to attack your enemy for 10 seconds.
-                    > Developer’s notes: Similar to Exterminate updates, we found that the chance based spawning of Blood Beast created too much variance in damage output and reduced player agency.
+                        + Dark Transformation/Dancing Rune Weapon summons a Blood Beast to attack your enemy for 10 seconds.
+                    > Developer’s notes: Similar to Exterminate updates, we found that the chance based spawning of Blood Beast created too much variance in
+                      damage output and reduced player agency.
                     > Blood Beast now deals 15% of the damage accumulated for Unholy and 25% of the damage accumulated for Blood specialization (was 25%/50%).
                     > Blood Beast's Corrupted Blood damage increased by 25%.
                     > Pact of the San'layn now stores 15% of the Shadow damage done into Blood Beast (was 10%).
                     > Infliction of Sorrow now has an additional effect – After Gift of the San'layn ends, you gain a charge of Death and Decay.
-                    > Infliction of Sorrow buff that makes Scourge Strike/Heart Strike to consume Virulent Plague/Blood Plague now lasts for 30 seconds (was 12 seconds).
+                    > Infliction of Sorrow buff that makes Scourge Strike/Heart Strike to consume Virulent Plague/Blood Plague now lasts for 30 seconds 
+                      (was 12 seconds).
                     > Frenzied Bloodthirst now increases the damage of Death Coil by 4% per stack of Essence of the Blood Queen (was 5%).
                     > Blood
-                        - Visceral Strength now has an additional effect – When Blood Boil hits 2 or more targets, it generates 1 charge of Bone Shield.
+                        + Visceral Strength now has an additional effect – When Blood Boil hits 2 or more targets, it generates 1 charge of Bone Shield.
                     > Unholy
-                        - Visceral Strength now has an additional effect – When Scourge Strike consumes Virulent Plague, your next Outbreak costs no Runes and casts a Death Coil or an Epidemic at 100% effectiveness, whichever you most recently cast.
-            > Blood
+                        + Visceral Strength now has an additional effect – When Scourge Strike consumes Virulent Plague, your next Outbreak costs no Runes and 
+                          casts a Death Coil or an Epidemic at 100% effectiveness, whichever you most recently cast.
+            - Blood
                 • All ability damage increased by 8%.
                 • Bone Shield increases Armor by 115% of Strength (was 100%).
-            > Frost
-                • Developer’s notes: In Ghosts of K'aresh, we're revisiting the core building blocks of Frost Death Knight. We're making adjustments to reduce friction between how the spec uses its resources and to focus its power into more iconic abilities, alongside some new ones we hope you’ll enjoy.
+            - Frost
+                • Developer’s notes: In Ghosts of K'aresh, we're revisiting the core building blocks of Frost Death Knight. We're making adjustments to reduce 
+                  friction between how the spec uses its resources and to focus its power into more iconic abilities, alongside some new ones we hope you’ll enjoy.
                 • Several talents have changed positions in the talent tree.
                 • New Talent: Frostbound Will – Consuming Rime reduces the cooldown of Empower Rune Weapon by 6 seconds.
                 • New Talent: Runic Overflow – Increases Frost Strike and Glacial Advance damage by 10/20%.
