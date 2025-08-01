@@ -9,7 +9,7 @@
 --- Max note length [140] ------------------------------------------------------------------------------------------------------------------
 PatchNotesDelivered_Notes_1120 = {
     version = "11.2.0",
-    build = "00000",
+    build = "62213",
     hotfix = 0,
     gameChangesHotfixes = [[
         Working as intended?
