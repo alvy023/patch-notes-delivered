@@ -8,13 +8,41 @@
 --- Export global notes variable
 --- Max note length [140] ------------------------------------------------------------------------------------------------------------------
 PatchNotesDelivered_Notes_1120 = {
-    version = "11.2.0",
-    build = "00000",
-    hotfix = 0,
+    version = "11.1.7",
+    build = "61967",
+    hotfix = 1,
     gameChangesHotfixes = [[
+        July 30, 2025
+
+    Classes
+        • Druid
+            > Guardian
+                - Rejuvenation no longer resets the swing timer while Heart of the Wild is active.
+                - Heart of the Wild's cooldown refund now only triggers if the player is shifting into Bear Form.
+        • Hunter
+            - The pet ability Growl will now automatically turn off autocasting when entering a dungeon or raid.
+        • Mage
+            - Ring of Frosts cast through Presence of Mind now correctly has a 2 second arming time, which is correctly reduced by Haste.
+        • Monk
+            - Chi Torpedo and Roll can no longer be stopped by a cancelaura macro.
+        • Rogue
+            - Vanishing with Subterfuge talented and then picking up the Shadow Sight debuff in Arena now causes the Rogue to exit stealth.
+        • Fixed a bug that caused macros for some spells, such as Charge, Jab, and Sprouting Mushrooms to incorrectly return the "Spell not Learned" error.
+    
+    Currencies
+        - The Honor Quartermasters Lok'nor Bloodfist and Hayden Christophen now offer players Motes of Harmony for 400 Honor.
+        - The Justice Quartermaster Lo ping now offer players Motes of Harmony for 600 Justice Points.
+    
+    Items
+        - The Cracked Talisman can no longer be used in combat until the release of the Siege of Orgrimmar content.
+        - Horde players can now correctly summon the Chi-ji Kite and Yu'lon Kites from Inscription.
+    
+    Quests
+        - Horde players can now correctly use the Shan'ze Dao and Shado-Pan Garrison portals after completing the quest "Through the Portal".
     ]],
 
     gameChangesPatch = [[
+        
     ]],
 
     addonChanges = [[
