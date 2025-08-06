@@ -6,7 +6,7 @@
 -- For more information, visit the project repository.
 
 -- Variables used by BuildPatchNotes()
-PatchNotesDelivered_Pointer = PatchNotesDelivered_Notes_1117
+PatchNotesDelivered_Pointer = PatchNotesDelivered_Notes_1120
 PatchNotesDelivered_Text = nil
 
 -- Link Helper Functions
@@ -107,6 +107,19 @@ function BuildPatchNotes()
         hotfix = PatchNotesDelivered_Pointer.hotfix,
         gameChangesHotfixes = PatchNotesDelivered_Pointer.gameChangesHotfixes,
         gameChangesPatch = PatchNotesDelivered_Pointer.gameChangesPatch,
+        deathKnightChangesPatch = PatchNotesDelivered_Pointer.deathKnightChangesPatch,
+        demonHunterChangesPatch = PatchNotesDelivered_Pointer.demonHunterChangesPatch,
+        druidChangesPatch = PatchNotesDelivered_Pointer.druidChangesPatch,
+        evokerChangesPatch = PatchNotesDelivered_Pointer.evokerChangesPatch,
+        hunterChangesPatch = PatchNotesDelivered_Pointer.hunterChangesPatch,
+        mageChangesPatch = PatchNotesDelivered_Pointer.mageChangesPatch,
+        monkChangesPatch = PatchNotesDelivered_Pointer.monkChangesPatch,
+        paladinChangesPatch = PatchNotesDelivered_Pointer.paladinChangesPatch,
+        priestChangesPatch = PatchNotesDelivered_Pointer.priestChangesPatch,
+        rogueChangesPatch = PatchNotesDelivered_Pointer.rogueChangesPatch,
+        shamanChangesPatch = PatchNotesDelivered_Pointer.shamanChangesPatch,
+        warlockChangesPatch = PatchNotesDelivered_Pointer.warlockChangesPatch,
+        warriorChangesPatch = PatchNotesDelivered_Pointer.warriorChangesPatch,
         addonChanges = PatchNotesDelivered_Pointer.addonChanges,
     }
 
