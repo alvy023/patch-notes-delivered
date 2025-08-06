@@ -9,9 +9,32 @@
 --- Max note length [140] ------------------------------------------------------------------------------------------------------------------
 PatchNotesDelivered_Notes_1120 = {
     version = "11.2.0",
-    build = "62213",
-    hotfix = 0,
+    build = "62417",
+    hotfix = 1,
     gameChangesHotfixes = [[
+        August 4, 2025
+
+    Classes
+        • Death Knight
+            - Players who swap from Frost specialization to a different specialization and use Blood Tap on their Blood Runes will no longer erroneously convert their Blood Runes into permanent Death Runes.
+        • Monk
+            - When Brewmaster Monks use Provoke to taunt a target away from a currently active tank that has attack power active from Vengeance, they are now correctly granted 50% of the previous tank's Vengeance value.
+        • Priest
+            - Battleground flags are now immediately dropped when the priest transforms into a Spirit of Redemption, as intended.
+            - Priests can no longer cast Leap of Faith and pull flag carriers up to the graveyard in Twin Peaks.
+    
+    Pet Battles
+        - Hoplet no longer has Moon Tears as both of its 2nd slot options; one is replaced by Moon Dance.
+    
+    Player versus Player
+        - The Flag will now cap immediately in Twin Peaks when returned to the base if there is a player standing on the cap point. Previously players had to move off of the capture point and then back. This mirrors how it occurs in Warsong Gulch.
+    
+    Quests
+        - Resolved inconsistencies with the Elder Charms of Good Fortune quest.
+    
+    Transmog
+        - The Valorous Dreadnaught set now has the correct appearance on all pieces.
+
         Working as intended?
     ]],
 
