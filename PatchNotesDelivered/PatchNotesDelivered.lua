@@ -51,6 +51,7 @@ local PATCH_NOTES = nil
 function PatchNotesDelivered:OnInitialize()
     self.db = AceDB:New("PatchNotesDB", {
         profile = {
+            lastSeenVersion = nil,
             lastSeenBuild = nil,
             lastSeenHotfix = nil,
             minimap = { hide = false },
@@ -126,22 +127,35 @@ end
 --- @return:
 function PatchNotesDelivered:ShouldShowPatchNotes()
     local version, build, date, tocVersion = GetBuildInfo()
+    local notesVersion = PATCH_NOTES.version
     local notesBuild = PATCH_NOTES.build
     local noteHotfix = PATCH_NOTES.hotfix
 
-    if self.db.profile.lastSeenBuild == nil or self.db.profile.lastSeenHotfix == nil then
+    -- User has never seen patch notes
+    if self.db.profile.lastSeenVersion == nil or self.db.profile.lastSeenBuild == nil or self.db.profile.lastSeenHotfix == nil then
+        self.db.profile.lastSeenVersion = version
         self.db.profile.lastSeenBuild = build
         self.db.profile.lastSeenHotfix = noteHotfix
         return true
     end
 
+    -- Check if the current version is new
+    if version == notesVersion and self.db.profile.lastSeenVersion ~= version then
+        self.db.profile.lastSeenVersion = version
+        self.db.profile.lastSeenBuild = build
+        self.db.profile.lastSeenHotfix = noteHotfix
+        return true
+    end
+
+    -- Check if the current build is new
     if build == notesBuild and self.db.profile.lastSeenBuild ~= build then
         self.db.profile.lastSeenBuild = build
         self.db.profile.lastSeenHotfix = noteHotfix
         return true
     end
 
-    if build == notesBuild and self.db.profile.lastSeenBuild == build and self.db.profile.lastSeenHotfix ~= noteHotfix then
+    -- Check if the hotfix is new
+    if self.db.profile.lastSeenHotfix < noteHotfix then
         self.db.profile.lastSeenHotfix = noteHotfix
         return true
     end
@@ -188,7 +202,6 @@ function PatchNotesDelivered:ShowPatchNotes()
     )
     hotfixLabel:SetFontObject(GameFontHighlight)
     hotfixLabel:SetRelativeWidth(0.96)
-
     scroll:AddChild(hotfixLabel)
 
     local patchLabel = AceGUI:Create("Label")
@@ -197,8 +210,111 @@ function PatchNotesDelivered:ShowPatchNotes()
     )
     patchLabel:SetFontObject(GameFontHighlight)
     patchLabel:SetRelativeWidth(0.96)
-
     scroll:AddChild(patchLabel)
+
+    local deathKnightLabel = AceGUI:Create("Label")
+    deathKnightLabel:SetText(
+        "    |cff00B4FFPatch Class Changes|r\n\n" .. PATCH_NOTES.deathKnightChangesPatch .. "\n"
+    )
+    deathKnightLabel:SetFontObject(GameFontHighlight)
+    deathKnightLabel:SetRelativeWidth(0.96)
+    scroll:AddChild(deathKnightLabel)
+
+    local demonHunterLabel = AceGUI:Create("Label")
+    demonHunterLabel:SetText(
+        "\n" .. PATCH_NOTES.demonHunterChangesPatch .. "\n"
+    )
+    demonHunterLabel:SetFontObject(GameFontHighlight)
+    demonHunterLabel:SetRelativeWidth(0.96)
+    scroll:AddChild(demonHunterLabel)
+
+    local druidLabel = AceGUI:Create("Label")
+    druidLabel:SetText(
+        "\n" .. PATCH_NOTES.druidChangesPatch .. "\n"
+    )
+    druidLabel:SetFontObject(GameFontHighlight)
+    druidLabel:SetRelativeWidth(0.96)
+    scroll:AddChild(druidLabel)
+
+    local evokerLabel = AceGUI:Create("Label")
+    evokerLabel:SetText(
+        "\n" .. PATCH_NOTES.evokerChangesPatch .. "\n"
+    )
+    evokerLabel:SetFontObject(GameFontHighlight)
+    evokerLabel:SetRelativeWidth(0.96)
+    scroll:AddChild(evokerLabel)
+
+    local hunterLabel = AceGUI:Create("Label")
+    hunterLabel:SetText(
+        "\n" .. PATCH_NOTES.hunterChangesPatch .. "\n"
+    )
+    hunterLabel:SetFontObject(GameFontHighlight)
+    hunterLabel:SetRelativeWidth(0.96)
+    scroll:AddChild(hunterLabel)
+
+    local mageLabel = AceGUI:Create("Label")
+    mageLabel:SetText(
+        "\n" .. PATCH_NOTES.mageChangesPatch .. "\n"
+    )
+    mageLabel:SetFontObject(GameFontHighlight)
+    mageLabel:SetRelativeWidth(0.96)
+    scroll:AddChild(mageLabel)
+
+    local monkLabel = AceGUI:Create("Label")
+    monkLabel:SetText(
+        "\n" .. PATCH_NOTES.monkChangesPatch .. "\n"
+    )
+    monkLabel:SetFontObject(GameFontHighlight)
+    monkLabel:SetRelativeWidth(0.96)
+    scroll:AddChild(monkLabel)
+
+    local paladinLabel = AceGUI:Create("Label")
+    paladinLabel:SetText(
+        "\n" .. PATCH_NOTES.paladinChangesPatch .. "\n"
+    )
+    paladinLabel:SetFontObject(GameFontHighlight)
+    paladinLabel:SetRelativeWidth(0.96)
+    scroll:AddChild(paladinLabel)
+
+    local priestLabel = AceGUI:Create("Label")
+    priestLabel:SetText(
+        "\n" .. PATCH_NOTES.priestChangesPatch .. "\n"
+    )
+    priestLabel:SetFontObject(GameFontHighlight)
+    priestLabel:SetRelativeWidth(0.96)
+    scroll:AddChild(priestLabel)
+
+    local rogueLabel = AceGUI:Create("Label")
+    rogueLabel:SetText(
+        "\n" .. PATCH_NOTES.rogueChangesPatch .. "\n"
+    )
+    rogueLabel:SetFontObject(GameFontHighlight)
+    rogueLabel:SetRelativeWidth(0.96)
+    scroll:AddChild(rogueLabel)
+
+    local shamanLabel = AceGUI:Create("Label")
+    shamanLabel:SetText(
+        "\n" .. PATCH_NOTES.shamanChangesPatch .. "\n"
+    )
+    shamanLabel:SetFontObject(GameFontHighlight)
+    shamanLabel:SetRelativeWidth(0.96)
+    scroll:AddChild(shamanLabel)
+
+    local warlockLabel = AceGUI:Create("Label")
+    warlockLabel:SetText(
+        "\n" .. PATCH_NOTES.warlockChangesPatch .. "\n"
+    )
+    warlockLabel:SetFontObject(GameFontHighlight)
+    warlockLabel:SetRelativeWidth(0.96)
+    scroll:AddChild(warlockLabel)
+
+    local warriorLabel = AceGUI:Create("Label")
+    warriorLabel:SetText(
+        "\n" .. PATCH_NOTES.warriorChangesPatch .. "\n"
+    )
+    warriorLabel:SetFontObject(GameFontHighlight)
+    warriorLabel:SetRelativeWidth(0.96)
+    scroll:AddChild(warriorLabel)
 
     local addonLabel = AceGUI:Create("Label")
     addonLabel:SetText(
@@ -206,7 +322,6 @@ function PatchNotesDelivered:ShowPatchNotes()
     )
     addonLabel:SetFontObject(GameFontHighlight)
     addonLabel:SetRelativeWidth(0.96)
-
     scroll:AddChild(addonLabel)
 
     PatchNotesFrame = pnd
