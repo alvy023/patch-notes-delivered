@@ -87,6 +87,8 @@ end
 --- @return: The created widget.
 local function Constructor()
     local frame = CreateFrame("Frame", nil, UIParent, "BackdropTemplate")
+    frame:SetFrameStrata("HIGH")
+    frame:SetFrameLevel(100)
     frame:SetSize(800, 600)
     frame:SetPoint("CENTER")
     frame:SetMovable(true)
