@@ -9,9 +9,49 @@
 --- Max note length [140] ------------------------------------------------------------------------------------------------------------------
 PatchNotesDelivered_Notes_1120 = {
     version = "11.2.0",
-    build = "62213",
-    hotfix = 0,
+    build = "62438",
+    hotfix = 1,
     gameChangesHotfixes = [[
+        August 8th
+
+        Achievements
+            • Fixed an issue where players could not obtain My Stab-Happy Nemesis after defeating Nexus-Princess Ky'veza in her lair.
+        Classes
+            • Priest
+                > Shadow
+                    - Resolved an issue causing Shadow Word: Death to not deal additional damage between 20% and 35% health with
+                      Deathspeaker talented.
+        Items
+            • War Within Season 2 gear should now be convertible for free at the Revival Catalyst.
+        K’aresh
+            • Reduced Reshanor’s health and overall difficulty.
+        Quests
+            • Fixed a bug causing some Shadowguard Infiltrators to not count for "Break the Assault" as intended.
+
+August 6, 2025
+
+        Achievements
+            • Fixed a bug that made Mad World and Through the Looking Glass go missing.
+        Delves
+            • In Sidestreet Sluice, Vindel Snapcrank will now properly respawn if he leaves combat and resets.
+        K’aresh
+            • The map icon for Tazavesh should now show the proper Renown Rank.
+            • The nearest Phase Diving conduits should now be visible on the map when Phase Diving.
+        Quests
+            • Resolved an issue where “Crest Transmutation” would not always give players extra Carved Ethereal Crests.
+            • Players who selected a talent for their Reshii Wraps should be able to wrap up "Wrapped Up".
+            • Fixed a bug where bosses in the Horrific Visions were not counting towards the quest: “Worldsoul: Horrific Visions
+              Revisited”.
+        Classes
+            • Priest
+                > Shadow
+                    - Shadow Apparition missiles now move at the correct speed.
+        Player versus Player
+            • Fixed a bug causing class adjustments to not work as intended in Battle for Gilneas and Deepwind Gorge.
+            • Carts in Deepwind Gorge are now correctly returned when clicked on by the defending faction.
+        Transmog
+            • Straw Hats that correspond to your Armor type are now usable as Transmog appearances.
+
         Working as intended?
     ]],
 
