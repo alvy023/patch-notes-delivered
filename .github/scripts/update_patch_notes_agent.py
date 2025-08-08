@@ -98,37 +98,54 @@ def generate_notes_from_text(scraped_text, existing_notes):
         - If a section has no new content, its value must be an empty string `""`.
 
     --- FORMATTING EXAMPLES ---
-    This is the exact format required. Pay strict attention to indentation, spacing, and bullet styles (`•`, `>`, `-`).
+    This is the exact format required. Pay strict attention to indentation, spacing, and bullet styles (`●`, `►`, `+`, `-`).
 
     **Hotfix Example (for recent, dated changes):**
     ```
-        May 22, 2025
+        August 8, 2025
+
+            Achievements
+                ● Fixed an issue where players could not obtain My Stab-Happy Nemesis after defeating Nexus-Princess Ky'veza in her lair.
 
             Classes
-                • Death Knight
-                    > Unholy
-                        - Resolved an issue where certain bonuses could be retained by despawning and respawning the Death Knight’s
-                          pet.
-                • Paladin
-                    > Retribution
-                        - An issue causing Avenging Wrath to not function properly when talented into Radiant Glory has been resolved.
-                • Warlock
-                    - Hellcaller: Fixed an issue where Vile Taint would trigger Blackened Soul more times than intended.
-                    > Destruction
-                        - Fixed an issue where Crashing Chaos would persist after the start of a Mythic+ run.
-            
-            Horrific Visions
-                - Fixed a bug where if you destroyed the Voidfire Deathcycle that Haymar the Devout is riding too fast it would fail
-                  to go out of control and let you bring it out with you.
-                - Torie’s items no longer require the achievement We Have the Memories.
+                ● Priest
+                    ► Shadow
+                        + Resolved an issue causing Shadow Word: Death to not deal additional damage between 20% and 35% health with
+                          Deathspeaker talented.
+
+            Items
+                ● War Within Season 2 gear should now be convertible for free at the Revival Catalyst.
+
+        ...
     ```
 
     **Patch Note Example (for major content announcements):**
     ```
-            DEFEND THE ARATHI IN THE NIGHTFALL SCENARIO
+        July 31, 2025
 
-                - Players will take up arms beside a new faction, Flame’s Radiance, to defend the Arathi against the Sureki forces
-                  following the defeat of Queen Ansurek.
+            Journey deeper into The War Within campaign in the Ghosts of K’aresh content update arriving on August 5. Explore a new zone,
+            break ground in a new Delve, make an impact in Ecological Succession, and more. The War Within Season 3 also kicks off on
+            August 12 with a new raid, new Mythic+ dungeon pool, and a fresh PvP season.
+
+        CONTINUE THE WAR WITHIN CAMPAIGN
+
+            ● In Ghosts of K’aresh, the campaign continues as more pieces to a troubling puzzle fall into place. With the release of this
+              content update players will be able to immerse themselves in The War Within story as it leads up to the next chapter of the
+              Worldsoul Saga—Midnight.
+            ● There’s some unfinished business to be had on K’aresh and the specter of an old enemy looms large. Forces with ill-intent are
+              determined to bring forth Dimensius, the All-Devouring once more to finish off the ethereals. Should he arise, Azeroth will
+              also be in peril from this dangerous Void Lord.
+
+        ...
+
+        MAGE
+
+            ● Inspired Intellect now grants 6% increased Intellect (was 3%).
+            ● Time Anomaly has been removed.
+            ● Hero Talents
+                ► Frostfire
+                    + Fire
+                        - Excess Frost now casts Ice Nova at 200% effectiveness (was 150%).
     ```
     --- END OF FORMATTING EXAMPLES ---
 
