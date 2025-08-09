@@ -25,7 +25,7 @@ PatchNotesDelivered_Notes_1120 = {
                         + Totemic: Fixed a bug that allowed Tremor to be dodged, parried, or blocked.
 
             Delves
-                • Arcane Barrier is now interruptable and dispellable. Recast time increased.
+                • Arcane Barrier is now interruptible and dispellable. Recast time increased.
                 • Arcane Barrier shield is now 10% of health (was 15%).
                 • Sand Step DoT damage reduced by 65%.
                 • Mana Feast damage reduced by 66%.
