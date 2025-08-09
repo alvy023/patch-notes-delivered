@@ -98,7 +98,7 @@ def generate_notes_from_text(scraped_text, existing_notes):
         - If a section has no new content, its value must be an empty string `""`.
 
     --- FORMATTING EXAMPLES ---
-    This is the exact format required. Pay strict attention to indentation, spacing, and bullet styles (`●`, `►`, `+`, `-`).
+    This is the exact format required. Pay strict attention to indentation, spacing, and bullet styles (`•`, `>`, `+`, `-`).
 
     **Hotfix Example (for recent, dated changes):**
     ```
