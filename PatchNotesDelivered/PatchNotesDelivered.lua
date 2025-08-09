@@ -57,11 +57,12 @@ function PatchNotesDelivered:OnInitialize()
             lastSeenHotfix = nil,
             minimap = { hide = false },
             addonCompartment = { hide = false },
+            showOnUpdate = true,
         }
     }, true)
-    --- Register minimap button
+    -- Register minimap button
     LDBIcon:Register("PatchNotesDelivered", dataBroker, self.db.profile.minimap)
-    --- Register addon for event notifications
+    -- Register addon for event notifications
     self:RegisterEvent("PLAYER_LOGIN")
     self:RegisterEvent("PLAYER_ENTERING_WORLD")
 end
@@ -152,6 +153,9 @@ end
 --- @param:
 --- @return:
 function PatchNotesDelivered:ShouldShowPatchNotes()
+    -- User has disabled the option to show patch notes
+    if not self.db.profile.showOnUpdate then return false end
+
     local version, build, date, tocVersion = GetBuildInfo()
     local notesVersion = PATCH_NOTES.version
     local notesBuild = PATCH_NOTES.build
@@ -281,6 +285,17 @@ function PatchNotesDelivered:ShowOptionsMenu(anchorFrame)
         info.func = function()
             self.db.profile.addonCompartment.hide = not self.db.profile.addonCompartment.hide
             self:Print("PatchNotesDelivered: Please /reload to apply addon compartment changes")
+        end
+        info.isNotRadio = true
+        info.keepShownOnClick = true
+        UIDropDownMenu_AddButton(info, level)
+
+        -- Show Patch Notes on Update Checkbox
+        info = UIDropDownMenu_CreateInfo()
+        info.text = "Show Notes on Update"
+        info.checked = self.db.profile.showOnUpdate
+        info.func = function()
+            self.db.profile.showOnUpdate = not self.db.profile.showOnUpdate
         end
         info.isNotRadio = true
         info.keepShownOnClick = true
