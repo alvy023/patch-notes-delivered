@@ -41,7 +41,8 @@ local UIDropDownMenu_CreateInfo = UIDropDownMenu_CreateInfo
 local UIDropDownMenu_AddButton = UIDropDownMenu_AddButton
 local ToggleDropDownMenu = ToggleDropDownMenu
 
--- Get global patch notes variable from file
+-- Initialize local (main) variables
+local PatchNotesFrame = nil
 local PATCH_NOTES = nil
 
 -- Event Handlers
@@ -122,6 +123,31 @@ function PatchNotesDelivered_OnAddonCompartmentLeave()
 end
 
 -- Functions
+--- Description: Creates a label and adds it to the scroll frame.
+--- @param: scroll (AceGUI ScrollFrame)
+--- @param: text (string)
+--- @param: title (string)
+--- @param: footer (string)
+--- @param: options (table)
+--- @return:
+local function CreateSectionLabel(scroll, text, title, footer, options)
+    if not text or text:match("^%s*$") then return end
+
+    local labelText = (title or "") .. text .. (footer or "")
+
+    local label = AceGUI:Create("Label")
+    label:SetText(labelText)
+    label:SetRelativeWidth(0.96)
+
+    if options and options.font and options.size then
+        label:SetFont(options.font, options.size, options.flags)
+    else
+        label:SetFontObject(GameFontHighlight)
+    end
+
+    scroll:AddChild(label)
+end
+
 --- Description: Check if we should show the patch notes
 --- @param:
 --- @return:
@@ -178,15 +204,15 @@ function PatchNotesDelivered:ShowPatchNotes()
     local pnd = AceGUI:Create("Window-PND")
     pnd:SetTitle("|cff00B4FFThe Weekly Mrrgl, |r|cffffffff" ..
         PATCH_NOTES.version .. "." .. PATCH_NOTES.build .. "." .. PATCH_NOTES.hotfix .. "|r")
-    pnd:SetTitleFont("Fonts\\FRIZQT__.TTF", 14, "OUTLINE")
+    pnd:SetTitleFont("Fonts\\FRIZQT__.TTF", 16, "OUTLINE")
     pnd:SetTitleAlignment("CENTER")
 
     local resetButton = AceGUI:Create("IconButton-PND")
     resetButton:SetImage("Interface\\AddOns\\PatchNotesDelivered\\assets\\CustomIcon-White-Reset.tga")
     resetButton:SetTooltip("Reset Size")
-    resetButton:SetSize(14, 14)
+    resetButton:SetSize(16, 16)
     resetButton:SetCallback("OnClick", function()
-        PatchNotesFrame.frame:SetSize(800, 600)
+        PatchNotesFrame.frame:SetSize(1000, 700)
     end)
     pnd:AddButton(resetButton)
 
@@ -196,133 +222,26 @@ function PatchNotesDelivered:ShowPatchNotes()
     scroll:SetFullHeight(true)
     pnd:AddChild(scroll)
 
-    local hotfixLabel = AceGUI:Create("Label")
-    hotfixLabel:SetText(
-        "\n    |cffF89406Hotfix Changes|r\n\n" .. PATCH_NOTES.gameChangesHotfixes .. "\n\n"
-    )
-    hotfixLabel:SetFontObject(GameFontHighlight)
-    hotfixLabel:SetRelativeWidth(0.96)
-    scroll:AddChild(hotfixLabel)
+    local bodyOptions = { font = "Fonts\\FRIZQT__.TTF", size = 14, flags = "" }
 
-    local patchLabel = AceGUI:Create("Label")
-    patchLabel:SetText(
-        "    |cff00B4FFPatch Changes|r\n\n" .. PATCH_NOTES.gameChangesPatch .. "\n\n"
-    )
-    patchLabel:SetFontObject(GameFontHighlight)
-    patchLabel:SetRelativeWidth(0.96)
-    scroll:AddChild(patchLabel)
+    CreateSectionLabel(scroll, PATCH_NOTES.gameChangesHotfixes, "\n    |cffF89406Hotfix Changes|r\n\n", "\n\n", bodyOptions)
+    CreateSectionLabel(scroll, PATCH_NOTES.gameChangesPatch, "    |cff00B4FFPatch Changes|r\n\n", "\n\n", bodyOptions)
 
-    local deathKnightLabel = AceGUI:Create("Label")
-    deathKnightLabel:SetText(
-        "    |cff00B4FFPatch Class Changes|r\n\n" .. PATCH_NOTES.deathKnightChangesPatch .. "\n"
-    )
-    deathKnightLabel:SetFontObject(GameFontHighlight)
-    deathKnightLabel:SetRelativeWidth(0.96)
-    scroll:AddChild(deathKnightLabel)
+    CreateSectionLabel(scroll, PATCH_NOTES.deathKnightChangesPatch, "    |cff00B4FFPatch Class Changes|r\n\n", "\n", bodyOptions)
+    CreateSectionLabel(scroll, PATCH_NOTES.demonHunterChangesPatch, "\n", "\n", bodyOptions)
+    CreateSectionLabel(scroll, PATCH_NOTES.druidChangesPatch, "\n", "\n", bodyOptions)
+    CreateSectionLabel(scroll, PATCH_NOTES.evokerChangesPatch, "\n", "\n", bodyOptions)
+    CreateSectionLabel(scroll, PATCH_NOTES.hunterChangesPatch, "\n", "\n", bodyOptions)
+    CreateSectionLabel(scroll, PATCH_NOTES.mageChangesPatch, "\n", "\n", bodyOptions)
+    CreateSectionLabel(scroll, PATCH_NOTES.monkChangesPatch, "\n", "\n", bodyOptions)
+    CreateSectionLabel(scroll, PATCH_NOTES.paladinChangesPatch, "\n", "\n", bodyOptions)
+    CreateSectionLabel(scroll, PATCH_NOTES.priestChangesPatch, "\n", "\n", bodyOptions)
+    CreateSectionLabel(scroll, PATCH_NOTES.rogueChangesPatch, "\n", "\n", bodyOptions)
+    CreateSectionLabel(scroll, PATCH_NOTES.shamanChangesPatch, "\n", "\n", bodyOptions)
+    CreateSectionLabel(scroll, PATCH_NOTES.warlockChangesPatch, "\n", "\n", bodyOptions)
+    CreateSectionLabel(scroll, PATCH_NOTES.warriorChangesPatch, "\n", "\n", bodyOptions)
 
-    local demonHunterLabel = AceGUI:Create("Label")
-    demonHunterLabel:SetText(
-        "\n" .. PATCH_NOTES.demonHunterChangesPatch .. "\n"
-    )
-    demonHunterLabel:SetFontObject(GameFontHighlight)
-    demonHunterLabel:SetRelativeWidth(0.96)
-    scroll:AddChild(demonHunterLabel)
-
-    local druidLabel = AceGUI:Create("Label")
-    druidLabel:SetText(
-        "\n" .. PATCH_NOTES.druidChangesPatch .. "\n"
-    )
-    druidLabel:SetFontObject(GameFontHighlight)
-    druidLabel:SetRelativeWidth(0.96)
-    scroll:AddChild(druidLabel)
-
-    local evokerLabel = AceGUI:Create("Label")
-    evokerLabel:SetText(
-        "\n" .. PATCH_NOTES.evokerChangesPatch .. "\n"
-    )
-    evokerLabel:SetFontObject(GameFontHighlight)
-    evokerLabel:SetRelativeWidth(0.96)
-    scroll:AddChild(evokerLabel)
-
-    local hunterLabel = AceGUI:Create("Label")
-    hunterLabel:SetText(
-        "\n" .. PATCH_NOTES.hunterChangesPatch .. "\n"
-    )
-    hunterLabel:SetFontObject(GameFontHighlight)
-    hunterLabel:SetRelativeWidth(0.96)
-    scroll:AddChild(hunterLabel)
-
-    local mageLabel = AceGUI:Create("Label")
-    mageLabel:SetText(
-        "\n" .. PATCH_NOTES.mageChangesPatch .. "\n"
-    )
-    mageLabel:SetFontObject(GameFontHighlight)
-    mageLabel:SetRelativeWidth(0.96)
-    scroll:AddChild(mageLabel)
-
-    local monkLabel = AceGUI:Create("Label")
-    monkLabel:SetText(
-        "\n" .. PATCH_NOTES.monkChangesPatch .. "\n"
-    )
-    monkLabel:SetFontObject(GameFontHighlight)
-    monkLabel:SetRelativeWidth(0.96)
-    scroll:AddChild(monkLabel)
-
-    local paladinLabel = AceGUI:Create("Label")
-    paladinLabel:SetText(
-        "\n" .. PATCH_NOTES.paladinChangesPatch .. "\n"
-    )
-    paladinLabel:SetFontObject(GameFontHighlight)
-    paladinLabel:SetRelativeWidth(0.96)
-    scroll:AddChild(paladinLabel)
-
-    local priestLabel = AceGUI:Create("Label")
-    priestLabel:SetText(
-        "\n" .. PATCH_NOTES.priestChangesPatch .. "\n"
-    )
-    priestLabel:SetFontObject(GameFontHighlight)
-    priestLabel:SetRelativeWidth(0.96)
-    scroll:AddChild(priestLabel)
-
-    local rogueLabel = AceGUI:Create("Label")
-    rogueLabel:SetText(
-        "\n" .. PATCH_NOTES.rogueChangesPatch .. "\n"
-    )
-    rogueLabel:SetFontObject(GameFontHighlight)
-    rogueLabel:SetRelativeWidth(0.96)
-    scroll:AddChild(rogueLabel)
-
-    local shamanLabel = AceGUI:Create("Label")
-    shamanLabel:SetText(
-        "\n" .. PATCH_NOTES.shamanChangesPatch .. "\n"
-    )
-    shamanLabel:SetFontObject(GameFontHighlight)
-    shamanLabel:SetRelativeWidth(0.96)
-    scroll:AddChild(shamanLabel)
-
-    local warlockLabel = AceGUI:Create("Label")
-    warlockLabel:SetText(
-        "\n" .. PATCH_NOTES.warlockChangesPatch .. "\n"
-    )
-    warlockLabel:SetFontObject(GameFontHighlight)
-    warlockLabel:SetRelativeWidth(0.96)
-    scroll:AddChild(warlockLabel)
-
-    local warriorLabel = AceGUI:Create("Label")
-    warriorLabel:SetText(
-        "\n" .. PATCH_NOTES.warriorChangesPatch .. "\n"
-    )
-    warriorLabel:SetFontObject(GameFontHighlight)
-    warriorLabel:SetRelativeWidth(0.96)
-    scroll:AddChild(warriorLabel)
-
-    local addonLabel = AceGUI:Create("Label")
-    addonLabel:SetText(
-        "    |cff32CD32Addon Changes|r\n\n" .. PATCH_NOTES.addonChanges
-    )
-    addonLabel:SetFontObject(GameFontHighlight)
-    addonLabel:SetRelativeWidth(0.96)
-    scroll:AddChild(addonLabel)
+    CreateSectionLabel(scroll, PATCH_NOTES.addonChanges, "    |cff32CD32Addon Changes|r\n\n", "", bodyOptions)
 
     PatchNotesFrame = pnd
 end
