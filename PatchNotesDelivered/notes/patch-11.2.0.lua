@@ -10,8 +10,39 @@
 PatchNotesDelivered_Notes_1120 = {
     version = "11.2.0",
     build = "62438",
-    hotfix = 1,
+    hotfix = 2,
     gameChangesHotfixes = [[
+        August 9, 2025
+
+    Classes
+        • Death Knight
+            > Frost
+                + Resolved an issue causing Frostwyrm's Fury dragon to not despawn.
+        • Shaman
+            > Elemental
+                + Resolved an issue causing Liquid Magma Totem to not apply Flame Shock to enemies not in combat with the Shaman.
+            > Enhancement
+                + Totemic: Fixed a bug that allowed Tremor to be dodged, parried, or blocked.
+
+    Delves
+        • Arcane Barrier is now interruptable and dispellable. Recast time increased.
+        • Arcane Barrier shield is now 10% of health (was 15%).
+        • Sand Step DoT damage reduced by 65%.
+        • Mana Feast damage reduced by 66%.
+        • Arcane Lash damage reduced by 15%.
+        • Fixed a bug where Warlocks’ Wither could remove stacks of Static Charge from Durable Information Securing Container.
+
+    Items
+        • Void-Touched Ocular now has the correct amount of Intellect.
+        • Fixed an issue that caused several weapons from Eco-Dome Al'dani to sheathe incorrectly.
+        • Resolved an issue where Pinnacle Caches were not giving Resonance Crystals and Kej.
+
+    K’aresh
+        • Multiplayer pet battles can now take place in K’aresh.
+
+    Quests
+        • "The Void Hunter" should now point you to Leona Darkstrider's correct location.
+
         August 8, 2025
 
             Achievements
