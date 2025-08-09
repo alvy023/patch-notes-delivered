@@ -89,7 +89,7 @@ local function Constructor()
     local frame = CreateFrame("Frame", nil, UIParent, "BackdropTemplate")
     frame:SetFrameStrata("HIGH")
     frame:SetFrameLevel(100)
-    frame:SetSize(800, 600)
+    frame:SetSize(1000, 700)
     frame:SetPoint("CENTER")
     frame:SetMovable(true)
     frame:SetResizable(true)
@@ -103,8 +103,8 @@ local function Constructor()
     })
 
     --- Define size limits
-    local minWidth = 400
-    local minHeight = 300
+    local minWidth = 600
+    local minHeight = 400
     local maxWidth = 1200
     local maxHeight = 900
 

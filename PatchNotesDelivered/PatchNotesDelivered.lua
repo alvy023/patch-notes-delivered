@@ -41,7 +41,8 @@ local UIDropDownMenu_CreateInfo = UIDropDownMenu_CreateInfo
 local UIDropDownMenu_AddButton = UIDropDownMenu_AddButton
 local ToggleDropDownMenu = ToggleDropDownMenu
 
--- Get global patch notes variable from file
+-- Initialize local (main) variables
+local PatchNotesFrame = nil
 local PATCH_NOTES = nil
 
 -- Event Handlers
@@ -203,15 +204,15 @@ function PatchNotesDelivered:ShowPatchNotes()
     local pnd = AceGUI:Create("Window-PND")
     pnd:SetTitle("|cff00B4FFThe Weekly Mrrgl, |r|cffffffff" ..
         PATCH_NOTES.version .. "." .. PATCH_NOTES.build .. "." .. PATCH_NOTES.hotfix .. "|r")
-    pnd:SetTitleFont("Fonts\\FRIZQT__.TTF", 14, "OUTLINE")
+    pnd:SetTitleFont("Fonts\\FRIZQT__.TTF", 16, "OUTLINE")
     pnd:SetTitleAlignment("CENTER")
 
     local resetButton = AceGUI:Create("IconButton-PND")
     resetButton:SetImage("Interface\\AddOns\\PatchNotesDelivered\\assets\\CustomIcon-White-Reset.tga")
     resetButton:SetTooltip("Reset Size")
-    resetButton:SetSize(14, 14)
+    resetButton:SetSize(16, 16)
     resetButton:SetCallback("OnClick", function()
-        PatchNotesFrame.frame:SetSize(800, 600)
+        PatchNotesFrame.frame:SetSize(1000, 700)
     end)
     pnd:AddButton(resetButton)
 
@@ -221,24 +222,26 @@ function PatchNotesDelivered:ShowPatchNotes()
     scroll:SetFullHeight(true)
     pnd:AddChild(scroll)
 
-    CreateSectionLabel(scroll, PATCH_NOTES.gameChangesHotfixes, "\n    |cffF89406Hotfix Changes|r\n\n", "\n\n")
-    CreateSectionLabel(scroll, PATCH_NOTES.gameChangesPatch, "    |cff00B4FFPatch Changes|r\n\n", "\n\n")
+    local bodyOptions = { font = "Fonts\\FRIZQT__.TTF", size = 14, flags = "" }
 
-    CreateSectionLabel(scroll, PATCH_NOTES.deathKnightChangesPatch, "    |cff00B4FFPatch Class Changes|r\n\n", "\n")
-    CreateSectionLabel(scroll, PATCH_NOTES.demonHunterChangesPatch, "\n", "\n")
-    CreateSectionLabel(scroll, PATCH_NOTES.druidChangesPatch, "\n", "\n")
-    CreateSectionLabel(scroll, PATCH_NOTES.evokerChangesPatch, "\n", "\n")
-    CreateSectionLabel(scroll, PATCH_NOTES.hunterChangesPatch, "\n", "\n")
-    CreateSectionLabel(scroll, PATCH_NOTES.mageChangesPatch, "\n", "\n")
-    CreateSectionLabel(scroll, PATCH_NOTES.monkChangesPatch, "\n", "\n")
-    CreateSectionLabel(scroll, PATCH_NOTES.paladinChangesPatch, "\n", "\n")
-    CreateSectionLabel(scroll, PATCH_NOTES.priestChangesPatch, "\n", "\n")
-    CreateSectionLabel(scroll, PATCH_NOTES.rogueChangesPatch, "\n", "\n")
-    CreateSectionLabel(scroll, PATCH_NOTES.shamanChangesPatch, "\n", "\n")
-    CreateSectionLabel(scroll, PATCH_NOTES.warlockChangesPatch, "\n", "\n")
-    CreateSectionLabel(scroll, PATCH_NOTES.warriorChangesPatch, "\n", "\n")
+    CreateSectionLabel(scroll, PATCH_NOTES.gameChangesHotfixes, "\n    |cffF89406Hotfix Changes|r\n\n", "\n\n", bodyOptions)
+    CreateSectionLabel(scroll, PATCH_NOTES.gameChangesPatch, "    |cff00B4FFPatch Changes|r\n\n", "\n\n", bodyOptions)
 
-    CreateSectionLabel(scroll, PATCH_NOTES.addonChanges, "    |cff32CD32Addon Changes|r\n\n")
+    CreateSectionLabel(scroll, PATCH_NOTES.deathKnightChangesPatch, "    |cff00B4FFPatch Class Changes|r\n\n", "\n", bodyOptions)
+    CreateSectionLabel(scroll, PATCH_NOTES.demonHunterChangesPatch, "\n", "\n", bodyOptions)
+    CreateSectionLabel(scroll, PATCH_NOTES.druidChangesPatch, "\n", "\n", bodyOptions)
+    CreateSectionLabel(scroll, PATCH_NOTES.evokerChangesPatch, "\n", "\n", bodyOptions)
+    CreateSectionLabel(scroll, PATCH_NOTES.hunterChangesPatch, "\n", "\n", bodyOptions)
+    CreateSectionLabel(scroll, PATCH_NOTES.mageChangesPatch, "\n", "\n", bodyOptions)
+    CreateSectionLabel(scroll, PATCH_NOTES.monkChangesPatch, "\n", "\n", bodyOptions)
+    CreateSectionLabel(scroll, PATCH_NOTES.paladinChangesPatch, "\n", "\n", bodyOptions)
+    CreateSectionLabel(scroll, PATCH_NOTES.priestChangesPatch, "\n", "\n", bodyOptions)
+    CreateSectionLabel(scroll, PATCH_NOTES.rogueChangesPatch, "\n", "\n", bodyOptions)
+    CreateSectionLabel(scroll, PATCH_NOTES.shamanChangesPatch, "\n", "\n", bodyOptions)
+    CreateSectionLabel(scroll, PATCH_NOTES.warlockChangesPatch, "\n", "\n", bodyOptions)
+    CreateSectionLabel(scroll, PATCH_NOTES.warriorChangesPatch, "\n", "\n", bodyOptions)
+
+    CreateSectionLabel(scroll, PATCH_NOTES.addonChanges, "    |cff32CD32Addon Changes|r\n\n", "", bodyOptions)
 
     PatchNotesFrame = pnd
 end
