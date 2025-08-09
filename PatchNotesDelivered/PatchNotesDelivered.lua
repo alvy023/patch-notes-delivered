@@ -74,7 +74,7 @@ function PatchNotesDelivered:PLAYER_LOGIN()
     if PATCH_NOTES == nil then
         PATCH_NOTES = BuildPatchNotes()
     end
-    if self.db.profile.showOnUpdate and self:ShouldShowPatchNotes() then
+    if self:ShouldShowPatchNotes() then
         self:ShowPatchNotes()
     end
 end
@@ -153,6 +153,9 @@ end
 --- @param:
 --- @return:
 function PatchNotesDelivered:ShouldShowPatchNotes()
+    -- User has disabled the option to show patch notes
+    if not self.db.profile.showOnUpdate then return false end
+
     local version, build, date, tocVersion = GetBuildInfo()
     local notesVersion = PATCH_NOTES.version
     local notesBuild = PATCH_NOTES.build
