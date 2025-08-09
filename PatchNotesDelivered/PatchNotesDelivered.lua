@@ -222,7 +222,7 @@ function PatchNotesDelivered:ShowPatchNotes()
     scroll:SetFullHeight(true)
     pnd:AddChild(scroll)
 
-    bodyOptions = { font = "Fonts\\FRIZQT__.TTF", size = 14, flags = "" }
+    local bodyOptions = { font = "Fonts\\FRIZQT__.TTF", size = 14, flags = "" }
 
     CreateSectionLabel(scroll, PATCH_NOTES.gameChangesHotfixes, "\n    |cffF89406Hotfix Changes|r\n\n", "\n\n", bodyOptions)
     CreateSectionLabel(scroll, PATCH_NOTES.gameChangesPatch, "    |cff00B4FFPatch Changes|r\n\n", "\n\n", bodyOptions)
