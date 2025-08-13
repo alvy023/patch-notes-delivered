@@ -14,148 +14,163 @@ PatchNotesDelivered_Notes_1120 = {
     gameChangesHotfixes = [[
         August 12, 2025
 
-    Classes
-        • Death Knight
-            > Frost
-                + Obliterate damage reduced by 5%.
-                + Rider of the Apocalypse: Mawsworn Menace now increases the damage of Obliterate by 5% (was 10%).
-                + Rider of the Apocalypse: Hollow Sentinel’s Wake 2-piece now increases Trollbane’s Obliterate damage by 15% (was 35%).
-                + Deathbringer: Exterminate first scythe damage increased by 10%.
-                + Resolved an issue causing Howling Blast to not consume Rime procs at high Haste levels.
-                + Resolved an issue causing Frost Strike to not generate Killing Machine in Obliteration windows at high Haste levels.
-                + Resolved an issue causing Frostbane casts to fail at high Haste levels if it is cast as soon as it is available.
-        • Demon Hunter
-            > Havoc
-                + All ability damage increased by 5%. Does not apply to PvP combat.
-        • Druid
-            > Balance
-                + All ability damage increased by 8%.
-                + Keeper of the Grove: Ornaments of the Mother Eagle 4-piece now accumulates 3% of damage done (was 2%) and Dryad’s Favor is now capped at 10x spellpower (was 6x) and splashes 15% (was 20%) of its damage onto nearby enemies.
-                + Elune’s Chosen: Ornaments of the Mother Eagle 2-piece Starfire damage increase changed to 20% (was 25%), and has a 40% chance (was 50%) to launch a Starsurge at 45% effectiveness (was 50%).
-                + Elune’s Chosen: Ornaments of the Mother Eagle 4-piece Split Starsurges deal damage at 40% effectiveness (was 80%).
-            > Feral
-                + Ferocious Bite and Ravage primary target damage increased by 6%.
-                + Shred damage increased by 5%.
-                + Sabertooth causes Ferocious Bite to increase damage taken from your bleeds and other periodic effects by 6% per combo point (was 5%).
-                + Wildstalker: Bloodseeker Vines damage increased by 5%.
-            > Restoration
-                + Wildstalker: Fixed a bug causing the Ornaments of the Mother Eagle 4-piece bonus to generate extra Symbiotic Blooms for Regrowths cast by Rampant Growth.
-                + Wildstalker: Fixed a bug preventing Twin Sprouts from generating extra Bloodseeker Vines or Symbiotic Blooms from the ones created by the Ornaments of the Mother Eagle 4-piece set bonus.
-                + Wildstalker: Symbiotic Bloom and Bursting Growth healing increased by 15%.
-                + Wildstalker: Ornaments of the Mother Eagle 2-piece bonus increases the rate of Symbiotic Bloom growth by 45% (was 30%).
-                + Wildstalker: Ornaments of the Mother Eagle 4-piece now causes Symbiotic Bloom healing to have a 35% (was 20%) chance to trigger Bursting Growth at 100% effectiveness (was 80%).
-                > Developers’ notes: The bug involving Rampant Growth was generating a large number of unintended Symbiotic Blooms, which consolidated a lot of Wildstalker’s healing power into the 4-piece and Clearcasting procs. We’ve added healing power to counteract the healing loss from the bug fix.
-        • Hunter
-            > Beast Mastery
-                + Tireless Collector’s Bounties - 2-piece chance to fire a free Barbed Shot reduced by 50%.
-        • Mage
-            > Frost
-                + All damage dealt reduced by 3%. Does not apply to PvP combat.
-        • Monk
-            > Brewmaster
-                + Shado-Pan: Crash of Fallen Storms 2-piece bonus Flurry Strikes deal 10% increased damage (was 20%).
-                + Shado-Pan: Crash of Fallen Storms 4-piece bonus Flurry Charge generation increased by 30% (was 50%).
-                + Shado-Pan: Damage dealt by Flurry Strikes from Wisdom of the Wall reduced by 20%.
-        • Priest
-            > Shadow
-                + Fixed an issue causing Shadow Word: Pain and Vampiric Touch applications from Shadow Crash to ignore line of sight.
-        • Shaman
-            > Enhancement
-                + Lava Lash damage increased by 15%.
-                + Windstrike damage increased by 20%.
-                + Totemic: Surging Bolt damage increased by 25%.
-                + Totemic: Searing Bolt damage increased by 35%.
-                + Stormbringer: Awakening Storm damage increased by 35%.
-                + Stormstrike damage increased by 10%. Does not affect Windstrike.
-                + Elemental Blast damage increased by 8%.
-                + Stormbringer: Tempest single target damage increased by 8%.
-        • Warlock
-            + Threatening Presence now increases the threat generation of your Voidwalker and Felguard by 950% (was 400%).
-            > Affliction
-                + Spliced Fiendtrader’s Influence 2-piece set bonus adjusted - Jackpot! chance reduced by 30%.
-            > Demonology
-                + Wild Imp damage reduced by 20%.
-                + Immutable Hatred damage reduced by 30%.
-            > Destruction
-                + Diabolist: Inquisitor’s Feast of Madness 2-piece has been adjusted – Eye Blast damage reduced by 45%.
-        • Warrior
-            > Protection
-                + Mountain Thane: Damage dealt by Ionizing Strikes reduced by 30%.
+            Classes
+                • Death Knight
+                    > Frost
+                        + Obliterate damage reduced by 5%.
+                        + Rider of the Apocalypse: Mawsworn Menace now increases the damage of Obliterate by 5% (was 10%).
+                        + Rider of the Apocalypse: Hollow Sentinel’s Wake 2-piece now increases Trollbane’s Obliterate damage by 15% (was 
+                          35%).
+                        + Deathbringer: Exterminate first scythe damage increased by 10%.
+                        + Resolved an issue causing Howling Blast to not consume Rime procs at high Haste levels.
+                        + Resolved an issue causing Frost Strike to not generate Killing Machine in Obliteration windows at high Haste 
+                          levels.
+                        + Resolved an issue causing Frostbane casts to fail at high Haste levels if it is cast as soon as it is available.
+                • Demon Hunter
+                    > Havoc
+                        + All ability damage increased by 5%. Does not apply to PvP combat.
+                • Druid
+                    > Balance
+                        + All ability damage increased by 8%.
+                        + Keeper of the Grove: Ornaments of the Mother Eagle 4-piece now accumulates 3% of damage done (was 2%) and Dryad’s 
+                          Favor is now capped at 10x spellpower (was 6x) and splashes 15% (was 20%) of its damage onto nearby enemies.
+                        + Elune’s Chosen: Ornaments of the Mother Eagle 2-piece Starfire damage increase changed to 20% (was 25%), and has a
+                          40% chance (was 50%) to launch a Starsurge at 45% effectiveness (was 50%).
+                        + Elune’s Chosen: Ornaments of the Mother Eagle 4-piece Split Starsurges deal damage at 40% effectiveness (was 80%).
+                    > Feral
+                        + Ferocious Bite and Ravage primary target damage increased by 6%.
+                        + Shred damage increased by 5%.
+                        + Sabertooth causes Ferocious Bite to increase damage taken from your bleeds and other periodic effects by 6% per 
+                          combo point (was 5%).
+                        + Wildstalker: Bloodseeker Vines damage increased by 5%.
+                    > Restoration
+                        + Wildstalker: Fixed a bug causing the Ornaments of the Mother Eagle 4-piece bonus to generate extra Symbiotic 
+                          Blooms for Regrowths cast by Rampant Growth.
+                        + Wildstalker: Fixed a bug preventing Twin Sprouts from generating extra Bloodseeker Vines or Symbiotic Blooms from 
+                          the ones created by the Ornaments of the Mother Eagle 4-piece set bonus.
+                        + Wildstalker: Symbiotic Bloom and Bursting Growth healing increased by 15%.
+                        + Wildstalker: Ornaments of the Mother Eagle 2-piece bonus increases the rate of Symbiotic Bloom growth by 45% (was 
+                          30%).
+                        + Wildstalker: Ornaments of the Mother Eagle 4-piece now causes Symbiotic Bloom healing to have a 35% (was 20%) 
+                          chance to trigger Bursting Growth at 100% effectiveness (was 80%).
+                        + Developers’ notes: The bug involving Rampant Growth was generating a large number of unintended Symbiotic Blooms, 
+                          which consolidated a lot of Wildstalker’s healing power into the 4-piece and Clearcasting procs. We’ve added 
+                          healing power to counteract the healing loss from the bug fix.
+                • Hunter
+                    > Beast Mastery
+                        + Tireless Collector’s Bounties - 2-piece chance to fire a free Barbed Shot reduced by 50%.
+                • Mage
+                    > Frost
+                        + All damage dealt reduced by 3%. Does not apply to PvP combat.
+                • Monk
+                    > Brewmaster
+                        + Shado-Pan: Crash of Fallen Storms 2-piece bonus Flurry Strikes deal 10% increased damage (was 20%).
+                        + Shado-Pan: Crash of Fallen Storms 4-piece bonus Flurry Charge generation increased by 30% (was 50%).
+                        + Shado-Pan: Damage dealt by Flurry Strikes from Wisdom of the Wall reduced by 20%.
+                • Priest
+                    > Shadow
+                        + Fixed an issue causing Shadow Word: Pain and Vampiric Touch applications from Shadow Crash to ignore line of 
+                          sight.
+                • Shaman
+                    > Enhancement
+                        + Lava Lash damage increased by 15%.
+                        + Windstrike damage increased by 20%.
+                        + Totemic: Surging Bolt damage increased by 25%.
+                        + Totemic: Searing Bolt damage increased by 35%.
+                        + Stormbringer: Awakening Storm damage increased by 35%.
+                        + Stormstrike damage increased by 10%. Does not affect Windstrike.
+                        + Elemental Blast damage increased by 8%.
+                        + Stormbringer: Tempest single target damage increased by 8%.
+                • Warlock
+                    + Threatening Presence now increases the threat generation of your Voidwalker and Felguard by 950% (was 400%).
+                    > Affliction
+                        + Spliced Fiendtrader’s Influence 2-piece set bonus adjusted - Jackpot! chance reduced by 30%.
+                    > Demonology
+                        + Wild Imp damage reduced by 20%.
+                        + Immutable Hatred damage reduced by 30%.
+                    > Destruction
+                        + Diabolist: Inquisitor’s Feast of Madness 2-piece has been adjusted – Eye Blast damage reduced by 45%.
+                • Warrior
+                    > Protection
+                        + Mountain Thane: Damage dealt by Ionizing Strikes reduced by 30%.
 
-    Player versus Player
-        • Death Knight
-            > Frost
-                + Frost Strike damage reduced by 15% in PvP combat.
-            > Unholy
-                + Festering Wound damage reduced by 20% in PvP combat.
-        • Druid
-            > Feral
-                + All damage reduced by 8% in PvP combat.
-        • Mage
-            > Arcane
-                + Nether Flux now increases the damage an enemy receives from the next targeted spell by 40% (was 100%).
-            > Fire
-                + Meteor direct damage reduced by 40% in PvP combat.
-            > Frost
-                + All damage reduced by 10% in PvP.
-        • Paladin
-            > Holy
-                + All healing reduced by 12% in PvP combat.
-                + Divine Plea (PvP talent) duration increased to 30 seconds (was 20 seconds).
-        • Priest
-            > Shadow
-                + Void Volley damage reduced by 30% in PvP combat.
-        • Rogue
-            > Assassination
-                + Garrote damage reduced by 15% in PvP combat.
-        • Warlock
-            > Diabolist: Fixed an issue where Summon Demonic Gateway would cause Diabolic Ritual to work incorrectly.
-            > Demonology
-                + All damage reduced by 5% in PvP combat.
+            Player versus Player
+                • Death Knight
+                    > Frost
+                        + Frost Strike damage reduced by 15% in PvP combat.
+                    > Unholy
+                        + Festering Wound damage reduced by 20% in PvP combat.
+                • Druid
+                    > Feral
+                        + All damage reduced by 8% in PvP combat.
+                • Mage
+                    > Arcane
+                        + Nether Flux now increases the damage an enemy receives from the next targeted spell by 40% (was 100%).
+                    > Fire
+                        + Meteor direct damage reduced by 40% in PvP combat.
+                    > Frost
+                        + All damage reduced by 10% in PvP.
+                • Paladin
+                    > Holy
+                        + All healing reduced by 12% in PvP combat.
+                        + Divine Plea (PvP talent) duration increased to 30 seconds (was 20 seconds).
+                • Priest
+                    > Shadow
+                        + Void Volley damage reduced by 30% in PvP combat.
+                • Rogue
+                    > Assassination
+                        + Garrote damage reduced by 15% in PvP combat.
+                • Warlock
+                    > Diabolist: Fixed an issue where Summon Demonic Gateway would cause Diabolic Ritual to work incorrectly.
+                    > Demonology
+                        + All damage reduced by 5% in PvP combat.
 
-    Delves
-        • Players using Waygates to change levels in Archival Assault should no longer break stealth.
-        • Enemies now teleport after players who move up or down levels in Archival Assault more reliably.
-        • Fixed a bug in Sidestreet Sluice where Maulspike would run back to his spawn point instead of respawning.
+            Delves
+                • Players using Waygates to change levels in Archival Assault should no longer break stealth.
+                • Enemies now teleport after players who move up or down levels in Archival Assault more reliably.
+                • Fixed a bug in Sidestreet Sluice where Maulspike would run back to his spawn point instead of respawning.
 
-    Dungeons and Raids
-        • Ara-Kara, City of Echoes
-            > Avanoxx
-                + Insatiable’s damage increase reduced to 30% (was 50%).
-                + Starved Crawlers can no longer critical hit on their melee attacks.
-        • The Dawnbreaker
-            > Speaker Shadowcrown
-                + Shadow Shroud’s healing absorb reduced by 33%.
-                + Fixed an issue that caused Shadow Shroud’s healing absorb to not scale with keystone level.
-        • Eco-Dome Al’dani
-            + Adjusted the spawn locations of Frenzied Mites to be more consistent.
-        • Halls of Atonement
-            > High Adjudicator Aleez
-                + Pulse From Beyond’s damage now occurs every 1.5 second (was every 1 second).
-            > Lord Chamberlain
-                + Stigma of Pride removed.
-                + Ritual of Woe’s group damage when it hits a statue reduced by 38%.
-                + Resolved an issue where Lord Chamberlain's statues collision could persist.
-                + Resolved an issue where Lord Chamberlain's Sinstone Statues did not inflict damage to players in their path during Telekinetic Onslaught.
-                + Reduced the damage of Telekinetic Collision by 30%.
-        • Tazavesh, the Veiled Market
-            + Addressed an issue where Adorned Overseers’s Drifting Star can be fired at a wrong angle.
-            + Addressed an issue where So'azmi will stop using his abilities after being interrupted by Solar Beams during Double Technique / Triple Technique.
-            + Addressed an issue where Zo'gron's Crowd Control can go off if he is defeated while channeling.
-        • Liberation of Undermine
-            > Chrome King Gallywix
-                + Resolved an issue that caused the visual for Haywire Environment to go haywire.
+            Dungeons and Raids
+                • Ara-Kara, City of Echoes
+                    > Avanoxx
+                        + Insatiable’s damage increase reduced to 30% (was 50%).
+                        + Starved Crawlers can no longer critical hit on their melee attacks.
+                • The Dawnbreaker
+                    > Speaker Shadowcrown
+                        + Shadow Shroud’s healing absorb reduced by 33%.
+                        + Fixed an issue that caused Shadow Shroud’s healing absorb to not scale with keystone level.
+                • Eco-Dome Al’dani
+                    + Adjusted the spawn locations of Frenzied Mites to be more consistent.
+                • Halls of Atonement
+                    > High Adjudicator Aleez
+                        + Pulse From Beyond’s damage now occurs every 1.5 second (was every 1 second).
+                    > Lord Chamberlain
+                        + Stigma of Pride removed.
+                        + Ritual of Woe’s group damage when it hits a statue reduced by 38%.
+                        + Resolved an issue where Lord Chamberlain's statues collision could persist.
+                        + Resolved an issue where Lord Chamberlain's Sinstone Statues did not inflict damage to players in their path during
+                          Telekinetic Onslaught.
+                        + Reduced the damage of Telekinetic Collision by 30%.
+                • Tazavesh, the Veiled Market
+                    + Addressed an issue where Adorned Overseers’s Drifting Star can be fired at a wrong angle.
+                    + Addressed an issue where So'azmi will stop using his abilities after being interrupted by Solar Beams during Double 
+                      Technique / Triple Technique.
+                    + Addressed an issue where Zo'gron's Crowd Control can go off if he is defeated while channeling.
+                • Liberation of Undermine
+                    > Chrome King Gallywix
+                        + Resolved an issue that caused the visual for Haywire Environment to go haywire.
 
-    Items and Rewards
-        • Fixed a bug that prevented Visions of N'zoth Revisited items in Season 3 from working with the S.A.D. Season 3 socketer. Season 3 items that drop after this fix can now be socketed.
-        • Resolved an issue where some World Quests were showing an incorrect low gold value as their primary reward.
+            Items and Rewards
+                • Fixed a bug that prevented Visions of N'zoth Revisited items in Season 3 from working with the S.A.D. Season 3 socketer. 
+                  Season 3 items that drop after this fix can now be socketed.
+                • Resolved an issue where some World Quests were showing an incorrect low gold value as their primary reward.
 
-    K’aresh
-        • Devourer Mites from the Devourer Attack: Tazavesh event should now despawn after a short delay once the event ends.
+            K’aresh
+                • Devourer Mites from the Devourer Attack: Tazavesh event should now despawn after a short delay once the event ends.
 
-    Quests
-        • “Sparks of War: K'aresh” now correctly appears in the correct section in the quest log.
-        • The quest “Crest Transmutation” is once again available.
+            Quests
+                • “Sparks of War: K'aresh” now correctly appears in the correct section in the quest log.
+                • The quest “Crest Transmutation” is once again available.
 
         August 8, 2025
 
