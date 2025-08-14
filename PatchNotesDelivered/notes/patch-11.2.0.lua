@@ -10,8 +10,41 @@
 PatchNotesDelivered_Notes_1120 = {
     version = "11.2.0",
     build = "62493",
-    hotfix = 3,
+    hotfix = 4,
     gameChangesHotfixes = [[
+        August 13, 2025
+
+    Classes
+        • Druid
+            ► Restoration
+                + Keeper the Grove: Fixed a bug causing Swiftmends enhanced by the Ornaments of the Mother Eagle 4-piece to not splash healing to allies.
+        • Hunter
+            + Fixed an issue causing Precise Shots to not grant its global cooldown reduction effect if its consumption was spell-queued after Aimed Shot.
+        • Mage
+            + Sunfury: Fixed an issue causing Gravity Lapse to occasionally ignore line of sight.
+            ► Arcane
+                + Nether Flux no longer has a grace period after receiving damage from Arcane Missiles.
+                + Fixed an issue causing Nether Flux to be castable while silenced.
+                + Fixed an issue causing the 2-piece and 4-piece set bonus PvP-only reductions to not apply correctly.
+            ► Fire
+                + Fixed an issue where multiple casts of Fireball could benefit from one instance of Flame Accelerant.
+        • Paladin
+            ► Protection
+                + Fixed an issue with Sanctuary and Undisputed Ruling where players could lose the benefits of Consecration if two or more were active when the first expired.
+        • Warlock
+            + Diabolist: Fixed an issue where the Manaforge Omega 2-piece tier set bonus was doing the incorrect amount of damage.
+
+    Dungeons
+        + Addressed an issue where Lindormi can fail to trade keystones with players after a Mythic+ dungeon is completed within time limit.
+        • Ara-Kara, City of Echoes
+            + Addressed an issue where Cultivated Poison can be applied to the boss herself when there are fewer than 3 targets.
+
+    Player versus Player
+        • Conqueror's Astral Lacquer and Conqueror's Astral Varnish may now be purchased for Conquest to add Season 3 PvP item-level to Season 3 class set armor.
+
+    Quests
+        • Fixed an issue that can block progression if "Return to the Veiled Market" is attempted while the player is on the quest "Repossessed!" at the same time.
+
         August 12, 2025
 
             Classes
