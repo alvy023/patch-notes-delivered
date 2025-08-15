@@ -1759,6 +1759,11 @@ PatchNotesDelivered_Notes_1120 = {
     ]],
 
     addonChanges = [[
+        August 14, 2025
+
+            • Added dropdown menu to select patch notes version.
+            • Added persistent window sizing.
+
         August 8, 2025
 
             • Updated patch notes formatting and styling for clarity and consistency.
