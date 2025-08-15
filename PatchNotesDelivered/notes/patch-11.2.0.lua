@@ -10,8 +10,87 @@
 PatchNotesDelivered_Notes_1120 = {
     version = "11.2.0",
     build = "62493",
-    hotfix = 3,
+    hotfix = 5,
     gameChangesHotfixes = [[
+        August 14, 2025
+
+            Achievements
+                • Addressed an issue where Keystone Hero: Tazavesh, the Veiled Market was not earned upon completing both Tazavesh: Streets
+                  of Wonder and Tazavesh: So'leah's Gambit in a +10 or higher within the time limit.
+                • Addressed an issue where the Keystone Hero achievement is not granted upon completion of a +10 or higher keystone in Halls
+                  of Atonement within the time limit.
+
+            Delves
+                • Fixed an issue where some Delve rewards would be awarded at an incorrect item level.
+                • Fixed an issue where completing a Bountiful Delve would not grant any progress toward Delver's Journey.
+                • Kriegval’s Rest
+                    > Exiting the Ethereal Routing Station via the Ethereal Portal will now always spawn the corresponding entrance portal.
+
+            Items and Rewards
+                • Timewalking Raids (including the Timewalking quest cache) no longer drop cloaks.
+                • Fixed an issue where armor converted with the Catalyst could be ineligible for Conqueror's Astral Varnish and Conqueror's
+                  Astral Lacquer.
+                • Disabled “The Fate of the Devoured” Warband background, to fix an error that could cause the game to crash. This will
+                  return after it is fixed.
+                • Great Vault rewards unlocked from defeating bosses in Manaforge Omega will scale in item-level based on the hardest boss
+                  killed that week per difficulty.
+                    > Developers’ notes: For example, defeating all eight bosses on Heroic difficulty would cause any items offered from
+                      earlier bosses to scale to 4/6 Hero as dropped from Nexus-King Salhadaar and Dimensius, the All-Devouring. If two
+                      Mythic raid bosses were also defeated to unlock one Mythic raid reward, that item would still be limited to 2/6 Myth,
+                      etc.
+
+            Dungeons
+                • Addressed an issue causing the Group Finder to default a Tazavesh: So'leah's Gambit group to Tazavesh: Streets of Wonder.
+                • Eco-Dome Al'dani
+                    > Addressed an issue causing A'wazj to unintentionally reset.
+                • Tazavesh, the Veiled Market
+                    > Hyperlight Bolt and Brackish Bolt now target random players.
+                    > Addressed an issue where items in Tazavesh's bazaar event can sometimes become uninteractable.
+                    > Addressed an issue where Zo'gron can skip his second Final Warning cast if the health threshold was reached during
+                      the first cast.
+
+            K’aresh
+                • Addressed an issue causing creatures near Reshanor to have their vision obscured.
+
+        August 13, 2025
+
+            Classes
+                • Druid
+                    > Restoration
+                        + Keeper of the Grove: Fixed a bug causing Swiftmends enhanced by the Ornaments of the Mother Eagle 4-piece to not
+                          splash healing to allies.
+                • Hunter
+                    > Fixed an issue causing Precise Shots to not grant its global cooldown reduction effect if its consumption was spell-
+                      queued after Aimed Shot.
+                • Mage
+                    > Sunfury: Fixed an issue causing Gravity Lapse to occasionally ignore line of sight.
+                    > Arcane
+                        + Nether Flux no longer has a grace period after receiving damage from Arcane Missiles.
+                        + Fixed an issue causing Nether Flux to be castable while silenced.
+                        + Fixed an issue causing the 2-piece and 4-piece set bonus PvP-only reductions to not apply correctly.
+                    > Fire
+                        + Fixed an issue where multiple casts of Fireball could benefit from one instance of Flame Accelerant.
+                • Paladin
+                    > Protection
+                        + Fixed an issue with Sanctuary and Undisputed Ruling where players could lose the benefits of Consecration if two
+                          or more were active when the first expired.
+                • Warlock
+                    > Diabolist: Fixed an issue where the Manaforge Omega 2-piece tier set bonus was doing the incorrect amount of damage.
+
+            Dungeons
+                • Addressed an issue where Lindormi can fail to trade keystones with players after a Mythic+ dungeon is completed within
+                  time limit.
+                • Ara-Kara, City of Echoes
+                    > Addressed an issue where Cultivated Poison can be applied to the boss herself when there are fewer than 3 targets.
+
+            Player versus Player
+                • Conqueror's Astral Lacquer and Conqueror's Astral Varnish may now be purchased for Conquest to add Season 3 PvP item-level
+                  to Season 3 class set armor.
+
+            Quests
+                • Fixed an issue that can block progression if "Return to the Veiled Market" is attempted while the player is on the quest
+                  "Repossessed!" at the same time.
+
         August 12, 2025
 
             Classes
@@ -1680,6 +1759,11 @@ PatchNotesDelivered_Notes_1120 = {
     ]],
 
     addonChanges = [[
+        August 14, 2025
+
+            • Added dropdown menu to select patch notes version.
+            • Added persistent window sizing.
+
         August 8, 2025
 
             • Updated patch notes formatting and styling for clarity and consistency.
