@@ -282,23 +282,26 @@ function PatchNotesDelivered:ShowPatchNotes()
     scroll:SetFullHeight(true)
     pnd:AddChild(scroll)
 
-    PopulateScrollSection(scroll)
-
     -- Dropdown Menu
-    local dropdownText = GetNotesListDropdown()
     local dropdown = AceGUI:Create("Dropdown")
+    local dropdownText = GetNotesListDropdown()
     dropdown:SetList(dropdownText)
-    local defaultKey = next(dropdownText)
-    dropdown:SetValue(defaultKey)
-    dropdown:SetWidth(150)
+    dropdown:SetValue(AVAILABLE_NOTES[1].version)
+    dropdown:SetWidth(100)
     dropdown:SetCallback("OnValueChanged", function(widget, event, key)
-        PatchNotesDelivered_Pointer = AVAILABLE_NOTES[key]
+        for _, note in ipairs(AVAILABLE_NOTES) do
+            if note.version == key then
+                PatchNotesDelivered_Pointer = note.data
+                break
+            end
+        end
         PATCH_NOTES = BuildPatchNotes()
         PopulateScrollSection(scroll)
     end)
-    dropdown.frame:SetParent(pnd.frame)
-    dropdown.frame:SetPoint("TOPRIGHT", pnd.frame, "TOPRIGHT", -120, -10)
-    dropdown.frame:SetFrameLevel(pnd.frame:GetFrameLevel() + 10)
+    pnd:AddButton(dropdown)
+
+    -- Add the scroll section
+    PopulateScrollSection(scroll)
 
     PatchNotesFrame = pnd
 end

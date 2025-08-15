@@ -7,13 +7,13 @@
 
 -- Global notes list
 AVAILABLE_NOTES = {
-    ["11.2.0"] = PatchNotesDelivered_Notes_1120,
-    ["11.1.7"] = PatchNotesDelivered_Notes_1117,
-    ["11.1.5"] = PatchNotesDelivered_Notes_1115,
+    { version = "11.2.0", data = PatchNotesDelivered_Notes_1120 },
+    { version = "11.1.7", data = PatchNotesDelivered_Notes_1117 },
+    { version = "11.1.5", data = PatchNotesDelivered_Notes_1115 },
 }
 
 -- Variables used by BuildPatchNotes()
-PatchNotesDelivered_Pointer = PatchNotesDelivered_Notes_1120
+PatchNotesDelivered_Pointer = AVAILABLE_NOTES[1].data
 PatchNotesDelivered_Text = nil
 
 --- Description: Get the patch notes list dropdown
@@ -21,8 +21,8 @@ PatchNotesDelivered_Text = nil
 --- @return dropdown
 function GetNotesListDropdown()
     local dropdown = {}
-    for version, _ in pairs(AVAILABLE_NOTES) do
-        dropdown[version] = version
+    for _, note in ipairs(AVAILABLE_NOTES) do
+        dropdown[note.version] = note.version
     end
     return dropdown
 end
@@ -54,4 +54,3 @@ function BuildPatchNotes()
     }
     return PatchNotesDelivered_Text
 end
-
