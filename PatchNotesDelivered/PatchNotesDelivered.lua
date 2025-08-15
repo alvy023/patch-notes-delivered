@@ -58,6 +58,8 @@ function PatchNotesDelivered:OnInitialize()
             minimap = { hide = false },
             addonCompartment = { hide = false },
             showOnUpdate = true,
+            frameWidth = 1000,
+            frameHeight = 700,
         }
     }, true)
     -- Register minimap button
@@ -124,6 +126,16 @@ function PatchNotesDelivered_OnAddonCompartmentLeave()
 end
 
 -- Functions
+--- Description: Save the size of the patch notes frame
+--- @param: self (PatchNotesDelivered instance)
+--- @param: width (number)
+--- @param: height (number)
+local function SaveFrameSize(self, width, height)
+    self.db.profile.frameWidth = width
+    self.db.profile.frameHeight = height
+end
+
+
 --- Description: Creates a label and adds it to the scroll frame.
 --- @param: scroll (AceGUI ScrollFrame)
 --- @param: text (string)
@@ -147,6 +159,36 @@ local function CreateSectionLabel(scroll, text, title, footer, options)
     end
 
     scroll:AddChild(label)
+end
+
+--- Description: Populate the scroll section with patch notes
+--- @param: scroll (AceGUI ScrollFrame)
+--- @return:
+local function PopulateScrollSection(scroll)
+    scroll:ReleaseChildren()
+    
+    -- Body Options
+    local bodyOptions = { font = "Fonts\\FRIZQT__.TTF", size = 14, flags = "" }
+
+    -- Change Sections
+    CreateSectionLabel(scroll, PATCH_NOTES.gameChangesHotfixes, "\n    |cffF89406Hotfix Changes|r\n\n", "\n\n", bodyOptions)
+    CreateSectionLabel(scroll, PATCH_NOTES.gameChangesPatch, "    |cff00B4FFPatch Changes|r\n\n", "\n\n", bodyOptions)
+
+    CreateSectionLabel(scroll, PATCH_NOTES.deathKnightChangesPatch, "    |cff00B4FFPatch Class Changes|r\n\n", "\n", bodyOptions)
+    CreateSectionLabel(scroll, PATCH_NOTES.demonHunterChangesPatch, "\n", "\n", bodyOptions)
+    CreateSectionLabel(scroll, PATCH_NOTES.druidChangesPatch, "\n", "\n", bodyOptions)
+    CreateSectionLabel(scroll, PATCH_NOTES.evokerChangesPatch, "\n", "\n", bodyOptions)
+    CreateSectionLabel(scroll, PATCH_NOTES.hunterChangesPatch, "\n", "\n", bodyOptions)
+    CreateSectionLabel(scroll, PATCH_NOTES.mageChangesPatch, "\n", "\n", bodyOptions)
+    CreateSectionLabel(scroll, PATCH_NOTES.monkChangesPatch, "\n", "\n", bodyOptions)
+    CreateSectionLabel(scroll, PATCH_NOTES.paladinChangesPatch, "\n", "\n", bodyOptions)
+    CreateSectionLabel(scroll, PATCH_NOTES.priestChangesPatch, "\n", "\n", bodyOptions)
+    CreateSectionLabel(scroll, PATCH_NOTES.rogueChangesPatch, "\n", "\n", bodyOptions)
+    CreateSectionLabel(scroll, PATCH_NOTES.shamanChangesPatch, "\n", "\n", bodyOptions)
+    CreateSectionLabel(scroll, PATCH_NOTES.warlockChangesPatch, "\n", "\n", bodyOptions)
+    CreateSectionLabel(scroll, PATCH_NOTES.warriorChangesPatch, "\n", "\n", bodyOptions)
+
+    CreateSectionLabel(scroll, PATCH_NOTES.addonChanges, "    |cff32CD32Addon Changes|r\n\n", "", bodyOptions)
 end
 
 --- Description: Check if we should show the patch notes
@@ -206,46 +248,60 @@ function PatchNotesDelivered:ShowPatchNotes()
     end
 
     local pnd = AceGUI:Create("Window-PND")
+    local width = self.db.profile.frameWidth or 1000
+    local height = self.db.profile.frameHeight or 700
+    pnd.frame:SetSize(width, height)
+
+    -- Save size on resize
+    pnd.frame:HookScript("OnSizeChanged", function(frame)
+        SaveFrameSize(self, frame:GetWidth(), frame:GetHeight())
+    end)
+
+    -- Set the title area
     pnd:SetTitle("|cff00B4FFThe Weekly Mrrgl, |r|cffffffff" ..
         PATCH_NOTES.version .. "." .. PATCH_NOTES.build .. "." .. PATCH_NOTES.hotfix .. "|r")
     pnd:SetTitleFont("Fonts\\FRIZQT__.TTF", 16, "OUTLINE")
     pnd:SetTitleAlignment("CENTER")
 
+    -- Reset Button
     local resetButton = AceGUI:Create("IconButton-PND")
     resetButton:SetImage("Interface\\AddOns\\PatchNotesDelivered\\assets\\CustomIcon-White-Reset.tga")
     resetButton:SetTooltip("Reset Size")
     resetButton:SetSize(16, 16)
     resetButton:SetCallback("OnClick", function()
-        PatchNotesFrame.frame:SetSize(1000, 700)
+        local defaultWidth, defaultHeight = 1000, 700
+        PatchNotesFrame.frame:SetSize(defaultWidth, defaultHeight)
+        SaveFrameSize(self, defaultWidth, defaultHeight)
     end)
     pnd:AddButton(resetButton)
 
+    -- Scroll Frame
     local scroll = AceGUI:Create("ScrollFrame")
     scroll:SetLayout("Flow")
     scroll:SetFullWidth(true)
     scroll:SetFullHeight(true)
     pnd:AddChild(scroll)
 
-    local bodyOptions = { font = "Fonts\\FRIZQT__.TTF", size = 14, flags = "" }
+    -- Dropdown Menu
+    local dropdown = AceGUI:Create("Dropdown")
+    local dropdownText = GetNotesListDropdown()
+    dropdown:SetList(dropdownText)
+    dropdown:SetValue(AVAILABLE_NOTES[1].version)
+    dropdown:SetWidth(100)
+    dropdown:SetCallback("OnValueChanged", function(widget, event, key)
+        for _, note in ipairs(AVAILABLE_NOTES) do
+            if note.version == key then
+                PatchNotesDelivered_Pointer = note.data
+                break
+            end
+        end
+        PATCH_NOTES = BuildPatchNotes()
+        PopulateScrollSection(scroll)
+    end)
+    pnd:AddButton(dropdown)
 
-    CreateSectionLabel(scroll, PATCH_NOTES.gameChangesHotfixes, "\n    |cffF89406Hotfix Changes|r\n\n", "\n\n", bodyOptions)
-    CreateSectionLabel(scroll, PATCH_NOTES.gameChangesPatch, "    |cff00B4FFPatch Changes|r\n\n", "\n\n", bodyOptions)
-
-    CreateSectionLabel(scroll, PATCH_NOTES.deathKnightChangesPatch, "    |cff00B4FFPatch Class Changes|r\n\n", "\n", bodyOptions)
-    CreateSectionLabel(scroll, PATCH_NOTES.demonHunterChangesPatch, "\n", "\n", bodyOptions)
-    CreateSectionLabel(scroll, PATCH_NOTES.druidChangesPatch, "\n", "\n", bodyOptions)
-    CreateSectionLabel(scroll, PATCH_NOTES.evokerChangesPatch, "\n", "\n", bodyOptions)
-    CreateSectionLabel(scroll, PATCH_NOTES.hunterChangesPatch, "\n", "\n", bodyOptions)
-    CreateSectionLabel(scroll, PATCH_NOTES.mageChangesPatch, "\n", "\n", bodyOptions)
-    CreateSectionLabel(scroll, PATCH_NOTES.monkChangesPatch, "\n", "\n", bodyOptions)
-    CreateSectionLabel(scroll, PATCH_NOTES.paladinChangesPatch, "\n", "\n", bodyOptions)
-    CreateSectionLabel(scroll, PATCH_NOTES.priestChangesPatch, "\n", "\n", bodyOptions)
-    CreateSectionLabel(scroll, PATCH_NOTES.rogueChangesPatch, "\n", "\n", bodyOptions)
-    CreateSectionLabel(scroll, PATCH_NOTES.shamanChangesPatch, "\n", "\n", bodyOptions)
-    CreateSectionLabel(scroll, PATCH_NOTES.warlockChangesPatch, "\n", "\n", bodyOptions)
-    CreateSectionLabel(scroll, PATCH_NOTES.warriorChangesPatch, "\n", "\n", bodyOptions)
-
-    CreateSectionLabel(scroll, PATCH_NOTES.addonChanges, "    |cff32CD32Addon Changes|r\n\n", "", bodyOptions)
+    -- Add the scroll section
+    PopulateScrollSection(scroll)
 
     PatchNotesFrame = pnd
 end
