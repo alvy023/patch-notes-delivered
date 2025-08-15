@@ -10,8 +10,15 @@
 PatchNotesDelivered_Notes_1120 = {
     version = "11.2.0",
     build = "62493",
-    hotfix = 5,
+    hotfix = 6,
     gameChangesHotfixes = [[
+        August 15, 2025
+
+    World
+        • All Arenas now correctly display the number of remaining players on each team.
+        • All Arenas now include timers displaying when the Arena will end.
+        • The UI at the top now correctly displays the teams as being Purple and Gold.
+
         August 14, 2025
 
             Achievements
