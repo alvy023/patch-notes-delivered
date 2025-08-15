@@ -102,19 +102,19 @@ def generate_notes_from_text(scraped_text, existing_notes):
 
     **Hotfix Example (for recent, dated changes):**
     ```
-        August 8, 2025
+        August 7, 2025
 
             Achievements
-                ● Fixed an issue where players could not obtain My Stab-Happy Nemesis after defeating Nexus-Princess Ky'veza in her lair.
+                • Fixed an issue where players could not obtain My Stab-Happy Nemesis after defeating Nexus-Princess Ky'veza in her lair.
 
             Classes
-                ● Priest
-                    ► Shadow
+                • Priest
+                    > Shadow
                         + Resolved an issue causing Shadow Word: Death to not deal additional damage between 20% and 35% health with
                           Deathspeaker talented.
 
             Items
-                ● War Within Season 2 gear should now be convertible for free at the Revival Catalyst.
+                • War Within Season 2 gear should now be convertible for free at the Revival Catalyst.
 
         ...
     ```
@@ -129,10 +129,10 @@ def generate_notes_from_text(scraped_text, existing_notes):
 
         CONTINUE THE WAR WITHIN CAMPAIGN
 
-            ● In Ghosts of K’aresh, the campaign continues as more pieces to a troubling puzzle fall into place. With the release of this
+            • In Ghosts of K’aresh, the campaign continues as more pieces to a troubling puzzle fall into place. With the release of this
               content update players will be able to immerse themselves in The War Within story as it leads up to the next chapter of the
               Worldsoul Saga—Midnight.
-            ● There’s some unfinished business to be had on K’aresh and the specter of an old enemy looms large. Forces with ill-intent are
+            • There’s some unfinished business to be had on K’aresh and the specter of an old enemy looms large. Forces with ill-intent are
               determined to bring forth Dimensius, the All-Devouring once more to finish off the ethereals. Should he arise, Azeroth will
               also be in peril from this dangerous Void Lord.
 
@@ -140,10 +140,10 @@ def generate_notes_from_text(scraped_text, existing_notes):
 
         MAGE
 
-            ● Inspired Intellect now grants 6% increased Intellect (was 3%).
-            ● Time Anomaly has been removed.
-            ● Hero Talents
-                ► Frostfire
+            • Inspired Intellect now grants 6% increased Intellect (was 3%).
+            • Time Anomaly has been removed.
+            • Hero Talents
+                > Frostfire
                     + Fire
                         - Excess Frost now casts Ice Nova at 200% effectiveness (was 150%).
     ```
