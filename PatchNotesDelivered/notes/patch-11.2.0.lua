@@ -57,7 +57,7 @@ PatchNotesDelivered_Notes_1120 = {
             Classes
                 • Druid
                     > Restoration
-                        + Keeper the Grove: Fixed a bug causing Swiftmends enhanced by the Ornaments of the Mother Eagle 4-piece to not
+                        + Keeper of the Grove: Fixed a bug causing Swiftmends enhanced by the Ornaments of the Mother Eagle 4-piece to not
                           splash healing to allies.
                 • Hunter
                     > Fixed an issue causing Precise Shots to not grant its global cooldown reduction effect if its consumption was spell-
