@@ -28,8 +28,8 @@ PatchNotesDelivered_Notes_1120 = {
                 • Priory of the Sacred Flame
                     > Fixed an issue where players would become phased out when entering the fountain near Captain Dailcry.
                 • Tazavesh, the Veiled Market
-                    > Addressed an issue where Unstable Goods can fail to grant player the Throw Package ability during the Mailroom Mayhem
-                      encounter.
+                    > Addressed an issue where Unstable Goods can fail to grant players the Throw Package ability during the Mailroom 
+                      Mayhem encounter.
                     > Tazavesh, Streets of Wonder
                         + Timer increased to 34 minutes (was 32 minutes).
                     > The Grand Menagerie
