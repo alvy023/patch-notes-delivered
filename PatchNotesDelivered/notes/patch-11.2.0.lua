@@ -9,16 +9,58 @@
 --- Max note length [140] ------------------------------------------------------------------------------------------------------------------
 PatchNotesDelivered_Notes_1120 = {
     version = "11.2.0",
-    build = "62493",
-    hotfix = 5,
+    build = "62610",
+    hotfix = 6,
     gameChangesHotfixes = [[
+        August 15, 2025
+
+            Dungeons
+                • Halls of Atonement
+                    > Inquisitor Sigar
+                        + Display of Power's damage radius reduced to 5 yards (was 10 yards).
+                    > Manifestation of Envy
+                        + Movement speed reduced by 42%.
+                        + Melee attacks can no longer critically hit players.
+                    > Lord Chamberlain
+                        + Erupting Torment impact radius reduced from 14 yards to 10 yards, and damage reduced by 22%.
+                • Operation: Floodgate
+                    > Resolved a Swampface issue where Razorchoke Vines could get stuck on players after the fight ended.
+                • Priory of the Sacred Flame
+                    > Fixed an issue where players would become phased out when entering the fountain near Captain Dailcry.
+                • Tazavesh, the Veiled Market
+                    > Addressed an issue where Unstable Goods can fail to grant players the Throw Package ability during the Mailroom 
+                      Mayhem encounter.
+                    > Tazavesh, Streets of Wonder
+                        + Timer increased to 34 minutes (was 32 minutes).
+                    > The Grand Menagerie
+                        + Alcruux's health reduced by 16%.
+                        + Achillite's health reduced by 16%.
+                        + Venza's health reduced by 16%.
+                    > Commander Zo'far
+                        + Shock Mines' duration reduced to 24 seconds (was 36 seconds) and ability cooldown increased by 100%.
+                        + Lethal Force's damage-over-time effect reduced to 3 seconds (was 5 seconds).
+                    > Myza's Oasis
+                        + Zo'gron's Final Warning updated: now pulses Arcane damage every 1 second until the shield is broken.
+                        + Final Warning's shield reduced by 10%.
+                        + Brawling Patron's Throw Drink damage reduced by 50%.
+                    > Bazaar Overseer
+                        + Pierce's damage vulnerability debuff value reduced from 20% to 10%.
+
+            Items
+                • Pyrite Infuser, Mjolnir Runestone, Wrathstone, Eye of the Broodmother, Living Flame, and Elemental Focus Stone effects
+                  decreased by 5%.
+
+            Renown
+                • Fixed an issue causing players to sometimes start from Rank 0 with the Manaforge Vandals instead of Rank 1. Affected 
+                  players have been granted the missing Renown to allow them to reach Rank 2 this week.
+
         August 14, 2025
 
             Achievements
                 • Addressed an issue where Keystone Hero: Tazavesh, the Veiled Market was not earned upon completing both Tazavesh: Streets
                   of Wonder and Tazavesh: So'leah's Gambit in a +10 or higher within the time limit.
-                • Addressed an issue where the Keystone Hero achievement is not granted upon completion of a +10 or higher keystone in Halls
-                  of Atonement within the time limit.
+                • Addressed an issue where the Keystone Hero achievement is not granted upon completion of a +10 or higher keystone in 
+                  Halls of Atonement within the time limit.
 
             Delves
                 • Fixed an issue where some Delve rewards would be awarded at an incorrect item level.
