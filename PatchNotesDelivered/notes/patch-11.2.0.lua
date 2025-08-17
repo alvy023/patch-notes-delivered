@@ -10,8 +10,13 @@
 PatchNotesDelivered_Notes_1120 = {
     version = "11.2.0",
     build = "62610",
-    hotfix = 6,
+    hotfix = 7,
     gameChangesHotfixes = [[
+        August 16, 2025
+
+    Hotfixes
+        • Hotfixes that require a scheduled realm restart to go into effect, or a client-side patch update, are now clearly indicated.
+
         August 15, 2025
 
             Dungeons
