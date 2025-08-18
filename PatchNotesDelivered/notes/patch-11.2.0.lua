@@ -10,8 +10,13 @@
 PatchNotesDelivered_Notes_1120 = {
     version = "11.2.0",
     build = "62610",
-    hotfix = 6,
+    hotfix = 7,
     gameChangesHotfixes = [[
+        August 16, 2025
+
+    WoW
+        • Hotfixes
+
         August 15, 2025
 
             Dungeons
