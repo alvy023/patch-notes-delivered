@@ -10,8 +10,13 @@
 PatchNotesDelivered_Notes_1120 = {
     version = "11.2.0",
     build = "62610",
-    hotfix = 6,
+    hotfix = 7,
     gameChangesHotfixes = [[
+        August 16, 2025
+
+    WoW
+        • Some of the hotfixes below take effect the moment they were implemented, while others may require scheduled realm restarts to go into effect. Please keep in mind that some issues cannot be addressed without a client-side patch update. This list will be updated as additional hotfixes are applied.
+
         August 15, 2025
 
             Dungeons
