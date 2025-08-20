@@ -9,6 +9,9 @@ Patch Notes Delivered (PND) is a lightweight World of Warcraft addon that displa
 - 📌 **Patch Notes on Login**  
   Displays official patch notes and addon changes when a new game build is detected.
 
+- 📝 **Patch Notes Version Dropdown**  
+  Easily switch between different patch notes versions using the dropdown menu in the main window.
+
 - 📬 **Minimap Button**  
   Quickly access patch notes or the options menu via a data broker-compatible minimap button.
 
@@ -18,6 +21,7 @@ Patch Notes Delivered (PND) is a lightweight World of Warcraft addon that displa
 - ⚙️ **Right-Click Options Menu**  
   - Toggle visibility of the minimap button  
   - Toggle visibility of the addon compartment
+  - Toggle displaying notes on login
 
 <br>
 
@@ -54,8 +58,9 @@ patch-notes-delivered
 <br>
 
 ## 🧑 Authors
-- alvy023 - Lead Developer
+- alvy023/alvyOG - Lead Developer
 
+<br>
 <br>
 
 For third-party libraries and licenses, see [ThirdPartyNotices.md](./ThirdPartyNotices.md).
