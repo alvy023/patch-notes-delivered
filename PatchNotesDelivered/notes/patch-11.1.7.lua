@@ -8,10 +8,69 @@
 --- Export global notes variable
 --- Max note length [140] ------------------------------------------------------------------------------------------------------------------
 PatchNotesDelivered_Notes_1117 = {
-    version = "11.1.7",
-    build = "61609",
-    hotfix = 3,
+    version = "11.2.0",
+    build = "62680",
+    hotfix = 4,
     gameChangesHotfixes = [[
+        August 4, 2025
+
+    Classes
+        • Death Knight
+            > Players who swap from Frost specialization to a different specialization and use Blood Tap on their Blood Runes will no
+              longer erroneously convert their Blood Runes into permanent Death Runes.
+        • Monk
+            > When Brewmaster Monks use Provoke to taunt a target away from a currently active tank that has attack power active
+              from Vengeance, they are now correctly granted 50% of the previous tank's Vengeance value.
+        • Priest
+            > Battleground flags are now immediately dropped when the priest transforms into a Spirit of Redemption, as intended.
+            > Priests can no longer cast Leap of Faith and pull flag carriers up to the graveyard in Twin Peaks.
+
+    Pet Battles
+        • Hoplet no longer has Moon Tears as both of its 2nd slot options; one is replaced by Moon Dance.
+
+    Player versus Player
+        • The Flag will now cap immediately in Twin Peaks when returned to the base if there is a player standing on the cap
+          point. Previously players had to move off of the capture point and then back. This mirrors how it occurs in Warsong Gulch.
+
+    Quests
+        • Resolved inconsistencies with the Elder Charms of Good Fortune quest.
+
+    Transmog
+        • The Valorous Dreadnaught set now has the correct appearance on all pieces.
+
+July 30, 2025
+
+    Classes
+        • Fixed a bug that caused macros for some spells, such as Charge, Jab, and Sprouting Mushrooms to incorrectly return the
+          "Spell not Learned" error.
+        • Druid
+            > Guardian
+                + Rejuvenation no longer resets the swing timer while Heart of the Wild is active.
+                + Heart of the Wild's cooldown refund now only triggers if the player is shifting into Bear Form.
+                - Developers’ notes: This cooldown refund for Guardian druids will now only trigger if the player has been out
+                  of Bear Form for at least 3 seconds, and will not trigger if the player has not shifted into Bear Form at all
+                  since logging in.
+        • Hunter
+            > The pet ability Growl will now automatically turn off autocasting when entering a dungeon or raid.
+        • Mage
+            > Ring of Frosts cast through Presence of Mind now correctly has a 2 second arming time, which is correctly reduced by Haste.
+        • Monk
+            > Chi Torpedo and Roll can no longer be stopped by a cancelaura macro.
+        • Rogue
+            > Vanishing with Subterfuge talented and then picking up the Shadow Sight debuff in Arena now causes the Rogue to exit stealth.
+
+    Currencies
+        • The Honor Quartermasters Lok'nor Bloodfist and Hayden Christophen now offer players Motes of Harmony for 400 Honor.
+        • The Honor Quartermasters in Pandaria now offer the Honor to Justice conversion.
+        • The Justice Quartermaster Lo ping now offer players Motes of Harmony for 600 Justice Points.
+        • The Justice Quartermaster in Pandaria now offers the Justice to Honor conversion.
+        - Developers’ notes: We feel that it was too disruptive for players to return to Cataclysm vendors to do Honor
+          conversions, and we really like keeping Justice Points relevant for longer.
+
+    Quests
+        • Horde players can now correctly use the Shan'ze Dao and Shado-Pan Garrison portals after completing the quest
+          "Through the Portal".
+
         June 27, 2025
 
             Classes
