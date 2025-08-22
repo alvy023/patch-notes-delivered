@@ -9,9 +9,27 @@
 --- Max note length [140] ------------------------------------------------------------------------------------------------------------------
 PatchNotesDelivered_Notes_1120 = {
     version = "11.2.0",
-    build = "62680",
-    hotfix = 7,
+    build = "62706",
+    hotfix = 8,
     gameChangesHotfixes = [[
+        August 20, 2025
+
+            Classes
+                • Druid
+                    > Balance
+                        + Dream of Cenarius now correctly applies the Eclipse state without delay.
+                • Warlock
+                    + Felhunters and Observers no longer cast their spell lock ability while being out of line-of-sight of their target.
+                    + Summon Incubus is once again available.
+                    + Added Grimoire of Service Incubus.
+                    + Added Grimoire of Supremacy Archincubus.
+                    + Shadow Bolt will now correctly add stacks of Molten Core when the target is below 25%.
+                        > Developers’ notes: Previously Shadow Bolt was only adding an initial stack and could not contribute to more stacks.
+                          This also means that Touch of Chaos will add stacks of Molten Core.
+
+            Player versus Player
+                • In the Dalaran Sewers Arena, Priests can no longer place Lightwells in areas that other players cannot reach.
+
         August 19, 2025
 
             Classes
