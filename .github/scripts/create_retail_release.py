@@ -27,7 +27,7 @@ def parse_local_version_build_hf(notes):
 def generate_release_notes(game_version, game_build, game_hotfix, addon_version, commits=None):
     if commits is None:
         commits = "Updated game version"
-    notes = f"""
+    notes = dedent(f"""\
         # Release Notes
 
         ### Commits:
@@ -40,8 +40,8 @@ def generate_release_notes(game_version, game_build, game_hotfix, addon_version,
 
         ### Addon Version: 
         Version -[ **{addon_version}** ]-
-    """
-    return dedent(notes).strip()
+    """)
+    return notes.strip()
 
 if __name__ == "__main__":
     if len(sys.argv) < 2:
