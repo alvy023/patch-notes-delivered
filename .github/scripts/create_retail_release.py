@@ -37,6 +37,13 @@ def generate_release_notes(game_version, game_build, game_hotfix, addon_version,
         Patch -[ **{game_version}** ]-
         Build  -[ **{game_build}** ]-
         Hotfix -[ \#**{game_hotfix}** ]-
+        ### Commits:
+        {commits}
+
+        ### Game Version: 
+        Patch -[ **{game_version}** ]-
+        Build  -[ **{game_build}** ]-
+        Hotfix -[ \#**{game_hotfix}** ]-
 
         ### Addon Version: 
         Version -[ **{addon_version}** ]-
@@ -45,6 +52,7 @@ def generate_release_notes(game_version, game_build, game_hotfix, addon_version,
 
 if __name__ == "__main__":
     if len(sys.argv) < 2:
+        print("Usage: python create_retail_release.py <NOTES FILE NAME> <COMMITS FILE NAME>")
         print("Usage: python create_retail_release.py <NOTES FILE NAME> <COMMITS FILE NAME>")
         print("Example: python create_retail_release.py patch-11.1.5.lua")
         sys.exit(1)
@@ -60,6 +68,12 @@ if __name__ == "__main__":
     local_game_version, local_game_build, local_game_hotfix = parse_local_version_build_hf(notes_path)
     local_game_version_build_hf = f"{local_game_version}.{local_game_build}.{local_game_hotfix}"
 
+    commits = None
+    if len(sys.argv) == 3:
+        with open(sys.argv[2], "r", encoding="utf-8") as f:
+            commits = f.read().strip()
+
+    release_notes_content = generate_release_notes(local_game_version, local_game_build, local_game_hotfix, addon_version, commits)
     commits = None
     if len(sys.argv) == 3:
         with open(sys.argv[2], "r", encoding="utf-8") as f:
