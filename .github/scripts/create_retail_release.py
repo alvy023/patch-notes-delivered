@@ -25,6 +25,8 @@ def parse_local_version_build_hf(notes):
     return local_game_version.group(1), local_game_build.group(1), local_game_hotfix.group(1)
 
 def generate_release_notes(game_version, game_build, game_hotfix, addon_version, commits=None):
+    if commits is None:
+        commits = "Updated game version"
     notes = f"""
         # Release Notes
 
