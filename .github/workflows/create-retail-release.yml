@@ -28,7 +28,7 @@ jobs:
       - name: Get latest merged dev to main PR number
         id: find_pr
         run: |
-          PR_NUMBER=$(gh pr list --base main --head dev --state merged --sort merged --json number,mergedAt --jq '.[0].number')
+          PR_NUMBER=$(gh pr list --base main --head dev --state merged --json number,mergedAt | jq 'sort_by(.mergedAt) | reverse | .[0].number')
           echo "PR_NUMBER=$PR_NUMBER" >> $GITHUB_ENV
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -37,7 +37,8 @@ jobs:
         id: pr_commits
         run: |
           if [ -n "${{ env.PR_NUMBER }}" ]; then
-            COMMITS=$(gh pr view "${{ env.PR_NUMBER }}" --json commits --jq '.commits[].commit.message' | sed '/^$/d')
+            COMMIT_ID=$(gh pr view "${{ env.PR_NUMBER }}" --json mergeCommit --jq '.mergeCommit.oid')
+            COMMITS=$(gh api repos/${GITHUB_REPOSITORY}/commits/${COMMIT_ID} --jq .commit.message | sed '/^$/d')
             echo "COMMITS<<EOF" >> $GITHUB_ENV
             echo "$COMMITS" >> $GITHUB_ENV
             echo "EOF" >> $GITHUB_ENV
@@ -55,6 +56,7 @@ jobs:
         id: create_release
         run: |
           echo "Fetching local game version/build"
+          python .github/scripts/create_retail_release.py "$NOTES_FILE" commits.txt
           python .github/scripts/create_retail_release.py "$NOTES_FILE" commits.txt
 
       - name: Set full version string
