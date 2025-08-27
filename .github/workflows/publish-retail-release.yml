@@ -35,7 +35,7 @@ jobs:
           python-version: 3.x
 
       - name: Download latest release artifact
-        uses: dawidd6/action-download-artifact@v3
+        uses: dawidd6/action-download-artifact@v6
         with:
           workflow: create-retail-release.yml
           workflow_conclusion: success
@@ -43,7 +43,7 @@ jobs:
           path: dist
 
       - name: Download release notes
-        uses: dawidd6/action-download-artifact@v3
+        uses: dawidd6/action-download-artifact@v6
         with:
           workflow: create-retail-release.yml
           workflow_conclusion: success
