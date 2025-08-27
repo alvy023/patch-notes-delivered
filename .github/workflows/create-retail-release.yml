@@ -37,7 +37,8 @@ jobs:
         id: pr_commits
         run: |
           if [ -n "${{ env.PR_NUMBER }}" ]; then
-            COMMITS=$(gh pr view "${{ env.PR_NUMBER }}" --json commits --jq '.commits[].commit.message' | sed '/^$/d')
+            COMMIT_ID=$(gh pr view "${{ env.PR_NUMBER }}" --json mergeCommit --jq '.mergeCommit.oid')
+            COMMITS=$(gh api repos/${GITHUB_REPOSITORY}/commits/${COMMIT_ID} --jq .commit.message | sed '/^$/d')
             echo "COMMITS<<EOF" >> $GITHUB_ENV
             echo "$COMMITS" >> $GITHUB_ENV
             echo "EOF" >> $GITHUB_ENV
