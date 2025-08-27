@@ -2,6 +2,17 @@ name: Publish Retail Release
 
 on:
   workflow_dispatch:
+    inputs:
+      upload_curseforge:
+        description: 'Upload to CurseForge?'
+        required: false
+        default: 'true'
+        type: boolean
+      upload_wowup:
+        description: 'Upload to WowUp?'
+        required: false
+        default: 'true'
+        type: boolean
 
 jobs:
   publish:
@@ -41,6 +52,7 @@ jobs:
 
       # CURSEFORGE UPLOAD (manual curl)
       - name: Upload to CurseForge
+        if: ${{ github.event.inputs.upload_curseforge == 'true' }}
         env:
           CF_API_KEY: ${{ secrets.CURSEFORGE_API_KEY }}
           ADDON_ID: ${{ secrets.CURSEFORGE_PROJECT_ID }}
@@ -56,12 +68,14 @@ jobs:
 
       # WOWUP UPLOAD (WowUp CLI)
       - name: Install WowUp CLI
+        if: ${{ github.event.inputs.upload_wowup == 'true' }}
         run: |
           wget https://github.com/WowUp/WowUp.CLI/releases/latest/download/wowup-cli-linux-x64.tar.gz
           tar -xzf wowup-cli-linux-x64.tar.gz
           chmod +x wowup
 
       - name: Upload to WowUp
+        if: ${{ github.event.inputs.upload_wowup == 'true' }}
         env:
           WOWUP_API_TOKEN: ${{ secrets.WOWUP_API_TOKEN }}
           WOWUP_ADDON_ID: ${{ secrets.WOWUP_ADDON_ID }}
@@ -71,4 +85,4 @@ jobs:
             --addon-id "$WOWUP_ADDON_ID" \
             --file "$ZIP_FILE" \
             --changelog RELEASE_NOTES.md \
-            --token "$WOW<vscode_annotation details
+            --token "$WOWUP_API_TOKEN"
