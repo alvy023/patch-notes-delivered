@@ -28,7 +28,7 @@ jobs:
       - name: Get latest merged dev to main PR number
         id: find_pr
         run: |
-          PR_NUMBER=$(gh pr list --base main --head dev --state merged --sort merged --json number,mergedAt --jq '.[0].number')
+          PR_NUMBER=$(gh pr list --base main --head dev --state merged --json number,mergedAt | jq 'sort_by(.mergedAt) | reverse | .[0].number')
           echo "PR_NUMBER=$PR_NUMBER" >> $GITHUB_ENV
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
