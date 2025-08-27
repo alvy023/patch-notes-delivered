@@ -77,12 +77,9 @@ def generate_notes_from_text(scraped_text, existing_notes):
         patch_date_instruction = f"The current patch notes span from {patch_newest} to {patch_oldest}. Only return entries with dates newer than {patch_newest}. Ignore any entries with dates before {patch_oldest}."
 
     prompt = f"""
-    You are an expert World of Warcraft player and addon developer. Your task is to process scraped text and update the patch notes for an addon.
-
     **Your Job:**
-    1.  Analyze the "NEW SCRAPED TEXT". Determine if it contains "hotfix" information, "patch note" information, or neither.
-    2.  Ignore any information that does not pertain to the current retail expansion: The War Within (i.e. ignore Mists of Pandaria Classic, 
-        Season of Discovery, WoW Classic Era, and Hardcore)
+    1.  Analyze the "NEW SCRAPED TEXT".
+    2.  **CRITICAL RULE:** You must focus **exclusively** on the current retail expansion: **The War Within**. Completely discard any sections, headings, or bullet points related to other game versions like "Mists of Pandaria Classic", "Season of Discovery", "WoW Classic Era", and "Hardcore". If you see a heading for one of these versions, you must ignore that heading and all text that follows it until you reach a new, relevant section.
     3.  For each section (hotfixes and patch notes), you are provided with the oldest and newest dates currently present in the notes:
         - Only identify entries in the scraped text that are newer than the newest date for that section.
         - Ignore any entries with dates before the oldest date for that section.
@@ -170,10 +167,16 @@ def generate_notes_from_text(scraped_text, existing_notes):
     --- NEW SCRAPED TEXT END ---
     """
 
+    system_instruction = """
+    You are a World of Warcraft patch notes processor. Your task is to process scraped text and update the patch notes for an addon.
+    Your single most important rule is to completely ignore any content that is not for the retail version of the game, "The War Within". You must discard all information for "WoW Classic Era", "Hardcore", "Season of Discovery", and "Mists of Pandaria Classic".
+    """
+
     try:
         response = client.models.generate_content(
-            model="gemini-2.5-flash", 
+            model="gemini-2.5-pro", 
             contents=prompt,
+            system_instruction=system_instruction,
             config={
                 "response_mime_type": "application/json",
                 "thinking_config": types.ThinkingConfig(thinking_budget=0), # Disables thinking

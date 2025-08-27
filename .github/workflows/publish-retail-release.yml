@@ -1,0 +1,88 @@
+name: Publish Retail Release
+
+on:
+  workflow_dispatch:
+    inputs:
+      upload_curseforge:
+        description: 'Upload to CurseForge?'
+        required: false
+        default: 'true'
+        type: boolean
+      upload_wowup:
+        description: 'Upload to WowUp?'
+        required: false
+        default: 'true'
+        type: boolean
+
+jobs:
+  publish:
+    name: Publish Addon to CurseForge and WowUp
+    runs-on: ubuntu-latest
+
+    env:
+      ADDON_NAME: PatchNotesDelivered
+
+    steps:
+      - name: Checkout main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          submodules: recursive
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: 3.x
+
+      - name: Download latest release artifact
+        uses: dawidd6/action-download-artifact@v3
+        with:
+          workflow: create-retail-release.yml
+          workflow_conclusion: success
+          name: dist
+          path: dist
+
+      - name: Download release notes
+        uses: dawidd6/action-download-artifact@v3
+        with:
+          workflow: create-retail-release.yml
+          workflow_conclusion: success
+          name: RELEASE_NOTES.md
+          path: .
+
+      # CURSEFORGE UPLOAD (manual curl)
+      - name: Upload to CurseForge
+        if: ${{ github.event.inputs.upload_curseforge == 'true' }}
+        env:
+          CF_API_KEY: ${{ secrets.CURSEFORGE_API_KEY }}
+          ADDON_ID: ${{ secrets.CURSEFORGE_PROJECT_ID }}
+        run: |
+          ZIP_FILE=$(ls dist/${{ env.ADDON_NAME }}-*.zip | head -n 1)
+          CHANGELOG="RELEASE_NOTES.md"
+          curl -X POST "https://wow.curseforge.com/api/projects/${ADDON_ID}/upload-file" \
+            -H "x-api-token: ${CF_API_KEY}" \
+            -F "file=@${ZIP_FILE}" \
+            -F "changelog=@${CHANGELOG}" \
+            -F "changelogType=markdown" \
+            -F "displayName=$(basename "$ZIP_FILE" .zip)"
+
+      # WOWUP UPLOAD (WowUp CLI)
+      - name: Install WowUp CLI
+        if: ${{ github.event.inputs.upload_wowup == 'true' }}
+        run: |
+          wget https://github.com/WowUp/WowUp.CLI/releases/latest/download/wowup-cli-linux-x64.tar.gz
+          tar -xzf wowup-cli-linux-x64.tar.gz
+          chmod +x wowup
+
+      - name: Upload to WowUp
+        if: ${{ github.event.inputs.upload_wowup == 'true' }}
+        env:
+          WOWUP_API_TOKEN: ${{ secrets.WOWUP_API_TOKEN }}
+          WOWUP_ADDON_ID: ${{ secrets.WOWUP_ADDON_ID }}
+        run: |
+          ZIP_FILE=$(ls dist/${{ env.ADDON_NAME }}-*.zip | head -n 1)
+          ./wowup upload \
+            --addon-id "$WOWUP_ADDON_ID" \
+            --file "$ZIP_FILE" \
+            --changelog RELEASE_NOTES.md \
+            --token "$WOWUP_API_TOKEN"

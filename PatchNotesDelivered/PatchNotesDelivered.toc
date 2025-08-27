@@ -1,6 +1,6 @@
-## Interface: 110107
+## Interface: 110200
 ## Title: Patch Notes Delivered
-## Version: 1.0.1
+## Version: 1.0.4
 ## Notes: Displays patch notes on login and notifies of new versions.
 ## Author: alvy023
 ## SavedVariables: PatchNotesDB
