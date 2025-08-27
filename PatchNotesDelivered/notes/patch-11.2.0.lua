@@ -35,14 +35,14 @@ PatchNotesDelivered_Notes_1120 = {
                     > Holy
                         + Fixed an issue causing Blessing of Summer to sometimes fail to damage large enemies.
                 • Priest
-                    • Resolved an issue causing Halo to sometimes fail to damage large enemies.
+                    > Resolved an issue causing Halo to sometimes fail to damage large enemies.
                     > Archon: Resolved an issue causing additional Halos from Power Surge and Divine Halo to sometimes not deal damage
                       to enemies close to the Priest.
 
             Delves
                 • Fixed an issue where the Sands of K'aresh curio's Sand Devils would not pull enemies in.
-                > The Spiral Weave
-                    + Web Bombs should now properly drop to the ground if you enter combat.
+                • The Spiral Weave
+                    > Web Bombs should now properly drop to the ground if you enter combat.
 
             Dungeons and Raids
                 • Eco-Dome Al'dani
