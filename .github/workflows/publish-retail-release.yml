@@ -34,20 +34,36 @@ jobs:
         with:
           python-version: 3.x
 
-      - name: Download latest release artifact
-        uses: dawidd6/action-download-artifact@v6
-        with:
-          workflow: create-retail-release.yml
-          workflow_conclusion: success
-          path: dist
+      - name: Download latest release zip from GitHub Releases
+        env:
+          GH_TOKEN: ${{ github.token }}
+          ADDON_NAME: ${{ env.ADDON_NAME }}
+        run: |
+          set -e
+          # Get the latest release info
+          release_json=$(gh release view latest --json assets --repo "$GITHUB_REPOSITORY")
+          # Extract the asset name matching our zip
+          asset_name=$(echo "$release_json" | jq -r '.assets[].name' | grep "^${ADDON_NAME}-.*\.zip" | head -n 1)
+          if [ -z "$asset_name" ]; then
+            echo "No matching zip asset found in latest release."
+            exit 1
+          fi
+          # Download the asset
+          mkdir -p dist
+          gh release download latest --repo "$GITHUB_REPOSITORY" --pattern "$asset_name" --dir dist
 
-      - name: Download release notes
-        uses: dawidd6/action-download-artifact@v6
-        with:
-          workflow: create-retail-release.yml
-          workflow_conclusion: success
-          name: RELEASE_NOTES.md
-          path: .
+      - name: Download release notes from GitHub Releases
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -e
+          release_json=$(gh release view latest --json assets --repo "$GITHUB_REPOSITORY")
+          asset_name=$(echo "$release_json" | jq -r '.assets[].name' | grep "^RELEASE_NOTES\.md$" | head -n 1)
+          if [ -z "$asset_name" ]; then
+            echo "No RELEASE_NOTES.md asset found in latest release."
+            exit 1
+          fi
+          gh release download latest --repo "$GITHUB_REPOSITORY" --pattern "$asset_name" --dir .
 
       # CURSEFORGE UPLOAD (manual curl)
       - name: Upload to CurseForge
