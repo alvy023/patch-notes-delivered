@@ -71,4 +71,4 @@ jobs:
             --addon-id "$WOWUP_ADDON_ID" \
             --file "$ZIP_FILE" \
             --changelog RELEASE_NOTES.md \
-            --token "$WOW<vscode_annotation details
+            --token "$WOWUP_API_TOKEN"
