@@ -70,16 +70,19 @@ jobs:
           WOWUP_ADDON_ID: ${{ secrets.WOWUP_ADDON_ID }}
         run: |
           RELEASE_LABEL="${release_asset_name}"
-          CHANGELOG=$(cat RELEASE_NOTES.md | jq -Rs .)
+          CHANGELOG=$(cat RELEASE_NOTES.md)
           SUPPORTED_RETAIL_PATCH=$(grep -oP 'Patch -\[ \*\*\K[0-9]+\.[0-9]+\.[0-9]+(?=\*\* \]-)' RELEASE_NOTES.md | head -n1)
-          # Compose metadata JSON
+          echo "RELEASE_LABEL: $RELEASE_LABEL"
+          echo "SUPPORTED_RETAIL_PATCH: $SUPPORTED_RETAIL_PATCH"
+          echo "CHANGELOG: $CHANGELOG"
+          ls -l dist/
           METADATA=$(jq -n \
-            --arg label "${RELEASE_LABEL}" \
+            --arg label "$RELEASE_LABEL" \
             --arg stability "stable" \
             --arg changelog "$CHANGELOG" \
             --arg patch "$SUPPORTED_RETAIL_PATCH" \
             '{label: $label, stability: $stability, changelog: $changelog, supported_retail_patch: $patch}')
-          # Upload to Wago API
+          echo "METADATA: $METADATA"
           curl -f -X POST \
             -F "metadata=$METADATA" \
             -F "file=@dist/$RELEASE_LABEL" \
