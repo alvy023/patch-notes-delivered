@@ -34,36 +34,18 @@ jobs:
         with:
           python-version: 3.x
 
-      - name: Download latest release zip from GitHub Releases
-        env:
-          GH_TOKEN: ${{ github.token }}
-          ADDON_NAME: ${{ env.ADDON_NAME }}
-        run: |
-          set -e
-          # Get the latest release info
-          release_json=$(gh release view latest --json assets --repo "$GITHUB_REPOSITORY")
-          # Extract the asset name matching our zip
-          asset_name=$(echo "$release_json" | jq -r '.assets[].name' | grep "^${ADDON_NAME}-.*\.zip" | head -n 1)
-          if [ -z "$asset_name" ]; then
-            echo "No matching zip asset found in latest release."
-            exit 1
-          fi
-          # Download the asset
-          mkdir -p dist
-          gh release download latest --repo "$GITHUB_REPOSITORY" --pattern "$asset_name" --dir dist
-
-      - name: Download release notes from GitHub Releases
+      - name: Download latest release items from GitHub Releases
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          set -e
-          release_json=$(gh release view latest --json assets --repo "$GITHUB_REPOSITORY")
-          asset_name=$(echo "$release_json" | jq -r '.assets[].name' | grep "^RELEASE_NOTES\.md$" | head -n 1)
-          if [ -z "$asset_name" ]; then
-            echo "No RELEASE_NOTES.md asset found in latest release."
+          release_asset_name=$(gh release view --json assets --jq ".assets[].name")
+          if [ -z "$release_asset_name" ]; then
+            echo "No release asset found in latest release."
             exit 1
           fi
-          gh release download latest --repo "$GITHUB_REPOSITORY" --pattern "$asset_name" --dir .
+          gh release download --pattern "$release_asset_name" --dir dist
+          gh release view --json body --jq ".body" > RELEASE_NOTES.md
+          echo "release_asset_name=${release_asset_name}" >> $GITHUB_OUTPUT
 
       # CURSEFORGE UPLOAD (manual curl)
       - name: Upload to CurseForge
@@ -72,14 +54,13 @@ jobs:
           CF_API_KEY: ${{ secrets.CURSEFORGE_API_KEY }}
           ADDON_ID: ${{ secrets.CURSEFORGE_PROJECT_ID }}
         run: |
-          ZIP_FILE=$(ls dist/${{ env.ADDON_NAME }}-*.zip | head -n 1)
           CHANGELOG="RELEASE_NOTES.md"
           curl -X POST "https://wow.curseforge.com/api/projects/${ADDON_ID}/upload-file" \
             -H "x-api-token: ${CF_API_KEY}" \
-            -F "file=@${ZIP_FILE}" \
+            -F "file=@${release_asset_name}" \
             -F "changelog=@${CHANGELOG}" \
             -F "changelogType=markdown" \
-            -F "displayName=$(basename "$ZIP_FILE" .zip)"
+            -F "displayName=$(basename "${release_asset_name}" .zip)"
 
       # WOWUP UPLOAD (WowUp CLI)
       - name: Install WowUp CLI
@@ -95,9 +76,8 @@ jobs:
           WOWUP_API_TOKEN: ${{ secrets.WOWUP_API_TOKEN }}
           WOWUP_ADDON_ID: ${{ secrets.WOWUP_ADDON_ID }}
         run: |
-          ZIP_FILE=$(ls dist/${{ env.ADDON_NAME }}-*.zip | head -n 1)
           ./wowup upload \
             --addon-id "$WOWUP_ADDON_ID" \
-            --file "$ZIP_FILE" \
+            --file "$release_asset_name" \
             --changelog RELEASE_NOTES.md \
             --token "$WOWUP_API_TOKEN"
