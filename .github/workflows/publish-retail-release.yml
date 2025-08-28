@@ -73,11 +73,10 @@ jobs:
             '{changelog: $changelog, changelogType: $changelogType, displayName: $displayName, gameVersions: $gameVersions, releaseType: $releaseType}')
           METADATA_CLEAN=$(echo "$METADATA" | tr -d '\n')
           echo "METADATA: $METADATA_CLEAN"
-          response=$(curl -X POST \
+          response=$(curl -s -X POST "https://wow.curseforge.com/api/projects/${CURSEFORGE_ADDON_ID}/upload-file" \
             -H "x-api-token: ${CURSEFORGE_API_TOKEN}" \
             -F "metadata=$METADATA_CLEAN" \
-            -F "file=@dist/$RELEASE_FILENAME" \
-            "https://wow.curseforge.com/api/projects/${CURSEFORGE_ADDON_ID}/upload-file")
+            -F "file=@dist/$RELEASE_FILENAME")
           echo "CurseForge response: $response"
 
       # WOWUP UPLOAD (WowUp CLI)
