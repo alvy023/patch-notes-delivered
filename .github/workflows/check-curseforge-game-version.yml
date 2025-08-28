@@ -1,0 +1,26 @@
+name: Check Curseforge Game Version
+
+on:
+  workflow_dispatch:
+    inputs:
+      game_version:
+        description: 'Game Version'
+        required: true
+        default: '11.2.0'
+
+jobs:
+    check_version:
+      runs-on: ubuntu-latest
+      steps:
+        - name: Run version check
+          env:
+            CURSEFORGE_API_TOKEN: ${{ secrets.CURSEFORGE_API_TOKEN }}
+          run: |
+            PATCH_VERSION=${{ github.event.inputs.game_version }}
+            echo "Checking Curseforge game version..."
+            GAME_VERSION_ID=$(curl -s -H "x-api-token: ${CURSEFORGE_API_TOKEN}" "https://wow.curseforge.com/api/game/versions" | jq ".[] | select(.name==\"$PATCH_VERSION\") | .id" | head -n1)
+            if [ -z "$GAME_VERSION_ID" ]; then
+              echo "Could not find CurseForge game version ID for $PATCH_VERSION"
+              exit 1
+            fi
+            echo "CurseForge game version ID for $PATCH_VERSION is $GAME_VERSION_ID"

@@ -6,12 +6,12 @@ on:
       upload_curseforge:
         description: 'Upload to CurseForge?'
         required: false
-        default: 'true'
+        default: 'false'
         type: boolean
       upload_wowup:
         description: 'Upload to WowUp?'
         required: false
-        default: 'true'
+        default: 'false'
         type: boolean
 
 jobs:
@@ -34,55 +34,77 @@ jobs:
         with:
           python-version: 3.x
 
-      - name: Download latest release artifact
-        uses: dawidd6/action-download-artifact@v6
-        with:
-          workflow: create-retail-release.yml
-          workflow_conclusion: success
-          name: dist
-          path: dist
-
-      - name: Download release notes
-        uses: dawidd6/action-download-artifact@v6
-        with:
-          workflow: create-retail-release.yml
-          workflow_conclusion: success
-          name: RELEASE_NOTES.md
-          path: .
+      - name: Download latest release items from GitHub Releases
+        id: get_release_items
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          release_asset_name=$(gh release view --json assets --jq ".assets[].name")
+          if [ -z "$release_asset_name" ]; then
+            echo "No release asset found in latest release."
+            exit 1
+          fi
+          gh release download --pattern "$release_asset_name" --dir dist
+          gh release view --json body --jq ".body" > RELEASE_NOTES.md
+          echo "release_asset_name=${release_asset_name}" >> $GITHUB_OUTPUT
 
       # CURSEFORGE UPLOAD (manual curl)
       - name: Upload to CurseForge
         if: ${{ github.event.inputs.upload_curseforge == 'true' }}
         env:
-          CF_API_KEY: ${{ secrets.CURSEFORGE_API_KEY }}
-          ADDON_ID: ${{ secrets.CURSEFORGE_PROJECT_ID }}
+          CURSEFORGE_API_TOKEN: ${{ secrets.CURSEFORGE_API_TOKEN }}
+          CURSEFORGE_ADDON_ID: ${{ secrets.CURSEFORGE_ADDON_ID }}
         run: |
-          ZIP_FILE=$(ls dist/${{ env.ADDON_NAME }}-*.zip | head -n 1)
-          CHANGELOG="RELEASE_NOTES.md"
-          curl -X POST "https://wow.curseforge.com/api/projects/${ADDON_ID}/upload-file" \
-            -H "x-api-token: ${CF_API_KEY}" \
-            -F "file=@${ZIP_FILE}" \
-            -F "changelog=@${CHANGELOG}" \
-            -F "changelogType=markdown" \
-            -F "displayName=$(basename "$ZIP_FILE" .zip)"
+          RELEASE_FILENAME="${{ steps.get_release_items.outputs.release_asset_name }}"
+          DISPLAY_NAME=$(echo "$RELEASE_FILENAME" | sed -e 's/\.zip$//')
+          CHANGELOG=$(cat RELEASE_NOTES.md)
+          PATCH_VERSION=$(grep -oP 'Patch -\[ \*\*\K[0-9]+\.[0-9]+\.[0-9]+(?=\*\* \]-)' RELEASE_NOTES.md | head -n1)
+          GAME_VERSION_ID=$(curl -s -H "x-api-token: ${CURSEFORGE_API_TOKEN}" "https://wow.curseforge.com/api/game/versions" | jq ".[] | select(.name==\"$PATCH_VERSION\") | .id" | head -n1)
+          if [ -z "$GAME_VERSION_ID" ]; then
+            echo "Could not find CurseForge game version ID for $PATCH_VERSION"
+            exit 1
+          fi
+          jq -n \
+            --arg changelog "$CHANGELOG" \
+            --arg changelogType "markdown" \
+            --arg displayName "$DISPLAY_NAME" \
+            --argjson gameVersions "[$GAME_VERSION_ID]" \
+            --arg releaseType "release" \
+            '{changelog: $changelog, changelogType: $changelogType, displayName: $displayName, gameVersions: $gameVersions, releaseType: $releaseType}' > metadata.json
+          echo "METADATA:"
+          cat metadata.json
+          response=$(curl -s -X POST "https://wow.curseforge.com/api/projects/${CURSEFORGE_ADDON_ID}/upload-file" \
+            -H "x-api-token: ${CURSEFORGE_API_TOKEN}" \
+            -F "metadata=@metadata.json;type=application/json" \
+            -F "file=@dist/$RELEASE_FILENAME")
+          echo "CurseForge response: $response"
 
       # WOWUP UPLOAD (WowUp CLI)
-      - name: Install WowUp CLI
-        if: ${{ github.event.inputs.upload_wowup == 'true' }}
-        run: |
-          wget https://github.com/WowUp/WowUp.CLI/releases/latest/download/wowup-cli-linux-x64.tar.gz
-          tar -xzf wowup-cli-linux-x64.tar.gz
-          chmod +x wowup
-
-      - name: Upload to WowUp
+      - name: Upload to WowUp (Wago API)
         if: ${{ github.event.inputs.upload_wowup == 'true' }}
         env:
           WOWUP_API_TOKEN: ${{ secrets.WOWUP_API_TOKEN }}
           WOWUP_ADDON_ID: ${{ secrets.WOWUP_ADDON_ID }}
         run: |
-          ZIP_FILE=$(ls dist/${{ env.ADDON_NAME }}-*.zip | head -n 1)
-          ./wowup upload \
-            --addon-id "$WOWUP_ADDON_ID" \
-            --file "$ZIP_FILE" \
-            --changelog RELEASE_NOTES.md \
-            --token "$WOWUP_API_TOKEN"
+          RELEASE_FILENAME="${{ steps.get_release_items.outputs.release_asset_name }}"
+          # Remove prefix and suffix
+          RELEASE_LABEL=$(echo "$RELEASE_FILENAME" | sed -e 's/^PatchNotesDelivered-//' -e 's/\.zip$//')
+          CHANGELOG=$(cat RELEASE_NOTES.md)
+          SUPPORTED_RETAIL_PATCH=$(grep -oP 'Patch -\[ \*\*\K[0-9]+\.[0-9]+\.[0-9]+(?=\*\* \]-)' RELEASE_NOTES.md | head -n1)
+          echo "RELEASE_LABEL: $RELEASE_LABEL"
+          echo "SUPPORTED_RETAIL_PATCH: $SUPPORTED_RETAIL_PATCH"
+          echo "CHANGELOG: $CHANGELOG"
+          ls -l dist/
+          METADATA=$(jq -n \
+            --arg label "$RELEASE_LABEL" \
+            --arg stability "stable" \
+            --arg changelog "$CHANGELOG" \
+            --arg patch "$SUPPORTED_RETAIL_PATCH" \
+            '{label: $label, stability: $stability, changelog: $changelog, supported_retail_patch: $patch}')
+          echo "METADATA: $METADATA"
+          curl -f -X POST \
+            -F "metadata=$METADATA" \
+            -F "file=@dist/$RELEASE_FILENAME" \
+            -H "authorization: Bearer $WOWUP_API_TOKEN" \
+            -H "accept: application/json" \
+            "https://addons.wago.io/api/projects/$WOWUP_ADDON_ID/version"

@@ -175,12 +175,12 @@ def generate_notes_from_text(scraped_text, existing_notes):
     try:
         response = client.models.generate_content(
             model="gemini-2.5-pro", 
-            contents=prompt,
-            system_instruction=system_instruction,
             config={
                 "response_mime_type": "application/json",
                 "thinking_config": types.ThinkingConfig(thinking_budget=0), # Disables thinking
-            }
+                "system_instruction": system_instruction
+            },
+            contents=prompt
         )
         
         llm_output = json.loads(response.text)
