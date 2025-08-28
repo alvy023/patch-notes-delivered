@@ -35,6 +35,7 @@ jobs:
           python-version: 3.x
 
       - name: Download latest release items from GitHub Releases
+        id: get_release_items
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
@@ -69,7 +70,7 @@ jobs:
           WOWUP_API_TOKEN: ${{ secrets.WOWUP_API_TOKEN }}
           WOWUP_ADDON_ID: ${{ secrets.WOWUP_ADDON_ID }}
         run: |
-          RELEASE_LABEL="${{ steps.get_release.outputs.release_asset_name }}"
+          RELEASE_LABEL="${{ steps.get_release_items.outputs.release_asset_name }}"
           CHANGELOG=$(cat RELEASE_NOTES.md)
           SUPPORTED_RETAIL_PATCH=$(grep -oP 'Patch -\[ \*\*\K[0-9]+\.[0-9]+\.[0-9]+(?=\*\* \]-)' RELEASE_NOTES.md | head -n1)
           echo "RELEASE_LABEL: $RELEASE_LABEL"
