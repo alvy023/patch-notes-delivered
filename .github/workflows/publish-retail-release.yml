@@ -63,21 +63,26 @@ jobs:
             -F "displayName=$(basename "${release_asset_name}" .zip)"
 
       # WOWUP UPLOAD (WowUp CLI)
-      - name: Install WowUp CLI
-        if: ${{ github.event.inputs.upload_wowup == 'true' }}
-        run: |
-          wget https://github.com/WowUp/WowUp.CLI/releases/latest/download/wowup-cli-linux-x64.tar.gz
-          tar -xzf wowup-cli-linux-x64.tar.gz
-          chmod +x wowup
-
-      - name: Upload to WowUp
+      - name: Upload to WowUp (Wago API)
         if: ${{ github.event.inputs.upload_wowup == 'true' }}
         env:
           WOWUP_API_TOKEN: ${{ secrets.WOWUP_API_TOKEN }}
           WOWUP_ADDON_ID: ${{ secrets.WOWUP_ADDON_ID }}
         run: |
-          ./wowup upload \
-            --addon-id "$WOWUP_ADDON_ID" \
-            --file "$release_asset_name" \
-            --changelog RELEASE_NOTES.md \
-            --token "$WOWUP_API_TOKEN"
+          RELEASE_LABEL="${release_asset_name}"
+          CHANGELOG=$(cat RELEASE_NOTES.md | jq -Rs .)
+          SUPPORTED_RETAIL_PATCH=$(grep -oP 'Patch -\[ \*\*\K[0-9]+\.[0-9]+\.[0-9]+(?=\*\* \]-)' RELEASE_NOTES.md | head -n1)
+          # Compose metadata JSON
+          METADATA=$(jq -n \
+            --arg label "${RELEASE_LABEL}" \
+            --arg stability "stable" \
+            --arg changelog "$CHANGELOG" \
+            --arg patch "$SUPPORTED_RETAIL_PATCH" \
+            '{label: $label, stability: $stability, changelog: $changelog, supported_retail_patch: $patch}')
+          # Upload to Wago API
+          curl -f -X POST \
+            -F "metadata=$METADATA" \
+            -F "file=@dist/$RELEASE_LABEL" \
+            -H "authorization: Bearer $WOWUP_API_TOKEN" \
+            -H "accept: application/json" \
+            "https://addons.wago.io/api/projects/$WOWUP_ADDON_ID/version"
