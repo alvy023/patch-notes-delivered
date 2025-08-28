@@ -10,8 +10,12 @@
 PatchNotesDelivered_Notes_1120 = {
     version = "11.2.0",
     build = "62801",
-    hotfix = 8,
+    hotfix = 9,
     gameChangesHotfixes = [[
+        August 27, 2025
+
+    WoW
+
         August 26, 2025
 
             Characters
