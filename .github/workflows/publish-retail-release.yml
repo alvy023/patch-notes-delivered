@@ -64,18 +64,18 @@ jobs:
             echo "Could not find CurseForge game version ID for $PATCH_VERSION"
             exit 1
           fi
-          METADATA=$(jq -n \
+          jq -n \
             --arg changelog "$CHANGELOG" \
             --arg changelogType "markdown" \
             --arg displayName "$DISPLAY_NAME" \
             --argjson gameVersions "[$GAME_VERSION_ID]" \
             --arg releaseType "release" \
-            '{changelog: $changelog, changelogType: $changelogType, displayName: $displayName, gameVersions: $gameVersions, releaseType: $releaseType}')
-          METADATA_CLEAN=$(echo "$METADATA" | tr -d '\n')
-          echo "METADATA: $METADATA_CLEAN"
+            '{changelog: $changelog, changelogType: $changelogType, displayName: $displayName, gameVersions: $gameVersions, releaseType: $releaseType}' > metadata.json
+          echo "METADATA:"
+          cat metadata.json
           response=$(curl -s -X POST "https://wow.curseforge.com/api/projects/${CURSEFORGE_ADDON_ID}/upload-file" \
             -H "x-api-token: ${CURSEFORGE_API_TOKEN}" \
-            -F "metadata=$METADATA_CLEAN" \
+            -F "metadata=@metadata.json;type=application/json" \
             -F "file=@dist/$RELEASE_FILENAME")
           echo "CurseForge response: $response"
 
