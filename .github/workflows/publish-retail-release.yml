@@ -68,17 +68,18 @@ jobs:
           ls -lh "dist/$RELEASE_FILENAME"
           file "dist/$RELEASE_FILENAME"
           METADATA=$(jq -n \
-            --arg changelog "$CHANGELOG" \
+            --arg changelog "### Test Changelog" \
             --arg changelogType "markdown" \
             --arg displayName "$DISPLAY_NAME" \
             --argjson gameVersions "[$GAME_VERSION_ID]" \
             --arg releaseType "release" \
             '{changelog: $changelog, changelogType: $changelogType, displayName: $displayName, gameVersions: $gameVersions, releaseType: $releaseType}')
           echo "METADATA: $METADATA"
-          curl -v -f -X POST "https://wow.curseforge.com/api/projects/${CURSEFORGE_ADDON_ID}/upload-file" \
+          curl -f -X POST \
             -H "x-api-token: ${CURSEFORGE_API_TOKEN}" \
             -F "metadata=$METADATA" \
-            -F "file=@dist/$RELEASE_FILENAME"
+            -F "file=@dist/$RELEASE_FILENAME" \
+            "https://wow.curseforge.com/api/projects/${CURSEFORGE_ADDON_ID}/upload-file"
 
       # WOWUP UPLOAD (WowUp CLI)
       - name: Upload to WowUp (Wago API)
