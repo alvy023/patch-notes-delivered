@@ -58,15 +58,15 @@ jobs:
           RELEASE_FILENAME="${{ steps.get_release_items.outputs.release_asset_name }}"
           DISPLAY_NAME=$(echo "$RELEASE_FILENAME" | sed -e 's/\.zip$//')
           CHANGELOG=$(cat RELEASE_NOTES.md)
-          # Extract the patch version from the release notes
           PATCH_VERSION=$(grep -oP 'Patch -\[ \*\*\K[0-9]+\.[0-9]+\.[0-9]+(?=\*\* \]-)' RELEASE_NOTES.md | head -n1)
-          # Fetch CurseForge game versions and find the matching ID
           GAME_VERSION_ID=$(curl -s -H "x-api-token: ${CURSEFORGE_API_TOKEN}" "https://wow.curseforge.com/api/game/versions" | jq ".[] | select(.name==\"$PATCH_VERSION\") | .id" | head -n1)
           if [ -z "$GAME_VERSION_ID" ]; then
             echo "Could not find CurseForge game version ID for $PATCH_VERSION"
             exit 1
           fi
-          # Compose metadata JSON
+          echo "File info:"
+          ls -lh "dist/$RELEASE_FILENAME"
+          file "dist/$RELEASE_FILENAME"
           METADATA=$(jq -n \
             --arg changelog "$CHANGELOG" \
             --arg changelogType "markdown" \
@@ -75,7 +75,7 @@ jobs:
             --arg releaseType "release" \
             '{changelog: $changelog, changelogType: $changelogType, displayName: $displayName, gameVersions: $gameVersions, releaseType: $releaseType}')
           echo "METADATA: $METADATA"
-          curl -f -X POST "https://wow.curseforge.com/api/projects/${CURSEFORGE_ADDON_ID}/upload-file" \
+          curl -v -f -X POST "https://wow.curseforge.com/api/projects/${CURSEFORGE_ADDON_ID}/upload-file" \
             -H "x-api-token: ${CURSEFORGE_API_TOKEN}" \
             -F "metadata=$METADATA" \
             -F "file=@dist/$RELEASE_FILENAME"
