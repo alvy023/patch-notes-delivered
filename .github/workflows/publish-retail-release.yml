@@ -6,12 +6,12 @@ on:
       upload_curseforge:
         description: 'Upload to CurseForge?'
         required: false
-        default: 'true'
+        default: 'false'
         type: boolean
       upload_wowup:
         description: 'Upload to WowUp?'
         required: false
-        default: 'true'
+        default: 'false'
         type: boolean
 
 jobs:
@@ -76,7 +76,7 @@ jobs:
             -H "x-api-token: ${CURSEFORGE_API_TOKEN}" \
             -F "metadata=$METADATA" \
             -F "file=@dist/$RELEASE_FILENAME" \
-            "https://wow.curseforge.com/api/projects/${CURSEFORGE_ADDON_ID}/upload-file"
+            "https://wow.curseforge.com/api/projects/${CURSEFORGE_ADDON_ID}/upload-file")
           echo "CurseForge response: $response"
 
       # WOWUP UPLOAD (WowUp CLI)
