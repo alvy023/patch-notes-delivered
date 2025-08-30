@@ -9,9 +9,78 @@
 --- Max note length [140] ------------------------------------------------------------------------------------------------------------------
 PatchNotesDelivered_Notes_1120 = {
     version = "11.2.0",
-    build = "62801",
-    hotfix = 8,
+    build = "62876",
+    hotfix = 9,
     gameChangesHotfixes = [[
+        August 27, 2025
+
+    Characters
+        • Players who Boost a character to level 80 will no longer need to log out and back in to start "Adventuring in Khaz Algar"
+          and "Something on the Horizon".
+        • The Fate of the Devoured campsite should again function as expected.
+
+    Classes
+        • Hunter
+            > Marksmanship
+                + Fixed an issue causing Aimed Shot Precise Shots to not correctly grant its damage bonus when consumed by a
+                  spell-queued Precise Shots consumer.
+                + Fixed an issue causing Streamline to be consumed as soon as it is generated when firing spell-queued Precise
+                  Shot consumers.
+        • Mage
+            > Arcane
+                + Fixed an issue where mages could consume each other's Magi's Spark effects.
+        • Paladin
+            > Lightsmith: Fixed an issue causing the 4-piece Vows of the Lucent Battalion Masterwork's duration to not be
+              refreshed after reaching maximum stacks.
+            > Holy
+                + Fixed an issue causing Blessing of Summer to sometimes fail to damage large enemies.
+        • Priest
+            > Resolved an issue causing Halo to sometimes fail to damage large enemies.
+            > Archon: Resolved an issue causing additional Halos from Power Surge and Divine Halo to sometimes not deal damage
+              to enemies close to the Priest.
+
+    Delves
+        • Fixed an issue where the Sands of K'aresh curio's Sand Devils would not pull enemies in.
+        • The Spiral Weave
+            > Web Bombs should now properly drop to the ground if you enter combat.
+
+    Dungeons and Raids
+        • Eco-Dome Al'dani
+            > Addressed an issue causing Xal'atath's Bargain: Ascendant orbs to be affected by Devour.
+        • Halls of Atonement
+            > Addressed an issue where players were prevented from earning the Keystone Hero achievement for the dungeon.
+        • Manaforge Omega
+            > The Soul Hunters
+                + Fixed a bug that could sometimes cause Adarus to fail to fall to the ground upon death, preventing the group
+                  from looting the corpse.
+
+    Items
+        • Screams of a Forgotten Sky on-death damage increased by 15%.
+        • Perfidious Projector damage increased by 10%.
+        • Naazindhri’s Mystic Lash damage increased by 15%.
+        • Astral Antenna critical strike reduced by 3%.
+        • Gigazap’s Zap-Cap damage increased by 15%. Internal cooldown reduced to 0.5 seconds (was 0.75 seconds).
+        • First Class Healing Distributor healing increased by 20%.
+        • So’leah’s Secret Technique buff duration increased to 1 hour.
+        • Ashjra'kamas, Shroud of Resolve should again be upgradeable.
+        • Celebratory Pack of Runed Ethereal Crests, Glorious Cluster of Gilded Ethereal Crests, and Triumphant Satchel of
+          Carved Ethereal Crests can no longer be used if doing so would exceed the associated crest cap.
+
+    K’aresh
+        • Ethereal Strands should now drop after any character in the account has completed “The Tabiqa”.
+
+    Player versus Player
+        • Resolved an issue where the Severed Threads Commendation from PvP weekly quests did not give reputation with the
+          selected faction.
+        • Monk
+            > Resolved an issue that could cause Song of Chi-Ji's effect to be incorrectly removed by friendly player crowd-
+              control effects such as Cheap Shot.
+
+    Quests
+        • Titan Disc Fragments can now be found from rares and repeatable treasures in K'aresh and the world bosses in K'aresh
+          and Undermine while on the quests "Archives: The First Disc" or "Archives: Seeking History".
+        • Veilshards are now more plentiful when chasing rats for “A Dozen Veilshards”.
+
         August 26, 2025
 
             Characters
