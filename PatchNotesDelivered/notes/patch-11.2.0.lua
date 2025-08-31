@@ -9,9 +9,16 @@
 --- Max note length [140] ------------------------------------------------------------------------------------------------------------------
 PatchNotesDelivered_Notes_1120 = {
     version = "11.2.0",
-    build = "62801",
-    hotfix = 8,
+    build = "62876",
+    hotfix = 9,
     gameChangesHotfixes = [[
+        August 27, 2025
+
+    WoW
+        • Some of the hotfixes below take effect the moment they were implemented, while others may require scheduled realm restarts to go into effect.
+          Please keep in mind that some issues cannot be addressed without a client-side patch update. This list will be updated as additional
+          hotfixes are applied.
+
         August 26, 2025
 
             Characters
