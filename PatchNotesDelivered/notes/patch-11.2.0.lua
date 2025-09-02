@@ -9,9 +9,13 @@
 --- Max note length [140] ------------------------------------------------------------------------------------------------------------------
 PatchNotesDelivered_Notes_1120 = {
     version = "11.2.0",
-    build = "62801",
-    hotfix = 8,
+    build = "62876",
+    hotfix = 9,
     gameChangesHotfixes = [[
+        August 27, 2025
+
+            Hotfixes
+
         August 26, 2025
 
             Characters
