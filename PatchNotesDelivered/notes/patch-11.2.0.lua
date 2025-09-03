@@ -14,33 +14,36 @@ PatchNotesDelivered_Notes_1120 = {
     gameChangesHotfixes = [[
         September 2, 2025
 
-    Classes
-        • Druid
-            > Elune's Chosen: Fixed an issue with the Ornaments of the Mother Eagle (4) Set Bonus that frequently prevented the set's
-              Starsurges from splitting to nearby targets.
+            Classes
+                • Druid
+                    > Elune's Chosen: Fixed an issue with the Ornaments of the Mother Eagle (4) Set Bonus that frequently prevented the 
+                      set's Starsurges from splitting to nearby targets.
 
-    Creatures and NPCs
-        • Fixed an issue that could diminish client performance while engaging Reshanor, the Untethered.
-        • Fixed an issue causing Kelp from Kelpmire to persist if the player was immune to roots when hit with Kelpsplosion!
+            Creatures and NPCs
+                • Fixed an issue that could diminish client performance while engaging Reshanor, the Untethered.
+                • Fixed an issue causing Kelp from Kelpmire to persist if the player was immune to roots when hit with Kelpsplosion!
 
-    Dungeons and Raids
-        • Player deaths in Mythic+2 and +3 keystones no longer reduces the timer or displays a death count in the objective window.
-        • Manaforge Omega
-            > Loom’ithar
-                + Resolved an issue that caused Loom'ithar to stop tracking the player during the cast of Piercing Strand if they transformed.
-                + Resolved an issue that caused Loom'ithar to face the wrong player or direction when Piercing Strand was cast.
-                + Resolved an issue preventing damage reduction effects applied to Loom'ithar to modify the damage of Piercing Strand.
+            Dungeons and Raids
+                • Player deaths in Mythic +2 and +3 keystones no longer reduces the timer or displays a death count in the objective window.
+                • Manaforge Omega
+                    > Loom’ithar
+                        + Resolved an issue that caused Loom'ithar to stop tracking the player during the cast of Piercing Strand if they 
+                          transformed.
+                        + Resolved an issue that caused Loom'ithar to face the wrong player or direction when Piercing Strand was cast.
+                        + Resolved an issue preventing damage reduction effects applied to Loom'ithar to modify the damage of Piercing 
+                          Strand.
 
-    Items
-        • Araz's Ritual Forge self-damage on use can no longer critically strike, and is no longer affected by damage done or damage
-          taken modifiers.
-        • The War Within Season 2 banner toys now use the correct appearance.
-        • Nexus-King's Command’s Oath-Bound effect on marked allies is now consumed by Word of Glory, Eternal Flame, and Lay on Hands.
-        • Unyielding Netherprism no longer fails to split damage and scale as intended.
+            Items
+                • Araz's Ritual Forge self-damage on use can no longer critically strike, and is no longer affected by damage done or damage
+                  taken modifiers.
+                • The War Within Season 2 banner toys now use the correct appearance.
+                • Nexus-King's Command’s Oath-Bound effect on marked allies is now consumed by Word of Glory, Eternal Flame, and Lay on 
+                  Hands.
+                • Unyielding Netherprism no longer fails to split damage and scale as intended.
 
-    Quests
-        • More Flawed Rancors are now present in Maldraxxus for “I Don’t Even Work Here”.
-        • More Necrorays are now present in The Oasis for “Dubious Intent”.
+            Quests
+                • More Flawed Rancors are now present in Maldraxxus for “I Don’t Even Work Here”.
+                • More Necrorays are now present in The Oasis for “Dubious Intent”.
 
         August 26, 2025
 
