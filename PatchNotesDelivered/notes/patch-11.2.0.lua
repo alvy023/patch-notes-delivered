@@ -226,6 +226,52 @@ PatchNotesDelivered_Notes_1120 = {
                             > Destruction Warlocks should no longer incorrectly lose their Embers on encounter start if they cast a non-Fire and 
                               Brimstone Immolate to pull the boss.
 
+        September 4, 2025
+
+            Character Services
+                • Fixed a bug that could cause player-characters to not receive the intended Renown and currencies when Boosted to level 80. 
+                  Affected characters may need to log out and back into WoW to be granted missing items.
+
+            Delves
+                • Mercenary Acquisitionist's damage reduced, and Mercenary Acquisitionist no longer casts Borrow Power while the shield is 
+                  active.
+
+            Dungeons and Raids
+                • Manaforge Omega
+                    > Fixed an issue with the raid skip that prevented the Manaforge Translocator located in The Shadow Docks from being 
+                      clicked after any boss encounter was engaged.
+                    > Nexus-King Salhadaar
+                        + Banishment now targets fewer players in smaller group sizes.
+                        + Behead damage reduced in smaller group sizes.
+                        + Manaforged Titan, Nexus-Prince, and Shadowguard Reaper health reduced in smaller group sizes.
+                        + Developers' notes: These adjustments are aimed at reducing difficulty for small group sizes, with the greatest 
+                          reductions applying to 10-player groups. These affect Raid Finder, Normal, and Heroic difficulties, with no change
+                          for 30-player groups or for Mythic.
+                    > Dimensius
+                        + Living Mass health reduced for smaller group sizes in Normal and Heroic difficulty.
+                        + Voidwarden health reduced for smaller group sizes in Normal and Heroic difficulty.
+                        + Nullbinder health reduced for smaller group sizes in Heroic difficulty.
+                        + Nullbinder health reduced by an additional 10% in Heroic difficulty for all group sizes.
+                        + Massive Smash now only knocks players vertically (was also horizontally) in Raid Finder and Story difficulty.
+                        + When any player engages Dimensius in Raid Finder difficulty, all other players in the immediate vicinity are now 
+                          also transported to his location.
+                        + Followers should now help more reliably in Story difficulty.
+                        + Broken World no longer dismounts players in Story difficulty.
+                        + Dimensius no longer casts Supernova in Story difficulty.
+
+            Classes
+                • Druid
+                    > Balance
+                        + Arcane and Nature damage increase in Moonkin Form increased to 35% (was 25%).
+                • Rogue
+                    > Combat
+                        + Shallow Insight's damage increase raised to 20% (was 10%).
+                        + Moderate Insight's damage increase raised to 30% (was 20%).
+                        + Deep Insight's damage increase raised to 40% (was 30%).
+                • Warlock
+                    > Destruction Warlocks should no longer incorrectly lose their Embers on encounter start if they cast a non-Fire and 
+                      Brimstone Immolate to pull the boss.
+
         September 2, 2025
 
             Classes
