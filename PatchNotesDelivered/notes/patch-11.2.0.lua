@@ -10,53 +10,221 @@
 PatchNotesDelivered_Notes_1120 = {
     version = "11.2.0",
     build = "63003",
-    hotfix = 10,
+    hotfix = 11,
     gameChangesHotfixes = [[
-        September 4, 2025
-
-            Character Services
-                • Fixed a bug that could cause player-characters to not receive the intended Renown and currencies when Boosted to level 80. 
-                  Affected characters may need to log out and back into WoW to be granted missing items.
-
-            Delves
-                • Mercenary Acquisitionist's damage reduced, and Mercenary Acquisitionist no longer casts Borrow Power while the shield is 
-                  active.
-
-            Dungeons and Raids
-                • Manaforge Omega
-                    > Fixed an issue with the raid skip that prevented the Manaforge Translocator located in The Shadow Docks from being 
-                      clicked after any boss encounter was engaged.
-                    > Nexus-King Salhadaar
-                        + Banishment now targets fewer players in smaller group sizes.
-                        + Behead damage reduced in smaller group sizes.
-                        + Manaforged Titan, Nexus-Prince, and Shadowguard Reaper health reduced in smaller group sizes.
-                        + Developers' notes: These adjustments are aimed at reducing difficulty for small group sizes, with the greatest 
-                          reductions applying to 10-player groups. These affect Raid Finder, Normal, and Heroic difficulties, with no change
-                          for 30-player groups or for Mythic.
-                    > Dimensius
-                        + Living Mass health reduced for smaller group sizes in Normal and Heroic difficulty.
-                        + Voidwarden health reduced for smaller group sizes in Normal and Heroic difficulty.
-                        + Nullbinder health reduced for smaller group sizes in Heroic difficulty.
-                        + Nullbinder health reduced by an additional 10% in Heroic difficulty for all group sizes.
-                        + Massive Smash now only knocks players vertically (was also horizontally) in Raid Finder and Story difficulty.
-                        + When any player engages Dimensius in Raid Finder difficulty, all other players in the immediate vicinity are now 
-                          also transported to his location.
-                        + Followers should now help more reliably in Story difficulty.
-                        + Broken World no longer dismounts players in Story difficulty.
-                        + Dimensius no longer casts Supernova in Story difficulty.
+        September 9, 2025
 
             Classes
+                • Death Knight
+                    > Blood
+                        + All damage increased by 6%.
+                        + Boneshield Armor increased by 10%.
                 • Druid
                     > Balance
-                        + Arcane and Nature damage increase in Moonkin Form increased to 35% (was 25%).
+                        + All damage increased by 5%. Does not affect PvP combat.
+                        + Ornaments of the Mother Eagle 2-piece: Starfire damage increased by 15% (was 20%). Does not affect PvP combat.
+                        + Elune’s Chosen: Boundless Moonlight’s Fury of Elune flash damage reduced by 10%. Does not affect PvP combat.
+                        + Elune’s Chosen: Minor Moon damage reduced by 10%. Does not affect PvP combat.
+                • Evoker
+                    > Augmentation
+                        + Command Squadron (Scalecommander 2-piece) Disintegrate damage increased by 10%.
+                        + Scalecommander: Bombardments damage increased by 25%.
+                    > Devastation
+                        + Deep Breath damage increased by 20%. Does not affect PvP combat.
+                        + Command Squadron (Scalecommander 2-piece) Disintegrate damage increased by 10%.
+                        + Scalecommander: Bombardments damage increased by 25%.
+                    > Preservation
+                        + Deep Breath damage increased by 20%. Does not affect PvP combat.
+                • Hunter
+                    > Beast Mastery
+                        + All damage dealt increased by 4%. Does not affect PvP combat.
+                        + Deathblow updated. Kill Command’s chance to grant Deathblow to Beast Mastery Hunter increased to 20% (was 10%).
+                        + Dark Ranger: The Bell Tolls damage bonus increased to 8% (was 6%).
+                        + Dark Ranger: Phantom Pain damage share increased to 80% (was 30%).
+                        + Dark Ranger: Bleak Powder damage increased by 25%. Does not affect PvP combat.
+                    > Marksmanship
+                        + Fixed an issue causing Withering Fire's arrow barrage to fire an inconsistent number of arrows.
+                        + Withering Fire will now fire at your primary target when it has no nearby enemies to apply Black Arrow's periodic effect
+                          to.
+                • Monk
+                    > Mistweaver
+                        + Master of Harmony: Fixed an issue that caused Ancient Teachings healing to not be increased by Coalescence.
+                • Paladin
+                    > Retribution
+                        + Resolved an issue causing Divine Toll to be cast twice.
+                • Priest
+                    > Holy
+                        + Heal healing increased by 12%. Not applied to PvP combat.
+                        + Halo healing increased by 40%.
+                        + Archon: Empowered Surges increases the healing done by Flash Heals affected by Surge of Light by 45% (was 30%).
+                    > Discipline
+                        + Atonement heals for 33% of damage done (was 28%).
+                        + Atonement healing is increased by 100% outside of raid (was 125%).
+
+            Delves
+                • Fixed a bug causing Twisted Mana Sprite's overheal absorb values to be much higher than intended.
+                • Mercenary Acquisitionist
+                    > Borrow Power damage reduced by 17%.
+                    > Mercenary Acquisitionist will no longer cast Borrow Power while the existing shield is still active.
+                    > Borrow Power damage increase reduced by 25%.
+                • Nexus-Princess Ky'veza
+                    > Nether Rift damage reduced for larger groups on all difficulties.
+                    > Nexus Daggers now spawns 3 additional phantoms (was 4), and time between phantoms increased to 1 second (was 0.75 seconds)
+                      on [?] difficulty.
+                    > Dark Massacre time between phantoms increased to 2 seconds (was 1.5 seconds) on [?] difficulty.
+
+            Dungeons and Raids
+                • Ara-Kara, City of Echoes
+                    > Trilling Attendant
+                        + Resonant Barrage initial cooldown increased, ability cooldown increased by 50%, and periodic damage reduced by 12.5%.
+                    > Engorged Crawler
+                        + Venomous Spit ability cooldown increased by 40%.
+                    > Avanoxx
+                        + Starved Crawler health reduced by 20%.
+                        + Gossamer Onslaught periodic damage reduced by 17%.
+                    > Anub’zekt
+                        + Addressed an issue with Eye of the Swarm, where the rim visual is larger than the actual safe zone.
+                • Halls of Atonement
+                    > Reduced the numbers of Depraved Obliterators and Depraved Collectors near each Shard of Halkias.
+                    > Reduced the density of creatures in the courtyard before Echelon.
+                    > Enemy forces requirement reduced by 10%.
+                    > Stoneborn Slasher enemy force value increased by 50%.
+                • Manaforge Omega
+                    > Fixed an issue where the teleport option to Central Operations became unavailable if players activated the raid skip after
+                      already unlocking this teleport location.
+                    > Forgeweaver Araz
+                        + Arcane Obliteration will now still cast even if the target dies early.
+                        + Arcane Siphon damage reduced in Mythic difficulty.
+                        + Arcane Harvest and Silencing Tempest targeting updated to de-prioritize targeting tanks and to reduce the possibility of
+                          targets being selected by both of these abilities at once.
+                    > Nexus-King Salhadaar
+                        + Stage One: Oath-Breakers
+                            - Command: Besiege now activates 9 Fractal Images (was 12), and time between each activation increased to 1.375
+                              seconds (was 1 second) on Mythic difficulty.
+                            - Banishment damage reduced by 10% on Mythic difficulty.
+                            - Invoke the Oath damage reduced by 15% on Mythic difficulty.
+                        + Intermission One: Nexus Descent
+                            - Manaforged Titan health reduced by 10% on Mythic difficulty.
+                            - Nexus-Prince health reduced by 10% on Mythic difficulty.
+                            - Shadowguard Reaper health reduced by 10% on Mythic difficulty.
+                    > Dimensius
+                        + Cosmic Radiation damage reduced by 10% in Stage One and Stage Three on Mythic difficulty.
+                        + Fission damage reduced by 10% on Mythic difficulty.
+                        + Living Mass, Voidwarden, and Nullbinder health reduced by 10% on Mythic difficulty.
+                        + Crushing Gravity damage reduced by 25% on Mythic difficulty.
+                        + Reverse Gravity now targets 4 players (was 6) on Mythic difficulty.
+                        + Gamma Burst pushback strength reduced on Mythic difficulty.
+                        + Black Hole radius reduced on Mythic difficulty.
+                        + Interval between Shadowquake impacts slightly increased on Mythic difficulty.
+
+            Items and Rewards
+                • Timewalking Stonecore items should now drop at the correct item level when obtained at max level.
+                • Nexus-King's Command’s spell visual orb from Oath-Bound is now hidden while out of combat.
+                • The Manaforge Vandals raid Renown "Attuned to the Aether" effect at rank 6 is now limited to weapon enchantments only and also
+                  increases the power of Death Knight Runeforge effects by 10%. The effect tooltip will temporarily be incorrect, until it is
+                  updated with a future hotfix.
+                • Fixed an issue where the Manaforge Vandals ‘view Renown’ button would remain locked after completing “Meet the Vandals”.
+
+            Player versus Player
+                • Stamina granted from the PvP trinket Set Bonus increased by 5% for all roles.
+                • Death Knight
+                    > Frost
+                        + Shattering Blade damage decreased by 50% in PvP combat.
+                        + Frost Fever damage increased by 15% in PvP combat.
+                • Druid
+                    > Feral
+                        + All damage increased by 4% in PvP combat.
+                    > Balance
+                        + Keeper of the Grove: Dream Burst damage reduced by 50% in PvP combat.
+                        + Elune’s Chosen: Lunar Calling increases Starfire damage to its primary target by 80% (was 128%) in PvP combat.
+                • Evoker
+                    > Preservation
+                        + Chrono Flame’s maximum damage increased from the 4-piece class set reduced to 325% spell power in PvP combat (was 450%
+                          spell power).
+                • Hunter
+                    > Survival
+                        + Flanking Strike damage decreased by 20% in PvP combat.
+                • Mage
+                    > Arcane
+                        + Arcane Harmony now increases the damage of Arcane Barrage by 2% per stack in PvP combat (was 5%).
+                        + Intuition now increases the damage of Arcane Barrage by 20% in PvP combat (was 50%).
+                        + Improved Touch of the Magi now causes Nether Flux to increase the damage of your next spell by an additional 10% (was
+                          25%).
+                        + All damage increased by 6% in PvP combat.
+                        + Sunfury: Glorious Incandescence now increases the damage of Arcane Barrage by 10% in PvP combat (was 20%).
+                        + Sunfury: Meteorites damage from Arcane Phoenix reduced by 38% in PvP combat.
+                        + Sunfury: Greater Pyroblast damage from Arcane Phoenix reduced by 33% in PvP combat.
+                        + Sunfury: Arcane Surge damage from Arcane Phoenix reduced by 33% in PvP combat.
+                    > Frost
+                        + Glacial Spike damage increased by 40% in PvP combat.
+                        + All damage increased by 5% in PvP combat.
+                • Monk
+                    > Mistweaver
+                        + Rushing Wind Kick damage decreased by 50% in PvP combat.
+                • Paladin
+                    > Retribution
+                        + Hammer of Light damage decreased by 15% in PvP combat.
+                • Priest
+                    > Discipline
+                        + Power Word: Shield absorption increased by 20% in PvP combat.
+                        + Atonement healing increased by 12.5% in PvP combat.
                 • Rogue
-                    > Combat
-                        + Shallow Insight's damage increase raised to 20% (was 10%).
-                        + Moderate Insight's damage increase raised to 30% (was 20%).
-                        + Deep Insight's damage increase raised to 40% (was 30%).
-                • Warlock
-                    > Destruction Warlocks should no longer incorrectly lose their Embers on encounter start if they cast a non-Fire and 
-                      Brimstone Immolate to pull the boss.
+                    > Subtlety
+                        + Shadow Blades now causes attacks to deal 5% additional damage as Shadow in PvP combat (was 10%).
+                        + All damage increased by 6% in PvP combat.
+                • Shaman
+                    > Elemental
+                        + Earth Shock damage increased by 15% in PvP combat.
+                        + Stormbringer: Tempest damage increased by 10% in PvP combat.
+                • Warrior
+                    > Arms
+                        + All damage increased by 4% in PvP combat.
+
+                September 4, 2025
+
+                    Character Services
+                        • Fixed a bug that could cause player-characters to not receive the intended Renown and currencies when Boosted to level 80. 
+                          Affected characters may need to log out and back into WoW to be granted missing items.
+
+                    Delves
+                        • Mercenary Acquisitionist's damage reduced, and Mercenary Acquisitionist no longer casts Borrow Power while the shield is 
+                          active.
+
+                    Dungeons and Raids
+                        • Manaforge Omega
+                            > Fixed an issue with the raid skip that prevented the Manaforge Translocator located in The Shadow Docks from being 
+                              clicked after any boss encounter was engaged.
+                            > Nexus-King Salhadaar
+                                + Banishment now targets fewer players in smaller group sizes.
+                                + Behead damage reduced in smaller group sizes.
+                                + Manaforged Titan, Nexus-Prince, and Shadowguard Reaper health reduced in smaller group sizes.
+                                + Developers' notes: These adjustments are aimed at reducing difficulty for small group sizes, with the greatest 
+                                  reductions applying to 10-player groups. These affect Raid Finder, Normal, and Heroic difficulties, with no change
+                                  for 30-player groups or for Mythic.
+                            > Dimensius
+                                + Living Mass health reduced for smaller group sizes in Normal and Heroic difficulty.
+                                + Voidwarden health reduced for smaller group sizes in Normal and Heroic difficulty.
+                                + Nullbinder health reduced for smaller group sizes in Heroic difficulty.
+                                + Nullbinder health reduced by an additional 10% in Heroic difficulty for all group sizes.
+                                + Massive Smash now only knocks players vertically (was also horizontally) in Raid Finder and Story difficulty.
+                                + When any player engages Dimensius in Raid Finder difficulty, all other players in the immediate vicinity are now 
+                                  also transported to his location.
+                                + Followers should now help more reliably in Story difficulty.
+                                + Broken World no longer dismounts players in Story difficulty.
+                                + Dimensius no longer casts Supernova in Story difficulty.
+
+                    Classes
+                        • Druid
+                            > Balance
+                                + Arcane and Nature damage increase in Moonkin Form increased to 35% (was 25%).
+                        • Rogue
+                            > Combat
+                                + Shallow Insight's damage increase raised to 20% (was 10%).
+                                + Moderate Insight's damage increase raised to 30% (was 20%).
+                                + Deep Insight's damage increase raised to 40% (was 30%).
+                        • Warlock
+                            > Destruction Warlocks should no longer incorrectly lose their Embers on encounter start if they cast a non-Fire and 
+                              Brimstone Immolate to pull the boss.
 
         September 2, 2025
 
