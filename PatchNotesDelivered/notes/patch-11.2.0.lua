@@ -63,7 +63,7 @@ PatchNotesDelivered_Notes_1120 = {
 
             Delves
                 • Fixed a bug causing Twisted Mana Sprite's overheal absorb values to be much higher than intended.
-                • Mercenary Aquisitionist
+                • Mercenary Acquisitionist
                     > Borrow Power damage reduced by 17%.
                     > Mercenary Acquisitionist will no longer cast Borrow Power while the existing shield is still active.
                     > Borrow Power damage increase reduced by 25%.
