@@ -136,7 +136,7 @@ PatchNotesDelivered_Notes_1120 = {
                         + All damage increased by 4% in PvP combat.
                     > Balance
                         + Keeper of the Grove: Dream Burst damage reduced by 50% in PvP combat.
-                        + Elune’s Chosen: Lunar Calling increases Starfire damage to its primary target by 80% was 128%) in PvP combat.
+                        + Elune’s Chosen: Lunar Calling increases Starfire damage to its primary target by 80% (was 128%) in PvP combat.
                 • Evoker
                     > Preservation
                         + Chrono Flame’s maximum damage increased from the 4-piece class set reduced to 325% spell power in PvP combat (was 450%
