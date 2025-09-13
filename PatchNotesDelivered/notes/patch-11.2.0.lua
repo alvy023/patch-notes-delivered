@@ -9,9 +9,37 @@
 --- Max note length [140] ------------------------------------------------------------------------------------------------------------------
 PatchNotesDelivered_Notes_1120 = {
     version = "11.2.0",
-    build = "63003",
-    hotfix = 11,
+    build = "63163",
+    hotfix = 12,
     gameChangesHotfixes = [[
+        September 12, 2025
+
+        Dungeons and Raids
+            • Halls of Atonement
+                > Resolved an issue where Echelon's door would not open upon being defeated.
+                > Resolved an issue where Echelon's Blood Torrent and Stone Shattering Leap were not visible if the target was in the air.
+            • Manaforge Omega
+                > Dimensius
+                    + Dimensius' Growing Hunger no longer increases beyond 2 in Raid Finder difficulty.
+                    + Living Mass now leave behind 3 Excess Mass when defeated in Raid Finder difficulty (was 2).
+                    + Living Mass health reduced by 50% in Raid Finder difficulty.
+                    + Developers’ notes: The above changes are intended to relax coordination requirements in Raid Finder, as areas of
+                      Collective Gravity will be faster and easier to create and will more reliably protect players from Devour.
+                    + Voidwarden health reduced by 30% in Raid Finder difficulty.
+                    + Duration of Soaring Reshii granted by Umbral Gate increased in all difficulties except Mythic.
+                    + Fixed an issue where Druids could not use Flight Form during the flying portion of the Dimensius encounter.
+
+        Items
+            • Resolved an issue where Guise of the Phase Diver could unintentionally kill you when used on Dimensius.
+            • Conqueror's Astral Varnish and Conqueror's Astral Lacquer should now function properly when applied to War Mode gear that was
+              converted to a Set item.
+
+        Player versus Player
+            • Demon Hunter
+                > Havoc
+                    + Fixed an issue causing Consume Magic to generate a Lesser Soul Fragment that grants a damage buff when used on a
+                      demon while talented for Blood Moon.
+
         September 9, 2025
 
             Classes
