@@ -14,31 +14,32 @@ PatchNotesDelivered_Notes_1120 = {
     gameChangesHotfixes = [[
         September 12, 2025
 
-        Dungeons and Raids
-            • Halls of Atonement
-                > Resolved an issue where Echelon's door would not open upon being defeated.
-                > Resolved an issue where Echelon's Blood Torrent and Stone Shattering Leap were not visible if the target was in the air.
-            • Manaforge Omega
-                > Dimensius
-                    + Dimensius' Growing Hunger no longer increases beyond 2 in Raid Finder difficulty.
-                    + Living Mass now leave behind 3 Excess Mass when defeated in Raid Finder difficulty (was 2).
-                    + Living Mass health reduced by 50% in Raid Finder difficulty.
-                    + Developers’ notes: The above changes are intended to relax coordination requirements in Raid Finder, as areas of
-                      Collective Gravity will be faster and easier to create and will more reliably protect players from Devour.
-                    + Voidwarden health reduced by 30% in Raid Finder difficulty.
-                    + Duration of Soaring Reshii granted by Umbral Gate increased in all difficulties except Mythic.
-                    + Fixed an issue where Druids could not use Flight Form during the flying portion of the Dimensius encounter.
+            Dungeons and Raids
+                • Halls of Atonement
+                    > Resolved an issue where Echelon's door would not open upon being defeated.
+                    > Resolved an issue where Echelon's Blood Torrent and Stone Shattering Leap were not visible if the target was in the 
+                      air.
+                • Manaforge Omega
+                    > Dimensius
+                        + Dimensius' Growing Hunger no longer increases beyond 2 in Raid Finder difficulty.
+                        + Living Mass now leave behind 3 Excess Mass when defeated in Raid Finder difficulty (was 2).
+                        + Living Mass health reduced by 50% in Raid Finder difficulty.
+                        + Developers’ notes: The above changes are intended to relax coordination requirements in Raid Finder, as areas of
+                          Collective Gravity will be faster and easier to create and will more reliably protect players from Devour.
+                        + Voidwarden health reduced by 30% in Raid Finder difficulty.
+                        + Duration of Soaring Reshii granted by Umbral Gate increased in all difficulties except Mythic.
+                        + Fixed an issue where Druids could not use Flight Form during the flying portion of the Dimensius encounter.
 
-        Items
-            • Resolved an issue where Guise of the Phase Diver could unintentionally kill you when used on Dimensius.
-            • Conqueror's Astral Varnish and Conqueror's Astral Lacquer should now function properly when applied to War Mode gear that was
-              converted to a Set item.
+            Items
+                • Resolved an issue where Guise of the Phase Diver could unintentionally kill you when used on Dimensius.
+                • Conqueror's Astral Varnish and Conqueror's Astral Lacquer should now function properly when applied to War Mode gear that 
+                  was converted to a Set item.
 
-        Player versus Player
-            • Demon Hunter
-                > Havoc
-                    + Fixed an issue causing Consume Magic to generate a Lesser Soul Fragment that grants a damage buff when used on a
-                      demon while talented for Blood Moon.
+            Player versus Player
+                • Demon Hunter
+                    > Havoc
+                        + Fixed an issue causing Consume Magic to generate a Lesser Soul Fragment that grants a damage buff when used on a
+                          demon while talented for Blood Moon.
 
         September 9, 2025
 
@@ -72,8 +73,8 @@ PatchNotesDelivered_Notes_1120 = {
                         + Dark Ranger: Bleak Powder damage increased by 25%. Does not affect PvP combat.
                     > Marksmanship
                         + Fixed an issue causing Withering Fire's arrow barrage to fire an inconsistent number of arrows.
-                        + Withering Fire will now fire at your primary target when it has no nearby enemies to apply Black Arrow's periodic effect
-                          to.
+                        + Withering Fire will now fire at your primary target when it has no nearby enemies to apply Black Arrow's periodic 
+                          effect to.
                 • Monk
                     > Mistweaver
                         + Master of Harmony: Fixed an issue that caused Ancient Teachings healing to not be increased by Coalescence.
@@ -97,14 +98,15 @@ PatchNotesDelivered_Notes_1120 = {
                     > Borrow Power damage increase reduced by 25%.
                 • Nexus-Princess Ky'veza
                     > Nether Rift damage reduced for larger groups on all difficulties.
-                    > Nexus Daggers now spawns 3 additional phantoms (was 4), and time between phantoms increased to 1 second (was 0.75 seconds)
-                      on [?] difficulty.
+                    > Nexus Daggers now spawns 3 additional phantoms (was 4), and time between phantoms increased to 1 second (was 0.75 
+                      seconds) on [?] difficulty.
                     > Dark Massacre time between phantoms increased to 2 seconds (was 1.5 seconds) on [?] difficulty.
 
             Dungeons and Raids
                 • Ara-Kara, City of Echoes
                     > Trilling Attendant
-                        + Resonant Barrage initial cooldown increased, ability cooldown increased by 50%, and periodic damage reduced by 12.5%.
+                        + Resonant Barrage initial cooldown increased, ability cooldown increased by 50%, and periodic damage reduced by 
+                          12.5%.
                     > Engorged Crawler
                         + Venomous Spit ability cooldown increased by 40%.
                     > Avanoxx
@@ -118,13 +120,13 @@ PatchNotesDelivered_Notes_1120 = {
                     > Enemy forces requirement reduced by 10%.
                     > Stoneborn Slasher enemy force value increased by 50%.
                 • Manaforge Omega
-                    > Fixed an issue where the teleport option to Central Operations became unavailable if players activated the raid skip after
-                      already unlocking this teleport location.
+                    > Fixed an issue where the teleport option to Central Operations became unavailable if players activated the raid skip 
+                      after already unlocking this teleport location.
                     > Forgeweaver Araz
                         + Arcane Obliteration will now still cast even if the target dies early.
                         + Arcane Siphon damage reduced in Mythic difficulty.
-                        + Arcane Harvest and Silencing Tempest targeting updated to de-prioritize targeting tanks and to reduce the possibility of
-                          targets being selected by both of these abilities at once.
+                        + Arcane Harvest and Silencing Tempest targeting updated to de-prioritize targeting tanks and to reduce the 
+                          possibility of targets being selected by both of these abilities at once.
                     > Nexus-King Salhadaar
                         + Stage One: Oath-Breakers
                             - Command: Besiege now activates 9 Fractal Images (was 12), and time between each activation increased to 1.375
@@ -148,9 +150,9 @@ PatchNotesDelivered_Notes_1120 = {
             Items and Rewards
                 • Timewalking Stonecore items should now drop at the correct item level when obtained at max level.
                 • Nexus-King's Command’s spell visual orb from Oath-Bound is now hidden while out of combat.
-                • The Manaforge Vandals raid Renown "Attuned to the Aether" effect at rank 6 is now limited to weapon enchantments only and also
-                  increases the power of Death Knight Runeforge effects by 10%. The effect tooltip will temporarily be incorrect, until it is
-                  updated with a future hotfix.
+                • The Manaforge Vandals raid Renown "Attuned to the Aether" effect at rank 6 is now limited to weapon enchantments only and 
+                  also increases the power of Death Knight Runeforge effects by 10%. The effect tooltip will temporarily be incorrect, until 
+                  it is updated with a future hotfix.
                 • Fixed an issue where the Manaforge Vandals ‘view Renown’ button would remain locked after completing “Meet the Vandals”.
 
             Player versus Player
@@ -167,8 +169,8 @@ PatchNotesDelivered_Notes_1120 = {
                         + Elune’s Chosen: Lunar Calling increases Starfire damage to its primary target by 80% (was 128%) in PvP combat.
                 • Evoker
                     > Preservation
-                        + Chrono Flame’s maximum damage increased from the 4-piece class set reduced to 325% spell power in PvP combat (was 450%
-                          spell power).
+                        + Chrono Flame’s maximum damage increased from the 4-piece class set reduced to 325% spell power in PvP combat (was 
+                          450% spell power).
                 • Hunter
                     > Survival
                         + Flanking Strike damage decreased by 20% in PvP combat.
@@ -176,8 +178,8 @@ PatchNotesDelivered_Notes_1120 = {
                     > Arcane
                         + Arcane Harmony now increases the damage of Arcane Barrage by 2% per stack in PvP combat (was 5%).
                         + Intuition now increases the damage of Arcane Barrage by 20% in PvP combat (was 50%).
-                        + Improved Touch of the Magi now causes Nether Flux to increase the damage of your next spell by an additional 10% (was
-                          25%).
+                        + Improved Touch of the Magi now causes Nether Flux to increase the damage of your next spell by an additional 10% 
+                          (was 25%).
                         + All damage increased by 6% in PvP combat.
                         + Sunfury: Glorious Incandescence now increases the damage of Arcane Barrage by 10% in PvP combat (was 20%).
                         + Sunfury: Meteorites damage from Arcane Phoenix reduced by 38% in PvP combat.
