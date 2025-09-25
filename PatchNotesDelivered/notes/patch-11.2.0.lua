@@ -14,26 +14,26 @@ PatchNotesDelivered_Notes_1120 = {
     gameChangesHotfixes = [[
         September 24, 2025
 
-        Dungeons and Raids
-            • Manaforge Omega
-                > Fixed an issue on Normal and Heroic difficulties that caused Salhadaar to respawn if the raid was soft-reset after killing
-                  him following the use of the raid skip.
+            Dungeons and Raids
+                • Manaforge Omega
+                    > Fixed an issue on Normal and Heroic difficulties that caused Salhadaar to respawn if the raid was soft-reset after 
+                      killing him following the use of the raid skip.
 
-        Holidays
-            • Toys can no longer be placed in the Brewfest cooking and serving areas.
-            • Brewfest Prize Tokens are now Warbound.
-            • Resolved an issue where ‘Toasting’ was unnecessarily adding points to the bar after rewards had been determined.
-            • This year’s new mount from Coren Direbrew’s Keg-Shaped Treasure Chest is now named Brewfest Bomber.
-            • Alliance players now receive Direbrew’s Dire Brew as intended.
+            Holidays
+                • Toys can no longer be placed in the Brewfest cooking and serving areas.
+                • Brewfest Prize Tokens are now Warbound.
+                • Resolved an issue where ‘Toasting’ was unnecessarily adding points to the bar after rewards had been determined.
+                • This year’s new mount from Coren Direbrew’s Keg-Shaped Treasure Chest is now named Brewfest Bomber.
+                • Alliance players now receive Direbrew’s Dire Brew as intended.
 
-        Quests
-            • Fixed a bug that could prevent players from earning progress on "Emissary of War" after completing Halls of Atonement in
-              Mythic Keystone difficulty.
+            Quests
+                • Fixed a bug that could prevent players from earning progress on "Emissary of War" after completing Halls of Atonement in
+                  Mythic Keystone difficulty.
 
-        Reputation and Renown
-            • Fixed an issue where some players could become unable to progress as far as others with Manaforge Vandals. Affected players
-              may find that their reputation progress extends slightly into the next rank each week, but the maximum potential rank will
-              not be affected.
+            Reputation and Renown
+                • Fixed an issue where some players could become unable to progress as far as others with Manaforge Vandals. Affected 
+                  players may find that their reputation progress extends slightly into the next rank each week, but the maximum potential 
+                  rank will not be affected.
 
         September 12, 2025
 
