@@ -28,6 +28,5 @@ notes/patch-11.1.7.lua
 notes/patch-11.2.0.lua
 
 # Core Addon Files
-SpellDictionary.lua
 PatchNotesText.lua
 PatchNotesDelivered.lua
