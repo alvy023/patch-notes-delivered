@@ -48,8 +48,7 @@ patch-notes-delivered
 │   ├── notes/
 │   ├── PatchNotesDelivered.lua
 │   ├── PatchNotesDelivered.toc
-│   ├── PatchNotesText.lua
-│   └── SpellDictionary.lua
+│   └── PatchNotesText.lua
 ├── License.txt
 ├── README.md
 └── ThirdPartyNotices.md
