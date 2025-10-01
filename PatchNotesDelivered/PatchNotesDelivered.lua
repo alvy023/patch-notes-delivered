@@ -77,7 +77,7 @@ function PatchNotesDelivered:PLAYER_LOGIN()
         PATCH_NOTES = BuildPatchNotes()
     end
     if self:ShouldShowPatchNotes() then
-        self:ShowPatchNotes()
+        self:ShowPatchNotesPopup()
     end
 end
 
@@ -89,7 +89,7 @@ function PatchNotesDelivered:PLAYER_ENTERING_WORLD()
         PATCH_NOTES = BuildPatchNotes()
     end
     if self:ShouldShowPatchNotes() then
-        self:ShowPatchNotes()
+        self:ShowPatchNotesPopup()
     end
 end
 
@@ -233,6 +233,50 @@ function PatchNotesDelivered:ShouldShowPatchNotes()
     end
 
     return false
+end
+
+--- Description: Show the patch notes update popup
+--- @param:
+--- @return:
+function PatchNotesDelivered:ShowPatchNotesPopup()
+    local popup = AceGUI:Create("Window-PND")
+    popup.frame:SetSize(400, 180)
+    popup:SetTitle("Patch Notes Updated")
+    popup:SetTitleFont("Fonts\\FRIZQT__.TTF", 14, "OUTLINE")
+    popup:SetTitleAlignment("CENTER")
+
+    -- Message label
+    local label = AceGUI:Create("Label")
+    label:SetText("The patch notes have been updated!\nWould you like to view the latest changes?")
+    label:SetFont("Fonts\\FRIZQT__.TTF", 13)
+    label:SetFullWidth(true)
+    popup:AddChild(label)
+
+    -- Button bar
+    local buttonBar = AceGUI:Create("SimpleGroup")
+    buttonBar:SetLayout("Flow")
+    buttonBar:SetFullWidth(true)
+
+    -- Show Notes button
+    local showBtn = AceGUI:Create("Button")
+    showBtn:SetText("Show Notes")
+    showBtn:SetWidth(120)
+    showBtn:SetCallback("OnClick", function()
+        popup:Hide()
+        self:ShowPatchNotes()
+    end)
+    buttonBar:AddChild(showBtn)
+
+    -- Dismiss button
+    local dismissBtn = AceGUI:Create("Button")
+    dismissBtn:SetText("Dismiss")
+    dismissBtn:SetWidth(120)
+    dismissBtn:SetCallback("OnClick", function()
+        popup:Hide()
+    end)
+    buttonBar:AddChild(dismissBtn)
+
+    popup:AddChild(buttonBar)
 end
 
 --- Description: Show the patch notes frame
