@@ -10,8 +10,13 @@
 PatchNotesDelivered_Notes_1120 = {
     version = "11.2.0",
     build = "63305",
-    hotfix = 13,
+    hotfix = 14,
     gameChangesHotfixes = [[
+        September 25, 2025
+
+    Hotfixes
+        • World of Warcraft: The War Within
+
         September 24, 2025
 
             Dungeons and Raids
