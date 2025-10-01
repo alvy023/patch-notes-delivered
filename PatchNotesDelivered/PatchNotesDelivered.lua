@@ -210,22 +210,36 @@ end
 --- @return:
 function PatchNotesDelivered:ShowPatchNotesPopup()
     local popup = AceGUI:Create("Window-PND")
-    popup.frame:SetSize(400, 180)
-    popup:SetTitle("Patch Notes Updated")
-    popup:SetTitleFont("Fonts\\FRIZQT__.TTF", 14, "OUTLINE")
+    popup.frame:SetSize(350, 130)
+    popup:SetTitle("Patch Notes Delivered")
+    popup:SetTitleFont("Fonts\\FRIZQT__.TTF", 16, "OUTLINE")
     popup:SetTitleAlignment("CENTER")
+    popup:EnableResize(false)
 
     -- Message label
     local label = AceGUI:Create("Label")
-    label:SetText("The patch notes have been updated!\nWould you like to view the latest changes?")
-    label:SetFont("Fonts\\FRIZQT__.TTF", 13)
+    label:SetText("\nThe patch notes have been updated!\nWould you like to view the latest changes?")
     label:SetFullWidth(true)
+    label:SetJustifyH("CENTER")
     popup:AddChild(label)
 
     -- Button bar
     local buttonBar = AceGUI:Create("SimpleGroup")
     buttonBar:SetLayout("Flow")
     buttonBar:SetFullWidth(true)
+    popup:AddChild(buttonBar)
+
+    -- Spacer
+    local spacer = AceGUI:Create("Label")
+    spacer:SetText("")
+    spacer:SetWidth(32)
+    buttonBar:AddChild(spacer)
+
+    -- Inner group
+    local inner = AceGUI:Create("SimpleGroup")
+    inner:SetLayout("Flow")
+    inner:SetWidth(260)
+    inner:SetFullWidth(false)
 
     -- Show Notes button
     local showBtn = AceGUI:Create("Button")
@@ -235,7 +249,13 @@ function PatchNotesDelivered:ShowPatchNotesPopup()
         popup:Hide()
         self:ShowPatchNotes()
     end)
-    buttonBar:AddChild(showBtn)
+    inner:AddChild(showBtn)
+
+    -- Spacer
+    local midSpacer = AceGUI:Create("Label")
+    midSpacer:SetText("")
+    midSpacer:SetWidth(16)
+    inner:AddChild(midSpacer)
 
     -- Dismiss button
     local dismissBtn = AceGUI:Create("Button")
@@ -244,9 +264,10 @@ function PatchNotesDelivered:ShowPatchNotesPopup()
     dismissBtn:SetCallback("OnClick", function()
         popup:Hide()
     end)
-    buttonBar:AddChild(dismissBtn)
+    inner:AddChild(dismissBtn)
 
-    popup:AddChild(buttonBar)
+    -- Add Inner group
+    buttonBar:AddChild(inner)
 end
 
 --- Description: Show the patch notes frame
@@ -289,12 +310,12 @@ function PatchNotesDelivered:ShowPatchNotes()
     end)
     pnd:AddButton(resetButton)
 
-    -- Version Dropdown
-    local versionDropdown = AceGUI:Create("Dropdown")
-    local versionDropdownText = GetNotesListDropdown()
-    versionDropdown:SetList(versionDropdownText)
-    versionDropdown:SetValue(AVAILABLE_NOTES[1].version)
-    versionDropdown:SetWidth(100)
+    -- Scroll Frame
+    local scroll = AceGUI:Create("ScrollFrame")
+    scroll:SetLayout("Flow")
+    scroll:SetFullWidth(true)
+    scroll:SetFullHeight(true)
+    pnd:AddChild(scroll)
 
     -- Section Dropdown
     local sectionDropdown = AceGUI:Create("Dropdown")
@@ -305,14 +326,7 @@ function PatchNotesDelivered:ShowPatchNotes()
     }
     sectionDropdown:SetList(sectionList)
     sectionDropdown:SetValue("hotfixes")
-    sectionDropdown:SetWidth(120)
-
-    -- Scroll Frame
-    local scroll = AceGUI:Create("ScrollFrame")
-    scroll:SetLayout("Flow")
-    scroll:SetFullWidth(true)
-    scroll:SetFullHeight(true)
-    pnd:AddChild(scroll)
+    sectionDropdown:SetWidth(140)
 
     -- Helper to populate selected section
     local function PopulateSelectedSection()
@@ -321,7 +335,7 @@ function PatchNotesDelivered:ShowPatchNotes()
         if sectionDropdown:GetValue() == "hotfixes" then
             CreateSectionLabel(scroll, PATCH_NOTES.gameChangesHotfixes, "\n    |cffF89406Hotfix Changes|r\n\n", "\n\n", bodyOptions)
         elseif sectionDropdown:GetValue() == "patch" then
-            CreateSectionLabel(scroll, PATCH_NOTES.gameChangesPatch, "    |cff00B4FFPatch Changes|r\n\n", "\n\n", bodyOptions)
+            CreateSectionLabel(scroll, PATCH_NOTES.gameChangesPatch, "\n    |cff00B4FFPatch Changes|r\n\n", "\n\n", bodyOptions)
             -- Add all class changes sections
             CreateSectionLabel(scroll, PATCH_NOTES.deathKnightChangesPatch, "    |cff00B4FFDeath Knight Changes|r\n\n", "\n", bodyOptions)
             CreateSectionLabel(scroll, PATCH_NOTES.demonHunterChangesPatch, "    |cff00B4FFDemon Hunter Changes|r\n\n", "\n", bodyOptions)
@@ -337,11 +351,21 @@ function PatchNotesDelivered:ShowPatchNotes()
             CreateSectionLabel(scroll, PATCH_NOTES.warlockChangesPatch, "    |cff00B4FFWarlock Changes|r\n\n", "\n", bodyOptions)
             CreateSectionLabel(scroll, PATCH_NOTES.warriorChangesPatch, "    |cff00B4FFWarrior Changes|r\n\n", "\n", bodyOptions)
         elseif sectionDropdown:GetValue() == "addon" then
-            CreateSectionLabel(scroll, PATCH_NOTES.addonChanges, "    |cff32CD32Addon Changes|r\n\n", "", bodyOptions)
+            CreateSectionLabel(scroll, PATCH_NOTES.addonChanges, "\n    |cff32CD32Addon Changes|r\n\n", "", bodyOptions)
         end
     end
 
-    -- Dropdown callbacks
+    sectionDropdown:SetCallback("OnValueChanged", function(widget, event, key)
+        PopulateSelectedSection()
+    end)
+    pnd:AddButton(sectionDropdown)
+
+    -- Version Dropdown
+    local versionDropdown = AceGUI:Create("Dropdown")
+    local versionDropdownText = GetNotesListDropdown()
+    versionDropdown:SetList(versionDropdownText)
+    versionDropdown:SetValue(AVAILABLE_NOTES[1].version)
+    versionDropdown:SetWidth(100)
     versionDropdown:SetCallback("OnValueChanged", function(widget, event, key)
         for _, note in ipairs(AVAILABLE_NOTES) do
             if note.version == key then
@@ -352,13 +376,24 @@ function PatchNotesDelivered:ShowPatchNotes()
         PATCH_NOTES = BuildPatchNotes()
         PopulateSelectedSection()
     end)
-    sectionDropdown:SetCallback("OnValueChanged", function(widget, event, key)
-        PopulateSelectedSection()
-    end)
-
-    -- Add dropdowns to window
     pnd:AddButton(versionDropdown)
-    pnd:AddButton(sectionDropdown)
+
+    -- Fix Dropdown Spacing
+    if pnd.buttonBar and sectionDropdown.frame and versionDropdown.frame then
+        local rightPad = -54      -- gap from bar right edge
+        local spacing = 8        -- extra space between controls
+
+        -- rightmost (version)
+        versionDropdown.frame:SetParent(pnd.buttonBar)
+        versionDropdown.frame:ClearAllPoints()
+        versionDropdown.frame:SetPoint("RIGHT", pnd.buttonBar, "RIGHT", rightPad, 0)
+
+        -- left control (section) placed left of version control
+        local verW = versionDropdown.frame:GetWidth() or 100
+        sectionDropdown.frame:SetParent(pnd.buttonBar)
+        sectionDropdown.frame:ClearAllPoints()
+        sectionDropdown.frame:SetPoint("RIGHT", pnd.buttonBar, "RIGHT", rightPad - verW - spacing, 0)
+    end
 
     -- Initial population
     PopulateSelectedSection()

@@ -81,8 +81,19 @@ local function AddButtonToBar(self, button)
     table.insert(self.buttonBar.buttons, button)
 end
 
+--- Description: Enables or disables the resize handle.
+--- @param: enable - true to enable, false to disable.
+--- @return:
+local function EnableResize(self, enable)
+    if enable then
+        self.resizeButton:Show()
+    else
+        self.resizeButton:Hide()
+    end
+end
+
 -- Constructor
---- Description: Creates a new instance of the Window-MPA widget.
+--- Description: Creates a new instance of the Window-PND widget.
 --- @param:
 --- @return: The created widget.
 local function Constructor()
@@ -197,6 +208,7 @@ local function Constructor()
         titleLabel = titleLabel,
         titleArea = titleArea,
         buttonBar = buttonBar,
+        resizeButton = resizeButton,
         type = Type,
         Close = Hide,
         SetTitle = SetTitle,
@@ -207,6 +219,7 @@ local function Constructor()
         Hide = Hide,
         Show = Show,
         AddButton = AddButtonToBar,
+        EnableResize = EnableResize,
     }
 
     AceGUI:RegisterAsContainer(widget)
