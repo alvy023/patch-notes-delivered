@@ -5,13 +5,9 @@ on:
   workflow_dispatch:
     inputs:
       notes:
-        description: 'Notes file to update (optional - will use default if not provided)'
+        description: 'Notes file to update (optional)'
         required: false
-        default: 'patch-11.1.7.lua'
-
-  # Scheduled Trigger, Every Tuesday at 17:15 UTC (10:15 PST)
-  # schedule:
-  #   - cron: '15 17 * * 2'
+        default: 'patch-11.2.0.lua'
 
 permissions:
   contents: write

@@ -77,7 +77,7 @@ function PatchNotesDelivered:PLAYER_LOGIN()
         PATCH_NOTES = BuildPatchNotes()
     end
     if self:ShouldShowPatchNotes() then
-        self:ShowPatchNotes()
+        self:ShowPatchNotesPopup()
     end
 end
 
@@ -89,7 +89,7 @@ function PatchNotesDelivered:PLAYER_ENTERING_WORLD()
         PATCH_NOTES = BuildPatchNotes()
     end
     if self:ShouldShowPatchNotes() then
-        self:ShowPatchNotes()
+        self:ShowPatchNotesPopup()
     end
 end
 
@@ -161,36 +161,6 @@ local function CreateSectionLabel(scroll, text, title, footer, options)
     scroll:AddChild(label)
 end
 
---- Description: Populate the scroll section with patch notes
---- @param: scroll (AceGUI ScrollFrame)
---- @return:
-local function PopulateScrollSection(scroll)
-    scroll:ReleaseChildren()
-    
-    -- Body Options
-    local bodyOptions = { font = "Fonts\\FRIZQT__.TTF", size = 14, flags = "" }
-
-    -- Change Sections
-    CreateSectionLabel(scroll, PATCH_NOTES.gameChangesHotfixes, "\n    |cffF89406Hotfix Changes|r\n\n", "\n\n", bodyOptions)
-    CreateSectionLabel(scroll, PATCH_NOTES.gameChangesPatch, "    |cff00B4FFPatch Changes|r\n\n", "\n\n", bodyOptions)
-
-    CreateSectionLabel(scroll, PATCH_NOTES.deathKnightChangesPatch, "    |cff00B4FFPatch Class Changes|r\n\n", "\n", bodyOptions)
-    CreateSectionLabel(scroll, PATCH_NOTES.demonHunterChangesPatch, "\n", "\n", bodyOptions)
-    CreateSectionLabel(scroll, PATCH_NOTES.druidChangesPatch, "\n", "\n", bodyOptions)
-    CreateSectionLabel(scroll, PATCH_NOTES.evokerChangesPatch, "\n", "\n", bodyOptions)
-    CreateSectionLabel(scroll, PATCH_NOTES.hunterChangesPatch, "\n", "\n", bodyOptions)
-    CreateSectionLabel(scroll, PATCH_NOTES.mageChangesPatch, "\n", "\n", bodyOptions)
-    CreateSectionLabel(scroll, PATCH_NOTES.monkChangesPatch, "\n", "\n", bodyOptions)
-    CreateSectionLabel(scroll, PATCH_NOTES.paladinChangesPatch, "\n", "\n", bodyOptions)
-    CreateSectionLabel(scroll, PATCH_NOTES.priestChangesPatch, "\n", "\n", bodyOptions)
-    CreateSectionLabel(scroll, PATCH_NOTES.rogueChangesPatch, "\n", "\n", bodyOptions)
-    CreateSectionLabel(scroll, PATCH_NOTES.shamanChangesPatch, "\n", "\n", bodyOptions)
-    CreateSectionLabel(scroll, PATCH_NOTES.warlockChangesPatch, "\n", "\n", bodyOptions)
-    CreateSectionLabel(scroll, PATCH_NOTES.warriorChangesPatch, "\n", "\n", bodyOptions)
-
-    CreateSectionLabel(scroll, PATCH_NOTES.addonChanges, "    |cff32CD32Addon Changes|r\n\n", "", bodyOptions)
-end
-
 --- Description: Check if we should show the patch notes
 --- @param:
 --- @return:
@@ -233,6 +203,71 @@ function PatchNotesDelivered:ShouldShowPatchNotes()
     end
 
     return false
+end
+
+--- Description: Show the patch notes update popup
+--- @param:
+--- @return:
+function PatchNotesDelivered:ShowPatchNotesPopup()
+    local popup = AceGUI:Create("Window-PND")
+    popup.frame:SetSize(350, 130)
+    popup:SetTitle("Patch Notes Delivered")
+    popup:SetTitleFont("Fonts\\FRIZQT__.TTF", 16, "OUTLINE")
+    popup:SetTitleAlignment("CENTER")
+    popup:EnableResize(false)
+
+    -- Message label
+    local label = AceGUI:Create("Label")
+    label:SetText("\nThe patch notes have been updated!\nWould you like to view the latest changes?")
+    label:SetFullWidth(true)
+    label:SetJustifyH("CENTER")
+    popup:AddChild(label)
+
+    -- Button bar
+    local buttonBar = AceGUI:Create("SimpleGroup")
+    buttonBar:SetLayout("Flow")
+    buttonBar:SetFullWidth(true)
+    popup:AddChild(buttonBar)
+
+    -- Spacer
+    local spacer = AceGUI:Create("Label")
+    spacer:SetText("")
+    spacer:SetWidth(32)
+    buttonBar:AddChild(spacer)
+
+    -- Inner group
+    local inner = AceGUI:Create("SimpleGroup")
+    inner:SetLayout("Flow")
+    inner:SetWidth(260)
+    inner:SetFullWidth(false)
+
+    -- Show Notes button
+    local showBtn = AceGUI:Create("Button")
+    showBtn:SetText("Show Notes")
+    showBtn:SetWidth(120)
+    showBtn:SetCallback("OnClick", function()
+        popup:Hide()
+        self:ShowPatchNotes()
+    end)
+    inner:AddChild(showBtn)
+
+    -- Spacer
+    local midSpacer = AceGUI:Create("Label")
+    midSpacer:SetText("")
+    midSpacer:SetWidth(16)
+    inner:AddChild(midSpacer)
+
+    -- Dismiss button
+    local dismissBtn = AceGUI:Create("Button")
+    dismissBtn:SetText("Dismiss")
+    dismissBtn:SetWidth(120)
+    dismissBtn:SetCallback("OnClick", function()
+        popup:Hide()
+    end)
+    inner:AddChild(dismissBtn)
+
+    -- Add Inner group
+    buttonBar:AddChild(inner)
 end
 
 --- Description: Show the patch notes frame
@@ -282,13 +317,56 @@ function PatchNotesDelivered:ShowPatchNotes()
     scroll:SetFullHeight(true)
     pnd:AddChild(scroll)
 
-    -- Dropdown Menu
-    local dropdown = AceGUI:Create("Dropdown")
-    local dropdownText = GetNotesListDropdown()
-    dropdown:SetList(dropdownText)
-    dropdown:SetValue(AVAILABLE_NOTES[1].version)
-    dropdown:SetWidth(100)
-    dropdown:SetCallback("OnValueChanged", function(widget, event, key)
+    -- Section Dropdown
+    local sectionDropdown = AceGUI:Create("Dropdown")
+    local sectionList = {
+        hotfixes = "Hotfixes",
+        patch = "Patch Notes",
+        addon = "Addon Changes",
+    }
+    sectionDropdown:SetList(sectionList)
+    sectionDropdown:SetValue("hotfixes")
+    sectionDropdown:SetWidth(140)
+
+    -- Helper to populate selected section
+    local function PopulateSelectedSection()
+        scroll:ReleaseChildren()
+        local bodyOptions = { font = "Fonts\\FRIZQT__.TTF", size = 14, flags = "" }
+        if sectionDropdown:GetValue() == "hotfixes" then
+            CreateSectionLabel(scroll, PATCH_NOTES.gameChangesHotfixes, "\n    |cffF89406Hotfix Changes|r\n\n", "\n\n", bodyOptions)
+        elseif sectionDropdown:GetValue() == "patch" then
+            CreateSectionLabel(scroll, PATCH_NOTES.gameChangesPatch, "\n    |cff00B4FFPatch Changes|r\n\n", "\n\n", bodyOptions)
+            -- Add all class changes sections
+            CreateSectionLabel(scroll, PATCH_NOTES.deathKnightChangesPatch, "    |cff00B4FFDeath Knight Changes|r\n\n", "\n", bodyOptions)
+            CreateSectionLabel(scroll, PATCH_NOTES.demonHunterChangesPatch, "    |cff00B4FFDemon Hunter Changes|r\n\n", "\n", bodyOptions)
+            CreateSectionLabel(scroll, PATCH_NOTES.druidChangesPatch, "    |cff00B4FFDruid Changes|r\n\n", "\n", bodyOptions)
+            CreateSectionLabel(scroll, PATCH_NOTES.evokerChangesPatch, "    |cff00B4FFEvoker Changes|r\n\n", "\n", bodyOptions)
+            CreateSectionLabel(scroll, PATCH_NOTES.hunterChangesPatch, "    |cff00B4FFHunter Changes|r\n\n", "\n", bodyOptions)
+            CreateSectionLabel(scroll, PATCH_NOTES.mageChangesPatch, "    |cff00B4FFMage Changes|r\n\n", "\n", bodyOptions)
+            CreateSectionLabel(scroll, PATCH_NOTES.monkChangesPatch, "    |cff00B4FFMonk Changes|r\n\n", "\n", bodyOptions)
+            CreateSectionLabel(scroll, PATCH_NOTES.paladinChangesPatch, "    |cff00B4FFPaladin Changes|r\n\n", "\n", bodyOptions)
+            CreateSectionLabel(scroll, PATCH_NOTES.priestChangesPatch, "    |cff00B4FFPriest Changes|r\n\n", "\n", bodyOptions)
+            CreateSectionLabel(scroll, PATCH_NOTES.rogueChangesPatch, "    |cff00B4FFRogue Changes|r\n\n", "\n", bodyOptions)
+            CreateSectionLabel(scroll, PATCH_NOTES.shamanChangesPatch, "    |cff00B4FFShaman Changes|r\n\n", "\n", bodyOptions)
+            CreateSectionLabel(scroll, PATCH_NOTES.warlockChangesPatch, "    |cff00B4FFWarlock Changes|r\n\n", "\n", bodyOptions)
+            CreateSectionLabel(scroll, PATCH_NOTES.warriorChangesPatch, "    |cff00B4FFWarrior Changes|r\n\n", "\n", bodyOptions)
+        elseif sectionDropdown:GetValue() == "addon" then
+            CreateSectionLabel(scroll, PATCH_NOTES.addonChanges, "\n    |cff32CD32Addon Changes|r\n\n", "", bodyOptions)
+        end
+    end
+
+    sectionDropdown:SetCallback("OnValueChanged", function(widget, event, key)
+        PopulateSelectedSection()
+    end)
+    pnd:AddButton(sectionDropdown)
+
+    -- Version Dropdown
+    local versionDropdown = AceGUI:Create("Dropdown")
+    local versionDropdownText = GetNotesListDropdown()
+    versionDropdown:SetList(versionDropdownText)
+    versionDropdown:SetValue(AVAILABLE_NOTES[1].version)
+    versionDropdown:SetWidth(100)
+    versionDropdown:SetCallback("OnValueChanged", function(widget, event, key)
         for _, note in ipairs(AVAILABLE_NOTES) do
             if note.version == key then
                 PatchNotesDelivered_Pointer = note.data
@@ -296,12 +374,29 @@ function PatchNotesDelivered:ShowPatchNotes()
             end
         end
         PATCH_NOTES = BuildPatchNotes()
-        PopulateScrollSection(scroll)
+        PopulateSelectedSection()
     end)
-    pnd:AddButton(dropdown)
+    pnd:AddButton(versionDropdown)
 
-    -- Add the scroll section
-    PopulateScrollSection(scroll)
+    -- Fix Dropdown Spacing
+    if pnd.buttonBar and sectionDropdown.frame and versionDropdown.frame then
+        local rightPad = -54      -- gap from bar right edge
+        local spacing = 8        -- extra space between controls
+
+        -- rightmost (version)
+        versionDropdown.frame:SetParent(pnd.buttonBar)
+        versionDropdown.frame:ClearAllPoints()
+        versionDropdown.frame:SetPoint("RIGHT", pnd.buttonBar, "RIGHT", rightPad, 0)
+
+        -- left control (section) placed left of version control
+        local verW = versionDropdown.frame:GetWidth() or 100
+        sectionDropdown.frame:SetParent(pnd.buttonBar)
+        sectionDropdown.frame:ClearAllPoints()
+        sectionDropdown.frame:SetPoint("RIGHT", pnd.buttonBar, "RIGHT", rightPad - verW - spacing, 0)
+    end
+
+    -- Initial population
+    PopulateSelectedSection()
 
     PatchNotesFrame = pnd
 end

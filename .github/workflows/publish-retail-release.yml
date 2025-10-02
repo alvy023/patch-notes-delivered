@@ -55,29 +55,44 @@ jobs:
           CURSEFORGE_API_TOKEN: ${{ secrets.CURSEFORGE_API_TOKEN }}
           CURSEFORGE_ADDON_ID: ${{ secrets.CURSEFORGE_ADDON_ID }}
         run: |
+          # Prepare metadata
           RELEASE_FILENAME="${{ steps.get_release_items.outputs.release_asset_name }}"
           DISPLAY_NAME=$(echo "$RELEASE_FILENAME" | sed -e 's/\.zip$//')
           CHANGELOG=$(cat RELEASE_NOTES.md)
           PATCH_VERSION=$(grep -oP 'Patch -\[ \*\*\K[0-9]+\.[0-9]+\.[0-9]+(?=\*\* \]-)' RELEASE_NOTES.md | head -n1)
-          GAME_VERSION_ID=$(curl -s -H "x-api-token: ${CURSEFORGE_API_TOKEN}" "https://wow.curseforge.com/api/game/versions" | jq ".[] | select(.name==\"$PATCH_VERSION\") | .id" | head -n1)
+          GAME_VERSION_ID=$(curl -s -H "x-api-token: ${CURSEFORGE_API_TOKEN}" "https://wow.curseforge.com/api/game/versions" \
+            | jq ".[] | select(.name==\"$PATCH_VERSION\") | .id" | head -n1)
+          
           if [ -z "$GAME_VERSION_ID" ]; then
             echo "Could not find CurseForge game version ID for $PATCH_VERSION"
             exit 1
           fi
-          jq -n \
+          
+          METADATA_JSON=$(jq -cn \
             --arg changelog "$CHANGELOG" \
             --arg changelogType "markdown" \
             --arg displayName "$DISPLAY_NAME" \
             --argjson gameVersions "[$GAME_VERSION_ID]" \
             --arg releaseType "release" \
-            '{changelog: $changelog, changelogType: $changelogType, displayName: $displayName, gameVersions: $gameVersions, releaseType: $releaseType}' > metadata.json
-          echo "METADATA:"
-          cat metadata.json
+            '{changelog: $changelog, changelogType: $changelogType, displayName: $displayName, gameVersions: $gameVersions, releaseType: $releaseType}')
+            
+          echo "METADATA: $METADATA_JSON"
+          
+          # Build and send the curl request
           response=$(curl -s -X POST "https://wow.curseforge.com/api/projects/${CURSEFORGE_ADDON_ID}/upload-file" \
             -H "x-api-token: ${CURSEFORGE_API_TOKEN}" \
-            -F "metadata=@metadata.json;type=application/json" \
-            -F "file=@dist/$RELEASE_FILENAME")
+            -F 'metadata=<-' \
+            -F "file=@dist/$RELEASE_FILENAME" \
+            <<< "$METADATA_JSON")
+            
           echo "CurseForge response: $response"
+          
+          # Check for an error in the response
+          if echo "$response" | jq -e '.error, .errorMessage' > /dev/null; then
+            echo "[ERROR] CurseForge:"
+            echo "$response" | jq '.'
+            exit 1
+          fi
 
       # WOWUP UPLOAD (WowUp CLI)
       - name: Upload to WowUp (Wago API)
@@ -86,15 +101,18 @@ jobs:
           WOWUP_API_TOKEN: ${{ secrets.WOWUP_API_TOKEN }}
           WOWUP_ADDON_ID: ${{ secrets.WOWUP_ADDON_ID }}
         run: |
+          # Prepare metadata
           RELEASE_FILENAME="${{ steps.get_release_items.outputs.release_asset_name }}"
-          # Remove prefix and suffix
+          ## Remove prefix and suffix
           RELEASE_LABEL=$(echo "$RELEASE_FILENAME" | sed -e 's/^PatchNotesDelivered-//' -e 's/\.zip$//')
           CHANGELOG=$(cat RELEASE_NOTES.md)
           SUPPORTED_RETAIL_PATCH=$(grep -oP 'Patch -\[ \*\*\K[0-9]+\.[0-9]+\.[0-9]+(?=\*\* \]-)' RELEASE_NOTES.md | head -n1)
+          
           echo "RELEASE_LABEL: $RELEASE_LABEL"
           echo "SUPPORTED_RETAIL_PATCH: $SUPPORTED_RETAIL_PATCH"
           echo "CHANGELOG: $CHANGELOG"
           ls -l dist/
+          
           METADATA=$(jq -n \
             --arg label "$RELEASE_LABEL" \
             --arg stability "stable" \
@@ -102,9 +120,18 @@ jobs:
             --arg patch "$SUPPORTED_RETAIL_PATCH" \
             '{label: $label, stability: $stability, changelog: $changelog, supported_retail_patch: $patch}')
           echo "METADATA: $METADATA"
-          curl -f -X POST \
+          
+          # Build and send the curl request
+          response=$(curl -f -X POST \
             -F "metadata=$METADATA" \
             -F "file=@dist/$RELEASE_FILENAME" \
             -H "authorization: Bearer $WOWUP_API_TOKEN" \
             -H "accept: application/json" \
-            "https://addons.wago.io/api/projects/$WOWUP_ADDON_ID/version"
+            "https://addons.wago.io/api/projects/$WOWUP_ADDON_ID/version")
+
+          # Check for an error in the response
+          if echo "$response" | jq -e '.error, .errorMessage' > /dev/null; then
+            echo "[ERROR] WowUp:"
+            echo "$response" | jq '.'
+            exit 1
+          fi

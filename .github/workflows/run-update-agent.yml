@@ -4,13 +4,13 @@ on:
   workflow_dispatch:
     inputs:
       notes_file:
-        description: 'Notes file to update'
+        description: 'Notes file to update (optional)'
         required: false
-        default: 'patch-11.1.7.lua'
+        default: 'patch-11.2.0.lua'
       scrape_url:
         description: 'URL to scrape for patch notes'
         required: false
-        default: 'https://worldofwarcraft.blizzard.com/en-us/news/24201420/'
+        default: 'https://worldofwarcraft.blizzard.com/en-us/news/24223774/'
       commit_news:
         description: 'Commit news to the branch'
         required: false
