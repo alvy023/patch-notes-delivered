@@ -10,8 +10,35 @@
 PatchNotesDelivered_Notes_1120 = {
     version = "11.2.0",
     build = "63305",
-    hotfix = 13,
+    hotfix = 14,
     gameChangesHotfixes = [[
+        September 25, 2025
+
+    Hotfixes
+        • World of Warcraft
+            > Classes
+                + Priest
+                    - Fixed a bug that allowed Monks to bypass Guardian Spirit via Touch of Death.
+                    - In Arenas, Priests can no longer place Lightwells in areas that other players cannot reach.
+
+    August 20, 2025
+
+        Classes
+            • Druid
+                > Balance
+                    + Dream of Cenarius now correctly applies the Eclipse state without delay.
+            • Warlock
+                > Felhunters and Observers no longer cast their spell lock ability while being out of line-of-sight of their target
+                > Summon Incubus is once again available.
+                > Added Grimoire of Service Incubus.
+                > Added Grimoire of Supremacy Archincubus.
+                > Shadow Bolt will now correctly add stacks of Molten Core when the target is below 25%.
+                    - Developers’ notes: Previously Shadow Bolt was only adding an initial stack and could not contribute to more stacks.
+                      This also means that Touch of Chaos will add stacks of Molten Core.
+
+        Player versus Player
+            • In the Dalaran Sewers Arena, Priests can no longer place Lightwells in areas that other players cannot reach.
+
         September 24, 2025
 
             Dungeons and Raids
