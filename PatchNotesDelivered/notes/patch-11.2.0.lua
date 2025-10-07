@@ -10,8 +10,15 @@
 PatchNotesDelivered_Notes_1120 = {
     version = "11.2.0",
     build = "63305",
-    hotfix = 13,
+    hotfix = 14,
     gameChangesHotfixes = [[
+        September 25, 2025
+
+    Hotfixes
+        • Some of the hotfixes below take effect the moment they were implemented, while others may require scheduled realm restarts to go into
+          effect. Please keep in mind that some issues cannot be addressed without a client-side patch update. This list will be updated as
+          additional hotfixes are applied.
+
         September 24, 2025
 
             Dungeons and Raids
