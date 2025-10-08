@@ -38,7 +38,7 @@ PatchNotesDelivered_Notes_1125 = {
                           value.
 
             Dungeons and Raids
-                • Eco—Dome Al’dani
+                • Eco-Dome Al’dani
                     > Addressed an issue where the effect of Binding Javelin was not stacking as intended.
                 • Manaforge Omega
                     > Nexus-King Salhadaar
