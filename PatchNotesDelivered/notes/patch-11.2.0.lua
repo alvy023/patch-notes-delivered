@@ -8,10 +8,101 @@
 --- Export global notes variable
 --- Max note length [140] ------------------------------------------------------------------------------------------------------------------
 PatchNotesDelivered_Notes_1120 = {
-    version = "11.2.0",
-    build = "63305",
-    hotfix = 13,
+    version = "11.2.5",
+    build = "63660",
+    hotfix = 14,
     gameChangesHotfixes = [[
+        October 7, 2025
+
+    Classes
+        • Death Knight
+            > Frost
+                + All ability damage has been reduced by 3%. Does not affect PvP combat.
+        • Hunter
+            > Beast Mastery
+                + Dark Ranger: Black Arrow damage reduced by 8%. Does not affect PvP combat.
+                + Dark Ranger: Bleak Powder damage reduced by 8%. Does not affect PvP combat.
+            > Marksmanship
+                + Dark Ranger: Black Arrow damage reduced by 6%. Does not affect PvP combat.
+                + Dark Ranger: Bleak Powder damage reduced by 6%. Does not affect PvP combat.
+        • Mage
+            > Arcane
+                + All damage dealt reduced by 3%. Does not affect PvP combat.
+        • Priest
+            > Discipline
+                + Atonement healing increased by 15%.
+                + Atonement healing is now increased by 75% outside of raids (was 100%).
+        • Rogue
+            > Fatebound: Fixed an issue that caused the damage bonus provided by Fatebound Coin (Heads) to be 8% lower than the displayed value.
+
+    Dungeons and Raids
+        • Eco—Dome Al’dani
+            > Addressed an issue where the effect of Binding Javelin was not stacking as intended.
+        • Manaforge Omega
+            > Nexus-King Salhadaar
+                + (all changes are on Mythic difficulty)
+                    - Command: Besiege now activates 8 Fractal Images (was 9).
+                    - Time between each activation increased to 1.57 seconds (was 1.375 seconds).
+                    - Conquer magic damage reduced by 10%.
+                    - Vanquish magic damage reduced by 10%.
+                    - Oath-Breaker damage reduced by 20%.
+                    - Behead damage reduced by 10%.
+                    - The Royal Voidwing melee damage reduced by 10%.
+                    - Galactic Smash damage reduced by 10%.
+                    - Starshattered damage reduced by 10%.
+            > Dimensius, the All-Devouring
+                + (all changes are on Mythic difficulty)
+                    - Massive Smash raidwide damage reduced by 20%.
+                    - Shattered Space raidwide damage reduced by 20%.
+                    - Living Mass health reduced by 10%.
+                    - Infinite Possibilities cast time increased to 10 seconds (was 8 seconds).
+                    - Umbral Gates grant Soaring Reshii for 11 seconds (was 10 seconds).
+                    - Artoshion and Pargoth health reduced by 5%.
+                    - Artoshion and Pargoth melee attack damage reduced by 15%.
+                    - Voidwarden health reduced by 10%.
+                    - Nullbinder health reduced by 20%.
+                    - Null Binding cast time increased to 5 seconds (was 4 seconds).
+                    - Starshards are now more generous about detecting players at lower elevations beneath them.
+                    - Cosmic Radiation damage reduced by 10% in Stage Three.
+
+    Player versus Player
+        • Death Knight
+            > Blood
+                + The 11.2 Deathbringer Class Set damage bonus to Empower Rune Weapon is now 33% effective in PvP combat.
+                + The cooldown reduction from Insatiable Blade is now 40% effective in PvP combat.
+        • Druid
+            > Restoration
+                + Reactive Resin healing increased by 80%.
+                + Fixed an issue that caused Rejuvenation and Regrowth to benefit from Soul of the Forest when applied from the 11.1 4-piece set bonus.
+                + Fixed an issue that caused Overgrowth to cast Regrowth’s initial heal when Nature’s Swiftness was active.
+        • Hunter
+            > Beast Mastery
+                + Packleader: Ravenous Leap damage from Huntermaster’s Call reduced by 30% in PvP combat.
+            > Marksmanship
+                + Rapid Fire now deals 10% more damage in PvP combat.
+                + Aimed Shot now deals 10% less damage in PvP combat.
+                + Black Arrow deals 15% less damage in PvP combat.
+        • Mage
+            > Arcane
+                + Leydrinkiner now repeats its damage at 35% effectiveness in PvP combat (was 70%).
+        • Monk
+            > Mistweaver
+                + Enveloping Mist healing increased by 15% in PvP combat.
+                + Soothing Mist healing increased by 15% in PvP combat.
+        • Paladin
+            > Retribution
+                + Dawnlight damage decreased by 15% in PvP combat.
+                + Sun’s Avatar damage decreased by 15% in PvP combat.
+                + Healing Hands now reduces the cooldown of Lay on Hands by a maximum of 30% (was 60%).
+                + Fixed an issue that caused the 11.2 Herald of the Sun 2-piece set bonus to not be properly reduced by 33% in PvP combat.
+        • Shaman
+            > Enhancement
+                + Stormstrike damage increased by 45% in PvP combat. Does not apply to Windstrike.
+                + Lightning Bolt damage increased by 20% in PvP combat.
+                + Lightning Bolt, Chain Lightning, and Tempest damage from Thorims Invocation is now 50% effective in PvP combat (was 70%).
+                + Doom Winds now increases the chance for Windfury to trigger by 100% (was 200%) in PvP combat.
+                + Feral Spirits now increase Physical and Elemental damage done by 5% in PvP combat (was 10%).
+
         September 24, 2025
 
             Dungeons and Raids
