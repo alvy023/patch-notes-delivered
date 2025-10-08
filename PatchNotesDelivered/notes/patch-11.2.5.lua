@@ -87,7 +87,7 @@ PatchNotesDelivered_Notes_1125 = {
                         + Black Arrow deals 15% less damage in PvP combat.
                 • Mage
                     > Arcane
-                        + Leydrinkiner now repeats its damage at 35% effectiveness in PvP combat (was 70%).
+                        + Leydrinker now repeats its damage at 35% effectiveness in PvP combat (was 70%).
                 • Monk
                     > Mistweaver
                         + Enveloping Mist healing increased by 15% in PvP combat.
