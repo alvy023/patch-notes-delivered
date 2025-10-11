@@ -9,9 +9,29 @@
 --- Max note length [140] ------------------------------------------------------------------------------------------------------------------
 PatchNotesDelivered_Notes_1125 = {
     version = "11.2.5",
-    build = "63660",
-    hotfix = 1,
+    build = "63796",
+    hotfix = 2,
     gameChangesHotfixes = [[
+        October 10, 2025
+
+        Dungeons and Raids
+            • Manaforge Omega
+                > Resolved an issue causing Crystalline Shockwave’s duration to be longer than intended.
+                > Fixed an issue where Excess Mass could be destroyed when a player holding it enters Spirit of Redemption form.
+
+        Items
+            • Unyielding Netherprism no longer triggers when an enemy triggers Freezing Trap.
+
+        Quests
+            • Fixed an issue preventing non-Remix characters from using the Lightforged Beacon to complete "The Lightforged".
+
+October 9, 2025
+
+        Quests
+            • Resolved an issue preventing players from proceeding through “Break the Bonds” from the Warrior Order Hall.
+            • Shamans starting “Blessed Blade of the Windseeker” now have an Infinitely Mysterious Portal to Silithus next to Advisor Sevel
+              in the Heart of Azeroth.
+
         October 7, 2025
 
             Classes
