@@ -32,7 +32,7 @@ PatchNotesDelivered_Notes_1125 = {
             Legion Remix
                 • Fixed an issue causing players to sometimes be unable to complete Infinite Research: Artifact Collector.
                 • Various changes to improve performance, especially in Suramar.
-                • Pets and mounts exclusive to Legion Remix are now indicated as such on their tooltips
+                • Pets and mounts exclusive to Legion Remix are now indicated as such on their tooltips.
                 • Death Knight
                     > Fixed an issue causing Death Knights to enter the wrong timeline of Arathi Highlands when attempting to complete 
                       “The Ruined Kingdom”.
