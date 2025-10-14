@@ -14,29 +14,32 @@ PatchNotesDelivered_Notes_1125 = {
     gameChangesHotfixes = [[
         October 13, 2025
 
-    Classes
-        • Priest
-            > Holy
-                + Fixed an issue where Holy Priest Mastery would heal for less than intended on lower-level targets.
-    
-    Dungeons and Raids
-        • Operation: Floodgate
-            > Waystone unlocked after Geezle Gigazap now functions correctly.
-            > Resolved an issue causing Keeza Quickfuse to rarely cast B.B.B.F.G. at unintended locations.
-        • The Dawnbreaker
-            > Resolved an issue where Radiant Light could fade from players after defeating Rasha'nan prior to the Lamplighter's Skiff
-              arriving, resulting in an unintended death.
-    
-    Legion Remix
-        • Fixed an issue causing players to sometimes be unable to complete Infinite Research: Artifact Collector.
-        • Various changes to improve performance, especially in Suramar.
-        • Death Knight
-            > Fixed an issue causing Death Knights to enter the wrong timeline of Arathi Highlands when attempting to complete “The Ruined
-              Kingdom”.
-        • Demon Hunter
-            > Storm Surger and Brewing Storm no longer prevent Demon Hunters from collecting Soul Fragments.
-            > Fixed an issue causing Horde Demon Hunter timerunners to be unable to complete “Audience with the Warchief”.
-            > Fixed an issue causing Alliance Demon Hunter timerunners to be unable to complete “Demons Among Them”.
+            Classes
+                • Priest
+                    > Holy
+                        + Fixed an issue where Holy Priest Mastery would heal for less than intended on lower-level targets.
+            
+            Dungeons and Raids
+                • Operation: Floodgate
+                    > Waystone unlocked after Geezle Gigazap now functions correctly.
+                    > Resolved an issue causing Keeza Quickfuse to rarely cast B.B.B.F.G. at unintended locations.
+                • The Dawnbreaker
+                    > Resolved an issue where Radiant Light could fade from players after defeating Rasha'nan prior to the Lamplighter's 
+                      Skiff arriving, resulting in an unintended death.
+                • Naxxramas
+                    > Fixed a pathing issue that was resetting the Kel'Thuzad encounter.
+
+            Legion Remix
+                • Fixed an issue causing players to sometimes be unable to complete Infinite Research: Artifact Collector.
+                • Various changes to improve performance, especially in Suramar.
+                • Pets and mounts exclusive to Legion Remix are now indicated as such on their tooltips
+                • Death Knight
+                    > Fixed an issue causing Death Knights to enter the wrong timeline of Arathi Highlands when attempting to complete 
+                      “The Ruined Kingdom”.
+                • Demon Hunter
+                    > Storm Surger and Brewing Storm no longer prevent Demon Hunters from collecting Soul Fragments.
+                    > Fixed an issue causing Horde Demon Hunter timerunners to be unable to complete “Audience with the Warchief”.
+                    > Fixed an issue causing Alliance Demon Hunter timerunners to be unable to complete “Demons Among Them”.
 
         October 10, 2025
 
