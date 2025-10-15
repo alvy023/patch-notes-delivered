@@ -74,16 +74,22 @@ jobs:
             --arg displayName "$DISPLAY_NAME" \
             --argjson gameVersions "[$GAME_VERSION_ID]" \
             --arg releaseType "release" \
-            '{changelog: $changelog, changelogType: $changelogType, displayName: $displayName, gameVersions: $gameVersions, releaseType: $releaseType}')
+            '{changelog: $changelog, 
+              changelogType: $changelogType, 
+              displayName: $displayName, 
+              gameVersions: $gameVersions, 
+              releaseType: $releaseType}')
             
           echo "METADATA: $METADATA_JSON"
+          
+          # Save metadata to a temporary file
+          echo "$METADATA_JSON" > metadata.json
           
           # Build and send the curl request
           response=$(curl -s -X POST "https://wow.curseforge.com/api/projects/${CURSEFORGE_ADDON_ID}/upload-file" \
             -H "x-api-token: ${CURSEFORGE_API_TOKEN}" \
-            -F 'metadata=<-' \
-            -F "file=@dist/$RELEASE_FILENAME" \
-            <<< "$METADATA_JSON")
+            -F "metadata=@metadata.json" \
+            -F "file=@dist/$RELEASE_FILENAME")
             
           echo "CurseForge response: $response"
           
