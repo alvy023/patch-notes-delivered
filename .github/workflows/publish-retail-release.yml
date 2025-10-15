@@ -82,14 +82,10 @@ jobs:
             
           echo "METADATA: $METADATA_JSON"
           
-          # Save metadata to a temporary file
-          echo "$METADATA_JSON" > metadata.json
-          
-          # Build and send the curl request with explicit Content-Type
+          # Build and send the curl request
           response=$(curl -s -X POST "https://wow.curseforge.com/api/projects/${CURSEFORGE_ADDON_ID}/upload-file" \
             -H "x-api-token: ${CURSEFORGE_API_TOKEN}" \
-            -H "Content-Type: multipart/form-data" \
-            -F "metadata=@metadata.json" \
+            -F "metadata=$METADATA_JSON" \
             -F "file=@dist/$RELEASE_FILENAME")
             
           echo "CurseForge response: $response"
