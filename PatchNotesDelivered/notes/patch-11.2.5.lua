@@ -14,15 +14,30 @@ PatchNotesDelivered_Notes_1125 = {
     gameChangesHotfixes = [[
         October 14, 2025
 
-        Dungeons and Raids
-            • Halls of Atonement
-                > Fixed an issue where visuals for Halkias's ability Crumbling Slam would disappear if players jumped too high.
+            Dungeons and Raids
+                • Halls of Atonement
+                    > Fixed an issue where visuals for Halkias's ability Crumbling Slam would disappear if players jumped too high.
 
-        Player versus Player
-            • Dalaran Sewers and Ruins of Lordaeron have temporarily been removed from the Arena rotation.
+            Player versus Player
+                • Dalaran Sewers and Ruins of Lordaeron have temporarily been removed from the Arena rotation.
 
-        Quests
-            • Stout Highlands Runehorns have become more bold, allowing players to more easily complete "A Stack of Racks".
+            Quests
+                • Stout Highlands Runehorns have become more bold, allowing players to more easily complete "A Stack of Racks".
+
+            Legion Remix
+                • Aeonicus can now teach mages the Arcane Momentum technique.
+                • Hunters can now find tameable hyenas, clefthoofs, core hounds, stone hounds, and devilsaurs on the Broken Isles.
+                • Zandalari Trolls can now pray at a shrine at the Infinite Bazaar near Dalaran to choose their Loa.
+                • The Imperious affix in Heroic World Tier now empowers nearby enemy damage by 30% (was 25%) occurring every 15 seconds for 
+                  10 seconds (was always active).
+                • Reduced the potency of Timeless Scroll of Chaos to be less effective than Demon Hunter's Chaos Brand.
+                • Gathering nodes in Legion Remix have had their loot tables normalized.
+                • Rich Gathering Nodes now have a high chance to contain mementos.
+                • Seam Gathering Nodes now have a high chance to contain multiple mementos.
+                • Champion's Insignias will no longer survive the conversion process to alternate timelines.
+                • Fixed an issue causing Monk timerunners to enter the wrong timeline of Uldum when heading “Off to Adventure”.
+                • Reign of Chaos and Tempest Wrath aura tooltips now display the correct amount of damage.
+                • Memento of Epoch Nostalgia is now usable from your inventory.
 
         October 13, 2025
 
