@@ -58,6 +58,14 @@ jobs:
           echo "Fetching local game version/build"
           python .github/scripts/create_retail_release.py "$NOTES_FILE" commits.txt
 
+      - name: Commit release notes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add ${{ steps.create_release.outputs.release_notes_path }}
+          git commit -m "Add release notes for v${ADDON_VERSION}-retail-${{ steps.create_release.outputs.local_game_version_build_hf }}" || echo "No changes to commit"
+          git push origin main
+
       - name: Set full version string
         id: versioning
         run: |
