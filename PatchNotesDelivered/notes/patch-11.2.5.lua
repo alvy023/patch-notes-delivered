@@ -35,7 +35,7 @@ PatchNotesDelivered_Notes_1125 = {
                 • Rich Gathering Nodes now have a high chance to contain mementos.
                 • Seam Gathering Nodes now have a high chance to contain multiple mementos.
                 • Champion's Insignias will no longer survive the conversion process to alternate timelines.
-                • Fixed an issue causing Monk timerunners to enter the wrong timeline of Uldum when heading “Off to Adventure”.
+                • Fixed an issue causing Monk timerunners to enter the wrong timeline of Uldum when heading "Off to Adventure".
                 • Reign of Chaos and Tempest Wrath aura tooltips now display the correct amount of damage.
                 • Memento of Epoch Nostalgia is now usable from your inventory.
 
