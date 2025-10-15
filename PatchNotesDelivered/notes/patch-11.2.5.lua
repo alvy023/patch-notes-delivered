@@ -9,9 +9,21 @@
 --- Max note length [140] ------------------------------------------------------------------------------------------------------------------
 PatchNotesDelivered_Notes_1125 = {
     version = "11.2.5",
-    build = "63796",
-    hotfix = 4,
+    build = "63834",
+    hotfix = 5,
     gameChangesHotfixes = [[
+        October 14, 2025
+
+        Dungeons and Raids
+            • Halls of Atonement
+                > Fixed an issue where visuals for Halkias's ability Crumbling Slam would disappear if players jumped too high.
+
+        Player versus Player
+            • Dalaran Sewers and Ruins of Lordaeron have temporarily been removed from the Arena rotation.
+
+        Quests
+            • Stout Highlands Runehorns have become more bold, allowing players to more easily complete "A Stack of Racks".
+
         October 13, 2025
 
             Classes
