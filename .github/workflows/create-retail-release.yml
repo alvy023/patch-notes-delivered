@@ -62,6 +62,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
+          git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
           git add ${{ steps.create_release.outputs.release_notes_path }}
           git commit -m "Add release notes for v${ADDON_VERSION}-retail-${{ steps.create_release.outputs.local_game_version_build_hf }}" || echo "No changes to commit"
           git push origin main
@@ -82,6 +83,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
+          git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
           git tag "${{ steps.versioning.outputs.release_tag }}"
           git push origin "${{ steps.versioning.outputs.release_tag }}"
 
