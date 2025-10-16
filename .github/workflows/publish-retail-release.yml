@@ -48,21 +48,52 @@ jobs:
           gh release view --json body --jq ".body" > RELEASE_NOTES.md
           echo "release_asset_name=${release_asset_name}" >> $GITHUB_OUTPUT
 
-      # CURSEFORGE UPLOAD (BigWigsMods packager)
+      # CURSEFORGE UPLOAD (Curseforge API)
       - name: Upload to CurseForge
         if: ${{ github.event.inputs.upload_curseforge == 'true' }}
-        uses: BigWigsMods/packager@v2
         env:
-          CF_API_KEY: ${{ secrets.CURSEFORGE_API_TOKEN }}
-          WOWI_API_TOKEN: "" # Disable WoWInterface upload
-          WAGO_API_TOKEN: "" # Disable Wago upload
-          GITHUB_OAUTH: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          args: | 
-            -z "dist/${{ steps.get_release_items.outputs.release_asset_name }}"
-            -n "$(echo "${{ steps.get_release_items.outputs.release_asset_name }}" | sed 's/\.zip$//')" 
-            -m ".pkgmeta"
-            -g "retail"
+          CURSEFORGE_API_TOKEN: ${{ secrets.CURSEFORGE_API_TOKEN }}
+          CURSEFORGE_ADDON_ID: ${{ secrets.CURSEFORGE_ADDON_ID }}
+        run: |
+          # Prepare metadata
+          RELEASE_FILENAME="${{ steps.get_release_items.outputs.release_asset_name }}"
+          DISPLAY_NAME=$(echo "$RELEASE_FILENAME" | sed -e 's/\.zip$//')
+          CHANGELOG=$( jq --slurp --raw-input '.' < "RELEASE_NOTES.md" )
+          PATCH_VERSION=$(grep -oP 'Patch -\[ \*\*\K[0-9]+\.[0-9]+\.[0-9]+(?=\*\* \]-)' RELEASE_NOTES.md | head -n1)
+          GAME_VERSION_ID=$(curl -s -H "x-api-token: ${CURSEFORGE_API_TOKEN}" "https://wow.curseforge.com/api/game/versions" \
+            | jq ".[] | select(.name==\"$PATCH_VERSION\") | .id" | head -n1)
+          
+          if [ -z "$GAME_VERSION_ID" ]; then
+            echo "Could not find CurseForge game version ID for $PATCH_VERSION"
+            exit 1
+          fi
+
+          METADATA_JSON=$(cat <<-EOF
+          {
+            "displayName": "$DISPLAY_NAME",
+            "gameVersions": [$GAME_VERSION_ID],
+            "releaseType": "release",
+            "changelog": $(jq --slurp --raw-input '.' < "RELEASE_NOTES.md"),
+            "changelogType": "markdown"
+          }
+          EOF
+          )
+
+          echo "METADATA_JSON: $METADATA_JSON"
+
+          # Build and send the curl request
+          response=$(echo "$METADATA_JSON" | curl -sS --retry 3 --retry-delay 10 \
+            -H "x-api-token: ${CURSEFORGE_API_TOKEN}" \
+            -F "metadata=<-" \
+            -F "file=@dist/$RELEASE_FILENAME" \
+            "https://wow.curseforge.com/api/projects/${CURSEFORGE_ADDON_ID}/upload-file"
+          )
+          echo "Response: $response"
+          if echo "$response" | jq -e '.error' > /dev/null; then
+            echo "[ERROR] CurseForge:"
+            echo "$response" | jq '.'
+            exit 1
+          fi
 
       # WOWUP UPLOAD (WowUp CLI)
       - name: Upload to WowUp (Wago API)
