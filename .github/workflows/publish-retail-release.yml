@@ -59,9 +59,10 @@ jobs:
           GITHUB_OAUTH: ${{ secrets.GITHUB_TOKEN }}
         with:
           args: | 
-            -z "dist/${{ steps.get_release_items.outputs.release_asset_name }}" 
+            -z "dist/${{ steps.get_release_items.outputs.release_asset_name }}"
             -n "$(echo "${{ steps.get_release_items.outputs.release_asset_name }}" | sed 's/\.zip$//')" 
-            -m "$(cat RELEASE_NOTES.md)"
+            -m ".pkgmeta"
+            -g "retail"
 
       # WOWUP UPLOAD (WowUp CLI)
       - name: Upload to WowUp (Wago API)
