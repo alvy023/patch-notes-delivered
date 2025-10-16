@@ -75,7 +75,7 @@ jobs:
             "gameVersions": [$GAME_VERSION_ID],
             "releaseType": "release",
             "changelog": $CHANGELOG,
-            "changelogType": "markdown"
+            "changelogType": "text"
           }
           EOF
           )
