@@ -58,7 +58,8 @@ jobs:
           # Prepare metadata
           RELEASE_FILENAME="${{ steps.get_release_items.outputs.release_asset_name }}"
           DISPLAY_NAME=$(echo "$RELEASE_FILENAME" | sed -e 's/\.zip$//')
-          CHANGELOG=$( jq --slurp --raw-input '.' < "RELEASE_NOTES.md" )
+          # CHANGELOG=$(jq --slurp --raw-input '.' < "RELEASE_NOTES.md")
+          CHANGELOG="# Test Change Log\n\nThis is a test changelog."
           PATCH_VERSION=$(grep -oP 'Patch -\[ \*\*\K[0-9]+\.[0-9]+\.[0-9]+(?=\*\* \]-)' RELEASE_NOTES.md | head -n1)
           GAME_VERSION_ID=$(curl -s -H "x-api-token: ${CURSEFORGE_API_TOKEN}" "https://wow.curseforge.com/api/game/versions" \
             | jq ".[] | select(.name==\"$PATCH_VERSION\") | .id" | head -n1)
@@ -73,7 +74,7 @@ jobs:
             "displayName": "$DISPLAY_NAME",
             "gameVersions": [$GAME_VERSION_ID],
             "releaseType": "release",
-            "changelog": $(jq --slurp --raw-input '.' < "RELEASE_NOTES.md"),
+            "changelog": $CHANGELOG,
             "changelogType": "markdown"
           }
           EOF
@@ -90,8 +91,7 @@ jobs:
           )
           echo "Response: $response"
           if echo "$response" | jq -e '.error' > /dev/null; then
-            echo "[ERROR] CurseForge:"
-            echo "$response" | jq '.'
+            echo "Error: $response" | jq '.'
             exit 1
           fi
 
