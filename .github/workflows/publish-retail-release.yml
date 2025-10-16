@@ -59,7 +59,7 @@ jobs:
           RELEASE_FILENAME="${{ steps.get_release_items.outputs.release_asset_name }}"
           DISPLAY_NAME=$(echo "$RELEASE_FILENAME" | sed -e 's/\.zip$//')
           # CHANGELOG=$(jq --slurp --raw-input '.' < "RELEASE_NOTES.md")
-          CHANGELOG="# Test Change Log\n\nThis is a test changelog."
+          CHANGELOG="Test Change Log\n\nThis is a test changelog."
           PATCH_VERSION=$(grep -oP 'Patch -\[ \*\*\K[0-9]+\.[0-9]+\.[0-9]+(?=\*\* \]-)' RELEASE_NOTES.md | head -n1)
           GAME_VERSION_ID=$(curl -s -H "x-api-token: ${CURSEFORGE_API_TOKEN}" "https://wow.curseforge.com/api/game/versions" \
             | jq ".[] | select(.name==\"$PATCH_VERSION\") | .id" | head -n1)
@@ -85,7 +85,7 @@ jobs:
           # Build and send the curl request
           response=$(echo "$METADATA_JSON" | curl -sS --retry 3 --retry-delay 10 \
             -H "x-api-token: ${CURSEFORGE_API_TOKEN}" \
-            -F "'metadata'=<-" \
+            -F "metadata=<-" \
             -F "file=@dist/$RELEASE_FILENAME" \
             "https://wow.curseforge.com/api/projects/${CURSEFORGE_ADDON_ID}/upload-file"
           )
