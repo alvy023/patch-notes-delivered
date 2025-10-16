@@ -90,7 +90,7 @@ jobs:
           response=$(curl -X POST \
             -H "X-API-Token: ${CURSEFORGE_API_TOKEN}" \
             -H "Content-Type: multipart/form-data" \
-            -F "metadata=$METADATA_JSON" \
+            -F "metadata={\"displayName\": \"$DISPLAY_NAME\", \"gameVersions\": [$GAME_VERSION_ID], \"releaseType\": \"release\", \"changelog\": \"Test changelog text.\"}" \
             -F "file=@dist/$RELEASE_FILENAME" \
             "https://wow.curseforge.com/api/projects/${CURSEFORGE_ADDON_ID}/upload-file"
           )
