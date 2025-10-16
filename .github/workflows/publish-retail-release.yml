@@ -85,7 +85,7 @@ jobs:
           # Build and send the curl request
           response=$(echo "$METADATA_JSON" | curl -sS --retry 3 --retry-delay 10 \
             -H "x-api-token: ${CURSEFORGE_API_TOKEN}" \
-            -F "`metadata`=<-" \
+            -F "'metadata'=<-" \
             -F "file=@dist/$RELEASE_FILENAME" \
             "https://wow.curseforge.com/api/projects/${CURSEFORGE_ADDON_ID}/upload-file"
           )
