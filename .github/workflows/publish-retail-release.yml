@@ -58,7 +58,10 @@ jobs:
           WAGO_API_TOKEN: "" # Disable Wago upload
           GITHUB_OAUTH: ${{ secrets.GITHUB_TOKEN }}
         with:
-          args: -z "dist/${{ steps.get_release_items.outputs.release_asset_name }}" -m "$(cat RELEASE_NOTES.md)"
+          args: | 
+            -z "dist/${{ steps.get_release_items.outputs.release_asset_name }}" 
+            -n "$(echo "${{ steps.get_release_items.outputs.release_asset_name }}" | sed 's/\.zip$//')" 
+            -m "$(cat RELEASE_NOTES.md)"
 
       # WOWUP UPLOAD (WowUp CLI)
       - name: Upload to WowUp (Wago API)
