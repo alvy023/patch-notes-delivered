@@ -10,22 +10,57 @@
 PatchNotesDelivered_Notes_1125 = {
     version = "11.2.5",
     build = "63834",
-    hotfix = 6,
+    hotfix = 7,
     gameChangesHotfixes = [[
         October 16, 2025
 
-    Achievements
-        • Season 3 achievements to earn the “Triple Threat” title are now available.
+            Achievements
+                • Season 3 achievements to earn the “Triple Threat” title are now available.
+            
+            Renown
+                • Reputation gains with the Manaforge Vandal are now greatly increased for players significantly behind the current cap.
+            
+            Legion Remix
+                • Keystone Hero achievements have been re-enabled. Timerunners can earn these account-wide achievements along with their 
+                  respective teleport spells.
+                • Added substantial bonus XP to the first-per-day Random Timerunning Dungeons on Normal and Heroic available through the 
+                  Dungeon Finder.
+                • Fixed an issue that prevented Helya from returning to her platform in the Trial of Valor raid.
+                • Fixed an issue wherein the quest "Make Haste, Not Waste" could sometimes fail to grant rewards.
+                • Reduced the amount of damage done by Dark Calling cast by the Devouring Darkness creature in Highmountain.
+                • Fixed an issue where some Remix armor pieces could lose durability; the infinites have now blessed these pieces to be 
+                  infinitely endurable.
+                • Fixed an issue causing Demon Hunter timerunners to be unable to progress "Demons Among Them".
+                • Infinitely Mysterious Portals in Dalaran will now assist Retribution Paladin timerunners returning to the Plaguelands for 
+                  their artifact acquisition questline.
 
-    Renown
-        • Reputation gains with the Manaforge Vandal are now greatly increased for players significantly behind the current cap.
+        October 15, 2025
 
-October 15, 2025
-
-    General
-        • Highmountain Fortitude:
-            > The percentage of damage converted into Fortitude has been increased to 10% at rank 1 (was 5%) and 15% at rank 3 (was 11%), with
-              each additional rank at or above Rank 4 providing an additional 3%.
+            Legion Remix
+                • Artifact Traits
+                    > Damage and Healer specializations now gain +20% damage and healing from all artifact traits.
+                    > Developers’ notes: These are the first round of changes aimed at increasing the value of damage and healer 
+                      specializations in Legion Remix, particularly in group play scenarios. Additional changes will be available with 
+                      Phase 2: Rise of the Nightfallen next week.
+                    > Call of the Legion
+                        + Infernal Flayer’s melee damage reduced.
+                        + Infernal Flayer’s Infernal Leap damage increased.
+                        + Infernal Soulsteal’s damage increased.
+                    > Naran’s Everdisc
+                        + Catching the disc now increases damage of subsequent throws by 50% per catch (was 30%).
+                    > Light’s Vengeance
+                        + Increased damage by 50%.
+                        + Increased healing by 20%.
+                    > Vindicator’s Judgment
+                        + Increased damage by 50%.
+                        + Increased healing by 20%.
+                    > Highmountain Fortitude
+                        + The percentage of damage converted into Fortitude has been increased to 10% at rank 1 (was 5%) and 15% at rank 3 
+                          (was 11%), with each additional rank at or above Rank 4 providing an additional 3%.
+                • Fixed an issue causing the Legion to invade from multiple other timelines. Fighting them in one timeline is enough.
+                • Completed emissary quests will now show the turn-in location on the map.
+                • Death Knights can now access an Infinitely Mysterious Portal next to Highlord Darion Mograine to return to the Scarlet 
+                  Monastery during the third chapter of their Order Hall campaign.
 
         October 14, 2025
 
