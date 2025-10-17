@@ -4,6 +4,8 @@ import os
 from textwrap import dedent
 
 
+README_TEMPLATE_PATH = ".github/scripts/README_TEMPLATE.md"
+
 def parse_local_version_build_hf(notes):
     with open(notes, "r", encoding="utf-8") as f:
         content = f.read()
@@ -27,20 +29,27 @@ def parse_local_version_build_hf(notes):
 def generate_release_notes(game_version, game_build, game_hotfix, addon_version, commits=None):
     if commits is None:
         commits = "Updated game version"
-    notes = f"""# Release Notes
+    
+    try:
+        with open(README_TEMPLATE_PATH, 'r', encoding='utf-8') as f:
+            template_content = f.read()
+        
+        formatted_content = template_content.replace("{commits}", commits)
+        formatted_content = formatted_content.replace("{game_version}", game_version)
+        formatted_content = formatted_content.replace("{game_build}", game_build)
+        formatted_content = formatted_content.replace("{game_hotfix}", game_hotfix)
+        formatted_content = formatted_content.replace("{addon_version}", addon_version)
 
-### Commits:
-{commits}
-
-### Game Version: 
-Patch -[ **{game_version}** ]-
-Build  -[ **{game_build}** ]-
-Hotfix -[ \#**{game_hotfix}** ]-
-
-### Addon Version: 
-Version -[ **{addon_version}** ]-
-"""
-    return notes.strip()
+        print("Formatted Content:\n", formatted_content)
+        
+        return formatted_content
+        
+    except FileNotFoundError:
+        print(f"Template file not found: {README_TEMPLATE_PATH}")
+        return None
+    except Exception as e:
+        print(f"Error reading template: {e}")
+        return None
 
 if __name__ == "__main__":
     if len(sys.argv) < 2:
@@ -72,7 +81,7 @@ if __name__ == "__main__":
             commits = f.read().strip()
 
     release_notes_content = generate_release_notes(local_game_version, local_game_build, local_game_hotfix, addon_version, commits)
-    release_notes_file = "RELEASE_NOTES.md"
+    release_notes_file = ".github/data/RELEASE_NOTES.md"
     with open(release_notes_file, "w", encoding="utf-8") as f:
         f.write(release_notes_content)
 

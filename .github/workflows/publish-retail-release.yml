@@ -48,51 +48,51 @@ jobs:
           gh release view --json body --jq ".body" > RELEASE_NOTES.md
           echo "release_asset_name=${release_asset_name}" >> $GITHUB_OUTPUT
 
-      # CURSEFORGE UPLOAD (manual curl)
-      - name: Upload to CurseForge
-        if: ${{ github.event.inputs.upload_curseforge == 'true' }}
+      # CURSEFORGE DATA PREP
+      - name: Format data for CurseForge
+        id: format_cf_data
+        #if: ${{ github.event.inputs.upload_curseforge == 'true' }}
         env:
           CURSEFORGE_API_TOKEN: ${{ secrets.CURSEFORGE_API_TOKEN }}
-          CURSEFORGE_ADDON_ID: ${{ secrets.CURSEFORGE_ADDON_ID }}
         run: |
-          # Prepare metadata
-          RELEASE_FILENAME="${{ steps.get_release_items.outputs.release_asset_name }}"
-          DISPLAY_NAME=$(echo "$RELEASE_FILENAME" | sed -e 's/\.zip$//')
-          CHANGELOG=$(cat RELEASE_NOTES.md)
           PATCH_VERSION=$(grep -oP 'Patch -\[ \*\*\K[0-9]+\.[0-9]+\.[0-9]+(?=\*\* \]-)' RELEASE_NOTES.md | head -n1)
+          echo "PATCH_VERSION: $PATCH_VERSION"
+          if [ -z "$PATCH_VERSION" ]; then
+            echo "Could not find patch version in RELEASE_NOTES.md"
+            exit 1
+          fi
           GAME_VERSION_ID=$(curl -s -H "x-api-token: ${CURSEFORGE_API_TOKEN}" "https://wow.curseforge.com/api/game/versions" \
             | jq ".[] | select(.name==\"$PATCH_VERSION\") | .id" | head -n1)
-          
           if [ -z "$GAME_VERSION_ID" ]; then
             echo "Could not find CurseForge game version ID for $PATCH_VERSION"
             exit 1
           fi
-          
-          METADATA_JSON=$(jq -cn \
-            --arg changelog "$CHANGELOG" \
-            --arg changelogType "markdown" \
-            --arg displayName "$DISPLAY_NAME" \
-            --argjson gameVersions "[$GAME_VERSION_ID]" \
-            --arg releaseType "release" \
-            '{changelog: $changelog, changelogType: $changelogType, displayName: $displayName, gameVersions: $gameVersions, releaseType: $releaseType}')
-            
-          echo "METADATA: $METADATA_JSON"
-          
-          # Build and send the curl request
-          response=$(curl -s -X POST "https://wow.curseforge.com/api/projects/${CURSEFORGE_ADDON_ID}/upload-file" \
-            -H "x-api-token: ${CURSEFORGE_API_TOKEN}" \
-            -F 'metadata=<-' \
-            -F "file=@dist/$RELEASE_FILENAME" \
-            <<< "$METADATA_JSON")
-            
-          echo "CurseForge response: $response"
-          
-          # Check for an error in the response
-          if echo "$response" | jq -e '.error, .errorMessage' > /dev/null; then
-            echo "[ERROR] CurseForge:"
-            echo "$response" | jq '.'
-            exit 1
-          fi
+          echo "GAME_VERSION_ID: $GAME_VERSION_ID"
+          echo "game_version_id=${GAME_VERSION_ID}" >> $GITHUB_OUTPUT
+
+          RELEASE_FILENAME="${{ steps.get_release_items.outputs.release_asset_name }}"
+          DISPLAY_NAME=$(echo "$RELEASE_FILENAME" | sed -e 's/\.zip$//')
+          echo "DISPLAY_NAME: $DISPLAY_NAME"
+          echo "display_name=${DISPLAY_NAME}" >> $GITHUB_OUTPUT
+
+          CHANGELOG=$(jq --slurp --raw-input '.' < "RELEASE_NOTES.md")
+          echo "CHANGELOG: $CHANGELOG"
+          echo "changelog=${CHANGELOG}" >> $GITHUB_OUTPUT
+
+      # CURSEFORGE UPLOAD (meow Action)
+      - name: Upload to CurseForge
+        if: ${{ github.event.inputs.upload_curseforge == 'true' }}
+        uses: itsmeow/curseforge-upload@v3
+        with: |
+          token: ${{ secrets.CURSEFORGE_API_TOKEN }}
+          project_id: ${{ secrets.CURSEFORGE_ADDON_ID }}
+          game_endpoint: "wow"
+          file_path: dist/${{ steps.get_release_items.outputs.release_asset_name }}
+          game_versions: [${{ steps.format_cf_data.outputs.game_version_id }}]
+          release_type: "release"
+          display_name: ${{ steps.format_cf_data.outputs.display_name }}
+          changelog: ${{ steps.format_cf_data.outputs.changelog }}
+          changelog_type: "markdown"
 
       # WOWUP UPLOAD (WowUp CLI)
       - name: Upload to WowUp (Wago API)
