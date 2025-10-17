@@ -10,8 +10,23 @@
 PatchNotesDelivered_Notes_1125 = {
     version = "11.2.5",
     build = "63834",
-    hotfix = 5,
+    hotfix = 6,
     gameChangesHotfixes = [[
+        October 16, 2025
+
+    Achievements
+        • Season 3 achievements to earn the “Triple Threat” title are now available.
+
+    Renown
+        • Reputation gains with the Manaforge Vandal are now greatly increased for players significantly behind the current cap.
+
+October 15, 2025
+
+    General
+        • Highmountain Fortitude:
+            > The percentage of damage converted into Fortitude has been increased to 10% at rank 1 (was 5%) and 15% at rank 3 (was 11%), with
+              each additional rank at or above Rank 4 providing an additional 3%.
+
         October 14, 2025
 
             Dungeons and Raids
