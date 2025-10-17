@@ -86,13 +86,13 @@ jobs:
         with:
           token: ${{ secrets.CURSEFORGE_API_TOKEN }}
           project_id: ${{ secrets.CURSEFORGE_ADDON_ID }}
-          game_endpoint: wow
+          game_endpoint: "wow"
           file_path: dist/${{ steps.get_release_items.outputs.release_asset_name }}
           game_versions: [${{ steps.format_cf_data.outputs.game_version_id }}]
-          release_type: release
+          release_type: "release"
           display_name: ${{ steps.format_cf_data.outputs.display_name }}
           changelog: ${{ steps.format_cf_data.outputs.changelog }}
-          changelog_type: markdown
+          changelog_type: "markdown"
 
       # WOWUP UPLOAD (WowUp CLI)
       - name: Upload to WowUp (Wago API)
