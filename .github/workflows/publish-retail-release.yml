@@ -6,12 +6,12 @@ on:
       upload_curseforge:
         description: 'Upload to CurseForge?'
         required: false
-        default: 'false'
+        default: false
         type: boolean
       upload_wowup:
         description: 'Upload to WowUp?'
         required: false
-        default: 'false'
+        default: false
         type: boolean
 
 jobs:
@@ -87,8 +87,8 @@ jobs:
           token: ${{ secrets.CURSEFORGE_API_TOKEN }}
           project_id: ${{ secrets.CURSEFORGE_ADDON_ID }}
           game_endpoint: "wow"
-          file_path: dist/${{ steps.get_release_items.outputs.release_asset_name }}
-          game_versions: [${{ steps.format_cf_data.outputs.game_version_id }}]
+          file_path: "dist/${{ steps.get_release_items.outputs.release_asset_name }}"
+          game_versions: "${{ steps.format_cf_data.outputs.game_version_id }}"
           release_type: "release"
           display_name: ${{ steps.format_cf_data.outputs.display_name }}
           changelog: ${{ steps.format_cf_data.outputs.changelog }}
