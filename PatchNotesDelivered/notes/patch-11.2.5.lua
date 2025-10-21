@@ -14,8 +14,24 @@ PatchNotesDelivered_Notes_1125 = {
     gameChangesHotfixes = [[
         October 20, 2025
 
-    User Interface and Accessibility
-        • Several abilities have been added as options to track with Tracked Buffs or Tracked Bars in the Cooldown Manager.
+            User Interface and Accessibility
+                • Several abilities have been added as options to track with Tracked Buffs or Tracked Bars in the Cooldown Manager.
+            
+            Legion Remix
+                • Removed the chance that Doomguard Challengers from Timewarped Obelisks spawn with a very lethal set of abilities.
+                • Grandmaster Jakkus will no longer sell Feldruid's Scornwing Idol if you have one or know the Scornwing form.
+                • Feldruid's Scornwing Idol is no longer usable if you know the Scornwing form.
+                • Scornwing form can now carry another player, consistent with the Lunarwing forms.
+                • Fixed an issue where the quest "Thalryssa's Drawers" could not be completed under specific circumstances.
+                • Fixed an issue where Lindormi was not appearing after completing a Timeworn Keystone dungeon.
+                • Fixed an issue where some Timeworn Keystone affixes were spawning twice in Maw of Souls.
+                • Nightmare Ichors in the Il'gynoth, Heart of Corruption encounter will now remain unkillable until they are able to cast 
+                  Nightmare Explosion within range of the eye.
+                • Fixed an issue causing Eye of Greed to be permanently imprisoned.
+                • Fixed an issue where, in rare cases, Fragmented Memento of Epoch Challenges could disappear.
+                • The Postmaster will now recover Fragmented Mementos of Epoch Challenges.
+                • Fixed an issue where starting but not finishing the Legion intro questline could prevent players from continuing their 
+                  order hall campaign.
 
         October 16, 2025
 
