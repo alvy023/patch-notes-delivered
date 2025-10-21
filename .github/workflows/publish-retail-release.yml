@@ -75,7 +75,7 @@ jobs:
           echo "DISPLAY_NAME: $DISPLAY_NAME"
           echo "display_name=${DISPLAY_NAME}" >> $GITHUB_OUTPUT
 
-          CHANGELOG=$(jq --slurp --raw-input '.' < "RELEASE_NOTES.md")
+          CHANGELOG=$(cat "RELEASE_NOTES.md")
           echo "CHANGELOG: $CHANGELOG"
           echo "changelog=${CHANGELOG}" >> $GITHUB_OUTPUT
 
