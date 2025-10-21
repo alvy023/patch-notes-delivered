@@ -75,7 +75,7 @@ jobs:
           echo "DISPLAY_NAME: $DISPLAY_NAME"
           echo "display_name=${DISPLAY_NAME}" >> $GITHUB_OUTPUT
 
-          CHANGELOG=$(python3 scripts/stringify_markdown.py "RELEASE_NOTES.md")
+          CHANGELOG=$(python3 .github/scripts/stringify_markdown.py "RELEASE_NOTES.md")
           echo "CHANGELOG: $CHANGELOG"
           echo "changelog=${CHANGELOG}" >> $GITHUB_OUTPUT
 
