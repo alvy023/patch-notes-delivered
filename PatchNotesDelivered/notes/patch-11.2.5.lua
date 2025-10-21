@@ -10,8 +10,13 @@
 PatchNotesDelivered_Notes_1125 = {
     version = "11.2.5",
     build = "63834",
-    hotfix = 7,
+    hotfix = 8,
     gameChangesHotfixes = [[
+        October 20, 2025
+
+    User Interface and Accessibility
+        • Several abilities have been added as options to track with Tracked Buffs or Tracked Bars in the Cooldown Manager.
+
         October 16, 2025
 
             Achievements
