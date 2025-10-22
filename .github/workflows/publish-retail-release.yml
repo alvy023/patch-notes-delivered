@@ -75,9 +75,15 @@ jobs:
           echo "DISPLAY_NAME: $DISPLAY_NAME"
           echo "display_name=${DISPLAY_NAME}" >> $GITHUB_OUTPUT
 
-          CHANGELOG=$(cat "RELEASE_NOTES.md")
+          CHANGELOG=$(python3 .github/scripts/stringify_markdown.py "RELEASE_NOTES.md")
           echo "CHANGELOG: $CHANGELOG"
-          echo "changelog=${CHANGELOG}" >> $GITHUB_OUTPUT
+          
+          # Properly encode multiline content for GitHub Actions output
+          {
+            echo "changelog<<EOF"
+            echo "$CHANGELOG"
+            echo "EOF"
+          } >> $GITHUB_OUTPUT
 
       # CURSEFORGE UPLOAD (meow Action)
       - name: Upload to CurseForge
