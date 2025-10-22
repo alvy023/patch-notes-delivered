@@ -16,8 +16,10 @@ PatchNotesDelivered_Notes_1125 = {
 
             Legion Remix
                 • While running a Timeworn Keystone Eternus will grant players the following buffs depending on their role:
-                    > Gift of Eternus: Slayer – Eternus grants damage dealers 10% increased damage done, 100% increased health, and 33% decreased damage taken.
-                    > Gift of Eternus: Savior – Eternus grants healers 10% increased damage done, 10% increased healing and absorbs, 100% increased health, and 33% decreased damage taken.
+                    > Gift of Eternus: Slayer – Eternus grants damage dealers 10% increased damage done, 100% increased health, and 33% 
+                      decreased damage taken.
+                    > Gift of Eternus: Savior – Eternus grants healers 10% increased damage done, 10% increased healing and absorbs, 100% 
+                      increased health, and 33% decreased damage taken.
                     > Gift of Eternus: Protector – Eternus grants tanks 10% increased healing received from other players.
                 • Level 80 Timerunners will now receive Fragmented Mementos of Epoch Challenges as loot for the following content:
                     > World Bosses
@@ -27,7 +29,8 @@ PatchNotesDelivered_Notes_1125 = {
                     > World Bosses
                     > Rare Enemies (Daily)
                 • Koda Steelclaw now appears in the correct phase so that players turn in the quest "Entangled Dreams."
-                • Fixed an issue causing the Legion Remix zone meta achievements to not grant rewards if completed while inside a keystone dungeon. Rewards should be granted to players affected by this issue by logging into any timerunner.
+                • Fixed an issue causing the Legion Remix zone meta achievements to not grant rewards if completed while inside a keystone 
+                  dungeon. Rewards should be granted to players affected by this issue by logging into any timerunner.
                 • Fixed an issue where Timeworn Keystone Dungeons were not awarding gear with the correct item level.
                 • Timeworn Keystone Dungeons now award gear when completed with a successful time.
                 • The number of Motes of a Broken Time awarded for completing Timeworn Keystone Dungeons has been reduced.
