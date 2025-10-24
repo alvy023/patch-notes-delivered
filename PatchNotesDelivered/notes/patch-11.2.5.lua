@@ -10,8 +10,28 @@
 PatchNotesDelivered_Notes_1125 = {
     version = "11.2.5",
     build = "63906",
-    hotfix = 9,
+    hotfix = 10,
     gameChangesHotfixes = [[
+        October 23, 2025
+
+    Items
+        • The Hallow's End Magic Broom once again takes to the skies as intended.
+        • Fixer So'kir and Fixer So'tho now offer Harvester's Edict, Ceaseless Swarmgland, and Ara-Kara Sacbrood.
+
+    Legion Remix
+        • Fixed an issue causing Infinite Knowledge to not award the intended amount of Infinite Power in some cases.
+        • World Bosses now properly grant a Cache of Infinite Power as displayed, in addition to normal World Quest rewards.
+        • Fixed an issue where Valarjar Soul Fragments could drop outside of the Trial of Valor.
+        • Increased Valarjar Soul Fragment drops by 100% from non-boss creatures and 400% from bosses.
+        • Fixed an issue causing Legion enemies summoned by the Beacon of Chaos affix in Heroic World Tier to deal significant damage when 
+          mindmelding with Murky or on similar quests.
+        • Convinced several horse mounts that they cannot actually swim in the air.
+
+    Quests
+        • Fixed an issue where “Turbo-Boost: Infinite Growth” could be completed more times than intended. It is intended that players 
+          can complete this quest once per week (including this week) after initially completing “Turbo-Boost: Trade Must Flow”. 
+          Players who completed this quest multiple times will find that it remains unavailable until others have caught up.
+
         October 21, 2025
 
             Legion Remix
