@@ -10,8 +10,29 @@
 PatchNotesDelivered_Notes_1125 = {
     version = "11.2.5",
     build = "63906",
-    hotfix = 10,
+    hotfix = 11,
     gameChangesHotfixes = [[
+        October 24, 2025
+
+            Classes
+                • Death Knight
+                    > Unholy
+                        + An issue causing San'layn to grant all Gift of the San'layn associated buffs again when resummoning pet ghoul has
+                        been resolved.
+
+            Items
+                • Fixed an issue where Mythic+ dungeons completed prior to 11.2.5 did not count towards unlocking Fixer So'tho's Turbo
+                Boost offerings.
+
+            Legion Remix
+                • Fixed an issue causing players to acquire extra Fledgling Warden's Companions and Duskytooth Fel Snooters. Affected
+                  players will receive one final copy on the next login; these items may be deleted. The remaining pets have been
+                  redirected to their appropriate timelines.
+                • Reduced the power of fel energy during the quest “Resisting Arrest”.
+                • Fixed an issue causing some Monks in Uldum to be unable to use the Essence of the Whirlwind.
+                • Balance Druid players should now be able to purchase the Seed of Solar Fire if they are eligible to do so.
+                • Holy Priests should now be able to purchase the Rod of the Ascended if they are eligible to do so.
+
         October 23, 2025
 
             Items
@@ -29,8 +50,8 @@ PatchNotesDelivered_Notes_1125 = {
 
             Quests
                 • Fixed an issue where “Turbo-Boost: Infinite Growth” could be completed more times than intended. It is intended that 
-                players can complete this quest once per week (including this week) after initially completing “Turbo-Boost: Trade Must 
-                Flow”. Players who completed this quest multiple times will find that it remains unavailable until others have caught up.
+                  players can complete this quest once per week (including this week) after initially completing “Turbo-Boost: Trade Must 
+                  Flow”. Players who completed this quest multiple times will find that it remains unavailable until others have caught up.
 
         October 21, 2025
 
