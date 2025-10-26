@@ -17,7 +17,7 @@ PatchNotesDelivered_Notes_1125 = {
             Classes
                 • Death Knight
                     > Unholy
-                        + An issue causing San'layn to grant all Gift of the San'layn associated buff again when resummoning pet ghoul has
+                        + An issue causing San'layn to grant all Gift of the San'layn associated buffs again when resummoning pet ghoul has
                         been resolved.
 
             Items
