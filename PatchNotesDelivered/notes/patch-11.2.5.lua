@@ -14,24 +14,24 @@ PatchNotesDelivered_Notes_1125 = {
     gameChangesHotfixes = [[
         October 24, 2025
 
-        Classes
-            • Death Knight
-                > Unholy
-                    + An issue causing San'layn to grant all Gift of the San'layn associated buff again when resummoning pet ghoul has
-                      been resolved.
+            Classes
+                • Death Knight
+                    > Unholy
+                        + An issue causing San'layn to grant all Gift of the San'layn associated buff again when resummoning pet ghoul has
+                        been resolved.
 
-        Items
-            • Fixed an issue where Mythic+ dungeons completed prior to 11.2.5 did not count towards unlocking Fixer So'tho's Turbo
-              Boost offerings.
+            Items
+                • Fixed an issue where Mythic+ dungeons completed prior to 11.2.5 did not count towards unlocking Fixer So'tho's Turbo
+                Boost offerings.
 
-        Legion Remix
-            • Fixed an issue causing players to acquire extra Fledgling Warden's Companions and Duskytooth Fel Snooters. Affected
-              players will receive one final copy on the next login; these items may be deleted. The remaining pets have been
-              redirected to their appropriate timelines.
-            • Reduced the power of fel energy during the quest “Resisting Arrest”.
-            • Fixed an issue causing some Monks in Uldum to be unable to use the Essence of the Whirlwind.
-            • Balance Druid players should now be able to purchase the Seed of Solar Fire if they are eligible to do so.
-            • Holy Priests should now be able to purchase the Rod of the Ascended if they are eligible to do so.
+            Legion Remix
+                • Fixed an issue causing players to acquire extra Fledgling Warden's Companions and Duskytooth Fel Snooters. Affected
+                  players will receive one final copy on the next login; these items may be deleted. The remaining pets have been
+                  redirected to their appropriate timelines.
+                • Reduced the power of fel energy during the quest “Resisting Arrest”.
+                • Fixed an issue causing some Monks in Uldum to be unable to use the Essence of the Whirlwind.
+                • Balance Druid players should now be able to purchase the Seed of Solar Fire if they are eligible to do so.
+                • Holy Priests should now be able to purchase the Rod of the Ascended if they are eligible to do so.
 
         October 23, 2025
 
