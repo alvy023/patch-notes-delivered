@@ -50,8 +50,8 @@ PatchNotesDelivered_Notes_1125 = {
 
             Quests
                 • Fixed an issue where “Turbo-Boost: Infinite Growth” could be completed more times than intended. It is intended that 
-                players can complete this quest once per week (including this week) after initially completing “Turbo-Boost: Trade Must 
-                Flow”. Players who completed this quest multiple times will find that it remains unavailable until others have caught up.
+                  players can complete this quest once per week (including this week) after initially completing “Turbo-Boost: Trade Must 
+                  Flow”. Players who completed this quest multiple times will find that it remains unavailable until others have caught up.
 
         October 21, 2025
 
