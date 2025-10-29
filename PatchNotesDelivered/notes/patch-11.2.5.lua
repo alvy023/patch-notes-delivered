@@ -10,8 +10,24 @@
 PatchNotesDelivered_Notes_1125 = {
     version = "11.2.5",
     build = "63906",
-    hotfix = 11,
+    hotfix = 12,
     gameChangesHotfixes = [[
+        October 28, 2025
+
+            Items
+                • Items from Ethereal Equipment Chest should now be eligible for conversion at the Catalyst.
+
+            Legion Remix
+                • Fixed an issue causing Lindormi's keystones to be limited to a maximum of +49 difficulty.
+                • Fixed a bug where the Druid Order Hall campaign in the quest log would sometimes not tell players where to go next.
+                • Added portals to the Druid Order Hall to take you to Duskwood for The Scythe of Elune acquisition quests and to Grizzly 
+                  Hills for the Claws of Ursoc quests.
+                • Fixed an issue that prevented Wrath of Azshara and Helya in high-level Timeworn Keystones to start combat above their 
+                  intended health.
+                • Fixed an issue that caused Wrath of Azshara's Crushing Depth ability to do more damage than intended at high Timeworn 
+                  Keystones.
+                • Fixed an issue that prevented Legion Remix affixes from cleaning up upon completing a Timeworn Keystone.
+
         October 24, 2025
 
             Classes
