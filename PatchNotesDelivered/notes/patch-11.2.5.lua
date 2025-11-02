@@ -9,9 +9,14 @@
 --- Max note length [140] ------------------------------------------------------------------------------------------------------------------
 PatchNotesDelivered_Notes_1125 = {
     version = "11.2.5",
-    build = "63906",
-    hotfix = 12,
+    build = "64154",
+    hotfix = 13,
     gameChangesHotfixes = [[
+        October 31, 2025
+
+    WoW
+        • Fixed a bug that prevented encounters in instanced content from previous expansions from dropping gold as intended.
+
         October 28, 2025
 
             Items
