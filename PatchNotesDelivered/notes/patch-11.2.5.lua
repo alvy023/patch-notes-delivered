@@ -10,8 +10,27 @@
 PatchNotesDelivered_Notes_1125 = {
     version = "11.2.5",
     build = "64154",
-    hotfix = 13,
+    hotfix = 14,
     gameChangesHotfixes = [[
+        November 4, 2025
+
+    WoW
+
+November 3, 2025
+
+    Classes
+        • Priest
+            > Voidweaver
+                + No Escape now slows enemies by up to 50% in PvP combat (was 70%).
+            > Discipline
+                + Trinity now reduces the cast time of the affected spells by 10% (was 30%).
+                + Divine Procession is now 50% effective in PvP combat.
+                + Developers’ notes: The current cast time of Void Blast is faster than we feel is reasonable to react to, due to
+                  stacking modifiers, so we’re bringing the build more in line with other healers.
+
+    Legion Remix
+        • Fixed an issue where World Quests were unavailable before level 30 for Timerunners who completed "Uniting the Isles".
+
         November 3, 2025
 
             Classes
