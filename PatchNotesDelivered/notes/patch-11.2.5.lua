@@ -9,9 +9,21 @@
 --- Max note length [140] ------------------------------------------------------------------------------------------------------------------
 PatchNotesDelivered_Notes_1125 = {
     version = "11.2.5",
-    build = "64154",
-    hotfix = 13,
+    build = "64270",
+    hotfix = 14,
     gameChangesHotfixes = [[
+        November 7, 2025
+
+            Legion Remix
+                • Hidden Artifact Weapon appearances now properly show up in the appearances UI after earning them in Legion Remix.
+                • Found Randall Goldsprocket in a nearby timeline and brought him back, unblocking the quest "Gathering Information".
+                • Anduin now allows players to continue the quest “A Found Momento”.
+                • Fixed an issue preventing timerunners from completing the quest "Professionally Good Looking".
+                • Resolved an issue blocking the quest "Smelly's Luckydo".
+                • Moratari has become impatient with Lilian Voss and will skip past the execution of her plan in the quest "Hiding In Plain Sight" after Lilian has finished explaining it.
+                • Fixed several issues preventing timerunners from completing the class mount questlines for Death Knights, Mages, Paladins, Shamans, Warlocks, and Warriors.
+                • Fixed an issue causing Warlock timerunners to be unable to collect the Shadowy Reins of the Accursed Wrathsteed.
+
         November 3, 2025
 
             Classes
