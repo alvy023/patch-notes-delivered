@@ -20,8 +20,10 @@ PatchNotesDelivered_Notes_1125 = {
                 • Anduin now allows players to continue the quest “A Found Momento”.
                 • Fixed an issue preventing timerunners from completing the quest "Professionally Good Looking".
                 • Resolved an issue blocking the quest "Smelly's Luckydo".
-                • Moratari has become impatient with Lilian Voss and will skip past the execution of her plan in the quest "Hiding In Plain Sight" after Lilian has finished explaining it.
-                • Fixed several issues preventing timerunners from completing the class mount questlines for Death Knights, Mages, Paladins, Shamans, Warlocks, and Warriors.
+                • Moratari has become impatient with Lilian Voss and will skip past the execution of her plan in the quest "Hiding In Plain 
+                  Sight" after Lilian has finished explaining it.
+                • Fixed several issues preventing timerunners from completing the class mount questlines for Death Knights, Mages, Paladins, 
+                  Shamans, Warlocks, and Warriors.
                 • Fixed an issue causing Warlock timerunners to be unable to collect the Shadowy Reins of the Accursed Wrathsteed.
 
         November 3, 2025
