@@ -9,9 +9,52 @@
 --- Max note length [140] ------------------------------------------------------------------------------------------------------------------
 PatchNotesDelivered_Notes_1125 = {
     version = "11.2.5",
-    build = "64270",
-    hotfix = 14,
+    build = "64395",
+    hotfix = 15,
     gameChangesHotfixes = [[
+        November 14, 2025
+
+        Classes
+            • Druid
+                > Fixed a bug causing Druids in flight form to fly slower than they would on a flying mount.
+
+        Legion Remix
+            • Fixed issues preventing timerunners from earning the achievements
+              Law and Order: Shaman
+              ,
+              Law and Order: Monk
+              , and
+              Bringing Order to the Isles
+              .
+            • Fixed an issue causing Broken Shore world boss quests to not reward a Cache of Infinite Power.
+            • Fixed an issue causing
+              The Broken Shore
+              achievement to sometimes not reward Fallen King's Corrupted Blades. Affected players will be rewarded Fallen King's Corrupted Blades on login.
+            • Fixed an issue causing Druids to be unable to Dreamwalk during the Defense of Aviana.
+            • Implemented fixes or workarounds for the following issues causing some timerunners to be unable to collect their hidden artifact appearances.
+            • Demon Hunter timerunners now have access to the Twisting Nether order hall advancement.
+            • Druid timerunners now have access to the Evergreen order hall advancement.
+            • Mage timerunners now have access to the Teleportation Nexus order hall advancement.
+            • Monk timerunners now have access to the Brewhouse order hall advancement.
+            • Warlock timerunners can now cast Ritual of Doom at the Summoning Platform of Dreadscar Rift.
+            • Horos now sells the following items:
+                > Shard of Darkness (Retribution Paladin artifact)
+                    + Speak to Lord Maxwell Tyrosus while in possession of the shard to start "Walking in Shadows".
+                > Tome of Otherworldly Venoms (Subtlety Rogue artifact)
+                > Designs of the Grand Architect (Beast Mastery Hunter artifact)
+            • Several volumes of The Annals of Light and Shadow (Discipline Priest artifact) can now be found among the stacks of infinite chronoqueries near Pageturner Metros.
+            • Several volumes of The Annals of Light and Shadow (Discipline Priest Artifact) can now be found among the stacks of infinite chronoqueries near Pageturner Metros.
+            • Unholy Death Knights may now find a timewarped trap door leading from Acherus to Putricide's Secret Lab.
+            • Fixed an issue causing Unholy Death Knights (of all timelines) to be unable to summon a peculiar member of the Army of the Dead.
+            • Fixed an issue causing Arcane Mage timerunners to be unable to hear the wisdom of Aluneth.
+
+    November 11, 2025
+
+        Delves
+            • Ky’veza
+                > Dark Massacre nether phantoms now ambush after 3 seconds (was 2 seconds) on [?] difficulty.
+                > Dark Massacre now tolerates a significantly greater degree of imperfect facing on both [?] and [??] difficulties.
+
         November 7, 2025
 
             Legion Remix
