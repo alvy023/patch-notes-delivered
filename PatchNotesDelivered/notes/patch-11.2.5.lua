@@ -9,9 +9,23 @@
 --- Max note length [140] ------------------------------------------------------------------------------------------------------------------
 PatchNotesDelivered_Notes_1125 = {
     version = "11.2.5",
-    build = "64395",
-    hotfix = 16,
+    build = "64502",
+    hotfix = 17,
     gameChangesHotfixes = [[
+        November 26, 2025
+
+            Legion Remix
+                • Fixed an issue where Moratari would not skip The Ruins of Oronaar.
+                • Fixed multiple additional quests that Moratari forgot to skip.
+                • Fixed an issue causing Pristine Argunite to be unobtainable in the Remix timeline.
+                • Fixed an issue preventing standard characters from earning the Insurrection achievement.
+                • Fixed an issue causing Shatug to have no loot on Mythic difficulty.
+                • Fixed an issue causing standard characters above level 45 from entering The Battle for Broken Shore.
+                • Fixed an issue where World Quest "Gatekeeper's Review: Tenacity" could appear and block progress on prerequisite quest
+                  "Gatekeeper's Challenge: Tenacity".
+                • Fixed an issue where World Quest "Gatekeeper's Review: Cunning" could appear and block progress on prerequisite quest
+                  "Gatekeeper's Challenge: Cunning".
+
         November 14, 2025
 
             Classes
