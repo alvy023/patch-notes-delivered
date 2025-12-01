@@ -7,7 +7,7 @@ on:
       notes:
         description: 'Notes file to update (optional)'
         required: false
-        default: 'patch-11.2.0.lua'
+        default: 'patch-11.2.7.lua'
 
 permissions:
   contents: write
