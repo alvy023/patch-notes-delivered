@@ -15,7 +15,7 @@ PatchNotesDelivered_Notes_1127 = {
        Working as intended? 
     ]],
     gameChangesPatch = [[
-        December 1, 2024
+        December 1, 2025
 
             With the Ghosts of K’aresh behind us, Azeroth stands on the precipice of a future overshadowed by Xal’atath and the relentless 
             advance of the Void. In "The Warning", the stage is set for what comes next before continuing the story in the Midnight 
