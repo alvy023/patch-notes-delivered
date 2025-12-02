@@ -8,11 +8,11 @@
 --- Export global notes variable
 --- Max note length [140] ------------------------------------------------------------------------------------------------------------------
 PatchNotesDelivered_Notes_1127 = {
-    version = "11.2.7",
-    build = "64632",
-    hotfix = 0,
+    version = "11.2.5",
+    build = "64502",
+    hotfix = 1,
     gameChangesHotfixes = [[
-       Working as intended? 
+        Working as intended?
     ]],
     gameChangesPatch = [[
         December 1, 2025
