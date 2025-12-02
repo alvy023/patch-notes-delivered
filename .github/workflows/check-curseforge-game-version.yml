@@ -6,7 +6,7 @@ on:
       game_version:
         description: 'Game Version'
         required: true
-        default: '11.2.0'
+        default: '11.2.7'
 
 jobs:
     check_version:
