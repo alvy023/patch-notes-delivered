@@ -8,7 +8,7 @@ on:
       url:
         description: 'URL to scrape (optional - will use default if not provided)'
         required: false
-        default: 'https://worldofwarcraft.blizzard.com/en-us/news/24244442'
+        default: 'https://worldofwarcraft.blizzard.com/en-us/news/24245107/'
 
 jobs:
   scrape:
