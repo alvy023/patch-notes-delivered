@@ -21,7 +21,7 @@ PatchNotesDelivered_Notes_1127 = {
                 • Spires of Ascension
                     > Resolved a Timewalking issue with Devos, Paragon of Doubt where Archon's Spear sometimes could not be aimed properly.
             
-                    Horrific Visions
+            Horrific Visions
                 • Players can once more share their sanity to revive downed party members.
                 • Syncronized Mind Stabilizer will allow for the first revive this way to be free.
             
