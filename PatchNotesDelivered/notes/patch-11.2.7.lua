@@ -9,10 +9,37 @@
 --- Max note length [140] ------------------------------------------------------------------------------------------------------------------
 PatchNotesDelivered_Notes_1127 = {
     version = "11.2.7",
-    build = "64632",
-    hotfix = 0,
+    build = "64797",
+    hotfix = 1,
     gameChangesHotfixes = [[
-       Working as intended? 
+        December 5, 2025
+
+    Dungeons
+        • Sanguine Depths
+            > Resolved a Timewalking issue that could cause General Kaal to fail to appear if the gauntlet event was progressed through too quickly.
+        • Spires of Ascension
+            > Resolved a Timewalking issue with Devos, Paragon of Doubt where Archon's Spear sometimes could not be aimed properly.
+    Horrific Visions
+        • Players can once more share their sanity to revive downed party members.
+        • Syncronized Mind Stabilizer will allow for the first revive this way to be free.
+    Housing
+        • The Battle for Azeroth achievement A Farewell to Arms now properly, retroactively rewards both the MOTHER's Titanic Brazier and N'Zoth's Captured Eye décor to players who have earned that achievement. Players who have already purchased additional copies of these décor from MOTHER in the Chamber of Heart will see them made available in a future patch.
+        • Tocho and Lyssabel should no longer offer neighborhood renaming outside their respective neighborhoods, and players should no longer have the option to rename their neighborhood while in a public one.
+        • Traveling Book Shop owners Lonalo and Solelo should now have books for sale more frequently, having learned the art of supply and demand.
+        • Sizzling Cinderpollen will drop once again if you have already purchased the Soaring Meaderbee mount. The drop rate for Sizzling Cinderpollen has been significantly increased.
+        • Players can now use the "Teleport to Plot" button while shape-shifted.
+    Player versus Player
+        • Solo Shuffle
+            > Resolved an issue that could cause Dampening to increase faster than intended.
+    Quests
+        • Alleria Windrunner once again offers the quest "Manaforge Omega: Dimensius Looms".
+        • Fixed an issue where players could not access Dragonflight Story Mode raids above level 70.
+        • Fixed an issue that caused a herd of windsteeds to go missing on the Wandering Isle.
+    World
+        • The portals to Valdrakken in Orgrimmar and Stormwind can now be used by new players on the Azure Span campaign.
+        • Added portals to Stormwind and Orgrimmar in the Xal'atath Lorewalking Ny'alotha area.
+
+        Working as intended?
     ]],
     gameChangesPatch = [[
         December 1, 2025
