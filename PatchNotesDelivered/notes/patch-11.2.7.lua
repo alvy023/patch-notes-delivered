@@ -23,7 +23,7 @@ PatchNotesDelivered_Notes_1127 = {
             
                     Horrific Visions
                 • Players can once more share their sanity to revive downed party members.
-                • Syncronized Mind Stabilizer will allow for the first revive this way to be free.
+                • Synchronized Mind Stabilizer will allow for the first revive this way to be free.
             
             Housing
                 • The Battle for Azeroth achievement A Farewell to Arms now properly, retroactively rewards both the MOTHER's Titanic 
