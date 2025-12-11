@@ -21,16 +21,17 @@ PatchNotesDelivered_Notes_1127 = {
             Housing
                 • House Level 3 now awards an exterior decor placement budget of +50 items, in addition to existing rewards.
                 • Margrave's Stitched Leather Rug can now be properly crafted with reagents obtainable from Shadowlands Skinning.
-                • The Dornic Mine and Cheese Platter, the Dornic Sliced Mineloaf, and the Earthen Hospitality Cheese-Like Brick recipes are now
-                properly Warbound and the crafted items they make are now properly unbound and can be bought and sold on the Auction House.
+                • The Dornic Mine and Cheese Platter, the Dornic Sliced Mineloaf, and the Earthen Hospitality Cheese-Like Brick recipes are 
+                  now properly Warbound and the crafted items they make are now properly unbound and can be bought and sold on the Auction 
+                  House.
                 • MOTHER's helpfulness knows no bounds. She now sells additional copies of the decor rewards from A Farewell to Arms,
-                MOTHER's Titanic Brazier and N'Zoth's Captured Eye, for 10,000 Echoes of Ny'alotha each (a cost reduction of 90%).
-                • Class Order Campaign achievements now retroactively award decor. Players who previously purchased one or more additional copies
-                of decor earned from these achievements will see this retroactive award made available with the release of the Midnight
-                pre-expansion update.
-                • Players should now be correctly awarded the Drained Dark Heart of Galakrond for completing the achievement Worldsoul-Searching.
-                Additional copies of this decor will become available for in-game purchase from a vendor with the release of the Midnight
-                pre-patch.
+                  MOTHER's Titanic Brazier and N'Zoth's Captured Eye, for 10,000 Echoes of Ny'alotha each (a cost reduction of 90%).
+                • Class Order Campaign achievements now retroactively award decor. Players who previously purchased one or more additional 
+                  copies of decor earned from these achievements will see this retroactive award made available with the release of the 
+                  Midnight pre-expansion update.
+                • Players should now be correctly awarded the Drained Dark Heart of Galakrond for completing the achievement Worldsoul-
+                  Searching. Additional copies of this decor will become available for in-game purchase from a vendor with the release of 
+                  the Midnight pre-patch.
                 • Fixed an issue preventing some players from purchasing additional copies of Corruption Pit decor.
                 • The Fortified Alliance Banner may no longer be placed in your house exterior.
 
