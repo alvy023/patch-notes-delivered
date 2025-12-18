@@ -25,7 +25,7 @@ PatchNotesDelivered_Notes_1127 = {
                 • Rogue
                     > Fixed an issue causing Shadowstep to port Rogues to the other side of a pillar when cast on a target next to it.
                 • Priest
-                    > Glyph of Focused Mending for Priests shoud now work correctly and is improved. If it can't find one of the original 
+                    > Glyph of Focused Mending for Priests should now work correctly and is improved. If it can't find one of the original 
                       targets to bounce to, it will no longer fade like it did previously, but instead find a new target.
                     > While in an Arena or Battleground, Prayer of Mending no longer incorrectly refreshes Renew while in Chakra: Serenity.
                     > Renews refreshed while Chakra: Serenity is active now correctly refresh to the maximum Duration + 1 tick (was 
