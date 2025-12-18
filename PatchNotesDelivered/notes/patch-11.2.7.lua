@@ -9,9 +9,54 @@
 --- Max note length [140] ------------------------------------------------------------------------------------------------------------------
 PatchNotesDelivered_Notes_1127 = {
     version = "11.2.7",
-    build = "64797",
-    hotfix = 2,
+    build = "64877",
+    hotfix = 3,
     gameChangesHotfixes = [[
+        December 16, 2025
+
+    Brawler’s Guild
+        • Blackmange health significantly decreased.
+        • Ogrewatch Hudson's Tesla Cannon damage and cast frequency decreased and cast time increased.
+        • Blat frequency of Split decreased and damage dealt by summons decreased.
+        • G.G. Engineering damage of Gnomish Death Ray decreased, health of Shield Generators decreased, and health of Bo Bobble and Max Megablast decreased.
+
+    Classes
+        • Rogue
+            > Fixed an issue causing Shadowstep to port Rogues to the other side of a pillar when cast on a target next to it.
+        • Priest
+            > Glyph of Focused Mending for Priests shoud now work correctly and is improved. If it can't find one of the original targets to bounce to, it will no longer fade like it did previously, but instead find a new target.
+            > While in an Arena or Battleground, Prayer of Mending no longer incorrectly refreshes Renew while in Chakra: Serenity.
+            > Renews refreshed while Chakra: Serenity is active now correctly refresh to the maximum Duration + 1 tick (was refreshing to the maximum Duration).
+            > Renews refreshed while Chakra: Serenity is active and Glyph of Renew is active, now correctly do not count the -3 seconds from the Glyph when refreshing the duration of the Renew.
+                + Developers’ notes: This is 15 seconds in Arenas and Battlegrounds, and 18 seconds outside of arenas and battlegrounds. This is how the Glyph functioned in patch 5.4.8, so we're restoring that behavior.
+        • Warlock
+            > Warlocks will no longer automatically revive their pets at the start of a Challenge Mode Dungeon, if they have an active Grimoire of Sacrifice.
+        • Warrior
+            > Warriors will now correctly get Rage when struck by Rampage on the Megaera encounter.
+
+    Dungeons and Raids
+        • Eco-dome Al'dani
+            > Addressed an issue where multiple Fates could be struck by the Eternal Weave at one time.
+        • Aberrus, the Shadowed Crucible
+            > Fixed an issue where running the Story Mode version of Aberrus would disable trash spawns within other versions of the raid.
+
+    Housing
+        • The Lorewalking: The Elves of Quel'thalas achievement now properly, retroactively awards the Tome of Silvermoon Intrigue. Players who have already purchased additional copies of this decor from the Lali the Assistant will see them made available in a future patch.
+        • Thanks to recent alchemical breakthroughs from the Kirin Tor, crafting decor with Legion Alchemy (including the Arcan'dor Cutting Fountain) no longer requires the Dalaran Alchemy Station.
+        • In a miracle of gnomish engineering, every Gnomeregan Recyli-Kiln (curiously obtained from Mechagon, not Gnomeregan) has suddenly started functioning properly as decor. It can be placed inside or outside of player houses and costs 5 decor placement points.
+
+    Items
+        • Fixed an issue where Ethereal Voidsplinters could not be obtained from Bountiful Delves, and their drop rate from most sources has been increased.
+        • Fixed an issue where Sanctified Priory Wall could not be purchased from Fixer So'tho or Fixer So'kir.
+
+    Quests
+        • "The Big Dig: Traitor's Rest" should once again reward Mysterious Fragments for the first-time completion per week.
+        • Players who abandoned the “Behind Enemy Lines” raid renown quests for Manaforge Omega will find them again available from Zo'turu.
+        • Merrix is now always visible for players who are on the quest "Return to Dornogal".
+        • Fixed an issue where several quests in Zaralek caverns would not scale beyond level 70.
+        • Merithra is now present at the Seat of the Aspects for players ready to turn in "Raise the Alarm".
+        • Resolved an issue sometimes causing "Dangerous Skies" to prevent skyriding during Recap quests in the Isle of Dorn.
+
         December 10, 2025
 
             Dungeons and Raids
