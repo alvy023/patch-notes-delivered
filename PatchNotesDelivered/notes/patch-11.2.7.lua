@@ -14,15 +14,16 @@ PatchNotesDelivered_Notes_1127 = {
     gameChangesHotfixes = [[
         December 19, 2025
 
-        Housing
-            • Wildlife in neighborhoods will no longer pursue players for more than a reasonable distance.
+            Housing
+                • Wildlife in neighborhoods will no longer pursue players for more than a reasonable distance.
 
-        Quests
-            • Players who have not queued for Brawler's Guild should now see a summons to the event in Dornogal.
-            • Fixed an inconsistency with Darkmoon Faire race timers that was preventing completion of the “Real Big Race”.
+            Quests
+                • Players who have not queued for Brawler's Guild should now see a summons to the event in Dornogal.
+                • Fixed an inconsistency with Darkmoon Faire race timers that was preventing completion of the “Real Big Race”.
 
-        User Interface
-            • Many additional spells and abilities have been adjusted so that their spell visual density is decreased when either the Reduced or Essential Spell Density setting is selected.
+            User Interface
+                • Many additional spells and abilities have been adjusted so that their spell visual density is decreased when either the 
+                  Reduced or Essential Spell Density setting is selected.
 
         December 16, 2025
 
