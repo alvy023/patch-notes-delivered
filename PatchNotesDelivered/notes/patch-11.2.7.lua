@@ -62,7 +62,7 @@ PatchNotesDelivered_Notes_1127 = {
 
             Housing
                 • The Lorewalking: The Elves of Quel'thalas achievement now properly, retroactively awards the Tome of Silvermoon Intrigue. 
-                  Players who have already purchased additional copies of this decor from the Lali the Assistant will see them made 
+                  Players who have already purchased additional copies of this decor from Lali the Assistant will see them made 
                   available in a future patch.
                 • Thanks to recent alchemical breakthroughs from the Kirin Tor, crafting decor with Legion Alchemy (including the Arcan'dor 
                   Cutting Fountain) no longer requires the Dalaran Alchemy Station.
