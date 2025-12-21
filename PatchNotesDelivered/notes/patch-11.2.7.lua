@@ -9,9 +9,22 @@
 --- Max note length [140] ------------------------------------------------------------------------------------------------------------------
 PatchNotesDelivered_Notes_1127 = {
     version = "11.2.7",
-    build = "64877",
-    hotfix = 3,
+    build = "64978",
+    hotfix = 4,
     gameChangesHotfixes = [[
+        December 19, 2025
+
+            Housing
+                • Wildlife in neighborhoods will no longer pursue players for more than a reasonable distance.
+
+            Quests
+                • Players who have not queued for Brawler's Guild should now see a summons to the event in Dornogal.
+                • Fixed an inconsistency with Darkmoon Faire race timers that was preventing completion of the “Real Big Race”.
+
+            User Interface
+                • Many additional spells and abilities have been adjusted so that their spell visual density is decreased when either the 
+                  Reduced or Essential Spell Density setting is selected.
+
         December 16, 2025
 
             Brawler’s Guild
@@ -49,7 +62,7 @@ PatchNotesDelivered_Notes_1127 = {
 
             Housing
                 • The Lorewalking: The Elves of Quel'thalas achievement now properly, retroactively awards the Tome of Silvermoon Intrigue. 
-                  Players who have already purchased additional copies of this decor from the Lali the Assistant will see them made 
+                  Players who have already purchased additional copies of this decor from Lali the Assistant will see them made 
                   available in a future patch.
                 • Thanks to recent alchemical breakthroughs from the Kirin Tor, crafting decor with Legion Alchemy (including the Arcan'dor 
                   Cutting Fountain) no longer requires the Dalaran Alchemy Station.
