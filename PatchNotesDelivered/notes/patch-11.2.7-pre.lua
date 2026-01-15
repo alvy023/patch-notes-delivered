@@ -163,18 +163,18 @@ PatchNotesDelivered_Notes_1127P = {
                 > Paladin
                     + Rebuke interrupt duration increased to 5 seconds (was 3 seconds). Does not affect PvP combat.
                 > Priest
-                    > Shadow
-                        + Silence duration increased to 5 seconds (was 4 seconds) and interrupt duration increased to 5 seconds in non-PvP 
+                    + Shadow
+                        - Silence duration increased to 5 seconds (was 4 seconds) and interrupt duration increased to 5 seconds in non-PvP 
                           combat (was 3 seconds).
-                        + Silence duration increased to 4 seconds in PvP combat (was 3 seconds).
+                        - Silence duration increased to 4 seconds in PvP combat (was 3 seconds).
                 > Rogue
                     + Kick interrupt duration increased to 6 seconds (was 3 seconds). Does not affect PvP combat.
                 > Shaman
                     + Wind Shear interrupt duration increased to 4 seconds (was 2 seconds). Does not affect PvP combat.
                 > Warlock
                     + Spell Lock interrupt duration increased to 7 seconds (was 5 seconds). Does not affect PvP combat.
-                    > Demonology
-                        + Axe Toss interrupt duration increased to 5 seconds (was 3 seconds). Does not affect PvP combat.
+                    + Demonology
+                        - Axe Toss interrupt duration increased to 5 seconds (was 3 seconds). Does not affect PvP combat.
                 > Warrior
                     + Pummel interrupt duration increased to 5 seconds (was 3 seconds). Does not affect PvP combat.
             • The following taunt and pet taunts have been updated to have a minimum 6 second duration and increase threat generation by 
