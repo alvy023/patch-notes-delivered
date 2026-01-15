@@ -28,6 +28,7 @@ notes/patch-11.1.7.lua
 notes/patch-11.2.0.lua
 notes/patch-11.2.5.lua
 notes/patch-11.2.7.lua
+notes/patch-11.2.7-pre.lua
 
 # Core Addon Files
 PatchNotesText.lua
