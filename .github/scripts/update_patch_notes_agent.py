@@ -79,7 +79,9 @@ def generate_notes_from_text(scraped_text, existing_notes):
     prompt = f"""
     **Your Job:**
     1.  Analyze the "NEW SCRAPED TEXT".
-    2.  **CRITICAL RULE:** You must focus **exclusively** on the current retail expansion: **The War Within**. Completely discard any sections, headings, or bullet points related to other game versions like "Mists of Pandaria Classic", "Season of Discovery", "WoW Classic Era", and "Hardcore". If you see a heading for one of these versions, you must ignore that heading and all text that follows it until you reach a new, relevant section.
+    2.  **CRITICAL RULE:** You must focus **exclusively** on the current retail expansion: **The War Within** (which includes Midnight Pre-Patch). 
+        Completely discard any sections, headings, or bullet points related to other game versions like "Mists of Pandaria Classic", "Season of Discovery", "WoW Classic Era", and "Hardcore". 
+        If you see a heading for one of these versions, you must ignore that heading and all text that follows it until you reach a new, relevant section.
     3.  For each section (hotfixes and patch notes), you are provided with the oldest and newest dates currently present in the notes:
         - Only identify entries in the scraped text that are newer than the newest date for that section.
         - Ignore any entries with dates before the oldest date for that section.
@@ -88,7 +90,7 @@ def generate_notes_from_text(scraped_text, existing_notes):
         {hotfix_date_instruction}
         {patch_date_instruction}
         - Prepend any new entries you find (that are newer than the newest date) to the top of the corresponding section, so the order is most recent to oldest.
-    4.  Format any new information you find according to the detailed "FORMATTING EXAMPLES" below.
+    4.  Format any information you find according to the detailed "FORMATTING EXAMPLES" below. Do not summarize, alter, or remove any content, including Developer's Notes and removals; simply reformat it.
     5.  You MUST return your response as a JSON object with two keys: "hotfixes" and "patch".
         - The value for each key must be ONLY the NEWLY FORMATTED text chunk.
         - Do NOT include the existing notes in your JSON response. Your response should only contain the new additions.
@@ -135,14 +137,39 @@ def generate_notes_from_text(scraped_text, existing_notes):
 
         ...
 
-        MAGE
+        WARLOCK
 
-            • Inspired Intellect now grants 6% increased Intellect (was 3%).
-            • Time Anomaly has been removed.
+            • Corruption now deals damage on application and is instant cast.
+            • The scale of your primary demon is now consistent across all levels.
             • Hero Talents
-                > Frostfire
-                    + Fire
-                        - Excess Frost now casts Ice Nova at 200% effectiveness (was 150%).
+                > Diabolist
+                    + Wicked Cleave damage increased by 50%. This change does not affect PvP combat.
+                    + Chaos Salvo damage increased by 50%.
+                    + Felseeker damage increased by 50%.
+                    + Ruination damage increased by 50%. This change does not affect PvP combat.
+                    + Infernal Bolt damage increased by 55%.
+                    + Flames of Xoroth now increases demon and Fire damage dealt by 4% (was 2%).
+                    + Demonology
+                        - Felseeker damage reduced by 20%.
+                > Hellcaller
+                    + Affliction
+                        - Xalan’s Cruelty now increases Shadow damage by 6% (was 2%).
+                    + Destruction
+                        - Xalan’s Cruelty now increases Shadow damage dealt by 8% (was 4%).
+                > Soul Harvester
+                    + Affliction
+                        - Soul Anathema damage increased by 40%. This change does not affect PvP combat.
+            • Affliction
+                > Unstable Affliction damage increased by 68%. This change does not affect PvP combat.
+                > Shadow Bolt damage increased by 25%. This change does not affect PvP combat.
+                > Drain Soul damage increased by 25%. This change does not affect PvP combat.
+                > Summon Darkglare damage increased by 35%. Does not affect PvP combat.
+                > Haunt damage increased by 50%. This change does not affect PvP combat.
+                > Haunt now increases your damage dealt to the target by 12% for 18 seconds (was 10%).
+                > Tormented Crescendo can now stack up to 3 times (was 2).
+                > Focused Malignancy now causes Malefic Rapture to deal 80% increased damage to targets suffering from Unstable Affliction 
+                  (was 40%). Does not affect PvP combat.
+                > Xavian Teachings has been removed.
     ```
     --- END OF FORMATTING EXAMPLES ---
 
@@ -169,12 +196,14 @@ def generate_notes_from_text(scraped_text, existing_notes):
 
     system_instruction = """
     You are a World of Warcraft patch notes processor. Your task is to process scraped text and update the patch notes for an addon.
-    Your single most important rule is to completely ignore any content that is not for the retail version of the game, "The War Within". You must discard all information for "WoW Classic Era", "Hardcore", "Season of Discovery", and "Mists of Pandaria Classic".
+    Your single most important rule is to completely ignore any content that is not for the retail version of the game, "The War Within" 
+    (which includes Midnight Pre-Patch). You must discard all information for "WoW Classic Era", "Hardcore", "Season of Discovery", and "Mists of Pandaria Classic".
     """
 
     try:
         response = client.models.generate_content(
-            model="gemini-2.5-flash", 
+            model="gemini-2.5-flash",
+            # model="gemini-3-flash-preview",
             config=types.GenerateContentConfig(
                 response_mime_type="application/json",
                 thinking_config=types.ThinkingConfig(thinking_budget=0),
@@ -208,6 +237,8 @@ def generate_notes_from_text(scraped_text, existing_notes):
 
     except Exception as e:
         print(f"❌ Error calling Gemini API or processing its response: {e}")
+        if response:
+            print(f"Response text: {response.text}")
         sys.exit(1)
 
 def update_lua_file(notes_file_path, combined_notes):
@@ -263,7 +294,7 @@ if __name__ == "__main__":
     with open(scraped_text_file, 'r', encoding='utf-8') as f:
         scraped_text = f.read()
 
-    print("Generating combined formatted notes with Gemini 2.5 Flash...")
+    print("Generating combined formatted notes with Gemini...")
     llm_combined_notes = generate_notes_from_text(scraped_text, existing_notes)
 
     # Read original file content for comparison

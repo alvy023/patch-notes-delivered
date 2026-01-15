@@ -8,11 +8,11 @@
 --- Export global notes variable
 --- Max note length [140] ------------------------------------------------------------------------------------------------------------------
 PatchNotesDelivered_Notes_1127P = {
-    version = "11.2.7P",
+    version = "11.2.7 Pre-Expansion",
     build = "65299",
     hotfix = 0,
     gameChangesHotfixes = [[
-        
+        Working as intended?
     ]],
     gameChangesPatch = [[
         January 15, 2026
@@ -2149,19 +2149,2069 @@ PatchNotesDelivered_Notes_1127P = {
                     + Subzero
     ]],
     monkChangesPatch = [[
+        MONK
+        
+        • Hero Talents
+            > Conduit of the Celestials
+                + New Talent: Path of the Falling Star – Celestial Conduit's damage is increased by 100% when striking a single target.
+                  Each additional target reduces this bonus by 20%.
+                + Yu'lon's Knowledge has been redesigned – Now increases the damage of Rising Sun Kick by 15%.
+                + Heart of the Jade Serpent no longer decreases the cooldown time of Flying Serpent Kick.
+                + Celestial Conduit no longer splits its damage and now deals reduced damage beyond 5 targets.
+                + Flight of the Red Crane has been removed.
+                + Mistweaver
+                    - Heart of the Jade Serpent now triggers from casting Thunder Focus Tea.
+                    - Yu'lon's Avatar now causes Vivify and Sheilun's Gift to have a chance to trigger Heart of the Jade Serpent.
+                    - Fixed an issue that caused Windwalker Monk's Celestial Conduit node to be present in Mistweaver's tree.
+                + Windwalker
+                    - Invoke Xuen, the White Tiger and Xuen's Bond moved from the Windwalker talent tree to Conduit of the Celestials
+                      hero talent tree.
+                    - Celestial Conduit damage reduced by 75% and healing reduced by 80%.
+                    - Celestial Conduit now overrides Xuen, the White Tiger when Xuen is cast.
+                    - Celestial Conduit has moved locations in the hero talent tree.
+            > Master of Harmony
+                + New Talent: Harmonic Surge – Casting Thunder Focus Tea, Celestial Brew, or Celestial Infusion guarantees that your next 2
+                  casts of Tiger Palm or Vivify will cause a Harmonic Surge, dealing Nature damage split between your target and other
+                  nearby enemies, and healing up to 5 injured allies.
+                + New Talent: Potential Energy – Casting Keg Smash, Rising Sun Kick, or Rushing Wind Kick causes your next Tiger Palm or
+                  Vivify to release a Harmonic Surge.
+                + New Talent: Meditative Focus
+                    - Brewmaster: Blackout Combo increases Tiger Palm's damage by an additional 50% and Keg Smash's Brew cooldown
+                      reduction by an additional 1 second. Press the Advantage's Nature damage is increased by 50% and its cooldown
+                      reduction is increased by an additional 0.25 seconds.
+                    - Mistweaver: Ancient Teachings transfers an additional 50% damage to healing.
+                + Coalescence has been redesigned –
+                    - Brewmaster: When Aspect of Harmony deals damage/healing, it has a chance to spread to a nearby enemy/ally. When
+                      you directly attack/heal an affected target, it has a chance to intensify, withdrawing additional vitality to
+                      increase its effect by up to 20%. Keg Smash/Vivify/Sheilun's Gift no longer contributes vitality, instead drawing
+                      on available vitality to deal up to 100% additional damage/healing. Vitality stored by other abilities is
+                      increased by 50%.
+                    - Mistweaver: When Aspect of Harmony heals, it has a chance to spread to a nearby ally. When you directly heal an
+                      affected target, it has a chance to intensify, withdrawing additional vitality to increase its effect by up to
+                      20%. Vivify and Sheilun's Gift no longer contributes vitality, instead drawing on available vitality to increase
+                      healing done by up to 100%. Vitality stored by other abilities is increased by 50%.
+                + Fixed an issue where Soothing Mist was not benefiting from Balanced Stratagem.
+                + Brewmaster
+                    - Clarity of Purpose is no longer increased with Stagger level.
+                + Mistweaver
+                    - Clarity of Purpose has been updated – Casting Enveloping Mist stores additional vitality (was Vivify or Sheilun's
+                      Gift).
+            > Shado-Pan
+                + New Talent: Shado Over the Battlefield – Flurry Strikes deal Nature damage to all enemies within 6 yards, reduced
+                  beyond 8 targets.
+                + New Talent: Stand Ready
+                    - Brewmaster: Activating Invoke Niuzao, the Black Ox instantly grants 10 stacks of Flurry Strikes that trigger on
+                      your next attack at 70% effectiveness.
+                    - Windwalker: Activating Zenith instantly grants 10 stacks of Flurry Strikes that trigger on your next attack at
+                      70% effectiveness.
+                + New Talent: Weapons of the Wall
+                    - Brewmaster: Invoke Niuzao, the Black Ox's stomp damage increased by 20%.
+                    - Windwalker: Zenith Stomp damage increased by 20%.
+                + New Talent: Initiator's Edge – Movement speed is increased by 50% for the first 8 seconds of combat.
+                + New Talent: Combat Stance – Roll's cooldown is reduced by 10%.
+                + Flurry Strikes has been redesigned –
+                    - Brewmaster: Your auto attacks have a chance to generate 1-2 Flurry Charges. When you cast Keg Smash, unleash all
+                      Flurry Charges, dealing Physical damage per charge.
+                    - Windwalker: Your auto attacks have a chance to generate 1-2 Flurry Charges. When you cast Fists of Fury, unleash
+                      all Flurry Charges, dealing Physical damage per charge.
+                + Wisdom of the Wall has been redesigned –
+                    - Brewmaster: Invoke Niuzao, the Black Ox causes Breath of Fire to launch 3 Flurry Strikes.
+                    - Windwalker: Zenith causes Rising Sun Kick and Spinning Crane Kick to launch 3 Flurry Strikes.
+                + Veteran's Eye has been redesigned – Haste increased by 5%.
+                + Against All Odds has been redesigned – Your Agility is increased by 4%.
+                + Vigilant Watch no longer increases the damage of your next Flurry Strikes.
+                + One Versus Many has been redesigned – Now causes auto attack critical strikes to grant double Flurry Charge stacks.
+                + Efficient Training has been updated –
+                    - Brewmaster: Now decreases the cooldown of Invoke Niuzao, the Black Ox by 25 seconds.
+                    - Windwalker: Now decreases the cooldown of Zenith by 10 seconds.
+        • Class
+            > New Talent: Silent Sanctuary – While no enemies are within 15 yards, you heal every 3 seconds.
+            > New Talent: Stillstep Coil – Leg Sweep applies Disable for 5 seconds when it ends.
+            > New Talent: Serene Surge – After casting Enveloping Mist, your next Sheilun's Gift or Vivify becomes instant cast.
+            > New Talent: Reinvigoration – After Detox successfully removes an effect from an ally, their movement speed is increased by
+              30% for 5 seconds.
+            > New Talent: Chi Transfer – Touch of Death now heals you for 50% of its damage done.
+            > Save Them All has been redesigned – Now increases your healing by up to 10% based on your target's health. Lower health
+              allies are healed for more.
+            > Diffuse Magic has been redesigned – Now causes activating Fortifying Brew to transfer all currently active harmful magical
+              effects on you back to their original caster if possible.
+            > Soothing Mist healing increased by 50%.
+            > Vivacious Vivification no longer increases the healing of Vivify.
+            > Fatal Touch no longer increases damage dealt.
+            > Ferocity of Xuen is now a 2-point talent.
+            > The following talents have been removed:
+                + Bounce Back
+                + Chi Burst (removed for Mistweaver and Windwalker only)
+                + Clash
+                + Profound Rebuttal (removed for Mistweaver only)
+                + Rising Sun Kick (removed for Brewmaster only)
+                + Spear Hand Strike (removed for Mistweaver only)
+                + Strength of Spirit (removed for Mistweaver only)
+                + Vigorous Expulsion (removed for Mistweaver only)
+            > Brewmaster
+                + Rising Sun Kick replaced with Stagger.
+                + Fast Feet has been redesigned – Increases damage of Blackout Kick by 20% and Spinning Crane Kick by 10%.
+            > Mistweaver
+                + New Talent: Vital Clarity – Vivify and Sheilun's Gift critical strike chances are increased by 15% on yourself.
+                + New Talent: Mist Caller – Vivify and Sheilun's Gift trigger an additional Gust on Mist when cast on yourself.
+                + New Talent: Jade Infusion – Thunder Focus Tea summons a Jade Serpent Statue at your location.
+                + New Talent: Chi Warding – You heal for 3% of magic damage taken.
+        • Brewmaster
+            > New Talent: Jade Flash – Crackling Jade Lightning deals its damage 75% faster, costs 75% less energy and chains to 5
+              additional targets, but has a cooldown of 60 seconds.
+            > New Talent: Fuel on the Fire – Exploding Keg also causes your next 2 casts of Keg Smash to summon a whirl of flame which
+              spirals outward, dealing additional Fire damage to each enemy struck.
+            > New Talent: Empty the Cellar – Exploding Keg can be reactivated within 20 seconds to throw 5 additional kegs at nearby
+              targets, each dealing Physical damage and reducing the cooldown of your Brews by 3 seconds.
+            > New Talent: Awakening Spirit – Purifying Brew also surrounds you with protective energies for 15 seconds. When Staggered
+              damage would be dealt to you, you instead absorb up to 50%, until has been prevented.
+            > New Talent: Vital Flame – Heal for 50% of all Fire or Nature damage dealt by your spells and abilities.
+            > New Talent: Heart of the Ox – Gain 5% additional Mastery. Double this effect while Invoke Niuzao, the Black Ox is active.
+            > New Talent: Swift as a Coursing River – Drinking from a Brew increases your movement speed by 15% and your auto-attack
+              speed by 10% for 15 seconds.
+            > New Talent: Improved Blackout Kick – Blackout Kick deals 20% increased damage.
+            > Celestial Flames has been redesigned – Drinking from Brews has a 30% chance to coat you with Celestial Flames for 6
+              seconds. While Celestial Flames is active:
+                - Special Delivery: Kegs thrown by Special Delivery are ignited and splash upon landing, dealing Fire damage to up to 5
+                  nearby enemies.
+                - Rushing Jade Wind: Rushing Jade Wind becomes a firestorm, increasing its radius by 30% and causing it to deal Fire
+                  damage.
+            > Stormstout's Last Keg has been updated – Keg Smash deals 50% increased damage to its primary target and now additionally
+              increases the range of Keg Smash by 10 yards.
+            > Purifying Brew has been updated – Clears 50% of your Stagger, or a minimum of 8% of your maximum health.
+            > Highlight Behavior for Purifying Brew has been updated – No longer highlights at Red/Heavy Stagger; instead highlights for
+              a short duration when your Stagger amount increases by a large amount in a single hit, or when the amount of damage you
+              are Staggering is the highest it's been in the past 10 seconds/15 seconds with Bob and Weave.
+            > Added floating combat text to show Stagger removed by Purifying Brew and other Stagger-clearing effects.
+            > Dragonfire Brew has been updated – Now increases Breath of Fire damage by 100%. Breath of Fire's damage is no longer
+              affected by Stagger levels.
+            > Blackout Combo has been updated – Blackout Kick empowers your next ability: Tiger Palm deals 100% increased damage. Keg
+              Smash reduces the remaining cooldown on your Brews by 2 additional seconds. Combo effects removed for Celestial Brew and
+              Celestial Infusion, Purifying Brew, and Breath of Fire.
+            > Bob and Weave has been updated – Increases the duration of Stagger by 5 seconds, causing Staggered damage to be dealt to
+              you more gradually.
+            > Anvil and Stave has been updated – Effect reduced by 50% for each additional recent attacker, up to 5.
+            > Celestial Brew and Celestial Infusion have been updated – Base absorb value increased by 100%. Purified Chi has been
+              removed.
+            > Exploding Keg has been updated – Now additionally resets the cooldown of Keg Smash.
+            > Staggering Strikes has been updated – When you Blackout Kick, your Stagger is reduced, increased by up to 200% based on
+              your missing health.
+            > High Tolerance has been updated – Stagger is 2%/4% better at delaying damage. Purifying Brew refunds 3 seconds/6 seconds
+              of its cooldown if cast at Elevated Stagger.
+            > Press the Advantage has been updated – Your main hand auto attacks reduce the cooldown on your Brews by 0.5 seconds and
+              deal additional Nature damage. After 10 attacks, the next casts Tiger Palm at 100% effectiveness.
+            > Walk with the Ox has been updated – No longer reduces Invoke Niuzao's cooldown.
+            > Breath of Fire damage increased by 40%.
+            > Invoke Niuzao, the Black Ox has been updated – Now Stomps when you cast Blackout Kick (was Purifying Brew) and cooldown
+              reduced to 2 minutes (was 3 minutes).
+            > Melee damage increased by 50%.
+            > Ox Stance is no longer increased with Stagger level.
+            > Keg Smash adjusted to deal additional damage to your primary target.
+            > Vivacious Vivification and Chi Wave now activate from Keg Smash (was Rising Sun Kick).
+            > Spirit of the Ox no longer activates from Rising Sun Kick.
+            > Overwhelming Force and Way of a Thousand Strikes updated to remove Rising Sun Kick.
+            > Pretense of Instability now also activates from Black Ox Brew and Fortifying Brew.
+            > Fixed an issue causing Refreshing Drinks to only heal the Brewmaster, not their allies.
+            > Many talents have changed positions in the talent tree.
+            > The following talents have been removed:
+                - Call to Arms
+                - Chi Surge
+                - Dampen Harm
+                - Heightened Guard
+                - Hit Scheme
+                - Ox Adept
+                - Strike at Dawn
+                - Weapons of Order
+        • Mistweaver
+            > New Talent: Way of the Serpent – Soothing Mist may be channeled while moving, but movement speed is reduced by 40% while
+              channeling. Vivify healing increased by 15% and Renewing Mist's healing is increased by 30%.
+            > New Talent: Emperor's Elixir – Thunder Focus Tea now empowers Enveloping Mist and Rising Sun Kick further. Enveloping
+              Mist: Begins a channel of Soothing Mist that may be cast while moving onto your target. Rising Sun Kick: Releases a
+              Jadefire Stomp in front of you.
+            > New Talent: Misty Coalescence – Renewing Mist's healing is increased by up to 300% in proportion to its coverage on
+              yourself and your allies.
+            > New Talent: Tranquil Tea – Consuming Mana Tea generates 1 cloud of mist for Sheilun's Gift.
+            > New Talent: Amplified Rush – The healing of Gusts of Mist caused by Renewing Mist is increased by 50%.
+            > New Talent: Morning Breeze – Rising Sun Kick's damage is increased by your Mastery rating.
+            > Restore Balance has been redesigned – Now increases healing done while Yu'lon and Chi-Ji are active by 5%.
+            > Jade Empowerment has been redesigned – Now increases the damage of Crackling Jade Lightning by 300% and is always active.
+            > Tear of Morning has been redesigned – Your Invigorating Mist/Sheilun's Gift healing is increased by 20% and your
+              Enveloping Mist also heals allies with Renewing Mist for 8% of its healing. The duration of Enveloping Mist is increased
+              by 4 seconds while you have a celestial summoned.
+            > Uplifted Spirits has been redesigned – Now reduces the cooldown of Revival by 30 seconds and increases its healing by 15%.
+            > Gust of Mist has been redesigned – Now only triggers from Chi-Ji, Renewing Mist, Enveloping Mist, and Crane Style. Healing
+              increased by 100%.
+            > Secret Infusion has been redesigned – After using Thunder Focus Tea, your next spell gives 2%/4% increase of a stat.
+              Only one stat increase may be active at once.
+            > Awakened Jadefire renamed to Way of the Crane and has been updated – Now a passive effect that does not require to be
+              within Jadefire Stomp.
+            > Sheilun's Gift has been updated –
+                - Overrides Vivify when learned.
+                - Healing increased by 25% and mana cost now matches Vivify.
+                - Sheilun's Gift can be cast without any clouds present and can be cast during Soothing Mist.
+                - Functions with all talents that interact with Vivify.
+                - Sheilun's Gift clouds now increase the healing of Sheilun's Gift by 50% per stack (was 100%).
+                - Emperor's Favor now increases Sheilun's Gift healing by 20% (was 150%).
+            > Renewing Mist is now learned automatically when specializing as Mistweaver.
+            > All healing reduced by 10%.
+            > Soothing Breath healing increased by 100%.
+            > Revival healing increased by 100%.
+            > Restoral healing increased by 100%.
+            > Enveloping Mist's healing increased by 140%, but its healing increase decreased to 10% (was 30%).
+            > Enveloping Mist now costs 3.6% base mana (was 4.2%).
+            > Vivify primary healing increased by 60% and no longer reduces its healing beyond 5 targets.
+            > Vivify now tracks the amount of active Renewing Mists you have active on its action bar bind.
+            > Chi Harmony now increases healing by 25% (was 50%).
+            > Lotus Infusion now increases healing by 6% (was 10%).
+            > Yu'lon's Whisper's healing has been increased by 100%.
+            > Invigorating Mist healing increased by 100% and now also increases the healing of Sheilun's Gift by 500% on its primary
+              target.
+            > Soothing Mist now follows the target of your Enveloping Mist and Vivify/Sheilun's Gift by default.
+            > Thunder Focus Tea cooldown increased to 45 seconds (was 30 seconds) and can no longer be used on Expel Harm or Vivify.
+            > Mana Tea's cost reduction functionality has been removed, but its mana restore increased by 35%.
+            > Jadefire Teachings now transfers 180% of damage done (was 215%).
+            > Jadefire Teachings is now always active and no longer lasts 15 seconds.
+            > Celestial Harmony no longer causes you to cast Enveloping Breath but now reduces Enveloping Mist's cast speed by 60% while
+              Yu'lon is present.
+            > Invoke Yu'lon the Jade Serpent now decreases the cast time of Enveloping Mist by 30% (was 60%).
+            > Invoke Chi-Ji, the Red Crane now always causes Enveloping Mist to be instant cast and cost 20% less mana.
+            > Chi-Ji's Gust of Mists are now 50% effective to regular Gusts of Mists.
+            > Rising Mist no longer heals affected targets.
+            > Rushing Wind Kick no longer increases the healing of Renewing Mist and instead heals up to 5 allies affected by your heal
+              over time effects.
+            > Rushing Wind Kick's mana cost reduced by 50%.
+            > Strength of the Black Ox no longer scales based on the monk's health.
+            > Fixed an issue that caused Soothing Mist to still activate Gusts of Mist.
+            > Fixed an issue that caused Jade Serpent Statue's passive talent to prevent Jade Serpent Statue from healing.
+            > Sheilun's Gift and Rushing Wind Kick's icons have been updated.
+            > Several talents have changed positions in the talent tree.
+            > The following talents have been removed:
+                - Energy Transfer
+                - Invoker's Delight
+                - Jadefire Stomp (effect moved into Emperor's Elixir)
+                - Mending Proliferation
+                - Mists of Life
+                - Peer Into Peace
+                - Refreshing Jade Wind
+                - Shaohao's Lessons
+                - Tea of Plenty
+                - Tea of Serenity
+                - Unison
+        • Windwalker
+            > New Talent: Airborne Rhythm – Slicing Winds now generates 2 Chi when cast.
+            > New Talent: Hurricane's Vault – Slicing Winds now costs 2 Chi to cast, but its damage is increased by 40%.
+            > New Talent: Sharp Reflexes – Blackout Kick reduces the cooldown of Rising Sun Kick and Fists of Fury by 1 second.
+            > New Talent: Crashing Fists – The duration of Fists of Fury is increased by 1 second.
+            > New Talent: Combo Breaker – You have a 8% chance when you Tiger Palm to cause your next Blackout Kick to cost no Chi within
+              15 seconds.
+            > New Talent: Zenith – Chi costs are reduced by 1, and Blackout Kick reduces the cooldown of affected abilities by an
+              additional 1 second. Activating Zenith resets the remaining cooldown on Rising Sun Kick and grants 2 Chi.
+            > New Talent: Harmonic Combo – Fists of Fury's Chi cost is reduced by 1, but its damage is reduced by 10%.
+            > New Talent: Skyfire Heel – Rising Sun Kick's critical strike chance is increased by 4% for each nearby enemy, up to 5
+              enemies. 10% of Rising Sun Kick's damage splashes onto nearby enemies. Damage is reduced beyond 5 targets.
+            > New Talent: Cyclone's Drift – You gain 10% more Haste from all sources.
+            > New Talent: Echo Technique – Casting Strike of the Windlord and Whirling Dragon Punch grants Blackout Kick!.
+            > New Talent: Obsidian Spiral – During Weapons of Order, Blackout Kick generates 1 Chi.
+            > New Talent: Sunfire Spiral – Rising Sun Kick gains 20% additional effectiveness from Mastery: Combo Strikes.
+            > New Talent: Weapon of Wind – Your damage during Zenith is increased by 10%.
+            > New Talent: Martial Agility – Your melee attack speed is increased by 30%. This bonus is increased to 60% during Zenith.
+            > New Talent: Tiger Fang – Your auto attack critical strike chance is increased by 15%.
+            > New Talent: Zenith Stomp – Activating Zenith causes you to release a powerful stomp, dealing significant Nature damage to
+              nearby enemies, reduced beyond 5 targets.
+            > New Talent: Universal Energy – Magical damage increased by 15%.
+            > New Talent: Rushing Wind Kick – After consuming Blackout Kick!, Rising Sun Kick has a 40% chance to become Rushing Wind
+              Kick.
+                - Rushing Wind Kick: Kick up a powerful gust of wind, dealing Nature damage in a 25 yard cone to enemies in front of
+                  you, split evenly among them. Damage is increased by 6% for each target hit, up to 30%.
+            > Dual Threat has been redesigned – Now has a 30% chance to kick your target and damage increased by 300%, but no longer
+              increases damage by 5% for 5 seconds when activated.
+            > Drinking Horn Cover has been redesigned – Now increases the duration of Weapons of Order by 5 seconds.
+            > Spiritual Focus has been redesigned – Now decreases the cooldown of Weapons of Order by 20 seconds.
+            > Xuen's Battlegear has been redesigned – Now increases the critical strike rate of Rising Sun Kick by 20% and decreases the
+              cooldown of Fists of Fury by 4 seconds when Rising Sun Kick critically strikes.
+            > Meridian Strikes has been redesigned – Now decreases the cooldown of Touch of Death by 45 seconds and increases Touch of
+              Death's damage by 15%.
+            > Jade Ignition has been redesigned – No longer stacks an aura to increase Chi Explosion's damage.
+            > Auto-attack damage increased by 200%.
+            > All spell and ability damage reduced by 13%.
+            > Spinning Crane Kick damage increased 80%.
+            > Crane Vortex now increases the damage of Spinning Crane Kick by 15% (was 30%).
+            > Dance of Chi-Ji no longer increases the damage of Spinning Crane Kick.
+            > Dance of Chi-Ji activation chance reduced by 33%.
+            > Fists of Fury damage increased 30%.
+            > Rising Sun Kick damage increased 30%.
+            > Blackout Kick damage increased by 300%.
+            > Slicing Winds damage reduced by 50%.
+            > Jadefire Stomp now increases movement speed for 3 seconds after casting.
+            > Singularly Focused Jade now increases Jadefire Stomp's damage by 300% (was 500%).
+            > Touch of the Tiger now increases the damage of Tiger Palm by 15% (was 40%).
+            > Jadefire Fists now triggers after every Fists of Fury cast.
+            > Thunderfist, Revolving Whirl, and Knowledge of the Broken Temple now triggers from both Whirling Dragon Punch and Strike of
+              the Windlord.
+            > Communion of Wind now reduces the cooldown of Strike of the Windlord and Whirling Dragon Punch by 5 seconds and increases
+              their damage by 20%.
+            > Whirling Dragon Punch cooldown is now 35 seconds and no longer scales with Haste.
+            > Teachings of the Monastery Blackout Kicks are now cast at 25% effectiveness.
+            > Memory of the Monastery no longer increases Haste and instead increases the damage of Tiger Palm.
+            > Combat Wisdom no longer increases the damage of Tiger Palm.
+            > Mastery: Combo Strikes now displays a tracking buff after each cast that displays your previously cast spell.
+            > Ferociousness and Hardened Soles are now 2-point talents.
+            > Combat Assistant's rotation has been updated.
+            > Several talents have changed positions in the talent tree.
+            > The following talents have been removed:
+                - Acclamation
+                - Chi Wave
+                - Courageous Impulse
+                - Fury of Xuen
+                - Gale Force
+                - Invoke Xuen, the White Tiger (moved to the Conduit of the Celestials hero talent tree)
+                - Invoker's Delight
+                - Jadefire Harmony
+                - Last Emperor's Capacitor
+                - Martial Mixture
+                - Ordered Elements
+                - Rushing Jade Wind
+                - Storm, Earth, and Fire
+                - Summon White Tiger Statue
+                - Transfer the Power
+                - Xuen's Bond (moved to the Conduit of the Celestials hero talent tree)
     ]],
     paladinChangesPatch = [[
+        PALADIN
+        
+        • Hero Talents
+            > Herald of the Sun
+                + New Talent: Walk Into Light – You have a 100% chance to generate 2 Holy Power after casting Avenging Wrath.
+                + New Talent: Endless Gleam – Dawnlight's duration is increased by 0.5 seconds when it heals an ally with full health.
+                  Dawnlight's duration is increased 0.3 seconds whenever struck by Divine Storm or Templar's Verdict.
+                + New Talent: Born in Sunlight – Dawnlight's critical strike chance is increased by 15% during Avenging Wrath.
+                + Blessing of An'she has been updated –
+                    - Holy: Now accumulates 2 charges and increases the damage and healing of Holy Shock by 15%.
+                    - Retribution: Now accumulates 2 charges and increases the damage of your next Judgment by 50%.
+                + Eternal Flame's cast animation has been updated.
+                + Holy
+                    - Eternal Flame healing increased by 35%.
+            > Lightsmith
+                + New Talent: Masterwork – After casting a Holy Armament, your next 3 abilities cast a Lesser Armament of the same kind
+                  on a nearby ally.
+                + New Talent: Resounding Strike
+                    - Holy: Holy Armaments activate Hammer and Anvil at 100% effectiveness.
+                    - Protection: Divine Toll activates Hammer and Anvil at 100% effectiveness.
+                + New Talent: Reflection of Radiance
+                    - Holy: When your Holy Bulwark absorbs damage or your Sacred Weapon deals damage or healing, you have a chance to
+                      gain Awakening.
+                    - Protection: When your Holy Bulwark absorbs damage or your Sacred Weapon deals damage or healing, you have a chance
+                      to gain Grand Crusader.
+                + Hammer and Anvil's healing effect now has a 30 yard radius (was 20) and a cap of 5 targets.
+                + Hammer and Anvil has moved in the talent tree.
+                + Holy
+                    - Hammer and Anvil healing reduced by 50%.
+                    - Holy Armaments now overrides Holy Prism.
+            > Templar
+                + New Talent: Seal of the Templar
+                    - Protection: Judgment damage increased by 30%.
+                    - Retribution: Templar's Verdict damage increased by 15%.
+                + New Talent: Divine Hammer – Divine Toll summons Divine Hammers that spin around you for 8 seconds, striking all enemies
+                  nearby for damage every 2 seconds. Deals reduced damage beyond 8 targets.
+                + New Talent: Light's Judicator – Empyrean Hammer deals 20% increased critical strike damage and its critical strikes have
+                  a 50% chance to grant an additional stack of Light's Deliverance.
+                + New Talent: Divine Exaction – Divine Toll casts 2 additional times on your target at 150% effectiveness.
+                + Endless Wrath has been updated – Empyrean Hammer has a 10% increased chance to critically strike.
+                + Wrathful Descent now deals 50% of the damage to nearby enemies when it critically strikes (was 100%).
+                + Sanctification now increases the damage of Empyrean Hammer by 5% per stack (was 10%).
+                + Hammer of Light secondary damage now strikes up to 7 targets (was 4).
+        • Class
+            > New Talent: Brought to Light – Killing an enemy that yields experience or honor causes you to explode with holy energy,
+              healing up to 5 nearby allies and yourself, split evenly among them.
+            > New Talent: Fear No Evil – Fear duration on you reduced by 20%. This effect is increased to 60% during Avenging Wrath.
+            > New Talent: Guided Prayer – When your health is brought below 25%, you instantly cast a free Word of Glory at 60%
+              effectiveness on yourself. Cannot occur more than once every 60 seconds.
+            > Holy Ritual has been redesigned – No longer functions with Blessing of Freedom, no longer triggers when a blessing fades,
+              but healing increased by 2000%.
+            > Vengeful Wrath has been redesigned – Hammer of Wrath deals up to 25%/50% additional damage based on its target's health.
+              Lower health targets receive more damage.
+            > Blessing of Dusk has been redesigned – Damage taken reduced by up to 10%, increasing as your health decreases.
+            > Blessing of Dawn has been redesigned – While you are above 85% health, 5% of all damage taken by allies within 20 yards is
+              redirected to you, up to a maximum of 5% of your health every 5 seconds.
+            > All Holy Power spending ability healing and damage has been increased by 20%.
+            > A Just Reward and Obduracy are now 2-point talents.
+            > Hammer of Wrath's icon and visual have been updated.
+            > The following talents have been removed:
+                - Judgment of Light
+                - Of Dusk and Dawn
+                - Punishment
+                - Seal of the Crusader
+                - Zealot's Paragon (moved to the Protection talent tree)
+            > Holy
+                + New Talent: Armory of Light – While wearing a shield, you have a 15% chance to block incoming spells, reducing their 
+                  damage by 20%. Without a shield, you have a 15% chance to parry incoming physical attacks, reducing their damage by 20%.
+                + Holy Prism moved to the class tree and has been updated – Cooldown increased to 45 seconds (was 30 seconds) and now
+                  generates 3 Holy Power.
+                + Holy Prism healing increased by 25%.
+                + Quickened Invocation now reduces the cooldown of Divine Toll, Holy Prism, Barrier of Faith, or Holy Armaments by 15
+                  seconds.
+                + Divine Toll now casts Holy Shock at 60% effectiveness.
+            > Retribution
+                + Shield of Vengeance moved to the class tree and has been updated – Divine Protection reduces damage taken by an additional
+                  10% and casts Shield of Vengeance. Shield of Vengeance remains the same.
+        • Holy
+            > New Talent: Ringing of the Heavens – Activating Aura Mastery also casts a Divine Toll at 100% effectiveness.
+            > New Talent: Seraphic Barrier – Word of Glory and Light of Dawn now convert 15% of their healing into an absorb shield
+              instead.
+            > New Talent: Call of the Righteous – Avenging Wrath's cooldown is reduced by 15 seconds/30 seconds, but its duration is
+              reduced by 4 seconds/8 seconds. Avenging Crusader's cooldown is reduced by 7.5 seconds/15 seconds, but its duration is
+              reduced by 2.5 seconds/5 seconds.
+            > New Talent: Glistening Radiance – While at maximum health, targets with Beacon of Light generate an absorb shield equal to
+              5% of their health every 3 seconds, up to a maximum of 15%.
+            > New Talent: Seek Deliverance – While Avenging Wrath is not active, you gain 5% Mastery. While Avenging Wrath is active,
+              you gain 30% movement speed.
+            > New Talent: Divine Overload – Holy Light's healing is increased by 30%, but its mana cost is increased by 20%.
+            > Liberation has been redesigned – 20% of Word of Glory and Light of Dawn's healing is converted into Holy damage that
+              strikes a nearby enemy.
+            > Saved by the Light has been redesigned and no longer triggers a visual – When an ally with your Beacon of Light is damaged,
+              they absorb damage, increasing by up to 300% based on their current health. Lower health allies are shielded for more.
+            > Tyr's Deliverance has been redesigned – Now triggers after activating Avenging Wrath.
+            > Hand of Divinity has been redesigned – Now triggers after activating Avenging Wrath, causing your next Holy Light to be
+              instant cast and cost 50% less mana.
+            > Inflorescence of the Sunwell has been redesigned – Infusion of Light has 1 additional charge.
+            > Veneration has been redesigned – Judgment grants an absorb shield on up to 5 injured allies for 8% of the damage done,
+              split evenly among them. Flash of Light and Holy Light critical strikes reset the cooldown of Judgment.
+            > Breaking Dawn has been redesigned – Now increases Light of Dawn's healing by 5%/10%.
+            > Crusader's Might has been redesigned – Holy Shock reduces the cooldown of Judgment by 1.5 seconds and Crusader Strike
+              reduces the cooldown of Judgment by 1.5 seconds.
+            > Divine Favor has been redesigned – Now reduces the mana cost of Holy Light by 15% and reduces its cast time by 20%. May now
+              trigger from Divine Toll or Holy Armaments.
+            > Unending Light has been redesigned – Now increases the benefit Light of Dawn receives from Mastery: Lightbringer by 20%.
+            > Solar Grace has been redesigned – Now increases Haste by 5%.
+            > Gleaming Rays has been redesigned – Holy Power Spenders deal 3% additional damage and healing.
+            > Sun's Avatar has been redesigned – Now always causes you to link to Dawnlights and no longer increases the duration of
+              Dawnlights or releases additional Dawnlights during Avenging Wrath. Sun's Avatar healing increased by 100%.
+            > Rising Sunlight has been redesigned – Now increases your healing by up to 10%, based on the average health percentage of
+              allies with your Beacon of Light.
+            > Avenging Crusader has been updated – You become the ultimate crusader of Light for 15 seconds. Auto-attack damage is
+              increased by 1000%, Judgment and Crusader Strike heal up to 5 injured allies within 40 yards for 100% of the damage done,
+              split evenly among them. This spell is replaced with Crusader Strike while active.
+            > Tower of Radiance is now learned at level 10 (was a talent).
+            > Infusion of Light is now a talent (was learned at level 23) and increases the healing of Flash of Light by 200% (was 150%)
+              and increases Greater Judgment's effect by 150% (was 100%). No longer empowers Holy Light.
+            > Tirion's Devotion now reduces Lay on Hands' cooldown by 30% (was reduced per Holy Power spent).
+            > Holy Shock now overrides Crusader Strike when learned.
+            > All healing reduced by 16%.
+            > Holy Shock healing increased by 50% and cooldown is now 6 seconds (was 9.5 seconds).
+            > Holy Light healing increased by 87%.
+            > Word of Glory healing increased by 25%.
+            > Dawnlight healing increased by 50%.
+            > Light of Dawn healing increased by 25%, now heals in a 40 yard radius around the paladin.
+            > Light of Dawn's healing effect has been capped at 5 targets. The tooltip will be updated in a future update to reflect
+              this.
+            > Light of Dawn visual effect has been updated.
+            > Flash of Light healing increased by 25%.
+            > Judgment cooldown reduced by 35%.
+            > Beacon of Light now transfers 10% of healing done (was 20%).
+            > Beacon of Virtue's duration increased to 9 seconds (was 8 seconds).
+            > Pillars of Light's Beacon of Virtue healing increased by 25%.
+            > Shield of the Righteous now reduces the cooldown of Holy Shock by 4 seconds (was Crusader Strike).
+            > Shield of the Righteous now grants 0.5% mana and only grants its cooldown reduction and mana if it hits a target.
+            > Shining Righteousness now activates with a 35% chance (was after 4 casts).
+            > Sanctified Wrath no longer decreases the cooldown of Holy Shock, but now increases the duration of Avenging Wrath by 50%
+              (was 25%).
+            > Blessed Assurance now increases the healing/damage of Holy Shock (was Crusader Strike).
+            > Righteous Judgment now replaces Consecrate.
+            > Awakening now activates with a 5% chance (was after 15 casts).
+            > Empyrean Legacy now activates from Judgment critical strikes (was 20 second cooldown).
+            > Hammer of Wrath now overrides Judgment during Avenging Wrath.
+            > Divine Revelations no longer mentions Holy Light.
+            > Reclamation's tooltip has been updated to no longer mention Crusader Strike.
+            > Many talents have changed positions in the talent tree.
+            > The following talents have been removed:
+                - Barrier of Faith (moved to PvP talents)
+                - Blessing of Seasons
+                - Boundless Salvation
+                - Holy Prism (moved to the class tree)
+                - Merciful Auras
+                - Power of the Silver Hand
+                - Rebuke
+                - Relentless Inquisitor
+        • Protection
+            > New Talent: Undying Embers – You are healed for 100% of the damage dealt by Refining Fire.
+            > New Talent: Searing Sunlight – Casting Avenger's Shield causes Consecration to deal damage or healing again immediately at
+              100% effectiveness.
+            > New Talent: Sweeping Verdict – Judgment chains to 2 additional targets.
+            > New Talent: Empyrean Authority – Guardian of Ancient Kings has 1 additional charge.
+            > New Talent: Valiant Crusade – While out of combat, Divine Steed grants Shield of the Righteous for its duration and an
+              additional 4 seconds after it fades.
+            > New Talent: Vision of Sanctity – Consecration deals 100% increased damage when it strikes a single target.
+            > New Talent: Solace – Consecration heals you for 300% of the damage it deals.
+            > New Talent: Imbued Shield – Shield of the Righteous reduces magical damage taken by 10%.
+            > New Talent: Adjudication – Judgment causes its primary target's successful melee attacks against you to grant a Physical
+              absorb shield for 20% of the damage dealt. Limit 1.
+            > New Talent: Instrument of the Divine – Shield of the Righteous consumes up to 2 more Holy Power and deals 50% increased
+              damage for each additional Holy Power consumed.
+            > Sanctuary has been updated – While in your Consecration and for 4 seconds after leaving it, your damage taken is reduced by
+              5%.
+            > Righteous Protector has been updated – Avenging Wrath has 50% reduced cooldown and 40% reduced duration. No longer
+              affects Guardian of Ancient Kings.
+            > Templar has been updated – Eye of Tyr replaced with Divine Toll.
+            > Light's Guidance has been updated – Hammer of Light is now activated by and replaces Divine Toll.
+            > Refining Fire has been updated – Enemies struck by Avenger's Shield burn with holy fire, suffering 20% additional Radiant
+              damage over time.
+            > Undisputed Ruling has been updated – No longer grants Holy Power.
+            > Redoubt has been updated – Armor granted by Shield of the Righteous is increased by up to 50%, based on your missing
+              health.
+            > Mastery: Divine Bulwark: Increases your chance to block melee attacks by Mastery%, and your chance to block spells and
+              harmful periodic effects by 2x Mastery%.
+            > Zealot's Paragon moved from class tree to the Protection tree and is now a 2-point talent.
+            > Melee damage increased by 100%.
+            > Word of Glory healing increased by 100%.
+            > Word of Glory mana cost increased by 100%. Now refunds 100% of the mana spent when cast on yourself.
+            > Light of the Titans causes Word of Glory to heal for an additional 40% over time (was 20%).
+            > Grand Crusader's chance to trigger increased to 20% (was 15%).
+            > Guardian of Ancient Kings cooldown reduced to 180 seconds (was 300 seconds).
+            > Ardent Defender cooldown reduced to 90 seconds (was 120 seconds).
+            > Aegis of Light increases Armor by 55% (was 20%).
+            > Armor granted by Shield of the Righteous increased by 30%.
+            > Consecration in Flame is now a 2-point talent.
+            > Sacrosanct Crusade now references and is activated by Divine Toll.
+            > Light's Deliverance now references Divine Toll.
+            > Many talents have changed positions in the talent tree.
+            > The following talents have been removed:
+                - Barricade of Faith
+                - Bastion of Light
+                - Eye of Tyr
+                - Faith in the Light
+                - Holy Shield
+                - Improved Holy Shield
+                - Inmost Light
+                - Inner Light
+                - Inspiring Vanguard
+                - Moment of Glory
+                - Resolute Defender
+        • Retribution
+            > Execution Sentence has been redesigned – Unleash a heavenly blast around the target, dealing Holy damage to all enemies
+              nearby, and call down a hammer that slowly falls from the sky upon the target. After 10 seconds, target suffers 10% of
+              the Holy damage you dealt to all targets affected by the initial blast during that time. Now a 1 minute cooldown.
+            > Crusading Strikes has been redesigned – Crusader Strike replaces your auto-attacks and deals Physical damage, but you
+              auto-attack 50% slower. Crusading Strikes damage increased by 200%.
+            > Divine Resonance has been updated – Divine Toll causes your next 3 Judgments to cast again at 100% effectiveness and now
+              grants the additional Holy Power instantly rather than waiting on the cast of the additional Judgment.
+            > Templar Strikes has been updated – Crusader Strike loses a charge but now strikes twice. Templar Strike slashes an enemy
+              for Radiant damage and gets followed up by Templar Slash that deals Radiant damage. Templar Slash always critically
+              strikes.
+            > Boundless Judgment no longer causes Judgment to generate an additional Holy Power.
+            > Divine Wrath is now a 2-point talent that increases the duration of Avenging Wrath by 2 seconds/4 seconds.
+            > Radiant Glory no longer has a chance to activate Avenging Wrath for 4 seconds on Holy Power spent and now functions with
+              Divine Wrath.
+            > Blades of Light is now a 2-point talent that causes Crusader Strike, Judgment, and Blade of Justice to deal 10%/20%
+              increased damage.
+            > Judge, Jury and Executioner now causes your next Holy Power consuming ability to refund their Holy Power cost after
+              casting Execution Sentence in addition to passively causing Holy Power spending abilities to deal 5% increased damage.
+            > Empyrean Legacy now causes Avenging Wrath to empower your next single target Holy Power ability to cast Divine Storm with
+              25% increased effectiveness.
+            > Crusade is now a passive talent that causes Avenging Wrath to grant 2% Haste, increasing by 2% per Holy Power spent during
+              Avenging Wrath, up to 20%.
+            > Holy Flames no longer increases Divine Storm damage and no longer causes Divine Storm to spread Expurgation.
+            > Art of War now causes auto attacks to have a 15% chance to reset Blade of Justice cooldown (was 20%), critical strikes
+              increase the chance by 15% (was 10%).
+            > Rush of Light causes critical strikes from Holy Power generating abilities to grant 5% Haste for 10 seconds.
+            > Final Verdict secondary effect has been updated – Now has a 15% chance to reset the cooldown of Judgment.
+            > All ability damage dealt reduced by 11%.
+            > Auto-attack damage increased by 300% (does not affect Crusading Strikes).
+            > Templar's Verdict damage increased by 25%.
+            > Divine Storm damage increased by 25%.
+            > Blade of Justice damage reduced by 50%.
+            > Hammer of Wrath damage increased by 30%.
+            > Expurgation tooltip updated – Your Blade of Justice causes the target to burn for Holy damage over 9 seconds. When
+              reapplied, any remaining damage is added to the new effect.
+            > Several talents have changed positions in the talent tree.
+            > The following talents have been removed:
+                - Aegis of Protection
+                - Divine Arbiter
+                - Divine Auxiliary
+                - Divine Hammer (moved to the Templar hero talent tree)
+                - Executioner's Will
+                - Final Reckoning
+                - Guided Prayer (moved to the class talent tree)
+                - Inquisitor's Ire
+                - Justicar's Vengeance
+                - Light's Celerity
+                - Searing Light
+                - Shield of Vengeance (moved to the class talent tree)
+                - Vanguard's Momentum
     ]],
     priestChangesPatch = [[
+        PRIEST
+
+        • Hero Talents
+            > Archon
+                + New Talent: Energy Conservation – Power Surge lasts an additional 5 seconds.
+                + New Talent: Spiritwell
+                    - Holy: Surge of Light can now be consumed by Prayer of Healing in addition to Flash Heal.
+                    - Shadow: Increases Shadowy Apparition damage by 10%.
+                + New Talent: Realized Potential
+                    - Holy: Flash Heal healing increased by 10%. Healing spells and Smite have an additional 2% chance to grant Surge
+                      of Light.
+                    - Shadow: Shadow Word: Death damage increased by 25% and its cooldown is reduced by 3 seconds.
+                + New Talent: Focused Outburst
+                    - Holy: Prayer of Healing mana cost reduced by 10% and its cast time is reduced by 15%.
+                    - Shadow: Void Volley damage increased by 15% and its cooldown is reduced by 4 seconds.
+                + Empowered Surges has been updated –
+                    - Holy: Increases the healing of Flash Heals affected by Surge of Light by 15% (was 30%) and also increases the
+                      healing of Prayer of Healings affected by Surge of Light while the effect is active and Spiritwell is talented.
+                    - Shadow: Increases Mind Flay: Insanity damage by 30% (was 60%).
+                + Halo has moved to the Archon talent tree and now has a 40 yard range (was a class talent).
+                + Power Surge no longer increases the radius of Halo.
+                + Concentrated Infusion has been removed.
+                + Shadow
+                    - Mind Flay: Insanity damage reduced by 16% and now generates 8 Insanity over its duration (was 12).
+                    - Perfected Form now increases damage during Voidform by 5% (was 20%).
+                    - Halo healing reduced by 75% and now generates 5 Insanity (was 10).
+                    - All talents now have Shadow themed icons.
+            > Oracle
+                + New Talent: Piety – 20% of overhealing done is redistributed to up to 4 nearby injured allies.
+                + New Talent: Guiding Light
+                    - Discipline: Penance gains an additional charge.
+                    - Holy: Prayer of Mending gains an additional charge.
+                + New Talent: Prompt Prognosis
+                    - Discipline: The first bolt of each Penance cast damages or heals for 200% more.
+                    - Holy: Casting Prayer of Mending heals your target immediately.
+                + New Talent: Words of the Wise
+                    - Discipline: Flash Heal, Plea, and Power Word: Radiance healing increased by 15%.
+                    - Holy: Holy Word: Serenity and Holy Word: Sanctify healing increased by 10%.
+                + New Talent: Prophet's Insight
+                    - Discipline: Atonement healing from Holy spells is increased by 20%.
+                    - Holy: Reduces the cooldown of your Holy Words by 5 seconds.
+                + New Talent: Unfolding Vision
+                    - Discipline: When Power Word: Shield or Void Shield expires with absorption remaining, it jumps to a nearby injured
+                      ally and loses 40% of its maximum absorb instead.
+                    - Holy: When Prayer of Mending expires without healing, it jumps to a nearby injured ally and loses 2 stacks
+                      instead.
+                + Waste No Time has been redesigned –
+                    - Discipline: Now reduces the cooldown of Power Word: Shield by 1.5 seconds.
+                    - Holy: Now reduces the cooldown of Prayer of Mending by 1.5 seconds.
+                + The following talents have been removed:
+                    - Clairvoyance
+                    - Fatebender
+                    - Miraculous Recovery
+                    - Perfect Vision
+                    - Premonition
+                + Holy
+                    - Preventive Measures increases the healing of Prayer of Mending by 15% (was 40%).
+            > Voidweaver
+                + New Talent: Overwhelming Shadows
+                    - Discipline: Mind Blast deals 100% increased damage.
+                    - Shadow: Void Torrent deals 50% increased damage.
+                + New Talent: Quickened Pulse – Shadow Word: Pain and Entropic Rift deal damage 25% more often.
+                + New Talent: Touch of the Void – Voidheart now persists for 8 seconds after Entropic Rift ends.
+                + Voidwraith has been redesigned – When Entropic Rift ends, it summons a Voidwraith for 5 seconds that casts Void Flay
+                  on a nearby enemy.
+                + Void Infusion now functions with both Penance and Void Blast, and requires Entropic Rift to be active.
+                + Several talents have changed positions in the hero talent tree.
+                + Depth of Shadows has been removed.
+                + Discipline
+                    - Void Infusion grants 50% additional Atonement healing (was 100%).
+                + Shadow
+                    - Void Torrent moved to the Voidweaver hero talent tree and now summons an Entropic Rift when cast.
+                    - Void Torrent can no longer trigger Idol of C'Thun.
+                    - Void Empowerment now causes you to gain Shadowy Insight (was Mind Devourer).
+                    - Void Infusion now causes Void Blast to generate 2 additional Insanity (was 6).
+        • Class
+            > New Talent: Focused Power – Increases the damage of your spells by 3%.
+            > New Talent: Everlasting Light – Surge of Light occurs up to 50% more often based on your remaining mana.
+            > New Talent: Twin Disciplines – Increases the damage and healing of your Holy and Shadow spells by 2%.
+            > New Talent: Painful Invocation – Increases the damage of Shadow Word: Pain and Holy Fire by 10%.
+            > New Talent: Mindpierce – Increases the damage of Mind Flay and Smite by 15%.
+            > New Talent: Strength of Soul – Increases your Stamina by 4%.
+            > New Talent: Spiritual Guidance – Increases your Intellect by 3%.
+            > New Talent: Dark Enlightenment – Increases your Haste by 3%.
+            > New Talent: False Autonomy – Increases the duration of Mind Control and Dominate Mind against enemy creatures by 15
+              seconds.
+            > New Talent: Lightburst – Increases the damage of Holy Nova by 200%, its healing by 300%, and its cooldown by 30 seconds.
+            > Void Tendrils has been redesigned – Roots enemies for 4 seconds when Psychic Scream ends.
+            > Mind Blast moved to the class tree (was learned at level 5). For Holy, this talent is altered to Holy Fire.
+            > Desperate Prayer moved to the class tree (was learned at level 8).
+            > Light's Inspiration is now a 1-point talent that increases the maximum health granted by Desperate Prayer by 10%.
+            > Fade moved to the talent tree (was learned at level 9).
+            > Psychic Scream moved to the class tree (was learned at level 7).
+            > Psychic Scream cooldown is now 40 seconds (was 45 seconds).
+            > Sheer Terror now increases the damage required to break Psychic Scream by 25% (was 75%).
+            > Psychic Voice now reduces the cooldown of Psychic Scream by 10 seconds (was 15 seconds).
+            > The cooldown manager can now be used to track the duration of Shadow Word: Pain and Psychic Scream on targets.
+            > Several talents have changed positions in the talent tree.
+            > The following talents have been removed:
+                - Apathy
+                - Cauterizing Shadows
+                - Death and Madness (moved to the Shadow talent tree)
+                - Divine Star
+                - Essence Devourer
+                - From Darkness Comes Light
+                - Halo (moved to the Archon hero talent tree)
+                - Manipulation
+                - Power Word: Life
+                - Prayer of Mending (now learned with the Holy specialization at level 11)
+                - Renew
+                - Rhapsody
+                - San'layn
+                - Shadowfiend (moved to the Discipline and Shadow talent trees)
+                - Throes of Pain
+                - Vampiric Embrace (now learned with the Shadow specialization at level 25)
+                - Void Shield
+                - Void Shift
+                - Word of the Pious
+        • Discipline
+            > New Talent: Shadow Tap – Mind Blast deals 150% more damage, but costs 40% more mana.
+            > New Talent: Holy Ray – Each successive Penance bolt during a single channel deals 5% increased damage or healing.
+            > New Talent: Shadow Mend – Shadow Word: Pain damage has a chance to upgrade your next Flash Heal to Shadow Mend, which heals
+              an ally for 1100% spell power, but at a price.
+            > New Talent: Greater Smite – Casting Smite increases the damage of Smite by 15%, stacking 2 times. Lasts 2 seconds.
+            > New Talent: Searing Light – Your Penance bolts sear the enemy, dealing 30% of its damage over 8 seconds.
+            > New Talent: Death's Torment – Shadow Word: Death deals damage 2 additional times at 15% effectiveness.
+            > New Talent: Archangel – Evangelism increases your healing and absorption effects by 15% for 18 seconds.
+            > Evangelism has been redesigned – Immediately Power Word: Radiance your target at 150% effectiveness, and causes your next
+              2 casts of Power Word: Radiance to to be instant cast with 40% reduced mana cost.
+            > Purge the Wicked has been redesigned – Increases Holy damage by 10%.
+            > Mindbender has been redesigned – Evangelism summons a Mindbender to attack a nearby target for 12 seconds. Mindbender
+              damage increased by 100%.
+            > Shadowfiend moved to the Discipline talent tree and has been redesigned – Shadow Word: Death has a 40% chance to summon a
+              Shadowfiend for 5 seconds when damaging targets below 20%.
+            > Dark Indulgence now increases Mind Blast damage by 20% (was reduces the mana cost of Mind Blast).
+            > Plea is now learned at level 80 (was a talent).
+            > Atonement now heals all targets for 50% of damage done (was 28%).
+            > Atonement healing is now reduced when healing more than 5 allies. Full health allies are discounted when calculating
+              Atonement's healing.
+            > Divine Procession increases Atonement duration by 2 seconds (was 3 seconds).
+            > Flash Heal healing increased by 30%.
+            > Sanctuary absorption increased by 80%.
+            > All damage increased by 20%.
+            > Smite damage increased by 40%.
+            > Mind Blast damage reduced by 30%.
+            > Shadow Word: Pain damage increased by 30%.
+            > Occultist increases Shadow damage and healing by 15% (was 20%).
+            > Expiation consumes 1 second of Shadow Word: Pain per talent point (was 3 seconds). Effectiveness increased to 300% (was
+              200%).
+            > Power Word: Radiance healing reduced by 15%.
+            > Ultimate Radiance increases the healing of Power Word: Radiance by 15% (was 10%) and now reduces the cooldown of
+              Evangelism by 45 seconds (was instant cast).
+            > Many talents have changed positions in the talent tree.
+            > The following talents have been removed:
+                - Luminous Barrier
+                - Malicious Intent
+                - Overloaded with Light
+                - Schism
+                - Shadow Covenant
+                - Sins of the Many
+                - Twilight Corruption
+                - Twilight Equilibrium
+                - Void Summoner
+        • Holy
+            > New Talent: Efficient Prayers – Reduces the mana cost of Prayer of Healing by 15%.
+            > New Talent: Healing Focus – Reduces the mana cost of Flash Heal by 15%.
+            > New Talent: Cosmic Wave – Increases Cosmic Ripple healing by 15%.
+            > New Talent: Restored Hope – Your healing critical strikes are 230% effective instead of the usual 200%.
+            > New Talent: Uplifting Words – Increases the critical strike chance of your Holy Word: Serenity and Holy Word: Sanctify by
+              10%.
+            > New Talent: Angelic Touch – Your healing spells critically strike for 220% of healing done instead of the usual 200%.
+            > New Talent: Radiant Plea – Increases Prayer of Mending healing by 15%.
+            > New Talent: Ultimate Serenity – Increases the healing done by Holy Word: Serenity by 10% and causes it to heal 4 nearby
+              injured allies within 40 yards for 15% of its healing done. Replaces Holy Word: Sanctify. Talents that affect Holy Word:
+              Sanctify instead affect Holy Word: Serenity.
+            > Eternal Sanctity has been redesigned – Increases the duration of Apotheosis by 12 seconds.
+            > Mastery: Echo of Light now additionally affects Renew. Mastery value reduced by 5%.
+            > Holy Fire now replaces Shadow Word: Pain when learned and is now learned through the class tree (was learned at level 12).
+            > Prayer of Mending now replaces Power Word: Shield when learned at level 11.
+            > Prayer of Mending healing reduced by 25%.
+            > Prayer of Healing healing increased by 61% and mana cost increased by 10%.
+            > Crisis Management now also affects Prayer of Healing.
+            > Flash Heal healing increased by 43% and mana cost increased by 10%.
+            > All healing reduced by 5%.
+            > Light in the Darkness now increases the healing of Holy Word: Serenity and Holy Word: Sanctify by 13%/25% (was 20%/40%).
+            > Voice of Harmony has been updated to clarify its interaction with Halo.
+            > Lasting Words now references Renew in the tooltip.
+            > The following talents have been removed:
+                - Answered Prayers
+                - Divine Word
+                - Everlasting Light
+                - Heal
+                - Holy Mending
+                - Lightwell
+                - Prayer Circle
+                - Symbol of Hope
+        • Shadow
+            > New Talent: Improved Voidform – Causes Voidform to generate 60 Insanity and increases your spell damage by an additional 5%.
+            > New Talent: Shadow Power – Increases your non-periodic spell damage by 6%.
+            > New Talent: Mind Melt – Mind Flay has a 20% increased critical strike chance and deals 50% increased critical strike damage.
+            > New Talent: Haunting Shadows – Shadowy Apparition damage increased by 10%. When Shadowy Apparitions deal damage, they
+              extend the duration of Shadow Word: Pain and Vampiric Touch on the target by 1 second.
+            > New Talent: Invoked Nightmare – Increases the damage of Shadow Word: Pain by 150%.
+            > New Talent: Maddening Tentacles – Tentacle Slam afflicts your target with Shadow Word: Madness at 25% effectiveness.
+            > New Talent: Crushing Void – Tentacle Slam deals 50% increased damage and Void Volley deals 15% increased damage. When
+              Voidform ends, you can cast Void Volley 1 time for free within 30 seconds.
+            > Shadowfiend moved to the Shadow talent tree and has been redesigned – Shadow Word: Death has a 40% chance to summon a
+              Shadowfiend for 5 seconds when damaging targets below 20%.
+            > Devouring Plague renamed to Shadow Word: Madness and has been redesigned – A word of madness haunts the target's mind,
+              dealing Shadow damage instantly plus additional Shadow damage over 6 seconds. Heals you for 30% of damage dealt. When
+              reapplied to a target, all remaining damage is added to the new effect.
+            > Shadow Word: Madness damage reduced by 30%.
+            > Shadow Crash renamed to Tentacle Slam and has been redesigned – Tentacle Slam summons a massive shadowy appendage to slam
+              the ground, dealing damage and applying Vampiric Touch to up to 6 targets to all enemies between you and the target, as
+              well as 8 yards around your target. Max 2 charges, 15 seconds recharge.
+            > Surge of Insanity has been redesigned – Now increases Mind Flay's damage by 15% and Insanity generation by 30%.
+            > Ancient Madness has been redesigned – Now causes Shadow Word: Madness to increase the duration of Voidform by 3 seconds,
+              but its effect now diminishes by 25% per cast of Shadow Word: Madness during Voidform.
+            > Mindbender has been redesigned – Casting Void Eruption summons a Mindbender to attack your target for 10 seconds.
+              Mindbender damage increased by 100%.
+            > Idol of Y'Shaarj has been redesigned – While Shadowfiend, Mindbender, or Voidwraith are active, your Haste is increased by
+              10%.
+            > Phantasmal Pathogen renamed to Spectral Horrors and has been updated – Now a 1-point talent that increases the damage of
+              Shadowy Apparitions by 100% against targets affected by Shadow Word: Madness. Icon has been updated.
+            > Void Eruption renamed to Voidform to reduce confusion between the ability name and active effect. Tooltip updated to
+              explain that it increases your spell damage by 10% for 20 seconds. Voidform no longer resets Mind Blast charges when
+              cast.
+            > Dispersion is now learned at level 13 (was 16).
+            > Vampiric Embrace is now learned at level 25 (was a class talent).
+            > Silence now has a 30 second cooldown (was 45 seconds) and is learned at level 26 (was a talent).
+            > Shadowfiend and Death and Madness are now located in the Shadow talent tree (were class talents).
+            > All damage done reduced by 25%.
+            > Shadowy Apparitions damage increased by 110% and no longer triggers from Mind Blast or Void Bolt.
+            > Mind Blast damage increased by 40%.
+            > Shadowy Insight now grants a temporary charge of Mind Blast that ignores its cooldown instead of granting a charge when
+              triggered.
+            > Maddening Touch is now a 1-point talent that increases Vampiric Touch damage by 20% and gives it a chance to generate 1
+              Insanity each time it deals damage.
+            > Mind Flay damage increased by 40%.
+            > Mental Decay now increases the damage of Mind Flay by 25% (was 15%) and no longer extends the duration of Shadow Word:
+              Pain and Vampiric Touch when Mind Flay deals damage.
+            > Insidious Ire now also affects Mind Flay.
+            > Idol of Yogg-Saron now requires 20 stacks to summon (was 25).
+            > Shadowfiend, Mindbender, and Voidwraith now generate 1 Insanity per attack (was 2).
+            > Void Volley is now the replacement spell during Voidform instead of Void Bolt.
+            > Void Volley can no longer trigger Idol of C'Thun.
+            > Void Tendrils and Void Lashers from Idol of C'Thun now last 10 seconds (was 15 seconds). Total damage unchanged.
+            > Void Tendril and Void Lashers now generate 5 Insanity over their duration (was 15).
+            > Void Volley is no longer visible to allies in dungeons and raids.
+            > Tormented Spirits chance to trigger reduced by 40%.
+            > Mindbender is no longer affected by glyphs that change Shadowfiend to a different creature.
+            > Fixed an issue causing Idol of N'Zoth to sometimes generate the incorrect amount of Insanity.
+            > Several talents have changed positions in the talent tree.
+            > The following talents have been removed:
+                - Dark Ascension
+                - Last Word
+                - Psychic Horror
+                - Void Torrent (moved to the Voidweaver hero talent tree)
     ]],
     rogueChangesPatch = [[
+        ROGUE
+
+        • Hero Talents
+            > Deathstalker
+                + New Talent: Unshakeable Drive
+                    - Assassination: When you consume an application of Deathstalker's Mark, the damage of your next Ambush or Mutilate
+                      is increased by 50%.
+                    - Subtlety: When you consume an application of Deathstalker's Mark, the damage of your next Backstab/Gloomblade is
+                      increased by 50% or Shadowstrike increased by 25%.
+                + New Talent: Precise Killer – Critical strike damage bonus increased by 20%.
+                + New Talent: Quietus Celeris – Deathstalker's Mark has a 30% chance to immediately consume a stack when applied.
+                + New Talent: Mass Casualty
+                    - Assassination: Deathstalker's Mark deals 40% of its normal damage to all other enemies within 8 yards that are
+                      afflicted by Rupture. Deals reduced damage beyond 5 targets.
+                    - Subtlety: Deathstalker's Mark deals 80% of its normal damage to all other enemies within 8 yards when a stack is
+                      consumed by Black Powder. Deals reduced damage beyond 5 targets.
+                + Deathstalker's Mark has been updated –
+                    - Assassination: Garrote applies 3 stacks of Deathstalker's Mark to your target, unless Deathstalker's Mark or
+                      Darkest Night are already active. When you spend 5 or more combo points on attacks against a Marked target you
+                      consume an application of Deathstalker's Mark, dealing 120% Plague damage.
+                    - Subtlety: Shadowstrike applies 3 stacks of Deathstalker's Mark to your target, unless Deathstalker's Mark or
+                      Darkest Night are already active. When you spend 5 or more combo points on attacks against a Marked target you
+                      consume an application of Deathstalker's Mark, dealing 120% Plague damage.
+                + Deathstalker's Mark is now removed with no effect if the target stops being attackable, such as if it is Mind
+                  Controlled.
+                + Garrote and Shadowstrike may now apply Deathstalker's Mark even if the player has Darkest Night.
+                + Darkest Night has been updated –
+                    - Assassination: When you consume the final Deathstalker's Mark from a target or your marked target dies, gain 30
+                      Energy (was 40) and Darkest Night, causing your next Envenom cast with 5 or more combo points to critically
+                      strike, deal 30% additional damage (was 60%), and apply 3 stacks of Deathstalker's Mark to the target if no
+                      other Deathstalker's Mark is active. Envenom cast with Darkest Night does not consume a stack of active
+                      Deathstalker's Marks.
+                    - Subtlety: When you consume the final Deathstalker's Mark from a target or your marked target dies, gain 30 Energy
+                      (was 40) and Darkest Night, causing your next Eviscerate cast with 5 or more combo points to critically strike,
+                      deal 50% additional damage (was 60%), and apply 3 stacks of Deathstalker's Mark to the target if no other
+                      Deathstalker's Mark is active. Eviscerate cast with Darkest Night does not consume a stack of active
+                      Deathstalker's Marks.
+                + Corrupt the Blood has been redesigned –
+                    - Assassination: Rupture damage increased by 10%.
+                    - Subtlety: Deathstalker's Mark damage increased by 25%.
+                + Clear the Witnesses has been redesigned –
+                    - Assassination: Fan of Knives damage increased by 40%.
+                    - Subtlety: Shuriken Storm damage increased by 40%.
+                + Symbolic Victory has been updated –
+                    - Assassination: Kingsbane additionally increases the damage of your next two Envenoms by 18%.
+                    - Subtlety: Now triggers from Shadow Dance (was Symbols of Death) and increases the damage of your next Eviscerate
+                      or Black Powder by 15% (was 18%).
+                + Bait and Switch now causes Evasion to reduce magical damage taken by 15% (was 20%).
+                + Momentum of Despair's duration reduced to 8 seconds (was 12 seconds) and it increases critical strike chance by 10%
+                  (was 15%) and critical strike damage by 20% (was 32%).
+                + Assassination
+                    - Hunt Them Down damage reduced by 60%.
+                + Subtlety
+                    - Deathstalker's Mark damage increased by 20%.
+                    - Hunt Them Down damage reduced by 48%.
+            > Fatebound
+                + New Talent: Lucky Coin – Every 7 coin flips, keep a lucky coin that bends you towards your fate for 15 seconds. Your
+                  Agility is increased by 4%, the damage and bonuses of Fatebound Coins are increased by 50%, and coin flips are 15%
+                  more likely to match the same face as the last flip. Coin flips do not count toward finding a lucky coin while you
+                  have a lucky coin.
+                + New Talent: Overflowing Purse
+                    - Assassination: Envenom has a 15% chance to flip 3 Fatebound Coins.
+                    - Outlaw: Dispatch has a 4% chance to flip 3 Fatebound Coins.
+                + New Talent: Rush to the Inevitable
+                    - Assassination: Gain 5 Energy every time you flip a Fatebound Coin. Gain 15 Energy for Coins that land on their
+                      edge.
+                    - Outlaw: Gain 2 Energy every time you flip a Fatebound Coin. Gain 10 Energy for Coins that land on their edge.
+                + New Talent: Sometimes Lucky – Critical strike chance increased by 3%.
+                + New Talent: Controlled Chaos – After flipping a Fatebound Coin that ends a streak of 4 or more, flip another that
+                  matches the same face.
+                + New Talent: Ravenholdt Mint – Flipping Heads increases damage by an additional 4%. Damage dealt by flipping Tails is
+                  increased by 15%.
+                + Chosen's Revelry has been updated – Flipping a Fatebound Coin restores health.
+                + Tempted Fate has been updated – You have a 30% chance to absorb 10% of any damage taken.
+                + Delivered Doom has been updated –
+                    - Assassination: Envenom deals 5% more damage when they consume 5 or more combo points.
+                    - Outlaw: Dispatch and Between the Eyes deal 5% more damage when they consume 5 or more combo points.
+                + Fate Intertwined has been updated –
+                    - Assassination: Caustic Spatter causes an additional 10% of Nature damage dealt to be dealt to affected enemies.
+                    - Outlaw: Blade Flurry causes an additional 8% of attack damage dealt to be dealt to affected enemies.
+                + Fatebound Coin: Tails flips damage reduced by 20%.
+                + Manaforge Omega 4-set bonus updated –
+                    - Assassination: Lucky Coins cause Deathmark and Kingsbane to cool down 100% faster.
+                    - Outlaw: Lucky Coins cause Adrenaline Rush and Ghostly Strike to cool down 100% faster.
+                + Mean Streak's description is updated to clarify that it works on any cast of Envenom or Dispatch.
+                + Edge Case and Fate Intertwined swapped positions on the talent tree.
+                + The following talents have been removed:
+                    - Double Jeopardy
+                    - Fateful Ending
+                    - Inevitable End
+            > Trickster
+                + New Talent: Hoodwink – Fazed increases damage taken by an additional 3%.
+                + New Talent: Flashing Steel – Unseen Blade may now occur once every 15 seconds and has 25% chance to strike twice.
+                + New Talent: Clever Combatant
+                    - Outlaw: Pistol Shot has 20% increased critical strike chance and now triggers Unseen Blade when available.
+                    - Subtlety: Shuriken Storm has 20% increased critical strike chance and now triggers Unseen Blade when available.
+                + Coup de Grace has been updated –
+                    - Outlaw: After 4 strikes with Unseen Blade, your next Dispatch will be performed as a Coup de Grace, functioning
+                      as if it had consumed 5 additional combo points, and granting you 5 stacks of Flawless Form.
+                    - Subtlety: After 4 strikes with Unseen Blade, your next Eviscerate will be performed as a Coup de Grace,
+                      functioning as if it had consumed 5 additional combo points, and granting you 5 stacks of Flawless Form.
+                + Unseen Blade damage reduced by 20%.
+                + Outlaw
+                    - Nimble Flurry increases Blade Flurry damage by 30% (was 20%).
+                + Subtlety
+                    - Nimble Flurry effect now applies to auto-attacks, Unseen Blade, and Coup de Grace. Effect no longer applies to
+                      Backstab, Gloomblade, Shadowstrike, Eviscerate, or Goremaw's Bite.
+                    - Nimble Flurry effect increased to 75% of listed skill damage (was 60%).
+        • Class
+            > New Talent: Cold Blooded Killer (Passive) – Critically striking with an attack that generates combo points increases the
+              critical strike chance of your next direct damage finishing move by 10%.
+            > New Talent: Swift Slasher – Slice and Dice grants additional attack speed equal to 100% of your Haste.
+            > New Talent: Toxic Stiletto – Shiv's Energy cost is reduced by 20, its cooldown is reduced by 15 seconds, and its range is
+              increased by 2 yards.
+            > New Talent: Quick Fingers – Agility increased by 3%.
+            > New Talent: Deep Cuts – Damage dealt by your finishing moves increased by 6%.
+            > New Talent: Danger Sense – You have a 20% chance to partially evade any damage dealt to you, reducing the damage it deals
+              by 20%.
+            > Alacrity has been redesigned – Haste increased by 1.5%/3%.
+            > Supercharger has been updated –
+                > Assassination: Now triggers upon activating Kingsbane (was Shiv).
+                > Outlaw: Now triggers upon activating Adrenaline Rush (was Roll the Bones).
+                > Subtlety: Now triggers upon activating Shadow Dance (was Symbols of Death).
+            > Cheap Shot now has a 12 second cooldown.
+            > Airborne Irritant no longer causes Blind to affect additional enemies. Now reduces cooldown by 80% (was 50%) and duration
+              by 80% (was 70%).
+            > The following talents have been removed:
+                + Acrobatic Strikes (moved to the Outlaw talent tree)
+                + Cold Blood
+                + Rushed Setup
+                + Shadowheart
+            > Subtlety
+                + Improved Ambush now has an alternate effect – Shadowstrike damage increased by 8%.
+                + Subterfuge duration reduced to 2 seconds/4 seconds.
+        • Assassination
+            > New Talent: Motivated Murderer – Your Energy regeneration is increased by 20%.
+            > New Talent: Canny Strikes – Increases Critical Strike chance by 2%.
+            > New Talent: Razor Wire – Garrote lasts 4 seconds longer.
+            > New Talent: Finish the Job – All damage you deal is increased by 10% while Deathmark is active.
+            > New Talent: Secondary Poisoning – When you apply a Weapon Poison with a single-target attack, you have a 50% chance to
+              strike a nearby enemy for physical damage and apply the same Weapon Poison to them.
+            > New Talent: Avulsion – Rupture damage increased by 20%.
+            > New Talent: Regicide's Reward – When Kingsbane ends, gain 2% Haste for every 5 stacks of increased Kingsbane damage that
+              you had, decreasing by 2% every 2 seconds.
+            > New Talent: Inspiring Strike – Applying Envenom while Envenom is already active increases all damage you deal by 5% and
+              increases poison application chance.
+            > New Talent: Poisoner's Drive – Applying Envenom while Envenom is already active restores 1 combo point.
+            > New Talent: Deadly Momentum – Finishing moves have a 3% chance per combo point spent to increase your critical strike
+              chance by 6% for 6 seconds.
+            > Venomous Wounds has been updated – Restores 4 Energy each time Garrote or Rupture deal damage (was 8), with reduced Energy
+              gain for bleeds beyond the first. Energy restored when a target afflicted by Rupture dies is significantly reduced.
+            > Deathmark has been updated – Deals Bleed damage and restores 80 Energy over 16 seconds. Damage dealt by Garrote, Rupture,
+              and Lethal Poisons is increased by 100%. Each time you apply a lethal poison to the target, apply it twice.
+            > Crimson Tempest has been updated – Deals damage to all enemies within 10 yards, reduced beyond 5 targets. Copies the longest
+              Garrote and Rip onto up to 2 other enemies. Awards 1 combo point.
+            > Caustic Spatter has been updated – Now applied by Envenom or Kingsbane (was Mutilate or Ambush), and no longer requires
+              Lethal Poison and Rupture to be active. Caustic Spatter causes 35% of damage to be dealt to nearby enemies (was 40%).
+            > Rapid Injection has been updated – Now a 2-point talent that increases Envenom damage while active by 15%/30% (was 10%).
+            > Flying Daggers has been updated – Increases Fan of Knives damage by 20% (was 15%) and an additional 10% when striking 5 or
+              more targets (was 15%).
+            > Fatal Concoction has been updated – Now a 2-point talent that increases weapon poison damage by 20%/40% (was 10%).
+            > Poison Bomb has been updated – Now a 1-point talent with a 5% chance to activate per combo point spent (was 4%/8%).
+            > All ability damage reduced by 8%.
+            > Melee auto-attack damage increased by 164%.
+            > Rupture damage increased by 10%.
+            > Garrote damage increased by 10%.
+            > Internal Bleeding damage increased by 20%.
+            > Implacable Strikes damage increased by 30%.
+            > Envenom damage reduced by 5%.
+            > Envenom's self-buff no longer extends the duration when reapplied.
+            > Thrown Precision now increases Fan of Knives critical strike chance by 5% (was 10%).
+            > Fan of Knives range reduced to 8 yards (was 10).
+            > Path of Blood now increases maximum Energy by 50 (was 100).
+            > Sudden Demise now increases Bleed damage by 10% (was 15%).
+            > Venomous Vim grants 3 Energy when it triggers (was 4).
+            > Zoldyck Recipe now affects Nature damage dealt by Deathstalker's Mark, Hunt Them Down, and Fatebound Coin: Tails.
+            > Mastery: Potent Assassin, Zoldyck Recipe, Lethal Dose, and Venomous Wounds tooltips updated for clarity.
+            > Multiple auras (e.g., weapon poisons) flagged to not appear on enemy nameplates by default.
+            > Several talents have changed positions in the talent tree.
+            > The following talents have been removed:
+                - Arterial Precision
+                - Indiscriminate Carnage
+                - Lightweight Shiv
+                - Master Assassin
+                - Sanguine Blades
+                - Serrated Bone Spikes
+                - Tiny Toxic Blade
+                - Twist the Knife
+                - Vicious Venoms
+        • Outlaw
+            > New Talent: Expert Duelist – Between the Eyes increases your damage dealt by an additional 2%.
+            > New Talent: Deadly Pursuit – After spending 15 combo points, if you spend no combo points for 5 seconds, abilities affected
+              by Restless Blades will cool down 200% faster for 5 seconds or until you spend a combo point.
+            > New Talent: Flickering Steel – Sinister Strike and Ambush deal 20% increased damage and generate 5 Energy when they grant
+              you Opportunity.
+            > New Talent: Find an Opening – Your chance to Sinister Strike to strike twice and grant Opportunity is increased by 10%.
+            > New Talent: Heightened Rush – Adrenaline Rush's duration is increased by 3 seconds.
+            > New Talent: Menacing Rush – Adrenaline Rush increases the damage of your combo point generating abilities and finishers by
+              15%.
+            > New Talent: Zero In – Your auto-attack critical strikes increase the damage and critical strike chance of your next
+              Between the Eyes by 3%, stacking up to 20 times.
+            > New Talent: Grand Melee – Blade Flurry causes your attacks to hit nearby enemies for an additional 8% of their normal
+              damage.
+            > New Talent: Crescendo of Violence – Your finishing moves deal 10% increased damage.
+            > New Talent: Dragon-Bone Dice – The bonuses granted by your Roll the Bones are stronger. Bonuses to chance for Sinister
+              Strike to strike twice are 5% greater. Bonuses to Sinister Strike and Ambush damage are 5% greater. Bonuses to Restless
+              Blades cooldown reduction are 10% greater. Jackpot's bonus to critical strike chance is 5% greater.
+            > New Talent: Fast Action – The cooldown of Between the Eyes is reduced by 5 seconds.
+            > Acrobatic Strikes is now a Outlaw talent (was a class talent) and has been updated – Auto-attacks increase auto-attack
+              damage by 3% and increase movement speed by 1% for 3 seconds, stacking up to 10 times.
+            > Between the Eyes has been updated – Finishing move that blasts your target with your pistol, dealing Physical damage and
+              increasing your damage dealt by 4%. Multiple instances of this bonus can overlap.
+            > Between the Eyes damage increased by 40% and its duration is now 2 > 2 times the number of combo points spent (was 3
+              times the number of combo points spent).
+            > Roll the Bones has been updated – Roll the dice of fate, providing a combat enhancement of random power for 30 seconds.
+              This grants you one of four possible bonuses, each of which grants all the bonuses of previous ranks and adds a new
+              bonus:
+                - One of a Kind: Sinister Strike has a 20% increased chance to strike twice and grant Opportunity.
+                - Double Trouble: Add Sinister Strike and Ambush generate 1 additional combo points and deal 15% increased damage.
+                - Triple Threat: Add Restless Blades cooldown reduction increased by 30%.
+                - Jackpot: Add Critical strike chance increased by 10%.
+            > Opportunity tooltip has been updated – Sinister Strike has a 30% chance (was 35%) to hit an additional time and grant
+              Opportunity. Opportunity: Your next Pistol Shot costs 50% less Energy and deals 100% increased damage.
+            > Precision Shot has been updated – Between the Eyes and Pistol Shot have a 10 yard increased range and deal 20% increased
+              damage.
+            > Quick Draw has been updated – Opportunity increases the damage of Pistol Shot by an additional 20%. Each stack of
+              Opportunity consumed by Pistol Shot generates one Combo Point.
+            > Audacity has been updated – Using Pistol Shot with Opportunity has a 35% chance to make your next Ambush usable without
+              Stealth. Chance to trigger this effect matches the chance for your Sinister Strike to grant Opportunity.
+            > Summarily Dispatched has been updated – Dispatch deals 10%/20% increased damage and costs 3/6 less Energy. This damage
+              bonus is increased by 50% while your damage is enhanced by your Between the Eyes.
+            > Fan the Hammer has been updated – When you gain Opportunity, gain 1/2 additional charges. Max 6 charges. Pistol Shot
+              consumes 1/2 extra charges of Opportunity to fire 1/2 additional bullets. These additional shots deal 20% reduced damage.
+            > Hidden Opportunity has been updated – Ambush has a chance to grant Opportunity. Chance to trigger this effect is 80% of the
+              chance for Sinister Strike to grant Opportunity. No longer causes Ambush to strike twice.
+            > Ace Up Your Sleeve has been updated and is now a 2-point talent – Between the Eyes has a 5% chance per combo point spent
+              to restore 2/4 combo points and reset its own cooldown.
+            > Heavy Hitter updated to a 2-point talent – Attacks that generate combo points deal 10%/20% increased damage.
+            > Take 'Em By Surprise renamed Preparation and has been redesigned – Immediately reset the cooldowns of Adrenaline Rush,
+              Between the Eyes, Blade Flurry, Blade Rush, and Killing Spree. 4 minute cooldown.
+            > Restless Blades no longer reduces the cooldown of Vanish.
+            > Adrenaline Rush duration reduced to 15 seconds (was 20 seconds) and it increases Energy regeneration by 75% (was 50%). It
+              can still reduce the global cooldown to as little as 0.8 seconds.
+            > Improved Adrenaline Rush no longer causes Adrenaline Rush to restore full Energy when it ends.
+            > Retractable Hook no longer reduces Grappling Hook's retraction speed.
+            > Combat Potency increases Energy regeneration by 16% (was 30%).
+            > Fatal Flourish causes offhand attacks to have a 25% chance (was 50%) to generate 8 Energy (was 10).
+            > Blade Rush cooldown increased to 60 seconds (was 45 seconds) and generates 25 Energy over 5 seconds (was 30 over 6
+              seconds). Damage dealt now reduced above 8 targets.
+            > Blade Rush damage increased by 200%
+            > Blade Rush damage to your primary target increased by 15%.
+            > All ability damage increased by 40%.
+            > Melee auto-attack damage increased by 270%.
+            > Killing Spree damage reduced by 56%.
+            > Instant Poison damage increased by 50%.
+            > Scoundrel Strike damage increased by 15%.
+            > Main Gauche damage increased by 150%.
+            > Loaded Dice now improves the result of your next Roll the Bones by one level.
+            > Sleight of Hand now increases your chance to get better results when you Roll the Bones.
+            > Blade Flurry causes your attacks to also strike nearby enemies for 35% of damage dealt (was 45%).
+            > Deft Maneuvers now also increases the Energy cost of Blade Flurry by 30.
+            > Improved Between the Eyes now causes Between the Eyes critical strikes to deal 3 times normal damage (was 4).
+            > Pistol Shot's ability icon on action bars and in the Cooldown Manager now shows how many stacks of Opportunity you have.
+            > Audacity now has one chance to make Ambush usable per cast of Pistol Shot, not per hit when multiple bullets are fired
+              with Opportunity.
+            > Many talents have been changed positions in the talent tree.
+            > The following talents have been removed:
+                - Ambidexterity
+                - Count the Odds
+                - Crackshot
+                - Dirty Tricks
+                - Float Like a Butterfly and Sting Like a Bee
+                - Ghostly Strike
+                - Greenskin's Wickers
+                - Improved Main Gauche
+                - Precise Cuts
+                - Riposte
+                - Swift Slasher (moved to the class tree)
+                - Triple Threat
+                - Underhanded Upper Hand
+        • Subtlety
+            > New Ability: Shuriken Storm (Rank 2) – Shuriken Storm deals 100% increased damage while Stealthed. Learned at level 20.
+            > New Talent: Potent Powder – Black Powder deals increased damage equal to 30% of your Mastery when it spends 5 or more
+              combo points.
+            > New Talent: Improved Secret Technique – Secret Technique damage increased by 15%.
+            > New Talent: Umbral Edge – Shadow Clones deal 15% increased damage. Cheap Shot creates a Shadow Clone to Shadowstrike the
+              target for 50% of normal damage as Shadow. Kidney Shot creates a Shadow Clone to Eviscerate the target for 50% of normal
+              damage as Shadow.
+            > Planned Execution has been redesigned – Shadow Dance increases critical strike damage bonus of your abilities by 10%.
+            > Warning Signs has been redesigned – Shadow Dance increases attack speed by 25%.
+            > Deepening Shadows has been redesigned – Shadow Dance duration is increased by 150% of your Haste stat.
+            > Shuriken Tornado has been redesigned – Shuriken Storm has a 15% chance to create Shadow Clone that repeats the attack for
+              50% of normal damage as Shadow.
+            > Perforated Veins has been redesigned – Backstab, Gloomblade, Shuriken Storm, and Shadowstrike have 10% increased damage
+              while Find Weakness is active.
+            > Deeper Daggers has been redesigned – Shadow damage increased by 8%.
+            > Finality has been redesigned – Eviscerate, Rupture, and Black Powder have 15%/30% increased critical strike damage bonus.
+            > Danse Macabre has been redesigned – While Shadow Dance is active, each different attack that generates or spends combo
+              points lashes out at the target, dealing Shadow damage.
+            > Shot in the Dark has been redesigned – After using Vanish or Shadow Dance, your next Cheap Shot is free and ignores its
+              cooldown.
+            > Dark Brew has been redesigned – Your weapon poisons have 10% increased application chance and now deal Shadow damage
+              instead of Nature. Shadow damage increased by 10%.
+            > Shadow Focus has been redesigned – Abilities deal 10% more damage while Stealth or Shadow Dance is active.
+            > Weaponmaster has been redesigned – Backstab and Shadowstrike have a 15% chance to create a Shadow Clone that repeats the
+              attack for 50% of normal damage as Shadow.
+            > Replicating Shadows has been redesigned – Shadow Clones deal 15% increased damage and your effects that have a chance to
+              create them have 5% additional chance to occur.
+            > Death Perception has been redesigned – Find Weakness, Shadow Dance, and Shadow Blades each increase the damage of finishing
+              moves by 5%/10%.
+            > Dark Shadow has been redesigned – Shadow Dance increases all ability damage by 5%/10%, and Shadowstrike and Shuriken Storm
+              damage by an additional 5%/10%.
+            > Secret Technique now learned at level 25 (was a talent).
+            > Secret Technique cooldown reduced to 30 seconds (was 1 minute) and its cooldown is now affected by Haste. No longer
+              reduces its remaining cooldown per Combo Point spent.
+            > Secret Technique damage increased by 37%.
+            > All ability damage reduced by 10%.
+            > Melee auto-attack damage increased by 91%.
+            > Shadowstrike damage increased by 146% and Energy cost increased to 50 (was 45).
+            > Backstab damage increased by 30%.
+            > Gloomblade damage increased by 30%.
+            > Eviscerate damage increased by 23%.
+            > Black Powder damage increased by 19.5%.
+            > Shuriken Storm damage increased by 50%.
+            > Shadow Dance cooldown reduced to 20 seconds (was 1 minute).
+            > The First Dance bonus to Shadow Dance duration reduced to 3 seconds (was 4 seconds).
+            > Master of Shadows now generates 30 Energy over 3 seconds (was 25 Energy).
+            > The Rotten effect now triggers when Shadow Dance is activated (was Symbols of Death) and no longer grants guaranteed
+              chance to critically strike.
+            > Find Weakness is now a buff instead of a debuff, causing your attacks to ignore 30% Armor.
+            > Shadowcraft now increases the frequency of Shadow Techniques by 40% while Shadow Dance is active (was 75%).
+            > Many talents have changed positions in the talent tree.
+            > The following talents have been removed:
+                - Flagellation
+                - Improved Shadow Dance
+                - Improved Shadow Techniques
+                - Inevitability
+                - Rupture
+                - Swift Death
+                - Symbols of Death
     ]],
     shamanChangesPatch = [[
+        SHAMAN
+        
+        • Hero Talents
+            > Farseer
+                + New Talent: Ancestral Influence – Your Intellect is increased by 1% for each Ancestor active.
+                + New Talent: Windspeaker
+                    - Elemental: The cast times of Healing Surge, Chain Heal, and Lava Burst are reduced by 10%.
+                    - Restoration: The cast times of Healing Wave, Chain Heal, and Lava Burst are reduced by 10%.
+                + New Talent: Mystic Knowledge
+                    - Elemental: Increases the chance for Lava Surge to occur by 20%.
+                    - Restoration: For 8 seconds after casting Nature's Swiftness or Ancestral Swiftness, the recharge rate of Riptide
+                      is increased by 10%. Increases the chance for Lava Surge to occur by 20%.
+                + Elemental Reverb increases Lava Burst damage by 10% (was 20%).
+                + All Ancestor healing reduced by 40%.
+                + Elemental
+                    - Call of the Ancestors has been updated – Stormkeeper calls an Ancestor to your side for 8 seconds.
+                    - Routine Communication can now trigger from Flame Shock and Voltaic Blaze.
+                    - Offering from Beyond now reduces the cooldown of Stormkeeper by 3 seconds when an Ancestor is called (was reduces
+                      the cooldown of Fire/Storm Elemental by 5 seconds).
+                + Restoration
+                    - Offering From Beyond now reduces the cooldown of Riptide by 2 seconds (was 3 seconds).
+            > Stormbringer
+                + New Talent: Natural Gift – Nature damage is increased by 2%.
+                + New Talent: Descending Skies – Ascendance upgrades your next Lightning Bolt to Tempest.
+                + New Talent: Stormwell
+                    - Elemental: Storm Elemental lasts 2 seconds longer, and Stormkeeper generates 10 Maelstrom.
+                    - Enhancement: Windfury Weapon damage is increased by 10%. When Crash Lightning hits a single enemy, it activates
+                      Windfury Weapon.
+                + Elemental
+                    - Tempest's chance to occur has been redesigned – No longer triggers based on total Maelstrom spent and now has a
+                      0.3% chance occur per Maelstrom spent.
+                    - Tempest single target damage increased by 25%.
+                    - Arc Discharge has been redesigned – Now causes Tempest to grant a stack of Stormkeeper.
+                    - Rolling Thunder has been redesigned – Now reduces the cooldown of Stormkeeper by 15 seconds.
+                    - Awakening Storms has been redesigned – Now increases the chance to gain Tempest by an additional 0.3% per
+                      Maelstrom spent.
+                + Enhancement
+                    - Tempest has been updated – Each Maelstrom Weapon spent has a 2% chance to upgrade your next Lightning Bolt to
+                      Tempest.
+                    - Tempest single target damage increased by 15%.
+                    - Tempest secondary target damage reduced by 25%.
+                    - Awakening Storm has been updated – Stormstrike has a small chance to upgrade your next Lightning Bolt to Tempest.
+                    - Rolling Thunder now causes Doom Winds to summon a Nature Feral Spirit for 12 seconds.
+                    - Arc Discharge now only affects Chain Lightning and now increases its damage by 20% (was additionally affecting
+                      Lightning Bolt with 40% increased damage).
+            > Totemic
+                + New Talent:
+                    - Totemic Momentum
+                        Enhancement: Each Maelstrom Weapon spent increases the duration of an active Hot Hand by 0.2 seconds.
+                        Restoration: Reduces the cooldown of Healing Stream Totem by 3 seconds.
+                + Surging Totem cooldown is now 25 seconds (was 30 seconds).
+                + Reactivity renamed to Splitstream.
+                + Enhancement
+                    - New Talent: Surge Catalyst – After casting Surging Totem, your next Lava Lash casts again at 150% effectiveness.
+                    - New Talent: Elemental Attunement – Mastery increased by 2%.
+                    - Lively Totems has been updated – Lava Lash and Voltaic Blaze cause your Searing Totems to shoot a Searing Volley.
+                    - Whirling Elements has been updated –
+                        Earth: Now causes your next Sundering to deal 100% increased damage and summons a Searing Totem.
+                        Fire: Lava Lash grants you Hot Hand for 8 seconds (was 6 seconds). Fire Nova no longer grants you Hot Hand.
+                    - Surging Totem Tremor damage increased by 115%.
+                    - Surging Totem cooldown increased to 65 seconds.
+                    - Surging Bolt damage increased by 75%.
+                    - Splitstream now casts a Sundering at 80% effectiveness (was 50%).
+                    - Earthsurge now causes a Tremor at 125% effectiveness (was 100%).
+                + Restoration
+                    - New Talent: Primal Catalyst – Healing Stream Totem and Healing Tide Totem healing has a 20% chance to apply
+                      Earthliving to allies it heals.
+                    - Surging Totem increases Healing Rain's effectiveness by 20% (was 30%) and now lasts 25 seconds (was 24 seconds).
+                    - Oversurge now also applies to Healing Tide Totem.
+                    - Splitstream now causes Healing Stream Totem to heal an additional ally at 30% effectiveness (was 100%) and now
+                      also increases the healing of Healing Tide Totem by 25%.
+                    - Earthsurge is no longer a separate aura and has been merged into Earthliving's periodic heal aura.
+                    - Whirling Water causes Healing Wave to heal an ally inside of your Healing Rain at 50% effectiveness (was 100%).
+        • Class
+            > New Talent: Spiritual Awakening – Mastery increased by 3%.
+            > New Talent: Instinctive Imbuements – Water Shield/Lightning Shield increases your primary stat 3%. Casting Water
+              Shield/Lightning Shield also applies Earth Shield to yourself and any weapon imbuements if known.
+            > New Talent: Therazane's Resilience – Earth Shield and Water Shield no longer lose charges and are 115% effective.
+            > New Talent: Reactive Warding – When refreshing Earth Shield, your target is healed for each stack of Earth Shield they
+              are missing. When refreshing Water Shield, you are refunded 357 mana for each stack of Water Shield missing. Additionally,
+              Earth Shield and Water Shield can consume charges 1 second faster.
+            > Winds of Al'Akir has been redesigned – Increases your movement speed by 3%/6% and the movement speed bonus of Ghost Wolf by
+              an additional 5%/10%.
+            > Encasing Cold has been redesigned – Now increases the cooldown of Frost Shock by 15 seconds and causes Frost Shock to
+              freeze its target in place for 4 seconds.
+            > Seasoned Winds renamed to Windveil and has been redesigned – Interrupting a spell with Wind Shear reduces all spell damage
+              taken by 15% for 12 seconds.
+            > Static Charge has been redesigned – Now reduces the cooldown of Capacitor Totem by 8 seconds/15 seconds.
+            > Primordial Bond has been redesigned – Your Earth Elemental no longer taunts nearby enemies or generates threat and instead
+              increases your maximum health by 15% while active.
+            > Each specialization now automatically learns 1 spell instead of 2 through the Shaman talent tree.
+            > Earth Elemental now lasts 30 seconds (was 1 minute) and has a 3 minute cooldown (was 5 minutes).
+            > Earth Elemental no longer increases the maximum health of the Shaman. This effect has been moved to Primordial Bond.
+            > Earth Elemental now clarifies its threat and taunt behavior in its tooltip.
+            > Totemic Surge no longer reduces the cooldown of Surging Totem, Wind Rush Totem, Healing Tide Totem, Spirit Link Totem,
+              and Static Field Totem and the totem cooldown reduction is 5 seconds (was 6 seconds).
+            > Chain Heal cast time is now 2 seconds (was 2.5 seconds) and jump range is now 20 yards (was 15 yards).
+            > Flametongue Weapon is now a talent for Enhancement (was learned at level 7) and replaces Improved Flametongue Weapon as a
+              talent for Elemental.
+            > Nature's Fury is now a 2-point talent, increasing Nature critical strike chance by 2% per rank.
+            > Brimming with Life is now a 2-point talent – Stamina increased by 5%/10%. While you are at full health, Reincarnation
+              cools down 50%/100% faster.
+            > Several talents have changed positions in the talent tree.
+            > The following talents have been removed:
+                - Arctic Snowstorm
+                - Call of the Elements
+                - Creation Core
+                - Frost Shock
+                - Guardian's Cudgel
+                - Lightning Lasso (moved to PvP talents)
+                - Stone Bulwark Totem
+                - Thunderstorm (now learned with the Elemental specialization at level 30)
+                - Totemic Recall
+        • Elemental
+            > New Talent: Tectonic Collapse – Earth Shock, Elemental Blast, and Earthquake deal 20% additional damage.
+            > New Talent: Molten Wrath – Lava Burst deals 15% additional damage.
+            > New Talent: Elemental Resonance – All Elemental damage increased by 3%.
+            > New Talent: Storm Infusion – Increases the effect of Elemental Resonance by 2%, increases the chance for Thunderstrikes to
+              occur by 30%, and increases Thunderstrike damage by 75%.
+            > New Talent: Inferno Arc – Lightning Bolt, Tempest, Chain Lightning, Earth Shock, Elemental Blast, and Earthquake deal 15%
+              increased damage to targets affected by Flame Shock.
+            > New Talent: Purging Flames – Voltaic Blaze unleashes volcanic rage, causing your next Lava Burst cast to hit all Flame
+              Shocked targets at 80% effectiveness with reduced Maelstrom generation. Lava Burst damage increased by 10%.
+            > New Talent: Voltaic Blaze – Instantly Shocks the target and 5 enemies within 10 yards with blazing thunder, applying Flame
+              Shock and dealing Nature damage. Always critically strikes. Replaces Flame Shock.
+            > New Talent: Improved Voltaic Blaze – Voltaic Blaze's cooldown is reduced by 5 seconds.
+            > New Talent: Call of Fire – Ascendance summons a Greater Fire Elemental to rain destruction on your enemies for 20 seconds.
+              While the Fire Elemental is active, Flame Shock deals damage 33% faster, and newly applied Flame Shocks last 100% longer.
+            > New Talent: Crackling Fury – Voltaic Blaze's cooldown is reduced by 3 seconds/6 seconds and its Nature damage is increased
+              by 50%/100%.
+            > New Talent: Path of the Seer – Intellect increased by 3%.
+            > New Talent: Amped Up – Haste increased by 3%.
+            > New Talent: Flames of the Firelord – Flame Shock damage increased by 100%.
+            > New Talent: Lava Flows – Lava Burst damage increased by 5%. Lava Burst and Lava Burst Overload generate 1 additional
+              Maelstrom.
+            > Herald of the Storm has been redesigned – Now reduces the cooldown of Stormkeeper by 15 seconds.
+            > Storm Frenzy has been redesigned – Now reduces the cast time of Lightning Bolt, Tempest, and Chain Lightning by 15%.
+            > Fusion of Elements has been updated – Consuming Power of the Maelstrom additional fires an Elemental Blast at your target
+              at 40% effectiveness.
+            > Thunderstorm is now learned at level 30 (was a class talent).
+            > Elemental damage gain from Mastery reduced by 10%.
+            > Elemental Unity now increases damage dealt by 6% (was 10%).
+            > Earthquake now deals Nature damage (was Physical).
+            > Ascendance now increases the damage of Elemental Overloads by 75% while Ascendance is active (was 150%). Remains at 25% in
+              PvP combat.
+            > Lava Burst damage is now increased by its critical strike chance.
+            > Lava Burst damage reduced by 32%.
+            > Echo Chamber now increases Elemental Overload damage by 25% (was 40%).
+            > Flames of the Cauldron now also reduces the cooldown Voltaic Blaze by 1.5 seconds.
+            > Power of the Maelstrom's chance to trigger reduced to 15% (was 60%).
+            > Fire Elemental's Fire Blast damage increased by 500%.
+            > Primal Fire Elemental's Immolate damage increased by 500%.
+            > Primal Fire Elemental's Meteor damage increased by 300%.
+            > Greater and Primal Storm Elemental's Wind Gust damage increased by 100%.
+            > Greater and Primal Storm Elemental's Call Lightning damage increased by 100%.
+            > Fury of the Storms now summons a Greater Storm Elemental (was a Greater Lightning Elemental).
+            > Primal Storm Elemental's Stormfury damage increased by 100% and now deals its full damage over 4 seconds (was 8 seconds).
+            > Primal Elementalist now only grants direct control over your Primal Fire Elemental (was all 3 elementals).
+            > Removed the activation overlays that appear when you have enough Maelstrom to cast Earth Shock, Elemental Blast, or
+              Earthquake.
+            > Echoes of Great Sundering now has an activation overlay when gaining its effect.
+            > A sound now plays when Aftershock refunds Maelstrom.
+            > Several talents have changed positions in the talent tree.
+            > The following talents have been removed:
+                - Deeply Rooted Elements
+                - Echo of the Elementals
+                - Elemental Equilibrium
+                - Erupting Lava
+                - Fire Elemental
+                - Flux Melting
+                - Icefury
+                - Liquid Magma Totem
+                - Magma Chamber
+                - Primordial Wave
+                - Splintered Elements
+                - Storm Elemental
+        • Enhancement
+            > New Talent: Overcharge – Critical strike damage of Nature abilities increased by 40% of your critical strike chance.
+            > New Talent: Stormbind – Critical strikes of Nature abilities reduce target's movement speed by 60% for 5 seconds.
+            > New Talent: Ride the Lightning – Stormstrike and Lava Lash unleash Chain Lightning at 100% effectiveness that deals 20%
+              reduced damage with each jump.
+            > New Talent: Elemental Tempo – Elemental damage increased by 10%. Each Maelstrom Weapon stack consumed reduces Stormstrike
+              and Lava Lash cooldowns by 0.3 seconds.
+            > New Talent: Lightning Strikes – Consuming 10 Maelstrom Weapon stacks increases next Stormstrike or Lava Lash damage by 25%
+              and causes them to generate a Maelstrom Weapon stack.
+            > New Talent: Thunder Capacitor – Lightning Bolt and Chain Lightning deal 20% increased damage and have a 20% chance to
+              refund Maelstrom Weapon spent.
+            > New Talent: Chaining Storms – Chain Lightning now jumps to 2 additional targets and deals 10% increased damage.
+            > Forceful Winds has been updated – Windfury has a 10% additional chance to trigger, and its damage is increased by 50%.
+            > Maelstrom Weapon has been updated – Melee damage has a chance to generate Maelstrom Weapon, stacking up to 5 times. Each
+              stack reduces cast time of Lightning Bolt or Chain Lightning by 20% and increases their damage by 20%.
+            > Raging Maelstrom has been updated and now has an additional effect – Maelstrom Weapon can now stack 5 additional times.
+              Consuming Maelstrom Weapon causes your next Healing Surge or Chain Heal to gain 100% of the benefits of Maelstrom Weapon
+              based on the stacks consumed.
+            > Overflowing Maelstrom has been updated – Lightning Bolt and Chain Lightning can consume up to 10 Maelstrom Weapon stacks.
+            > Crash Lightning has been updated – Electrocutes enemies in front, enhances weapons for 12 seconds, causing Stormstrike and
+              Lava Lash to discharge Nature damage split between up to 5 enemies. Cooldown increased to 15 seconds (was 12 seconds).
+            > Crash Lightning initial impact damage increased by 75%.
+            > Surging Elements has been updated – Sundering grants 15% Haste for 12 seconds and generates 5 Maelstrom Weapon stacks. Now
+              a 1-point talent.
+            > Primordial Storm has been updated – Sundering transforms into a single-use Primordial Storm for 15 seconds after cast.
+              Damage increased by 20%.
+            > Sundering has been updated - No longer incapacitates, cooldown reduced to 30 seconds inherently. Damage increased by 20%.
+            > Feral Spirit has been updated – Sundering summons 1 Fire Feral Spirit, Doom Winds summons 1 Nature Feral Spirits. Feral
+              Spirits grant 5% increased Fire/Nature and Physical damage for 8 seconds.
+            > Ascendance has been updated – Replaces Doom Winds. Transforms into Air Ascendant for 15 seconds, unleashes Doom Winds,
+              reduces Stormstrike cooldown and cost by 60%, transforms auto attacks and Stormstrike into Wind attacks that bypass armor
+              and have a 30 yard range. Maelstrom spenders have 0.5% chance to unleash Doom Winds while Ascendance is inactive.
+            > Deeply Rooted Elements has been updated – Replaces Doom Winds. Each Maelstrom Weapon stack consumed has 0.6% chance to
+              activate Ascendance for 8 seconds.
+            > Ashen Catalyst has been updated – When Lava Lash strikes a target affected by your Flame Shock, its cooldown is reduced by
+              2 seconds.
+            > Fire Nova has been updated – Voltaic Blaze generates 2 additional Maelstrom Weapon and has a 30% chance to cause Fire
+              Nova, erupting fiery damage from Flame Shock targets to up to 6 enemies within 8 yards. Damage increased by 100%.
+            > Thorim's Invocation secondary effect has been updated – During Ascendance or Doom Winds, Stormstrike and Crash Lightning
+              consume up to 10 Maelstrom Weapon to discharge Lightning Bolt or Chain Lightning at 100% effectiveness at your enemy,
+              whichever you most recently used. If available, discharges Tempest instead. Now additionally increases Doom Winds duration
+              by 2 seconds and no longer increases Lightning Bolt and Chain Lightning damage by 20%.
+            > Auto-attack damage increased by 250%.
+            > All ability damage reduced by 2%.
+            > Windlash damage increased by 250%.
+            > Stormstrike damage increased by 20%.
+            > Windfury damage increased by 20%.
+            > Lava Lash damage reduced by 25%.
+            > Hot Hand duration reduced to 8 seconds (was 10 seconds) and now reduces the cooldown of Lava Lash by 25%/50%.
+            > Hot Hand may no longer trigger from melee auto attacks during an active Hot Hand.
+            > Flame Shock cooldown is no longer reduced by Haste.
+            > Static Accumulation no longer grants 20% chance on Lightning Bolt and Chain Lightning to refund Maelstrom Weapon.
+            > Stormflurry now has a 20% chance and correctly multiplies damage of subsequent Stormstrikes and their added effects like
+              Crash Lightning cleave.
+            > Improved Maelstrom has been integrated into Maelstrom Weapon.
+            > Many talents have changed positions in the talent tree.
+            > The following talents have been removed:
+                - Alpha Wolf
+                - Crashing Storms
+                - Elemental Blast
+                - Elemental Spirits
+                - Flowing Spirits
+                - Hailstorm
+                - Ice Strike
+                - Improved Maelstrom
+                - Legacy of the Frostwitch
+                - Molten Thunder
+                - Primordial Wave
+                - Tempest Strikes
+                - Unrelenting Storms
+                - Witch Doctor's Ancestry
+        • Restoration
+            > New Talent: Crashing Waves – Healing Wave's critical strike chance is increased by 12%.
+            > New Talent: Calm Waters – Reduces the mana cost of Chain Heal by 15%.
+            > New Talent: Soothing Rain – Increases the healing done by Healing Rain by 10% and reduces its cast time by 0.5 seconds.
+            > New Talent: Quickstream – Healing Stream Totem heals 15% more often.
+            > New Talent: Water Expulsion – Increases Downpour healing by 20%.
+            > New Talent: Double Dip – Healing Rain grants an additional use of Downpour.
+            > New Talent: Earthweaver – Increases Earth Shield healing by 40%.
+            > New Talent: Earthen Accord – Unleash Life heals for 30% more and its bonus healing effect is increased by 20%.
+            > Unleash Life has been redesigned – Unleash elemental forces of Life, healing a friendly target. Increases the healing of
+              your next Riptide, Chain Heal, or Healing Wave by 25% and reduces their cast time by 30%. Unleash Life healing increased
+              by 30% and now has a 20 second cooldown (was 15 seconds).
+            > Ascendance has been redesigned – Transform into a Water Ascendant, immediately healing nearby allies. While ascended,
+              casting Riptide causes your next Healing Wave or Chain Heal to be instant, Healing Wave and Chain Heal apply Riptide to
+              your target, and all healing done is increased by 30%.
+            > Water Totem Mastery has been redesigned – Now reduces the cooldown of Healing Stream Totem by 5 seconds.
+            > Current Control has been redesigned – Now reduces the mana cost of Healing Wave by 15%.
+            > Coalescing Water has been redesigned – Healing Wave and Chain Heal increase the initial healing of your next Riptide by
+              30%, stacking up to 2 times.
+            > All healing increased by 9%.
+            > Healing Wave healing increased by 55% and cast time is now 2 seconds (was 2.5 seconds).
+            > Chain Heal healing increased by 29% and mana cost reduced by 21%.
+            > Healing Rain now lasts 18 seconds (was 10 seconds) and cooldown is now 18 seconds (was 10 seconds).
+            > Riptide healing increased by 12%.
+            > Healing Tide Totem healing increased by 20%.
+            > First Ascendant now also reduces the cooldown of Healing Tide Totem.
+            > Preeminence now also increases your Haste while Healing Tide Totem is active and increases Healing Tide Totem's duration
+              by 3 seconds.
+            > Whispering Waves now duplicates 10% of healing from Healing Wave (was 15%).
+            > Talents that previously affected Healing Surge now affect Healing Wave.
+            > Downpour mana cost reduced by 25% and no longer increases the max health of targets it heals.
+            > Wind Shear cooldown is now 30 seconds (was 12 seconds).
+            > Earthliving's periodic heal is now visible on Raid Frames.
+            > The following talents have been removed:
+                - Ancestral Protection Totem
+                - Cloudburst Totem
+                - Earthen Wall Totem
+                - Healing Surge
+                - High Tide
+                - Mana Tide
+                - Master of the Elements (moved to PvP talents)
+                - Reactive Warding (moved to the class talent tree)
+                - Spiritwalker's Tidal Totem
+                - Therazane's Resilience (moved to the class talent tree)
+                - Tidal Waves
+                - Tidebringer
+                - Tide Turner
+                - Undulation
+                - Wellspring
     ]],
     warlockChangesPatch = [[
+        WARLOCK
+
+        • Hero Talents
+            > Diabolist
+                + New Talent: Diabolic Oculi – You summon a Diabolic Oculus, up to 3, each time the duration of Diabolic Ritual is
+                  reduced by one of your spells. Diabolic Oculi explode when consuming Demonic Art, dealing Fire damage to all enemies
+                  within 8 yards of the target. Damage reduced beyond 8 targets.
+                + New Talent: Looks That Kill – Your Diabolic Oculi now cast Diabolic Gaze at your primary's target every 1 second while
+                  active.
+                + New Talent: Mind's Eyes – Your Diabolic Oculi observe the battlefield and collect information that is imparted to you
+                  upon being exploded, each Diabolic Oculi increasing your Intellect by 2% for 10 seconds.
+                + Touch of Rancora now increases the damage of Hand of Gul'dan, Chaos Bolt, Rain of Fire, or Shadowburn by 20% (was
+                  100%).
+                + Eye Explosion damage reduced by 30%. This change does not affect PvP combat.
+            > Hellcaller
+                + New Talent: Through the Felvine
+                    - Affliction: Increases the damage of Unstable Affliction by 8% and Seed of Corruption by 4%. This effect is doubled
+                      while Malevolence is active.
+                    - Destruction: Increases the damage of Chaos Bolt by 8% and Rain of Fire by 4%. This effect is doubled while
+                      Malevolence is active.
+                + New Talent: Devil Fruit – Periodic damage dealt by Wither has a chance to grant Malevolence for 8 seconds.
+                + New Talent: Alzzin's Iniquity – Malevolence grants an additional 4% Haste and when cast increases the stack count of
+                  active Withers by an additional 2 stacks.
+                + Blackened Soul damage increased by 30%.
+                + Affliction
+                    - Seeds of Their Demise now has a chance to grant Shard Instability (was Tormented Crescendo).
+                    - Mark of Xavius now increases Agony damage by 30% (was 20%).
+                    - Wither damage reduced by 35%.
+                + Destruction
+                    - Wither damage increased by 20%.
+            > Soul Harvester
+                + New Talent: Manifested Avarice – Each Succulent Soul consumed has an increasing chance to unleash the Demonic Soul
+                  within you, enabling it to assault your enemies for 9 seconds.
+                + New Talent: Soul Swipe – Strikes nearby enemies with a malevolent claw, dealing Shadow damage to its target and Shadow
+                  damage to other enemies in 10 yards.
+                + New Talent: Shared Vessel – Increases your Mastery by 4%. This effect is doubled while the demonic entity is aiding you
+                  in combat.
+                + New Talent: Eternal Hunger – Increases the duration of Manifested Avarice by 5 seconds and increases the damage of Soul
+                  Swipe by 10%.
+                + Demonic Soul has been updated – A demonic entity now inhabits your soul, allowing you to detect if a Soul Shard has a
+                  Succulent Soul when granted. Consuming a Succulent Soul unleashes your demonic soul, dealing Shadow damage to all
+                  enemies within 10 yards of the target. Damage reduced beyond 8 targets. Demonic Soul damage increased by 100%.
+                + Wicked Reaping damage increased by 150%.
+                + Soul Anathema damage increased by 50%.
+                + Affliction
+                    - Shadow of Death has been redesigned – Your Dark Harvest spell is empowered by the demonic entity within you,
+                      causing it to grant 1 Soul Shard that each contain a Succulent Soul every 1 second while channeled.
+        • Class
+            > New Talent: Curse of Exhaustion – Reduces the target's movement speed by 50% for 12 seconds.
+            > New Talent: Curse of Tongues – Forces the target to speak in Demonic, increasing the casting time of all spells by 30% for
+              1 minute.
+            > New Talent: Blight of Weakness – Call forth a cloud of cloying shadow mist that envelopes the target and all enemies within
+              10 yards, increasing the time between their attacks by 100% and reducing their critical strike chance by 10% for 12
+              seconds.
+            > New Talent: Blight of Tongues – Call forth a cloud of cloying shadow mist that envelopes the target and all enemies within
+              10 yards, increasing their casting time of all spells by 100% for 12 seconds.
+            > New Talent: Improved Mortal Coil – Increases the range of Mortal Coil by 10 yards and the amount it heals by 5%.
+            > New Talent: Infernal Beneficiary – Healing done by Drain Life also heals your primary demon at 400% effectiveness.
+            > New Talent: Foul Mouth – Casting Curse of Exhaustion, Tongues, or Weakness now curses all enemies within 10 yards of the
+              target.
+            > New Talent: Shared Vitality – Healing done by Drain Life also heals your primary demon at 100% effectiveness.
+            > New Talent: Gorefiend's Avarice – Drain Life now channels 50%/100% faster and restores health 50%/100% faster.
+            > New Talent: Frequent Traveler – Reduces the cast time of Demonic Gateway by 0.5 seconds and you can now use Demonic
+              Gateways twice before triggering a cooldown.
+            > New Talent: Pact of the Satyr – Increases your Haste by 3%.
+            > New Talent: Pact of the Annihilan – Increases your Critical Strike chance by 2%.
+            > New Talent: Pact of the Nathrezim – Increases your Leech by 2%.
+            > New Talent: Pact of the Eredar – Increases Intellect by 3%.
+            > New Talent: Empowered Healthstone – Healthstones restore 5% additional health.
+            > New Talent: Empowered Drain Life – Drain Life now heals for 700% of damage dealt and now grants Soul Leech equal to 10% of
+              damage dealt.
+            > New Talent: Fortified Soul – Soul Leech now grants shields up to 15% of your maximum health.
+            > New Talent: Oppressive Darkness – Reduces the cooldown of Shadowfury by 15 seconds and increases its radius by 2 yards.
+              Reduces the cooldown of Howl of Terror by 10 seconds and it now fears 5 additional enemies.
+            > Many talents have changed positions in the talent tree.
+            > New starter builds have been implemented for all 3 specializations.
+            > The following talents have been removed:
+                - Accrued Vitality
+                - Amplify Curse
+                - Curses of Enfeeblement
+                - Darkfury
+                - Demonic Inspiration
+                - Demonic Tactics
+                - Lifeblood
+                - Pact of Exhaustion
+                - Pact of Tongues
+                - Socrethar's Guile
+                - Soul Conduit
+                - Sargerei Technique
+                - Teachings of the Satyr
+                - Wrathful Minion
+        • Affliction
+            > New Talent: Practiced Pestilence – Increases your Mastery by 2%.
+            > New Talent: Shared Agony – Increases Agony damage by 10% and Agony now hits another nearby enemy within 15 yards of the
+              target.
+            > New Talent: Seeds of Destruction – Reduces the cast time of Seed of Corruption by 0.2 seconds/0.4 seconds and increases
+              its damage by 5%/10%.
+            > New Talent: Dark Harvest – Consume the life force of each target afflicted by your damaging periodic effects, dealing
+              Shadowflame damage over 3 seconds. Damage dealt by Dark Harvest heals you for 50% of damage done. 1 minute cooldown.
+            > New Talent: Sudden Onset – Agony damage is increased by 10% and starts at 3 stacks.
+            > New Talent: Fatal Echoes – When Unstable Affliction expires, it has a 10% chance to reapply itself.
+            > New Talent: Shard Instability – Damage dealt by Shadow Bolt/Drain Soul has a 20%/10% chance to make your next Unstable
+              Affliction cost no Soul Shards and cast instantly.
+            > New Talent: Nocturnal Yield – Increases Corruption damage by 10% and Nightfall additionally makes your next Seed of
+              Corruption cost no Soul Shards and cast instantly.
+            > New Talent: Patient Zero – Increases damage dealt by Seed of Corruption to its host by 50%.
+            > New Talent: Sow the Seeds – Seed of Corruption now embeds demon seeds into 2 additional nearby enemies at 50% effectiveness.
+            > New Talent: Malefic Grasp – While Darkglare is active, your Shadow Bolt/Drain Soul becomes Malefic Grasp.
+                - Malefic Grasp: Binds the target in twilight, dealing Shadow damage over 4 seconds. When Malefic Grasp deals damage,
+                  it causes all of your other periodic Affliction damage effects to instantly deal 30% of their normal periodic damage.
+            > New Talent: Potent Soul Shards – Increases damage dealt by Unstable Affliction and Seed of Corruption by 5%.
+            > New Talent: Niskaran Methods – Increases the damage of Agony and Corruption by 10%.
+            > New Talent: Eye Contract – Increases the duration of Summon Darkglare by 5 seconds.
+            > New Talent: Nether Plating – Adorns your Darkglare with armor forged from within Antorus, increasing their armor by 10%.
+              Eye Beam now jumps to up to 4 additional targets and deals 10% increased damage.
+            > Unstable Affliction has been redesigned – Afflicts the target within Shadow damage over 8 seconds. Multiple uses of this
+              ability may overlap. If dispelled, dealing Shadow damage to the dispeller and silences them for 4 seconds. Generates 1
+              Soul Shard if the target dies while afflicted. Unstable Affliction damage increased by 20%.
+            > Xavius' Gambit has been redesigned – Reduces the cast time of Unstable Affliction by 0.15 seconds/0.3 seconds and increases
+              its damage by 5%/10%.
+            > Improved Haunt has been redesigned – Increases the damage of Haunt by 35% and reduces its cast time by 0.3 seconds.
+            > Cull the Weak has been redesigned – Casting Unstable Affliction or Seed of Corruption reduces the cooldown of Dark Harvest
+              by 1.5 seconds.
+            > Death's Embrace has been redesigned – Agony, Corruption, Unstable Affliction, Seed of Corruption, and Shadow Bolt/Drain
+              Soul deal up to 40% increased damage on targets below 35% health. Damage increase is higher against lower health targets.
+            > Creeping Death has been updated – Your Agony, Corruption, and Unstable Affliction deal damage 10%/20% faster.
+            > Withering Bolt has been updated – Shadow Bolt/Drain Soul deal 5%/10% increased damage, up to 15%/30%, per damage over time
+              effect you have active on the target.
+            > Seed of Corruption damage increased by 330% and is reduced beyond 8 targets.
+            > Summon Darkglare has been updated – Summons a Darkglare from the Twisting Nether that increases the damage of Agony,
+              Corruption/Wither, and Unstable Affliction by 20% while active. The Darkglare will serve you for 20 seconds, blasting its
+              target Shadow damage, increased by 10% (was 45%) for every damage over time effect you have active on their current
+              target. Cooldown now 2 minutes (was 1 minute).
+            > Summon Darkglare damage increased by 260%. This change does not affect PvP combat.
+            > Agony moved to the talent tree (was learned at level 10).
+            > Agony damage increased by 82%. This change does not affect PvP combat.
+            > Corruption damage increased by 50%.
+            > Shadow Bolt damage increased by 60%. This change does not affect PvP combat.
+            > Drain Soul damage increased by 60%. This change does not affect PvP combat.
+            > Contagion's icon has been updated.
+            > Several talents have changed positions in the talent tree.
+            > The following talents have been removed:
+                - Dark Virtuosity
+                - Focused Malignancy
+                - Improved Malefic Rapture
+                - Kindled Malice
+                - Malefic Rapture
+                - Malefic Touch
+                - Malevolent Visionary
+                - Malign Omen
+                - Oblivion
+                - Perpetual Unstability
+                - Phantom Singularity
+                - Relinquished
+                - Shadow Embrace
+                - Soul Rot
+                - Tormented Crescendo
+                - Vile Taint
+                - Volatile Agony
+        • Demonology
+            > New Talent: Fel Intellect – Increases your Intellect by 2%.
+            > New Talent: Practiced Rituals – Increases your Mastery by 2%.
+            > New Talent: Unholy Power – Increases the damage of your primary demon by 5%/10%.
+            > New Talent: Demonic Knowledge – Hand of Gul'dan has a 8%/15% chance to generate a charge of Demonic Core.
+            > New Talent: Hellbent Commander – Your demons deal 1% increased damage for each demon you control.
+            > New Talent: Antoran Armaments – Your Demonic Tyrant is equipped with armor forged within Antorus, increasing their armor by
+              10%. While summoned, your Demonic Tyrant now assaults enemies with powerful melee attacks.
+            > New Talent: Summon Doomguard – Summons a Doomguard to assist you in combat for 12 seconds. Consuming a Demonic Core reduces
+              the cooldown of Summon Doomguard by 3 seconds.
+            > New Talent: Fel Armaments – The cooldown of your Felguard's Felstorm is reduced by 10 seconds and damage dealt to your
+              primary demon is reduced by 10%.
+            > New Talent: Infernal Rapidity – When your Wild Imps cast Fel Firebolt, they have a 10% chance to instantly cast another
+              Fel Firebolt at 200% effectiveness.
+            > New Talent: Dominant Hand – Increases damage dealt by Hand of Gul'dan to its main target by 20%.
+            > New Talent: Blighted Maw – The fangs of your Dreadstalkers are coated in corrosive bile, causing Dreadbite to deal
+              additional damage equal to 50% of damage dealt as Plague damage.
+            > New Talent: Spiteful Reconstitution – Increases Demonbolt damage by 10% and consuming a Demonic Core has a chance to summon
+              a Wild Imp.
+            > New Talent: Tyrant's Oblation – Your Demonic Tyrant also empowers you while active, increasing your Haste by 8%.
+            > New Talent: Reign of Tyranny – Your Demonic Tyrant lasts an additional 5 seconds and extends the duration of your
+              Dreadstalkers by 15 seconds when summoned.
+            > New Talent: Grimoire: Imp Lord – Summons an Imp Lord to assist you in combat for 20 seconds and will remove 1 harmful
+              effect from you when summoned. Transforms into Singe Magic while on cooldown.
+            > New Talent: Grimoire: Fel Ravager – Summons a Fel Ravager to assist you in combat for 20 seconds and will interrupt their
+              target when summoned. Turns into Spell Lock while on cooldown.
+            > New Talent: Stabilized Portals – Increases the duration of your Summon Vilefiend, Grimoire: Imp Lord, and Grimoire: Fel
+              Ravager by 3 seconds.
+            > New Talent: Empowered Felstorm – Increases the damage of your Felguard's Felstorm by 20% and its duration by 4 seconds.
+            > New Talent: To Hell and Back – Power Siphon and Implosion summon 1 Imp Gang Boss for every 2 Wild Imps sacrificed. Wild
+              Imps summoned this way gain Unstable Soul.
+                + Unstable Soul: Increases damage done by 100% and Fel Firebolt now jumps to 3 additional targets.
+            > Summon Felguard has moved to the talent tree (was learned automatically when specializing in Demonology).
+            > Felguard damage increased by 60%.
+            > Hand of Gul'dan now replaces Corruption and has moved to the talent tree (was learned automatically when specializing in
+              Demonology).
+            > Hand of Gul'dan has been redesigned – Calls down a demonic meteor full of Wild Imps which burst forth to attack the target.
+              Deals Shadowflame damage on impact to all enemies within 8 yards of the target and summons 3 Wild Imps.
+            > Hand of Gul'dan damage reduced by 10%.
+            > Wild Imp Fel Firebolt damage increased by 35%.
+            > Imp Gang Boss has been redesigned – Hand of Gul'dan now empowers 1 of the Wild Imps it summons, increasing its damage dealt
+              by 100%.
+            > Rune of Shadows has been redesigned – Reduces the cast time of Shadow Bolt by 10%/20% and increases its damage by 15%/30%.
+            > Summon Vilefiend has been redesigned – Call Dreadstalkers also summons a Vilefiend that assists you in combat for 15
+              seconds.
+            > Improved Demonic Tactics has been updated – Increases the critical strike chance of your primary demon by 50% of your
+              critical strike chance.
+            > Doom has been updated – Hand of Gul'dan reduces the duration of Doom by 3 seconds.
+            > Power Siphon has been updated – Instantly sacrifice up to 2 Wild Imps, generating 2 charges of Demonic Core that cause
+              Demonbolt to deal 30% additional damage.
+            > Implosion has been updated – Demonic forces suck 6 of your Wild Imps toward the target, and then cause them to violently
+              explode, dealing Shadowflame damage to all enemies within 8 yards. 30 second cooldown. Implosion damage increased by 500%.
+            > Demonic Calling has been updated – Call Dreadstalkers costs 1 less/2 less Soul Shards and its cast time is reduced by
+              50%/100%.
+            > Demonic Brutality has been updated – Damaging critical strikes dealt by you and your demons deal 230% damage instead of
+              the usual 200%.
+            > Summon Demonic Tyrant has been updated – Summon a Demonic Tyrant that damages your target for 15 seconds. Damage dealt by
+              Demonic Tyrant is increased by 10% for each Wild Imp and Dreadstalker.
+            > Master Summoner has been updated – Increases Mastery by 3% and reduces the cast time of Summon Demonic Tyrant and Summon
+              Felguard by 0.5 seconds.
+            > Doom Bolt Volley has been updated – Sends a volley of malefic bolts at 5 enemies within 40 yards, inflicting Shadow damage
+              to each target.
+            > Infernal Grudge has been updated – Sears the soul of its target with fel fire, dealing Fire damage every 1 second.
+            > Master of Summoner is now a 2-point talent. Increases Mastery by 3%/6% and reduces the cast time of your Call Dreadstalkers
+              and Summon Demonic Tyrant by 15%/30%.
+            > Sacrificed Souls is now a 2-point talent. Shadow Bolt and Demonbolt deals 2%/4% additional damage by demon you have
+              summoned.
+            > Several talents have changed positions in the talent tree.
+            > The following talents have been removed:
+                - Bilescourge Bombers
+                - Blood Invocation
+                - Demonic Strength
+                - Doom Eternal
+                - Dread Calling
+                - Fel Invocation
+                - Fel Sunder
+                - Fiendish Oblation
+                - Foul Mouth
+                - Grimoire: Felguard
+                - Immutable Hatred
+                - Impending Doom
+                - Shadow Invocation
+                - Shadowtouched
+                - Soul Strike
+                - The Expendables
+                - The Houndmaster's Gambit
+                - Umbral Blaze
+                - Wicked Maw
+        • Destruction
+            > New Talent: Xorothian Research – Increases Intellect by 2%.
+            > New Talent: Practiced Chaos – Increases Mastery by 2%.
+            > New Talent: Improved Havoc – Increases the duration of Havoc by 5 seconds and increases the damage Havoc victims are dealt
+              by an additional 10%.
+            > New Talent: Lake of Fire – Cataclysm now leaves behind a lake of fire that deals Fire damage to enemies within it over 8
+              seconds. Immolate/Wither deals 20% increased damage to enemies within the lake of fire.
+            > New Talent: Chaotic Inferno – Increases Chaos Bolt damage by 5% and Chaos Bolt now has a 25% chance to make your next
+              Incinerate instant.
+            > New Talent: Destructive Rapidity – Increases how quickly Rain of Fire deals damage by 25%/50% and how quickly your
+              Infernal's Immolation deals damage by 10%/20%.
+            > New Talent: Alythess's Ire – Rain of Fire has a 20% chance to reduce the cost of your next Rain of Fire within 8 seconds by
+              100%.
+            > New Talent: Inferno – Reduces the cooldown of Summon Infernal by 30 seconds and increases your Mastery by 3%.
+            > New Talent: Raging Demonfire – Channel Demonfire fires an additional 2 bolts. Each bolt increases the remaining duration of
+              Immolate on all targets hit by 0.5 seconds.
+            > New Talent: Devastation – Increases the critical strike chance of your Destruction spells by 3%/6%.
+            > Roaring Blaze has been redesigned – Increases Conflagrate damage by 10%. Conflagrate now erupts the target's Immolate,
+              spreading it up to 3 nearby enemies.
+            > Shadowburn has been redesigned – Blasts a target for Shadowflame damage. Only usable on enemies that have less than 20%
+              health. Restores 1 Soul Shard if the target dies within 5 seconds. Costs 1 Soul Shard. No cooldown. Instant.
+            > Shadowburn damage increased by 100%.
+            > Fiendish Cruelty has been redesigned – Critical strikes dealt by Chaos Bolt, Conflagrate, or Incinerate have a 10% chance
+              to make your next cast of Shadowburn within 30 seconds cost no Soul Shards and usable on any target regardless of health.
+            > Avatar of Destruction has been redesigned – Casting Soul Fire summons an Overfiend. Opening a Dimensional Rift has a chance
+              to summon an Overfiend instead.
+                + Summon Overfiend: Generates 1 Soul Shard Fragment every 1 second and casts Chaos Bolt at 60% effectiveness at its
+                  summoner's target. Lasts 8 seconds.
+            > Dimensional Rift is now passive and has been redesigned – Chaos Bolt and Shadowburn have a 10% chance to rip open a hole
+              in space and time, opening a random portal that damages your target.
+            > Ruin has been updated – Increases the critical strike damage of your Destruction spells by 15%/30%.
+            > Chaos Bolt has been added to the Destruction talent tree (was learned at level 10).
+            > Chaos Bolt damage reduced by 18%. This change does not affect PvP combat.
+            > Conflagrate damage reduced by 22%. This change does not affect PvP combat.
+            > Incinerate damage reduced by 10%. This change does not affect PvP combat.
+            > Overfiend damage increased by 30%.
+            > Soul Fire damage increased by 400% and cast time is now 3 seconds (was 4 seconds).
+            > Backlash is now a 2-point talent that increases your critical strike chance by 2%/4%. Physical attacks against you have a
+              20%/40% chance to make your next Incinerate Instant cast. This effect can only occur once every 6 seconds.
+            > Ashen Remains is now a 2-point talent that causes Chaos Bolt, Shadowburn, and Incinerate to deal 3%/6% increased damage
+              to targets afflicted by Immolate/Wither.
+            > Many talents have changed positions in the talent tree.
+            > The following talents have been removed:
+                - Blistering Atrophy
+                - Burn to Ashes
+                - Decimation
+                - Demonfire Mastery
+                - Dimension Ripper
+                - Indiscriminate Flames
+                - Master Ritualist
+                - Power Overwhelming
+                - Pyrogenics
+                - Ritual of Ruin
+                - Rolling Havoc
     ]],
     warriorChangesPatch = [[
+        WARRIOR
+
+        • Hero Talents
+            > Colossus
+                + New Talent: Decimator – Demolish's final strike applies Deep Wounds to all targets at 100% effectiveness.
+                + New Talent: Cut to the Bone
+                    - Arms: Mortal Strike critical strikes increase your Rend and Deep Wounds damage by 25% for 8 seconds.
+                    - Protection: Shield Slam critical strikes increase your Rend and Deep Wounds damage by 25% for 8 seconds.
+                + New Talent: Celeritous Conclusion
+                    - Arms: Demolish's final strike grants 10% Haste for 10 seconds and increases the critical strike chance of your next
+                      Mortal Strike by 100%.
+                    - Protection: Demolish's final strike grants 10% Haste for 10 seconds and increases the critical strike chance of
+                      your next Shield Slam by 100%.
+                + Demolish now makes the Warrior immune to movement forces during the channel.
+                + Arms
+                    - Practiced Strikes now affects Slam.
+                    - Practiced Strikes' Mortal Strike, Cleave, and Slam damage increased by 15% (was 20%).
+                    - Tide of Battle's Colossal Might increases damage of Overpower by 3% per stack (was 5%).
+                + Protection
+                    - Tide of Battle's Colossal Might increases damage of Revenge by 3% per stack (was 7%).
+                    - One Against Many no longer affects Whirlwind.
+            > Mountain Thane
+                + New Talent: Storm Surge – Avatar increases the damage of Thunder Clap by 50% and reduces its cooldown by 50%.
+                + New Talent: Conductivity – Lightning Strike damage increased by 10% and critical strike damage increased by 10%.
+                + New Talent: Capacitance –During Avatar Thunder Blast extends Avatar's duration by 2 seconds.
+                + Thunder Blast damage increased by 150%.
+                + Fury
+                    - Strength of the Mountain's Bloodthirst and Rampage damage increased by 15% (was 25%).
+            > Slayer
+                + New Talent: Violent Euphoria – Bladestorm puts you into a battle trance, granting you 15% Haste for 8 seconds after you
+                  stop Bladestorming.
+                + New Talent: Deadly Focus – Executioner's duration is increased by 6 seconds.
+                + New Talent: Unhinged
+                    - Arms: Every 2 strikes of Bladestorm, you automatically cast a Mortal Strike at your target or random nearby enemy,
+                      dealing 100% of normal damage.
+                    - Fury: Every 2 strikes of Bladestorm, you automatically cast a Bloodthirst at your target or random nearby enemy,
+                      dealing 100% of normal damage.
+                + Slayer's Dominance has been updated – Your attacks have a 15% chance to trigger a Slayer's Strike. Slayer's Strike now
+                  grants you a stack of Executioner, increasing your Execute damage by 3% for 12 seconds. Multiple stacks of Executioner
+                  may overlap.
+                + Show No Mercy has been updated – Executioner also increases your Execute critical strike chance and critical strike
+                  damage by 3% per stack.
+                + Unrelenting Onslaught has been updated – Using Sudden Death causes you to both reduce the cooldown of Bladestorm by 5
+                  seconds and apply 1 stack of Overwhelmed to your primary target for each stack of Executioner you have.
+                + Opportunist's effect now stacks up to 2 times.
+                + Overwhelming Blades' Overwhelmed debuff now stacks 5 times (was 10).
+                + Slayer's Malice now affects Execute in addition to Overpower and Raging Blow, but the damage increase is reduced to
+                  20% (was 30%).
+                + Slayer's Strike damage increased by 100%.
+                + Reap the Storm damage increased by 100% and its chance to trigger increased to 25% (was 20%).
+                + Arms
+                    - Opportunist's damage and critical strike damage of next Overpower reduced to 10% (was 25%).
+                + Fury
+                    - Opportunist's damage and critical strike damage of next Raging Blow reduced to 10% (was 25%).
+        • Class
+            > New Talent: Resonant Voice – The duration of your shouts is increased by 20%.
+            > New Talent: Retaliation – When you take any damage from an enemy within melee range, you have a chance to strike that
+              enemy for Physical damage.
+            > New Talent: Stance Mastery – Your stances have additional effects.
+                - Battle Stance: Increases the critical strike damage of your abilities by 3%.
+                - Berserker Stance: Increases your auto-attack speed by 3%.
+                - Defensive Stance: When an attack deals 20% or more of your maximum health in damage, that damage is reduced by 15%.
+            > New Talent: Battlefield Commander – Your Shout abilities have additional effects.
+                - Battle Shout: Grants you an additional 3% attack power.
+                - Rallying Cry: Grants an additional 2% health and duration increased by 3 seconds.
+                - Piercing Howl: Radius increased by 100%.
+                - Berserker Shout: Radius increased by 100%.
+                - Intimidating Shout: Cooldown reduced by 15 seconds.
+            > New Talent: Anger Management – Every 20 Rage you spend reduces the remaining cooldown on Avatar, Colossus Smash,
+              Recklessness, and Shield Wall by 1 second.
+            > New Talent: Field Dressing – Healing received increased by 3% and all self-healing increased by an additional 10%.
+            > New Talent: Fearless – Cooldown of Berserker Rage is reduced by 50% and Berserker Rage removes all movement
+              speed-impairing effects.
+            > New Talent: Javelineer – Range of your thrown abilities is increased by 5 yards. Damage dealt by Champion's Spear,
+              Shattering Throw, and Wrecking Throw increased by 20%. Shattering Throw and Wrecking Throw silence non-players for 3
+              seconds.
+            > New Arms and Fury Talent: Interpose – Run at high speed toward a target location near your allies, taking 30% of all damage
+              dealt to allies within 3 yards for 8 seconds or until you take at least 20% of your max health in damage from this effect.
+            > New Arms and Fury Talent: Rend – Lash out with your weapon, striking all targets within 8 yards for Physical damage and
+              wounding them for additional Bleed damage over 15 seconds.
+            > Champion's Spear has been redesigned – Throw a spear at the target location, chaining all enemies in the area to the
+              spear's location and dealing Physical damage instantly and additional Physical damage over 6 seconds. While the spear is
+              active, activating this ability will cause you to leap to the spear, slamming down to deal Physical damage to all targets.
+              All damage dealt reduced beyond 5 targets. Generates 10 Rage.
+            > Intimidating Shout now reduces the movement speed of all targets by 70% and causes all enemies other than your primary
+              target in range to flee. Was previously 8 targets.
+            > Rallying Cry has been updated – Health granted is increased by 50% when not in a raid.
+            > Honed Reflexes now reduces cooldowns by 10% (was 5%) and has an additional effect – Successfully interrupting an enemy
+              increases the damage you deal to them by 5% for 10 seconds.
+            > Piercing Howl now also spurs all allies within 12 yards, increasing their movement speed by 30% for 4 seconds.
+            > Barbaric Training now increases damage dealt by 10% and critical strike damage by 5% for Slam, Whirlwind, Thunder Clap,
+              Raging Blow, and Revenge.
+            > Shattering Throw and Wrecking Throw range reduced to 25 yards (was 30 yards).
+            > Thunder Clap damage increased by 150% and applies Rend to all targets if talented.
+            > Shield Slam damage increased by 140%.
+            > Second Wind healing while you are below 35% health increased by 100%.
+            > Crushing Force is now a 1-point talent.
+            > Many talents have changed positions in the talent tree.
+            > The following talents have been removed:
+                - Avatar (moved to each specialization's talent tree)
+                - Berserker's Torment
+                - Blademaster's Torment
+                - Cacophonous Roar
+                - Challenger's Might
+                - Concussive Blows
+                - Immovable Object
+                - Menace
+                - Piercing Challenge
+                - Seismic Reverberation
+                - Thunderous Roar
+                - Thunderous Words
+                - Titan's Torment
+                - Unstoppable Force
+                - Uproar
+                - Warlord's Torment
+        • Arms
+            > New Talent: Brute Force – Slam has a 10% increased chance to trigger Tactician.
+            > New Talent: Efficiency – Slam's Rage cost is reduced by 25%.
+            > New Talent: Just Warming Up – Colossus Smash generates 15 Rage.
+            > New Talent: Broad Strokes – Colossus Smash grants you Sweeping Strikes.
+            > New Talent: Powerful Momentum – Damage dealt to nearby targets by Sweeping Strikes is increased by 25%.
+            > New Talent: Press the Advantage – Colossus Smash causes your next 3 Mortal Strikes to be guaranteed to trigger Tactician.
+            > New Talent: Crushing Combo – Colossus Smash causes your next 3 Cleaves within 20 seconds to trigger no cooldown.
+            > New Talent: Master Tactician – Tactician has a 10% increased chance to trigger.
+            > New Talent: Deep Wounds – Execute inflicts Deep Wounds on the target, causing high damage over 6 seconds.
+            > New Talent: Mortal Wounds – You inflict Deep Wounds on targets that you critically strike with Mortal Strike or Cleave.
+            > New Talent: Fatality – Mortal Strike has a high chance to apply a Fatal Mark to your target, stacking up to 5 times. Your
+              next Execute on a target with a Fatal Mark causes the Fatal Mark to deal additional Physical damage per stack.
+            > New Talent: Mass Execution – Cleave and Whirlwind deal 25% increased damage to targets below 35% health.
+            > New Talent: Overpowering Finish – Overpower deals 25% increased damage to targets below 35% health.
+            > Avatar moved to Arms specialization tree and has been updated – Transform into a colossus, increasing all damage you deal
+              by 20% and reducing damage you take from area of effect attacks by 5% for 20 seconds.
+            > Mastery: Master of Arms has been redesigned – While wielding a two-handed weapon, you deal Mastery% additional damage.
+            > Sweeping Strikes has been redesigned – Your next 12 damaging single-target abilities within 30 seconds hit 1 additional
+              target within 8 yards for 75% damage. 30 second cooldown.
+            > Improved Sweeping Strikes has been redesigned – Sweeping Strikes affects 6 additional damaging single-target abilities.
+            > Collateral Damage has been redesigned – When an ability used during Sweeping Strikes damages a second target, your next
+              Cleave or Whirlwind deals 25% increased damage, stacking up to 3 times.
+            > Tactician has been redesigned – You have a 30% chance to gain a charge of Overpower when you use an attack that has a Rage
+              cost. This effect applies even if that ability's Rage cost has been reduced to zero.
+            > Martial Prowess has been updated– Overpower and Slam increase the damage of your next Mortal Strike by 5%, stacking up to
+              3 times.
+            > Ravager has been updated – Additional effect: Cleave and Whirlwind deal 50% increased damage while Ravager is active.
+              Ravager is now thrown at your target.
+            > Battlelord has been updated – Overpower has a 35% chance to reset the cooldown of Mortal Strike.
+            > Colossus Smash has been updated – Smash the ground and shatter the armor of all enemies within 10 yards, dealing Physical
+              damage and increasing damage you deal to them by 30% for 10 seconds. Deals reduced damage beyond 8 targets.
+            > Fueled By Violence now heals for Bleed damage from Rend and Deep Wounds.
+            > Fervor of Battle now requires 3 targets to trigger Slam and Slam's damage is increased by 50%.
+            > Sharpened Blades has been updated – Now a 2-point talent. Mortal Strike, Cleave, and Execute damage increased by 5% and
+              critical strike damage increased by 5%.
+            > Ignore Pain has been updated – Fight through the pain, ignoring 50% of damage taken for 12 seconds or until a certain
+              amount of damage is taken. 20 second cooldown. Rage cost removed and amount ignored per use increased by 100%. Triggers a
+              global cooldown.
+            > Strength of Arms is now a 2-point talent. Each point grants 5% damage, critical strike chance, and critical strike damage
+              to Overpower and Slam.
+            > Executioner's Precision now buffs the Warrior's next Mortal Strike, rather than applying a debuff to the target.
+            > Bloodletting now increases the duration of Rend and Deep Wounds Bleeds by 33%, and Mortal Strike applies Rend if the target
+              is below 35% if Rend is talented.
+            > Critical Thinking now increases Execute critical strike chance by 5% and refunds 10% of Rage spent on Execute per point.
+            > Auto-attack damage increased by 150%.
+            > Thunder Clap damage decreased by 20%.
+            > Whirlwind damage increased by 10%.
+            > Dreadnaught damage increased by 180%.
+            > Bloodborne now increases critical strike damage of bleed effects in addition to normal damage.
+            > Many talents have changed positions in the talent tree.
+            > The following talents have been removed:
+                - Anger Management (moved to the class talent tree)
+                - Blunt Instruments
+                - Exhilarating Blows
+                - Finishing Blows
+                - In for the Kill
+                - Juggernaut
+                - Merciless Bonegrinder
+                - Rend (moved to the class talent tree)
+                - Spiteful Serenity
+                - Skullsplitter
+                - Storm of Swords
+                - Storm Wall
+                - Test of Might
+                - Warbreaker (Warbreaker's effects added to Colossus Smash)
+        • Fury
+            > New Talent: Deep Wounds – Execute inflicts Deep Wounds on the target, causing high damage over 6 seconds.
+            > New Talent: Scent of Blood – Rampage increases the damage of your next Bloodthirst by 10%, stacking up to 2 times.
+            > New Talent: Ragedrinker – Bloodthirst critical strikes restore 3% additional health and increase the damage of Raging Blow
+              by 10% for 4 seconds.
+            > New Talent: Executioner's Wrath – Execute generates 5 additional Rage and increases the damage of Rampage by 10% for 4
+              seconds.
+            > New Talent: Surge of Adrenaline – When Raging Blow resets its own cooldown, your auto-attack damage and speed is increased
+              by 30% for 6 seconds.
+            > New Talent: Kill or Be Killed – When you would sustain fatal damage, you fly into an unstoppable rage, becoming unkillable
+              and immune to movement-impairing effects for 8 seconds as you seek revenge on your would-be killer. If you kill your
+              killer in this time, you emerge triumphant from your rage with at least 20% of your max health intact. If you are not
+              victorious, you die. This effect can only occur every 5 minutes.
+            > New Passive Ability: Titan's Grip: Single-Minded Fury – You can transmogrify your two-handed weapons to use one-handed
+              weapon appearances.
+            > Avatar has moved to the Fury talent tree and has been updated – Transform into a colossus, increasing all damage you deal
+              by 20% and increasing your movement speed by 5% for 20 seconds.
+            > Meat Cleaver has been redesigned – Whirlwind deals 50% additional damage when it hits 3 or more targets.
+            > Bloodborne has been redesigned – Targets struck by Bloodthirst take 20% additional damage from your Bleed effects for 12
+              seconds.
+            > Deft Experience has been redesigned – Bloodthirst's critical strike chance is increased by 5%/10% and if you are Enraged,
+              Bloodthirst extends your Enrage by 0.5 seconds/1 second. This extension is doubled if Bloodthirst critically strikes your
+              primary target.
+            > Frenzy has been redesigned – Rampage increases your Haste by 2% for 12 seconds. Multiple instances of this effect may
+              overlap.
+            > Critical Thinking has been redesigned – Raging Blow's critical strike chance increased by 5%/10% and critical strike
+              damage increased by 5%/10%.
+            > Improved Bloodthirst renamed to Spite and has been updated – Bloodthirst and Raging Blow (was only Bloodthirst) damage
+              and critical strike damage increased by 2.5%/5% (was 5%/10%).
+            > Cruelty has been updated – While Enraged, Bloodthirst and Raging Blow (was only Raging Blow), deal 5%/10% additional
+              damage (was 10%/20%).
+            > Powerful Enrage has been updated – Enrage increases your Mastery by 15% and your Leech by 3%.
+            > Bloodcraze has been updated – Raging Blow increases the damage of your next Bloodthirst by 5%, stacking up to 5 times.
+            > Improved Whirlwind now causes your next 4 single-target attacks (was 2) to strike 4 additional targets.
+            > Rampage now replaces Slam. Rampage damage increased by 10%.
+            > Auto-attack damage increased by 200%.
+            > Thunder Clap damage decreased by 60%.
+            > Whirlwind damage increased by 20%.
+            > Bloodthirst damage increased by 20%.
+            > Bladestorm now generates 5 Rage per strike (was 10).
+            > Recklessness increases all Rage generated by 50% (was 100%).
+            > Odyn's Fury now Enrages you and generates 20 Rage (was 15).
+            > Odyn's Fury's bleed damage increased by 140% and now deals reduced damage above 8 targets (was 5).
+            > Rampaging Ruin's damage dealt increased by 50%, but it now deals reduced damage beyond 5 targets (was 8 targets).
+            > Fixed an issue that was causing Odyn's Fury bleed damage to be incorrectly reduced by armor.
+            > Many talents have changed positions in the talent tree.
+            > The following talents have been removed:
+                - Ashen Juggernaut
+                - Dancing Blade
+                - Depths of Insanity
+                - Onslaught
+                - Ravager
+                - Single-Minded Fury
+                - Slaughtering Strikes
+                - Storm of Steel
+                - Tenderize
+                - Titanic Rage
+                - Unbridled Ferocity
+                - Unhinged
+        • Protection
+            > New Talent: Devastating Focus – You focus on the target struck by your Devastator, dealing 30% additional Revenge damage to
+              them. Only one target can have your focus at a time.
+            > Avatar moved to the Protection specialization tree and has been updated – Transform into a colossus, increasing all damage
+              you deal by 20% and reducing all damage you take by 3% for 20 seconds.
+            > Deep Wounds is now a talent (was learned at level 10) and has been redesigned – Execute inflicts Deep Wounds on the
+              target, causing high damage over 6 seconds.
+            > Last Stand has been redesigned – Activating Shield Wall increases your maximum health by 30% for 8 seconds and instantly
+              heals you for that amount.
+            > Ravager has been updated – Additional effect: Revenge and Thunder Clap deal 50% increased damage while Ravager is active.
+              Ravager is now thrown at your target.
+            > Auto-attack damage increased by 100%.
+            > Devastator damage increased by 100%.
+            > Devastate damage increased by 100%.
+            > Shield Charge damage increased by 100%.
+            > Tough as Nails damage increased by 100%.
+            > Revenge damage increased by 200%.
+            > Violent Outburst now only buffs your next Shield Slam (was Shield Slam and Thunder Clap).
+            > Bloodsurge has a chance to generate 5 Rage every time Rend deals damage (was Deep Wounds).
+            > Fueled By Violence now heals for Bleed damage from Rend and Deep Wounds.
+            > Several talents has changed positions in the talent tree.
+            > The following talents have been removed:
+                - Anger Management (moved to the class talent tree)
+                - Bolster
+                - Red Right Hand
+                - Rend (moved to the class talent tree)
+                - Sweeping Revenge
+                - Unnerving Focus
     ]],
     addonChanges = [[
+        Stay tuned for Midnight expansion updates!
     ]],
 }
