@@ -1999,7 +1999,7 @@ PatchNotesDelivered_Notes_1127P = {
                 > Flame On has been updated – Now grants Fire Blast 1 additional charge and reduces its cooldown by 2 seconds.
                 > Critical Mass has been updated – Now grants 4%/8% increased chance to deal a critical strike. You gain 10%/20% more 
                   critical strike stat from all sources.
-                > Molten Fury has been updated – Now grants 15% increased damage on enemies below 30% health (was 7%).@R
+                > Molten Fury has been updated – Now grants 15% increased damage on enemies below 30% health (was 7%).
                 > Flame Accelerant has been updated – Now reduces Pyroblast and Flamestrike cast time by 20%.
                 > Inflame has been updated – Ignite bonus increased to 25% (was 10%).
                 > Kindling has been redesigned – Combustion's cooldown is reduced by 60 seconds.
