@@ -65,20 +65,7 @@ function PatchNotesDelivered:OnInitialize()
     -- Register minimap button
     LDBIcon:Register("PatchNotesDelivered", dataBroker, self.db.profile.minimap)
     -- Register addon for event notifications
-    self:RegisterEvent("PLAYER_LOGIN")
     self:RegisterEvent("PLAYER_ENTERING_WORLD")
-end
-
---- Description: PLAYER_LOGIN event handler
---- @param:
---- @return:
-function PatchNotesDelivered:PLAYER_LOGIN()
-    if PATCH_NOTES == nil then
-        PATCH_NOTES = BuildPatchNotes()
-    end
-    if self:ShouldShowPatchNotes() then
-        self:ShowPatchNotesPopup()
-    end
 end
 
 --- Description: Player reload event handler
