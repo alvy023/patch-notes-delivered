@@ -1,4 +1,4 @@
-## Interface: 110207
+## Interface: 120000, 110207, 110205, 110200
 ## Title: Patch Notes Delivered
 ## Version: 1.1.0
 ## Notes: Displays patch notes on login and notifies of new versions.
@@ -28,7 +28,7 @@ notes/patch-11.1.7.lua
 notes/patch-11.2.0.lua
 notes/patch-11.2.5.lua
 notes/patch-11.2.7.lua
-notes/patch-11.2.7-pre.lua
+notes/patch-12.0.0-pre.lua
 
 # Core Addon Files
 PatchNotesText.lua
