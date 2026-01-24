@@ -8,10 +8,79 @@
 --- Export global notes variable
 --- Max note length [140] ------------------------------------------------------------------------------------------------------------------
 PatchNotesDelivered_Notes_1200P = {
-    version = "12.0.0-Pre",
-    build = "65299",
-    hotfix = 0,
+    version = "12.0.0",
+    build = "65560",
+    hotfix = 1,
     gameChangesHotfixes = [[
+        January 22, 2026
+
+    Characters
+        • The XP buff from the Warband Mentors: The War Within set of achievements should now be applying correctly on characters below
+          level 80.
+        • Corrected an issue that incorrectly enabled legacy content scaling for characters who were leveling up in Dragonflight.
+
+    Classes
+        • Death Knight
+            > Unholy
+                • Developers’ notes: We’re looking into the throughput imbalance for Unholy Death Knight in the pre-expansion update. These
+                  changes will not impact 12.0.1, as Unholy received substantial updates between 12.0.0 and 12.0.1.
+                + Rider of the Apocalypse Horsemen damage reduced by 50%.
+                + Trollbane's Icy Fury damage increased by 100%.
+                + Lesser Ghoul Sweeping Claw main target damage reduced by 50%.
+                + Lesser Ghoul melee damage reduced by 50%.
+                + Pet Ghoul Sweeping Claw main target damage reduced by 50%.
+                + Pet Ghoul melee damage reduced by 50%.
+                + Death Coil damage reduced by 30%.
+                + Scourge Strike damage reduced by 30%.
+                + Infected Claws damage reduced by 50%.
+                + Putrefy main target damage reduced by 30%.
+                + Morbidity now increases the damage taken by 1% per disease on target (was 2%).
+                + Raise Abomination Disease Cloud effect reduced to 10% (was 20%).
+                + Epidemic damage increased by 25%.
+                + Clawing Shadows chain damage penalty reduced to 15% (was 25%).
+        • Mage
+            > Frostbolt is now located in the Frost Mage section of the Spellbook for easier access.
+
+    Delves
+        • Fixed a bug causing Brann’s experience bar to also mention Valeera.
+
+    Dungeons and Raids
+        • Fixed a bug preventing some encounters from progressing through their stages correctly (e.g. the Neltharion encounter in
+          Aberrus, the Shadowed Crucible).
+        • Resolved an issue causing some creatures in Nerub'ar Palace and Liberation of Undermine to have very low health.
+
+    Housing
+        • Elegant Elven Barrel can now be added as decor.
+        • Lightly Broken Fences found around the neighborhood can now be repaired.
+
+    Mage Tower
+        • Developers’ notes: With the Midnight pre-expansion update now live, we’re adjusting enemy health in several Mage Tower
+          challenges to bring them back toward their intended pacing and difficulty.
+        > Closing the Eye
+            + Enemy health increased by 20%.
+        > An Impossible Foe
+            + Enemy health increased by 20%.
+        > The God-Queen’s Fury
+            + Enemy health increased by 15%.
+        > Feltotem’s Fall
+            + Enemy health increased by 20% for all specializations except Discipline Priest, for which there is no adjustment.
+        > Thwarting the Twins
+            + Enemy health increased by 20%.
+        > The Highlord’s Return
+            + Enemy health increased by 15%.
+
+    Player versus Player
+        • Adjusted the effectiveness of Training Grounds opponents.
+
+    Quests
+        • The Campaign header should now appear for War Within campaigns.
+        • Resolved issues with the quest "Distilled Darkness" causing the K'areshi Fragments to be uninteractible for some players.
+        • Developers’ notes: If any issues are being encountered, please submit a bug report of what happened prior to the quest failing
+          and identify which fragment is causing the issues (Northern, Southern, or both).
+
+    Transmogrification
+        • Addressed an issue causing Midnight Special Edition transmog sets to not be usable at lower levels.
+
         Working as intended?
     ]],
     gameChangesPatch = [[
