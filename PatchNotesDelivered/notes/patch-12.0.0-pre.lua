@@ -4279,6 +4279,8 @@ PatchNotesDelivered_Notes_1200P = {
                 - Unnerving Focus
     ]],
     addonChanges = [[
-        Stay tuned for Midnight expansion updates!
+        January 24, 2026
+            
+            • Fixed an issue with AceGUI call that caused labels to not register properly.
     ]],
 }
