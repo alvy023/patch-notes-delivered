@@ -8,10 +8,14 @@
 --- Export global notes variable
 --- Max note length [140] ------------------------------------------------------------------------------------------------------------------
 PatchNotesDelivered_Notes_1200P = {
-    version = "12.0.0-Pre",
+    version = "12.0.0",
     build = "65560",
-    hotfix = 1,
+    hotfix = 2,
     gameChangesHotfixes = [[
+        January 23, 2026
+
+            There are no new hotfixes for The War Within that are newer than January 22, 2026.
+
         January 22, 2026
 
             Characters
