@@ -10,8 +10,60 @@
 PatchNotesDelivered_Notes_1200P = {
     version = "12.0.0-Pre",
     build = "65560",
-    hotfix = 1,
+    hotfix = 2,
     gameChangesHotfixes = [[
+        January 26, 2026
+
+          Classes
+              • Demon Hunter
+                  > Devourer
+                      + An issue causing the Soul Fragments of Devourer Demon Hunter to not function on the Dawnbreaker has been resolved.
+              • Druid
+                  > Restoration
+                      + Grove Guardians no longer cost mana when they are summoned.
+              • Monk
+                  > Mistweaver
+                      + Thunder Focus Tea's cooldown reduced to 30 seconds (was 45 seconds).
+                      + Mana Tea effectiveness increased by 20%.
+              • Shaman
+                  > Enhancement
+                      + An issue causing Maelstrom Weapon to require level 12 has been resolved.
+                  > Restoration
+                      + Chain Heal healing increased by 25%.
+                      + Healing Rain healing increased by 82%.
+
+          Dungeons and Raids
+              • The random Heroic Dragonflight dungeon queue should now require the correct average item-level.
+              • Temple of Sethraliss
+                  > Fixed an issue that caused the Avatar of Sethraliss encounter to become soft-locked.
+              • Vault of the Incarnates
+                  > Fixed several issues with the Raszageth encounter not cleaning up properly when a player is defeated on Story Mode.
+          
+          Horrific Visions
+              • Item-level rewards will no longer be displayed on the Horrific Vision event widget.
+              • Rewards increase based on how far you get in a Horrific Vision run at the new squished item levels appropriate for 
+                Season 3.
+
+          Housing
+              • Daily rotating Endeavor quests no longer reset on logout, and are now Weekly quests, and are now all up at the same time.
+              • The Grand Collector now has an increased tap limit, allowing many people to get credit for the Endeavor task "Blade of the 
+                Skyguard" at once.
+              • Some decor that was accidentally hidden in the catalog has been made accessible:
+                  > Murloc Driftwood Hut
+                  > Scroll of the Adherent
+                  > "Rising Glory of Rukhmar" Statue
+                  > Shellscale Standard
+                  > High Arakkoan Alchemist's Shelf
+                  > High Arakkoan Shelf
+
+          Items
+              • The item-level of gear provided by the Level 80 Boost has been increased to 102 (was iLvl 80).
+          
+          Trading Post
+              • A new Trading Post activity has been added to January: "Legion Remix: Mix Up". The 
+                timelines have bent once more, granting the efforts of some to all. Players who log-in during the month of January 
+                will earn 650 points for their Traveler's Log.
+
         January 22, 2026
 
             Characters
