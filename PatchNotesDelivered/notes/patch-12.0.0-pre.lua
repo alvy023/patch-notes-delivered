@@ -11,6 +11,7 @@ PatchNotesDelivered_Notes_1200P = {
     version = "12.0.0",
     build = "65560",
     hotfix = 2,
+    hotfix = 2,
     gameChangesHotfixes = [[
         January 26, 2026
 
@@ -4331,6 +4332,9 @@ PatchNotesDelivered_Notes_1200P = {
                 - Unnerving Focus
     ]],
     addonChanges = [[
+        January 24, 2026
+            
+            • Fixed an issue with AceGUI call that caused labels to not register properly.
         January 24, 2026
             
             • Fixed an issue with AceGUI call that caused labels to not register properly.
