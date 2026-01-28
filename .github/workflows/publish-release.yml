@@ -113,7 +113,7 @@ jobs:
           ## Remove prefix and suffix
           RELEASE_LABEL=$(echo "$RELEASE_FILENAME" | sed -e 's/^PatchNotesDelivered-//' -e 's/\.zip$//')
           CHANGELOG=$(cat RELEASE_NOTES.md)
-          SUPPORTED_RETAIL_PATCH=$(grep -oP 'Patch -\[ \*\*\K[0-9]+\.[0-9]+\.[0-9]+(?=\*\* \]-)' RELEASE_NOTES.md | head -n1)
+          SUPPORTED_RETAIL_PATCH=$(grep -oP 'version = \"\K[0-9.]+' PatchNotesDelivered/notes/${{ env.NOTES_FILE }} | head -n1)
           
           echo "RELEASE_LABEL: $RELEASE_LABEL"
           echo "SUPPORTED_RETAIL_PATCH: $SUPPORTED_RETAIL_PATCH"
