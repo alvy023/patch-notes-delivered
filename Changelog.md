@@ -14,3 +14,5 @@ and this project adheres to a specific versioning schema: `A.B.C` where:
 - Updated agent workflow
 - Added `Changelog.md` to track project history.
 
+[1.12.2]: https://github.com/alvy023/patch-notes-delivered/releases/tag/v1.12.2
+

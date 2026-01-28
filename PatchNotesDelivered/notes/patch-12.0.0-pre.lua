@@ -8,7 +8,7 @@
 --- Export global notes variable
 --- Max note length [140] ------------------------------------------------------------------------------------------------------------------
 PatchNotesDelivered_Notes_1200P = {
-    version = "12.0.0-Pre",
+    version = "12.0.0",
     build = "65560",
     hotfix = 2,
     gameChangesHotfixes = [[
