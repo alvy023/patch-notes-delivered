@@ -5,6 +5,10 @@ import json
 import datetime
 from google import genai
 from google.genai import types
+import requests
+
+PRODUCT = "wow"
+TOC_PATH = "PatchNotesDelivered/PatchNotesDelivered.toc"
 
 def extract_current_notes(notes_file_path):
     """
@@ -241,7 +245,18 @@ def generate_notes_from_text(scraped_text, existing_notes):
             print(f"Response text: {response.text}")
         sys.exit(1)
 
-def update_lua_file(notes_file_path, combined_notes):
+def fetch_latest_version(product):
+    url = "https://wago.tools/api/builds/"+product+"/latest"
+    try:
+        response = requests.get(url, timeout=10)
+        response.raise_for_status()
+        data = response.json()
+        return data["version"]
+    except Exception as e:
+        print(f"❌ Failed to fetch version from Wago.Tools: {e}")
+        sys.exit(1)
+
+def update_lua_file(notes_file_path, combined_notes, new_version_build):
     """
     Replaces the content of 'gameChangesHotfixes' and 'gameChangesPatch'
     in the Lua file with the new combined notes.
@@ -249,6 +264,16 @@ def update_lua_file(notes_file_path, combined_notes):
     try:
         with open(notes_file_path, 'r', encoding='utf-8') as f:
             content = f.read()
+
+        # Update game version
+        new_version = ".".join(new_version_build.split(".")[:-1])
+        new_build = new_version_build.split(".")[-1]
+        content = re.sub(r'version\s*=\s*"[^"]+"', f'version = "{new_version}"', content, 1)
+        content = re.sub(r'build\s*=\s*"\d+"', f'build = "{new_build}"', content, 1)
+        hotfix_match = re.search(r'hotfix\s*=\s*(\d+)', content)
+        if hotfix_match:
+            new_hotfix = int(hotfix_match.group(1)) + 1
+            content = re.sub(r'hotfix\s*=\s*\d+', f'hotfix = {new_hotfix}', content, 1)
 
         # Always update with the combined content (new + old)
         hotfix_pattern = r"(gameChangesHotfixes\s*=\s*\[\[)[\s\S]*?(\]\])"
@@ -273,7 +298,43 @@ def update_lua_file(notes_file_path, combined_notes):
     except Exception as e:
         print(f"❌ Error updating Lua file: {e}")
         return False
-    
+
+def update_toc_version(toc_file_path):
+    """
+    Reads the .toc file, parses the version A.B.C,
+    increments C (Iteration), and writes it back.
+    """
+    try:
+        with open(toc_file_path, 'r', encoding='utf-8') as f:
+            content = f.read()
+
+        # Regex to find "## Version: A.B.C"
+        # Captures: 1=A.B., 2=C
+        version_pattern = r"^(##\s+Version:\s+\d+\.\d+\.)(\d+)"
+        
+        match = re.search(version_pattern, content, re.MULTILINE)
+        if match:
+            prefix = match.group(1)
+            iteration = int(match.group(2))
+            new_iteration = iteration + 1
+            new_version_line = f"{prefix}{new_iteration}"
+            
+            # Replace strictly the matched line
+            new_content = content.replace(match.group(0), new_version_line)
+            
+            with open(toc_file_path, 'w', encoding='utf-8') as f:
+                f.write(new_content)
+                
+            print(f"✅ Updated TOC version to: {new_version_line.split(': ')[1]}")
+            return True
+        else:
+            print("⚠️ Could not find version pattern 'A.B.C' in TOC file.")
+            return False
+
+    except Exception as e:
+        print(f"❌ Error updating TOC version: {e}")
+        return False
+
 def set_github_output(updated):
     """Set GitHub Actions output variables"""
     if os.getenv('GITHUB_ACTIONS'):
@@ -302,7 +363,8 @@ if __name__ == "__main__":
         original_content = f.read()
 
     print(f"Updating Lua notes file: {notes_file_to_update}")
-    updated = update_lua_file(notes_file_to_update, llm_combined_notes)
+    remote_version = fetch_latest_version(PRODUCT)
+    updated = update_lua_file(notes_file_to_update, llm_combined_notes, remote_version)
 
     # Read new file content for comparison
     with open(notes_file_to_update, 'r', encoding='utf-8') as f:
@@ -316,6 +378,10 @@ if __name__ == "__main__":
         set_github_output("false")
     else:
         print("✅ Successfully updated the lua file.")
+        
+        # Update the TOC version since we have new content
+        update_toc_version(TOC_PATH)
+        
         set_github_output("true")
     
     sys.exit(0)
