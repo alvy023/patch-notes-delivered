@@ -8,10 +8,63 @@
 --- Export global notes variable
 --- Max note length [140] ------------------------------------------------------------------------------------------------------------------
 PatchNotesDelivered_Notes_1200P = {
-    version = "12.0.0-Pre",
+    version = "12.0.0",
     build = "65560",
-    hotfix = 2,
+    hotfix = 3,
     gameChangesHotfixes = [[
+        January 27, 2026
+
+    Classes
+        • Death Knight
+            > Blood
+                + Fixed an issue with Bloodied Blade not granting Strength.
+        • Druid
+            + Regrowth, Rejuvenation, Germination, and Wild Growth once again extend their duration when they are refreshed.
+            > Restoration
+                + Fixed an issue where Passing Seasons was not reducing the cooldown of Nature's Swiftness.
+        • Hunter
+            > Marksmanship
+                + Fixed an issue causing Tame Beast to not correctly function when talented into Unbreakable Bond.
+            > Survival
+                + Fixed an issue causing Raptor Strike to have incorrect damage and focus costs when using Aspect of the Eagle.
+        • Monk
+            > Brewmaster
+                + Fixed an issue causing Celestial Infusion to not absorb any damage.
+                + Fixed an issue causing Celestial Brew and Celestial Infusion to display an incorrectly low tooltip value.
+        • Priest
+            + Renew, Holy Fire, Vampiric Touch, and Shadow Word: Pain once again extend their duration when they are refreshed.
+            > Shadow
+                + Fixed an issue causing Shadowy Apparitions to not display properly on Damage Meters.
+        • Rogue
+            > Hero Talents
+                + Fatebound
+                    - Fixed an issue that caused Ravenholdt Mint's benefit to not be applied or reduce overall damage.
+
+    Dungeons and Raids
+        • De Other Side
+            > Resolved a visual issue with Mueh'zala's Shattered Visage
+
+    Player versus Player
+        • Fixed an issue where Precognition could trigger on a successful interrupt.
+        • All class spells that apply crowd control will now appear larger on raid frames and be prioritized over other debuffs.
+
+    Quests
+        • Alleria should now be available to provide "After the Storm" for eligible players who have started the Lorewalking Recap
+          but have left it before completing.
+        • Added Jaina and Thrall in Stormwind and Orgrimmar to allow eligible players to pick up The War Within intro quests.
+
+    Transmogrification
+        • Lowered the cost of outfit creation prices by 50% to bring them more in line with what the prices were prior to the
+          Transmog update.
+        • Developers’ notes: This hotfix was applied to live servers on January 23.
+
+    Twilight Ascension Event
+        • Tripled the chance for equipment to drop from Twilight Ascension rares.
+        • Increased the number of Twilights Blade Insignias dropped by killing Twilight Ascension rares to 2-3 (was 1).
+        • Twilight Ascension rares will no longer drop level-up equipment that your character cannot wear.
+        • Removed faction tapping from enemies during "Twilight's Call" rare events.
+        • Resolved an issue where players could send other players through the portal to Dornogal in the Twilight Ascension basecamp.
+
         January 26, 2026
 
           Classes
