@@ -9,7 +9,7 @@ and this project adheres to a specific versioning schema: `A.B.C` where:
 - **C** (Iteration): Increments on every release update (Minor, Patch, or Hotfix compatibility).
 
 ## [1.12.3] - 2026-01-28
-### Added
+### Changed
 - Updated 12.0.0 (Pre) notes to January 28
 - Updated TOC to 1.12.3
 
