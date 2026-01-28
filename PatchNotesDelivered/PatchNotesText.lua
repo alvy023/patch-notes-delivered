@@ -7,7 +7,7 @@
 
 -- Global notes list
 AVAILABLE_NOTES = {
-    { version = "12.0.0-Pre", data = PatchNotesDelivered_Notes_1200P },
+    { version = "12.0.0", data = PatchNotesDelivered_Notes_1200P },
     { version = "11.2.7", data = PatchNotesDelivered_Notes_1127 },
     { version = "11.2.5", data = PatchNotesDelivered_Notes_1125 },
     { version = "11.2.0", data = PatchNotesDelivered_Notes_1120 },
