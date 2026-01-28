@@ -11,7 +11,6 @@ PatchNotesDelivered_Notes_1200P = {
     version = "12.0.0",
     build = "65560",
     hotfix = 2,
-    hotfix = 2,
     gameChangesHotfixes = [[
         January 26, 2026
 
