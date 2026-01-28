@@ -85,10 +85,11 @@ jobs:
         id: commit_changes
         run: |
           NOTES="PatchNotesDelivered/notes/${{ github.event.inputs.notes_file || env.NOTES_FILE }}"
+          TOC="PatchNotesDelivered/PatchNotesDelivered.toc"
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git add "$NOTES"
-          git commit -m "Update $NOTES to latest build or patch notes text"
+          git add "$NOTES" "$TOC"
+          git commit -m "Update $NOTES and $TOC to latest build or patch notes text"
           echo "changed=true" >> $GITHUB_OUTPUT
 
       - name: Get Addon Version
