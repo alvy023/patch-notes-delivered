@@ -4334,8 +4334,5 @@ PatchNotesDelivered_Notes_1200P = {
         January 24, 2026
             
             • Fixed an issue with AceGUI call that caused labels to not register properly.
-        January 24, 2026
-            
-            • Fixed an issue with AceGUI call that caused labels to not register properly.
     ]],
 }
