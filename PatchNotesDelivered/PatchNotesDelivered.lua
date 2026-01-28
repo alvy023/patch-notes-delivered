@@ -53,8 +53,6 @@ function PatchNotesDelivered:OnInitialize()
     self.db = AceDB:New("PatchNotesDB", {
         profile = {
             lastSeenVersion = nil,
-            lastSeenBuild = nil,
-            lastSeenHotfix = nil,
             minimap = { hide = false },
             addonCompartment = { hide = false },
             showOnUpdate = true,
@@ -155,37 +153,17 @@ function PatchNotesDelivered:ShouldShowPatchNotes()
     -- User has disabled the option to show patch notes
     if not self.db.profile.showOnUpdate then return false end
 
-    local version, build, date, tocVersion = GetBuildInfo()
-    local notesVersion = PATCH_NOTES.version
-    local notesBuild = PATCH_NOTES.build
-    local noteHotfix = PATCH_NOTES.hotfix
+    local version = C_AddOns.GetAddOnMetadata("PatchNotesDelivered", "Version") or "0.0.0"
 
     -- User has never seen patch notes
-    if self.db.profile.lastSeenVersion == nil or self.db.profile.lastSeenBuild == nil or self.db.profile.lastSeenHotfix == nil then
+    if self.db.profile.lastSeenVersion == nil then
         self.db.profile.lastSeenVersion = version
-        self.db.profile.lastSeenBuild = build
-        self.db.profile.lastSeenHotfix = noteHotfix
         return true
     end
 
     -- Check if the current version is new
-    if version == notesVersion and self.db.profile.lastSeenVersion ~= version then
+    if self.db.profile.lastSeenVersion ~= version then
         self.db.profile.lastSeenVersion = version
-        self.db.profile.lastSeenBuild = build
-        self.db.profile.lastSeenHotfix = noteHotfix
-        return true
-    end
-
-    -- Check if the current build is new
-    if build == notesBuild and self.db.profile.lastSeenBuild ~= build then
-        self.db.profile.lastSeenBuild = build
-        self.db.profile.lastSeenHotfix = noteHotfix
-        return true
-    end
-
-    -- Check if the hotfix is new
-    if self.db.profile.lastSeenHotfix < noteHotfix then
-        self.db.profile.lastSeenHotfix = noteHotfix
         return true
     end
 
