@@ -9,8 +9,8 @@
 --- Max note length [140] ------------------------------------------------------------------------------------------------------------------
 PatchNotesDelivered_Notes_1200P = {
     version = "12.0.0",
-    build = "65614",
-    hotfix = 4,
+    build = "65655",
+    hotfix = 5,
     gameChangesHotfixes = [[
         January 29, 2026
 
