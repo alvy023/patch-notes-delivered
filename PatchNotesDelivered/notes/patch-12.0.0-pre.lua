@@ -14,29 +14,47 @@ PatchNotesDelivered_Notes_1200P = {
     gameChangesHotfixes = [[
         January 31, 2026
 
-    Housing
-        • Increased the House XP cap to 2250 XP +250 XP per Endeavor completion, for a total of 2500 per Endeavor.
-        • Adjusted diminishing returns for repeatable tasks to increase rewards after multiple repetitions of activities.
-        • Improved the rewards for the non-Endeavor-specific tasks.
-        • For the first (current) month only: significantly reduced the amount of Endeavor XP needed to complete the bar for the first Endeavor cycle.
-        • Developers’ notes: This is intended to compensate for the fact that it’s the first month, and there is no record of player activity.
+            Classes
+                • Fixed an issue where full health targets with a heal absorb were not considered injured for some AoE healing logic.
+                • Demon Hunter
+                    > Devourer
+                        + Fixed an issue causing Voidsurge to not correctly function without Demonic Intensity.
+                        + Void-Scarred: Fixed an issue causing Hungering Slash to not work properly after using Metamorphosis.
+                        + Consume now generates 1 additional Soul Fragment.
+                        + Shattered Souls now has a 4% chance to cause a damaging spell to generate a Soul Fragment (was 8%).
+                        + Waste Not now causes Void Ray to have a 200% increased chance of generating a Soul Fragment (was 100%).
+                        + While in combat, Entropy now grants a Soul Fragment every 12 seconds (was 8 seconds).
+                        + Reap damage increased by 75%. Does not affect PvP combat.
+                        + Consume damage reduced by 30%. Does not affect PvP combat.
+                        + Fixed an issue causing Devourer Demon Hunters to sometimes switch to an incorrect voice during Void Metamorphosis.
+                • Mage
+                    > Frost
+                        + Glacial Bulwark no longer requires level 54.
+                • Rogue
+                    > Deathstalker: Fixed an issue that caused Precise Killer to apply double its listed effect.
+                    > Subtlety
+                        + Trickster: Fixed an issue that prevented Disorienting Strikes from applying its cooldown reduction effect for
+                          Secret Technique.
+                • Warrior
+                    > The effectiveness of the low-health effect of Second Wind has been reduced by 50% in PVP.
 
-    Items
-        • Fixed an issue that caused Dragonflight raid cloaks to convert to a set item not intended for your class.
-        • Added a sell price to the Ascension Arrestor's Dagger.
+            Housing
+                • Elegant Elven Barrel can now be added as decor.
 
-    Quests
-        • Fixed a bug that caused returning level 80 players to be directed to the incorrect content.
-        • Fixed an issue causing players to be unable to use the Path of the Chosen to progress quests during Xal'atath Lorewalking.
-        • Players can again complete "Nuke 'Em Norbit" in Mechagon as intended.
+            Items
+                • New drops of Rae'shalare, Deaths Whisper should again be legendary.
 
-    Twilight Ascension Event
-        • Resolved an issue where the scenario UI was not available during the Mirrorvise rare event.
-        • Ritualist and boss health has been adjusted to make them last a bit longer for large groups.
-        • The price of gear on the vendor has been reduced to 20 Insignias (was 40).
-        • Champion track Warbound-until-equipped items will no longer generate an ‘Epic Upgrade’ notification when looted from rares.
-        • Equipment drops are no longer restricted to only one per day, per character, from each individual rare.
-        • Rares now spawn every 5 minutes (was 10 minutes).
+            Pet Battles
+                • Webbers is now properly displayed once awarded from Family Battler of Northrend.
+
+            Player versus Player
+                • Fixed an issue that prevented progress towards the Vicious Void Creeper mount during the PvP offseason.
+
+            Twilight Ascension Event
+                • Added crossbows as options for players to acquire from the event.
+                • Fixed an additional issue preventing visibility of "Void Perforations" if the player had completed the Firebeard's
+                  Patrol questline.
+                • Quartermaster Materialist Ophinell now has an icon on the minimap.
 
         January 30, 2026
 
