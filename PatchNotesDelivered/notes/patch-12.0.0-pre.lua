@@ -10,8 +10,34 @@
 PatchNotesDelivered_Notes_1200P = {
     version = "12.0.0",
     build = "65655",
-    hotfix = 5,
+    hotfix = 6,
     gameChangesHotfixes = [[
+        January 31, 2026
+
+    Housing
+        • Increased the House XP cap to 2250 XP +250 XP per Endeavor completion, for a total of 2500 per Endeavor.
+        • Adjusted diminishing returns for repeatable tasks to increase rewards after multiple repetitions of activities.
+        • Improved the rewards for the non-Endeavor-specific tasks.
+        • For the first (current) month only: significantly reduced the amount of Endeavor XP needed to complete the bar for the first Endeavor cycle.
+        • Developers’ notes: This is intended to compensate for the fact that it’s the first month, and there is no record of player activity.
+
+    Items
+        • Fixed an issue that caused Dragonflight raid cloaks to convert to a set item not intended for your class.
+        • Added a sell price to the Ascension Arrestor's Dagger.
+
+    Quests
+        • Fixed a bug that caused returning level 80 players to be directed to the incorrect content.
+        • Fixed an issue causing players to be unable to use the Path of the Chosen to progress quests during Xal'atath Lorewalking.
+        • Players can again complete "Nuke 'Em Norbit" in Mechagon as intended.
+
+    Twilight Ascension Event
+        • Resolved an issue where the scenario UI was not available during the Mirrorvise rare event.
+        • Ritualist and boss health has been adjusted to make them last a bit longer for large groups.
+        • The price of gear on the vendor has been reduced to 20 Insignias (was 40).
+        • Champion track Warbound-until-equipped items will no longer generate an ‘Epic Upgrade’ notification when looted from rares.
+        • Equipment drops are no longer restricted to only one per day, per character, from each individual rare.
+        • Rares now spawn every 5 minutes (was 10 minutes).
+
         January 30, 2026
 
             Classes
