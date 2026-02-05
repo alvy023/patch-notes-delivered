@@ -9,9 +9,29 @@
 --- Max note length [140] ------------------------------------------------------------------------------------------------------------------
 PatchNotesDelivered_Notes_1200P = {
     version = "12.0.0",
-    build = "65699",
-    hotfix = 6,
+    build = "65727",
+    hotfix = 7,
     gameChangesHotfixes = [[
+        February 4, 2026
+
+            Housing
+                • Square Draenic Table is now available for purchase.
+
+            Items
+                • Fixed a bug that could cause Timewalking rewards to provide an incorrect item level.
+
+            Quests
+                • Fixed an issue where players who race changed to Dracthyr were unable to start the Dragonflight campaign in Stormwind 
+                  or Orgrimmar.
+
+            Trading Post
+                • The Trading Post activity "Love is in the Air: Launch Pink Fireworks While Wearing a Rose" has been removed for 
+                  this month.
+
+            Twilight Ascension Event
+                • Twilight's Call events now have a visible timer showing how long is left before the event shuts down for the next one 
+                  to start.
+
         February 3, 2026
 
             Classes
