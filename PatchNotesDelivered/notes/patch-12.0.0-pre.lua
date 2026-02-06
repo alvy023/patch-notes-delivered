@@ -10,8 +10,15 @@
 PatchNotesDelivered_Notes_1200P = {
     version = "12.0.0",
     build = "65727",
-    hotfix = 7,
+    hotfix = 8,
     gameChangesHotfixes = [[
+        February 5, 2026
+
+    The Burning Crusade Classic
+        • The book ‘Soothsaying for Dummies’ has been re-enabled.
+        • Fixed an issue that could prevent warlock players from being able to complete the quest "What is Love".
+        • Fixed a bug where The Prophet Skeram would incorrectly purge buffs from players when transitioning between phases.
+
         February 4, 2026
 
             Housing
