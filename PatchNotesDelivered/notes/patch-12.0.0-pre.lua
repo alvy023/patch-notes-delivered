@@ -10,8 +10,10 @@
 PatchNotesDelivered_Notes_1200P = {
     version = "12.0.0",
     build = "65727",
-    hotfix = 7,
+    hotfix = 8,
     gameChangesHotfixes = [[
+        February 5, 2026
+
         February 4, 2026
 
             Housing
