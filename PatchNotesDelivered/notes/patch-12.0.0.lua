@@ -1,13 +1,13 @@
 -- Patch Notes Delivered Addon
 -- Author: alvy023
--- File: patch-12.0.0-pre.lua
--- Description: Patch notes text file for patch 12.0.0 Pre-Expansion update
+-- File: patch-12.0.0.lua
+-- Description: Patch notes text file for patch 12.0.0 (Pre-Expansion update)
 -- License: License.txt
 -- For more information, visit the project repository.
 
 --- Export global notes variable
 --- Max note length [140] ------------------------------------------------------------------------------------------------------------------
-PatchNotesDelivered_Notes_1200P = {
+PatchNotesDelivered_Notes_1200 = {
     version = "12.0.0",
     build = "65727",
     hotfix = 7,
