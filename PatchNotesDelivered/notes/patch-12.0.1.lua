@@ -9,10 +9,12 @@
 --- Max note length [140] ------------------------------------------------------------------------------------------------------------------
 PatchNotesDelivered_Notes_1201 = {
     version = "12.0.1",
-    build = "00000",
+    build = "65617",
     hotfix = 0,
     gameChangesHotfixes = [[
         "Same stuff, different patch?"
+
+        See Patch Changes.
     ]],
     gameChangesPatch = [[
         February 9, 2025
