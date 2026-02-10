@@ -246,12 +246,14 @@ def generate_notes_from_text(scraped_text, existing_notes):
         sys.exit(1)
 
 def fetch_latest_version(product):
-    url = "https://wago.tools/api/builds/"+product+"/latest"
+    #url = "https://wago.tools/api/builds/"+product+"/latest"
+    url = "https://wago.tools/api/builds"
     try:
         response = requests.get(url, timeout=10)
         response.raise_for_status()
         data = response.json()
-        return data["version"]
+        #return data["version"]
+        return data[product][0]["version"]
     except Exception as e:
         print(f"❌ Failed to fetch version from Wago.Tools: {e}")
         sys.exit(1)

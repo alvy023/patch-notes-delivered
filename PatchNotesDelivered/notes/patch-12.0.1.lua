@@ -17,7 +17,7 @@ PatchNotesDelivered_Notes_1201 = {
         See Patch Changes.
     ]],
     gameChangesPatch = [[
-        February 9, 2025
+        February 9, 2026
 
         With the release of the second pre‑expansion update, we’re rolling out additional class updates and a host of quality‑of‑life 
         improvements—including user interface (UI) enhancements to Damage Meters, Boss Alerts, and more—as we make our final 
