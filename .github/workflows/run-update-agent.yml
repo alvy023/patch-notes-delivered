@@ -6,7 +6,7 @@ on:
       notes_file:
         description: 'Notes file to update (optional)'
         required: false
-        default: 'patch-12.0.0-pre.lua'
+        default: 'patch-12.0.1.lua'
       scrape_url:
         description: 'URL to scrape for patch notes'
         required: false
