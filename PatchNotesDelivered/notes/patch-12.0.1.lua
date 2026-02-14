@@ -14,18 +14,15 @@ PatchNotesDelivered_Notes_1201 = {
     gameChangesHotfixes = [[
         February 12, 2026
 
-    Classes
-        • Resolved an issue that could cause players to unintentionally flag for PvP when casting spells such as Mage’s Ice Lance or Rogue’s Secret Technique.
+            Classes
+                • Resolved an issue that could cause players to unintentionally flag for PvP when casting spells such as Mage’s Ice Lance 
+                  or Rogue’s Secret Technique.
 
-    Housing
-        • Harvesting Hatchet is again available for purchase, to learn the Find Lumber ability, from neighborhood lumberjacks.
+            Housing
+                • Harvesting Hatchet is again available for purchase, to learn the Find Lumber ability, from neighborhood lumberjacks.
 
-    Quests
-        • Fixed a bug preventing some World Quests from rewarding gold as intended.
-
-        "Same stuff, different patch?"
-
-        See Patch Changes.
+            Quests
+                • Fixed a bug preventing some World Quests from rewarding gold as intended.
     ]],
     gameChangesPatch = [[
         February 9, 2026
