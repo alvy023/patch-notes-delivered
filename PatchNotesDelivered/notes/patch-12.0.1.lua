@@ -9,12 +9,20 @@
 --- Max note length [140] ------------------------------------------------------------------------------------------------------------------
 PatchNotesDelivered_Notes_1201 = {
     version = "12.0.1",
-    build = "65617",
-    hotfix = 0,
+    build = "65893",
+    hotfix = 1,
     gameChangesHotfixes = [[
-        "Same stuff, different patch?"
+        February 12, 2026
 
-        See Patch Changes.
+            Classes
+                • Resolved an issue that could cause players to unintentionally flag for PvP when casting spells such as Mage’s Ice Lance 
+                  or Rogue’s Secret Technique.
+
+            Housing
+                • Harvesting Hatchet is again available for purchase, to learn the Find Lumber ability, from neighborhood lumberjacks.
+
+            Quests
+                • Fixed a bug preventing some World Quests from rewarding gold as intended.
     ]],
     gameChangesPatch = [[
         February 9, 2026

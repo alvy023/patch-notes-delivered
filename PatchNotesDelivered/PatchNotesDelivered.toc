@@ -2,7 +2,7 @@
 ## Title: Patch Notes Delivered
 ## Notes: Displays patch notes on login and notifies of new versions.
 ## Author: alvy023
-## Version: 1.12.8
+## Version: 1.12.9
 ## SavedVariables: PatchNotesDB
 ## AddonCompartmentFunc: PatchNotesDelivered_OnAddonCompartmentClick
 ## AddonCompartmentFuncOnEnter: PatchNotesDelivered_OnAddonCompartmentEnter
