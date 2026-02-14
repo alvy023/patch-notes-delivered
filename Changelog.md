@@ -19,7 +19,7 @@ and this project adheres to a specific versioning schema: `A.B.C` where:
 
 ## [1.12.9] - 2026-02-14
 ### Added
-- Added 12.0.1 (Pre) notes sfor February 12
+- Added 12.0.1 (Pre) notes for February 12
 ### Changed
 - Updated TOC to 1.12.9
 
