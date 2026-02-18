@@ -140,7 +140,7 @@ PatchNotesDelivered_Notes_1201 = {
                     > Fixed an issue that caused Rising Sun Kick to not apply Mortal Wounds.
                     > Fixed an issue that caused Thunderfist's damage to not be tracked separately in the Damage Meter.
                     > Fixed an issue that caused Windwalking to persist if untalented.
-                    > Fixed an issue that caused Windwalkering remain on allies beyond 10 yards.
+                    > Fixed an issue that caused Windwalking to remain on allies beyond 10 yards.
                     > Mistweaver
                         + All damage increased by 1% per level.
                         + Tiger Palm damage reduced by 31%.
