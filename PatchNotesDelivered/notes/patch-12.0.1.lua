@@ -9,9 +9,70 @@
 --- Max note length [140] ------------------------------------------------------------------------------------------------------------------
 PatchNotesDelivered_Notes_1201 = {
     version = "12.0.1",
-    build = "65893",
-    hotfix = 1,
+    build = "65940",
+    hotfix = 2,
     gameChangesHotfixes = [[
+        February 4, 2026
+
+            Housing
+                • Square Draenic Table is now available for purchase.
+
+            Items
+                • Fixed a bug that could cause Timewalking rewards to provide an incorrect item level.
+
+            Quests
+                • Fixed an issue where players who race changed to Dracthyr were unable to start the Dragonflight campaign in Stormwind or Orgrimmar.
+
+            Trading Post
+                • The Trading Post activity "Love is in the Air: Launch Pink Fireworks While Wearing a Rose" has been removed for this month.
+
+            Twilight Ascension Event
+                • Twilight's Call events now have a visible timer showing how long is left before the event shuts down for the next one to start.
+
+        February 3, 2026
+
+            Classes
+                • Evoker
+                    > Devastation
+                        + Fixed an issue allowing Deep Breath to sometimes be castable more often than intended.
+
+            Housing
+                • Fixed several decor items that were incorrectly priced. Their costs have been updated to the intended values.
+
+            Items
+                • Fixed an issue where Mysterious Satchels could activate group loot rolls for players who were not in a group.
+
+            Player versus Player
+                • Demon Hunter
+                    > Fel-Scarred: Focused Hatred now increases Demonsurge damage by 10% (was 50%) when damaging a single target, reducing by 2% (was 10%) per additional target in PvP combat.
+                    > Fel-Scarred: Demonsurge damage reduced by 20% in PvP combat.
+                    > Devourer
+                        + Developers’ notes: We’re applying several changes that were made to Devourer in the Beta, to reduce burst during pre-patch. These come along with an overall damage reduction to the specialization.
+                        + All damage reduced by 8% in PvP combat.
+                        + Consume damage increased by 100% in PvP combat. Does not affect Devour.
+                        + Devour damage increased by 30% in PvP combat.
+                        + Voidblade damage increased by 15% in PvP combat. Does not affect Pierce the Veil.
+                        + Void Ray damage increased by 30% in PvP combat.
+                        + Hungering Slash damage increased by 15% in PvP combat. Does not affect Reaper’s Toll.
+                        + Impending Apocalypse now increases the damage of your next Collapsing Star by 15% in PvP combat (was 30%).
+                        + Focused Ray now increases the damage of Void Ray by 15% in PvP combat (was 50%).
+                        + Inevitable End now reduces the cast time of Collapsing Star by 25% instead of increasing its damage done. Please note that the tooltip will not reflect this change during pre-patch.
+                        + Predator’s Wake damage reduced by 15% in PvP combat. This is the empowered The Hunt from Demonic Intensity.
+                        + Devourer’s Bite now increases the damage your target takes by 5% per application (was 12%).
+                        + Surrender to the Void now increases damage dealt while in Void Metamorphosis by 10% (was 20%).
+
+                • Hunter
+                    > Pack Leader: Boar Charge damage is now reduced by 50% in PvP combat.
+
+            Quests
+                • Doomshadow should live a little longer before meeting their demise for players who are participating in “The Big Dig”.
+
+            Twilight Ascension Event
+                • Spawns in the Twilight Highlands should properly announce their presence to the zone when they spawn.
+                • Fixed an issue preventing Eoin Dunwald from appearing during the Twilight Ascension event.
+                • The weekly repeatable quests "Twilight's Dawn" and "Disrupt the Call" may now be completed per-character and they now award Twilight's Blade Insignias to all characters.
+                • Twilight Ascension World Quests now award both Twilight's Blade Insignias and Resonance Crystals to all characters as their primary reward instead of awarding one or the other.
+
         February 12, 2026
 
             Classes
