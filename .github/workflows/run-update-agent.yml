@@ -10,7 +10,7 @@ on:
       scrape_url:
         description: 'URL to scrape for patch notes'
         required: false
-        default: 'https://worldofwarcraft.blizzard.com/en-us/news/24247515/'
+        default: 'https://worldofwarcraft.blizzard.com/en-us/news/24244470/'
       commit_news:
         description: 'Commit news to the branch'
         required: false
