@@ -14,58 +14,65 @@ PatchNotesDelivered_Notes_1201 = {
     gameChangesHotfixes = [[
         February 19, 2026
 
-    Classes
-        • Death Knight
-            > Unholy
-                + Resolved an issue causing the pet Ghoul Claw spell to not function.
-        • Druid
-            > Guardian
-                + Fixed an issue where Red Moon was not correctly reducing the cooldown of Lunar Beam when talented into Lunation.
-        • Evoker
-            > Scalecommander: the Bombardments debuff now displays on target nameplates for the Evoker only.
-            > Augmentation
-                + Source of Magic, Blistering Scales, Reactive Hide, Timelessness, and Aspect's Favor can now be tracked in the Cooldown Manager.
-            > Devastation
-                + Source of Magic can now be tracked in the Cooldown Manager.
-            > Preservation
-                + Fixed an issue where the instant healing portion of Dream Breath was not benefitting from Fulminous Roar and Expanded Lungs when empowering beyond rank 1.
-                + Fixed an issue causing Verdant Embrace to not be usable while rooted while talented for Dream Simulacrum.
-                + Fixed an issue where Merithra's Blessing did not have a displayed mana cost.
-                + Fixed an issue where Flow State was not properly increasing the cooldown recharge rate of Fire Breath, Dream Breath, and Verdant Embrace.
-                + Source of Magic can now be tracked in the Cooldown Manager.
-        • Hunter
-            + Fixed an issue causing Unerring Vision to grant an incorrect amount of critical strike chance and damage.
-        • Monk
-            > Windwalker
-                + Fixed an issue that caused Rushing Wind Kick to be deprioritized by the Assisted Rotation.
-        • Paladin
-            + An issue causing Crusade to go over the maximum Haste limit has been resolved.
-            + Glyph of the Trusted Steed now causes Divine Steed to use the appearance of the Thalassian Charger for Horde characters.
-            > Holy
-                + Fixed an issue that prevented Ringing of the Heavens from functioning without being talented into Lightsmith.
-            > Protection
-                + Lightsmith: Fixed an issue where Hammer and Anvil didn't activate from Hammer of Wrath when Sweeping Verdict was talented.
-            > Retribution
-                + Judgment of Justice now functions with Hammer of Wrath.
-                + Judgment of Justice can now be tracked on the Cooldown Manager.
-        • Priest
-            > Shadow
-                + Fixed an issue causing Shadowy Insight to not be consumed when it was gained while casting Mind Blast.
-        • Shaman
-            + Mana Spring now accumulates its mana restoration and grants it every few seconds instead of occurring immediately on each cast of Riptide, Lava Burst, or Stormstrike.
-            + Fixed a bug causing Mana Spring to not scale up to level 90.
-        • Warlock
-            + Fixed an issue where Hand of Gul'dan and Shadow Bolt were not usable in the Cooldown Manager if the Warlock was not a Diabolist.
-            + Fixed an issue where Improved Havoc would not function with Mayhem.
+            Classes
+                • Death Knight
+                    > Unholy
+                        + Resolved an issue causing the pet Ghoul Claw spell to not function.
+                • Druid
+                    > Guardian
+                        + Fixed an issue where Red Moon was not correctly reducing the cooldown of Lunar Beam when talented into Lunation.
+                • Evoker
+                    > Scalecommander: the Bombardments debuff now displays on target nameplates for the Evoker only.
+                    > Augmentation
+                        + Source of Magic, Blistering Scales, Reactive Hide, Timelessness, and Aspect's Favor can now be tracked in 
+                          the Cooldown Manager.
+                    > Devastation
+                        + Source of Magic can now be tracked in the Cooldown Manager.
+                    > Preservation
+                        + Fixed an issue where the instant healing portion of Dream Breath was not benefitting from Fulminous Roar and 
+                          Expanded Lungs when empowering beyond rank 1.
+                        + Fixed an issue causing Verdant Embrace to not be usable while rooted while talented for Dream Simulacrum.
+                        + Fixed an issue where Merithra's Blessing did not have a displayed mana cost.
+                        + Fixed an issue where Flow State was not properly increasing the cooldown recharge rate of Fire Breath, 
+                          Dream Breath, and Verdant Embrace.
+                        + Source of Magic can now be tracked in the Cooldown Manager.
+                • Hunter
+                    > Fixed an issue causing Unerring Vision to grant an incorrect amount of critical strike chance and damage.
+                • Monk
+                    > Windwalker
+                        + Fixed an issue that caused Rushing Wind Kick to be deprioritized by the Assisted Rotation.
+                • Paladin
+                    > An issue causing Crusade to go over the maximum Haste limit has been resolved.
+                    > Glyph of the Trusted Steed now causes Divine Steed to use the appearance of the Thalassian Charger for 
+                      Horde characters.
+                    > Holy
+                        + Fixed an issue that prevented Ringing of the Heavens from functioning without being talented into Lightsmith.
+                    > Protection
+                        + Lightsmith: Fixed an issue where Hammer and Anvil didn't activate from Hammer of Wrath when Sweeping Verdict 
+                          was talented.
+                    > Retribution
+                        + Judgment of Justice now functions with Hammer of Wrath.
+                        + Judgment of Justice can now be tracked on the Cooldown Manager.
+                • Priest
+                    > Shadow
+                        + Fixed an issue causing Shadowy Insight to not be consumed when it was gained while casting Mind Blast.
+                • Shaman
+                    > Mana Spring now accumulates its mana restoration and grants it every few seconds instead of occurring immediately 
+                      on each cast of Riptide, Lava Burst, or Stormstrike.
+                    > Fixed a bug causing Mana Spring to not scale up to level 90.
+                • Warlock
+                    > Fixed an issue where Hand of Gul'dan and Shadow Bolt were not usable in the Cooldown Manager if the Warlock was 
+                      not a Diabolist.
+                    > Fixed an issue where Improved Havoc would not function with Mayhem.
 
-    Housing
-        • The Waxmaster's Candle Rack decor now properly appears in the player's House Chest once collected.
-        • The Deactivated Atomic Recalibrator now properly appears in players' House Chests once collected.
-        • Resolved an issue preventing some players from purchasing additional copies of the Elegant Dracthyr's Tea Set decor.
+            Housing
+                • The Waxmaster's Candle Rack decor now properly appears in the player's House Chest once collected.
+                • The Deactivated Atomic Recalibrator now properly appears in players' House Chests once collected.
+                • Resolved an issue preventing some players from purchasing additional copies of the Elegant Dracthyr's Tea Set decor.
 
-    Quests
-        • Resolved an issue preventing Unholy Death Knights from receiving a special quest in Broken Isles.
-        • Resolved an issue where the quest turn-in NPC for "Battered Twilight Scale" was missing in Grim Batol.
+            Quests
+                • Resolved an issue preventing Unholy Death Knights from receiving a special quest in Broken Isles.
+                • Resolved an issue where the quest turn-in NPC for "Battered Twilight Scale" was missing in Grim Batol.
 
         February 17, 2026
 
