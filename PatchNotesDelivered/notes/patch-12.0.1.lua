@@ -14,52 +14,53 @@ PatchNotesDelivered_Notes_1201 = {
     gameChangesHotfixes = [[
         February 20, 2026
 
-        Classes
-            • Death Knight
-                > Glacial Advance can now be located in the Cooldown Manager.
-            • Demon Hunter
-                > Havoc
-                    + Fel-Scarred: Fixed an issue that caused Immolation Aura to consume a charge when Undying Embers' effect triggered.
-            • Paladin
-                > Protection
-                    + Templar: Resolved an issue causing Hammer of Wrath to extend the duration of Shake the Heavens more than intended.
-                > Retribution
-                    + Resolved an issue causing Divine Toll to consume Divine Purpose when talented into Divine Hammer.
-                    + Resolved an issue causing Vengeful Wrath to not function.
-                    + Resolved an issue causing Divine Exaction to cast Judgment at 50% increased effectiveness, instead of the intended 150%.
-                    + Resolved an issue causing Second Sunrise Hammer of Wraths to consume Divine Resonance.
-            • Priest
-                > Discipline
-                    + Fixed an issue that caused Shadow Mend to not benefit from Binding Heal, Mastery, Protective Light when cast on an ally,
-                      Inner Focus, Divine Aegis, Unwavering Will, Surge of Light's mana reduction, Words of the Wise, Improved Flash Heal,
-                      and Flash Heal's baseline modifier for Discipline Priest.
-                    + Shadow Mend healing decreased by 25%.
-                    + Shadow Mend may now stack up to twice. The tooltip will be updated to reflect this in a later patch.
-            • Rogue
-                > Subtlety
-                    + Trickster: Fixed an issue that prevented damage from Eviscerate's Apex Shadow Clone from dealing Nimble Flurry damage
-                      to nearby targets when created by a Coup de Grace.
-            • Warlock
-                > Affliction
-                    + Soul Harvester: Fixed an issue where Wicked Reaping would be cast multiple times if Nightfall was consumed by Drain Soul
-                      and more than 1 target is in combat with the Warlock.
-                > Destruction
-                    + Fixed an issue where Backdraft would be consumed by Incinerate while affected by Chaotic Inferno.
+            Classes
+                • Death Knight
+                    > Glacial Advance can now be located in the Cooldown Manager.
+                • Demon Hunter
+                    > Havoc
+                        + Fel-Scarred: Fixed an issue that caused Immolation Aura to consume a charge when Undying Embers' effect triggered.
+                • Paladin
+                    > Protection
+                        + Templar: Resolved an issue causing Hammer of Wrath to extend the duration of Shake the Heavens more than intended.
+                    > Retribution
+                        + Resolved an issue causing Divine Toll to consume Divine Purpose when talented into Divine Hammer.
+                        + Resolved an issue causing Vengeful Wrath to not function.
+                        + Resolved an issue causing Divine Exaction to cast Judgment at 50% increased effectiveness, instead of 
+                          the intended 150%.
+                        + Resolved an issue causing Second Sunrise Hammer of Wraths to consume Divine Resonance.
+                • Priest
+                    > Discipline
+                        + Fixed an issue that caused Shadow Mend to not benefit from Binding Heal, Mastery, Protective Light when cast 
+                          on an ally, Inner Focus, Divine Aegis, Unwavering Will, Surge of Light's mana reduction, Words of the Wise, 
+                          Improved Flash Heal, and Flash Heal's baseline modifier for Discipline Priest.
+                        + Shadow Mend healing decreased by 25%.
+                        + Shadow Mend may now stack up to twice. The tooltip will be updated to reflect this in a later patch.
+                • Rogue
+                    > Subtlety
+                        + Trickster: Fixed an issue that prevented damage from Eviscerate's Apex Shadow Clone from dealing Nimble Flurry 
+                          damage to nearby targets when created by a Coup de Grace.
+                • Warlock
+                    > Affliction
+                        + Soul Harvester: Fixed an issue where Wicked Reaping would be cast multiple times if Nightfall was consumed by 
+                          Drain Soul and more than 1 target is in combat with the Warlock.
+                    > Destruction
+                        + Fixed an issue where Backdraft would be consumed by Incinerate while affected by Chaotic Inferno.
 
-        Dungeons and Raids
-            • Amirdrassil, the Dream's Hope
-                > Fixed an issue in Story Mode where Turalyon would shout the entire time during the fight against Fyrakk.
+            Dungeons and Raids
+                • Amirdrassil, the Dream's Hope
+                    > Fixed an issue in Story Mode where Turalyon would shout the entire time during the fight against Fyrakk.
 
-        Housing
-            • Resolved an issue preventing some players from purchasing the Admiral's Bed from Pearl Barlow in Boralus and/or the Dark Iron
-              Expedition Tent from Dedric Sleetshaper in Ironforge.
-            • Players who have earned promotional decor can find most of it now properly sold by the promotional decor resupply vendors:
-              Tuuran in Stormwind and Gabbi in Orgrimmar.
-            • Developers’ notes: Additional copies of Midnight Epic Edition decor will only be available from Dennia Silvertongue in Silvermoon
-              after the launch of the expansion, when players have access to the Midnight version of Silvermoon City.
+            Housing
+                • Resolved an issue preventing some players from purchasing the Admiral's Bed from Pearl Barlow in Boralus and/or the 
+                  Dark Iron Expedition Tent from Dedric Sleetshaper in Ironforge.
+                • Players who have earned promotional decor can find most of it now properly sold by the promotional decor resupply vendors:
+                  Tuuran in Stormwind and Gabbi in Orgrimmar.
+                • Developers’ notes: Additional copies of Midnight Epic Edition decor will only be available from Dennia Silvertongue in 
+                  Silvermoon after the launch of the expansion, when players have access to the Midnight version of Silvermoon City.
 
-        Player versus Player
-            • Astral Combatant's Heraldry, Astral Aspirant's Heraldry, and Astral Gladiator's Heraldry can now be destroyed.
+            Player versus Player
+                • Astral Combatant's Heraldry, Astral Aspirant's Heraldry, and Astral Gladiator's Heraldry can now be destroyed.
 
         February 19, 2026
 
