@@ -26,27 +26,30 @@ PatchNotesDelivered_Notes_1201 = {
                         + Fixed an issue where Renewing Surge was reducing the cooldown of Swiftmend by less than intended.
                 • Evoker
                     > Devastation
-                        + Scalecommander: Fixed an issue causing Mass Disintegrate to deal incorrect damage when Concentrated Power is talented.
+                        + Scalecommander: Fixed an issue causing Mass Disintegrate to deal incorrect damage when Concentrated Power 
+                          is talented.
                     > Preservation
-                        + Fixed an issue where Temporal Burst was not increasing the cooldown recharge rate of Verdant Embrace, Fire Breath, or Dream Breath.
+                        + Fixed an issue where Temporal Burst was not increasing the cooldown recharge rate of Verdant Embrace, Fire Breath,
+                          or Dream Breath.
                 • Hunter
-                    + Corrected an issue where Master's Call did not properly display in the Cooldown Manager.
-                    + Fixed an issue causing Boomstick and Moonlight Chakram to gain additional benefit from Tip of the Spear.
-                    + Fixed an issue causing Bleak Powder to incorrectly scale with Mastery.
-                    + Fixed an issue allowing Pack Leaders to summon two Beasts with Takedown.
-                    + Fixed an issue preventing your Nature's Ally Animal Companion from gaining Beast Cleave from Umbral Reach.
-                    + Fixed an issue causing Jagged Wounds to benefit some bleeds multiple times.
-                    + Nature's Ally Animal Companion will now charge Besital Wrath's primary target when summoned.
-                    + Nature's Ally Animal Companion will now more reliably gain Bestial Wrath and deal Bestial Wrath's damage.
+                    > Corrected an issue where Master's Call did not properly display in the Cooldown Manager.
+                    > Fixed an issue causing Boomstick and Moonlight Chakram to gain additional benefit from Tip of the Spear.
+                    > Fixed an issue causing Bleak Powder to incorrectly scale with Mastery.
+                    > Fixed an issue allowing Pack Leaders to summon two Beasts with Takedown.
+                    > Fixed an issue preventing your Nature's Ally Animal Companion from gaining Beast Cleave from Umbral Reach.
+                    > Fixed an issue causing Jagged Wounds to benefit some bleeds multiple times.
+                    > Nature's Ally Animal Companion will now charge Besital Wrath's primary target when summoned.
+                    > Nature's Ally Animal Companion will now more reliably gain Bestial Wrath and deal Bestial Wrath's damage.
                 • Mage
-                    + Arcane Warding now reduces magic damage taken by 4/8% (was 2/4%).
-                    + All Mage Barrier spells absorb an additional 5% maximum health.
+                    > Arcane Warding now reduces magic damage taken by 4/8% (was 2/4%).
+                    > All Mage Barrier spells absorb an additional 5% maximum health.
                 • Monk
                     > Brewmaster
                         + Flurry Charges are now trackable in the Cooldown Manager.
                     > Mistweaver
                         + Fixed an issue that caused Strength of the Black Ox to not benefit from Unity Within.
-                        + Fixed an issue that caused a previous talent Unison to heal when channeling Soothing Mist while talented into Mistline.
+                        + Fixed an issue that caused a previous talent Unison to heal when channeling Soothing Mist while talented 
+                          into Mistline.
                         + Fixed an issue that could cause Way of the Crane to sometimes fail to Tiger Palm twice until reloading.
                     > Windwalker
                         + Calming Presence now decreases damage taken by 6% (was 3%).
@@ -59,15 +62,16 @@ PatchNotesDelivered_Notes_1201 = {
                     > Retribution
                         + Resolved an issue causing Judgment of Justice to not increase the damage of Hammer of Wrath.
                 • Priest
-                    + Angelic Bulwark now absorbs damage equal to 25% of your maximum health (was 15%).
-                    + Spell Warding now reduces magic damage taken by 3%/6% (was 2%/4%). Not applied to PvP combat.
-                    + Strength of Soul now increases Stamina by 6% (was 4%). Not applied to PvP combat.
+                    > Angelic Bulwark now absorbs damage equal to 25% of your maximum health (was 15%).
+                    > Spell Warding now reduces magic damage taken by 3%/6% (was 2%/4%). Not applied to PvP combat.
+                    > Strength of Soul now increases Stamina by 6% (was 4%). Not applied to PvP combat.
                 • Warlock
-                    + Fixed an issue where Burning Rush was not tracked in the Cooldown Manager.
+                    > Fixed an issue where Burning Rush was not tracked in the Cooldown Manager.
                     > Affliction
                         + Fixed an issue where Sudden Onset would cause Agony to start at 4 stacks instead of the intended 3 stacks.
                         + Soul Harvester: Fixed an issue where consuming Nightfall with Shadow Bolt would not trigger Wicked Reaping.
-                        + Soul Harvester: Fixed an issue where Sow the Seeds was not correctly reducing the amount of damage dealt by additional Seed of Corruptions.
+                        + Soul Harvester: Fixed an issue where Sow the Seeds was not correctly reducing the amount of damage dealt by 
+                          additional Seed of Corruptions.
                     > Demonology
                         + Fixed an issue where Demonic Cores could be generated without learning the Demoniac talent.
                         + Fixed an issue where Combat Assistant would not recommend summoning a primary demon if Felguard is not learned.
@@ -75,7 +79,9 @@ PatchNotesDelivered_Notes_1201 = {
                         + Fixed an issue where Infernal Bolt would not consume Chaotic Inferno.
             
             Housing
-                • Additional copies Hatred's Wolfpelt Rug, Prime Evil's Chest, the Sanctuary Chess set, board, and pieces are now available from Tuuran in Stormwind and Gabbi in Orgrimmar for those players who have pre-purchased the Diablo IV: Lord of Hatred expansion.
+                • Additional copies Hatred's Wolfpelt Rug, Prime Evil's Chest, the Sanctuary Chess set, board, and pieces are now available 
+                  from Tuuran in Stormwind and Gabbi in Orgrimmar for those players who have pre-purchased the Diablo IV: Lord of Hatred 
+                  expansion.
                 • Waterlogged Haranir Pigment Bowl now has a correct placement cost.
             
             Player versus Player
