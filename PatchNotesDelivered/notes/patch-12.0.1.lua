@@ -38,7 +38,7 @@ PatchNotesDelivered_Notes_1201 = {
                     > Fixed an issue allowing Pack Leaders to summon two Beasts with Takedown.
                     > Fixed an issue preventing your Nature's Ally Animal Companion from gaining Beast Cleave from Umbral Reach.
                     > Fixed an issue causing Jagged Wounds to benefit some bleeds multiple times.
-                    > Nature's Ally Animal Companion will now charge Besital Wrath's primary target when summoned.
+                    > Nature's Ally Animal Companion will now charge Bestial Wrath's primary target when summoned.
                     > Nature's Ally Animal Companion will now more reliably gain Bestial Wrath and deal Bestial Wrath's damage.
                 • Mage
                     > Arcane Warding now reduces magic damage taken by 4/8% (was 2/4%).
