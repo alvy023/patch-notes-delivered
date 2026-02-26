@@ -79,9 +79,9 @@ PatchNotesDelivered_Notes_1201 = {
                         + Fixed an issue where Infernal Bolt would not consume Chaotic Inferno.
             
             Housing
-                • Additional copies of Hatred's Wolfpelt Rug, Prime Evil's Chest, the Sanctuary Chess set, board, and pieces are now available 
-                  from Tuuran in Stormwind and Gabbi in Orgrimmar for those players who have pre-purchased the Diablo IV: Lord of Hatred 
-                  expansion.
+                • Additional copies of Hatred's Wolfpelt Rug, Prime Evil's Chest, the Sanctuary Chess set, board, and pieces are now 
+                  available from Tuuran in Stormwind and Gabbi in Orgrimmar for those players who have pre-purchased the 
+                  Diablo IV: Lord of Hatred expansion.
                 • Waterlogged Haranir Pigment Bowl now has a correct placement cost.
             
             Player versus Player
