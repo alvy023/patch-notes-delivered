@@ -68,7 +68,7 @@ PatchNotesDelivered_Notes_1201 = {
             Quests
                 • Creatures in the Midnight introduction that takes you to the Isle of Quel'Danas now have lower health and 
                   deal less damage.
-                • Players should be able to continue handing out fliers to folks during "Mobilize! Enlist! Recruit!” if they leave and then 
+                • Players should be able to continue handing out fliers to folks during "Mobilize! Enlist! Recruit!" if they leave and then 
                   come back to their task.
                 • Fixed an issue where Rage-Riddled Drifter would take a long time to respawn for “Overcoming the Unknown” world quest.
 
