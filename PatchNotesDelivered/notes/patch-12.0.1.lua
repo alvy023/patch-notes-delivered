@@ -9,9 +9,99 @@
 --- Max note length [140] ------------------------------------------------------------------------------------------------------------------
 PatchNotesDelivered_Notes_1201 = {
     version = "12.0.1",
-    build = "66102",
-    hotfix = 5,
+    build = "66220",
+    hotfix = 6,
     gameChangesHotfixes = [[
+        March 2, 2026
+
+    Achievements
+        • A Frayed Scroll is no longer required for Midnight Lore Hunter.
+
+    Delves
+        • Companions will now gather the correct materials in delves.
+
+    Dungeons
+        • The minimum required item-level for joining a public dungeon on Heroic difficulty has been reduced to 211 (was iLvl 214).
+
+    Quests
+        • Fixed an issue causing visual effects to not play during "Take Up Your Gift."
+        • The Relic of Liberation used for “These Violent Delights” no longer requires player level 86.
+        • Fixed an issue preventing players from advancing “The Void Peers Back” in Adventure Mode.
+        • Fixed an issue preventing completion of "Fair Breeze, Light Bloom" for players who opt to complete the Voidstorm campaign before the Eversong campaign.
+
+    Spells
+        • Blessing: Ensorcelling Flame cooldown duration increased, and frequency of effect reduced.
+        • The portal from the Arcantina now returns you to your saved location, rather than Silvermoon.
+
+    Twilight Ascension Event
+        • Materialist Ophinell and Armorer Kalinovan now offer Twilight Ascension event items for Resonance Crystals (was Twilight’s Blade Insignia) in Orgrimmar, Stormwind, and Twilight Highlands. They will be available until the beginning of Midnight Season 1.
+
+March 1, 2026
+
+    Classes
+        • Hunter
+            + Fixed an issue causing Stomp and Wild Thrash to damage enemies through walls.
+        • Mage
+            + Fixed an issue causing Comet Storm to pull enemies through walls without damaging them.
+            + Fixed an issue causing Shatter to pull enemies through walls.
+            + Fixed an issue causing Duality Pyroblasts to pull enemies through walls.
+
+    Delves
+        • Valeera’s maximum level is 45 until Midnight Season 1 starts.
+
+    Dungeons
+        • Voidscar Arena
+            + Fixed an issue where the arena event could fail to progress.
+
+    Items
+        • Contained Stormarion Defender and Vivacious Chloroceros should now appear in the mount collection.
+
+    Prey
+        • Players who were unable to access the Hunt Table in Astalor's Sanctum after completing a Prey quest should once again be able to accept new hunts, as long as they haven’t completed the 4 weekly hunt maximum.
+        • Developers’ notes: There is currently a display bug for those who were affected by the previous issue that may show they have 1 more hunt available than they actually do. This will be fixed with weekly restarts.
+
+    Quests
+        • Creatures in the Midnight introduction that takes you to the Isle of Quel'Danas now have lower health and deal less damage.
+        • Players should be able to continue handing out fliers to folks during "Mobilize! Enlist! Recruit!” if they leave and then come back to their task.
+        • Fixed an issue where Rage-Riddled Drifter would take a long time to respawn for “Overcoming the Unknown” world quest.
+
+    User Interface and Accessibility
+        • To ensure that macro usage aligns with our overall goals for addons, there have been some minor changes made to macro capabilities:
+            > Macros are prevented from setting a target marker on more than 3 units within a very short time.
+            > And the following restrictions only apply while the player is in an active encounter:
+                - Macros are no longer allowed to send chat messages to chat channels that are not exclusive to the group (custom chat channels, guild, communities, etc).
+                - Macros are still allowed to send chat in group-exclusive channels (/raid, /party, /rw, etc), but are prevented from sending multiple messages to those channels within a very short time. In addition, all members of the group must be inside the instance or macro chat will not be allowed in these channels.
+                - Macros are still allowed to send chat in whispers but the whisper target must also be in the instance. Macros are also prevented from sending multiple whispers within a very short time.
+
+February 28, 2026
+
+    Dungeons and Raids
+        • Den of Nalorakk
+            + Resolved an issue that could result in Nalorakk becoming unattackable.
+        • Magisters’ Terrace
+            + Completing the Magisters' Terrace dungeon at any difficulty will now complete the quest “Magisters' Terrace: Homecoming”, even if the player has not completed the first objective to speak with Umbric.
+
+    Items
+        • Fixed a bug causing some Bind-on-Equip items from Midnight content to require a player level lower than intended for the item level of the gear.
+        • Resolved an issue causing some items from Midnight content that were equipped by players to be temporarily unusable.
+        • Items that unintentionally cost 750 Voidlight Marl now cost 25 Marl.
+        • Fixed a bug that could cause War Supply Crate to spawn underground in Eversong Woods.
+
+    Professions
+        • To account for the acquisition of Knowledge in Early Access, two weeks’ worth of Knowledge will be granted to players from activities (Crafting Orders, treasure drops, Patron Orders, gathering) during the first full week of Midnight (March 3-10).
+
+    Quests
+        • Fixed an issue with the Void Beast in "The Line Must Be Drawn Here" sometimes being unkillable, blocking quest progress.
+        • Fixed a bug preventing progress on “Wrath Unleashed”. Players who are stuck on this quest can now abandon and retry the quest to proceed with the story.
+        • Players who leave before completing the "Ethereal Eradication" or "Light's Arsenal" quests should now be able to resume them.
+        • Fixed a bug where Sunbath Schools were not available for "A Fish!".
+        • Fixed an issue during "Abyssus, Abyssum" causing the quest boss to be more difficult than intended.
+        • Moved the location of Empowering Shadow enemies to make them easier to target on “Break the Blade”.
+
+    User Interface
+        • Adjusted the order of some items in the Transmog collection.
+        • The Renown Vendor for Silvermoon Court is now indicated on the zone map while in Eversong Woods.
+
         February 25, 2026
 
             Classes
