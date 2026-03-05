@@ -45,7 +45,7 @@ PatchNotesDelivered_Notes_1201 = {
                       Spellfire Spheres.
                     > Fixed an issue where Comet Storm was usable while Fleeing or Feared.
                     > Fixed an issue causing Scorch to not deal the correct damage when talented into Scald and Heat Shimmer.
-                    > Fixed an issue causing the Fractured Frost to incorrectly reduced Ice Lance's damage.
+                    > Fixed an issue causing the Fractured Frost to incorrectly reduce Ice Lance's damage.
                     > Fixed an issue causing Spontaneous Combustion to grant an incorrect number of Fire Blast charges.
                     > Fixed an issue causing Splitting Ice to strike enemies in breakable crowd control.
                     > Fixed an issue causing Flash Freezeburn's area damage to strike enemies in breakable crowd control.
@@ -84,7 +84,7 @@ PatchNotesDelivered_Notes_1201 = {
                 • Ethereal Energy objects should now be interactable when an Ethereal Tool is equipped even if the Ethereal Disruption event
                   is not currently active.
                 • The Deploy the Defenses user interface for Stormarion Citadel now displays as expected until the timer expires.
-                • Abundance events are now available for all characters in a Warband, once one of them has completed opening 
+                • Abundance events are now available for all characters in a Warband, once one of them has completed the opening 
                   tutorial questline.
                 • Fixed an issue where the Abundance event in Voidstorm was not granting rewards for Abundant Harvests.
                 • Jonas Everdawn in Silvermoon City will now offer "Saltheril's Haven" to invite players to Saltheril's Soiree once they 
