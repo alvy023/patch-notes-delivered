@@ -10,8 +10,148 @@
 PatchNotesDelivered_Notes_1201 = {
     version = "12.0.1",
     build = "66220",
-    hotfix = 8,
+    hotfix = 9,
     gameChangesHotfixes = [[
+        March 4, 2026
+
+            Achievements
+                • Addressed an issue with The Highest Peaks displaying incorrect progress.
+                • Players who have completed Cataclysmic Lumberjack may now properly harvest lumber while remaining mounted in 
+                  Cataclysm zones.
+                • To earn With Flying Colors rewards, players must now complete a The War Within delve of any tier.
+
+            Classes
+                • Death Knight
+                    > Frost
+                        + Remorseless Winter will no longer dismount the player when it deals damage.
+                • Demon Hunter
+                    > Devourer
+                        + Fixed an issue causing Eradicate to become un-castable if it was gained during Metamorphosis and 
+                          Metamorphosis expires.
+                        + Fixed an issue causing the incorrect body type to be shown during Void Metamorphosis' removal animation.
+                • Druid
+                    > Feral, Guardian, Restoration
+                        + Fixed an issue where Nurturing Instinct, Circle of the Heavens, and Call of the Elder Druid were not affecting 
+                          Wrath, Starfire, or Starsurge.
+                • Hunter
+                    > Fixed an issue causing Nature's Ally Animal Companions to provide their Command Pet abilities.
+                    > Increased the consistency of the Pack Leader's Boar's pathing on sloped terrain.
+                    > Tracker's Net is now treated like other breakable crowd controls, where it has a damage threshold before breaking.
+                    > Fixed an issue where many damage dealing effects would not break Tracker's Net.
+                    > Survival
+                        + Fixed an issue preventing a talent tree connection from Intimidation to Cold Feet.
+                • Mage
+                    > Fixed an issue where Reverberate's additional cast was incorrectly generating Splinters, Arcane Salvo stacks, and 
+                      Spellfire Spheres.
+                    > Fixed an issue where Comet Storm was usable while Fleeing or Feared.
+                    > Fixed an issue causing Scorch to not deal the correct damage when talented into Scald and Heat Shimmer.
+                    > Fixed an issue causing the Fractured Frost to incorrectly reduced Ice Lance's damage.
+                    > Fixed an issue causing Spontaneous Combustion to grant an incorrect number of Fire Blast charges.
+                    > Fixed an issue causing Splitting Ice to strike enemies in breakable crowd control.
+                    > Fixed an issue causing Flash Freezeburn's area damage to strike enemies in breakable crowd control.
+                    > Fixed an issue causing Flash Freezeburn's area damage to inconsistently damage the correct number of units.
+                    > Fixed an issue causing Controlled Instinct's area damage to inconsistently damage the correct number of units.
+                    > Fixed an issue causing Splintering Ray's area damage to inconsistently damage the correct number of units.
+                    > Fixed an issue allowing Arcane Surge to be usable in the Assisted Rotation for Arcane Mages.
+                    > Chilled effect no longer shows "Immune" floating combat text when an enemy is not crowd-controllable.
+                • Monk
+                    > Brewmaster
+                        + Empty the Cellar now has a shorter range and should no longer target out of combat creatures.
+                    > Windwalker
+                        + Spells such as Fists of Fury should now consistently hit hovering enemies such as mana wyrms.
+                • Rogue
+                    > Fixed an issue that caused Airborne Irritant to incorrectly apply its old AoE effect to Blind. The effect now matches 
+                      the current and intended talent description.
+                    > Assassination
+                        + Crimson Tempest no longer generates a combo point if it hits no targets.
+                • Shaman
+                    > Enhancement
+                        + Resolved an issue allowing Windfury Weapon to be cast on both Main Hand and Off-hand weapons at the same time.
+                        + Resolved an issue causing Arc Discharge to display a 20% increase to Chain Lightning damage increase, rather than 
+                          the intended 40%.
+                        + Resolved an issue causing Arc Discharge to be consumed by Lightning Bolt.
+                        + Ride the Lightning now reduces Chain Lightning’s effectiveness by 20% per jump, as intended.
+                        + Primordial Storm has been added to the Single-Button Assistant.
+                • Warlock
+                    > Fixed an issue where Blight of Tongues and Weakness would not reset on encounter wipe.
+                    > Fixed an issue where Shard Instability would be consumed if activated while casting Unstable Affliction.
+
+            Enemies and NPCs
+                • Players can now engage in battle with Voidseer Orivane as expected.
+                • Territorial Petalwings should no longer evade when engaged in combat.
+
+            Events
+                • Ethereal Energy objects should now be interactable when an Ethereal Tool is equipped even if the Ethereal Disruption event
+                  is not currently active.
+                • The Deploy the Defenses user interface for Stormarion Citadel now displays as expected until the timer expires.
+                • Abundance events are now available for all characters in a Warband, once one of them has completed opening 
+                  tutorial questline.
+                • Fixed an issue where the Abundance event in Voidstorm was not granting rewards for Abundant Harvests.
+                • Jonas Everdawn in Silvermoon City will now offer "Saltheril's Haven" to invite players to Saltheril's Soiree once they 
+                  have unlocked World Quests and reached level 90.
+
+            Housing
+                • Players on Midnight Epic Edition can now purchase additional copies of the eight Epic Edition decor items from 
+                  Dennia Silvertongue in Silvermoon City.
+                • Harvesting lumber now provides a small amount of experience.
+                • The decor Fungal Pergola can now be placed inside player houses.
+
+            Items
+                • Fixed an issue with Void Execution Mandate where it did not trigger a shared cooldown with other trinkets.
+                • Rare quality profession tools and profession accessories are now Bind-on-Equip (was Bind-on-Pickup).
+                • Amani Extract Potion healing increased by 100%.
+
+            Player versus Player
+                • Resolved a Slayer’s Rise issue preventing players from respawning at the Shenzar Refinery graveyard.
+                • Vicious Flask of Honor, Vicious Flask of Manifested Fury, Vicious Flask of the Wrecking Ball, and 
+                  Vicious Flask of Classical Spirits no longer work above level 80.
+                • Rogue
+                    > Fixed a bug preventing Hemotoxin from functioning.
+                • Shaman
+                    > Resolved an issue causing the Shamanism PvP talent to not function under the effects of Sated.
+
+            Prey
+                • Corrected an issue where the starting location of the Power of Anguish quest was not visible on the map.
+                • Increased the amount of Experience earned by completing Prey quests, including Prey-specific world quests.
+
+            Professions
+                • Enchanting
+                    > Illusory Adornments no longer replace shoulder enchants.
+                    > Increased the stats granted by Midnight ring enchants.
+
+            Quests
+                • Players who are progressing through The War Within recap at level 81+ can now enter The Rookery and 
+                  complete "Calling the Stormriders".
+                • The “To Be Changed” questline in Voidstorm is now available for characters who have not completed the main campaign.
+                • Corrected the starting location on the map for "Watch the Den".
+                • On "One Will Not Kill", Knife Priestess Hezzia will now properly die upon her spell's expiration.
+                • Fixed an issue that could cause players to be unable to progress the quest “Champions of Quel’Danas”.
+                • Fixed an issue where abandoning “One by One”, “Intercepted”, or “Keys Are Optional” could permanently prevent Valeera from
+                  appearing, blocking progression on “The Crimson Rogue” questline.
+                • Resolved an issue where Risen Witherbark did not provide credit for "The Crypt in the Mist."
+                • Players above level 80 should now be able to access the scenario "A Light in the Dark" while on the quest of the 
+                  same name.
+                • Resolved an issue where two sets of Zul'jarra and Liadrin could be visible on "Brutal Feast."
+                • Resolved an issue where Witherbark Visitors were not visible to players prior to the quest "I Have a Permit."
+                • Resolved an issue where the conversation with Vun'zarah on "Coals of a Dead Loa" could be triggered repeatedly.
+                • Fixed an issue where warlocks could become unable to complete “Pardon the Interruption”.
+                • "Truth of the Past" should now be available to players who have reached Voidstorm.
+                • Fixed an issue preventing glyph hunters in Eversong Woods from finding the Shining Span Skyriding glyph 
+                  for “Eversong Woods Glyph Hunter”.
+                • Fixed a bug where players were blocked from using the Discordant Tune on Snapdragons 
+                  for "Put a Little Snap in Their Step".
+                • Players who completed “Legends of the Haranir” in the current week and then pick up "Legendary Prosperity" will now have 
+                  "Legendary Prosperity" automatically complete.
+                • Players on the Zul'Aman campaign quest “Blade Shattered” will no longer receive credit for other players killing Mor'duun.
+                  You have to do it yourself.
+
+            Renown and Reputation
+                • Fixed a bug that prevented players from earning Renown above rank 11.
+
+            World
+                • The Camp Stonewash innkeeper now provides rest and instant logout as intended.
+                • Fixed a spot where players could get stuck on a tree in Quel’danas.
+
         March 2, 2026
 
             Achievements
