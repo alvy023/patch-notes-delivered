@@ -9,8 +9,8 @@
 --- Max note length [140] ------------------------------------------------------------------------------------------------------------------
 PatchNotesDelivered_Notes_1201 = {
     version = "12.0.1",
-    build = "66220",
-    hotfix = 9,
+    build = "66263",
+    hotfix = 10,
     gameChangesHotfixes = [[
         March 4, 2026
 
