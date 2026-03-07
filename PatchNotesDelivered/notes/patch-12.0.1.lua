@@ -10,131 +10,148 @@
 PatchNotesDelivered_Notes_1201 = {
     version = "12.0.1",
     build = "66263",
-    hotfix = 10,
+    hotfix = 11,
     gameChangesHotfixes = [[
         March 6, 2026
 
-    Characters
-        • Temporarily set the Haranir Druid mount form to use the stag model.
-            > Developers’ notes: This change was made due to a visual bug that caused players being carried by the Druid sable mount to sit at the base of the model rather than on its back. We’re working on a fix to restore the sable as an option that can be used by the mount form. For this fix to be applied, the scale of the sable will increase slightly to avoid clipping issues and to accommodate some of the larger player-races.
-        • Warlocks should now be able to use Black Incubus after completing the quest “Ambition's Reward”.
+            Characters
+                • Temporarily set the Haranir Druid mount form to use the stag model.
+                    > Developers’ notes: This change was made due to a visual bug that caused players being carried by the Druid sable mount
+                      to sit at the base of the model rather than on its back. We’re working on a fix to restore the sable as an option that
+                      can be used by the mount form. For this fix to be applied, the scale of the sable will increase slightly to avoid 
+                      clipping issues and to accommodate some of the larger player-races.
+                • Warlocks should now be able to use Black Incubus after completing the quest “Ambition's Reward”.
 
-    Classes
-        • Death Knight
-            > Blood
-                + Resolved an issue causing Abomination Limb to not grant Bone Shield while talented into Bone Collector.
-                + Consumption now goes on cooldown if the cast is interrupted.
-            > Unholy
-                + Resolved an issue causing Unholy Armaments to summon Trollbane and Whitemane for 6 seconds with Pillar of Frost and Dark Transformation respectively.
-        • Druid
-            > Guardian
-                + Echo of Raze now respects line of sight.
-                + The global cooldown incurred by Ravage is now correctly 1.5 seconds (was 1 second).
-                + Only one Dread Shade from Waking Nightmare may be active at a time.
-                + Wild Guardian's echoed casts of Maul, Raze and Ravage should now be cast at correct effectiveness.
-        • Monk
-            • Fixed an issue that caused Strength of the Black Ox to not appear for Windwalker Monks in their cooldown manager.
-            • Fixed an issue that caused Touch of Death to not be usable with multiple monks present.
-        • Paladin
-            • Fixed an issue that could cause Beacon of Light to script error if the paladin was not present.
-            > Retribution
-                + Fixed an issue that caused Eternal Flame to be weaker than intended.
-                + Resolved an issue causing Divine Resonance to not function with Hammer of Wrath.
+            Classes
+                • Death Knight
+                    > Blood
+                        + Resolved an issue causing Abomination Limb to not grant Bone Shield while talented into Bone Collector.
+                        + Consumption now goes on cooldown if the cast is interrupted.
+                    > Unholy
+                        + Resolved an issue causing Unholy Armaments to summon Trollbane and Whitemane for 6 seconds with Pillar of Frost 
+                          and Dark Transformation respectively.
+                • Druid
+                    > Guardian
+                        + Echo of Raze now respects line of sight.
+                        + The global cooldown incurred by Ravage is now correctly 1.5 seconds (was 1 second).
+                        + Only one Dread Shade from Waking Nightmare may be active at a time.
+                        + Wild Guardian's echoed casts of Maul, Raze and Ravage should now be cast at correct effectiveness.
+                • Monk
+                    > Fixed an issue that caused Strength of the Black Ox to not appear for Windwalker Monks in their cooldown manager.
+                    > Fixed an issue that caused Touch of Death to not be usable with multiple monks present.
+                • Paladin
+                    > Fixed an issue that could cause Beacon of Light to script error if the paladin was not present.
+                    > Retribution
+                        + Fixed an issue that caused Eternal Flame to be weaker than intended.
+                        + Resolved an issue causing Divine Resonance to not function with Hammer of Wrath.
 
-    Dungeons
-        • Follower companion damage in Follower Dungeons increased by 10%. Follower damage against non-boss enemies increased by an additional 25-30%.
-        • Magisters' Terrace
-            > Degentrius
-                + Number of Void Torrents reduced to 2 on Mythic difficulty (was 4).
-        • Maisara Caverns
-            • Ritual Concoction duration increased to 30 minutes (was 10 minutes), Nature damage dealt to enemies reduced by 40%, and now persists through death.
-        • The Blinding Vale
-            > Lightblossom Trinity
-                + Lightbloom Overgrowth periodic damage reduced by 66% on Mythic difficulty, and Light-Gorged damage buff increased to 50% per stack (was 15% per stack).
-            > Ikuzz the Light Hunter
-                + Bloodthorn Roots periodic damage reduced by 25%.
-            > Ziekket Lightspawn
-                + Lasher health reduced by 12.5% on Mythic difficulty.
-        • Windrunner Spire
-            • Commander Kroluk should no longer drop Falling Rubble in an unintended location.
-            • Territorial Dragonhawk Fire Spit cooldown increased by 5 seconds.
-        • Voidscar Arena
-            • Portals should more reliably deliver players to their destination.
+            Dungeons
+                • Follower companion damage in Follower Dungeons increased by 10%. Follower damage against non-boss enemies increased by 
+                  an additional 25-30%.
+                • Magisters' Terrace
+                    > Degentrius
+                        + Number of Void Torrents reduced to 2 on Mythic difficulty (was 4).
+                • Maisara Caverns
+                    > Ritual Concoction duration increased to 30 minutes (was 10 minutes), Nature damage dealt to enemies reduced by 40%, 
+                      and now persists through death.
+                • The Blinding Vale
+                    > Lightblossom Trinity
+                        + Lightbloom Overgrowth periodic damage reduced by 66% on Mythic difficulty, and Light-Gorged damage buff increased
+                          to 50% per stack (was 15% per stack).
+                    > Ikuzz the Light Hunter
+                        + Bloodthorn Roots periodic damage reduced by 25%.
+                    > Ziekket Lightspawn
+                        + Lasher health reduced by 12.5% on Mythic difficulty.
+                • Windrunner Spire
+                    > Commander Kroluk should no longer drop Falling Rubble in an unintended location.
+                    > Territorial Dragonhawk Fire Spit cooldown increased by 5 seconds.
+                • Voidscar Arena
+                    > Portals should more reliably deliver players to their destination.
 
-    Items
-        • Void-Touched Satchel of Cooperation can now be opened at level 80.
-        • Crucible of Erratic Energies now activates Voidlust more often, and Voidlust grants the intended amount of Critical Strike.
-        • Potent Healing Potion now has a maximum value at level 90.
-        • Twilight Material in The Shadow Enclave delve is no longer mailed to the player if their inventory is full when collected.
+            Items
+                • Void-Touched Satchel of Cooperation can now be opened at level 80.
+                • Crucible of Erratic Energies now activates Voidlust more often, and Voidlust grants the intended amount 
+                  of Critical Strike.
+                • Potent Healing Potion now has a maximum value at level 90.
+                • Twilight Material in The Shadow Enclave delve is no longer mailed to the player if their inventory is full when collected.
 
-    Player versus Player
-        • Vicious Thalassian Flask of Honor is no longer removed upon entering an arena match.
-        • War Mode now correctly increases the amount of Voidlight Marl earned from world quests.
+            Player versus Player
+                • Vicious Thalassian Flask of Honor is no longer removed upon entering an arena match.
+                • War Mode now correctly increases the amount of Voidlight Marl earned from world quests.
 
-    Quests
-        • Completing World Quests in Voidstorm will progress the objective for "Hope in the Darkest Corners".
-        • Nerunda should now be properly visible for players when turning in “Healing Homeward” in Zul'Aman.
+            Quests
+                • Completing World Quests in Voidstorm will progress the objective for "Hope in the Darkest Corners".
+                • Nerunda should now be properly visible for players when turning in “Healing Homeward” in Zul'Aman.
 
-    Reputation
-        • Fixed an issue where a player-character could lose reputation when race-changing to a Haranir.
+            Reputation
+                • Fixed an issue where a player-character could lose reputation when race-changing to a Haranir.
 
-    Sound
-        • Adjusted the volume and blending of sounds in The Sunwell to make voiceovers more understandable.
+            Sound
+                • Adjusted the volume and blending of sounds in The Sunwell to make voiceovers more understandable.
 
-March 5, 2026
+        March 5, 2026
 
-    Achievements
-        • The Abandoned Ritual Skull treasure has been removed as a criteria for Treasures of Zul'Aman.
+            Achievements
+                • The Abandoned Ritual Skull treasure has been removed as a criteria for Treasures of Zul'Aman.
 
-    Classes
-        • Druid
-            > Balance
-                + Casting a Starfire that is made instant by Ascendant Eclipses Rank 1 no longer consumes Owlkin Frenzy, if active.
-            > Feral
-                + The Moonfire buff or bar will now correctly activate on the Cooldown Manager when you have learned Lunar Inspiration.
-        • Evoker
-            > Devastation
-                + Flameshaper: Dragonrage now correctly interacts with Essence Well, increasing Fire Breath's chance to cause an Essence Burst to 100% while Dragonrage is active.
-                + Scalecommander: Mass Disintegrate should now more-reliably hit multiple Hostile enemies near the primary target.
-        • Monk
-            > Windwalker
-                + Fixed an issue that caused Zenith to not increase the cooldown reduction from Blackout Kick.
-        • Rogue
-            > Outlaw
-                + Fixed a bug that caused Between the Eyes with Supercharger to consume two supercharged combo points when Gravedigger Rank 1 generated an extra stack.
-        • Shaman
-            > Elemental
-                + Corrected an issue where Master of the Elements was not affecting the damage of all Flame Shocks if you activated or gained Ascendance with Master of the Elements active as intended.
-            > Enhancement
-                + Totemic: Resolved an issue causing Voltaic Blaze to consume Whirling Earth.
+            Classes
+                • Druid
+                    > Balance
+                        + Casting a Starfire that is made instant by Ascendant Eclipses Rank 1 no longer consumes Owlkin Frenzy, if active.
+                    > Feral
+                        + The Moonfire buff or bar will now correctly activate on the Cooldown Manager when you have 
+                          learned Lunar Inspiration.
+                • Evoker
+                    > Devastation
+                        + Flameshaper: Dragonrage now correctly interacts with Essence Well, increasing Fire Breath's chance to cause an 
+                          Essence Burst to 100% while Dragonrage is active.
+                        + Scalecommander: Mass Disintegrate should now more-reliably hit multiple Hostile enemies near the primary target.
+                • Monk
+                    > Windwalker
+                        + Fixed an issue that caused Zenith to not increase the cooldown reduction from Blackout Kick.
+                • Rogue
+                    > Outlaw
+                        + Fixed a bug that caused Between the Eyes with Supercharger to consume two supercharged combo points when 
+                          Gravedigger Rank 1 generated an extra stack.
+                • Shaman
+                    > Elemental
+                        + Corrected an issue where Master of the Elements was not affecting the damage of all Flame Shocks if you activated 
+                          or gained Ascendance with Master of the Elements active as intended.
+                    > Enhancement
+                        + Totemic: Resolved an issue causing Voltaic Blaze to consume Whirling Earth.
 
-    Dungeons
-        • Den of Nalorakk
-            • Grizzled Warbringer's Primal Echo debuff duration reduced from 30 sec to 15s
-            • Addressed an issue where Nalorakk can get stuck in combat with Zul'jarra after all players are defeated during in the encounter
-        • Voidscar Arena
-            • Vexaroth's Explosive Spheres now only damages players inside the area trigger upon contact
+            Dungeons
+                • Den of Nalorakk
+                    > Grizzled Warbringer's Primal Echo debuff duration reduced from 30 sec to 15s
+                    > Addressed an issue where Nalorakk can get stuck in combat with Zul'jarra after all players are defeated during 
+                      the encounter.
+                • Voidscar Arena
+                    > Vexaroth's Explosive Spheres now only damages players inside the area trigger upon contact.
 
-    Events
-        • [With Weekly Reset on March 10] The Legends of the Haranir event now has an account-wide lockout, allowing participation once per week per account (was once per character).
+            Events
+                • [With Weekly Reset on March 10] The Legends of the Haranir event now has an account-wide lockout, allowing participation 
+                  once per week per account (was once per character).
 
-    Items
-        • Skilled Preyseeker's Knapsack can now be deleted from your inventory.
+            Items
+                • Skilled Preyseeker's Knapsack can now be deleted from your inventory.
 
-    Professions
-        • Enchanting
-            • Fixed a bug preventing the Flames of the Sin’dorei enchant from doing its intended amount of damage. The tooltip will be corrected at a later time.
+            Professions
+                • Enchanting
+                    > Fixed a bug preventing the Flames of the Sin’dorei enchant from doing its intended amount of damage. The tooltip will
+                      be corrected at a later time.
 
-    Quests
-        • Fixed an issue where Hammerfall peons were not providing quest credit for “A Humble Servant”.
-        • “Flicker in the Dark” should now complete for players who die or disconnect after subduing T'era.
-        • Towering Ultradon Talon is now significantly more likely to be found on the quest "One Cruel Implement".
-        • Fixed an issue where quests sending you to Boralus (e.g. “Remnant of Azeroth”) would direct you to go into the Silvermoon portal in Stormwind's portal room.
-        • “Down the Rootways” should no longer port players out of the area too soon.
-        • Fixed an issue where Alonsus Faol was not creating a portal for “The Sunwalker Path”.
+            Quests
+                • Fixed an issue where Hammerfall peons were not providing quest credit for “A Humble Servant”.
+                • “Flicker in the Dark” should now complete for players who die or disconnect after subduing T'era.
+                • Towering Ultradon Talon is now significantly more likely to be found on the quest "One Cruel Implement".
+                • Fixed an issue where quests sending you to Boralus (e.g. “Remnant of Azeroth”) would direct you to go into the Silvermoon 
+                  portal in Stormwind's portal room.
+                • “Down the Rootways” should no longer port players out of the area too soon.
+                • Fixed an issue where Alonsus Faol was not creating a portal for “The Sunwalker Path”.
 
-    User Interface
-        • Fixed an issue causing the Adventure Journal to display an entry for the quest “Delves: Worldwide Research” when the player is not currently eligible for the quest.
+            User Interface
+                • Fixed an issue causing the Adventure Journal to display an entry for the quest “Delves: Worldwide Research” when the 
+                  player is not currently eligible for the quest.
 
         March 4, 2026
 
