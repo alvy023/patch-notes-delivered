@@ -10,7 +10,7 @@
 PatchNotesDelivered_Notes_1201 = {
     version = "12.0.1",
     build = "66263",
-    hotfix = 11,
+    hotfix = 12,
     gameChangesHotfixes = [[
         March 6, 2026
 
