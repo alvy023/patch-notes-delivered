@@ -14,36 +14,37 @@ PatchNotesDelivered_Notes_1201 = {
     gameChangesHotfixes = [[
         March 9, 2026
 
-        Classes
-            • Evoker
-                > Preservation
-                    + Fixed an issue where Merithra's Blessing would not consistently be stored into Stasis.
-                    + Releasing Merithra's Blessing from Stasis no longer consumes the proc for Merithra's Blessing.
-            • Priest
-                > Discipline
-                    + Corrected an issue where several talents and Mastery: Grace did not properly affect the healing of Plea.
-            • Shaman
-                > Restoration
-                    + Corrected several issues where the bonus 50% value Healing Wave during Ascendance did not properly retain bonus
-                      healing modifiers from the Unleash Life talent.
+            Classes
+                • Evoker
+                    > Preservation
+                        + Fixed an issue where Merithra's Blessing would not consistently be stored into Stasis.
+                        + Releasing Merithra's Blessing from Stasis no longer consumes the proc for Merithra's Blessing.
+                • Priest
+                    > Discipline
+                        + Corrected an issue where several talents and Mastery: Grace did not properly affect the healing of Plea.
+                • Shaman
+                    > Restoration
+                        + Corrected several issues where the bonus 50% value Healing Wave during Ascendance did not properly retain bonus
+                        healing modifiers from the Unleash Life talent.
 
-        Items
-            • Personal Key to the Arcantina adjusted to have a 15-minute cooldown and only port to the Arcantina. Added a two-way portal
-              to the Arcantina in Wayfarer's Rest for players who have obtained the key.
+            Items
+                • Personal Key to the Arcantina adjusted to have a 15-minute cooldown and only port to the Arcantina. Added a two-way portal
+                  to the Arcantina in Wayfarer's Rest for players who have obtained the key.
 
-        Player versus Player
-            • Honor gains from Training Grounds matches reduced by 50%.
-            • Silences and Disarms no longer incorrectly cause Root effects to be placed on diminishing returns.
-            • Increased the likelihood of Slayer's Rise being chosen when queueing for random Epic Battlegrounds.
+            Player versus Player
+                • Honor gains from Training Grounds matches reduced by 50%.
+                • Silences and Disarms no longer incorrectly cause Root effects to be placed on diminishing returns.
+                • Increased the likelihood of Slayer's Rise being chosen when queueing for random Epic Battlegrounds.
 
-        Professions
-            • Patrons will no longer order Alchemy or Tailoring crafts that have a cooldown.
-            • Fixed an issue where the Prismatic Focusing Iris was doing less damage than intended.
-            • Fixed an issue causing the Primal Spore Binding to do less damage and healing than intended.
+            Professions
+                • Patrons will no longer order Alchemy or Tailoring crafts that have a cooldown.
+                • Fixed an issue where the Prismatic Focusing Iris was doing less damage than intended.
+                • Fixed an issue causing the Primal Spore Binding to do less damage and healing than intended.
 
-        User Interface
-            • Glowing Moth minimap icon in Harandar updated to prevent confusion with treasure markers.
-            • Updated the icons for Misplaced Tome, Ranger's Cache, Coalesced Light, and Dead Drop repeatable treasures in Eversong Woods.
+            User Interface
+                • Glowing Moth minimap icon in Harandar updated to prevent confusion with treasure markers.
+                • Updated the icons for Misplaced Tome, Ranger's Cache, Coalesced Light, and Dead Drop repeatable treasures 
+                  in Eversong Woods.
 
         March 6, 2026
 
