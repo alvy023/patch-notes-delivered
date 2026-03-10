@@ -26,6 +26,7 @@ and this project adheres to a specific versioning schema: `A.B.C` where:
 [1.12.2]: https://github.com/alvy023/patch-notes-delivered/releases/tag/v1.12.2
 
 ## [1.12.20] - 2026-03-10
+### Added
 - Added 12.0.1 notes for March 9
 ### Changed
 - Updated TOC to 1.12.20
