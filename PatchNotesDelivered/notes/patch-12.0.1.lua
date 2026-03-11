@@ -9,9 +9,52 @@
 --- Max note length [140] ------------------------------------------------------------------------------------------------------------------
 PatchNotesDelivered_Notes_1201 = {
     version = "12.0.1",
-    build = "66263",
-    hotfix = 12,
+    build = "66337",
+    hotfix = 13,
     gameChangesHotfixes = [[
+        March 10, 2026
+
+            Classes
+                • Demon Hunter
+                    > Fixed an issue that caused Swallowed Anger (Talent) text to incorrectly claim it generates 1 Fury when it actually
+                      generates 20 Fury.
+                • Priest
+                    > Shadow
+                        + Fixed an issue causing Shadowy Apparitions to fail to critically strike.
+                        + Fixed an issue that could cause Mind Flay to be unable to be tracked in the Cooldown Manager.
+                • Warlock
+                    > Demonology
+                        + Fixed an issue where Fel Armaments was not reducing the cooldown of Felstorm.
+
+            Dungeons
+                • Murder Row
+                    > Xathuux the Annihilator should more reliably appear holding his axe.
+
+            Events
+                • Resolved issues that made Abysslick at the Stormarion Citadel difficult to loot when dead.
+
+            Items
+                • Fixed a bug that could prevent players from gathering Crystallized Resin Fragments.
+                • Luminous Moth collection status is now shared across your warband.
+                • Equipment from Rare creatures is now correctly awarded as Warbound at max level.
+
+            Player versus Player
+                • Blessings of Abundance will no longer persist into PvP Battlegrounds and Arenas.
+                • Fixed an issue where players were not being scaled to the minimum item level of 258 in the Battle for Wintergrasp.
+
+            Professions
+                • Artisan's Consortium Payouts from Midnight Patron Orders now have a small chance to contain Petrified Roots.
+                • Herbalism
+                    > Lush Tranquility Bloom now properly grants Knowledge when gathered for the first time.
+                • Tailoring
+                    > The difficulty for Courtly Shoulders and Courtly Robes has been reduced.
+
+            Quests
+                • Fixed a bug preventing the completion of “Healing Homeward”.
+
+            User Interface
+                • Resolved an issue sometimes causing the Prey hub icon on the zone map to display incorrect rewards.
+
         March 9, 2026
 
             Classes
