@@ -44,10 +44,10 @@ PatchNotesDelivered_Notes_1201 = {
 
             Professions
                 • Artisan's Consortium Payouts from Midnight Patron Orders now have a small chance to contain Petrified Roots.
-                > Herbalism
-                    + Lush Tranquility Bloom now properly grants Knowledge when gathered for the first time.
-                > Tailoring
-                    + The difficulty for Courtly Shoulders and Courtly Robes has been reduced.
+                • Herbalism
+                    > Lush Tranquility Bloom now properly grants Knowledge when gathered for the first time.
+                • Tailoring
+                    > The difficulty for Courtly Shoulders and Courtly Robes has been reduced.
 
             Quests
                 • Fixed a bug preventing the completion of “Healing Homeward”.
