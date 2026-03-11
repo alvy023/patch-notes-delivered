@@ -30,7 +30,7 @@ and this project adheres to a specific versioning schema: `A.B.C` where:
 ### Added
 - Added 12.0.1 notes for March 10
 ### Changed
-- Update TOC to 1.12.21
+- Updated TOC to 1.12.21
 
 ## [1.12.20] - 2026-03-10
 ### Added
