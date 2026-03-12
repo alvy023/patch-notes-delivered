@@ -44,11 +44,11 @@ PatchNotesDelivered_Notes_1201 = {
                         + Fixed an issue where players would sometimes accidentally consume 2 charges of Time Dilation.
                 • Monk
                     > Mistweaver
-                        + Added Dance of the Wind and Transcendence to the cooldown manager.
+                        + Added Dance of the Wind and Transcendence to the Cooldown Manager.
                         + Fixed an issue that prevented Sheilun's Gift from activating Courage of the White Tiger.
                 • Shaman
                     > Enhancement
-                        + Totemic: Resolved an issue causing Sliptstream Sundering to benefit from Whirling Earth.
+                        + Totemic: Resolved an issue causing Slipstream Sundering to benefit from Whirling Earth.
                         + Resolved an issue causing Slipstream Sundering to summon a Totem of Wrath.
 
             Dungeons
@@ -62,7 +62,7 @@ PatchNotesDelivered_Notes_1201 = {
                         + Fingers of Gul'dan's radius reduced to 6 yards (was 8 yards).
                 • Voidscar Arena
                     > Protective Turtle should more reliably cast Shell Guard.
-                    > Atroxus' Lingering Poison now only effects players.
+                    > Atroxus' Lingering Poison now only affects players.
 
             Items
                 • Increased the drop rates of Sparks of War in Eversong Woods, Zul'Aman, and Harandar while in War Mode.
