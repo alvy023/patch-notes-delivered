@@ -10,8 +10,78 @@
 PatchNotesDelivered_Notes_1201 = {
     version = "12.0.1",
     build = "66337",
-    hotfix = 13,
+    hotfix = 14,
     gameChangesHotfixes = [[
+        March 11, 2026
+
+            Classes
+                • Druid
+                    > Guardian
+                        + The global cooldown incurred by Sundering Roar is now affected by haste.
+                        + Sundering Roar requires Bear Form.
+                        + Fixed an issue where Echo of Maul was not applying Vicious Brambles without Rank 4 of Wild Guardian.
+                        + Fixed an issue where Vicious Brambles from Echo of Maul, Echo of Raze, and Echo of Ravage were dealing an
+                          incorrect amount of damage.
+                        + Echo of Maul now casts with the correct delay.
+                        + Fixed an issue where Raze and Ravage were dealing incorrect damage to secondary targets.
+                        + Fixed an issue where Echoes of Maul, Raze or Ravage were consuming Ravage procs.
+                        + Fixed an issue where extra casts of Maul, Raze or Ravage from Celestial Might were consuming Ravage procs.
+                        + Fixed an issue where extra casts of Maul, Raze or Ravage from Celestial Might were consuming extra Rage with
+                          Killing Blow.
+                        + Casts of Maul, Raze and Ravage from Celestial Might now respect damage increases from Killing Blow.
+                        + Fixed an issue where Mangle was not generating additional Rage while Red Moon was active.
+                        + Lunar Wrath should now be trackable via the Cooldown Manager.
+                        + Moonfire cast by Galactic Guardian with Red Moon talented should now display the correct visual.
+                        + Red Moon is now shown on enemy nameplates.
+                        + Moonless Night now procs from casts echoed by Wild Guardian and Celestial Might.
+                    > Restoration
+                        + Dash, Tiger Dash, Forestwalk, Ursine Vigor, Matted Fur, and Frenzied Regeneration can now be tracked in the
+                          Cooldown Manager.
+                        + Wildstalker: Strategic Infusion, Bloodseeker Vines, and Root Network can now be tracked in the Cooldown Manager.
+                        + Keeper of the Grove: Power of Nature can now be tracked in the Cooldown Manager.
+                • Evoker
+                    > Preservation
+                        + Fixed an issue where players would sometimes accidentally consume 2 charges of Time Dilation.
+                • Monk
+                    > Mistweaver
+                        + Added Dance of the Wind and Transcendence to the Cooldown Manager.
+                        + Fixed an issue that prevented Sheilun's Gift from activating Courage of the White Tiger.
+                • Shaman
+                    > Enhancement
+                        + Totemic: Resolved an issue causing Slipstream Sundering to benefit from Whirling Earth.
+                        + Resolved an issue causing Slipstream Sundering to summon a Totem of Wrath.
+
+            Dungeons
+                • The Blinding Vale
+                    > Ziekket
+                        + Fluorescent Outburst's damage reduced by 50%.
+                        + Lightbloom's Essence movement speed reduced by 33%.
+                • Murder Row
+                    > Lithiel Cinderfury
+                        + Felfire Core's impact radius reduced to 8 yards (was 12 yards).
+                        + Fingers of Gul'dan's radius reduced to 6 yards (was 8 yards).
+                • Voidscar Arena
+                    > Protective Turtle should more reliably cast Shell Guard.
+                    > Atroxus' Lingering Poison now only affects players.
+
+            Items
+                • Increased the drop rates of Sparks of War in Eversong Woods, Zul'Aman, and Harandar while in War Mode.
+
+            Player versus Player
+                • Fixed an issue where the PvP combat dummies in Silvermoon City would not activate PvP talents.
+                • Due to an issue with the Shado-Pan Showdown map, we've temporarily changed this week's Brawl to Temple of Hotmogu.
+                  Shado-Pan Showdown will return!
+
+            Professions
+                • Herbalism
+                    > Vengeful Lashers that appear when gathering Wild herbalism nodes in Zul'Aman will now always drop herbs for the
+                      gathering herbalist. Your Perception stat will still contribute towards a chance to get even more herbs from them.
+
+            Quests
+                • Fixed a bug allowing players to damage other players in war mode on "Special Assignment: Push Back the Light."
+                • Fixed an issue preventing players from turning in “A Boyhood Dream”, “Argent Call: The Trial of the Crypt”, and
+                  “Argent Call: The Noxious Blade” to Maxwell Tyrosus in Eastern Plaguelands.
+
         March 10, 2026
 
             Classes
