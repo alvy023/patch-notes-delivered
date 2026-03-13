@@ -14,49 +14,50 @@ PatchNotesDelivered_Notes_1201 = {
     gameChangesHotfixes = [[
         March 12, 2026
 
-    Achievements
-        • Gotta Hunt Them All progress is now account-wide.
-        • Fixed a bug preventing completion of the Zul'Aman achievement A Most Violent Loa.
+            Achievements
+                • Gotta Hunt Them All progress is now account-wide.
+                • Fixed a bug preventing completion of the Zul'Aman achievement A Most Violent Loa.
 
-    Classes
-        • Death Knight
-            > Army of the Dead Lesser Ghouls are now only visible to the Death Knight.
-        • Demon Hunter
-            > Devourer
-                + Annihilator: Fixed an issue that could prevent some Voidfall Meteors from falling if your initial target died.
-            > Havoc
-                + Fixed an issue that could cause Glaive Tempest's effect to fail if triggered while moving.
-                + Fixed an issue that allowed Inertia's effect to apply after its triggering buff had expired.
-                + Fixed an issue that prevented Deflecting Dance from reapplying its effect if Blade Dance was activated twice in a row with
-                  high amounts of Haste.
-        • Druid
-            > Guardian
-                + Fixed an issue where The Eternal Moon did not correctly increase the duration of Lunar Beam.
-        • Rogue
-            > Subtlety
-                + Ancient Arts triggered effect can now be tracked in the Cooldown Manager.
+            Classes
+                • Death Knight
+                    > Army of the Dead Lesser Ghouls are now only visible to the Death Knight.
+                • Demon Hunter
+                    > Devourer
+                        + Annihilator: Fixed an issue that could prevent some Voidfall Meteors from falling if your initial target died.
+                    > Havoc
+                        + Fixed an issue that could cause Glaive Tempest's effect to fail if triggered while moving.
+                        + Fixed an issue that allowed Inertia's effect to apply after its triggering buff had expired.
+                        + Fixed an issue that prevented Deflecting Dance from reapplying its effect if Blade Dance was activated twice in a 
+                          row with high amounts of Haste.
+                • Druid
+                    > Guardian
+                        + Fixed an issue where The Eternal Moon did not correctly increase the duration of Lunar Beam.
+                • Rogue
+                    > Subtlety
+                        + Ancient Arts triggered effect can now be tracked in the Cooldown Manager.
 
-    Delves
-        • Enraged Ultradon's Blood Frenzy can now be dispelled.
+            Delves
+                • Enraged Ultradon's Blood Frenzy can now be dispelled.
 
-    Non-player Characters
-        • Void Researcher Anomander and Void Researcher Aemely will now purchase your items.
+            Non-player Characters
+                • Void Researcher Anomander and Void Researcher Aemely will now purchase your items.
 
-    Player versus Player
-        • Fixed an issue where PvP was unintentionally enabled in the new and returning player tutorial area.
+            Player versus Player
+                • Fixed an issue where PvP was unintentionally enabled in the new and returning player tutorial area.
 
-    Professions
-        • Profession tables in Eversong Woods now dismount players who get close to them.
+            Professions
+                • Profession tables in Eversong Woods now dismount players who get close to them.
 
-    Items
-        • Midnight gems have had their stats increased.
-        • Fixed an issue where the standard quality Enchant Weapon - Arcane Mastery provided more Mastery than intended.
+            Items
+                • Midnight gems have had their stats increased.
+                • Fixed an issue where the standard quality Enchant Weapon - Arcane Mastery provided more Mastery than intended.
 
-    Quests
-        • Resolved an issue causing some Legion quest enemies to appear at a much higher level than intended.
-        • After reaching the proper Renown level with Silvermoon Court, players can now begin "Courting Success" after completing the
-          introductory questline to Saltheril's Soiree up to "High Esteem".
-        • You should now be able to place Corrupted Lantern in the Arcantina after turning in the quest "Still Behind Enemy Portals".
+            Quests
+                • Resolved an issue causing some Legion quest enemies to appear at a much higher level than intended.
+                • After reaching the proper Renown level with Silvermoon Court, players can now begin "Courting Success" after completing 
+                  the introductory questline to Saltheril's Soiree up to "High Esteem".
+                • You should now be able to place Corrupted Lantern in the Arcantina after turning in the 
+                  quest "Still Behind Enemy Portals".
 
         March 11, 2026
 
