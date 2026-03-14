@@ -9,9 +9,53 @@
 --- Max note length [140] ------------------------------------------------------------------------------------------------------------------
 PatchNotesDelivered_Notes_1201 = {
     version = "12.0.1",
-    build = "66337",
-    hotfix = 15,
+    build = "66384",
+    hotfix = 16,
     gameChangesHotfixes = [[
+        March 13, 2026
+
+    Classes
+        • Death Knight
+            > Unholy
+                + Resolved an issue where using Runic Power on Necrotic Coil increased the damage of Gargoyle less than intended.
+                + Resolved an issue where using Runic Power on Death Coil with Sudden Doom increased the damage of Gargoyle more than 
+                  intended.
+        • Demon Hunter
+            > Devourer
+                + Fixed an issue causing Reaper's Toll to sometimes be unusable for Devourer Demon Hunters.
+        • Druid
+            > Guardian
+                + Fixed an issue where Dream Guide was not correctly activating for nearby players.
+                + Fixed an issue where multiple stacks of Dream of Cenarius were increasing Regrowth's healing.
+                + Fixed an issue where Fury of Nature was not increasing damage dealt by Starfall from Heart of the Wild.
+                + Fixed an issue where additional Rage consumed by Killing Blow was not accounted for by Memory of Ysera.
+            > Restoration
+                + Symbiotic Blooms heal over time effect may now be displayed on raid frames if desired.
+        • Evoker
+            > Preservation
+                + Fixed an issue where Dream Flight would not properly calculate its healing when healing clumps of targets.
+
+    Dungeons
+        • Den of Nalorakk
+            > Fixed an issue where Loa Speaker Nanea could sometimes summon an incorrect number of Volatile Totems.
+        • Magisters' Terrace
+            > Addressed an issue where Arcane Magister's Polymorph is Nature school instead of Arcane.
+
+    Housing
+        • Significantly reduced the prices of decor that are sold for Voidlight Marl.
+
+    Items
+        • Newly created Crate of Battlefield Goods should now contain gear that disenchants into more relevant materials.
+        • Gear obtained at levels 10-79 disenchants into The War Within materials.
+        • Gear obtained at levels 80-90 disenchants into Midnight materials.
+
+    Non-player Characters
+        • Construct Ali'a and Construct V'anore in Astalor's Sanctum will now purchase items from players.
+        • Rare creatures in Midnight zones have been updated to respawn faster.
+
+    Player versus Player
+        • Fixed an issue where Training with Patience would reset achievement progress when re-entering the battleground.
+
         March 12, 2026
 
             Achievements
