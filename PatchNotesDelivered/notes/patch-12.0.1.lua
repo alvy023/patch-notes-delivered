@@ -9,9 +9,383 @@
 --- Max note length [140] ------------------------------------------------------------------------------------------------------------------
 PatchNotesDelivered_Notes_1201 = {
     version = "12.0.1",
-    build = "66384",
-    hotfix = 16,
+    build = "66431",
+    hotfix = 17,
     gameChangesHotfixes = [[
+        March 17, 2026
+
+    Achievements
+        • The Ultimate Predator is now account-wide.
+
+    Classes
+        • Death Knight
+            > Blood
+                + Deathbringer: Reaper's Mark damage increased by 20%.
+                + Deathbringer: Exterminate damage increased by 20%.
+                + Deathbringer: Wave of Souls damage increased by 20%.
+                + Deathbringer: Deathly Blows now increases the damage of Death Strike by 12% (was 5%).
+                + Deathbringer: Bind in Darkness now increases the damage of Blood Boil by 30% (was 10%).
+                + Resolved an issue causing Cleaving Strikes passive to grant an unintended 10% damage increase to Vampiric Strike.
+                + Resolved an issue causing Vampiric Strike to hit up to 8 targets instead of the intended 5 with Cleaving Strikes.
+                + Resolved an issue causing Vampiric Strike to grant additional Runic Power from Heartbreak from targets that are not hit.
+                + Resolved an issue causing Death's Caress to not grant additional bone shield charges when a Dancing Rune Weapon from
+                  Apex Talents is active.
+            > Unholy
+                + All damage reduced by 20%.
+                + Epidemic damage increased by 10%.
+                + Virulent Plague damage increased by 15%.
+                + Resolved an issue causing Magus of the Dead to have unintended wait time between casts.
+                + Resolved an issue causing Let Terror Reign to put Whitemane's Death Coil on cooldown.
+                + Resolved an issue causing On a Paler Horse to not function in the opening scenario to Midnight.
+        • Demon Hunter
+            > Fixed an issue causing Felblade to benefit from Burning Blades.
+            > Fixed an issue causing Blind Focus to not grant the appropriate bonuses to Havoc and Devourer Demon Hunters in Metamorphosis.
+            > Devourer
+                + All damage dealt reduced by 4%.
+                + Annihilator: Fixed an issue that could cause Mass Acceleration to only grant 2 stacks of Voidfall under certain
+                  conditions with high Haste values.
+            > Havoc
+                + All damage increased by 6%.
+                + Immolation Aura damage increased by 10%.
+                + Burning Wound bonus to Immolation Aura damage reduced to 35% (was 40%).
+                + Ragefire damage increased to 35% of Immolation Aura critical damage (was 30%).
+                + Essence Break damage increased by 10%.
+                + Glaive Tempest damage increased by 10%.
+                + Aldrachi Reaver: Reaver's Glaive damage increased by 8%.
+                + Aldrachi Reaver: Fury of the Aldrachi damage increased by 8%.
+                + Aldrachi Reaver: Thrill of the Fight bonus Haste increased to 8% (was 6%).
+                + Aldrachi Reaver: Reaver's Mark damage bonus increased to 6% (was 5%).
+                + Aldrachi Reaver: Wounded Quarry effect increased to 25% of Physical damage (was 20%).
+            > Vengeance
+                + All damage increased by 10%.
+                + Immolation Aura damage increased by 10%.
+                + Aldrachi Reaver: Wounded Quarry effect increased to 20% of Physical damage (was 15%).
+                + Aldrachi Reaver: Reaver's Glaive damage increased by 8%.
+                + Aldrachi Reaver: Fury of the Aldrachi damage increased by 8%.
+                + Aldrachi Reaver: Thrill of the Fight bonus Haste increased to 8% (was 6%).
+        • Druid
+            > Balance
+                + All damage increased by 20%. Not applied to PvP combat.
+                + Starsurge damage increased by 8%. Not applied to PvP.
+                + Starfall damage decreased by 14%. Not applied to PvP.
+                + Wrath damage increased by 10%. Not applied to PvP.
+                + Elune's Chosen: Lunar Calling increases Starfall's damage to your primary target by 120% (up from 100%). Not applied to PvP.
+                + Season 1set 2-piece: Increases Shooting Stars damage by 40% (was 50%).
+                + Season 1 set 2-piece: Shooting Stars outside Eclipse generate 2 Astral Power (was 3).
+                + Season 1 set 4-piece: Chance for Starsurge or Starfall to generate an exploding Shooting Star reduced to 30% (was 40%).
+                + Season 1 set Armor 4-piece: Fixed a bug causing the exploding Shooting Star to increment Orbit Breaker's count by 1 for
+                  every target hit. It now always counts as one Shooting Star, as intended.
+            > Feral
+                + All damage dealt increased by 6%. Not applied to PvP.
+                + Rake Bleed damage increased by 20%. Not applied to PvP.
+                + Rip damage increased by 10%. Not applied to PvP.
+                + Swipe damage increased by 10%.
+                + Rampant Ferocity damage increased by 10%.
+                + Unseen Swipe damage increased by 15%.
+                + Frantic Frenzy damage reduced by 10%.
+                + Fixed a bug causing Frantic Frenzy to hit 6 times, instead of 5.
+            > Guardian
+                + Moonless Night now causes your direct-damage melee abilities to deal 20% additional damage (was 40%).
+                + Wild Guardian Rank 4 now causes echoes to deal 300% increased damage (was 150%).
+                + Ability damage (excluding Moonfire) reduced by 20%.
+                + Moonfire damage reduced by 10%.
+                + Druid of the Claw: Damage dealt by Ravage to its main target reduced by 27%.
+                + Druid of the Claw: Damage dealt by Dreadful Wound reduced by 23%.
+                + Druid of the Claw: Killing Blow now increases Maul, Raze and Ravage damage by up to 70%, based on rage consumed
+                  (was 100%).
+                + Druid of the Claw: Strike for the Heart now increases Mangle damage by 10% (was 20%).
+                + Bestial Strength now increases Maul, Raze, and Ravage damage by 10% (was 20%).
+            > Restoration
+                + All healing reduced by 6%.
+        • Evoker
+            > Fixed an issue that prevented Obsidian Scales from being able to be cast if the player was targeting an ally further than
+              30 yards away.
+            > Augmentation
+                + All ability and pet damage increased by 13%.
+                + Livery of the Black Talon 2-piece: Eruption damage increase reduced to 10% (was 15%). Ebon Might extension bonus
+                  reduced to 0.1 seconds (was 0.25 seconds).
+                + Livery of the Black Talon 4-piece: Empower spell cool down rate bonus reduced to 10% (was 20%). Empower spell damage
+                  bonus reduced to 10% (was 20%).
+                + Scalecommander: Mass Eruption damage bonus for each missing target reduced to 10% (was 15%).
+                + Molten Embers damage bonus reduced to 15% (was 25%).
+                + Duplicate Rank 4 stat bonus reduced to 75% (was 100%).
+                + Fixed an issue that could cause Motes of Possibility to apply their buff to a target other than the ally who came in
+                  contact with the Mote.
+            > Devastation
+                + Scalecommander: Mass Disintegrate damage bonus for each missing target reduced to 10% (was 15%).
+            > Preservation
+                + Rewind healing increased by 200% outside of raid (was 100%).
+                + Rewind healing is no longer increased by 67% in PvP combat.
+                + Merithra's Blessing increases the direct healing of Dream Breath by 250% (was 125%).
+                + Dream Breath's direct healing increased by 20%.
+                + Merithra's Blessing reverses 1% damage (was 2%) on targets with Reversion.
+                + Reversion healing increased by 25%.
+        • Hunter
+            > Fixed an issue that allowed the damage increase from multiple Hunter's Marks on the same target to stack.
+            > Beast Mastery
+                + Barbed Shot damage dealt increased by 35%. Does not affect PvP combat.
+                + Cobra Shot damage increased by 100%. Does not affect PvP combat.
+                + Dark Ranger: Black Arrow initial damage increased by 50%. Does not affect PvP combat.
+            > Marksmanship
+                + Sentinel: Fixed an issue causing Sanctified Armaments to do be modified by damage taken and damage dealt increases.
+            > Survival
+                + Auto attack damage increased by 35%.
+                + Wildfire Bomb primary target damage bonus increased to 80% (was 60%).
+                + Raptor Strike damage increased by 10%.
+                + Raptor Swipe now deals 35/70% increased damage to its primary target (was 25/50%).
+                + Sentinel: Fixed an issue causing Sanctified Armaments to do be modified by damage taken and damage dealt increases.
+        • Mage
+            > Arcane
+                + Arcane Blast damage increased by 25%.
+                + Arcane Barrage damage increased by 15%. Does not affect PvP.
+                + Arcing Cleave additional targets receive 40% of Arcane Barrage's damage (was 60%).
+                + Spellslinger: Splintering Orbs damage bonus reduced to 10% (was 25%).
+                + Spellslinger: Controlled Instincts Cleave percentage reduced to 40% (was 60%).
+            > Fire
+                + Ignition now increases Flamestrike's Ignite damage by 15% (was 50%).
+                + Season 1 set 2-piece: Now increases Pyroblast and Flamestrike damage by 6% (was 8%).
+                + Season 1 set 4-piece: Fire Blast cooldown reduction reduced to 0.3 seconds (was 0.5 seconds).
+                + Fireball damage increased by 15%. Does not affect PvP combat.
+                + Frostfire Bolt damage increased by 15%. Does not affect PvP combat.
+                + Fire Blast damage increased by 25%. Does not affect PvP combat.
+        • Monk
+            > Brewmaster
+                + Master of Harmony: Meditative Focus now increases damage dealt by Tiger Palm by an additional 50% (was 100%).
+                + Master of Harmony: Aspect of Harmony stores vitality based on 12% of damage done, and 6% of effective healing
+                  (was 25% and 12%).
+                + Keg Smash and Breath of Fire are now tracked on enemy nameplates.
+            > Mistweaver
+                + Sheilun's Gift healing increased by 60%.
+                + Sheilun's Gift clouds now increase its healing by 10% per stack (was 33%).
+                + Jadefire Teachings now increases the transfer rate of Ancient Teachings by 270% (was 200%).
+                + Way of the Crane now transfers 340% of damage onto 1 ally (was 125% onto 3 allies).
+                + Jadefire Stomp damage now transfers into Ancient Teachings at 20% effectiveness.
+                    > Developers’ notes: Jadefire Stomp's tooltip will be updated to reflect this in a later patch.
+                + Invigorating Mists healing increased by 30%.
+        • Paladin
+            > Retribution
+                + Final Verdict damage increased by 15%.
+                + Resolved an issue causing Execution Sentence to only deal 10% of the Holy damage dealt to the target, instead of the
+                  intended 20%.
+                + Light Within main target damage increased by 25%.
+                + Templar Slash and Templar Strike damage increased by 25%.
+                + Melee damage increased by 25%.
+                + Crusading Strikes damage increased by 25%.
+                + Crusading Strikes now reduces auto-attack speed by 20% (improved from 35%).
+                + Highlord's Judgment damage increased by 25%.
+                + Divine Storm damage reduced by 12%.
+                + Herald of the Sun: Dawnlight damage increased by 25%.
+                + Herald of the Sun: Dawnlight now cleaves 4% of the damage it deals to nearby enemies (was 5%).
+                + Templar: Empyrean Hammer damage increased by 30%.
+                + Templar: Wrathful Descent now deals 35% of Empyrean Hammer damage (down from 50%).
+                + Templar: Resolved an issue causing Hammer of Light to not benefit from Judgment with Undisputed Ruling when cast on a
+                  target without any Judgment stacks.
+                + Templar: Hammer of Light damage increased by 10%.
+        • Priest
+            > Discipline
+                + Penance damage and healing increased by 20%.
+            > Holy
+                + Echo of Light no longer appears on raid frames.
+            > Shadow
+                + Fixed an issue causing Shadow Word: Madness to increase the damage the target takes from Shadowy Apparitions by 100%.
+                    > Developers' notes: This fix would be a large damage loss, so we're making further adjustments in our tuning pass
+                      for the specialization to be appropriately powerful.
+                + All damage increased by 16%. Not applied to PvP combat.
+                + Shadow Word: Death damage increased by 55%. Not applied to PvP combat.
+                + Mind Blast damage increased by 30%. Not applied to PvP combat.
+                + Mind Flay damage increased by 30%. Not applied to PvP combat.
+                + Idol of N'Zoth damage increased by 30%. Not applied to PvP combat.
+                + Shadow Word: Madness damage increased by 30%. Not applied to PvP combat.
+                + Psychic Link now causes direct damage spells to inflict 20% of their damage to all other targets afflicted by
+                  Vampiric Touch (was 60%).
+        • Rogue
+            > Removed the blue effect on rogue's hands while Cold Blood is active, as it could be distracting when active for very long
+              periods.
+            > Outlaw
+                + Fixed a bug causing the chances of Roll the Bones effects with Sleight of Hand to be off by small percentages (0.5-1.5%).
+            > Subtlety
+                + Backstab/Gloomblade damage increased by 20%.
+                + Shadowstrike damage increased by 15%.
+                + Eviscerate damage increased by 8%.
+                + Melee auto-attack damage increased by 15%.
+                + Black Powder damage reduced by 12%.
+                + Potent Powder bonus Black Powder damage reduced to 20% of Mastery (was 30%).
+                + Trickster: Unseen Blade damage increased by 20%.
+                + Trickster: Nimble Flurry effect reduced to 50% of listed attack damage (was 65%).
+                + Trickster: Clever Combatant crit bonus for Shuriken Storm reduced to 10% (was 15%).
+                + Fixed a bug preventing the Cold Blood effect from appearing correctly when enabled in the Cooldown Manager.
+        • Shaman
+            > Elemental
+                + Chain Lightning damage increased by 10%.
+                + Earthquake damage increased by 10%.
+            > Enhancement
+                + All damage increased by 8%.
+                + Lightning Bolt damage increased by 10%.
+                + Chain Lightning damage increased by 10%.
+                + Primordial Storm damage increased by 10%.
+            > Restoration
+                + Healing Rain healing increased by 45%.
+                + Chain Heal healing increased by 20%.
+        • Warlock
+            > Destruction
+                + Hellcaller: Xalan’s Cruelty now increases Shadow damage dealt by 5% (was 8%).
+                + Hellcaller: Xalan’s Ferocity now increases Fire damage dealt by 5% (was 8%).
+                + Hellcaller: Blackened Soul damage reduced by 50%.
+                + Hellcaller: Through the Felvine now increases Rain of Fire damage by 6% (was 8%).
+                + Hellcaller: Through the Felvine now increases Chaos Bolt damage by 35% (was 10%). This change does not affect PvP.
+            > Demonology
+                + Dominion of Argus Antoran Inquisitor damage reduced by 5%, Antoran Jailer damage reduced by 45%, Lady Sacrolash damage
+                  increased by 35%, and Grand Warlock Alythess damage increased by 35%.
+                    > Developers’ notes: The intention with these adjustments is to ensure that all demons summoned by Dominion of Argus
+                      are competitive with one another, avoiding random chance having a large effect on damage output.
+                + Soul Harvester: Demonic Soul damage reduced by 55%.
+                + Soul Harvester: Manifested Demonic Soul damage reduced by 50%.
+                + Soul Harvester: Soul Anathema damage reduced by 35%.
+                + Soul Harvester: Wicked Reaping damage increased by 50%.
+                + Soul Harvester: Demoniac's Fervor now increases damage dealt by Demonic Soul by 200% to the main target of
+                  Hand of Gul'dan.
+        • Warrior
+            > Piercing Howl's cooldown increased to 90 seconds (was 30 seconds), and ally speed buff radius reduced to 6 yards (12 with
+              Battlefield Commander).
+                > Developers’ notes: Piercing Howl has been available more frequently than intended and does not align with other similar
+                  effects, so we're making changes to bring this ability in line while keeping it distinct among similar effects.
+            > Arms
+                + Master of Warfare's final rank Heroic Strike now increases the damage you deal to enemies affected by your next
+                  Colossus Smash by an additional 3%. Stacks up to 5 times.
+                + All damage dealt increased by 15%.
+            > Fury
+                + All damage dealt increased by 10%.
+                + Slayer: chance for Reap the Storm to trigger changed to 20% (was 30%).
+            > Protection
+                + Phalanx rank 1: Thunder Clap now causes your next Shield Slam deal 10% additional damage and unleash a wave of force,
+                  dealing Physical damage to all enemies in front of you.
+                + Phalanx rank 4: In addition to existing effects, enemies damaged by Phalanx's wave of force deal 5% reduced damage to
+                  you for 8 seconds.
+                + All damage dealt increased by 10%.
+                    > Developers’ notes: These changes are aimed at redistributing the power of Protection Warrior's Apex talents to
+                      better align with our design goals for Apex talents.
+
+    Dungeons
+        • Windrunner Spire
+            > The Restless Heart
+                + Squall Leap no longer stacks.
+                + Increased the visibility of the Squall Leap debuff on players.
+
+    Items
+        • Resolved an issue where repeatable treasures in K'aresh would sometimes contain nothing.
+
+    Player versus Player
+        • Fixed an issue where Horde players were unable to earn rewards for Battlegrounds Blitz.
+        • All tank role specializations’ self-healing reduced by 25% in PvP combat.
+        • Death Knight
+            > Frost
+                + All damage increased by 10% in PvP combat.
+                + Deathbringer: Reaper's Mark damage reduced by 25% in PvP combat.
+        • Demon Hunter
+            > Devourer
+                + All damage increased by 9% in PvP.
+        • Druid
+            > Balance
+                + Dying Stars now causes enemies to suffer 25% additional damage from Moonfire and Sunfire when dispelled (was 15%).
+            > Restoration
+                + Healing increased by 11% in PvP combat.
+                + All damage reduced by 15% in PvP combat.
+                + Fixed an issue where Convoke the Spirits was casting the Balance version of Starsurge and dealing too much damage.
+        • Evoker
+            > Divide and Conquer (PvP talent) has been adjusted to no longer function with Strafing Run.
+        • Hunter
+            > Marksmanship
+                + Consecutive Concussion now slows movement speed by an additional 10% (was 20%).
+            > Survival
+                + All damage dealt in PvP reduced by 8%.
+        • Mage
+            > Frost
+                + Ray of Frost damage decreased by 20% in PvP combat.
+                + Frostbolt damage increased by 100% in PvP combat.
+                + Frostfire Bolt damage increased by 100% in PvP combat.
+                + Brain Freeze now increases the damage of Flurry by 25% in PvP combat (was 50%).
+                + Flurry damage increased by 75% in PvP combat.
+                + Frostfire: Frostfire Empowerment now increases the damage of Frostfire Bolt by 10% (was 36%) in PvP combat.
+        • Mistweaver
+            > All healing reduced by 8% in PvP combat.
+            > Sheilun's Gift healing decreased by 20% in PvP combat.
+        • Monk
+            > Rushing Wind Kick no longer deals 20% increased damage in PvP combat.
+            > Jadefire Stomp damage reduced by 50% in PvP combat.
+        • Paladin
+            > Holy
+                + A Just Reward healing decreased by 50% in PvP combat.
+                + Divine Vision (PvP Talent) now reduces the cooldown of Aura Mastery by 30 seconds (was 60 seconds).
+            > Retribution
+                + All ability damage reduced by 15% in PvP combat.
+        • Priest
+            > Psychic Shroud now lasts 6 seconds (was 15 seconds).
+            > Discipline
+                + All damage done reduced by 8% in PvP combat.
+                + Power Word: Radiance healing increased by 40% in PvP combat.
+            > Shadow
+                + All damage increased by 7% in PvP combat.
+        • Rogue
+            > Assassination
+                + Implacable Strikes damage decreased by 35% in PvP.
+                + All ability damage increased by 4% in PvP combat.
+            > Outlaw
+                + All ability damage increased by 12% in PvP combat.
+            > Subtlety
+                + All ability damage reduced by 10% in PvP combat.
+        • Shaman
+            > Elemental
+                + Tempest damage increased by 20% in PvP combat.
+                + Earth Shock damage increased by 15% in PvP combat.
+                + Damage from dispelling Flame Shock increased by 600%. This effect can no longer critically strike.
+            > Enhancement
+                + Damage from dispelling Flame Shock increased by 600%. This effect can no longer critically strike.
+            > Restoration
+                + All healing done increased by 8% in PvP combat.
+                + Healing Tide Totem healing increased by 75% in PvP combat.
+        • Warlock
+            > Affliction
+                + All damage increased by 15% in PvP combat.
+                + Shadow Bolt damage increased by 20% in PvP combat.
+                + Drain Soul damage increased by 20% in PvP combat.
+                + Dark Harvest damage reduced by 30% in PvP combat.
+                + Damage from dispelling Unstable Affliction increased by 25%.
+        • Warrior
+            > The duration of Intimidating Shout has been reduced to 5 seconds (was 6 seconds).
+                > Developer's Note: The duration of Intimidating Shout when talented into Resonant Voice surpassed our targets for PvP
+                  crowd control duration.
+            > Bladestorm damage no longer decreased by 23% in PvP combat.
+            > Slayer: Unhinged now casts Mortal Strike / Bloodthirst at 40% effectiveness (was 60%) in PvP combat.
+
+    Professions
+        • Recipes sold by Renown quartermasters are now Warbound.
+        • Cooking
+            > Carve Meat will now function as intended on beasts that are not High Value.
+            > Mound of Mildly-Meaningful Meat will now give Midnight cooking reagents.
+        • Jewelcrafting
+            > Fixed an issue where the Dual-Function Magnifiers could not be looted.
+            > Prismatic Focusing Iris damage has been reduced by ~50%.
+
+    Quests
+        • Fixed a bug preventing “Shade and Claw” from being accessible to all players.
+        • Buildings in Arathi Highlands should no longer be missing while on the quest “Marran Trollbane”.
+        • Fixed an issue where credit for completing a "Legends of the Haranir" relic event on a different character was not counting for
+          quest completion.
+
+    System
+        • Fixed a bug that could cause performance issues related to memory usage.
+            > Developers’ notes: We’ve seen a significant improvement in both PC memory usage and game performance for many users who were
+              reporting skipping, lag, dropped frames, etc. We will continue to monitor these issues to ensure that we make further
+              fixes if necessary.
+
+    Toys
+        • Duck Disguiser has been removed and rebuilt, due to issues encountered when the color variants were made account-wide.
+            > Developers’ notes: Players can now earn the original Duck Disguiser colors by defeating the duck boss during Noblegarden.
+
+    Zones
+        • Fixed an issue causing Voidstorm's Hungering Presence to linger on players after teleporting out of the zone.
+        • Enemies should now scale for alts progressing through Shadowlands content in Timewalking Campaigns.
+
         March 13, 2026
 
             Classes
