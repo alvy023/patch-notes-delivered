@@ -73,7 +73,7 @@ PatchNotesDelivered_Notes_1201 = {
                         + Wrath damage increased by 10%. Not applied to PvP.
                         + Elune's Chosen: Lunar Calling increases Starfall's damage to your primary target by 120% (up from 100%). 
                           Not applied to PvP.
-                        + Season 1set 2-piece: Increases Shooting Stars damage by 40% (was 50%).
+                        + Season 1 set 2-piece: Increases Shooting Stars damage by 40% (was 50%).
                         + Season 1 set 2-piece: Shooting Stars outside Eclipse generate 2 Astral Power (was 3).
                         + Season 1 set 4-piece: Chance for Starsurge or Starfall to generate an exploding Shooting Star reduced 
                           to 30% (was 40%).
@@ -107,7 +107,7 @@ PatchNotesDelivered_Notes_1201 = {
                     > Augmentation
                         + All ability and pet damage increased by 13%.
                         + Livery of the Black Talon 2-piece: Eruption damage increase reduced to 10% (was 15%). Ebon Might extension bonus
-                        reduced to 0.1 seconds (was 0.25 seconds).
+                          reduced to 0.1 seconds (was 0.25 seconds).
                         + Livery of the Black Talon 4-piece: Empower spell cool down rate bonus reduced to 10% (was 20%). Empower spell 
                           damage bonus reduced to 10% (was 20%).
                         + Scalecommander: Mass Eruption damage bonus for each missing target reduced to 10% (was 15%).
@@ -131,14 +131,14 @@ PatchNotesDelivered_Notes_1201 = {
                         + Cobra Shot damage increased by 100%. Does not affect PvP combat.
                         + Dark Ranger: Black Arrow initial damage increased by 50%. Does not affect PvP combat.
                     > Marksmanship
-                        + Sentinel: Fixed an issue causing Sanctified Armaments to do be modified by damage taken and damage 
+                        + Sentinel: Fixed an issue causing Sanctified Armaments to be modified by damage taken and damage 
                           dealt increases.
                     > Survival
                         + Auto attack damage increased by 35%.
                         + Wildfire Bomb primary target damage bonus increased to 80% (was 60%).
                         + Raptor Strike damage increased by 10%.
                         + Raptor Swipe now deals 35/70% increased damage to its primary target (was 25/50%).
-                        + Sentinel: Fixed an issue causing Sanctified Armaments to do be modified by damage taken and damage 
+                        + Sentinel: Fixed an issue causing Sanctified Armaments to be modified by damage taken and damage 
                           dealt increases.
                 • Mage
                     > Arcane
@@ -315,10 +315,10 @@ PatchNotesDelivered_Notes_1201 = {
                         + Brain Freeze now increases the damage of Flurry by 25% in PvP combat (was 50%).
                         + Flurry damage increased by 75% in PvP combat.
                         + Frostfire: Frostfire Empowerment now increases the damage of Frostfire Bolt by 10% (was 36%) in PvP combat.
-                • Mistweaver
-                    > All healing reduced by 8% in PvP combat.
-                    > Sheilun's Gift healing decreased by 20% in PvP combat.
                 • Monk
+                    > Mistweaver
+                        + All healing reduced by 8% in PvP combat.
+                        + Sheilun's Gift healing decreased by 20% in PvP combat.
                     > Rushing Wind Kick no longer deals 20% increased damage in PvP combat.
                     > Jadefire Stomp damage reduced by 50% in PvP combat.
                 • Paladin
