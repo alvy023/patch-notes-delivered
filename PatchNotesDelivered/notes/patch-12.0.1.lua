@@ -71,7 +71,7 @@ PatchNotesDelivered_Notes_1201 = {
 
             Delves
                 • Fixed a bug where Valeera was taking more damage than desired as a tank in lower tier delves.
-                • Fixed a bug where Valeera could sometime consume healing orbs.
+                • Fixed a bug where Valeera could sometimes consume healing orbs.
                 • Atal’Aman
                     > Nemesis Pack should no longer spawn outside the playable area.
                 • Collegiate Calamity
@@ -82,7 +82,7 @@ PatchNotesDelivered_Notes_1201 = {
 
             Dungeons and Raids
                 • Magisters' Terrace
-                    > Fixed an issue where sometimes some Gemellus clones remained alive after defating the Gemellus encounter.
+                    > Fixed an issue where sometimes some Gemellus clones remained alive after defeating the Gemellus encounter.
                 • Skyreach
                     > Fixed a bug that prevented players from receiving Great Vault credit when finishing the dungeon on Mythic difficulty.
                 • The Voidspire
