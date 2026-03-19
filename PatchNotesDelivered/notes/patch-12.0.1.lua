@@ -10,8 +10,121 @@
 PatchNotesDelivered_Notes_1201 = {
     version = "12.0.1",
     build = "66431",
-    hotfix = 17,
+    hotfix = 18,
     gameChangesHotfixes = [[
+        March 18, 2026
+
+            Achievements
+                • Fixed a bug preventing completion of ‘Tis But A Scratch.
+                • Fixed a bug where Working Way Past Midnight would not be awarded after reaching max skill in all Midnight Professions.
+
+            Classes
+                • Player-cast long term raid buffs can no longer be canceled while the player is in combat. These buffs can still be 
+                  canceled when outside combat and can always be applied regardless of combat state. The spells affected by this are: 
+                  Mark of the Wild, Arcane Intellect, Battle Shout, Power Word: Fortitude, Skyfury, Source of Magic, Symbiotic Relationship, 
+                  and Blessing of the Bronze.
+                • Death Knight
+                    > Unholy
+                        + All ability damage increased by 8%. Not applied to PvP combat.
+                        + All minion damage increased by 8%.
+                        + Death Coil damage increased by 30%. Not applied to PvP combat.
+                        + Magus of the Dead damage increased by 15%. Not applied to PvP combat.
+                        + Dread Plague damage increased by 50%. Not applied to PvP combat.
+                        + Soul Reaper damage increased by 100%. Not applied to PvP combat.
+                        + Melee damage increased by 30%.
+                        + Scourge Strike and Vampiric Strike damage increased by 25%. Not applied to PvP combat.
+                        + Festering Strike and Festering Scythe damage increased by 35%. Not applied to PvP combat.
+                        + Resolved an issue allowing Necrotic Coil to be parried, dodged or blocked.
+                        + Resolved an issue causing Sudden Doom to reduce the effectiveness of abilities that function with the amount of
+                          Runic Power spent.
+                        + Resolved an issue causing Plague Mastery to not interface with eruption effects of Virulent Plague and 
+                          Dread Plague.
+                        + Resolved an issue causing Scourge Strike to sometimes not spread Virulent Plague.
+                        + Putrefy has been updated to be more consistent in its targeting and now takes target radius into account.
+                • Demon Hunter
+                    > Sigil of Misery no longer counts as both an incapacitate and disorient for diminishing returns.
+                • Druid
+                    > Balance
+                        + Elune's Chosen: Atmospheric Exposure is now properly applied by Full Moons cast by Orbit Breaker or 
+                          Convoke the Spirits.
+                • Hunter
+                    > Beast Mastery
+                        + Fixed an issue where the displayed duration of Beast Cleave when triggered from Umbral Reach was incorrect.
+                    > Marksmanship
+                        + Fixed an issue causing Lunar Storm to not fire when Aimed Shot killed its target.
+                        + Fixed an issue causing Black Arrow to not fire Bleak Powder when it killed its target.
+                        + Fixed an issue causing some Spotter's Mark effects to not trigger if the Aimed Shot that consumes it killed 
+                          its target.
+                    > Survival
+                        + Mastery: Spirit Bond can now be tracked on the Cooldown Manager.
+                        + Takedown now breaks your pet out of roots.
+                            - Developer's Notes: The tooltip for Takedown will be updated to reflect this behavior in a future patch.
+                        + Takedown Pet leap range increased to 40 yards.
+                • Priest
+                    > Discipline
+                        + Fixed an issue where Void Shield was not causing Atonement healing.
+                • Warlock
+                    > Affliction
+                        + Fixed an issue where Demoniac's Fervor would not function with Unstable Affliction.
+                    > Demonology
+                        + Diabolist: Fixed an issue where Ruination would not count towards Dominion of Argus.
+
+            Delves
+                • Fixed a bug where Valeera was taking more damage than desired as a tank in lower tier delves.
+                • Fixed a bug where Valeera could sometimes consume healing orbs.
+                • Atal’Aman
+                    > Nemesis Pack should no longer spawn outside the playable area.
+                • Collegiate Calamity
+                    > Hydrangea’s Exposing Bolt now causes a debuff of 1% per stack (was 5%) and can reach a maximum of 99 stacks (was a 
+                      max of 20).
+                • The Grudge Pit
+                    > Fixed issue where Valeera was not damaging Furious Spectators.
+
+            Dungeons and Raids
+                • Magisters' Terrace
+                    > Fixed an issue where sometimes some Gemellus clones remained alive after defeating the Gemellus encounter.
+                • Skyreach
+                    > Fixed a bug that prevented players from receiving Great Vault credit when finishing the dungeon on Mythic difficulty.
+                • The Voidspire
+                    > Photosensitivity mode now disables the fullscreen effect from using Teleport Pads.
+                    > Imperator Averzian
+                        + Averzian now says “know your place” less often.
+                    > Vorasius
+                        + Addressed an issue that made Druids untargetable by friendly spells upon dying to a death plane.
+                    > Lightblinded Vanguard
+                        + Resolved an issue where players could be hit by Divine Hammer multiple times.
+                    > Crown of the Cosmos
+                        + Resolved an issue where Alleria could evade briefly when crossing platforms.
+
+            Housing
+                • Quests
+                    > Weekly Housing quests will now drop a Warbound chest of crests.
+                        + Developers’ notes: You can do the quest on any character you like and then send the reward to the character you
+                          would like to get it. It is intended that these quests can be completed once per account each week.
+
+            Items
+                • Updated Recruit's Ring, Recruit's Band, and Recruit's Signet to remove unintended primary stats.
+                • Algari Diamond and Thalassian Diamond gems can no longer be equipped at the same time.
+                • Blossoming Rootwarden's Focus should now disenchant into Midnight materials.
+
+            Player versus Player
+                • Tooltips for PvP gear now state that the item level increase also applies in War Mode.
+                • War Supply Crates and Assassin Bounties in Eversong Woods and Zul'Aman now drop Sparks of War.
+                • Resolved an issue that was causing PvP item levels to be set incorrectly in Arenas and Battlegrounds.
+                • Weekly PvP quests such as “Enshrouded in Battle” will now show their appropriate turn-in location on the map.
+                • Reduced Honor costs for Galactic Aspirant's Badge of Ferocity, Galactic Aspirant's Insignia of Alacrity, and 
+                  Galactic Aspirant's Emblem.
+                • Reduced Conquest costs for Galactic Gladiator’s Badge of Ferocity, Galactic Gladiator's Insignia of Alacrity, and 
+                  Galactic Gladiator's Emblem.
+
+            Professions
+                • Thalassian Competitor's Chain Stompers now cost 4 Competitor's Heraldries to craft (was 5).
+                • Fixed a bug where Thalassian Competitor's Medallion, Thalassian Competitor's Emblem, and Thalassian Competitor's Insignia 
+                  were not part of the Gladiator's Distinction item set.
+
+            Quests
+                • The “End of the Dream” should no longer unexpectedly end before you’re finished dreaming.
+
         March 17, 2026
 
             Achievements
