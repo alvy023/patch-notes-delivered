@@ -34,13 +34,10 @@ and this project adheres to a specific versioning schema: `A.B.C` where:
 
 ## [1.12.27] - 2026-03-20
 ### Added
-- Added 12.0.1 notes for March 19
 ### Changed
 - Updated TOC to 1.12.27
 
 ## [1.12.26] - 2026-03-19
-### Added
-- Added 12.0.1 notes for March 18
 ### Changed
 - Updated TOC to 1.12.26
 
