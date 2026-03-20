@@ -14,74 +14,78 @@ PatchNotesDelivered_Notes_1201 = {
     gameChangesHotfixes = [[
         March 19, 2026
 
-    Achievements
-        • With Flying Colors is now granted when the player completes a The War Within delve of any tier.
-        • Addressed an issue where the Catalyst Unbound achievement rewards could be granted to characters who did not earn the achievement.
+            Achievements
+                • With Flying Colors is now granted when the player completes a The War Within delve of any tier.
+                • Addressed an issue where the Catalyst Unbound achievement rewards could be granted to characters who did not earn 
+                  the achievement.
 
-    Classes
-        • Evoker
-            > Preservation
-                + Fixed an issue where Titan's Gift was not affecting all ticks of Disintegrate.
-        • Hunter
-            > Beast Mastery
-                + Fixed an issue where the displayed duration of Beast Cleave when triggered from Umbral Reach was incorrect.
-            > Marksmanship
-                + Fixed an issue allowing Aspect of the Hydra to hit the same target twice on multiple encounters.
-        • Mage
-            > Frost
-                + Fixed an issue where Splintering Orb damage was unintentionally reduced.
-        • Monk
-            > Windwalker
-                + Fixed an issue that caused Sunfire Spiral to not affect Rushing Wind Kick.
-        • Paladin
-            > Holy
-                + Beacon of Virtue is now present in the cooldown manager.
-            > Retribution
-                + Herald of the Sun: Fixed an issue that caused Eternal Flame self-heal increase to be less than intended.
-        • Priest
-            > Shadow Word: Pain is now present in the cooldown manager for Discipline and Holy priests.
-            > Holy
-                + Guardian Spirit now shows on Raid Frames when Center Big Defensives is enabled in the Raid Frames interface menu.
-        • Warlock
-            > Affliction
-                + Fixed an issue where Dark Harvest would not benefit from Xalan's Ferocity and Xalan's Cruelty.
-            > Demonology
-                + Fixed an issue where untargeted Rain of Fire would not trigger an Echo of Sargeras.
+            Classes
+                • Evoker
+                    > Preservation
+                        + Fixed an issue where Titan's Gift was not affecting all ticks of Disintegrate.
+                • Hunter
+                    > Beast Mastery
+                        + Fixed an issue where the displayed duration of Beast Cleave when triggered from Umbral Reach was incorrect.
+                    > Marksmanship
+                        + Fixed an issue allowing Aspect of the Hydra to hit the same target twice on multiple encounters.
+                • Mage
+                    > Frost
+                        + Fixed an issue where Splintering Orb damage was unintentionally reduced.
+                • Monk
+                    > Windwalker
+                        + Fixed an issue that caused Sunfire Spiral to not affect Rushing Wind Kick.
+                • Paladin
+                    > Holy
+                        + Beacon of Virtue is now present in the cooldown manager.
+                    > Retribution
+                        + Herald of the Sun: Fixed an issue that caused Eternal Flame self-heal increase to be less than intended.
+                • Priest
+                    > Shadow Word: Pain is now present in the cooldown manager for Discipline and Holy priests.
+                    > Holy
+                        + Guardian Spirit now shows on Raid Frames when Center Big Defensives is enabled in the Raid Frames interface menu.
+                • Warlock
+                    > Affliction
+                        + Fixed an issue where Dark Harvest would not benefit from Xalan's Ferocity and Xalan's Cruelty.
+                    > Demonology
+                        + Fixed an issue where untargeted Rain of Fire would not trigger an Echo of Sargeras.
 
-    Delves
-        • Fixed a bug where Nullaeus could cast Emptiness of the Void more often than it should.
-        • Fixed an issue causing Enraged Ultradon, Wrathshell Consumptor, and Lord Antenorian's Shadow Orb health and damage scaling to be disproportionate for larger player groups.
-        • Some of the most dangerous creatures in delves have had their abilities adjusted.
-            > Wrathshell Consumptors' Shale Bombardment now gives you more time to avoid its damage.
-            > Barbtooth Bloodtrackers now cast Rupturing Bite less frequently and it can no longer stack beyond three.
-            > Stumpspreader's Lightbloom Beam has a slightly longer cast-time and deals reduced damage.
-        • Shadow Enclave
-            > SuperLux Focusing Mirrors can no longer be carried while stealthed or invisible. They're just too shiny.
+            Delves
+                • Fixed a bug where Nullaeus could cast Emptiness of the Void more often than it should.
+                • Fixed an issue causing Enraged Ultradon, Wrathshell Consumptor, and Lord Antenorian's Shadow Orb health and damage 
+                  scaling to be disproportionate for larger player groups.
+                • Some of the most dangerous creatures in delves have had their abilities adjusted.
+                    > Wrathshell Consumptors' Shale Bombardment now gives you more time to avoid its damage.
+                    > Barbtooth Bloodtrackers now cast Rupturing Bite less frequently and it can no longer stack beyond three.
+                    > Stumpspreader's Lightbloom Beam has a slightly longer cast-time and deals reduced damage.
+                • Shadow Enclave
+                    > SuperLux Focusing Mirrors can no longer be carried while stealthed or invisible. They're just too shiny.
 
-    Dungeons and Raids
-        • Seat of the Triumvirate
-            > Addressed an issue where Gates of the Abyss will linger after Viceroy Nezhar is defeated.
-        • The Blinding Vale
-            > Fixed an issue causing Ziekket's summons to be targetable by certain spells while spawning.
-        • The Dreamrift
-            > Chimaerus
-                + Fixed an issue that could prevent Druids’ Convoke the Spirits from using offensive abilities and spells against Chimaerus.
-        • The Voidspire
-            > Addressed an issue where Gladiator Slauros or Devouring Void could pull players under the terrain.
-            > Vorasius
-                + Focused Aggression now affects pets.
-            > Lightblinded Vanguard
-                + Resolved an issue where Execution Sentence would cause players to take additional damage from Light Infused.
-                + Fixed an issue where Grove Guardians could incorrectly trigger Aura of Peace on the player.
+            Dungeons and Raids
+                • Seat of the Triumvirate
+                    > Addressed an issue where Gates of the Abyss will linger after Viceroy Nezhar is defeated.
+                • The Blinding Vale
+                    > Fixed an issue causing Ziekket's summons to be targetable by certain spells while spawning.
+                • The Dreamrift
+                    > Chimaerus
+                        + Fixed an issue that could prevent Druids’ Convoke the Spirits from using offensive abilities and spells 
+                          against Chimaerus.
+                • The Voidspire
+                    > Addressed an issue where Gladiator Slauros or Devouring Void could pull players under the terrain.
+                    > Vorasius
+                        + Focused Aggression now affects pets.
+                    > Lightblinded Vanguard
+                        + Resolved an issue where Execution Sentence would cause players to take additional damage from Light Infused.
+                        + Fixed an issue where Grove Guardians could incorrectly trigger Aura of Peace on the player.
 
-    Housing
-        • Players who lost their neighborhood charter during a character boost can now request a new charter from stewards to get their original charter and quest.
+            Housing
+                • Players who lost their neighborhood charter during a character boost can now request a new charter from stewards to get 
+                  their original charter and quest.
 
-    Player versus Player
-        • PvP World Quests in Slayer's Rise should only award Bloody Tokens while in War Mode.
+            Player versus Player
+                • PvP World Quests in Slayer's Rise should only award Bloody Tokens while in War Mode.
 
-    User Interface
-        • Fixed an issue where Skyriding could remove your Quest UI bars.
+            User Interface
+                • Fixed an issue where Skyriding could remove your Quest UI bars.
 
         March 18, 2026
 
