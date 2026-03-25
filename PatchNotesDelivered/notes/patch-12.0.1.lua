@@ -9,9 +9,261 @@
 --- Max note length [140] ------------------------------------------------------------------------------------------------------------------
 PatchNotesDelivered_Notes_1201 = {
     version = "12.0.1",
-    build = "66527",
-    hotfix = 19,
+    build = "66562",
+    hotfix = 20,
     gameChangesHotfixes = [[
+        March 25, 2026
+
+            Classes
+                • The following spells now show on Raid Frames when Center Big Defensives is enabled in the Raid Frames Interface menu:
+                  Fortifying Brew, Divine Protection, Divine Shield, Enraged Regeneration, and Life Cocoon.
+                • Death Knight
+                    > Frost
+                        + All damage increased by 4%. Not applied to PvP combat.
+                • Demon Hunter
+                    > Devourer
+                        + All damage dealt increased by 3%.
+                        + Focused Ray damage bonus increased to 80% (was 50%).
+                        + Collapsing Star main target damage bonus increased to 75% (was 50%).
+                • Druid
+                    > Guardian
+                        + Maul, Raze, and Ravage damage reduced by 20%.
+                        + Heart of the Wild: Cat Form and Moonkin Form damage reduced by 20%.
+                        + Moonfire and Red Moon damage reduced by 10%.
+                        + Season 1 4-piece set bonus: Celestial Might causes your Maul, Raze and Ravage to strike again at 50% effectiveness
+                          (was 100%).
+                        + Fixed an issue preventing Maul from being tracked in the Cooldown Manager for certain talent builds.
+                        + Durations of Berserk and Incarnation: Guardian of Ursoc are now visible even when Wild Guardian is available.
+                    > Restoration
+                        + Rejuvenation and Germination healing increased by 10%.
+                        + Tranquility healing increased by 10%.
+                        + Wild Growth healing increased by 10%.
+                        + Embrace of the Dream healing increased by 35%.
+                        + Resolved an issue where sometimes Soul of the Forest could be immediately consumed if you spell-queued a Swiftmend
+                          after casting Regrowth.
+                • Evoker
+                    > Devastation
+                        + Disintegrate damage reduced by 5% for Devastation Evoker only.
+                        + Scalecommander: Might of the Black Dragonflight bonus to Black spells reduced to 20% (was 30%) for Devastation
+                          Evoker only.
+                        + Flameshaper: Twin Flame damage increased by 25% for Devastation Evoker only.
+                    > Preservation
+                        + All healing reduced by 5%.
+                        + Time of Need healing increased by 50%.
+                        + Verdant Embrace healing increased by 15%.
+                • Hunter
+                    > Beast Mastery
+                        + All damage dealt by you and your pets increased by 5%. This does not affect PvP combat.
+                        + Dark Ranger: Corrected an issue where Withering Fire's damage was not increased alongside Black Arrow's damage.
+                        + Fixed an issue causing the Nature's Ally Animal Companion to ignore commands to Wild Thrash.
+                        + When Pets are Playing Dead, issuing a Kill Command, Wild Thrash, or Bestial Wrath command will wake them up.
+                    > Marksmanship
+                        + Aspect of the Hydra effectiveness reduced to 35% (was 65%).
+                        + Aimed Shot damage increased by 8%. Does not affect PvP.
+                • Mage
+                    > Mass Invisibility will now correctly affect pets and summons of units it applies to.
+                    > Spellslinger: Fixed an issue causing Controlled Instincts to incorrectly reattribute damage from support effects.
+                    > Arcane
+                        + Fixed an issue causing Eureka to not affect all 3 Orbs fired from Clearcasted Arcane Orbs.
+                        + Fixed an issue preventing Arcane Echo from triggering correctly.
+                        + Fixed an issue preventing Brainstorm from triggering correctly.
+                        + Fixed an issue causing Touch of the Magi to not reattribute damage from support effects correctly.
+                • Monk
+                    > Fixed an issue causing Song of Chi-Ji to not be removed by spells that remove sleep effects, such as Tremor Totem.
+                • Paladin
+                    > Holy
+                        + Reflection of Radiance’s proc rate has been significantly reduced for Holy Paladins.
+                        + Hammer and Anvil healing increased by 35%. Does not apply to PvP combat.
+                        + Rite of Sanctification primary stat gained increased to 5% (was 2%) for Holy Paladins. Does not apply to 
+                          PvP combat.
+                        + Rite of Adjuration healing increased by 150% for Holy Paladins. Does not apply to PvP combat.
+                • Priest
+                    > Discipline
+                        + All damage reduced by 12%. Not applied to PvP combat.
+                        + Power Word: Shield and Void Shield absorption increased by 15%. Not applied to PvP combat.
+                        + Flash Heal and Shadow Mend healing increased by 15%. Not applied to PvP combat.
+                    > Holy
+                        + Corrected an issue where gaining Benediction while casting a Flash Heal could cause Flash Heal to incorrectly 
+                          consume the Benediction effects.
+                        + Fixed an issue causing the Single-Button Assistant and Assisted Highlight to continuously recommend 
+                          Shadow Word: Pain when Holy Fire was not talented.
+                        + Archon: Fixed an issue causing some of the benefits of Surge of Light to not function when Surge of Light was 
+                          gained while casting Flash Heal or Prayer of Healing and then canceling the cast.
+                    > Shadow
+                        + Fixed an issue causing Dark Thoughts to not increase the Insanity generated by Void Blast when consuming
+                          Shadowy Insight.
+                • Rogue
+                    > Assassination
+                        + All ability and melee damage increased by 4%.
+                    > Outlaw
+                        + All ability and melee damage increased by 4%.
+                    > Subtlety
+                        + All ability and melee damage increased by 3%. Does not apply to PvP.
+                • Shaman
+                    > Elemental
+                        + Lava Burst damage increased by 20%.
+                        + Elemental Blast damage increased by 15%.
+                        + Earth Shock damage increased by 15%.
+                        + Lightning Bolt damage increased by 10%.
+                        + Flame Shock damage increased by 10%.
+                        + Voltaic Blaze damage increased by 10%.
+                    > Restoration
+                        + All healing increased by 3%.
+                • Warlock
+                    > Fixed an issue where queuing Conflagrate after casting Immolate would not spread Immolate with Roaring Blaze talented.
+                    > Demonology
+                        + All ability damage reduced by 4%.
+                        + Fixed an issue where Summon Doomguard, Grimoire: Imp Lord, and Grimoire: Fel Ravager would not reset after an
+                          encounter resets.
+                        + Fixed an issue where demons summoned by Dominion of Argus would not reposition if line of sight was broken.
+                        + Fixed an issue where Channel Demonfire would fail to cast if it was queued after Cataclysm.
+                    > Destruction
+                        + Fixed an issue where spells would stop duplicating if Mayhem activated while Havoc was already active.
+                • Warrior
+                    > Arms
+                        + Mortal Strike damage increased by 12%.
+                        + Execute damage increased by 15%.
+                        + Cleave damage reduced by 10%.
+
+            Delves
+                • The Gulf of Memory
+                    > Fixed a bug where Lumenia's Light Bound Rutaani was changing fixate targets.
+                • Sunkiller Sanctum
+                    > Groups of Nullaeus' Minions can no longer spawn behind Esuritus.
+                • Twilight Crypts
+                    > Fixed an issue causing Valeera to do substantially less damage than expected while fighting Blademaster Darza.
+
+            Dungeons and Raids
+                • Algeth’ar Academy
+                    > Reduced the effectiveness of Dragonflight Pledge Pins.
+                    > Addressed an issue where the Blue Dragonflight Pledge Pin was giving less Mastery than intended.
+                    > Overgrown Ancient
+                        + Addressed an issue where some Hungry Lashers were not affected by Burst Forth.
+                    > Echo of Doragosa
+                        + Updated Arcane Rift visual to match the size of the rift.
+                        + Energy Bomb now targets 2 players (was 1).
+                    > Vile Lasher
+                        + Addressed an issue where Vile Bite’s bleed effect was not ignoring armor.
+                    > Arcane Forager
+                        + Vicious Lunge cooldown reduced, and damage increased by 50%.
+                    > Algeth’ar Echoknight
+                        + Arcane images now move during Astral Whirlwind.
+                • Maisara Caverns
+                    > Hulking Juggernaut
+                        + Addressed an issue where debuff from Rending Gore is not categorized as Bleed.
+                    > Nexus-Point Xenas
+                        + Enemies at the entrance no longer spawn below 90% health.
+                    > Duskfright Herald
+                        + Improved Dark Beckoning visual clarity, and summoned duskwraiths now travel in a straight line.
+                    > Smudge
+                        + Forfeit Essence cast time reduced to 2 seconds (was 4 seconds) on Mythic and Mythic+ difficulty.
+                        + Healing to Nascent Dreadflail increased.
+                    > Nascent Dreadflail
+                        + Now becomes active 1.5 seconds after being healed to full (was 3.5 seconds).
+                • Seat of the Triumvirate
+                    > Addressed an issue where the entrance portal can fail to appear for some players.
+                    > Saprish
+                        + Void Bomb visual has been updated
+                        + Phase Dash impact radius increased to 8 yards (was 6 yards).
+                • Windrunner Spire
+                    > Restless Heart
+                        + Squall Leap periodic damage increased by 36%, and increased the visibility of the Squall Leap debuff on players.
+                        + Developers’ notes: When considering the recent removal of Squall Leap’s stacking property, we are increasing the
+                          base damage value of this ability to compensate. This change incentivizes continued interaction with 
+                          Turbulent Arrows to remove this affliction, while also capping the penalty for failing to do so.
+                • The Voidspire
+                    > Vorasius
+                        + Shadowclaw Slam can no longer be dodged or parried.
+                    > Crown of the Cosmos
+                        + Resolved an issue where Alleria could melee players while they were still in the air entering Stage Three.
+                        + Resolved an issue where Grasp of Emptiness would have its duration shortened by effects such as 
+                          The Voodoo Shuffle.
+                        + Void Expulsion damage no longer scales with raid size.
+
+            Items
+                • Gloom-Spattered Dreadscale absorb aura is now removed upon entering instances or loading into a new zone. Using the 
+                  trinket now overwrites any existing absorb aura, and its maximum value is limited.
+                • Beacon of Lightblind Wrath - Fixed an issue preventing certain offensive healer abilities from activating the 
+                  damage effect.
+                • Fixed a bug with Crucible of Erratic Energies not activating when it should.
+
+            Player versus Player
+                • Resolved an issue where the Rated Battleground version of Eye of the Storm spawned additional capture points.
+                • Druid
+                    > Restoration
+                        + Reactive Resin healing increased by 50%.
+                        + All healing increased by 5% in PvP combat.
+                    > Feral
+                        + All damage increased by 9% in PvP combat.
+                • Death Knight
+                    > Frost
+                        + All damage increased by 8% in PvP combat.
+                • Demon Hunter
+                    > Devourer
+                        + Reverse Magic has been added as a PvP Talent.
+                        + Developers’ notes: This was previously planned to be a 12.0.5 change, but we’re moving it into 12.0.1 via hotfix.
+                • Evoker
+                    > Devastation
+                        + All damage increased by 4% in PvP.
+                • Mage
+                    > Arcane
+                        + All damage increased by 8% in PvP combat.
+                        + Arcane Missiles damage increased by 40% in PvP combat.
+                • Monk
+                    > Mistweaver
+                        + All healing reduced by 8% in PvP combat.
+                • Paladin
+                    > Holy
+                        + Mana regeneration reduced by 30% in PvP combat.
+                • Priest
+                    > Fixed an issue causing Psychic Shroud to last 15 seconds when landing a Psychic Scream against multiple enemies.
+                • Shaman
+                    > Elemental
+                        + All damage reduced by 4% in PvP combat.
+                    > Enhancement
+                        + Crash Lightning damage increased by 80% in PvP combat. This also affects Crash Lightning (Unleashed).
+                        + Primordial Storm damage reduced by 15% in PvP combat.
+                        + Surging Elements now increases haste by 10% in PvP combat (was 15%).
+                        + Totemic: Surging Bolt damage reduced by 15% in PvP combat.
+                        + Totemic: Fixed an issue causing the tooltip of Primal Catalyst to not display that the Lava Lash casts at 50%
+                          effectiveness in PvP combat instead of 150%.
+                • Warlock
+                    > Affliction
+                        + Corruption and Wither damage increased by 20% in PvP combat.
+                        + Agony damage increased by 20% in PvP combat.
+                        + Unstable Affliction now lasts 12 seconds in PvP combat (was 8 seconds), a 50% increase in its total damage dealt.
+                        + Shadow Bolt damage increased by 100% in PvP combat.
+                        + Drain Soul damage increased by 100% in PvP combat.
+
+            Professions
+                • Blacksmithing
+                    > Fixed an issue with Living Steel Weapon Chain applying to weapons above 80 Item Level.
+                • Herbalism
+                    > Vengeful Lashers woken up by gathering wild herbs in Zul'Aman are now friendly with everyone except for the herbalist 
+                      who woke them up.
+                • Inscription
+                    > Fixed an issue with Darkmoon Rot effects not doing damage to enemies above level 90.
+                • Leatherworking
+                    > Primal Spore Binding is now activated by more class abilities and now favors your current role when activating.
+                    > Thalassian Herbtender's Cradle now has a Finishing Reagent slot available when crafting.
+
+            Prey
+                • Completing Prey hunts after your first 4 a week now awards 1000 Prey Journey progress until you reach Journey Rank 4, 
+                  where the value will drop down to 50. This includes completing random hunts. The amount of Journey progress awarded by 
+                  your first 4 hunts on an account remains unchanged at 1000.
+                • Developers’ notes: Following this change and the change to streamline account progression on Prey difficulty unlocks,
+                  players may have noticed that previously-completed Prey renown quests have been reset. If you have already unlocked
+                  Nightmare mode, this should be a purely cosmetic bug. If you were in the middle of the unlock quests, we apologize for the
+                  inconvenience and hope that getting to spend additional time scheming with Astalor is some small consolation.
+
+            Quests
+                • Resolved an issue sometimes preventing completion of "Midnight: Saltheril's Soiree" if a guest had already been invited 
+                  on another character. Affected players can visit Saltheril's Haven to receive credit for the objective automatically.
+                • Fixed a bug preventing players who are dead when Alleria is defeated during "The Voidspire" from receiving quest credit.
+
+            Races
+                • Haranir Druids now use the Sable travel form.
+
         March 19, 2026
 
             Achievements
