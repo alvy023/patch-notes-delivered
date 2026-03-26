@@ -10,8 +10,46 @@
 PatchNotesDelivered_Notes_1201 = {
     version = "12.0.1",
     build = "66562",
-    hotfix = 20,
+    hotfix = 21,
     gameChangesHotfixes = [[
+        March 25, 2026
+
+    Classes
+        • Demon Hunter
+            > Devourer
+                + Fixed an issue causing multiple Devourer spells to be castable while silenced.
+    Delves
+        • Fixed an issue where enemies that died while in combat would not count towards removing the curse of Sealed Chaos Urn, if the
+          killing blow was not dealt by the player.
+    Dungeons and Raids
+        • The Voidspire
+            > Creatures in The Voidspire that are skinnable should now produce appropriate reagents when skinned.
+            > Gladius Slauros no longer grips players before casting Slaughter.
+            > Fallen-King Salhadaar
+                + Resolved an issue causing Shadow Fracture to sometimes not inflict its intended damage.
+            > Vaelgor & Ezzorak
+                + Resolved an issue causing Dread Breath to not apply a fear effect on Raid Finder difficulty.
+            > Lightblinded Vanguard
+                + Resolved an issue causing Aura of Peace's silence effect to have a 5 second cooldown.
+    Items
+        • Resolved an issue where ring and neck slot items from the War of Light and Shadow campaign quests were getting an extra socket.
+    Player versus Player
+        • Fixed an issue where the “Enshrouded Solo” quest was not giving credit for rounds completed.
+        • Mage
+            + Fixed an issue where Counterspell would sometimes grant Precognition to enemy Mages, even if they were successfully
+              interrupted.
+        • Warlock
+            > Affliction
+                + Unstable Affliction will now show a larger high priority icon on raid frames.
+    Professions
+        • Alchemy
+            > Recipe: Entropic Illuminant is no longer bind-on-pickup.
+    Quests
+        • Fixed an issue where Thalyssra was unavailable for some players for "The Shal'dorei" if other players were turning in "Wake of
+          the Darkwell".
+        • Lor'themar should now not be so busy with the armies of the elves that he ignores players trying to turn in "Midnight: World
+          Tour".
+
         March 25, 2026
 
             Classes
