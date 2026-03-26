@@ -40,7 +40,7 @@ PatchNotesDelivered_Notes_1201 = {
             Player versus Player
                 • Fixed an issue where the “Enshrouded Solo” quest was not giving credit for rounds completed.
                 • Mage
-                    + Fixed an issue where Counterspell would sometimes grant Precognition to enemy Mages, even if they were successfully
+                    > Fixed an issue where Counterspell would sometimes grant Precognition to enemy Mages, even if they were successfully
                       interrupted.
                 • Warlock
                     > Affliction
