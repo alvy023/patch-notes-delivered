@@ -9,9 +9,68 @@
 --- Max note length [140] ------------------------------------------------------------------------------------------------------------------
 PatchNotesDelivered_Notes_1201 = {
     version = "12.0.1",
-    build = "66562",
-    hotfix = 21,
+    build = "66666",
+    hotfix = 22,
     gameChangesHotfixes = [[
+        March 26, 2026
+
+            Classes
+                • Mage
+                    > Fire
+                        + Fixed an issue causing Fire Blast to not damage players in stealth.
+                • Paladin
+                    > Retribution
+                        + Templar: Resolved an issue causing Hammer of Light to not benefit from Judgment with Undisputed Ruling when cast 
+                          on a target without any Judgment stacks.
+                • Warlock
+                    > Demonology
+                        + Fixed an issue causing Wicked Reaping to deal higher damage than intended.
+                        + Fixed an issue where Antoran Inquisitor could target enemies that are not in combat.
+
+            Delves
+                • Fixed an issue where damage-dealing Valeera was causing pets and guardians to be considered more valuable targets than 
+                  the player(s).
+                • Additional Twilight Material now drops from enemies in The Shadow Enclave during the Shadowy Supplies story variant.
+
+            Dungeons and Raids
+                • Nexus-Point Xenas
+                    > Addressed an issue where Lingering Image’s Searing Rend can fervent strike.
+                • Pit of Saron
+                    > Fixed an issue that sometimes caused pet pathing to fail when attacking Garfrost and Scourgelord Tyrannus.
+                • The Dreamrift
+                    > Chimaerus the Undreamt God
+                        + Addressed an issue causing Manifestations to continue casting after losing their Alnshroud.
+                        + Resolved an issue causing players in Reality to be targeted with Rift Madness.
+                • The Voidspire
+                    > Vorasius
+                        + Increased the time before Vorasius becomes active after preliminary enemies have been defeated.
+                    > Vaelgor & Ezzorak
+                        + Resolved an issue with Dread Breath's Fear effect on Raid Finder difficulty.
+                        + Adjusted the warning visuals for Void Howl to better match the targeting radius in Raid Finder, Normal, and 
+                          Heroic difficulties.
+                    > Lightblinded Vanguard
+                        + Fixed a bug where Avenger's Shield was targeting pets.
+                        + Resolved an issue where gaining an additional stack of Tyr's Wrath would refresh the absorb value to its maximum 
+                          value for each stack.
+                    > Crown of the Cosmos
+                        + Resolved an issue where Void Expulsion could remain on the ground between phase transitions.
+
+            Items and Rewards
+                • Very rare raid items now drop at their intended item level in Normal and Raid Finder difficulties and preview at the 
+                  correct item level in the Adventure Guide.
+                • Gaze of the Alnseer - Fixed an issue where the internal cooldown could occasionally be unintentionally ignored.
+                • Litany of Lightblind Wrath - Fixed a further issue preventing certain spells from triggering the damage effect such 
+                  as Lava Burst.
+                • Reduced gold awarded by Void-Touched Satchel of Cooperation.
+                • Increased rewards awarded by Field Medic's Hazard Payout.
+                    > Developers’ notes: These two rewards have a similar purpose: an incentive to encourage players of a specific role to 
+                      enter a queue and help balance roles that are in short supply, while reducing queue times. The contents of these bags 
+                      were not equitable, so these changes bring them closer into balance.
+
+            Quests
+                • "Midnight: Stormarion Assault" and "Guarded Treasures" now issue credit to players in raid groups.
+                • “The War of Light and Shadow” campaign is now prioritized over the "Dragonflight" campaign when the player is in Bel'ameth.
+
         March 25, 2026
 
             Classes
