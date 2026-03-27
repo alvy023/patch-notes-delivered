@@ -39,7 +39,7 @@ and this project adheres to a specific versioning schema: `A.B.C` where:
 ### Added
 - Added 12.0.1 (evil build) notes for March 26
 ### Changed
-- Update TOC to 1.12.30
+- Updated TOC to 1.12.30
 
 ## [1.12.29] - 2026-03-26
 ### Added

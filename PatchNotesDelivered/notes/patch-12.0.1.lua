@@ -60,7 +60,7 @@ PatchNotesDelivered_Notes_1201 = {
                   correct item level in the Adventure Guide.
                 • Gaze of the Alnseer - Fixed an issue where the internal cooldown could occasionally be unintentionally ignored.
                 • Litany of Lightblind Wrath - Fixed a further issue preventing certain spells from triggering the damage effect such 
-                  as Lavaburst.
+                  as Lava Burst.
                 • Reduced gold awarded by Void-Touched Satchel of Cooperation.
                 • Increased rewards awarded by Field Medic's Hazard Payout.
                     > Developers’ notes: These two rewards have a similar purpose: an incentive to encourage players of a specific role to 
