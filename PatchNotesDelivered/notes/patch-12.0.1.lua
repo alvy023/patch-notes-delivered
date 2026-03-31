@@ -9,9 +9,65 @@
 --- Max note length [140] ------------------------------------------------------------------------------------------------------------------
 PatchNotesDelivered_Notes_1201 = {
     version = "12.0.1",
-    build = "66666",
-    hotfix = 22,
+    build = "66709",
+    hotfix = 23,
     gameChangesHotfixes = [[
+        March 30, 2026
+
+    Classes
+        • Demon Hunter
+            > Devourer
+                + Void Ray's impact visuals are now reduced in photosensitivity mode.
+        • Hunter
+            + Fixed an issue where Master's Call was not functioning with player macros.
+            > Survival
+                + Fixed an issue where some talents could cause an unclear or missing error message when trying to respec your Survival talent points.
+        • Monk
+            + Fixed an issue that could cause Jadefire Stomp and Rushing Wind Kick to strike enemies through walls.
+        • Paladin
+            > Protection
+                + Fixed an issue where Valiant Crusade sometimes wouldn't reapply after a talent change.
+                + Undisputed Ruling and Hammer of Light are now available to be tracked in the Cooldown Manager.
+                + Word of Glory and Shield of the Righteous are now available in the Essentials category of the Cooldown Manager.
+
+    Dungeons and Raids
+        • Algeth'ar Academy
+            > Echo of Doragosa
+                + Arcane Rift now has additional visuals before they release Uncontrolled Energy.
+        • Magisters' Terrace
+            + Addressed an issue where some Animated Codexes were not contributing as criteria for Enemy Forces.
+        • Pit of Saron
+            > Plungetalon Gargoyle
+                + Fixed an issue preventing grabbed players from rotating to aim certain abilities
+                + Fixed an issue preventing Mages from being able to Blink when grabbed.
+            > Ick and Krick
+                + Fixed an issue where sometimes Ick could melee a non-fixated player when ending his fixate.
+        • Seat of the Triumvirate
+            > L'ura
+                + Added a dynamic visual effect on Discordant Beam.
+        • Skyreach
+            > Rukhran
+                + Addressed an issue where players can sometimes get stuck in combat after the encounter ends.
+            > High Sage Viryx
+                + Players targeted by Cast Down can now turn while being picked up by a Solar Zealot.
+        • The Voidspire
+            + Fixed an issue where Gladius Slauros' Strength in Shadows did not always reflect damage.
+        • Windrunner Spire
+            + Increased the visibility of Territorial Dragonhawk’s visual effects when they use Fire Spit.
+
+    Items
+        • Dawncrests will now be mailed to you if you miss looting them.
+        • Fixed an issue that sometimes prevented the Chimaerus and Crown of the Cosmos encounters from dropping trophy decor items. A future hotfix will restore trophies to players who earned the trophies but did not receive them.
+        • Increased the power of the rewards from Belo'ren, Child of Al'ar in the March on Quel'Danas raid.
+
+    Player versus Player
+        • Nassar and Sergeant Wilson have arrived in Silvermoon near the PvP vendors to assist in handing out Mercenary Contracts for battlegrounds.
+        • Hunter
+            + Resolved an issue where Tracker's Net (PvP Talent) would reapply its root when effects such as Vanish fade.
+
+    Professions
+        • The Midnight version of Green Thumb now appropriately awards double the herbs when used on Midnight herbalism nodes.
+
         March 26, 2026
 
             Classes
