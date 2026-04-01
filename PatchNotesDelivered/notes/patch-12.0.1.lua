@@ -60,7 +60,7 @@ PatchNotesDelivered_Notes_1201 = {
                         + Shadow Apparition and Void Apparition damage increased by 35%.
                         + Spectral Horrors now increases Shadowy Apparition damage against targets affected by Shadow Word: Madness by 30% 
                           (was 50%).
-                        + Psychic Link causes direct damage spells to inflicts 25% of their damage on all targets afflicted by 
+                        + Psychic Link causes direct damage spells to inflict 25% of their damage on all targets afflicted by 
                           Vampiric Touch (was 20%).
                         + Void Spike from Things from Beyond now deals 25% additional damage to secondary targets.
                         + Mind Sear from Void Lashers now deals 25% additional damage.
@@ -137,7 +137,7 @@ PatchNotesDelivered_Notes_1201 = {
                         + All healing increased by 8% in PvP combat.
                         + Regrowth healing increased by 40% in PvP combat.
                         + Swiftmend healing increased by 25% in PvP combat.
-                        + Barkskin now reduced damage taken by 30% in PvP combat (was 20%).
+                        + Barkskin now reduces damage taken by 30% in PvP combat (was 20%).
                 • Hunter
                     > Marksmanship
                         + Developers’ notes: Marksmanship is a burst outlier, so we’re reducing the power of Aimed Shot and increasing 
