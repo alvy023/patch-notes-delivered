@@ -10,8 +10,235 @@
 PatchNotesDelivered_Notes_1201 = {
     version = "12.0.1",
     build = "66709",
-    hotfix = 23,
+    hotfix = 24,
     gameChangesHotfixes = [[
+        March 31, 2026
+
+            Classes
+                • Death Knight
+                    > Frost
+                        + All damage dealt increased by 4%. Not applied to PvP combat.
+                • Demon Hunter
+                    > Devourer
+                        + Shift is now correctly affected by Evoker's Blessing of the Bronze and Time Spiral spells.
+                • Druid
+                    > Feral
+                        + All damage dealt increased by 3%. Not applied to PvP combat.
+                        + Frantic Frenzy damage reduced by 8%. Not applied to PvP combat.
+                            - Developers’ notes: Our intention here is to improve Feral damage in raids, without increasing their damage in 
+                              M+, which is already competitive.
+                • Hunter
+                    > Fixed an issue where Hunter's Mark's effect could stack multiple times.
+                    > Beast Mastery
+                        + All damage dealt by you and your pets increased by 4%. Not applied to PvP combat.
+                    > Survival
+                        + All damage dealt by you and your pets increased by 4%.
+                • Mage
+                    > Arcane
+                        + Sunfury: Burden of Power now increases Arcane Blast damage by 25% (was 5%) and Arcane Pulse damage by 15% 
+                          (was 5%).
+                            - Developers’ notes: Arcane Sunfury is a bit farther behind our expectations in single target damage.
+                    > Fire
+                        + Fixed an issue causing the Single-Button Assistant and Assisted Highlight to not suggest Flamestrike when the 
+                          target-cast version of Flamestrike was talented.
+                • Monk
+                    > Mistweaver
+                        + Fixed an issue that caused Serene Vitality to not function.
+                • Paladin
+                    > Fixed an issue causing Lightforged Blessing to not heal.
+                    > Protection
+                        + Guided Prayer no longer consumes Shining Light.
+                        + Fixed an issue where Word of Glory was refunding an incorrect amount of mana.
+                        + Fixed an issue where Afterimage's casts of Word of Glory were consuming mana.
+                • Priest
+                    > Shadow
+                        + Developers’ notes: Shadow Word: Death has been lacking in damage, even in execute range, so we’re significantly 
+                          increasing its damage to correct this. To increase damage in multi-target situations, we’re targeting some 
+                          AoE-only sources and shifting some power from some single target sources of damage to Shadowy Apparition damage.
+                        + Shadow Word: Death damage increased by 80%.
+                        + Mind Blast and Void Blast damage reduced by 10%.
+                        + Shadow Apparition and Void Apparition damage increased by 35%.
+                        + Spectral Horrors now increases Shadowy Apparition damage against targets affected by Shadow Word: Madness by 30% 
+                          (was 50%).
+                        + Psychic Link causes direct damage spells to inflict 25% of their damage on all targets afflicted by 
+                          Vampiric Touch (was 20%).
+                        + Void Spike from Things from Beyond now deals 25% additional damage to secondary targets.
+                        + Mind Sear from Void Lashers now deals 25% additional damage.
+                • Warlock
+                    > Demonology
+                        + Fixed an issue where the chance to generate a Demonic Core from a Wild Imp fading was lower than the 
+                          intended amount.
+                        + Fixed an issue where Antoran Jailer would stop attacking enemies if they fly.
+                        + Fixed an issue where Antoran Inquisitor would not cast Mind Sear if it was spawned out of range.
+                    > Destruction
+                        + Fixed an issue where Destruction Warlocks could not apply their starter build.
+                • Warrior
+                    > Arms
+                        + Developers’ notes: Arms single target damage remains lower than intended, particularly Execute.
+                        + Execute damage increased by 20%. Does not affect PvP combat.
+                        + Overpower damage increased by 10%. Does not affect PvP combat.
+
+            Delves
+                • Atal’Aman
+                    > Spiritflayer Jin'Ma
+                        + Claimed Spirit now has a maximum stack count.
+
+            Dungeons and Raids
+                • Hall of Fame
+                    > The Dreamrift Hall of Fame is now full and is no longer eligible to be earned.
+                • Algeth’ar Academy
+                    > Corrupted Manafiend
+                        + Mana Void now targets 1 player (was 2).
+                        + Fixed an issue where players could get targeted by multiple stacks of Mana Void.
+                    > Echo of Doragosa
+                        + Arcane Rift duration reduced to 90 seconds (was 2 minutes).
+                        + There is now a 3 second delay when an Arcane Rift spawns from a player reaching 3 stacks of Overwhelming Power.
+                • Maisara Caverns
+                    > Tormented Shade
+                        + Spirit Rend damage over time effect reduced by 20%.
+                    > Vordaza
+                        + Lingering Dread initial damage increased by 25% and the damage over time effect removed.
+                • Skyreach
+                    > Addressed an issue where some spells can target players not in combat.
+                • The Voidspire
+                    > The portal after the Crown of the Cosmos encounter now takes you outside of the raid instance.
+                    > Fallen King Salhadaar
+                        + Shadow Fracture cast time increased to 12 seconds on Mythic difficulty (was 9 seconds).
+                        + Fractured Projections will now gain Broken Shield when their Shadow Fracture spell can be interrupted on 
+                          Mythic difficulty.
+                    > Lightblinded Vanguard
+                        + Avenger's Shield now targets 4 players on Mythic difficulty (was 8).
+                        + Tyr's Wrath healing absorb decreased by 17% on Mythic difficulty.
+                        + Sacred Toll damage reduced by 15% on Mythic difficulty.
+                    > Crown of the Cosmos
+                        + Resolved an issue where Void Expulsion could be placed at Alleria's location without a player present.
+                        + Resolved an issue where two Ranger Captain's Marks could sometimes pick the same player on Mythic difficulty.
+                        + Resolved an issue where Grasp of Emptiness could be spell reflected.
+
+            Items
+                • Crucible of Erratic Energies Leech reduced by 50%.
+                • Light of the Cosmic Crescendo healing increased by 35%.
+                • Shadow of the Empyrean Requiem damage increased by 20%.
+                • Whisper of the Duskwraith healing increased by 35%.
+                • Echo of L'ura healing increased by 35%.
+                • Radiant Sunstone initial healing increased by 35%.
+                • The following housing decor items are now Bind to Warband: Rutaani Sporepod, Rustic Harandar Planter, 
+                  Grand Aethercharged Crystal, and Kafa Press.
+                • The Postmaster has mailed the missing Chimaerus and Crown of the Cosmos encounter trophy decor to eligible characters.
+                • Fixed an issue where some players were unable to consume Gleaming Sunmote to unlock alternate armor appearances.
+                • Fixed an issue preventing alternate shoulder armor appearances for Druids from being unlocked.
+
+            Player versus Player
+                • Resolved an issue that prevented Honor earned in Slayer's Rise to count towards progress in the “Enshrouded in War” quest.
+                • Druid
+                    > Restoration
+                        + Developers’ notes: A substantial buff is needed to help Restoration, who have been struggling to keep up in 
+                          healing throughput as well as defensively.
+                        + All healing increased by 8% in PvP combat.
+                        + Regrowth healing increased by 40% in PvP combat.
+                        + Swiftmend healing increased by 25% in PvP combat.
+                        + Barkskin now reduces damage taken by 30% in PvP combat (was 20%).
+                • Hunter
+                    > Marksmanship
+                        + Developers’ notes: Marksmanship is a burst outlier, so we’re reducing the power of Aimed Shot and increasing 
+                          sustained damage from other primary damage sources to keep it feeling powerful, while reducing the peaks of 
+                          its burst.
+                        + Aimed Shot damage reduced by 10% in PvP combat.
+                        + Kill Shot and Black Arrow damage increased by 15% in PvP combat.
+                        + Rapid Fire damage increased by 15% in PvP combat.
+                • Mage
+                    > Arcane
+                        + Developers’ notes: Arcanosphere damage has fallen behind other sources in Midnight. We’re also buffing Sunfury in 
+                          all gameplay (above) to make it more competitive with Spellslinger.
+                        + Arcanosphere damage increased by 250%.
+                    > Fire
+                        + Developers’ notes: Fire Mage has strong burst during Combustion which has gotten a bit too strong. We’re aiming to
+                          reduce power in this window by adjusting talents that are propping up damage during Combustion and otherwise are 
+                          looking to keep sustained damage in a similar state.
+                        + Each stack of Fired Up now increases Fire damage by 2% in PvP combat (was 4%).
+                        + Burn It All now increases spell damage by 5% during Combustion in PvP combat (was 10%).
+                • Monk
+                    > Mistweaver
+                        + Developers’ notes: Mistweavers have continued to be a step above other healers this season, with strong sustained 
+                          healing in addition to having strong cooldowns more frequently than other healers. These adjustments target some 
+                          of those cooldowns.
+                        + All healing reduced by 4% in PvP combat.
+                        + Conduit of the Celestials: Heart of the Jade Serpent now causes Thunder Focus Tea to increase the recovery rate of
+                          Renewing Mist, Rising Sun Kick, Life Cocoon, and Thunder Focus Tea by 30% for 8 seconds in PvP combat (was 75%).
+                        + Conduit of the Celestials: Celestial Conduit healing reduced by 50% in PvP combat.
+                    > Windwalker
+                        + Developers’ notes: We feel that Windwalkers’ burst windows are too difficult to react to, so we’re reducing the 
+                          damage of Zenith Stomp and Rushing Wind Kick while adding some damage to Fists of Fury, which has felt less 
+                          impactful this season. Additionally, it’s not uncommon to die through Touch of Karma, so we’re increasing the 
+                          amount of damage it absorbs, to increase its effectiveness as a survival tool.
+                        + Zenith Stomp damage reduced by 25% in PvP combat.
+                        + Rushing Wind Kick damage reduced by 15% in PvP combat.
+                        + Fists of Fury damage increased by 15% in PvP combat.
+                        + Touch of Karma now absorbs 20% more damage in PvP combat.
+                • Paladin
+                    > Developers’ notes: We’re looking to reduce burst damage to targets at low health for all Paladin specializations, 
+                      which is mainly caused by Vengeful Wrath. Additionally, Blessing of Spellwarding has been a powerful spell since it 
+                      was introduced with few counters and works against most specializations which can feel oppressive to play against. 
+                      We’re reducing its duration in PvP so that it can remain a powerful defensive.
+                    > Vengeful Wrath now increases Hammer of Wrath damage by up to 20% based on the target’s health (was 50%).
+                    > Blessing of Spellwarding duration reduced to 6 seconds in PvP combat (was 10 seconds).
+                    > Holy
+                        + Developers’ notes: After recent tuning and the general Paladin changes here, Holy is in a good spot. This increase
+                          of the power of a major source of healing from Herald of the Sun should shore up the viability of the hero tree.
+                        + Herald of the Sun: Eternal Flame healing increased by 20% in PvP combat.
+                    > Protection
+                        + All damage reduced by 10% in PvP combat.
+                    > Retribution
+                        + Developers’ notes: We’re looking to add more punch to finishers from Ret which have felt weak this season, so 
+                          we’re increasing the damage of Final Verdict to achieve that. We’re also increasing the damage of Dawnlight to 
+                          increase the viability of the Herald of the Sun hero talents.
+                        + Templar’s Verdict and Final Verdict damage increased by 25% in PvP combat.
+                        + Herald of the Sun: Dawnlight damage increased by 30% in PvP combat.
+                • Rogue
+                    > Subtlety
+                        + Developers’ notes: Subtlety has continued to be a strong asset to a team, with its frequent burst and strong crowd
+                          control. We’re bringing down some of its potential burst with these changes to keep their power level more in line
+                          relative to their overall kit.
+                        + Death Perception effects now increase finisher damage by 3% each in PvP combat (was 5%).
+                        + Replicating Shadows bonus damage for Shadow Clones reduced to 5% in PvP combat (was 15%).
+                • Shaman
+                    > Developers’ notes: We’re increasing the damage of some Shaman PvP talents that have fallen behind other sources of 
+                      damage. We’d like Lightning Lasso to feel worth fully channeling and trying to interrupt and for Electrocute to be a 
+                      noticeable effect when Purging enemies.
+                    > Lightning Lasso damage increased by 450%.
+                    > Electrocute damage increased by 35%.
+                    > Elemental
+                        + Farseer: All Ancestor healing increased by 20% in PvP combat.
+                    > Enhancement
+                        + Developers’ notes: We feel Enhancement is in a good place after last week’s tuning. Enhancement has outlier burst 
+                          potential with Tempest, so we’re toning down, so that it’s easier to react to its burst.
+                        + Stormbringer: Tempest damage reduced by 15% in PvP combat.
+                    > Restoration
+                        + Developers’ notes: We’re targeting a buff to Farseer this week. Its healing has fallen behind, and we’re aiming to
+                          increase its viability compared to Totemic.
+                        + Farseer: All Ancestor healing increased by 20% in PvP combat.
+                        + Farseer: Elemental Reverb now increases Riptide healing by 25% in PvP combat (was 10%).
+                • Warrior
+                    > Arms
+                        + Developers’ notes: Arms can sometimes struggle to connect, so we’re making a change to Battle Stance to help with 
+                          mobility against slow and root effects. Additionally, we’re increasing the power of Ignore Pain so that it feels 
+                          more worthwhile to use when trying to survive.
+                        + Battle Stance now reduces the duration of movement impairment effects by 25% in PvP combat (was 10%).
+                        + Ignore Pain absorption increased by 20% in PvP combat.
+                    > Fury
+                        + Developers’ notes: Damage is in a good state for Mountain Thane, but there is some potential for burst from 
+                          Bloodthirst that we’re looking to reign in. We’re also increasing the damage from Execute to increase the 
+                          viability of the Slayer hero talents.
+                        + Execute damage increased by 20% in PvP combat.
+                        + Mountain Thane: Burst of Power now increases the damage of Bloodthirst by 15% (was 35%).
+
+            Prey
+                • Creatures summoned by Prey traps will now correctly clear Bloody Command on death.
+
+            Professions
+                • Gems will now be found more regularly when prospecting Midnight ore.
+                • Fixed an issue where Recipe: Vicious Thalassian Flask of Honor was Bind on Pickup.
+
         March 30, 2026
 
             Classes
