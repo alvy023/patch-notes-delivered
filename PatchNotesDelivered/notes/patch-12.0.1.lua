@@ -14,51 +14,52 @@ PatchNotesDelivered_Notes_1201 = {
     gameChangesHotfixes = [[
         April 1, 2026
 
-        Abundance
-            • To address latency issues, Abundant Harvests will no longer be available in the zone where a World Boss is active that week.
+            Abundance
+                • To address latency issues, Abundant Harvests will no longer be available in the zone where a World Boss is active 
+                  that week.
 
-        Classes
-            • Demon Hunter
-                > Devourer
-                    + Fixed an issue causing Void Ray and Eradicate to strike enemies extremely high in the air.
-            • Hunter
-                • Fixed an issue where Primal Rage was failing to cast when used with Command Pet.
-                > Survival
-                    + Sentinel: Fixed an issue causing area damage spells like Wildfire Bomb and Boomstick to not consistently apply
-                      Sentinel's Mark to their primary target.
-            • Priest
-                > Discipline
-                    + Fixed an issue causing Revel in Darkness to not increase the damage of Shadow Word: Pain.
+            Classes
+                • Demon Hunter
+                    > Devourer
+                        + Fixed an issue causing Void Ray and Eradicate to strike enemies extremely high in the air.
+                • Hunter
+                    > Fixed an issue where Primal Rage was failing to cast when used with Command Pet.
+                    > Survival
+                        + Sentinel: Fixed an issue causing area damage spells like Wildfire Bomb and Boomstick to not consistently apply
+                          Sentinel's Mark to their primary target.
+                • Priest
+                    > Discipline
+                        + Fixed an issue causing Revel in Darkness to not increase the damage of Shadow Word: Pain.
 
-        Delves
-            • Fixed an issue where Restored Coffer Keys purchased from Naleidea Rivergleam were not being added to your currency.
+            Delves
+                • Fixed an issue where Restored Coffer Keys purchased from Naleidea Rivergleam were not being added to your currency.
 
-        Dungeons and Raids
-            • Maisara Caverns
-                • Fixed an issue where Voidbound Emissary can spawn during Rak'tul's intermission on Mythic+ difficulty.
-            • March on Quel'Danas
-                > Belo'ren
-                    + Fixed an issue with Eternal Burns not applying correctly to players.
-                    + Fixed an issue where Light and Void Embers would fail to Dive Bomb if the target died.
-                    + Fixed an issue where Void Patch appeared slightly larger than Light Patch.
-                    + Fixed an issue where tanks could be infused with the same feather color.
-            • Timewalking
-                • Fixed an issue where enemies inside Timewalking difficulty dungeons and raids had more health than intended.
+            Dungeons and Raids
+                • Maisara Caverns
+                    > Fixed an issue where Voidbound Emissary can spawn during Rak'tul's intermission on Mythic+ difficulty.
+                • March on Quel'Danas
+                    > Belo'ren
+                        + Fixed an issue with Eternal Burns not applying correctly to players.
+                        + Fixed an issue where Light and Void Embers would fail to Dive Bomb if the target died.
+                        + Fixed an issue where Void Patch appeared slightly larger than Light Patch.
+                        + Fixed an issue where tanks could be infused with the same feather color.
+                • Timewalking
+                    > Fixed an issue where enemies inside Timewalking difficulty dungeons and raids had more health than intended.
 
-        Items
-            • Stoic Eversong Diamonds now provide their armor bonus when socketed.
+            Items
+                • Stoic Eversong Diamonds now provide their armor bonus when socketed.
 
-        Player versus Player
-            • Paladin
-                • Searing Glare now shows as an important aura on raid frames.
-                • Ultimate Sacrifice now shows as a big defensive on raid frames and shows as a buff on enemy nameplates.
-            • Shaman
-                > Enhancement
-                    + Doom Winds and Ascendance now show on enemy nameplate buffs.
+            Player versus Player
+                • Paladin
+                    > Searing Glare now shows as an important aura on raid frames.
+                    > Ultimate Sacrifice now shows as a big defensive on raid frames and shows as a buff on enemy nameplates.
+                • Shaman
+                    > Enhancement
+                        + Doom Winds and Ascendance now show on enemy nameplate buffs.
 
-        Quests
-            • Arator should now be available if players have both "The Battle of the Bridge" and "March on Quel'Danas" ready to turn in.
-            • Lor'themar should now allow players to turn in "No Loose Ends" during the Gathering of the Elves.
+            Quests
+                • Arator should now be available if players have both "The Battle of the Bridge" and "March on Quel'Danas" ready to turn in.
+                • Lor'themar should now allow players to turn in "No Loose Ends" during the Gathering of the Elves.
 
         March 31, 2026
 
