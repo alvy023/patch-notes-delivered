@@ -10,8 +10,45 @@
 PatchNotesDelivered_Notes_1201 = {
     version = "12.0.1",
     build = "66709",
-    hotfix = 25,
+    hotfix = 26,
     gameChangesHotfixes = [[
+        April 2, 2026
+
+            Classes
+                • Druid
+                    > Feral
+                        + Overflowing Power stack aura is now excluded from the Secret Values system.
+                • Paladin
+                    > Retribution
+                        + Resolved an issue causing Hammer of Wrath to not interface with Mastery: Highlord's Judgment.
+                        + Herald of the Sun
+                            - Resolved an issue causing Morning Star's increased damage effect on Dawnlight to stop functioning when the 
+                              second Dawnlight is applied to the same target.
+                            - Resolved an issue with Empyrean Legacy causing Dawnlight targeting to become inconsistent.
+                            - Resolved an issue causing Dawnlights to target critters and pets with Divine Storm.
+                            - Resolved an issue causing Morning Star to benefit Paladins outside of the caster.
+                • Rogue
+                    > Assassination
+                        + Garrotes applied with Improved Garrote and spread by Crimson Tempest now correctly update their damage when the
+                          rogue's stats change.
+                        + Improved Garrotes spread by Crimson Tempest now correctly show the empowered version of the Garrote icon on
+                          enemy nameplates.
+
+            Dungeons
+                • Mythic+
+                    > Addressed an issue where Voidbound Emissary would despawn immediately after spawning.
+                • Timewalking
+                    > Fixed an issue where Timewalking dungeon items obtained while leveling required a higher character level 
+                      than intended.
+
+            Items
+                • Soulhunter's Mask has been renamed to Shroud of the Soulhunter.
+                • Scabrous Zombie Leather Belt has been renamed to Scabrous Zombie Belt.
+
+            Quests
+                • Archmage Aethas Sunreaver has decided to make himself visible at the Bazaar in Silvermoon City for characters who had one 
+                  of his quests shared and were unable to see him to complete it.
+
         April 1, 2026
 
             Abundance
