@@ -20,13 +20,13 @@ PatchNotesDelivered_Notes_1201 = {
                         + Overflowing Power stack aura is now excluded from the Secret Values system.
                 • Paladin
                     > Retribution
-                        > Resolved an issue causing Hammer of Wrath to not interface with Mastery: Highlord's Judgment.
-                        > Herald of the Sun
-                            + Resolved an issue causing Morning Star's increased damage effect on Dawnlight to stop functioning when the 
+                        + Resolved an issue causing Hammer of Wrath to not interface with Mastery: Highlord's Judgment.
+                        + Herald of the Sun
+                            - Resolved an issue causing Morning Star's increased damage effect on Dawnlight to stop functioning when the 
                               second Dawnlight is applied to the same target.
-                            + Resolved an issue with Empyrean Legacy causing Dawnlight targeting to become inconsistent.
-                            + Resolved an issue causing Dawnlights to target critters and pets with Divine Storm.
-                            + Resolved an issue causing Morning Star to benefit Paladins outside of the caster.
+                            - Resolved an issue with Empyrean Legacy causing Dawnlight targeting to become inconsistent.
+                            - Resolved an issue causing Dawnlights to target critters and pets with Divine Storm.
+                            - Resolved an issue causing Morning Star to benefit Paladins outside of the caster.
                 • Rogue
                     > Assassination
                         + Garrotes applied with Improved Garrote and spread by Crimson Tempest now correctly update their damage when the
