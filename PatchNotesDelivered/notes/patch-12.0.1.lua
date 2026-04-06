@@ -10,8 +10,59 @@
 PatchNotesDelivered_Notes_1201 = {
     version = "12.0.1",
     build = "66709",
-    hotfix = 26,
+    hotfix = 27,
     gameChangesHotfixes = [[
+        April 3, 2026
+
+            Classes
+                • Death Knight
+                    > Unholy
+                        + Resolved an issue causing Putrefy to not function during the Ick and Krick fight in Pit of Saron.
+                        + Midnight Season 1 4-Set Bonus – Blighted can no longer be canceled.
+                • Druid
+                    > Restoration
+                        + Reforestation no longer stacks while out of combat in raid instances.
+                • Warlock
+                    > Destruction
+                        + Diabolist: Fixed an issue where Eye Explosion would not activate from Chaos Bolt.
+
+            Delves
+                • Sunkiller Sanctum
+                    > Characters will no longer be teleported outside of the delve if they die after defeating the boss.
+
+            Dungeons and Raids
+                • Magisters' Terrace
+                    > Spellwoven Familiar health reduced by 20% and now contributes to enemy forces.
+                • Nexus-Point Xenas
+                    > Lothraxion
+                        + Addressed an issue where Brilliant Dispersion can inflict multiple instances of damage to target players.
+                • Pit of Saron
+                    > Arcanist Cadaver
+                        + Now marked as an elite creature, its damage and health are unchanged.
+                        + Now has a mana bar.
+                        + Visual effects and size adjusted to improve visibility.
+                • Skyreach
+                    > Improved visibility on Suntalon when afflicted with Mark of Death.
+                    > Rukhran
+                        + Addressed an issue where Screech can be triggered when it is in melee combat with a player.
+                • The Voidspire
+                    > Vorasius
+                        + Increased the visibility of the impact zones of Vorasius' Shadowclaw Slam.
+                        + Shadowclaw Slam's visual should now more accurately reflect its area-of-effect.
+                    > Vaelgor and Ezzorak
+                        + Improved the visual clarity for the target of Dread Breath.
+                    > Lightblinded Vanguard
+                        + Improved the visual clarity of Avenger's Shield and Divine Toll.
+                        + Resolved an issue where Divine Toll could hit players multiple times.
+
+            Items
+                • The Sun Darter Hatchling check for Mind-Seeker progress will no longer reset.
+                    > Developers’ notes: We’re releasing this fix early to prevent additional players from encountering the issue. A 
+                      follow-up change is planned for 12.0.5 that will detect if the Sun Darter Hatchling has been unlocked on your account.
+
+            Quests
+                • Arator should be visible again to turn in “Battle of the Bridge” on alternate characters.
+
         April 2, 2026
 
             Classes
