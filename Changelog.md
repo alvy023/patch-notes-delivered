@@ -45,7 +45,7 @@ and this project adheres to a specific versioning schema: `A.B.C` where:
 ### Added
 - Added 12.0.1 notes for April 7
 ### Changed
-- Update TOC to 1.12.36
+- Updated TOC to 1.12.36
 
 ## [1.12.35] - 2026-04-05
 ### Added
