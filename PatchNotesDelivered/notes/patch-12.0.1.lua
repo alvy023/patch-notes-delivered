@@ -62,7 +62,8 @@ PatchNotesDelivered_Notes_1201 = {
                           and periodic damage in Mythic+ dungeons. Our intent with these adjustments is to improve survivability
                           and agency with a combination of upfront damage reduction and self-healing.
                         + Auto-attack damage increased by 50%. Not applied to PvP combat.
-                        + Glory of the Vanguard (Rank 2/Rank 3) increases Judgment damage by 20%/40% (was 10%/20%). Not applied to PvP combat.
+                        + Glory of the Vanguard (Rank 2/Rank 3) increases Judgment damage by 20%/40% (was 10%/20%). Not applied to 
+                          PvP combat.
                         + Glory of the Vanguard (Rank 4) increases Shield of the Righteous’ damage to your primary target by 100%
                           (was 50%). Not applied to PvP combat.
                         + Greater Judgment causes the target to take 50% increased damage from your next Shield of the Righteous
@@ -76,7 +77,8 @@ PatchNotesDelivered_Notes_1201 = {
                           has shored up one of the spec’s longstanding weaknesses, we’re finding the total of their defensive
                           capability is a bit too potent. These changes aim to tone down self-healing and narrow the gap between
                           Monks and other tank specializations.
-                        + Vital Flame now causes you to heal for 40% of all Fire or Nature damage dealt by your spells and abilities (was 50%).
+                        + Vital Flame now causes you to heal for 40% of all Fire or Nature damage dealt by your spells and abilities 
+                          (was 50%).
                         + Shado-Pan: Predictive Training now reduces all damage taken by 8% (was 10%).
                     > Windwalker
                         + Fists of Fury now deals 60% of its primary target damage to other targets (was 54%).
@@ -101,11 +103,12 @@ PatchNotesDelivered_Notes_1201 = {
                         + Crash Lightning weapon enhancement effect damage increased by 10%. Not applied to PvP combat.
                         + Stormstrike and Windstrike damage increased by 15%. Not applied to PvP combat.
                 • Warlock
-                    + Fixed an issue where Infernal Beneficiary would not heal for the intended amount if Drain Life was specifically
+                    > Fixed an issue where Infernal Beneficiary would not heal for the intended amount if Drain Life was specifically
                       used on Delve enemies.
                     > Demonology
                         + Fixed an issue where Demonic Knowledge could activate more than intended.
-                        + Fixed an issue where Demonic Brutality increased critical damage dealt by pets by 260%, rather than the intended 230%.
+                        + Fixed an issue where Demonic Brutality increased critical damage dealt by pets by 260%, rather than the 
+                          intended 230%.
 
             Delves
                 • Consecrated Chalice stacks of Hope will no longer fall off outside of combat.
@@ -153,7 +156,7 @@ PatchNotesDelivered_Notes_1201 = {
 
             Player versus Player
                 • Demon Hunter
-                    + Fixed an issue causing Illidari Knowledge to reduce magic damage taken by 1.8% per point instead of 2% per point
+                    > Fixed an issue causing Illidari Knowledge to reduce magic damage taken by 1.8% per point instead of 2% per point
                       in PvP combat.
                     > Devourer
                         + Developers’ notes: We’re increasing passive mitigation for Devourer as their survivability in PvP was lower than
@@ -214,7 +217,8 @@ PatchNotesDelivered_Notes_1201 = {
                           of your next Mortal Strike by 15% (was 100%).
 
             Quests
-                • Fixed an issue with the Voidstorm world quest “Encountering the Unexpected” where enemies could take a long time to respawn.
+                • Fixed an issue with the Voidstorm world quest “Encountering the Unexpected” where enemies could take a long time 
+                  to respawn.
                 • Players who have completed "March on Quel'Danas" should no longer be offered the quest on that character again.
 
             User Interface
