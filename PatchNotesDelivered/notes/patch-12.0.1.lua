@@ -36,7 +36,7 @@ PatchNotesDelivered_Notes_1201 = {
                 • Valeera now speaks less frequently in Delves.
 
             Dungeons and Raids
-                • Magisters' Terrace
+                • Magisters’ Terrace
                     > Fixed a rare issue where it was possible for non-boss enemies to fail to spawn correctly.
                 • The Dreamrift
                     > Chimaerus the Undreamt God
@@ -45,7 +45,7 @@ PatchNotesDelivered_Notes_1201 = {
                     > Crown of the Cosmos
                         + The second target of Grasp of Emptiness in Mythic difficulty will now prefer non-healer specialized characters.
                 • Horrific Visions
-                    > Fixed a bug where completion credit for Oblivion Elemental in Vision of Orgimmar was not granted if the player killed 
+                    > Fixed a bug where completion credit for Oblivion Elemental in Vision of Orgrimmar was not granted if the player killed 
                       it too quickly.
 
             Quests
