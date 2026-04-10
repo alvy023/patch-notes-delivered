@@ -14,39 +14,45 @@ PatchNotesDelivered_Notes_1201 = {
     gameChangesHotfixes = [[
         April 9, 2026
 
-    Classes
-        • Hunter
-            > Beast Mastery
-                + Corrected an issue where the Wild Instincts talent could cause more damage than intended when fighting a single target.
-        • Priest
-            > Discipline
-                + Oracle: Fixed an issue where Blaze of Light would not apply its slow effect on enemies.
-            > Holy
-                + Oracle: Fixed an issue causing Preemptive Care to increase the duration of Renews from Lasting Words by 25%, instead of the intended 40%.
-        • Warlock
-            > Demonology
-                + Fixed an issue where demons summoned by Dominion of Argus would not prioritize your target.
-                + Diabolist: Fixed an issue where Diabolist demons would not prioritize your target.
-                + Diabolist: Overlord, Mother of Chaos, and Pit Lord should no longer be summoned when Diabolic Art is removed if their summoner is not in combat.
+            Classes
+                • Hunter
+                    > Beast Mastery
+                        + Corrected an issue where the Wild Instincts talent could cause more damage than intended when fighting a 
+                          single target.
+                • Priest
+                    > Discipline
+                        + Oracle: Fixed an issue where Blaze of Light would not apply its slow effect on enemies.
+                    > Holy
+                        + Oracle: Fixed an issue causing Preemptive Care to increase the duration of Renews from Lasting Words by 25%, 
+                          instead of the intended 40%.
+                • Warlock
+                    > Demonology
+                        + Fixed an issue where demons summoned by Dominion of Argus would not prioritize your target.
+                        + Diabolist: Fixed an issue where Diabolist demons would not prioritize your target.
+                        + Diabolist: Overlord, Mother of Chaos, and Pit Lord should no longer be summoned when Diabolic Art is removed if 
+                          their summoner is not in combat.
 
-    Delves
-        • Valeera now speaks less frequently in Delves.
+            Delves
+                • Valeera now speaks less frequently in Delves.
 
-    Dungeons and Raids
-        • Magisters' Terrace
-            + Fixed a rare issue where it was possible for non-boss enemies to fail to spawn correctly.
-        • The Dreamrift
-            > Chimaerus the Undreamt God
-                + Resolved an issue where Chimaerus could become stuck in the environment.
-        • The Voidspire
-            > Crown of the Cosmos
-                + The second target of Grasp of Emptiness in Mythic difficulty will now prefer non-healer specialized characters.
-        • Horrific Visions
-            + Fixed a bug where completion credit for Oblivion Elemental in Vision of Orgimmar was not granted if the player killed it too quickly.
+            Dungeons and Raids
+                • Magisters' Terrace
+                    > Fixed a rare issue where it was possible for non-boss enemies to fail to spawn correctly.
+                • The Dreamrift
+                    > Chimaerus the Undreamt God
+                        + Resolved an issue where Chimaerus could become stuck in the environment.
+                • The Voidspire
+                    > Crown of the Cosmos
+                        + The second target of Grasp of Emptiness in Mythic difficulty will now prefer non-healer specialized characters.
+                • Horrific Visions
+                    > Fixed a bug where completion credit for Oblivion Elemental in Vision of Orgimmar was not granted if the player killed 
+                      it too quickly.
 
-    Quests
-        • "Midnight: Legends of the Haranir" is no longer among the weekly activity choice selection options.
-            > Developers’ notes: “Legends of the Haranir” quests are only completable once weekly per Warband, but this weekly activity was available to all characters. This change resolves a case where players who already completed their weekly Legends of the Haranir quest on one character would be prevented from completing the weekly activity on an alt.
+            Quests
+                • "Midnight: Legends of the Haranir" is no longer among the weekly activity choice selection options.
+                    > Developers’ notes: “Legends of the Haranir” quests are only completable once weekly per Warband, but this weekly 
+                      activity was available to all characters. This change resolves a case where players who already completed their weekly
+                      Legends of the Haranir quest on one character would be prevented from completing the weekly activity on an alt.
 
         April 7, 2026
 
