@@ -14,31 +14,31 @@ PatchNotesDelivered_Notes_1201 = {
     gameChangesHotfixes = [[
         April 13, 2026
 
-    Classes
-        • Hunter
-            + Fixed an issue causing Bestial Wrath to not deal damage if Bestial Wrath's charge would put the Pet out of range.
+            Classes
+                • Hunter
+                    > Fixed an issue causing Bestial Wrath to not deal damage if Bestial Wrath's charge would put the Pet out of range.
 
-    Dungeons and Raids
-        • Algeth’ar Academy
-            + Addressed an issue where Crawth's Deafening Screech's debuff could persist after the encounter ended.
-            + Addressed an issue where Alpha Eagle could start casting Gust while still in the air.
-        • Maisara Caverns
-            + Resolved an issue causing Hollow Soulrender's Frost Nova to occasionally inflict damage at the incorrect location.
-        • Pit of Saron
-            > Forgemaster Garfrost
-                + Fixed an issue that could prevent Night Elf Vengeance Demon Hunters from being able to hide behind Saronite Ore.
-        • March on Quel'danas
-            > Belo'ren, Child of Al'ar
-                + Belo'ren's Stage Two health has been reduced by 10% on Mythic difficulty.
-                + Ashen Benediction has been reduced to 5% per stack on all difficulties (was 10%).
-                + Reduced the frequency of Guardian's Edict casts over the course of the encounter on all difficulties.
-        • The Voidspire
-            + Corrected an issue where the Lightblinded Vanguard could fail to appear after using the raid skip.
-            > Vaelgor & Ezzorak
-                + Addressed an issue where the bosses could respawn atop the Devouring Stronghold instead of their arena.
+            Dungeons and Raids
+                • Algeth’ar Academy
+                    > Addressed an issue where Crawth's Deafening Screech's debuff could persist after the encounter ended.
+                    > Addressed an issue where Alpha Eagle could start casting Gust while still in the air.
+                • Maisara Caverns
+                    > Resolved an issue causing Hollow Soulrender's Frost Nova to occasionally inflict damage at the incorrect location.
+                • Pit of Saron
+                    > Forgemaster Garfrost
+                        + Fixed an issue that could prevent Night Elf Vengeance Demon Hunters from being able to hide behind Saronite Ore.
+                • March on Quel'danas
+                    > Belo'ren, Child of Al'ar
+                        + Belo'ren's Stage Two health has been reduced by 10% on Mythic difficulty.
+                        + Ashen Benediction has been reduced to 5% per stack on all difficulties (was 10%).
+                        + Reduced the frequency of Guardian's Edict casts over the course of the encounter on all difficulties.
+                • The Voidspire
+                    > Corrected an issue where the Lightblinded Vanguard could fail to appear after using the raid skip.
+                    > Vaelgor & Ezzorak
+                        + Addressed an issue where the bosses could respawn atop the Devouring Stronghold instead of their arena.
 
-    Items
-        • Light's Preservation potion now provides more healing.
+            Items
+                • Light's Preservation potion now provides more healing.
 
         April 9, 2026
 
