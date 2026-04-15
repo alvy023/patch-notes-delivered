@@ -8,6 +8,7 @@ and this project adheres to a specific versioning schema: `A.B.C` where:
 - **B** (Game Major): Tracks the WoW Game’s Major version (e.g., 12 in 12.0.0).
 - **C** (Iteration): Increments on every release update (Minor, Patch, or Hotfix compatibility).
 
+[1.12.39]: https://github.com/alvy023/patch-notes-delivered/releases/tag/v1.12.39
 [1.12.38]: https://github.com/alvy023/patch-notes-delivered/releases/tag/v1.12.38
 [1.12.37]: https://github.com/alvy023/patch-notes-delivered/releases/tag/v1.12.37
 [1.12.36]: https://github.com/alvy023/patch-notes-delivered/releases/tag/v1.12.36
@@ -42,6 +43,12 @@ and this project adheres to a specific versioning schema: `A.B.C` where:
 [1.12.4]: https://github.com/alvy023/patch-notes-delivered/releases/tag/v1.12.4
 [1.12.3]: https://github.com/alvy023/patch-notes-delivered/releases/tag/v1.12.3
 [1.12.2]: https://github.com/alvy023/patch-notes-delivered/releases/tag/v1.12.2
+
+## [1.12.39] - 2026-04-15
+### Added
+- Added 12.0.1 notes for April 14
+### Changed
+- Updated TOC to 1.12.39
 
 ## [1.12.38] - 2026-04-14
 ### Added
