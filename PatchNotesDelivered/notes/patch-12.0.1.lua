@@ -10,8 +10,62 @@
 PatchNotesDelivered_Notes_1201 = {
     version = "12.0.1",
     build = "66838",
-    hotfix = 30,
+    hotfix = 31,
     gameChangesHotfixes = [[
+        April 14, 2026
+
+            Dungeons and Raids
+                • Maisara Caverns
+                    > Frenzied Berserker’s health reduced by 13%.
+                    > Keen Headhunter’s health reduced by 10%.
+                    > Muro'jin and Nekraxx
+                        + Resolved an issue where Carrion Swoop could occasionally strike units behind Nekraxx or strike players twice.
+                • Seat of the Triumvirate
+                    > Addressed an issue where some areas of the dungeon are unintentionally empowering creatures.
+                    > Siphon Void in L’ura’s encounter is now marked as important.
+                    > Decimate in Zuraal the Ascended encounter now has an encounter warning.
+                • Skyreach
+                    > Target of Cast Down now has a debuff on their unit frame.
+                • Windrunner Spire
+                    > Commander Kroluk
+                        + Fixed an issue where Commander Kroluk could fail his jump based on his target's location within his chamber.
+                • The Voidspire
+                    > Vaelgor & Ezzorak
+                        + Resolved an issue where Ezzorak could continue to fight the Lightblinded Vanguard after Vaelgor and all players 
+                          have perished.
+                    > Lightblinded Vanguard
+                        + War Chaplain Senn's Aura of Peace silence effect no longer triggers from Halo, Ice Lance, or 
+                          Galactic Guardian Moonfire.
+                        + Resolved an issue where Execution Sentence's vulnerability could sometimes not work in Mythic difficulty.
+                        + Health reduced by 5% on Mythic difficulty.
+                            - Developers’ notes: Our goal with this change is to encourage a greater diversity of raid compositions to 
+                              succeed in the encounter.
+                    > Crown of the Cosmos
+                        + Alleria and Rift Simulacrum's health reduced by 5% in Heroic difficulty.
+                        + Cosmic Barrier absorb amount reduced by 5% in Heroic difficulty.
+                        + Silverstrike Ricochet width increased to 5 yards in non-Mythic difficulties (was 4 yards).
+                        + Undying Voidspawn's nearby player detection range has been reduced to 10 yards in non-Mythic difficulties (was 
+                          15 yards).
+                • March on Quel'danas
+                    > L’ura’s health reduced by 5% on Mythic difficulty.
+                    > Termination Matrix
+                        + Terminate applications reduced to 4 (was 5).
+                        + Terminate cast time increased to 2 seconds (was 1.5 seconds).
+                    > Heaven’s Glaives
+                        + Blades per cast reduced to 5 on Heroic and Mythic difficulties (was 6).
+                        + Max duration reduced to 2 minutes on Heroic and Mythic difficulties (was 3 minutes).
+                    > Grim Symphony
+                        + Melody can no longer repeat the same Dark Rune twice.
+                        + Second cast now spins clockwise (was counter-clockwise).
+                        + Eclipsed heal absorb reduced by 10% on Mythic difficulty.
+                        + Overkill Current damage reduced by 20% on Heroic difficulty.
+                        + The final cast of Criticality now triggers 2 Tears of L’ura per Dawn Crystal (was 3).
+                        + Dark Constellation precast time increased to 2.5 seconds on Mythic difficulty (was 2 seconds).
+
+            Quests
+                • Fixed a bug where players were unable to collect handfuls of sand from Loosened Sand piles in Vol'dun for 
+                  "The Fragrance of the Dunes".
+
         April 13, 2026
 
             Classes
