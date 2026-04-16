@@ -8,9 +8,9 @@
 --- Export global notes variable
 --- Max note length [140] ------------------------------------------------------------------------------------------------------------------
 PatchNotesDelivered_Notes_1201 = {
-    version = "12.0.1",
-    build = "66838",
-    hotfix = 31,
+    version = "12.0.5",
+    build = "66741",
+    hotfix = 32,
     gameChangesHotfixes = [[
         April 14, 2026
 
