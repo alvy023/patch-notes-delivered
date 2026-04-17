@@ -21,7 +21,7 @@ PatchNotesDelivered_Notes_1201 = {
                     > Muro'jin and Nekraxx
                         + Resolved an issue where Carrion Swoop could occasionally strike units behind Nekraxx or strike players twice.
                 • Seat of the Triumvirate
-                    > Addressed an issue where some area of the dungeon is unintentionally empowering creatures.
+                    > Addressed an issue where some areas of the dungeon are unintentionally empowering creatures.
                     > Siphon Void in L’ura’s encounter is now marked as important.
                     > Decimate in Zuraal the Ascended encounter now has an encounter warning.
                 • Skyreach
@@ -46,7 +46,7 @@ PatchNotesDelivered_Notes_1201 = {
                         + Silverstrike Ricochet width increased to 5 yards in non-Mythic difficulties (was 4 yards).
                         + Undying Voidspawn's nearby player detection range has been reduced to 10 yards in non-Mythic difficulties (was 
                           15 yards).
-                • March on Quel’danas
+                • March on Quel'danas
                     > L’ura’s health reduced by 5% on Mythic difficulty.
                     > Termination Matrix
                         + Terminate applications reduced to 4 (was 5).
