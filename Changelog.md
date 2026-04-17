@@ -8,6 +8,14 @@ and this project adheres to a specific versioning schema: `A.B.C` where:
 - **B** (Game Major): Tracks the WoW Game’s Major version (e.g., 12 in 12.0.0).
 - **C** (Iteration): Increments on every release update (Minor, Patch, or Hotfix compatibility).
 
+[1.12.40]: https://github.com/alvy023/patch-notes-delivered/releases/tag/v1.12.40
+## [1.12.40] - 2026-04-17
+### Added
+- Added 12.0.1 notes for April 17
+- Added 12.0.5 base note file
+### Changed
+- Updated TOC to 1.12.40
+
 [1.12.39]: https://github.com/alvy023/patch-notes-delivered/releases/tag/v1.12.39
 ## [1.12.39] - 2026-04-15
 ### Added
