@@ -8,10 +8,28 @@
 --- Export global notes variable
 --- Max note length [140] ------------------------------------------------------------------------------------------------------------------
 PatchNotesDelivered_Notes_1201 = {
-    version = "12.0.1",
-    build = "66838",
-    hotfix = 31,
+    version = "12.0.5",
+    build = "66741",
+    hotfix = 32,
     gameChangesHotfixes = [[
+        April 17, 2026
+
+        Delves
+            • Reaching Midnight Season 1 Delver's Journey Rank 10 will now properly reward the Void Breacher title.
+
+        Dungeons and Raids
+            • Maisara Caverns
+                > Rak'tul
+                    + Spectral Residue duration increased to 40 seconds.
+                    + Additional applications of Spectral Residue no longer refresh the duration.
+            • Seat of the Triumvirate
+                > Addressed an issue where Merciless Subjugator's Chains of Subjugation can be interrupted unintentionally.
+            • The Voidspire
+                > Fallen-King Salhadaar
+                    + Fixed an issue where Void Infusion could override the boss entering berserk phase.
+                > Lightblinded Vanguard
+                    + Addressed an issue where using the raid skip can fail to spawn all three paladins for the encounter.
+
         April 14, 2026
 
             Dungeons and Raids
