@@ -31,7 +31,7 @@ PatchNotesDelivered_Notes_1201 = {
                         + Fixed an issue where Commander Kroluk could fail his jump based on his target's location within his chamber.
                 • The Voidspire
                     > Vaelgor & Ezzorak
-                        + Resolved an issue where Ezzorak could continue to fight the Lightbound Vanguard after Vaelgor and all players 
+                        + Resolved an issue where Ezzorak could continue to fight the Lightblinded Vanguard after Vaelgor and all players 
                           have perished.
                     > Lightblinded Vanguard
                         + War Chaplain Senn's Aura of Peace silence effect no longer triggers from Halo, Ice Lance, or 
