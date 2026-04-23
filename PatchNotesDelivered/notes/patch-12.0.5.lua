@@ -9,10 +9,57 @@
 --- Max note length [140] ------------------------------------------------------------------------------------------------------------------
 PatchNotesDelivered_Notes_1205 = {
     version = "12.0.5",
-    build = "67088",
-    hotfix = 0,
+    build = "67165",
+    hotfix = 1,
     gameChangesHotfixes = [[
-        It's all working... except it's not.
+        April 22, 2026
+
+            Characters
+                • Fixed a bug that could cause some Night Elf characters to be missing the intended Linen Blindfold option they 
+                  previously chose.
+
+            Classes
+                • Death Knight
+                    > Resolved an issue causing the Commander of the Dead damage increase aura to be applied to Death Knights.
+                • Evoker
+                    > Preservation
+                        + Fixed an issue where Dream Breath was not being stored in Stasis.
+                • Paladin
+                    > Holy
+                        + Fixed a bug that could cause Holy Paladins to do less damage than intended.
+                • Rogue
+                    > Fixed a bug that prevented the expected audio from playing when a Rogue enters stealth.
+
+            Decor Duel
+                • Fixed a bug that could prevent Decor Duel participants from receiving base Illusionary Coin rewards by incorrectly 
+                  evaluating them to be AFK.
+                • Humanoid tracking abilities no longer reveal players in Decor Duel.
+                • Achievements earned in Decor Duel are now account-wide, as intended.
+
+            Dungeons and Raids
+                • Addressed an issue where Lindormi's Guidance could be applied to players outside of Mythic+ dungeons.
+                • March on Quel’Danas
+                    > Midnight Falls
+                        + Resolved issues with Torchbearer failing to prevent players from receiving applications of Midnight or failing to 
+                          remove applications of Midnight.
+
+            Items
+                • Addressed an issue preventing sockets from being added to Champion items obtained from Midnight Renown vendors.
+                • Fixed an issue where acquiring a Nebulous Voidcore with Thalassian Tokens of Merit would cause Decimus to only grant one 
+                  of his two weekly Nebulous Voidcores upon quest turn-in.
+                    > Developers’ notes: Players who have two Nebulous Voidcores in their currency window while showing 
+                      "Season Maximum: 1/2" can now safely complete any of Decimus's quests again to receive their missing 
+                      Nebulous Voidcore.
+
+            Professions
+                • Adjusted the cost of Thalassian Competitor's Chain Tunic to 5 Heraldry (was 4) to be in line with other crafted 
+                  PvP chestpieces.
+
+            Quests
+                • The Ancient Visionstone can once again be interacted with for the Harandar repeatable legends quests 
+                  "The Story of the Echoless Flame" and "The Story of Russula's Outreach".
+                • Fixed a bug where the daily quest "Ephemeral Masquerade" appeared to be a low-level quest, rather than the intended blue 
+                  exclamation point.
     ]],
     gameChangesPatch = [[
         April 21, 2026
