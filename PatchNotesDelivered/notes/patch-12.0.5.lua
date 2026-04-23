@@ -15,7 +15,7 @@ PatchNotesDelivered_Notes_1205 = {
         It's all working... except it's not.
     ]],
     gameChangesPatch = [[
-        April 21, 2025
+        April 21, 2026
 
         Engage in new activities, experience more of the story in Midnight, and earn more loot as the efforts to push back the forces of the
         Void and their agents continue. You’ll undertake new Void Assaults, disrupt powerful Ritual Sites, get a boost with Voidforge, group
@@ -253,7 +253,7 @@ PatchNotesDelivered_Notes_1205 = {
 
             • Demon Hunters can now further customize their appearance with new eye options: a new void blue eye color and a flameless 
               option for both fel green and void blue eyes.
-            •  Devourer
+            • Devourer
                 > Spontaneous Immolation has been redesigned – Soul Immolation heals for an additional 6% of your maximum health over its 
                   duration and its cooldown is reset upon killing an enemy that yields experience or honor.
                 > Soul Immolation has been updated – No longer deals self-damage. Now heals for 24% of your maximum health over 
