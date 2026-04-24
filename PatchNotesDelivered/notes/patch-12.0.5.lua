@@ -9,9 +9,42 @@
 --- Max note length [140] ------------------------------------------------------------------------------------------------------------------
 PatchNotesDelivered_Notes_1205 = {
     version = "12.0.5",
-    build = "67165",
-    hotfix = 1,
+    build = "67186",
+    hotfix = 2,
     gameChangesHotfixes = [[
+        April 23, 2026
+
+            Classes
+                • Hunter
+                    > Marksmanship
+                        + Corrected an issue where players could gain double the benefit of Pathfinding or Endurance Training when using the
+                          Unbreakable Bond talent in combination with the Cunning or Tenacious talents.
+                        + Cunning or Tenacity pets should no longer sometimes lose their pet passive bonuses of Endurance Training and 
+                          Pathfinding when changing between the Cunning and Tenacity talent choice node.
+                • Warlock
+                    > Fixed an issue where Frequent Traveler would not function when using another Warlock's Demonic Gateway.
+                    > Diabolist
+                        + Fixed an issue where Abyssal Dominion would not match the duration of Demonic Tyrant with 
+                          Reign of Tyranny talented.
+                    > Affliction
+                        + Fixed an issue where Blight of Weakness and Tongues would not properly display on the Cooldown Manager.
+                    > Destruction
+                        + Removed several spells from the Cooldown Manager, as they are no longer present in-game.
+
+            Décor Duel
+                • Hiding players can no longer go near the Seeker's waiting room.
+                    > Developers’ notes: There was an emergent tactic where hiders would place a bunch of traps near the seekers’ entrance, 
+                      preventing them from leaving.
+
+            Dungeons and Raids
+                • Magisters' Terrace
+                    > Addressed an issue where Degentrius' Devouring Entropy could damage players who were immune to it.
+                • Windrunner Spire
+                    > Addressed an issue where Commander Kroluk could melee after finishing casting Bladestorm.
+                • The Voidspire
+                    > Crown of the Cosmos
+                        + Gravity Collapse damage reduced by 10%.
+
         April 22, 2026
 
             Characters
