@@ -12,7 +12,7 @@ and this project adheres to a specific versioning schema: `A.B.C` where:
 ### Added
 - Added 12.0.5 hotfix notes for April 23
 ### Changed
-- Update TOC to 1.12.42
+- Update TOC to 1.12.43
 [1.12.43]: https://github.com/alvy023/patch-notes-delivered/releases/tag/v1.12.43
 
 ## [1.12.42] - 2026-04-23
