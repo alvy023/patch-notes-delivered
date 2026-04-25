@@ -10,8 +10,319 @@
 PatchNotesDelivered_Notes_1205 = {
     version = "12.0.5",
     build = "67186",
-    hotfix = 2,
+    hotfix = 3,
     gameChangesHotfixes = [[
+        April 17, 2026
+
+    Delves
+        • Reaching Midnight Season 1 Delver's Journey Rank 10 will now properly reward the Void Breacher title.
+
+    Dungeons and Raids
+        • Maisara Caverns
+            > Rak'tul
+                + Spectral Residue duration increased to 40 seconds.
+                + Additional applications of Spectral Residue no longer refresh the duration.
+        • Seat of the Triumvirate
+            > Addressed an issue where Merciless Subjugator's Chains of Subjugation can be interrupted unintentionally.
+        • The Voidspire
+            > Fallen-King Salhadaar
+                + Fixed an issue where Void Infusion could override the boss entering berserk phase.
+            > Lightblinded Vanguard
+                + Addressed an issue where using the raid skip can fail to spawn all three paladins for the encounter.
+
+April 14, 2026
+
+    Dungeons and Raids
+        • Maisara Caverns
+            > Frenzied Berserker’s health reduced by 13%.
+            > Keen Headhunter’s health reduced by 10%.
+            > Muro'jin and Nekraxx
+                + Resolved an issue where Carrion Swoop could occasionally strike units behind Nekraxx or strike players twice.
+        • Seat of the Triumvirate
+            > Addressed an issue where some area of the dungeon is unintentionally empowering creatures.
+            > Siphon Void in L’ura’s encounter is now marked as important.
+            > Decimate in Zuraal the Ascended encounter now has an encounter warning.
+        • Skyreach
+            > Target of Cast Down now has a debuff on their unit frame.
+        • Windrunner Spire
+            > Commander Kroluk
+                + Fixed an issue where Commander Kroluk could fail his jump based on his target's location within his chamber.
+        • The Voidspire
+            > Vaelgor & Ezzorak
+                + Resolved an issue where Ezzorak could continue to fight the Lightbound Vanguard after Vaelgor and all players have perished.
+            > Lightblinded Vanguard
+                + War Chaplain Senn's Aura of Peace silence effect no longer triggers from Halo, Ice Lance, or Galactic Guardian Moonfire.
+                + Resolved an issue where Execution Sentence's vulnerability could sometimes not work in Mythic difficulty.
+                + Health reduced by 5% on Mythic difficulty.
+                    > Developers’ notes: Our goal with this change is to encourage a greater diversity of raid compositions to succeed in the encounter.
+            > Crown of the Cosmos
+                + Alleria and Rift Simulacrum's health reduced by 5% in Heroic difficulty.
+                + Cosmic Barrier absorb amount reduced by 5% in Heroic difficulty.
+                + Silverstrike Ricochet width increased to 5 yards in non-Mythic difficulties (was 4 yards).
+                + Undying Voidspawn's nearby player detection range has been reduced to 10 yards in non-Mythic difficulties (was 15 yards).
+        • March on Quel’danas
+            > L’ura’s health reduced by 5% on Mythic difficulty.
+            > Termination Matrix
+                + Terminate applications reduced to 4 (was 5).
+                + Terminate cast time increased to 2 seconds (was 1.5 seconds).
+            > Heaven’s Glaives
+                + Blades per cast reduced to 5 on Heroic and Mythic difficulties (was 6).
+                + Max duration reduced to 2 minutes on Heroic and Mythic difficulties (was 3 minutes).
+            > Grim Symphony
+                + Melody can no longer repeat the same Dark Rune twice.
+                + Second cast now spins clockwise (was counter-clockwise).
+            > Eclipsed heal absorb reduced by 10% on Mythic difficulty.
+            > Overkill Current damage reduced by 20% on Heroic difficulty.
+            > The final cast of Criticality now triggers 2 Tears of L’ura per Dawn Crystal (was 3).
+            > Dark Constellation precast time increased to 2.5 seconds on Mythic difficulty (was 2 seconds).
+
+    Quests
+        • Fixed a bug where players were unable to collect handfuls of sand from Loosened Sand piles in Vol'dun for "The Fragrance of the Dunes".
+
+April 13, 2026
+
+    Classes
+        • Hunter
+            > Fixed an issue causing Bestial Wrath to not deal damage if Bestial Wrath's charge would put the Pet out of range.
+
+    Dungeons and Raids
+        • Algeth’ar Academy
+            > Addressed an issue where Crawth's Deafening Screech's debuff could persist after the encounter ended.
+            > Addressed an issue where Alpha Eagle could start casting Gust while still in the air.
+        • Maisara Caverns
+            > Resolved an issue causing Hollow Soulrender's Frost Nova to occasionally inflict damage at the incorrect location.
+        • Pit of Saron
+            > Forgemaster Garfrost
+                + Fixed an issue that could prevent Night Elf Vengeance Demon Hunters from being able to hide behind Saronite Ore.
+        • March on Quel'danas
+            > Belo'ren, Child of Al'ar
+                + Belo'ren's Stage Two health has been reduced by 10% on Mythic difficulty.
+                + Ashen Benediction has been reduced to 5% per stack on all difficulties (was 10%).
+                + Reduced the frequency of Guardian's Edict casts over the course of the encounter on all difficulties.
+        • The Voidspire
+            > Corrected an issue where the Lightblinded Vanguard could fail to appear after using the raid skip.
+            > Vaelgor & Ezzorak
+                + Addressed an issue where the bosses could respawn atop the Devouring Stronghold instead of their arena.
+
+    Items
+        • Light's Preservation potion now provides more healing.
+
+April 9, 2026
+
+    Classes
+        • Hunter
+            > Beast Mastery
+                + Corrected an issue where the Wild Instincts talent could cause more damage than intended when fighting a single target.
+        • Priest
+            > Discipline
+                + Oracle: Fixed an issue where Blaze of Light would not apply its slow effect on enemies.
+            > Holy
+                + Oracle: Fixed an issue causing Preemptive Care to increase the duration of Renews from Lasting Words by 25%, instead of the intended 40%.
+        • Warlock
+            > Demonology
+                + Fixed an issue where demons summoned by Dominion of Argus would not prioritize your target.
+            > Diabolist: Fixed an issue where Diabolist demons would not prioritize your target.
+            > Diabolist: Overlord, Mother of Chaos, and Pit Lord should no longer be summoned when Diabolic Art is removed if their summoner is not in combat.
+
+    Delves
+        • Valeera now speaks less frequently in Delves.
+
+    Dungeons and Raids
+        • Magisters' Terrace
+            > Fixed a rare issue where it was possible for non-boss enemies to fail to spawn correctly.
+        • The Dreamrift
+            > Chimaerus the Undreamt God
+                + Resolved an issue where Chimaerus could become stuck in the environment.
+        • The Voidspire
+            > Crown of the Cosmos
+                + The second target of Grasp of Emptiness in Mythic difficulty will now prefer non-healer specialized characters.
+        • Horrific Visions
+            > Fixed a bug where completion credit for Oblivion Elemental in Vision of Orgimmar was not granted if the player killed it too quickly.
+
+    Quests
+        • "Midnight: Legends of the Haranir" is no longer among the weekly activity choice selection options.
+            > Developers’ notes: “Legends of the Haranir” quests are only completable once weekly per Warband, but this weekly activity was available to all characters. This change resolves a case where players who already completed their weekly Legends of the Haranir quest on one character would be prevented from completing the weekly activity on an alt.
+
+April 7, 2026
+
+    Classes
+        • Death Knight
+            > Blood
+                + Melee auto-attack damage increased by 25%.
+                + Death Strike damage increased by 12%.
+                + Blood Fortification armor increased to 45% (was 35%).
+                + Bone Shield now increases armor by 180% of Strength (was 150%).
+            > Frost
+                > Developers’ notes: Frost Death Knight is behind our expectations in single target damage, so we’re increasing Obliterate and Frost Strike damage to give a more targeted boost in single target scenarios, along with a damage increase to Frostbane to help Rider of the Apocalypse in multi-target scenarios.
+                + Obliterate damage increased by 12%. Not applied to PvP combat.
+                + Frost Strike and Frostbane damage increased by 15%. Not applied to PvP combat.
+            > Unholy
+                + Resolved an issue causing the tier set aura Blighted to interfere with Nazgrim's Conquest value increases.
+        • Demon Hunter
+            > Vengeance
+                > Developers’ notes: Vengeance single target damage has remained below expectations, so single target damage sources are being increased.
+                + Melee auto-attack damage increased by 40%.
+                + Focused Cleave damage bonus for Soul Cleave’s primary target increased to 60% (was 50%).
+                + Soul Carver damage increased by 50%.
+        • Druid
+            > Balance
+                + Starfall damage increased by 16%. Not applied to PvP combat.
+                + Ascendant Eclipses’ Lunar Bolt damage increased by 10%. Not applied to PvP combat.
+            > Guardian
+                + Scintillating Moonlight now causes Moonfire to reduce damage dealt to you by 6%/12% (was 5%/10%).
+                + Rend and Tear now causes Thrash to reduce the target’s damage done to you by 3% per stack (was 2%).
+        • Evoker
+            > Augmentation
+                + Ebon Might's radius for applying to allies increased to 500 yds (was 100 yds).
+            > Devastation
+                > Developers’ notes: Flameshaper’s performance in single target scenarios is less competitive with Scalecommander than desired. This adjustment is intended to increase Flameshaper’s viability, without invalidating the time and effort Evokers have put into learning how to play Scalecommander effectively.
+                + Flameshaper: Consume Flame now causes Disintegrate to detonate 150% of Fire Breath damage (was 115%).
+        • Paladin
+            > Holy
+                > Developers’ notes: Holy Paladins healing output is behind our expectations, so we’re targeting an increase to their holy power spenders to reinforce their core gameplay loop and make using resources more satisfying.
+                + Word of Glory healing increased by 20%. This also applies to Eternal Flame and its periodic healing.
+                + Light of Dawn healing increased by 20%.
+            > Protection
+                > Developers’ notes: We’re observing that Protection Paladins are experiencing difficulty with magical damage and periodic damage in Mythic+ dungeons. Our intent with these adjustments is to improve survivability and agency with a combination of upfront damage reduction and self-healing.
+                + Auto-attack damage increased by 50%. Not applied to PvP combat.
+                + Glory of the Vanguard (Rank 2/Rank 3) increases Judgment damage by 20%/40% (was 10%/20%). Not applied to PvP combat.
+                + Glory of the Vanguard (Rank 4) increases Shield of the Righteous’ damage to your primary target by 100% (was 50%). Not applied to PvP combat.
+                + Greater Judgment causes the target to take 50% increased damage from your next Shield of the Righteous (was 40%). Not applied to PvP combat.
+                + Imbued Shield reduces magical damage taken by 12% (was 10%).
+                + Redoubt increases armor by up to 60% based on missing health (was 50%).
+                + Light of the Titans’ healing is increased by 200% when afflicted by a harmful periodic effect (was 100%).
+        • Monk
+            > Brewmaster
+                > Developers’ notes: Moving into Midnight, Brewmasters gained a significant amount of self-healing. While this has shored up one of the spec’s longstanding weaknesses, we’re finding the total of their defensive capability is a bit too potent. These changes aim to tone down self-healing and narrow the gap between Monks and other tank specializations.
+                + Vital Flame now causes you to heal for 40% of all Fire or Nature damage dealt by your spells and abilities (was 50%).
+                + Shado-Pan: Predictive Training now reduces all damage taken by 8% (was 10%).
+            > Windwalker
+                + Fists of Fury now deals 60% of its primary target damage to other targets (was 54%).
+        • Rogue
+            > Assassination
+                + Caustic Spatter causes 20% of your Nature damage to hit nearby enemies (was 18%).
+                + Garrote and Rupture damage increased by 5%.
+                + Fan of Knives and Crimson Tempest damage increased by 10%.
+            > Outlaw
+                + All damage increased by 4%.
+                + Blade Flurry causes your abilities to strike nearby enemies for 28% of damage dealt (was 30%).
+                + Fatebound: Fate Intertwined increases the percent of damage Blade Flurry spreads by 5 (was 6).
+                + Trickster: Nimble Flurry increases Blade Flurry damage by 25% while Flawless Form is active (was 30%).
+        • Shaman
+            > Enhancement
+                > Developers’ notes: We are making some adjustments for Enhancement that are aimed at helping consistent damage sources outside of burst windows, while slightly skewed towards bringing Stormbringer’s performance closer to Totemic.
+                + Lightning Bolt damage increased by 8%. Not applied to PvP combat.
+                + Chain Lightning damage increased by 25%. Not applied to PvP combat.
+                + Crash Lightning initial impact damage increased by 20%. Not applied to PvP combat.
+                + Crash Lightning weapon enhancement effect damage increased by 10%. Not applied to PvP combat.
+                + Stormstrike and Windstrike damage increased by 15%. Not applied to PvP combat.
+        • Warlock
+            > Fixed an issue where Infernal Beneficiary would not heal for the intended amount if Drain Life was specifically used on Delve enemies.
+            > Demonology
+                + Fixed an issue where Demonic Knowledge could activate more than intended.
+                + Fixed an issue where Demonic Brutality increased critical damage dealt by pets by 260%, rather than the intended 230%.
+
+    Delves
+        • Consecrated Chalice stacks of Hope will no longer fall off outside of combat.
+        • Fixed an issue that could sometimes cause Valeera to take increased damage in Gulf of Memory.
+
+    Dungeons and Raids
+        • Magisters’ Terrace
+            > Addressed an issue in Degentrius' encounter where there can be multiple instances of Unstable Void Essence active.
+            > Addressed an issue where enemies on the way to Seranel Sunlash can fail to spawn in Mythic+ if Arcanotron Custos is defeated in Mythic in the same instance.
+        • Nexus-Point Xenas
+            > Lothraxion
+                + Addressed an issue where Brilliant Dispersion can inflict multiple instances of damage to target players.
+        • Skyreach
+            > Addressed an issue where players can get stuck in combat after wiping in Rukhran's encounter.
+            > Players falling off the platform during the Rukhran encounter will now be teleported back to the platform.
+        • March on Quel'danas
+            > Belo'ren, Child of Al'ar
+                + Belo’ren’s stage one health reduced by 10% on Mythic difficulty.
+                + Infused Quills now targets fewer players over the course of the encounter on Mythic difficulty.
+                + Ember Rebirth’s damaging effect has been greatly reduced on Mythic difficulty.
+                + Guardian’s Edict now empowers Belo’ren’s damage by 20% on all difficulties.
+                + Light Dive and Void Dive damage greatly reduced on all difficulties.
+                + Light Echo and Void Echo damage reduced on Heroic and Mythic difficulty.
+        • The Dreamrift
+            > Chimaerus the Undreamt God Swarming Shade health reduced up to 35% in stage one in non-Mythic difficulties, for smaller raid sizes.
+            > Haunting Essence health reduced up to 29% in stage one in non-Mythic difficulties, for smaller raid sizes.
+            > Colossal Horror health reduced up to 10% in Stage One in non-Mythic difficulties, for smaller raid sizes.
+        • The Voidspire
+            > Vaelgor and Ezzorak
+                + Reduced the number of players needed to fully reduce Gloom's power by 1 on Heroic and Normal difficulties.
+                + Reduced Voidorb health by up to 10% as group sizes decrease from 30-player to 10-player.
+            > Lightblinded Vanguard
+                + Trampled damage reduced by 50%.
+            > Crown of the Cosmos
+                + Demiar, Morium, and Vorelus health reduced by up to 14% in non-Mythic difficulties, for smaller raid sizes.
+                + Alleria and Rift Simulacrum health reduced by up to 10% in non-Mythic difficulties, for smaller raid sizes.
+                + Null Corona healing absorb reduced by up to 24% in non-Mythic difficulties, for smaller raid sizes.
+                + Void Expulsion damage reduced by up to 10% in non-Mythic difficulties, for smaller raid sizes.
+                + Cosmic Barrier damage absorb reduced by up to 10% in non-Mythic difficulties, for smaller raid sizes.
+                + Gravity Collapse damage reduced by up to 12% in non-Mythic difficulties, for smaller raid sizes.
+
+    Items
+        • Light Company Guidon is now eligible for Tank specializations.
+
+    Player versus Player
+        • Demon Hunter
+            > Fixed an issue causing Illidari Knowledge to reduce magic damage taken by 1.8% per point instead of 2% per point in PvP combat.
+            > Devourer
+                > Developers’ notes: We’re increasing passive mitigation for Devourer as their survivability in PvP was lower than we liked. We’re also making another pass at lowering the burst potential from both hero talent trees and increasing overall damage to compensate.
+                + All damage done increased by 8% in PvP combat.
+                + Illidari Knowledge now reduces magic damage taken by 4%/8% in PvP combat (was 1.8%/3.6%).
+                + Armor of Souls now increases Armor by 100% (was 50%).
+                + Void-Scarred: Voidsurge damage reduced by 20% in PvP combat.
+                + Annihilator: Voidfall Meteor damage reduced by 10% in PvP combat.
+                + Annihilator: Otherworldly Focus now increases Collapsing Star and Voidfall Meteor damage by 15% when striking a single target in PvP combat (was 35%).
+        • Hunter
+            > Beast Mastery
+                + All damage reduced by 5% in PvP combat.
+        • Monk
+            > Windwalker
+                > Developers’ notes: We are targeting a couple sources of burst damage as well as overall damage for Windwalker Monks to reduce their outlier burst capabilities and tweak down their overall pressure.
+                + All damage reduced by 3% in PvP combat.
+                + Glory of the Dawn damage reduced by 50% in PvP combat.
+                + Weapon of Wind now increases damage during Zenith by 5% in PvP combat (was 10%).
+        • Paladin
+            > Protection
+                > Developers’ notes: We’re taking another pass at reducing the strength of Protection Paladins, targeting some of their burst and healing capabilities.
+                + All healing done reduced by 10% in PvP combat.
+                + Glory of the Vanguard damage reduced by 25% in PvP combat.
+        • Rogue
+            > Assassination
+                > Developers’ notes: Mutilate has fallen behind its expected contribution in PvP combat. A sizeable buff is being applied, intended to improve steady damage output.
+                + Mutilate damage increased by 180% in PvP combat.
+            > Outlaw
+                > Developers’ notes: Outlaw has been overly reliant on Adrenaline Rush and lacks damage outside of those windows. These changes increase overall damage while keeping Adrenaline Rush effective.
+                + All ability damage increased by 8% in PvP combat.
+                + Menacing Rush damage bonus during Adrenaline Rush reduced to 10% in PvP combat (was 20%).
+            > Subtlety
+                + Trickster: Flawless Form now increases the damage of finishing moves by 2% per stack (was 4%).
+        • Shaman
+            > Restoration
+                + Healing Wave healing increased by 20% in PvP combat.
+        • Warlock
+            > Affliction
+                + All damage done increased by 12% in PvP combat.
+                + Unstable Affliction damage increased by 15% in PvP combat.
+        • Warrior
+            > Arms
+                > Developers’ notes: Our goal for Arms Warrior is to increase their overall damage as their consistent pressure has been lower than we would like. We’re also reducing the effectiveness of the Colossus burst window as its damage was condensed into too small of a time period.
+                + All damage increased by 3% in PvP combat.
+                + Rend damage increased by 15% in PvP combat.
+                + Deep Wounds damage increased by 100% in PvP combat.
+                + Colossus: Demolish damage reduced by 15% in PvP combat.
+                + Colossus: Celeritous Conclusion now causes the final strike from Demolish to increase the critical strike chance of your next Mortal Strike by 15% (was 100%).
+
+    Quests
+        • Fixed an issue with the Voidstorm world quest “Encountering the Unexpected” where enemies could take a long time to respawn.
+        • Players who have completed "March on Quel'Danas" should no longer be offered the quest on that character again.
+
+    User Interface
+        • Lowered the display priority for certain visual effects associated with some Professions embellishments.
+
         April 23, 2026
 
             Classes
