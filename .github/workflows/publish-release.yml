@@ -16,7 +16,7 @@ on:
 
 jobs:
   publish:
-    name: Publish Addon to CurseForge and WowUp
+    name: Publish Release to CurseForge and WowUp
     runs-on: ubuntu-latest
 
     env:
