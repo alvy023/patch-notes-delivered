@@ -10,8 +10,88 @@
 PatchNotesDelivered_Notes_1205 = {
     version = "12.0.5",
     build = "67186",
-    hotfix = 2,
+    hotfix = 3,
     gameChangesHotfixes = [[
+        April 24, 2026
+
+    Achievements
+        • Midnight Keystone Myth - Season One
+          is now available to players who attained a Mythic+ Rating of at least 3400 during Midnight Season 1.
+
+    Characters
+        • Pandaren characters who boost during the intro sequence will now be able to port to their houses.
+
+    Classes
+        • Death Knight
+            > Unholy
+                + Festering Scythe is now an aura on the player, resolving issues that occur when extending the duration of plagues.
+                    > Developers’ notes: The underlying issue here was proving to be problematic for a number of reasons and we felt like this
+                      would be the safest approach for now.
+                + Resolved an issue causing Magus of the Dead to not take action immediately on spawn.
+                + Resolved an issue causing Forbidden Knowledge Rank 4 to activate less than stated.
+                + Resolved an issue causing Unholy Devotion to grant Haste in addition to attack speed and energy regeneration.
+                + Disease Cloud is now cast by the Abomination, resolving issues such as it not interacting with pet scaling talents.
+        • Demon Hunter
+            > Devourer
+                + Fixed an issue causing the Single-Button Assistant and Assisted Highlight to not recommend Collapsing Star outside of
+                  melee range.
+            > Vengeance
+                + Fixed an issue that caused Metamorphosis to be put on cooldown when Last Resort's effect triggered.
+        • Hunter
+            > Marksmanship
+                + Corrected an issue where Unbreakable Bond could give the damage reduction effect to the hunter rather than their pet.
+        • Mage
+            > Frost
+                + Fixed an issue causing Hand of Frost (Rank 2) to not provide the correct percent chance increase per stack of Shatter.
+        • Paladin
+            > Holy
+                + Fixed an issue that caused Holy Armaments to significantly impact framerates.
+        • Priest
+            > Shadow
+                + Voidweaver: Fixed an issue causing Overwhelming Shadows to increase the damage of Mind Blast.
+        • Rogue
+            > Trickster: Fixed an issue that caused Cloud Cover's effect to cost 30 Energy to activate.
+            > Trickster: Cloud Cover's visual effect is now only visible to the caster in all circumstances.
+        • Warlock
+            > Affliction
+                + Fixed an issue where Jinx would not function if Foul Mouth was not talented.
+            > Demonology
+                + Fixed an issue where Demonic Gateway would benefit Hellbent Commander.
+
+    Delves
+        • Valeera is no longer unwilling to attack Poison Dart Frog or Giant Cursed Bullfrog.
+        • Atal’Aman
+            > Adjusted the placement of several out-of-range Sanctified Banners in two story variants.
+        • The Darkway
+            > The Corrupted Leyline will no longer sometimes continue to cast Detected! after being out of its range.
+
+    Dungeons and Raids
+        • Maisara Caverns
+            > Addressed an issue where players could remain in combat after defeating Vordaza.
+
+    Housing
+        • Decorative Dornogal Opals (small, medium and large) are now available for purchase from the Disguised Decor Duel Vendor in
+          Silvermoon.
+
+    Player versus Player
+        • Hunter
+            > Marksmanship
+                + Precise Shots now benefits Kill Shot and Black Arrow at 50% effectiveness in PvP combat.
+                + Black Arrow damage reduced by 30% in PvP combat.
+                + All damage reduced by 10% in PvP combat.
+                    > Developers’ notes: Several talent changes in 12.0.5 led to Marksmanship overperforming in PvP. These updates target
+                      changes to Black Arrow and their overall damage to account for the new interactions and reduce their effectiveness at
+                      both burst damage and overall pressure.
+        • Mage
+            > Mass Invisibility will no longer target players carrying the Deephaul Crystal in Deephaul Ravine.
+        • Priest
+            > Fixed an issue causing Cyclone to be able to be applied while a Priest has Psychic Shroud active.
+
+    Quests
+        • Fixed an issue where some Alliance players were unable to see the "Heavy Anchor" for "The Fragrance of the Dunes" quest.
+        • Fixed an issue causing players to be unable to turn in Nebulous Voidcores to Decimus while on the quest “Artifice of Aggression”.
+        • Fixed an issue that could cause Lorna Crowley to phase out when engaged for the Arcantina quest "A Generational Moment".
+
         April 23, 2026
 
             Classes
