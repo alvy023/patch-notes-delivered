@@ -44,7 +44,7 @@ PatchNotesDelivered_Notes_1205 = {
                         + Fixed an issue where Shared Agony would not function after casting a Curse.
                         + Hellcaller: Fixed an issue where Xalan's Cruelty would not increase the critical strike chance of 
                           Wrath of Nathreza.
-                        + Fixed an issue where periodic damage caused by Malefic Grasp is unaffected by Death's Embrace.
+                        + Fixed an issue where periodic damage caused by Malefic Grasp was unaffected by Death's Embrace.
                         + Soul Harvester: Fixed an issue where consuming Nightfall with Malefic Grasp would not activate Wicked Reaping.
                     > Demonology
                         + Fixed an issue where Fel Armaments would reduce the cooldown of Felstorm by 20 seconds, rather than the 

@@ -13,7 +13,7 @@ and this project adheres to a specific versioning schema: `A.B.C` where:
 - Added 12.0.5 hotfix notes for April 27
 ### Changed
 - Updated TOC to 1.12.45
-- Fixed Changelog
+- Fixed broken link in Changelog
 
 [1.12.45]: https://github.com/alvy023/patch-notes-delivered/releases/tag/v1.12.45
 
