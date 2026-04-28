@@ -10,8 +10,65 @@
 PatchNotesDelivered_Notes_1205 = {
     version = "12.0.5",
     build = "67186",
-    hotfix = 3,
+    hotfix = 4,
     gameChangesHotfixes = [[
+        April 27, 2026
+
+            Classes
+                • Demon Hunter
+                    > Havoc
+                        + Fixed an issue that allowed Havoc to benefit from Vengeance's Annihilator talent Meteoric Rise when using 
+                          Collective Anguish in specific conditions.
+                    > Vengeance
+                        + Annihilator: Fixed an issue that caused Celestial Echoes to grant 5 additional Fury per Fracture instead of the 
+                          intended 3 Fury.
+                • Evoker
+                    > Fixed an issue where Renewing Blaze would not always trigger its healing effect from certain attacks.
+                • Mage
+                    > Frost
+                        + Fixed an issue that could cause Flurry to not benefit fully from the damage bonus of Brain Freeze, when a 
+                          non-Brain-Freeze-affected Flurry was cast immediately afterwards.
+                        + Fixed an issue causing some Tracked Buffs for Frostfire to not display correctly.
+                    > Casting Mass Invisibility now correctly interrupts the Mage's current spell.
+                • Monk
+                    > Windwalker
+                        + Touch of Karma now shows as a large defensive buff on raid frames.
+                • Rogue
+                    > Assassination
+                        + Separated the tracked buffs for Implacable into two elements so they can be tracked separately with the 
+                          Cooldown Manager.
+                            - Duration of increased Energy generation.
+                            - Amount of Energy regeneration you'll receive when Envenom expires.
+                • Warlock
+                    > Affliction
+                        + Fixed an issue where Shared Agony would not function after casting a Curse.
+                        + Hellcaller: Fixed an issue where Xalan's Cruelty would not increase the critical strike chance of 
+                          Wrath of Nathreza.
+                        + Fixed an issue where periodic damage caused by Malefic Grasp was unaffected by Death's Embrace.
+                        + Soul Harvester: Fixed an issue where consuming Nightfall with Malefic Grasp would not activate Wicked Reaping.
+                    > Demonology
+                        + Fixed an issue where Fel Armaments would reduce the cooldown of Felstorm by 20 seconds, rather than the 
+                          intended 10 seconds.
+
+            Delves
+                • The Shadow Enclave
+                    > Fixed an issue where characters could lose the ability to strafe after picking up a mirror.
+
+            Items and Rewards
+                • Fixed a Great Vault display bug where the World Row indicated an item level of 272 for the Tier 5 Ritual Site, instead of 
+                  the intended 269 item level.
+
+            Player versus Player
+                • Demon Hunter
+                    > Fixed an issue that prevented the target throw effect from being available while using Illidan's Grasp.
+                    > Havoc
+                        + Fixed an issue that caused Consume Magic to remove an additional Magic effect from the primary target when the 
+                          Blood Moon PvP Talent was selected.
+
+            Quests
+                • Resolved an issue where players who completed the quest "The Legend of Aln'Sharan" could not gather them on alts without 
+                  completing the quest first.
+
         April 24, 2026
 
             Achievements
