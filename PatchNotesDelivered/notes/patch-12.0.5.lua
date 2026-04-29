@@ -12,32 +12,34 @@ PatchNotesDelivered_Notes_1205 = {
     build = "67235",
     hotfix = 5,
     gameChangesHotfixes = [[
-        April 29, 2026
+        April 28, 2026
 
-    Classes
-        • Druid
-            > Restoration
-                + Fixed an issue where Blooming Infusion was counting each target of Nature's Bounty or Rampant Growth as an additional cast.
-        • Mage
-            > Frost
-                + Fixed an issue causing some spells to be incorrectly locked during Party Sync.
-        • Warlock
-            > Affliction
-                + Fixed an issue where the Abyssal Immolator 4-piece set bonus would not correctly increase the initial stack count of Agony by 2.
-                + Fixed an issue where Unstable Affliction applied through Fatal Echoes would consume Shard Instability.
+            Classes
+                • Druid
+                    > Restoration
+                        + Fixed an issue where Blooming Infusion was counting each target of Nature's Bounty or Rampant Growth as an 
+                          additional cast.
+                • Mage
+                    > Frost
+                        + Fixed an issue causing some spells to be incorrectly locked during Party Sync.
+                • Warlock
+                    > Affliction
+                        + Fixed an issue where the Abyssal Immolator 4-piece set bonus would not correctly increase the initial stack count 
+                          of Agony by 2.
+                        + Fixed an issue where Unstable Affliction applied through Fatal Echoes would consume Shard Instability.
 
-    Decor Duel
-        • Fixed a bug that could prevent seekers from receiving participation credit.
+            Decor Duel
+                • Fixed a bug that could prevent seekers from receiving participation credit.
 
-    Dungeons and Raids
-        • Algeth’ar Academy
-            > Timer increased to 31 minutes (was 30 minutes).
-        • Maisara Caverns
-            > Muro’jin and Nekraxx
-                + Coordinated Assault damage reduced by 30%, and now ignores armor.
-        • March on Quel’Danas
-            > Midnight Falls
-                + Fixed an issue causing Druids to become untargetable after entering the Darkwell while shapeshifted.
+            Dungeons and Raids
+                • Algeth’ar Academy
+                    > Timer increased to 31 minutes (was 30 minutes).
+                • Maisara Caverns
+                    > Muro’jin and Nekraxx
+                        + Coordinated Assault damage reduced by 30%, and now ignores armor.
+                • March on Quel’Danas
+                    > Midnight Falls
+                        + Fixed an issue causing Druids to become untargetable after entering the Darkwell while shapeshifted.
 
         April 27, 2026
 
