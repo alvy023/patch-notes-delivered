@@ -14,46 +14,47 @@ PatchNotesDelivered_Notes_1205 = {
     gameChangesHotfixes = [[
         April 29, 2026
 
-        Classes
-            • Evoker
-                > Flameshaper: Twin Flame will no longer bounce to enemy targets that the Evoker is not in combat with.
-                > Fixed an issue where Titan's Gift and Titanic Wrath were not increasing the damage of the final few ticks of Disintegrate
-                  for Preservation and Devastation Evokers.
-            • Shaman
-                > Restoration
-                    + All damage dealt increased by approximately 12%.
-                        - Developers’ notes: Restoration shamans were intended to gain a 30% damage increase with the release of patch 12.0.5,
-                          but an error resulted in them gaining about half of that amount. This 12% increase brings them up to a total of
-                          +30% damage when compared to before patch 12.0.5.
-            • Warlock
-                > Affliction
-                    + Fixed an issue where Fatal Echoes would consume a Soul Shard when activated.
-                    + Fixed an issue where Unstable Affliction would consume all stacks of Shard Instability.
-            • Warrior
-                > Arms
-                    + Slams from Fervor of Battle which critically strike will now correctly trigger Mortal Wounds.
-                    + Deep Wounds applied by Execute no longer deal double the intended damage.
+            Classes
+                • Evoker
+                    > Flameshaper: Twin Flame will no longer bounce to enemy targets that the Evoker is not in combat with.
+                    > Fixed an issue where Titan's Gift and Titanic Wrath were not increasing the damage of the final few ticks of 
+                      Disintegrate for Preservation and Devastation Evokers.
+                • Shaman
+                    > Restoration
+                        + All damage dealt increased by approximately 12%.
+                            - Developers’ notes: Restoration shamans were intended to gain a 30% damage increase with the release of patch 
+                              12.0.5, but an error resulted in them gaining about half of that amount. This 12% increase brings them up to a
+                              total of +30% damage when compared to before patch 12.0.5.
+                • Warlock
+                    > Affliction
+                        + Fixed an issue where Fatal Echoes would consume a Soul Shard when activated.
+                        + Fixed an issue where Unstable Affliction would consume all stacks of Shard Instability.
+                • Warrior
+                    > Arms
+                        + Slams from Fervor of Battle which critically strike will now correctly trigger Mortal Wounds.
+                        + Deep Wounds applied by Execute no longer deal double the intended damage.
 
-        Decor Duel
-            • The Enchanted Hourglass now has a progress bar, and its timer is now better aligned with the toy's duration.
+            Decor Duel
+                • The Enchanted Hourglass now has a progress bar, and its timer is now better aligned with the toy's duration.
 
-        Housing
-            • Fixed a bug where the neighborhood weekly quest “Lost Animals” could become unavailable to players who completed it previously.
+            Housing
+                • Fixed a bug where the neighborhood weekly quest “Lost Animals” could become unavailable to players who completed 
+                  it previously.
 
-        Items
-            • Cosmic Hunter's Glaive and Fangs of the Invader should now have Intellect for Devourer Demon Hunters.
+            Items
+                • Cosmic Hunter's Glaive and Fangs of the Invader should now have Intellect for Devourer Demon Hunters.
 
-        Professions
-            • Cooking
-                > Fixed an issue with Hearty Well Fed being refreshed by standard Well Fed foods.
+            Professions
+                • Cooking
+                    > Fixed an issue with Hearty Well Fed being refreshed by standard Well Fed foods.
 
-        Reputation
-            • Midnight World Quests now correctly award increased reputation while Sign of the Emissary is active.
+            Reputation
+                • Midnight World Quests now correctly award increased reputation while Sign of the Emissary is active.
 
-        Void Assaults
-            • Imperator Pertinax should no longer die easily during the Eversong Void Incursion.
-            • Fixed a bug that could prevent some players who were properly in combat with the Void-Corrupted creature from receiving credit
-              toward the Cosmic Slayer achievement.
+            Void Assaults
+                • Imperator Pertinax should no longer die easily during the Eversong Void Incursion.
+                • Fixed a bug that could prevent some players who were properly in combat with the Void-Corrupted creature from receiving 
+                  credit toward the Cosmic Slayer achievement.
 
         April 28, 2026
 
