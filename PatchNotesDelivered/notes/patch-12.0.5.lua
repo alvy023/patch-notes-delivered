@@ -9,9 +9,35 @@
 --- Max note length [140] ------------------------------------------------------------------------------------------------------------------
 PatchNotesDelivered_Notes_1205 = {
     version = "12.0.5",
-    build = "67235",
-    hotfix = 6,
+    build = "67314",
+    hotfix = 7,
     gameChangesHotfixes = [[
+        April 30, 2026
+
+        Classes
+            • Shaman
+                > Corrected an issue where the Jet Stream talent would not remove snare effects from allies who enter your Wind Rush Totem's area.
+                > Restoration
+                    + Corrected an issue where the initial healing from dropping a Stormstream Totem was not affected by Mastery: Deep Healing.
+                    + Farseer: Corrected an issue where summoned Ancestors would not cast Chain Heal when dropping Stormstream Totem.
+                    + Totemic: Corrected an issue where the effects of the Tidecaller's Guard shield imbuement would be lost upon dying and resurrecting.
+
+        Housing
+            • Players can again place non-default flooring, leave their House, and return to find the flooring where they placed it.
+
+        Items
+            • Fixed a bug preventing players from purchasing the Cache of Void-Touched Weapons before unlocking the Void-Touched Sunfury Poleaxe from any item.
+
+        Player versus Player
+            • Warrior
+                > Fixed an issue where Disarm was incorrectly sharing a diminishing return with root effects.
+
+        User Interface
+            • Resolved an issue with Action Bar items persisting when you enter a vehicle.
+
+        World
+            • Fixed a rare bug that could cause players using DirectX 11 to see zone-wide graphical corruption.
+
         April 29, 2026
 
             Classes
