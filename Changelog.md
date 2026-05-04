@@ -14,7 +14,7 @@ and this project adheres to a specific versioning schema: `A.B.C` where:
 ### Changed
 - Updated TOC to 1.12.49
 
-[1.12.48]: https://github.com/alvy023/patch-notes-delivered/releases/tag/v1.12.49
+[1.12.49]: https://github.com/alvy023/patch-notes-delivered/releases/tag/v1.12.49
 
 ## [1.12.48] - 2026-05-01
 ### Added
