@@ -10,8 +10,24 @@
 PatchNotesDelivered_Notes_1205 = {
     version = "12.0.5",
     build = "67314",
-    hotfix = 7,
+    hotfix = 8,
     gameChangesHotfixes = [[
+        May 1, 2026
+
+            Classes
+                • Paladin
+                    > Holy
+                        + Fixed an issue that caused Beacon of Light to sometimes not transfer healing from Holy Light or Flash of Light.
+                • Rogue
+                    > Assassination
+                        + Fixed a bug causing Deathmark to generate less Energy than intended.
+
+            Enemies and NPCs
+                • Faithbreaker Ger'lok will now return to his ritual platform if he is pulled far away.
+
+            Sound
+                • Reduced the volume of the Gaze of the Alnseer sound effect.
+
         April 30, 2026
 
             Classes
