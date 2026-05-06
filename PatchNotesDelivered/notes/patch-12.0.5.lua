@@ -10,8 +10,229 @@
 PatchNotesDelivered_Notes_1205 = {
     version = "12.0.5",
     build = "67314",
-    hotfix = 8,
+    hotfix = 9,
     gameChangesHotfixes = [[
+        May 5, 2026
+
+    Classes
+        • Death Knight
+            > Frost
+                + All damage increased by 5%. Does not affect PvP combat.
+            > Unholy
+                - Developers’ notes: Unholy Death Knight is performing better than intended after recent bugfixes and the 12.0.5 changes.
+                + Magus of the Dead Shadow Bolt damage reduced by 15%. Does not affect PvP combat.
+                + Graveyard damage reduced by 15%. Does not affect PvP combat.
+                + Rider of the Apocalypse: Whitemane’s Epidemic damage reduced by 25%. This does not affect PvP combat.
+                + Rider of the Apocalypse: Trolbane’s Icy Fury damage reduced by 25%. Does not affect PvP combat.
+                + San’layn: Thrill of Blood now increases the damage of Dread Plague and Virulent Plague by 10% (was 5%).
+        • Demon Hunter
+            > Devourer
+                + All damage reduced by 3%.
+                + Annihilator: Voidfall Meteor damage reduced by 12%.
+                + Annihilator: Meteoric Rise damage bonus for Void Ray reduced to 10% (was 15%).
+            > Vengeance
+                + Thick Skin now increases Armor by 190% (was 150%).
+        • Druid
+            > Guardian
+                + Wild Guardian now clears when entering Arena and Battlegrounds, and when starting a Mythic+ dungeon or a raid encounter.
+                    - Developers’ notes: Guardian Druids have continued to overperform in single target contexts, while experiencing difficulties with threat and sustained damage outside of cooldowns. With these changes, we’re aiming to reduce burst potential and transfer some of that power into more reliable and consistent abilities to aid in generating and maintaining threat.
+                + Wild Guardian echo effectiveness reduced to 200% (was 300%).
+                + Red Moon damage reduced by 20%.
+                + Maul damage reduced by 15%.
+                + Raze damage reduced by 15%.
+                + Ravage damage reduced by 15%.
+                + Thrash direct damage increased by 200%.
+                + Thrash bleed damage increased by 100%.
+            > Restoration
+                + All healing reduced by 3%. Does not apply to PvP combat.
+                + Everbloom heals for 20/40% of Lifebloom’s final heal (was 25/50%). Does not apply to PvP combat.
+                + Call of the Elder Druid's cooldown is now trackable in the cooldown manager.
+        • Evoker
+            > Augmentation
+                + All ability damage and pet damage reduced by 5%.
+                + Fixed an issue where Inferno’s Blessing damage was not properly modified by the specialization baseline passive. Inferno’s Blessing’s spell damage coefficient has been adjusted to compensate, so its effective damage will only be changed per the above adjustment.
+                + Scalecommander: Fixed an issue where Bombardment damage was not properly modified by the specialization’s baseline passives. Bombardment’s damage calculations have been adjusted to compensate.
+                    - Developers’ notes: Effective damage will be unchanged for Devastation and only reduced by 5% for Augmentation with the above adjustment.
+        • Hunter
+            > Pack Leader: Corrected an issue where Howl of the Pack Leader would not summon a Boar or a Bear if the Kill Command that would summon the Boar or Bear killed your target.
+            > Pack Leader: Corrected an issue where the Pack Leader Boar's charge would not grant any of the Hogstrider damage bonuses or deal area damage if your Boar's primary target died before the Boar reached it.
+            > Beast Mastery
+                + All damage dealt by you and your pets increased by 4%. Does not apply to PvP combat.
+                + Corrected an issue where the Piercing Fangs talent did not apply a critical damage bonus to the bonus pet summoned from Nature's Ally.
+            > Marksmanship
+                + Rapid Fire damage increased by 20%. Does not affect PvP combat.
+                + Explosive Shot damage increased by 100%.
+                + Arcane Shot and Multi-Shot damage increased by 30%.
+                + Steady Shot damage increased by 100%.
+        • Mage
+            > Frost
+                + Shatter damage to the primary target reduced by 6%.
+                    - Developers’ notes: Bug fixes last week to Hand of Frost and Flurry provided a meaningful damage increase to Frost. This change is primarily intended to offset the boost from those fixes.
+        • Monk
+            > Brewmaster
+                + High Tolerance refunds 2/4 seconds of Purifying Brew’s cooldown when cast at Elevated Stagger (was 3/6 seconds).
+                + Zen State increases stagger effectiveness by 15%, based on missing health (was 20%).
+                + Fixed an issue where the Season 1 class set 4-piece Extra Kick could target unintended creatures.
+        • Paladin
+            > Holy
+                + Eternal Flame healing increased by 15%.
+                + Word of Glory healing increased by 15%.
+                + Light of Dawn healing increased by 15%.
+            > Protection
+                + Base armor increased by 10%.
+        • Priest
+            > Discipline
+                - Developers’ notes: Our goal here is to slightly rein in Atonement’s healing contribution in raid environments while keeping its effectiveness in smaller group content.
+                + Atonement damage transfer has been increased to 30% (was 28%). Not applied to PvP combat.
+                + Atonement healing now decays more rapidly beyond 5 targets.
+                    - Developers’ notes: For example, when healing 20 injured allies with Atonement, it would previously be reduced by 50%. With the new scaling, it will be reduced by 60%.
+            > Holy
+                + All healing increased by 6%. Not applied to PvP combat.
+        • Rogue
+            > Outlaw
+                + All damage increased by 9%. Does not affect PvP combat.
+                + Trickster: Cloud Cover primary and secondary duration reduced to 6 seconds (was 10 seconds).
+                + Trickster: Cloud Cover now causes Fazed to stack 1 additional time (was 2).
+                + Trickster: No Scruples crit chance bonus increased to 12% (was 10%).
+                + Trickster: Additional stacks of Fazed granted by Cloud Cover no longer increase the magnitude of secondary effects, such as the damage reduction from the Smoke talent.
+            > Subtlety
+                + All damage increased by 7%. Does not affect PvP combat.
+                + Trickster: Cloud Cover primary and secondary duration reduced to 6 seconds (was 10 seconds).
+                + Trickster: No Scruples crit chance bonus increased to 12% (was 10%).
+                + Trickster: Additional stacks of Fazed granted by Cloud Cover no longer increase the magnitude of secondary effects, such as the damage reduction from the Smoke talent.
+        • Shaman
+            > Enhancement
+                - Developers’ notes: Enhancement Shaman has been underperforming in both Raid and M+ content. With these changes, we’re aiming to increase throughput and help Stormbringer catch up to Totemic. We’re also resolving a bug, which would have a negative impact on performance, so we’re watching the results carefully.
+                + All ability damage increased by 5%.
+                + Auto attack damage increased by 10%.
+                + Resolved an issue causing Thorim’s Invocation to cast Lightning Bolt, Chain Lightning and Tempest at with more effectiveness than intended when cast below 10 Maelstrom Weapon.
+                + Stormbringer: Natural Gift now increases Nature damage of abilities by 6% (was 2%).
+                + Stormbringer: Voltaic Surge now increases the damage of Crash Lightning and Chain Lightning by 20% (was 10%).
+        • Warlock
+            > Affliction
+                + Unstable Affliction damage increased by 20%.
+                + Seed of Corruption damage increased by 10%.
+                + Corruption damage increased by 20%.
+                    - Developers’ notes: This change does not affect Wither.
+                + Agony damage increased by 10%.
+        • Warrior
+            - Developers’ notes: These tuning changes are aimed at improving Warrior performance overall as well as compensating for damage lost due to the Deep Wounds bug fix last week. We will continue to monitor Warrior performance and make further adjustments as needed.
+            > Arms
+                + Execute damage increased by 20%.
+                + Overpower damage increased by 20%.
+                + Slayer: Slayer’s Strike damage increased by 40%.
+                + Slayer: Reap the Storm damage increased by 30%.
+            > Fury
+                + All damage increased by 5%.
+                + Execute damage increased by 20%.
+                + Raging Blow damage increased by 20%.
+                + Slayer: Slayer’s Strike damage increased by 40%.
+                + Slayer: Reap the Storm damage increased by 30%.
+                + Mountain Thane: Ground Current damage increased by 50%.
+            > Protection
+                + Execute damage increased by 20%.
+                + Mountain Thane: Thunder Blast damage increased by 30%.
+                + Mountain Thane: Ground Current damage increased by 50%.
+
+    Decor Duel
+        • Fixed a bug with the Enchanted Hourglass where the timer would get stuck at 1 second.
+        • The Enchanted Hourglass can now only be interacted with by the hourglass's owner.
+
+    Dungeons and Raids
+        • Pit of Saron
+            > Addressed an issue where Scourgelord Tyrannus could jump out of the playspace and be unable to return.
+        • Skyreach
+            > Addressed an issue where Richocheting Chakram can damage pets.
+        • Amirdrassil, the Dream's Hope
+            > Addressed an issue that could block progression after defeating Larodar.
+        • The Voidspire
+            > Crown of the Cosmos
+                + Alleria health reduced by 5% in Mythic difficulty.
+                + Alleria’s berserk timer increased by 15 seconds in Mythic difficulty.
+                + Demiar, Morium, and Vorelus health in Stage One reduced by 10% in Mythic difficulty.
+                + Alleria’s energy generation rate in Stage Two reduced by 10% in Mythic difficulty.
+                + Rift Simulacrum health reduced by 10% in Mythic difficulty.
+                + Demiar, Morium, and Vorelus energy generation rate in Stage Three reduced by 13% in Mythic difficulty.
+                + Rift Simulacrum energy generation rate in Stage Two and Three reduced by 13% in Mythic difficulty.
+                + Spawn time between Rift Simulacrum and Cosmic Portal increased slightly in Mythic difficulty.
+                + Voidstalker Sting targets 10% fewer players in Stage Three.
+                + Silverstrike Ricochet width increased to 5 yards (was 4 yards) in Mythic difficulty to match other difficulties.
+        • March on Quel’Danas
+            > Belo’ren, Child of Al’ar
+                + Rebirth is now a 40 second cast on all difficulties (was 30 seconds).
+                + Reduced the knockback on Light and Void Edict on all difficulties.
+            > Midnight Falls
+                + Midnight Crystal health reduced by 5% on Mythic difficulty.
+                    - Developers’ notes: The following adjustments are aimed at reducing difficulty for smaller groups, with the greatest reductions applying to 10-player groups. These affect Raid Finder, Normal, and Heroic difficulties.
+                + Midnight Crystal health reduced by up to 20% in smaller group sizes.
+                + Cosmic Fracture cast time increased to 14 seconds (was 12 seconds).
+                + Eclipsed damage reduced by up to 20% in smaller group sizes.
+                + Starsplinter cast frequency reduced to every 1.3 seconds on Heroic difficulty (was every 1 second).
+                + Overkill Current damage reduced by 20%.
+
+    Enemies and NPCs
+        • Rare enemies in Ritual Sites no longer scale incorrectly while in a party.
+
+    Items
+        • Permafrost Essence now provides 59% less critical strike.
+
+    Player versus Player
+        - Developers’ notes: The pace of PvP combat is a little too fast right now, resulting in quick kills from burst damage. We’re increasing player health in PvP combat to slow this down slightly and give players more time to react.
+        • Gladiator’s Distinction (PvP trinket set bonus) now increases player Stamina by an additional 5%.
+        • Voidstone Shielding Array absorption is reduced by 50% in PvP combat.
+        • Demon Hunter
+            > Devourer
+                - Developers’ notes: Devourer’s ability to burst enemies down is a little too high.
+                + Void-Scarred: Voidsurge damage reduced by 20% in PvP combat.
+        • Druid
+            > Balance
+                - Developers’ notes: Overall, Balance Druid is performing reasonably well, with the notable exception of Starsurge feeling underwhelming. We’re increasing Starsurge damage to give Balance more opportunities to contribute single-target burst.
+                + Starsurge damage increased by 18% in PvP combat.
+        • Hunter
+            > Beast Mastery
+                + All damage dealt by you and your pets reduced by 3% in PvP combat.
+            > Marksmanship
+                - Developers’ notes: We reduced Marksmanship damage in a recent hotfix, but those changes were too aggressive. We’re pulling back on some of the reductions to Black Arrow and overall damage to bring Marksmanship back up to a reasonable spot.
+                + Black Arrow damage increased by 11% in PvP combat.
+                + All damage increased by 5% in PvP combat.
+        • Mage
+            > Arcane
+                - Developers’ notes: Arcane is behind the other Mage specializations, so we’re increasing the damage of some of their core spells. These are the more difficult spells to fully channel, so we’d like them to feel more rewarding when you do cast them.
+                + Arcane Blast damage increased by 15% in PvP combat.
+                + Arcane Missile damage increased by 15% in PvP combat.
+            > Fire
+                - Developers’ notes: Fire, particularly Sunfury, is able to deal significant burst during their Combustion windows. We’d like to reduce that with that caveat that casting Fireball should still feel rewarding.
+                + Pyroblast damage reduced by 6% in PvP combat.
+                + Fireball damage increased by 80% in PvP combat.
+                + Sunfury: Codex of the Sunstriders now increases spell damage during Combustion by 1% for each Spellfire Sphere consumed in PvP combat (was 2%).
+            > Frost
+                + Ray of Frost damage reduced by 10% in PvP combat.
+        • Monk
+            > Brewmaster
+                + All damage reduced by 15% in PvP combat.
+        • Paladin
+            > Holy
+                + Mana regeneration is now reduced by 35% in PvP combat (was 45%).
+            > Protection
+                + Templar: Divine Exaction now causes Divine Toll to cast 2 additional times at 75% effectiveness in PvP combat (was 150%).
+        • Priest
+            > Shadow
+                - Developers’ notes: Shadow’s consistent damage over time is quite effective, but their single target spells are lower than intended. We’re increasing Shadow Word: Madness and Mind Blast damage to help them contribute single target burst a bit more effectively.
+                + Shadow Word: Madness damage increased by 25% in PvP combat.
+                + Mind Blast and Void Blast damage increased by 20% in PvP combat.
+        • Rogue
+            > Outlaw
+                - Developers’ notes: Outlaw’s damage ended up being quite high after recent adjustments, particularly Between the Eyes with patch 12.0.5. We’re reducing that along with some reductions to Cloud Cover for both PvE and PvP.
+                + Between the Eyes damage reduced by 15% in PvP combat.
+                + All ability damage reduced by 5%.
+        • Shaman
+            > Restoration
+                + Healing Wave healing increased by 10% in PvP combat.
+                + Riptide healing increased by 15% in PvP combat.
+        • Warlock
+            > Destruction
+                + All damage increased by 5% in PvP combat.
+
         May 1, 2026
 
             Classes
