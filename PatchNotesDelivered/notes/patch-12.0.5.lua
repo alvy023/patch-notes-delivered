@@ -47,7 +47,7 @@ PatchNotesDelivered_Notes_1205 = {
                 • Windrunner Spire
                     > Derelict Duo
                         + Added an arrow over the head of the player being aimed at by Latch's Heaving Yank (in addition to the existing 
-                          dynamic marker showing the closet target within the path).
+                          dynamic marker showing the closest target within the path).
                         + Added a screen effect for when a player is standing in the path of Latch's Heaving Yank.
                         + Addressed a few situations where Latch's Heaving Yank could behave unexpectedly.
                         + Adjusted Kalis's teleport locations during Heaving Yank to leave more space between her and the edges of 
