@@ -9,9 +9,59 @@
 --- Max note length [140] ------------------------------------------------------------------------------------------------------------------
 PatchNotesDelivered_Notes_1205 = {
     version = "12.0.5",
-    build = "67314",
-    hotfix = 10,
+    build = "67403",
+    hotfix = 11,
     gameChangesHotfixes = [[
+        May 7, 2026
+
+    Hotfixes
+        • May 6, 2026
+
+            Abyss Anglers
+                • Ka'bubb the capybara will now join your Abyss Anglers dives once you've earned the
+                  Certified Depthdiver
+                • Solved an issue in Abyss Anglers where some players couldn’t complete the Achievement
+                  Depth Grease, even if they had accomplished the correct conditions.
+
+            Classes
+                • Druid
+                    > Restoration
+                        + Incarnation: Tree of Life's duration can now be tracked in the cooldown manager while talented into Reforestation 
+                          without Incarnation: Tree of Life.
+                • Monk
+                    > Brewmaster
+                        + Fixed an issue where Flurry Strikes did not correctly generate threat.
+                        + Fixed an issue where Vital Flame and Refreshing Drink incorrectly generated healing threat.
+                • Warlock
+                    > Affliction
+                        + Fixed an issue where sometimes Wither would not replace Corruption.
+                        + Soul Harvester: Fixed an issue where Sataiel's Volition would sometimes stop providing its Corruption modifier.
+                    > Destruction
+                        + Fixed an issue where Conflagration of Chaos would not increase the damage of Shadowburn.
+
+            Decor Duel
+                • Groups may now queue into Decor Duel through the Group Finder.
+
+            Dungeons and Raids
+                • Pit of Saron
+                    > Risen Soldiers and Arcanist Cadavers can no longer be charmed.
+                    > Ick and Krick
+                        + Addressed an issue where Krick could fail to cast Get 'Em, Ick!
+                • Windrunner Spire
+                    > Derelict Duo
+                        + Added an arrow over the head of the player being aimed at by Latch's Heaving Yank (in addition to the existing 
+                          dynamic marker showing the closet target within the path).
+                        + Added a screen effect for when a player is standing in the path of Latch's Heaving Yank.
+                        + Addressed a few situations where Latch's Heaving Yank could behave unexpectedly.
+                        + Adjusted Kalis's teleport locations during Heaving Yank to leave more space between her and the edges of 
+                          the arena.
+                • The Voidspire
+                    > Corrected an issue where players were unable to teleport to The Approach after the instance has been soft reset.
+
+            Player versus Player
+                • Warrior
+                    > Berserker Roar now displays as an important buff on enemy nameplates.
+
         May 6, 2026
 
             Abyss Anglers
