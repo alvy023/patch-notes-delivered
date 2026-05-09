@@ -9,9 +9,32 @@
 --- Max note length [140] ------------------------------------------------------------------------------------------------------------------
 PatchNotesDelivered_Notes_1205 = {
     version = "12.0.5",
-    build = "67314",
-    hotfix = 10,
+    build = "67451",
+    hotfix = 11,
     gameChangesHotfixes = [[
+        May 8, 2026
+
+            Classes
+                • Monk
+                    > Mistweaver
+                        + Fixed an issue that caused Rushing Wind Kick's heal to sometimes fail.
+
+            Dungeons and Raids
+                • Magisters Terrace
+                    > Fixed an issue where sometimes Gemellus would fail to resume using abilities if a player died during Astral Grasp.
+                • Nexus-Point Xenas
+                    > Fixed an issue causing Mana Batteries to appear as a neutral faction while casting Corespark Overload.
+                • The Voidspire
+                    > Using the raid skip no longer causes players to automatically teleport when returning to the entrance.
+
+            Quests
+                • Fixed an issue that prevented repeat play of "The Story of the Cauldron of Echoes".
+                • Resolved an issue where players could be blocked from accepting "Rescue in the Shadows" if they had completed 
+                  "Crypt in the Mist" during the Zul'Aman campaign.
+
+            User Interface
+                • Fixed a bug causing Wings of the Void to unintentionally appear in the Spellbook.
+
         May 6, 2026
 
             Abyss Anglers
