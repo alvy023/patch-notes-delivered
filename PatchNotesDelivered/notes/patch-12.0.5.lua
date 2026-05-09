@@ -14,11 +14,6 @@ PatchNotesDelivered_Notes_1205 = {
     gameChangesHotfixes = [[
         May 8, 2026
 
-            Abyss Anglers
-                • Resolved an issue in Abyss Anglers where some players weren't able to complete the Achievement
-                  Depth Grease
-                  , even if they had met the correct conditions.
-
             Classes
                 • Monk
                     > Mistweaver
@@ -34,7 +29,8 @@ PatchNotesDelivered_Notes_1205 = {
 
             Quests
                 • Fixed an issue that prevented repeat play of "The Story of the Cauldron of Echoes".
-                • Resolved an issue where players could be blocked from accepting "Rescue in the Shadows" if they had completed "Crypt in the Mist" during the Zul'Aman campaign.
+                • Resolved an issue where players could be blocked from accepting "Rescue in the Shadows" if they had completed 
+                  "Crypt in the Mist" during the Zul'Aman campaign.
 
             User Interface
                 • Fixed a bug causing Wings of the Void to unintentionally appear in the Spellbook.
