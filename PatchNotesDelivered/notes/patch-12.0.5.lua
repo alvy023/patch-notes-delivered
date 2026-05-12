@@ -10,8 +10,15 @@
 PatchNotesDelivered_Notes_1205 = {
     version = "12.0.5",
     build = "67451",
-    hotfix = 11,
+    hotfix = 12,
     gameChangesHotfixes = [[
+        May 9, 2026
+
+    Abyss Anglers
+        • Resolved an issue in Abyss Anglers where some players weren't able to complete the Achievement
+          Depth Grease
+          , even if they had met the correct conditions.
+
         May 8, 2026
 
             Classes
