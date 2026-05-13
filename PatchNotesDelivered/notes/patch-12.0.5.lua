@@ -10,8 +10,100 @@
 PatchNotesDelivered_Notes_1205 = {
     version = "12.0.5",
     build = "67451",
-    hotfix = 11,
+    hotfix = 12,
     gameChangesHotfixes = [[
+        May 12, 2026
+
+    Achievements
+        • Abyss Anglers: Depth Grease no longer requires the Reinforced Joints upgrade.
+
+    Classes
+        • Death Knight
+            > Blood
+                + Developers’ notes: We are looking at smoothing out the damage intake of Blood outside of their cooldown window by
+                  increasing the consistency and uptime of their Apex Talent. To further help these windows of high damage intake we are
+                  also increasing their Health and Death Strike healing.
+                + Dancing Rune Weapon grants 25% Parry (was 20%).
+                + Blood Fortification grants 40% Stamina (was 35%).
+                + Improved Death Strike healing increased to 15% (was 5%).
+                + Dance of Midnight grants Dancing Rune Weapon for 8 seconds (was 6 seconds).
+                + Dance of Midnight chance to proc increased to 12.5% (was 10%).
+            > Unholy
+                + Death and Decay can now be tracked in the cooldown manager.
+        • Demon Hunter
+            > Vengeance
+                + Developers’ notes: Vengeance Demon Hunter’s baseline defenses are its most lacking, while cooldown availability and
+                  values are currently serving the spec well. As a result, we will be primarily targeting core values for Health and damage
+                  reduction, with an additional smaller increase specifically to Armor.
+                + Demonic Wards now reduces all damage taken by 12% (was 8%).
+                + Thick Skin now grants 55% increased Stamina (was 50%).
+                + Effectiveness of Mastery: Fel Blood increased by 20%.
+                + Void Reaver now causes Frailty to reduce damage taken by 5% (was 4%).
+        • Druid
+            > Guardian
+                + Thrash direct damage reduced by 25%.
+                + Elune’s Favored now heals for 15% of Arcane damage dealt (was 25%).
+                + Developers’ notes: These changes aim to bring this build closer to its expected output: high-damage relative to other
+                  tanks, but not abnormally so. Recent previous adjustments to Guardian have made the Elune’s Chosen build stronger than
+                  intended. With this tuning, we’re choosing to not break the Elune’s Chosen build or require the Apex talent. We have
+                  further plans to update the Guardian Apex Talent in a future patch to give us more flexibility with it and alleviate some
+                  of the current pain points for Druids.
+        • Hunter
+            > Marksmanship
+                + Corrected an issue where Explosive Shot applied from the Salvo talent did not properly grant Lock and Load from the
+                  Shrapnel Shot talent when applied.
+        • Paladin
+            > Protection
+                + Developers’ notes: With these changes, we’re aiming to improve baseline durability for Protection Paladins by increasing
+                  passive effects which contribute to effective health. We’re also addressing on-demand survivability with adjustments to
+                  defensive cooldown coverage and strength.
+                + Blessing of Dusk reduces damage taken by up to 20%, increasing as your health decreases (was 10%).
+                + Sanctified Plates increases stamina by 7/15% (was 5/10%).
+                + Ardent Defender duration increased to 12 seconds (was 8 seconds).
+                + Ardent Defender now reduces damage taken by 30% (was 20%).
+                + Sentinel duration increased to 20 seconds (was 16 seconds).
+        • Shaman
+            > Restoration
+                + Corrected an issue where Downpour would consume Nature's Swiftness and Ancestral Swiftness.
+        • Warlock
+            > Diabolist: Fixed an issue where Diabolic Oculi would target creatures that are not in combat with their summoner.
+        • Warrior
+            > Protection
+                + Developers’ notes: Protection melee damage mitigation is quite strong, but is a bit behind for magical attacks and
+                  damage-over-time effects. These changes are aimed at strengthening those areas as well as making it easier to maintain
+                  healthy Ignore Pain values.
+                + Fight Through Flames reduces magic damage taken by 6% (was 4%).
+                + Phalanx reduces damage enemies deal to you by 8% (was 5%).
+                + Ignore Pain effectiveness increased by 8%.
+
+    Delves
+        • Light spores in Sunkiller Sanctum should no longer interrupt channeled spells.
+
+    Housing
+        • Players who purchased the Roofus bundle can now buy additional copies of the decor in that bundle from promotional decor resupply
+          vendors in Stormwind (Tuuran), Orgrimmar (Gabbi), and Silvermoon City (Dennia Silvertongue).
+
+    Items
+        • Fixed an issue where the Dundun's Abundant Travel Method toy would teleport players to the incorrect location.
+        • Fixed an issue preventing weapons and trinkets crafted before 12.0.5 from being eligible for Ascendant Voidcore upgrades.
+
+    Prey
+        • Removed the once per week restriction on Preferential Killing which generates a hunt with custom parameters. Players may complete
+          Custom Hunts as often as desired after reaching rank 10 in the Season 1 Prey Journey, but subsequent Custom Hunts in a week give
+          reduced rewards.
+        • Increased Prey hunt progress gained from completing World Quests, defeating Ambushes, delivering Ripostes, and interacting with
+          Remnants of Anguish.
+        • Removed Hunter's Momentum from Hard and Nightmare mode Prey hunts.
+        • Significantly increased the number of the Coalescing Anguish spawns in the outdoor world.
+
+    Player versus Player
+        • Significantly increased rating gains from completing 2v2, 3v3, and Solo Shuffle matches.
+            - Developers' notes: This adjustment is intended to meaningfully improve progression as the season continues to support healthier
+              ladder movement. We'll continue to monitor rating distribution and make further adjustments if needed.
+
+    Void Assaults
+        • Increased the progress gained for certain Void Assault steps.
+
         May 8, 2026
 
             Classes
