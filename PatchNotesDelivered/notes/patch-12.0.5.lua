@@ -14,26 +14,28 @@ PatchNotesDelivered_Notes_1205 = {
     gameChangesHotfixes = [[
         May 15, 2026
 
-        Achievements
-            • Reservation for One will now be granted to players who collect Mythic-tier fish meat multiple times in the same run.
-            • Additionally fixed issues with the Champion of Pahk creature in Abyss Anglers that caused it to disappear before players could catch it.
+            Achievements
+                • Reservation for One will now be granted to players who collect Mythic-tier fish meat multiple times in the same run.
+                • Additionally fixed issues with the Champion of Pahk creature in Abyss Anglers that caused it to disappear before players 
+                  could catch it.
 
-        Delves
-            • Nemesis Squads should no longer spawn under the world in Parhelion Plaza.
+            Delves
+                • Nemesis Squads should no longer spawn under the world in Parhelion Plaza.
 
-        Decor Duel
-            • Hiders can no longer swap with Enchanted Decoys.
+            Decor Duel
+                • Hiders can no longer swap with Enchanted Decoys.
 
-        Dungeons and Raids
-            • The Voidspire
-                > A teleport pad now appears in the Isle of Quel'Danas for raid groups that used the raid shortcut and have bosses to defeat.
-            • Fallen-King Salhadaar
-                > Resolved an issue making the Broken Oath warning unmovable in Edit Mode.
+            Dungeons and Raids
+                • The Voidspire
+                    > A teleport pad now appears in the Isle of Quel'Danas for raid groups that used the raid shortcut and have bosses 
+                      to defeat.
+                • Fallen-King Salhadaar
+                    > Resolved an issue making the Broken Oath warning unmovable in Edit Mode.
 
-        Player versus Player
-            • Hunter
-                > Beast Mastery
-                    + Bestial Wrath now displays as important on enemy nameplates.
+            Player versus Player
+                • Hunter
+                    > Beast Mastery
+                        + Bestial Wrath now displays as important on enemy nameplates.
 
         May 12, 2026
 
