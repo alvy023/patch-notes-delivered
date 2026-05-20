@@ -26,7 +26,8 @@ PatchNotesDelivered_Notes_1205 = {
                 • March on Quel’Danas
                     > The Hall of Fame for players who have completed Mythic difficulty is now closed.
                     > Midnight Falls
-                        + Fixed an issue causing The Dark Archangel to sometimes not cancel upon triggering the final phase on Mythic difficulty.
+                        + Fixed an issue causing The Dark Archangel to sometimes not cancel upon triggering the final phase on 
+                          Mythic difficulty.
                         + Heaven’s Glaives maximum duration reduced to 1 minute (was 2 minutes).
                         + Reduced the spread of Midnight Crystals on Mythic difficulty.
                         + Starsplinter initial damage reduced by 20% on Mythic difficulty.
