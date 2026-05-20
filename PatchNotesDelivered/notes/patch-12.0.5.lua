@@ -10,8 +10,39 @@
 PatchNotesDelivered_Notes_1205 = {
     version = "12.0.5",
     build = "67602",
-    hotfix = 13,
+    hotfix = 14,
     gameChangesHotfixes = [[
+        May 19, 2026
+
+            Classes
+                • Paladin
+                    > Retribution
+                        + Templar: Resolved an issue causing Hammer of Light to not cast properly in high haste situations.
+                • Warlock
+                    > Affliction
+                        + Fixed an issue where Soul Swap would carry Unstable Affliction stacks when entering or exiting an instanced area.
+
+            Dungeons and Raids
+                • March on Quel’Danas
+                    > The Hall of Fame for players who have completed Mythic difficulty is now closed.
+                    > Midnight Falls
+                        + Fixed an issue causing The Dark Archangel to sometimes not cancel upon triggering the final phase on Mythic difficulty.
+                        + Heaven’s Glaives maximum duration reduced to 1 minute (was 2 minutes).
+                        + Reduced the spread of Midnight Crystals on Mythic difficulty.
+                        + Starsplinter initial damage reduced by 20% on Mythic difficulty.
+                        + Criticality damage reduced by 20%.
+
+            Items and Rewards
+                • There is no longer a cap on the amount of upgrade Crests that can be accumulated by each player.
+
+            Player versus Player
+                • There is no longer a cap on the amount of Conquest that can be earned, for the rest of Season 1.
+
+            Quests
+                • The repeatable “Legends of the Haranir” quests are now available to player-characters who belong to a Warband that 
+                  includes a character who has completed the first-time versions of the quests, and they may now be obtained by more than 
+                  one character in your warband per week.
+
         May 15, 2026
 
             Achievements
