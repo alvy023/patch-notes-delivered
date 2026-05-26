@@ -10,7 +10,7 @@
 PatchNotesDelivered_Notes_1205 = {
     version = "12.0.5",
     build = "67602",
-    hotfix = 15,
+    hotfix = 16,
     gameChangesHotfixes = [[
         May 22, 2026
 
