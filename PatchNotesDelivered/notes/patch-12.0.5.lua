@@ -14,28 +14,28 @@ PatchNotesDelivered_Notes_1205 = {
     gameChangesHotfixes = [[
         May 22, 2026
 
-    Classes
-        • Death Knight
-            > Unholy
-                + Resolved an issue causing Forbidden Ritual aura to remain permanently on
-                  the Death Knight.
-        • Druid
-            > Restoration
-                + Reduced the number of sounds and visuals that play when using the talent
-                  Flourish with Tranquility.
-        • Priest
-            > Discipline
-                + Master the Darkness can now be tracked in the cooldown manager.
+            Classes
+                • Death Knight
+                    > Unholy
+                        + Resolved an issue causing Forbidden Ritual aura to remain permanently on
+                          the Death Knight.
+                • Druid
+                    > Restoration
+                        + Reduced the number of sounds and visuals that play when using the talent
+                          Flourish with Tranquility.
+                • Priest
+                    > Discipline
+                        + Master the Darkness can now be tracked in the cooldown manager.
 
-    Player versus Player
-        • There is no longer a cap on the total number of Bloody Tokens a player may
-          accumulate.
-        • Resolved an issue that could prevent players from earning Slayer's Rise
-          Dominance while holding all bases.
-        • Paladin
-            > Protection
-                + Fixed an issue where Guardian of the Forgotten Queen could not be
-                  interrupted by some crowd control effects as intended.
+            Player versus Player
+                • There is no longer a cap on the total number of Bloody Tokens a player may
+                  accumulate.
+                • Resolved an issue that could prevent players from earning Slayer's Rise
+                  Dominance while holding all bases.
+                • Paladin
+                    > Protection
+                        + Fixed an issue where Guardian of the Forgotten Queen could not be
+                          interrupted by some crowd control effects as intended.
 
         May 19, 2026
 
