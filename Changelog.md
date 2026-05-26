@@ -10,9 +10,9 @@ and this project adheres to a specific versioning schema: `A.B.C` where:
 
 ## [1.12.56] - 2026-05-25
 ### Added
-- Added 12.0.5 hotfix notes for May 19, 2026
+- Added 12.0.5 hotfix notes for May 22, 2026
 ### Changed
-- Update TOC to 1.12.56
+- Updated TOC to 1.12.56
 
 [1.12.56]: https://github.com/alvy023/patch-notes-delivered/releases/tag/v1.12.56
 
