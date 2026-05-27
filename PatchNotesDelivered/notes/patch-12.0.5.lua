@@ -10,8 +10,237 @@
 PatchNotesDelivered_Notes_1205 = {
     version = "12.0.5",
     build = "67602",
-    hotfix = 15,
+    hotfix = 16,
     gameChangesHotfixes = [[
+        May 26, 2026
+
+            Classes
+                • Demon Hunter
+                    > Developers’ notes: Aldrachi Reaver performance has been below its
+                      alternative Hero Talent options, so we’re buffing some of its effects to
+                      reduce the disparity.
+                    > Havoc
+                        + Death Sweep damage increased by 10%.
+                        + Developers’ notes: This resolves an issue from a previous update where
+                          Blade Dance damage was increased, but Death Sweep’s damage was not
+                          correctly updated to match. The base damage of Death Sweep is intended to
+                          be 30% more than that of Blade Dance.
+                        + Aldrachi Reaver: Reaver’s Glaive damage increased by 15%.
+                        + Aldrachi Reaver: Warblade’s Hunger damage increased by 55%.
+                        + Aldrachi Reaver: Wounded Quarry now deals 30% of Physical damage to the
+                          target of your Reaver’s Mark (was 25%).
+                    > Vengeance
+                        + Aldrachi Reaver: Reaver’s Glaive damage increased by 30%.
+                        + Aldrachi Reaver: Warblade’s Hunger damage increased by 55%.
+                        + Aldrachi Reaver: Wounded Quarry now deals 25% of Physical damage to the
+                          target of your Reaver’s Mark (was 20%).
+                • Druid
+                    > Feral
+                        + All damage dealt increased by 4%.
+                • Mage
+                    > Arcane
+                        + Developers’ notes: In addition to an overall damage buff, we’d like to
+                          get Sunfury’s damage closer to Spellslinger’s.
+                        + All ability damage increased by 5%. Does not apply to PvP.
+                        + Arcane Missiles damage increased by 10%. Does not apply to PvP.
+                        + Sunfury: Burden of Power - Arcane Blast damage bonus increased to 30%
+                          (was 25%). Arcane Pulse damage bonus increased to 20% (was 15%).
+                    > Fire
+                        + Developers’ notes: These changes are intended to increase Fire’s single
+                          target damage. The value of the increase should be comparable for all
+                          Hero Talent options.
+                        + Pyroblast damage increased by 8%. Does not apply to PvP.
+                        + Frostfire: Frostfire Bolt damage increased by 5%. Does not apply to PvP.
+                    > Frost
+                        + Developers’ notes: Frostfire performance is farther behind Spellslinger
+                          than we’re happy with, so we’re boosting a number of its talents to
+                          increase their single target and AOE damage.
+                        + Frostfire: Frostfire Bolt damage increased by 5%. Does not apply to PvP
+                        + Frostfire: Duality - Pyroblast damage increased by 25%.
+                        + Frostfire: Dualcasting Adept - Shatter damage bonus increased to 40% (was
+                          15%).
+                        + Frostfire: Heat Sink - Flurry damage bonus increased to 25% (was 10%).
+                        + Frostfire: Blast Radius - Comet Storm damage bonus increased by 50% (was
+                          20%).
+                • Paladin
+                    > Retribution
+                        + Developers’ notes: Herald of the Sun has been trailing behind Templar in
+                          overall throughput. To improve its output, we’re extending its effective
+                          damage window by granting an additional Dawnlight charge. We’re also
+                          aiming to further improve its AoE performance by increasing the duration
+                          extension provided by Divine Storm.
+                        + Wake of Ashes now causes the next 3 Holy Power spending abilities to
+                          apply a Dawnlight (was 2).
+                        + Endless Gleam now extends Dawnlight’s duration by an additional 0.5
+                          seconds when Divine Storm strikes at least 2 Dawnlights (was 0.3
+                          seconds).
+                • Priest
+                    > Holy
+                        + Developers’ notes: We’re reducing the mana costs of some core spell casts
+                          so Holy Priest can feel more comfortable casting Prayer of Healing and
+                          Flash Heal, particularly in raid settings.
+                        + Flash Heal mana cost reduced by 8%.
+                        + Benediction mana cost reduced by 8%.
+                        + Prayer of Mending mana cost reduced by 8%.
+                        + Prayer of Healing mana cost reduced by 8%.
+                • Rogue
+                    > Developers’ notes: Deathstalker damage is below the other Hero Talent
+                      options for most content and damage profiles, especially for Assassination,
+                      and to the least degree for Subtlety single target output. Changes are
+                      targeted at improving Deathstalker’s total performance compared to each
+                      specialization’s alternative.
+                    > Assassination
+                        + Deathstalker: Deathstalker’s Mark damage increased by 30%.
+                        + Deathstalker: Clear the Witnesses now increases Fan of Knives damage by
+                          60% (was 40%).
+                        + Deathstalker: Hunt Them Down damage increased by 25%.
+                        + Deathstalker: Corrupt the Blood now increases Rupture damage by 20% (was 10%).
+                        + Deathstalker: Darkest Night effect now increases Envenom damage by 35%
+                          (was 30%).
+                    > Subtlety
+                        + Deathstalker: Deathstalker’s Mark damage increased by 30%.
+                        + Deathstalker: Clear the Witnesses now increases Shuriken Storm damage by
+                          60% (was 40%).
+                • Shaman
+                    > Elemental
+                        + Farseer: Ancestral Spirits from the Farseer Hero Talent tree now benefit
+                          from the critical damage increase of the Elemental Fury talent.
+                    > Restoration
+                        + Developers’ notes: We’re adjusting the mana costs of some of Restoration
+                          Shaman’s basic spell casts to give them more room to spend mana on things
+                          like Chain Heal particularly in raid settings.
+                        + The mana cost of Chain Heal, Healing Wave, and Riptide has been reduced
+                          by 5%.
+                • Warrior
+                    > Developers’ notes: These changes aim to improve Colossus’ performance in
+                      single target and Mountain Thane’s performance in AOE relative to other
+                      Hero Talent options.
+                    > Arms
+                        + Colossus: Practiced Strikes - Mortal Strike and Slam damage increased by
+                          25% (was 15%). Does not apply to PvP.
+                    > Fury
+                        + Mountain Thane: Thunder Blast damage increased by 30%. Does not apply to
+                          PvP.
+                    > Protection
+                        + Colossus: Practiced Strikes - Shield Slam damage increased by 25% (was
+                          15%). Does not apply to PvP.
+                        + Mountain Thane: Thunder Blast damage increased by 30%. Does not apply to PvP.
+
+            Player versus Player
+                • Death Knight
+                    > Unholy
+                        + San’layn: Vampiric Strike damage increased by 30% in PvP combat.
+                • Druid
+                    > Balance
+                        + Elune’s Chosen: Lunar Calling now increases Starfire damage by an
+                          additional 20% in PvP combat.
+                    > Feral
+                        + Druid of the Claw: Ravage damage increased by 20% in PvP combat.
+                • Evoker
+                    > Preservation
+                        + Developers’ notes: Preservation has pulled ahead of the other healers
+                          partially due to their ability to withstand crowd control but also due to
+                          their raw healing output. We’re reducing some of their throughput
+                          capabilities and also the uptime on Nullifying Shroud to bring them in line.
+                        + All healing reduced by 5% in PvP combat.
+                        + Nullifying Shroud duration reduced to 3 seconds (was 4 seconds).
+                        + Dream Breath instant healing reduced by 17% in PvP combat.
+                • Hunter
+                    > Survival
+                        + Developers’ notes: Survival has a strong burst window with Takedown, but
+                          outside of that, they are lacking. We’d like to reduce the heavy burst of
+                          Takedown and redistribute that power to compensate.
+                        + Takedown damage reduced by 25% in PvP.
+                        + Damage of all spells and abilities increased by 6% in PvP.
+                • Mage
+                    > Fire
+                        + Developers’ notes: We’d like to increase Fire’s steady state damage by
+                          adjusting Fireball to reward casting, and Meteor has been harder to
+                          justify picking up than we would like in PvP.
+                        + Fireball and Frostfire Bolt damage increased by 35% in PvP combat.
+                        + Meteor direct damage increased by 30% in PvP combat.
+                • Paladin
+                    > Holy
+                        + Developers’ notes: Holy Light’s mana cost is more restrictive in PvP than
+                          intended, so we’re adjusting Divine Favor to make its use less punishing
+                          long-term.
+                        + Divine Favor now reduces the mana cost of Holy Light by 30% (was 10%) in
+                          PvP combat.
+                        + Fixed an issue that caused Denounce to not scale its damage with level or
+                          with buffs such as Avenging Wrath. This is about a 90% increase to its
+                          baseline output.
+                    > Protection
+                        + Developers’ notes: Protection Paladin’s damage capabilities have been
+                          higher than healthy for a spec with its utility.
+                        + All damage reduced by 10% in PvP combat.
+                    > Retribution
+                        + Developers’ notes: We’re adjusting Divine Exaction’s effectiveness to
+                          reduce Retribution’s burst window.
+                        + Templar: Divine Exaction down to 75% (was 150%) in PvP combat.
+                • Priest
+                    > Holy
+                        + Developers’ notes: We’re reducing the mana cost of a few core spells for
+                          Holy Priest this week (see PvE changes for details) which is intended to
+                          help with healing in longer engagements. Additionally, Archon has felt
+                          weak compared to Oracle, so we’re targeting a buff to Halo to improve its
+                          viability.
+                        + Archon: Halo damage and healing increased by 25% in PvP combat.
+                    > Shadow
+                        + Developers’ notes: We feel Voidweaver is in a good position in PvP.
+                          Archon’s pressure is lacking in comparison, so we’re targeting some of
+                          its spells to improve its output.
+                        + Archon: Halo damage and healing increased by 25% in PvP combat.
+                        + Archon: Mind Flay Insanity damage increased by 25% in PvP combat.
+                • Shaman
+                    > Elemental
+                        + Developers’ notes: Elemental is often relying on Ascendance for kills due
+                          to its high burst potential. These changes are intended to increase
+                          overall pressure while reducing reliance on cooldowns to score kills.
+                        + Bloodlust and Heroism from Shamanism now increases haste by 15% (was 20%)
+                        + Ascendance now increases Elemental Overload damage by 10% in PvP Combat
+                          (was 25%).
+                        + Lava Burst damage increased by 15% in PvP combat.
+                        + Lightning Bolt damage increased by 15% in PvP combat.
+                    > Enhancement
+                        + Developers’ notes: Enhancement burst has been hard to react to during
+                          cooldowns due to a Maelstrom Weapon bug we’re fixing. In addition, we’re
+                          toning down the haste gained from Shamanism to reduce the cooldown
+                          pressure from Shaman DPS specializations.
+                        + Bloodlust and Heroism from Shamanism now increases haste by 15% (was 20%)
+                          in PvP.
+                        + Resolved an issue causing Maelstrom Weapon spenders from Thorim’s
+                          Invocation during Doom Winds to deal more damage than intended.
+                • Warlock
+                    > Affliction
+                        + Developers’ notes: Hellcaller has underperformed compared to Soul
+                          Harvester and we would like to shrink that gap.
+                        + Hellcaller: Blackened Soul damage increased by 35% in PvP combat.
+                        + Hellcaller: Wither damage increased by 15% in PvP combat.
+                        + Hellcaller: Mark of Xavius now causes Blackened Soul to deal 4% increased
+                          damage per stack of Wither in PvP combat (was 2%).
+                    > Demonology
+                        + Developers’ notes: For Demonology and Destruction, we’re pulling back on
+                          some of the previous reductions to Conflagrate and Ruination as they were
+                          proving to be a little heavy handed. We’re also bringing up the damage of
+                          core casts like Incinerate and Hand of Gul’dan to reward Warlocks more
+                          for successful casts.
+                        + Hand of Gul’dan damage increased by 30% in PvP combat.
+                        + Diabolist: Ruination damage increased by 100% in PvP combat.
+                    > Destruction
+                        + Incinerate damage increased by 30% in PvP combat.
+                        + Conflagrate damage increased by 60% in PvP combat.
+                        + Diabolist: Ruination damage increased by 100% in PvP combat.
+                • Warrior
+                    > Developers’ notes: Berserker Roar’s duration has been overly disruptive.
+                      Decreasing it should open up more options when deciding how to handle its
+                      effect.
+                    > Berserker Roar’s duration reduced to 5 seconds (was 10 seconds).
+                    > Arms
+                        + Developers’ notes: Arms’ overall pressure output has been slightly higher
+                          than we would like, so we’re tweaking their damage down to land them in a
+                          healthier spot.
+                        + All damage reduced by 3% in PvP combat.
+
         May 22, 2026
 
             Classes
