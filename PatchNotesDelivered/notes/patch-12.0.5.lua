@@ -112,7 +112,7 @@ PatchNotesDelivered_Notes_1205 = {
                         + The mana cost of Chain Heal, Healing Wave, and Riptide has been reduced
                           by 5%.
                 • Warrior
-                    > Developers’ notes: These change aim to improve Colossus’ performance in
+                    > Developers’ notes: These changes aim to improve Colossus’ performance in
                       single target and Mountain Thane’s performance in AOE relative to other
                       Hero Talent options.
                     > Arms
@@ -164,7 +164,7 @@ PatchNotesDelivered_Notes_1205 = {
                         + Developers’ notes: Holy Light’s mana cost is more restrictive in PvP than
                           intended, so we’re adjusting Divine Favor to make its use less punishing
                           long-term.
-                          Divine Favor now reduces the mana cost of Holy Light by 30% (was 10%) in
+                        + Divine Favor now reduces the mana cost of Holy Light by 30% (was 10%) in
                           PvP combat.
                         + Fixed an issue that caused Denounce to not scale its damage with level or
                           with buffs such as Avenging Wrath. This is about a 90% increase to its
@@ -208,7 +208,7 @@ PatchNotesDelivered_Notes_1205 = {
                           pressure from Shaman DPS specializations.
                         + Bloodlust and Heroism from Shamanism now increases haste by 15% (was 20%)
                           in PvP.
-                        + Resolved an issue causing Malestrom Weapon spenders from Thorim’s
+                        + Resolved an issue causing Maelstrom Weapon spenders from Thorim’s
                           Invocation during Doom Winds to deal more damage than intended.
                 • Warlock
                     > Affliction
