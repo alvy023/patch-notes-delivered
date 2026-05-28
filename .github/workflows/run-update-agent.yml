@@ -17,8 +17,8 @@ on:
         default: 'false'
 
   # Scheduled trigger - runs daily at 1400 UTC -> 10 AM EST
-  schedule:
-    - cron: '0 14 * * *'
+  # schedule:
+  #   - cron: '0 14 * * *'
 
 permissions:
   contents: write
