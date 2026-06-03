@@ -14,15 +14,15 @@ PatchNotesDelivered_Notes_1205 = {
     gameChangesHotfixes = [[
         June 2, 2026
 
-        Classes
-            • Death Knight
-                > Unholy
-                    + Resolved an issue causing Unholy Aura and Forbidden Ritual to be canceled
-                      earlier than expected.
+            Classes
+                • Death Knight
+                    > Unholy
+                        + Resolved an issue causing Unholy Aura and Forbidden Ritual to be canceled
+                          earlier than expected.
 
-        Items
-            • Fixed an issue with the Darkmoon Dominion: Blood trinket proccing for
-              multiple stats if they're all equally the lowest stat.
+            Items
+                • Fixed an issue with the Darkmoon Dominion: Blood trinket proccing for
+                  multiple stats if they're all equally the lowest stat.
 
         May 26, 2026
 
