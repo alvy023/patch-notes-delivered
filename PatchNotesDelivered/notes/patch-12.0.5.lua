@@ -10,8 +10,24 @@
 PatchNotesDelivered_Notes_1205 = {
     version = "12.0.5",
     build = "67823",
-    hotfix = 17,
+    hotfix = 18,
     gameChangesHotfixes = [[
+        June 3, 2026
+
+    Hotfixes
+        • Reduced the gold costs of Transmog outfit and slots by 90%.
+            > Developers’ notes: Patch 5.5.4 was released with these gold costs
+              unintentionally set too high.
+        • Removed Prideful Gladiator gear that was temporarily, unintentionally
+          rewarded from World Bosses.
+        • Fixed a bug causing Battle Fatigue to work incorrectly in PvP.
+        • Fixed a bug preventing Warforged Seals from having a rolling weekly cap as
+          expected.
+        • Fixed a bug preventing players from mounting Spectral Gryphon or Spectral
+          Wind Rider as intended.
+        • Fixed a bug that briefly prevented players on some realms from buying
+          replacement cloaks or starting legendary quests or campaign quests.
+
         June 2, 2026
 
             Classes
