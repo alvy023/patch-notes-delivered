@@ -10,8 +10,12 @@
 PatchNotesDelivered_Notes_1205 = {
     version = "12.0.5",
     build = "67823",
-    hotfix = 17,
+    hotfix = 18,
     gameChangesHotfixes = [[
+        June 5, 2026
+
+June 3, 2026
+
         June 2, 2026
 
             Classes
