@@ -10,8 +10,24 @@
 PatchNotesDelivered_Notes_1205 = {
     version = "12.0.5",
     build = "67823",
-    hotfix = 17,
+    hotfix = 18,
     gameChangesHotfixes = [[
+        June 9, 2026
+
+            Delves
+                • Valeera will no longer ignore Vile Cursed Toads when they attack you in a delve.
+
+            Dungeons
+                • Darkflame Cleft
+                    > Fixed an issue that could prevent the candle cart from progressing.
+
+            Quests
+                • Fixed an issue where the quest “Overcoming the Unknown: Rage-Riddled Drifter”
+                  was not properly appearing for players.
+                • Fixed an issue that could prevent some characters from being able to complete
+                  "Lost Legends". Affected characters will need to abandon the quest "Lost
+                  Legends" and pick it back up from Zur'Ashar Kassameh in The Den in Harandar.
+
         June 2, 2026
 
             Classes
