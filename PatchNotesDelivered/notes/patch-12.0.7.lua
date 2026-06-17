@@ -10,38 +10,12 @@
 PatchNotesDelivered_Notes_1207 = {
     version = "12.0.7",
     build = "68235",
-    hotfix = 1,
+    hotfix = 0,
     gameChangesHotfixes = [[
-        June 16, 2025
-
-    Classes
-        • Paladin
-            > Fixed an issue where Empyreal Ward could cause Lay on Hands macros to not function after swapping specs.
-
-    Player Versus Player
-        • Solo Shuffle and Battleground Blitz cutoffs for Galactic Legend, Galactic Marshal, and Galactic Warlord have been updated to the top 8 players for each specialization.
-            > Developers' notes: In order to better balance the Galactic Legend, Galactic Marshal, and Galactic Warlord awards across specializations, we are updating the cutoffs in Solo Shuffle and Battleground Blitz to guarantee these rewards for the top 8 players for each specialization. This should prevent the situation of some specializations having only a few Legend, Marshal, or Warlord titles and allows more players to gain these rewards.
-        • Evoker
-            > Fixed an issue where Precognition would trigger incorrectly if Oppressing Roar was active on the target.
-
-    Raids
-        • MARCH ON QUEL'DANAS
-            > Midnight Falls
-                + Glimmering damage reduced by 20% on Mythic difficulty.
-                + Reduced the spread of Midnight Crystals and Dusk Crystals.
-                + Starsplinter can no longer target a player twice at the same time.
-                + Criticality cast time increased to 4 seconds (was 3 seconds).
-                + Dawn Crystals now begin pulsing Radiance after 6 seconds on Heroic and Mythic difficulties (was 5 seconds).
-                + Dark Constellation cast time increased to 3 seconds on Mythic difficulty (was 2.5 seconds).
-                + Dark Constellations now spawn further from Light Siphons.
-                + Radiance damage reduced by 50% on Heroic difficulty.
-                + Tears of L'ura now spawn 1 soak on Heroic difficulty (was 2).
-                + Resonance no longer triggers Tears of L'ura.
-
         Surely, there can't be issues with a one-boss instance?
     ]],
     gameChangesPatch = [[
-        June 11, 2025
+        June 16, 2026
 
         Take the next step in thwarting the forces of the Void; hunt down their leaders in two new areas and uncover new sources of 
         power. Players also face a new single-boss raid in Sporefall and Turbulent Timeways returns with Dragonflight dungeons with a 
@@ -120,6 +94,11 @@ PatchNotesDelivered_Notes_1207 = {
 
             • Fixed an issue where certain hit sound effects were not playing for male Orc and Mag'har Orc Warriors.
 
+        CLASSES
+
+            • Paladin
+                > Fixed an issue where Empyreal Ward could cause Lay on Hands macros to not function after swapping specs.
+
         HOUSING
 
             • Lighting is now available outdoors! You can now add lights to your plot. Lighting Decor will have certain restraints outdoors 
@@ -150,6 +129,17 @@ PatchNotesDelivered_Notes_1207 = {
             • Mothkeeper Wew'tam now has dialogue options explaining what rewards she gives for collecting different amounts of moths.
             • Added a display bar above Mothkeeper Wew'tam to show your collection progress.
 
+        PLAYER VS PLAYER
+
+            • Solo Shuffle and Battleground Blitz cutoffs for Galactic Legend, Galactic Marshal, and Galactic Warlord have been updated to 
+              the top 8 players for each specialization.
+                > Developers' notes: In order to better balance the Galactic Legend, Galactic Marshal, and Galactic Warlord awards across 
+                  specializations, we are updating the cutoffs in Solo Shuffle and Battleground Blitz to guarantee these rewards for the 
+                  top 8 players for each specialization. This should prevent the situation of some specializations having only a few 
+                  Legend, Marshal, or Warlord titles and allows more players to gain these rewards.
+            • Evoker
+                > Fixed an issue where Precognition would trigger incorrectly if Oppressing Roar was active on the target.
+        
         PREY
 
             • Added Big Prey Hunter (Season 1) Feat of Strength for completing the Prey Journey in Season 1.
@@ -158,6 +148,21 @@ PatchNotesDelivered_Notes_1207 = {
 
             • Significantly increased the amount of experience earned from completing the following types of Midnight quests: first time 
               delves (Delver's Call), Midnight dungeon quests, Prey, and weekly Renown activities.
+
+        RAIDS
+
+            • MARCH ON QUEL'DANAS
+                > Midnight Falls
+                    + Glimmering damage reduced by 20% on Mythic difficulty.
+                    + Reduced the spread of Midnight Crystals and Dusk Crystals.
+                    + Starsplinter can no longer target a player twice at the same time.
+                    + Criticality cast time increased to 4 seconds (was 3 seconds).
+                    + Dawn Crystals now begin pulsing Radiance after 6 seconds on Heroic and Mythic difficulties (was 5 seconds).
+                    + Dark Constellation cast time increased to 3 seconds on Mythic difficulty (was 2.5 seconds).
+                    + Dark Constellations now spawn further from Light Siphons.
+                    + Radiance damage reduced by 50% on Heroic difficulty.
+                    + Tears of L'ura now spawn 1 soak on Heroic difficulty (was 2).
+                    + Resonance no longer triggers Tears of L'ura.
 
         RITUAL SITES AND VOID ASSAULTS
 
