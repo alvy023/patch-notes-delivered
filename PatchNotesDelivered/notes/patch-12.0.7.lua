@@ -9,8 +9,8 @@
 --- Max note length [140] ------------------------------------------------------------------------------------------------------------------
 PatchNotesDelivered_Notes_1207 = {
     version = "12.0.7",
-    build = "68235",
-    hotfix = 0,
+    build = "68256",
+    hotfix = 1,
     gameChangesHotfixes = [[
         Surely, there can't be issues with a one-boss instance?
     ]],
