@@ -9,9 +9,69 @@
 --- Max note length [140] ------------------------------------------------------------------------------------------------------------------
 PatchNotesDelivered_Notes_1207 = {
     version = "12.0.7",
-    build = "68235",
-    hotfix = 0,
+    build = "68275",
+    hotfix = 1,
     gameChangesHotfixes = [[
+        June 23, 2026
+
+    Items
+        • Rotmire's Sporeheart once again triggers from Leech healing.
+    Lorewalking
+        • During Loa Lorewalking (and Darkspear Heritage), Lukou's portals will now allow transport while in combat.
+    Midsummer Fire Festival
+        • “Reignite the Skies: Orgrimmar” and “Reignite the Skies: Stormwind” Midsummer dailies unlocks are now account-wide.
+        • Fixed an issue that allowed the contents Satchel of Chilled Goods to reroll each time it was opened.
+        • Sun Festival Painted Roc’s chance to drop in Satchel of Chilled Goods has been doubled for the first drop of the day on the account. The drop rate from the first satchel will continue to increase each day until it is obtained.
+    Player versus Player
+        • Fixed an issue where some important effects and major defensives were not displaying on enemy player nameplates.
+    Professions
+        • Fixed an issue where Empowered Mulch would result in no herbs being gathered.
+    Quests
+        • The weekly offerings from Lady Liadrin should once again offer four choices to players.
+    Val
+        • Adjustments made to the "Until it is Done" world quest, improving quest credit earned and increasing creature respawn rates.
+
+June 22, 2026
+
+    Delves
+        • The Excavation Site 9 and Sidestreet Sluice delves should be reliably displaying the correct names again.
+    Items
+        • Fixed an issue causing the Draconic Nullcape cloak to use an unintended appearance. This item now contributes towards the Luminant Verdict's Vestments transmog sets.
+    Naigtal
+        • More bouncy mushrooms have been added to help with some hard-to-reach locations.
+        • The Spore Buoy's slowfall effect now works on mounted players.
+    Omnium Folio
+        • Fixed an issue with Rune of Void-Tainted Shell’s tooltip.
+    Quests
+        • “Defying Gravity” should once again function with the Lair of Predaxas restored.
+    Ritual Sites
+        • Players can now pick up Lady Darkglen's new quest for Tier 6 Ritual Sites in the Silvermoon hub in addition to outside the active Ritual Site.
+
+June 18, 2026
+
+    Items
+        • Fixed an issue that could prevent Rotmire's Sporeheart’s effect from triggering from certain sources of healing.
+    Lorewalking
+        • Rewards from the Loa Lorewalking campaign should now scale all the way to level 90.
+    Naigtal
+        • Rares are now enveloped in shadow for the first 3 minutes after spawning and cannot be attacked, giving players additional time to reach the encounter.
+    Player versus Player
+        • Resolved an issue that could cause Horde to lose reinforcements instead of Alliance when they capture the Sparring Grounds in Slayer's Rise.
+
+June 17, 2026
+
+    Abundance
+        • Fixed an issue where players could not begin Abundance in Voidstorm. All players who lost Shards of Dundun due to this issue will be refunded with Unalloyed Abundance in an upcoming hotfix.
+    Island Expeditions
+        • Island Expeditions should be queueing correctly once again.
+    Items
+        • Fixed an issue where the Void-Touched Torch had lower Intellect than intended.
+    Lorewalking
+        • Fixed an issue where the initial objective conversation for “The Prince Who Would Be King” would not complete.
+    Naigtal
+        • The "Bouncy Mushrooms," "Aerospores", and "The Grappler" unlocks in Naigtal are now account wide.
+        • Fixed an issue that prevented Nexus-Captain Leth'ir from dropping the quest item for “Knocking Off the Top (Heroic).” Characters that encountered the issue can earn their emblem from another Heroic kill of Nexus-Captain Leth'ir or from a wrapper quest they have not completed.
+
         Surely, there can't be issues with a one-boss instance?
     ]],
     gameChangesPatch = [[
