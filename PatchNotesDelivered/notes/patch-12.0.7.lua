@@ -10,8 +10,38 @@
 PatchNotesDelivered_Notes_1207 = {
     version = "12.0.7",
     build = "68275",
-    hotfix = 5,
+    hotfix = 6,
     gameChangesHotfixes = [[
+        June 25, 2026
+
+            Delves
+                • When tank Valeera is accompanied by a healer, she now takes significantly less damage, scaling from 45% less damage at 
+                  Tier 1 to 29% less damage at Tier 11.
+            Dungeons and Raids
+                • Sporefall
+                    > Resolved an issue causing players to be able to interact with the door to Funggor Hollow.
+            Naigtal
+                • Players will no longer lose their "Lighthook Grapple" ability when they log out of Naigtal.
+            Omnium Folio
+                • Starting with Week 2, the weekly Seeking Knowledge quest prerequisites are now account-wide. Characters must still 
+                  complete the Sunstrider Omnium unlock questline to access the weekly quests on alts.
+            Quests
+                • All of the quests required for the Omnium Folio and to unlock and enter Val or Naigtal are now marked as Important quests.
+                • Fixed a bug preventing new Midsummer quests from rewarding XP.
+            Val
+                • Gravity Shackles affix damage reduced by 50%.
+                • Adjusted the World Quest "Dissent and Divide".
+                    > Increased the chances of a favorable gossip reaction even when selecting inappropriate gossip options for the target.
+                    > Increased base spawn thresholds for conversation targets.
+                    > Added additional Veilcasters around the quest area.
+                    > Added partial credit for killing gossip targets.
+                    > Added a movement bonus to the Domanaar disguise.
+                • Adjusted the World Quest “Aberration Liberation”.
+                    > Reduced the quest objective count to 10 (was 12).
+                    > Kills now give credit to the whole party (was the interacting player).
+                    > Improved respawning when many players are present.
+                • Spirit Healers now correctly spawn in Val.
+
         June 24, 2026
 
             Classes
