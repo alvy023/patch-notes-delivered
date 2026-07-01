@@ -65,7 +65,7 @@ PatchNotesDelivered_Notes_1207 = {
                           tank specialization in PvP.
                         + Wild Guardian now echoes at 50% effectiveness (was 200%) in PvP combat.
                 • Evoker
-                    + Fixed an issue where the Fire Breath Infuser during Evoker's introductory quests would not reset the cooldown of
+                    > Fixed an issue where the Fire Breath Infuser during Evoker's introductory quests would not reset the cooldown of
                       Fire Breath.
                     > Augmentation
                         + All damage increased by 8% in PvP combat.
