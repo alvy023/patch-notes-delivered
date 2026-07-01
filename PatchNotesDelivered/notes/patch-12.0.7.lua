@@ -9,9 +9,145 @@
 --- Max note length [140] ------------------------------------------------------------------------------------------------------------------
 PatchNotesDelivered_Notes_1207 = {
     version = "12.0.7",
-    build = "68275",
-    hotfix = 6,
+    build = "68367",
+    hotfix = 7,
     gameChangesHotfixes = [[
+        June 30, 2026
+
+            Classes
+                • Druid
+                    > Balance
+                        + All damage increased by 4%.
+                    > Feral
+                        + Developers’ notes: Feral is performing well in M+, but their overall damage in raid is low. These changes shore up
+                          their single-target power and total raid damage.
+                        + All damage increased by 3%. Does not apply to PvP combat.
+                        + Melee auto-attack damage increased by 15%.
+                        + Rip damage increased by 5%. Does not apply to PvP combat.
+                        + Rampant Ferocity damage reduced by 15%. Does not apply to PvP combat.
+                    > Restoration
+                        + Developers’ notes: Restoration’s damage compared to other healers is lower than we’d like. We’re rebalancing
+                          some of Restoration Druid’s damage out of Thrash and into the rest of the kit.
+                        + All damage increased by 15%.
+                        + Bear Form Thrash damage reduced by 25%.
+                • Evoker
+                    > Devastation
+                        + All ability damage increased by 3%.
+                • Mage
+                    > Arcane
+                        + All ability damage increased by 3%.
+                • Priest
+                    > Holy
+                        + Holy Word: Serenity healing increased by 20%.
+                        + Holy Word: Sanctify healing increased by 20%.
+                • Shaman
+                    > Elemental
+                        + Corrected an issue where Purging Flames could cause Lava Burst to generate less Maelstrom than intended.
+                    > Restoration
+                        + All healing increased by 4%. This does not apply to PvP combat.
+
+            Player versus Player
+                • Demon Hunter
+                    > Devourer
+                        + Developers’ notes: Devourer Demon Hunters have been performing above expectations, especially in defensive
+                          metrics, so self-healing is being reduced.
+                        + Shattered Souls now heals for 0.5% of maximum Health per Soul Fragment consumed (was 1%) in PvP combat.
+                • Death Knight
+                    > Unholy
+                        + Developers’ notes: Unholy’s burst damage is overwhelming too frequently, so contributing abilities are
+                          receiving a reduction with some of that overall damage moving into the steadier output from Dread Plague.
+                        + Putrify damage reduced by 15% in PvP combat.
+                        + Soul Reaper damage reduced by 15% in PvP combat.
+                        + Dread Plague damage increased by 15% in PvP combat.
+                • Druid
+                    > Guardian
+                        + Developers’ notes: Guardians’ burst potential with their apex talent has been higher than we would like for a
+                          tank specialization in PvP.
+                        + Wild Guardian now echoes at 50% effectiveness (was 200%) in PvP combat.
+                • Evoker
+                    > Fixed an issue where the Fire Breath Infuser during Evoker's introductory quests would not reset the cooldown of
+                      Fire Breath.
+                    > Augmentation
+                        + All damage increased by 8% in PvP combat.
+                    > Preservation
+                        + Developers’ notes: Preservation Evoker is slightly overperforming in PvP, so we’re making one additional
+                          targeted nerf to them in this pass. Temporal Burst makes it hard for enemies to react to important casts like
+                          Sleep Walk, so we’re reducing its effectiveness.
+                        + Temporal Burst increases haste, movement speed, and cooldown recovery rate by 15% in PvP combat (was 30%).
+                • Hunter
+                    > Marksmanship
+                        + Double tap now causes Aimed Shot to fire at 16% effectiveness or your next Rapid Fire to fire 16% additional
+                          shots (was 40%).
+                        + Developers’ notes: We’re reducing Double Shot’s burst potential to allow enemy players to have more time to
+                          react to the Marksmanship Hunter’s incoming damage.
+                    > Survival
+                        + All damage increased by 3% in PvP Combat.
+                • Mage
+                    > Frost
+                        + Developers’ notes: We are redistributing some of Frost Mage’s damage out of Ray of Frost and into the rest of
+                          its kit with the intention of decreasing its burst capabilities and improving its steady-state pressure.
+                        + Ray of Frost damage decreased by 20% in PvP combat.
+                        + All damage increased 3% in PvP combat.
+                • Paladin
+                    > Protection
+                        + Developers’ notes: Templars’ burst capabilities have made Protection Paladin more of an offensive threat than
+                          we would like them to be in PvP.
+                        + Divine Exaction now casts Divine Toll again at 25% effectiveness (was 75%) in PvP combat.
+                        + Hammer of Light damage decreased by 30% in PvP combat.
+                    > Retribution
+                        + Developers’ notes: Retribution has been performing better than expected, so we are applying a small damage
+                          reduction.
+                        + All ability damage reduced by 3% in PvP combat.
+                • Priest
+                    > Discipline
+                        + Developers’ notes: Voidweaver Priests are dealing too much damage in PvP. We’re reducing some of that damage
+                          and increasing their healing to compensate.
+                        + Expiation deals damage equal to 200% of the of the amount consumed from Shadow Word: Pain in PvP combat (was
+                          300%).
+                        + Inescapable Torment damage reduced by 25% in PvP combat.
+                        + Shadow Word: Pain damage reduced by 10% in PvP combat.
+                        + Voidweaver: Atonement healing increased by 15%.
+                        + Oracle: Preventive Measures increases damage of Penance, Smite, Holy Nova by 20% (was 15%).
+                        + Ultimate Penitence healing increased by 25%.
+                    > Shadow
+                        + Developers’ notes: In addition to a needed boost of overall damage, Shadow Word: Death is also receiving a buff
+                          intended to make its damage worthwhile when striking enemies in its low-health threshold.
+                        + All ability damage increased by 4% in PvP combat.
+                        + Shadow Word: Death damage increased by 45% in PvP combat.
+                • Shaman
+                    > Restoration
+                        + Developers’ notes: Farseer Restoration Shaman has been behind in performance in PvP compared to Totemic, we’re
+                          increasing the throughput of heals and effects provided by Farseer talents and their Ancestors to help close
+                          the gap.
+                        + Farseer: Maelstrom Supremacy increases healing of affected spells in PvP by 20% (was 15%).
+                        + Farseer: Hydrobubble’s effectiveness is no longer reduced in PvP (was a 20% reduction).
+                        + Farseer: Heals cast by Call of the Ancestors increased in PvP by 30% (was 20%).
+                • Warrior
+                    > Arms, Protection
+                        + Developers’ notes: We’re slightly reducing Colossus’ ability to tank damage to make them more of a viable kill
+                          target.
+                        + Mountain of Muscle and Scars reduces damage taken by 3% in PvP combat (was 5%).
+                • Warlock
+                    > Affliction
+                        + All damage increased by 3% in PvP combat.
+                        + Consuming Nightfall with Seed of Corruption on a target already afflicted with Seed of Corruption will cause
+                          the preexisting Seed of Corruption to detonate.
+                    > Demonology
+                        + Developers’ notes: Demonology damage while freecasting has not been as effective as we would like, so we’re
+                          targeting a few adjustments to Shadow Bolt and Demonbolt with the intention of increasing their ability to
+                          punish enemies for allowing them to chain casts together.
+                        + Shadow Bolt damage increased by 200% in PvP combat.
+                        + Demonbolt damage increased by 30% in PvP combat.
+                    > Destruction
+                        + Incinerate damage increased by 50% in PvP combat.
+
+            Dungeons and Raids
+                • Darkheart Thicket
+                    > Players must now defeat Dresaron to complete the dungeon on Timewalking difficulty.
+
+            Naigtal
+                • Players can no longer be attacked while on Transport Skiffs in Naigtal.
+
         June 25, 2026
 
             Delves
