@@ -9,9 +9,36 @@
 --- Max note length [140] ------------------------------------------------------------------------------------------------------------------
 PatchNotesDelivered_Notes_1207 = {
     version = "12.0.7",
-    build = "68367",
-    hotfix = 7,
+    build = "68453",
+    hotfix = 8,
     gameChangesHotfixes = [[
+        July 7, 2026
+
+            Dungeons and Raids
+                • The Voidspire
+                    > Addressed an issue where the Lightblinded Vanguard could respawn after a
+                      soft reset after using the raid skip.
+
+            Housing
+                • Players who were not properly awarded the Daylight Circle Room or Evening
+                  Circle Room when they reached House Levels 3 or 5 should now have access to
+                  those rooms.
+
+            Items
+                • Fixed an issue with Mycomancer's Hearthspore where multiple Hearthstone
+                  charges could be consumed for Human characters.
+
+            Pets
+                • Thrillbot 9000 and Chillbot 9000 are now unique.
+
+            Quests
+                • Nelthius Shadestone's gravestones should be more reliably interactable for 
+                  “A Grave Concern”.
+                • Fixed an issue with “A Humble Servant” where objectives were not giving
+                  enough credit.
+                • Fixed a bug where the Delves Nemesis briefly did not drop a Magical
+                  Primessence for the “Seeking Knowledge Week 4 of 5: Magical Primessence”.
+
         June 30, 2026
 
             Classes
