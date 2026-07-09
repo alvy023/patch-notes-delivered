@@ -10,7 +10,7 @@ and this project adheres to a specific versioning schema: `A.B.C` where:
 
 ## [1.12.66] - 2026-07-09
 ### Added
-- Added 12.0.5 hotfix notes for July 7, 2026
+- Added 12.0.7 hotfix notes for July 7, 2026
 ### Changed
 - Updated TOC to 1.12.66
 
