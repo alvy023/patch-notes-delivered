@@ -14,10 +14,10 @@ PatchNotesDelivered_Notes_1207 = {
     gameChangesHotfixes = [[
         July 7, 2026
 
-            Dungeons and Raids
-                • The Voidspire
-                    > Addressed an issue where the Lightblinded Vanguard could respawn after a
-                      soft reset after using the raid skip.
+    Dungeons and Raids
+        • The Voidspire
+            > Addressed an issue where the Lightblinded Vanguard could respawn after a
+              soft reset after using the raid skip.
 
             Housing
                 • Players who were not properly awarded the Daylight Circle Room or Evening
