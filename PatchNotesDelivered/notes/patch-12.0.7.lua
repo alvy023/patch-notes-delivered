@@ -14,20 +14,20 @@ PatchNotesDelivered_Notes_1207 = {
     gameChangesHotfixes = [[
         July 14, 2026
 
-    Player versus Player
-        • Rune of Lingering damage-over-time damage no longer interrupts flag captures
-          in PVP.
+            Player versus Player
+                • Rune of Lingering damage-over-time damage no longer interrupts flag captures
+                  in PVP.
 
-    Quests
-        • Fixed a bug preventing the quest item for “Maisara Caverns: Master of Souls”
-          from dropping in Mythic difficulty.
-        • Grand Magister Rommath has now provided a portal to the Magister's Terrace
-          next to the Magister's Missive for all those seeking knowledge through the
-          Omnium Folio Weekly Quests.
+            Quests
+                • Fixed a bug preventing the quest item for “Maisara Caverns: Master of Souls”
+                  from dropping in Mythic difficulty.
+                • Grand Magister Rommath has now provided a portal to the Magister's Terrace
+                  next to the Magister's Missive for all those seeking knowledge through the
+                  Omnium Folio Weekly Quests.
 
-    Spells
-        • Lighthook Grapple will now only appear as an extra action button for
-          player-characters who are in Naigtal.
+            Spells
+                • Lighthook Grapple will now only appear as an extra action button for
+                  player-characters who are in Naigtal.
 
         July 7, 2026
 
