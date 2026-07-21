@@ -10,7 +10,7 @@
 PatchNotesDelivered_Notes_1207 = {
     version = "12.0.7",
     build = "68453",
-    hotfix = 9,
+    hotfix = 10,
     gameChangesHotfixes = [[
         July 14, 2026
 
