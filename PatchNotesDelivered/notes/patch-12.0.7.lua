@@ -10,8 +10,54 @@
 PatchNotesDelivered_Notes_1207 = {
     version = "12.0.7",
     build = "68453",
-    hotfix = 9,
+    hotfix = 10,
     gameChangesHotfixes = [[
+        July 21, 2026
+
+            Decor Duel
+                • The last 30 seconds of a Decor Duel match no longer auto-reveals remaining
+                  hiders.
+                • The rate of energy increase for seekers is slowed by 20%.
+                • Hiders no longer attract flies.
+                • Illusionary Coins rewards increased by 100%.
+
+            Player versus Player
+                • Demon Hunter
+                    > Developers’ notes: Both Devourer and Havoc Demon Hunters have been more
+                      difficult to land kills against than intended. We’re reducing the potency
+                      of shared mitigation effects that are contributing to their survival.
+                    > Demon Muzzle now reduces magic damage taken by 5% in PvP combat (was 15%).
+                    > Glimpse now reduces damage taken by 25% (was 35%) while airborne after
+                      using Vengeful Retreat.
+                • Monk
+                    > Mistweaver
+                        + Developers’ notes: We’re reducing Mistweavers’ ability to heal versus
+                          clumped targets in PvP since they’ve been outputting more healing than
+                          we’d like against pet classes.
+                        + Way of the Crane now transfers 100% of Spinning Crane Kick’s damage into
+                          healing in PvP Combat (was 340%).
+                • Priest
+                    > Discipline
+                        + Healing of all spells increased by 3% in PvP combat.
+                    > Holy
+                        + Developers’ notes: We’re increasing overall healing and providing an
+                          opportunity for Holy Priests to contribute offensively to secure kills
+                          with their team.
+                        + Holy Fire direct damage increased by 15%.
+                        + Holy Fire periodic damage increased by 27%.
+                        + All healing increased by 3%.
+                • Shaman
+                    > Restoration
+                        + Developers’ notes: Restoration Shaman healing performance has been
+                          slightly behind other healers in PvP, so we’re targeting an increase to
+                          their instant healing capabilities.
+                        + Riptide healing increased by 15% in PvP combat.
+
+            Quests
+                • Dawnwell questgivers should now correctly be in place to turn in the quest
+                  "From Darkness, Light" and should stick around until the player has picked up
+                  “Hagar’s Invitation”.
+
         July 14, 2026
 
             Player versus Player
