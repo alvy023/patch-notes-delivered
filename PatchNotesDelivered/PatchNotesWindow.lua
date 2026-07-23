@@ -56,12 +56,30 @@ local function SetTitleFont(self, font, size, flags)
     self.frame:GetTitleText():SetFont(font, size, flags)
 end
 
+--- Description: Compacts the header for small windows: hides the portrait icon and
+--- reclaims the vertical space Blizzard reserves for it, since that reservation is a
+--- fixed offset baked into the template regardless of whether the portrait is shown.
+--- @param: topOffset - header height in pixels to keep (title bar only, no portrait).
+--- @return:
+local function SetCompactHeader(self, topOffset)
+    ButtonFrameTemplate_HidePortrait(self.frame)
+    self.frame.Inset:ClearAllPoints()
+    self.frame.Inset:SetPoint("TOPLEFT", self.frame, "TOPLEFT", 4, -topOffset)
+    self.frame.Inset:SetPoint("BOTTOMRIGHT", self.frame, "BOTTOMRIGHT", -6, 4)
+    self.content:ClearAllPoints()
+    self.content:SetPoint("TOPLEFT", self.frame.Inset, "TOPLEFT", 4, -4)
+    self.content:SetPoint("BOTTOMRIGHT", self.frame.Inset, "BOTTOMRIGHT", -4, 4)
+end
+
 --- Description: Adds a button to the button bar.
 --- @param: button - The button to add.
 --- @return:
 local function AddButtonToBar(self, button)
     local numButtons = #self.buttonBar.buttons
     button.frame:SetParent(self.buttonBar)
+    -- Reparenting alone doesn't guarantee the level clears the NineSlice border (500);
+    -- set it explicitly relative to the already-elevated buttonBar.
+    button.frame:SetFrameLevel(self.buttonBar:GetFrameLevel() + 1)
     button.frame:SetPoint("RIGHT", self.buttonBar, "RIGHT", -numButtons * 26, 0)
     button.frame:Show()
     table.insert(self.buttonBar.buttons, button)
@@ -116,8 +134,11 @@ local function Constructor()
     content:SetPoint("TOPLEFT", frame.Inset, "TOPLEFT", 4, -4)
     content:SetPoint("BOTTOMRIGHT", frame.Inset, "BOTTOMRIGHT", -4, 4)
 
-    --- Create the button bar container, docked to the left of the native close button
+    --- Create the button bar container, docked to the left of the native close button.
+    --- Frame level must clear the template's NineSlice border (500) and match the
+    --- close button's level (510), or docked controls render invisibly underneath it.
     local buttonBar = CreateFrame("Frame", nil, frame)
+    buttonBar:SetFrameLevel(frame.CloseButton:GetFrameLevel())
     buttonBar:SetPoint("RIGHT", frame.CloseButton, "LEFT", -6, 0)
     buttonBar:SetSize(100, 24)
     buttonBar.buttons = {}
@@ -136,6 +157,7 @@ local function Constructor()
         Show = Show,
         AddButton = AddButtonToBar,
         SetProportionalSize = SetProportionalSize,
+        SetCompactHeader = SetCompactHeader,
     }
 
     AceGUI:RegisterAsContainer(widget)

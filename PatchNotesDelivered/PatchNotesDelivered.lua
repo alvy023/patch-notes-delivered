@@ -164,6 +164,7 @@ end
 function PatchNotesDelivered:ShowPatchNotesPopup()
     local popup = AceGUI:Create("Window-PND")
     popup.frame:SetSize(380, 150)
+    popup:SetCompactHeader(30)
     popup:SetTitle("Patch Notes Delivered")
     popup:SetTitleFont("Fonts\\FRIZQT__.TTF", 16, "OUTLINE")
 
@@ -180,16 +181,20 @@ function PatchNotesDelivered:ShowPatchNotesPopup()
     buttonBar:SetFullWidth(true)
     popup:AddChild(buttonBar)
 
-    -- Spacer
+    -- Spacer: centers the inner button group by measuring the actual available width
+    -- rather than assuming one, so it stays centered if the popup size ever changes.
+    local innerWidth = 120 + 16 + 120 -- showBtn + midSpacer + dismissBtn
+    local availableWidth = popup.content:GetWidth()
+    local leftPad = math.max(0, (availableWidth - innerWidth) / 2)
     local spacer = AceGUI:Create("Label")
     spacer:SetText("")
-    spacer:SetWidth(32)
+    spacer:SetWidth(leftPad)
     buttonBar:AddChild(spacer)
 
     -- Inner group
     local inner = AceGUI:Create("SimpleGroup")
     inner:SetLayout("Flow")
-    inner:SetWidth(260)
+    inner:SetWidth(innerWidth)
     inner:SetFullWidth(false)
 
     -- Show Notes button
@@ -403,3 +408,4 @@ end
 -- Slash Commands
 PatchNotesDelivered:RegisterChatCommand("pnd", "ShowPatchNotes")
 PatchNotesDelivered:RegisterChatCommand("pnd-mini", "ToggleMinimapButton")
+PatchNotesDelivered:RegisterChatCommand("pnd-popup", "ShowPatchNotesPopup")
