@@ -56,8 +56,6 @@ function PatchNotesDelivered:OnInitialize()
             minimap = { hide = false },
             addonCompartment = { hide = false },
             showOnUpdate = true,
-            frameWidth = 1000,
-            frameHeight = 700,
         }
     }, true)
     -- Register minimap button
@@ -111,16 +109,6 @@ function PatchNotesDelivered_OnAddonCompartmentLeave()
 end
 
 -- Functions
---- Description: Save the size of the patch notes frame
---- @param: self (PatchNotesDelivered instance)
---- @param: width (number)
---- @param: height (number)
-local function SaveFrameSize(self, width, height)
-    self.db.profile.frameWidth = width
-    self.db.profile.frameHeight = height
-end
-
-
 --- Description: Creates a label and adds it to the scroll frame.
 --- @param: scroll (AceGUI ScrollFrame)
 --- @param: text (string)
@@ -175,11 +163,9 @@ end
 --- @return:
 function PatchNotesDelivered:ShowPatchNotesPopup()
     local popup = AceGUI:Create("Window-PND")
-    popup.frame:SetSize(350, 130)
+    popup.frame:SetSize(380, 150)
     popup:SetTitle("Patch Notes Delivered")
     popup:SetTitleFont("Fonts\\FRIZQT__.TTF", 16, "OUTLINE")
-    popup:SetTitleAlignment("CENTER")
-    popup:EnableResize(false)
 
     -- Message label
     local label = AceGUI:Create("Label")
@@ -248,32 +234,12 @@ function PatchNotesDelivered:ShowPatchNotes()
     end
 
     local pnd = AceGUI:Create("Window-PND")
-    local width = self.db.profile.frameWidth or 1000
-    local height = self.db.profile.frameHeight or 700
-    pnd.frame:SetSize(width, height)
-
-    -- Save size on resize
-    pnd.frame:HookScript("OnSizeChanged", function(frame)
-        SaveFrameSize(self, frame:GetWidth(), frame:GetHeight())
-    end)
+    pnd:SetProportionalSize(0.62, 0.68, 1000, 700, 1500, 1000)
 
     -- Set the title area
     pnd:SetTitle("|cff00B4FFThe Weekly Mrrgl, |r|cffffffff" ..
         PATCH_NOTES.version .. "." .. PATCH_NOTES.build .. "." .. PATCH_NOTES.hotfix .. "|r")
     pnd:SetTitleFont("Fonts\\FRIZQT__.TTF", 16, "OUTLINE")
-    pnd:SetTitleAlignment("CENTER")
-
-    -- Reset Button
-    local resetButton = AceGUI:Create("IconButton-PND")
-    resetButton:SetImage("Interface\\AddOns\\PatchNotesDelivered\\assets\\CustomIcon-White-Reset.tga")
-    resetButton:SetTooltip("Reset Size")
-    resetButton:SetSize(16, 16)
-    resetButton:SetCallback("OnClick", function()
-        local defaultWidth, defaultHeight = 1000, 700
-        PatchNotesFrame.frame:SetSize(defaultWidth, defaultHeight)
-        SaveFrameSize(self, defaultWidth, defaultHeight)
-    end)
-    pnd:AddButton(resetButton)
 
     -- Scroll Frame
     local scroll = AceGUI:Create("ScrollFrame")
@@ -345,7 +311,7 @@ function PatchNotesDelivered:ShowPatchNotes()
 
     -- Fix Dropdown Spacing
     if pnd.buttonBar and sectionDropdown.frame and versionDropdown.frame then
-        local rightPad = -54      -- gap from bar right edge
+        local rightPad = -4      -- gap from bar right edge
         local spacing = 8        -- extra space between controls
 
         -- rightmost (version)

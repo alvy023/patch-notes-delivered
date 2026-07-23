@@ -8,6 +8,17 @@ and this project adheres to a specific versioning schema: `A.B.C` where:
 - **B** (Game Major): Tracks the WoW Game’s Major version (e.g., 12 in 12.0.0).
 - **C** (Iteration): Increments on every release update (Minor, Patch, or Hotfix compatibility).
 
+## [Unreleased]
+### Changed
+- Reworked the patch notes window to use Blizzard's native `ButtonFrameTemplate` chrome
+  (portrait, title bar, and close button) instead of custom-drawn textures, for a
+  higher-resolution, in-theme look.
+- The window is now a fixed size (no longer user-resizable), sized proportionally to your
+  screen and UI scale so it stays consistent across different display setups.
+### Removed
+- Removed the manual resize handle and "Reset Size" button, since the window size is no
+  longer adjustable.
+
 ## [1.12.68] - 2026-07-22
 ### Added
 - Added 12.0.7 hotfix notes for July 21, 2026
