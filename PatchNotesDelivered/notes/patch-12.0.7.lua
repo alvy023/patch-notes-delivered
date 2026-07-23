@@ -9,8 +9,8 @@
 --- Max note length [140] ------------------------------------------------------------------------------------------------------------------
 PatchNotesDelivered_Notes_1207 = {
     version = "12.0.7",
-    build = "68453",
-    hotfix = 10,
+    build = "68887",
+    hotfix = 11,
     gameChangesHotfixes = [[
         July 21, 2026
 
