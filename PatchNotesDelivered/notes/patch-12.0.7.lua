@@ -9,9 +9,17 @@
 --- Max note length [140] ------------------------------------------------------------------------------------------------------------------
 PatchNotesDelivered_Notes_1207 = {
     version = "12.0.7",
-    build = "68453",
-    hotfix = 10,
+    build = "68887",
+    hotfix = 11,
     gameChangesHotfixes = [[
+        July 22, 2026
+
+    WoW
+        • Here you'll find a list of hotfixes that address various issues related to World of Warcraft: Midnight, Mists of Pandaria Classic,
+          Season of Discovery, Burning Crusade Classic, WoW Classic Era, and Hardcore. Some of the hotfixes below take effect the moment
+          they were implemented, while others may require scheduled realm restarts to go into effect. Please keep in mind that some
+          issues cannot be addressed without a client-side patch update. This list will be updated as additional hotfixes are applied.
+
         July 21, 2026
 
             Decor Duel
