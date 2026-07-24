@@ -6,9 +6,11 @@
 -- For more information, visit the project repository.
 
 --- Export global notes variable
---- Note text below is not hard-wrapped at 140 chars; the in-game window word-wraps it at
---- render time, so hard-wrapping here only wasted the wider window's width. Other notes/*.lua
---- files still use the 140-char convention pending the same cleanup.
+--- Note text below is hard-wrapped at ~190 chars (not 140) with a hanging indent on
+--- continuation lines, calibrated to the wider fixed window. In-game FontStrings don't
+--- preserve indentation on auto-wrapped text, so entries that exceed the window's width
+--- still need an explicit wrap to avoid rendering as an unindented, disconnected line.
+--- Other notes/*.lua files still use the 140-char convention pending the same cleanup.
 PatchNotesDelivered_Notes_1207 = {
     version = "12.0.7",
     build = "68453",
@@ -24,12 +26,14 @@ PatchNotesDelivered_Notes_1207 = {
 
             Player versus Player
                 • Demon Hunter
-                    > Developers’ notes: Both Devourer and Havoc Demon Hunters have been more difficult to land kills against than intended. We’re reducing the potency of shared mitigation effects that are contributing to their survival.
+                    > Developers’ notes: Both Devourer and Havoc Demon Hunters have been more difficult to land kills against than intended. We’re reducing the potency of shared mitigation
+                      effects that are contributing to their survival.
                     > Demon Muzzle now reduces magic damage taken by 5% in PvP combat (was 15%).
                     > Glimpse now reduces damage taken by 25% (was 35%) while airborne after using Vengeful Retreat.
                 • Monk
                     > Mistweaver
-                        + Developers’ notes: We’re reducing Mistweavers’ ability to heal versus clumped targets in PvP since they’ve been outputting more healing than we’d like against pet classes.
+                        + Developers’ notes: We’re reducing Mistweavers’ ability to heal versus clumped targets in PvP since they’ve been outputting more healing than we’d like against pet
+                          classes.
                         + Way of the Crane now transfers 100% of Spinning Crane Kick’s damage into healing in PvP Combat (was 340%).
                 • Priest
                     > Discipline
@@ -41,11 +45,13 @@ PatchNotesDelivered_Notes_1207 = {
                         + All healing increased by 3%.
                 • Shaman
                     > Restoration
-                        + Developers’ notes: Restoration Shaman healing performance has been slightly behind other healers in PvP, so we’re targeting an increase to their instant healing capabilities.
+                        + Developers’ notes: Restoration Shaman healing performance has been slightly behind other healers in PvP, so we’re targeting an increase to their instant healing
+                          capabilities.
                         + Riptide healing increased by 15% in PvP combat.
 
             Quests
-                • Dawnwell questgivers should now correctly be in place to turn in the quest "From Darkness, Light" and should stick around until the player has picked up “Hagar’s Invitation”.
+                • Dawnwell questgivers should now correctly be in place to turn in the quest "From Darkness, Light" and should stick around until the player has picked up “Hagar’s
+                  Invitation”.
 
         July 14, 2026
 
@@ -54,7 +60,8 @@ PatchNotesDelivered_Notes_1207 = {
 
             Quests
                 • Fixed a bug preventing the quest item for “Maisara Caverns: Master of Souls” from dropping in Mythic difficulty.
-                • Grand Magister Rommath has now provided a portal to the Magister's Terrace next to the Magister's Missive for all those seeking knowledge through the Omnium Folio Weekly Quests.
+                • Grand Magister Rommath has now provided a portal to the Magister's Terrace next to the Magister's Missive for all those seeking knowledge through the Omnium Folio Weekly
+                  Quests.
 
             Spells
                 • Lighthook Grapple will now only appear as an extra action button for player-characters who are in Naigtal.
@@ -92,7 +99,8 @@ PatchNotesDelivered_Notes_1207 = {
                         + Rip damage increased by 5%. Does not apply to PvP combat.
                         + Rampant Ferocity damage reduced by 15%. Does not apply to PvP combat.
                     > Restoration
-                        + Developers’ notes: Restoration’s damage compared to other healers is lower than we’d like. We’re rebalancing some of Restoration Druid’s damage out of Thrash and into the rest of the kit.
+                        + Developers’ notes: Restoration’s damage compared to other healers is lower than we’d like. We’re rebalancing some of Restoration Druid’s damage out of Thrash and
+                          into the rest of the kit.
                         + All damage increased by 15%.
                         + Bear Form Thrash damage reduced by 25%.
                 • Evoker
@@ -118,7 +126,8 @@ PatchNotesDelivered_Notes_1207 = {
                         + Shattered Souls now heals for 0.5% of maximum Health per Soul Fragment consumed (was 1%) in PvP combat.
                 • Death Knight
                     > Unholy
-                        + Developers’ notes: Unholy’s burst damage is overwhelming too frequently, so contributing abilities are receiving a reduction with some of that overall damage moving into the steadier output from Dread Plague.
+                        + Developers’ notes: Unholy’s burst damage is overwhelming too frequently, so contributing abilities are receiving a reduction with some of that overall damage moving
+                          into the steadier output from Dread Plague.
                         + Putrify damage reduced by 15% in PvP combat.
                         + Soul Reaper damage reduced by 15% in PvP combat.
                         + Dread Plague damage increased by 15% in PvP combat.
@@ -131,7 +140,8 @@ PatchNotesDelivered_Notes_1207 = {
                     > Augmentation
                         + All damage increased by 8% in PvP combat.
                     > Preservation
-                        + Developers’ notes: Preservation Evoker is slightly overperforming in PvP, so we’re making one additional targeted nerf to them in this pass. Temporal Burst makes it hard for enemies to react to important casts like Sleep Walk, so we’re reducing its effectiveness.
+                        + Developers’ notes: Preservation Evoker is slightly overperforming in PvP, so we’re making one additional targeted nerf to them in this pass. Temporal Burst makes it
+                          hard for enemies to react to important casts like Sleep Walk, so we’re reducing its effectiveness.
                         + Temporal Burst increases haste, movement speed, and cooldown recovery rate by 15% in PvP combat (was 30%).
                 • Hunter
                     > Marksmanship
@@ -141,7 +151,8 @@ PatchNotesDelivered_Notes_1207 = {
                         + All damage increased by 3% in PvP Combat.
                 • Mage
                     > Frost
-                        + Developers’ notes: We are redistributing some of Frost Mage’s damage out of Ray of Frost and into the rest of its kit with the intention of decreasing its burst capabilities and improving its steady-state pressure.
+                        + Developers’ notes: We are redistributing some of Frost Mage’s damage out of Ray of Frost and into the rest of its kit with the intention of decreasing its burst
+                          capabilities and improving its steady-state pressure.
                         + Ray of Frost damage decreased by 20% in PvP combat.
                         + All damage increased 3% in PvP combat.
                 • Paladin
@@ -162,12 +173,14 @@ PatchNotesDelivered_Notes_1207 = {
                         + Oracle: Preventive Measures increases damage of Penance, Smite, Holy Nova by 20% (was 15%).
                         + Ultimate Penitence healing increased by 25%.
                     > Shadow
-                        + Developers’ notes: In addition to a needed boost of overall damage, Shadow Word: Death is also receiving a buff intended to make its damage worthwhile when striking enemies in its low-health threshold.
+                        + Developers’ notes: In addition to a needed boost of overall damage, Shadow Word: Death is also receiving a buff intended to make its damage worthwhile when striking
+                          enemies in its low-health threshold.
                         + All ability damage increased by 4% in PvP combat.
                         + Shadow Word: Death damage increased by 45% in PvP combat.
                 • Shaman
                     > Restoration
-                        + Developers’ notes: Farseer Restoration Shaman has been behind in performance in PvP compared to Totemic, we’re increasing the throughput of heals and effects provided by Farseer talents and their Ancestors to help close the gap.
+                        + Developers’ notes: Farseer Restoration Shaman has been behind in performance in PvP compared to Totemic, we’re increasing the throughput of heals and effects
+                          provided by Farseer talents and their Ancestors to help close the gap.
                         + Farseer: Maelstrom Supremacy increases healing of affected spells in PvP by 20% (was 15%).
                         + Farseer: Hydrobubble’s effectiveness is no longer reduced in PvP (was a 20% reduction).
                         + Farseer: Heals cast by Call of the Ancestors increased in PvP by 30% (was 20%).
@@ -180,7 +193,8 @@ PatchNotesDelivered_Notes_1207 = {
                         + All damage increased by 3% in PvP combat.
                         + Consuming Nightfall with Seed of Corruption on a target already afflicted with Seed of Corruption will cause the preexisting Seed of Corruption to detonate.
                     > Demonology
-                        + Developers’ notes: Demonology damage while freecasting has not been as effective as we would like, so we’re targeting a few adjustments to Shadow Bolt and Demonbolt with the intention of increasing their ability to punish enemies for allowing them to chain casts together.
+                        + Developers’ notes: Demonology damage while freecasting has not been as effective as we would like, so we’re targeting a few adjustments to Shadow Bolt and Demonbolt
+                          with the intention of increasing their ability to punish enemies for allowing them to chain casts together.
                         + Shadow Bolt damage increased by 200% in PvP combat.
                         + Demonbolt damage increased by 30% in PvP combat.
                     > Destruction
@@ -203,7 +217,8 @@ PatchNotesDelivered_Notes_1207 = {
             Naigtal
                 • Players will no longer lose their "Lighthook Grapple" ability when they log out of Naigtal.
             Omnium Folio
-                • Starting with Week 2, the weekly Seeking Knowledge quest prerequisites are now account-wide. Characters must still complete the Sunstrider Omnium unlock questline to access the weekly quests on alts.
+                • Starting with Week 2, the weekly Seeking Knowledge quest prerequisites are now account-wide. Characters must still complete the Sunstrider Omnium unlock questline to access
+                  the weekly quests on alts.
             Quests
                 • All of the quests required for the Omnium Folio and to unlock and enter Val or Naigtal are now marked as Important quests.
                 • Fixed a bug preventing new Midsummer quests from rewarding XP.
@@ -231,7 +246,8 @@ PatchNotesDelivered_Notes_1207 = {
                     > Developers’ notes: Aldrachi Reaver performance has been below its alternative Hero Talent options, so we’re buffing some of its effects to reduce the disparity.
                     > Havoc
                         + Death Sweep damage increased by 10%.
-                            - Developers’ notes: This resolves an issue from a previous update where Blade Dance damage was increased, but Death Sweep’s damage was not correctly updated to match. The base damage of Death Sweep is intended to be 30% more than that of Blade Dance.
+                            - Developers’ notes: This resolves an issue from a previous update where Blade Dance damage was increased, but Death Sweep’s damage was not correctly updated to
+                              match. The base damage of Death Sweep is intended to be 30% more than that of Blade Dance.
                         + Aldrachi Reaver: Reaver’s Glaive damage increased by 15%.
                         + Aldrachi Reaver: Warblade’s Hunger damage increased by 55%.
                         + Aldrachi Reaver: Wounded Quarry now deals 30% of Physical damage to the target of your Reaver’s Mark (was 25%).
@@ -253,7 +269,8 @@ PatchNotesDelivered_Notes_1207 = {
                         + Pyroblast damage increased by 8%. Does not apply to PvP.
                         + Frostfire: Frostfire Bolt damage increased by 5%. Does not apply to PvP.
                     > Frost
-                        + Developers’ notes: Frostfire performance is farther behind Spellslinger than we’re happy with, so we’re boosting a number of its talents to increase their single target and AOE damage.
+                        + Developers’ notes: Frostfire performance is farther behind Spellslinger than we’re happy with, so we’re boosting a number of its talents to increase their single
+                          target and AOE damage.
                         + Frostfire: Frostfire Bolt damage increased by 5%. Does not apply to PvP
                         + Frostfire: Duality - Pyroblast damage increased by 25%.
                         + Frostfire: Dualcasting Adept - Shatter damage bonus increased to 40% (was 15%).
@@ -261,18 +278,21 @@ PatchNotesDelivered_Notes_1207 = {
                         + Frostfire: Blast Radius - Comet Storm damage bonus increased by 50% (was 20%).
                 • Paladin
                     > Retribution
-                        + Developers’ notes: Herald of the Sun has been trailing behind Templar in overall throughput. To improve its output, we’re extending its effective damage window by granting an additional Dawnlight charge. We’re also aiming to further improve its AoE performance by increasing the duration extension provided by Divine Storm.
+                        + Developers’ notes: Herald of the Sun has been trailing behind Templar in overall throughput. To improve its output, we’re extending its effective damage window by
+                          granting an additional Dawnlight charge. We’re also aiming to further improve its AoE performance by increasing the duration extension provided by Divine Storm.
                         + Wake of Ashes now causes the next 3 Holy Power spending abilities to apply a Dawnlight (was 2).
                         + Endless Gleam now extends Dawnlight’s duration by an additional 0.5 seconds when Divine Storm strikes at least 2 Dawnlights (was 0.3 seconds).
                 • Priest
                     > Holy
-                        + Developers’ notes: We’re reducing the mana costs of some core spell casts so Holy Priest can feel more comfortable casting Prayer of Healing and Flash Heal, particularly in raid settings.
+                        + Developers’ notes: We’re reducing the mana costs of some core spell casts so Holy Priest can feel more comfortable casting Prayer of Healing and Flash Heal,
+                          particularly in raid settings.
                         + Flash Heal mana cost reduced by 8%.
                         + Benediction mana cost reduced by 8%.
                         + Prayer of Mending mana cost reduced by 8%.
                         + Prayer of Healing mana cost reduced by 8%.
                 • Rogue
-                    > Developers’ notes: Deathstalker damage is below the other Hero Talent options for most content and damage profiles, especially for Assassination, and to the least degree for Subtlety single target output. Changes are targeted at improving Deathstalker’s total performance compared to each specialization’s alternative.
+                    > Developers’ notes: Deathstalker damage is below the other Hero Talent options for most content and damage profiles, especially for Assassination, and to the least
+                      degree for Subtlety single target output. Changes are targeted at improving Deathstalker’s total performance compared to each specialization’s alternative.
                     > Assassination
                         + Deathstalker: Deathstalker’s Mark damage increased by 30%.
                         + Deathstalker: Clear the Witnesses now increases Fan of Knives damage by 60% (was 40%).
@@ -286,7 +306,8 @@ PatchNotesDelivered_Notes_1207 = {
                     > Elemental
                         + Farseer: Ancestral Spirits from the Farseer Hero Talent tree now benefit from the critical damage increase of the Elemental Fury talent.
                     > Restoration
-                        + Developers’ notes: We’re adjusting the mana costs of some of Restoration Shaman’s basic spell casts to give them more room to spend mana on things like Chain Heal particularly in raid settings.
+                        + Developers’ notes: We’re adjusting the mana costs of some of Restoration Shaman’s basic spell casts to give them more room to spend mana on things like Chain Heal
+                          particularly in raid settings.
                         + The mana cost of Chain Heal, Healing Wave, and Riptide has been reduced by 5%.
                 • Warrior
                     > Developers’ notes: These change aim to improve Colossus’ performance in single target and Mountain Thane’s performance in AOE relative to other Hero Talent options.
@@ -309,18 +330,21 @@ PatchNotesDelivered_Notes_1207 = {
                         + Druid of the Claw: Ravage damage increased by 20% in PvP combat.
                 • Evoker
                     > Preservation
-                        + Developers’ notes: Preservation has pulled ahead of the other healers partially due to their ability to withstand crowd control but also due to their raw healing output. We’re reducing some of their throughput capabilities and also the uptime on Nullifying Shroud to bring them in line.
+                        + Developers’ notes: Preservation has pulled ahead of the other healers partially due to their ability to withstand crowd control but also due to their raw healing
+                          output. We’re reducing some of their throughput capabilities and also the uptime on Nullifying Shroud to bring them in line.
                         + All healing reduced by 5% in PvP combat.
                         + Nullifying Shroud duration reduced to 3 seconds (was 4 seconds).
                         + Dream Breath instant healing reduced by 17% in PvP combat.
                 • Hunter
                     > Survival
-                        + Developers’ notes: Survival has a strong burst window with Takedown, but outside of that, they are lacking. We’d like to reduce the heavy burst of Takedown and redistribute that power to compensate.
+                        + Developers’ notes: Survival has a strong burst window with Takedown, but outside of that, they are lacking. We’d like to reduce the heavy burst of Takedown and
+                          redistribute that power to compensate.
                         + Takedown damage reduced by 25% in PvP.
                         + Damage of all spells and abilities increased by 6% in PvP.
                 • Mage
                     > Fire
-                        + Developers’ notes: We’d like to increase Fire’s steady state damage by adjusting Fireball to reward casting, and Meteor has been harder to justify picking up than we would like in PvP.
+                        + Developers’ notes: We’d like to increase Fire’s steady state damage by adjusting Fireball to reward casting, and Meteor has been harder to justify picking up than
+                          we would like in PvP.
                         + Fireball and Frostfire Bolt damage increased by 35% in PvP combat.
                         + Meteor direct damage increased by 30% in PvP combat.
                 • Paladin
@@ -336,21 +360,25 @@ PatchNotesDelivered_Notes_1207 = {
                         + Templar: Divine Exaction down to 75% (was 150%) in PvP combat.
                 • Priest
                     > Holy
-                        + Developers’ notes: We’re reducing the mana cost of a few core spells for Holy Priest this week (see PvE changes for details) which is intended to help with healing in longer engagements. Additionally, Archon has felt weak compared to Oracle, so we’re targeting a buff to Halo to improve its viability.
+                        + Developers’ notes: We’re reducing the mana cost of a few core spells for Holy Priest this week (see PvE changes for details) which is intended to help with healing
+                          in longer engagements. Additionally, Archon has felt weak compared to Oracle, so we’re targeting a buff to Halo to improve its viability.
                         + Archon: Halo damage and healing increased by 25% in PvP combat.
                     > Shadow
-                        + Developers’ notes: We feel Voidweaver is in a good position in PvP. Archon’s pressure is lacking in comparison, so we’re targeting some of its spells to improve its output.
+                        + Developers’ notes: We feel Voidweaver is in a good position in PvP. Archon’s pressure is lacking in comparison, so we’re targeting some of its spells to improve its
+                          output.
                         + Archon: Halo damage and healing increased by 25% in PvP combat.
                         + Archon: Mind Flay Insanity damage increased by 25% in PvP combat.
                 • Shaman
                     > Elemental
-                        + Developers’ notes: Elemental is often relying on Ascendance for kills due to its high burst potential. These changes are intended to increase overall pressure while reducing reliance on cooldowns to score skills.
+                        + Developers’ notes: Elemental is often relying on Ascendance for kills due to its high burst potential. These changes are intended to increase overall pressure while
+                          reducing reliance on cooldowns to score skills.
                         + Bloodlust and Heroism from Shamanism now increases haste by 15% (was 20%)
                         + Ascendance now increases Elemental Overload damage by 10% in PvP Combat (was 25%).
                         + Lava Burst damage increased by 15% in PvP combat.
                         + Lightning Bolt damage increased by 15% in PvP combat.
                     > Enhancement
-                        + Developers’ notes: Enhancement burst has been hard to react to during cooldowns due to a Maelstrom Weapon bug we’re fixing. In addition, we’re toning down the haste gained from Shamanism to reduce the cooldown pressure from Shaman DPS specializations.
+                        + Developers’ notes: Enhancement burst has been hard to react to during cooldowns due to a Maelstrom Weapon bug we’re fixing. In addition, we’re toning down the haste
+                          gained from Shamanism to reduce the cooldown pressure from Shaman DPS specializations.
                         + Bloodlust and Heroism from Shamanism now increases haste by 15% (was 20%) in PvP.
                         + Resolved an issue causing Malestrom Weapon spenders from Thorim’s Invocation during Doom Winds to deal more damage than intended.
                 • Warlock
@@ -360,7 +388,8 @@ PatchNotesDelivered_Notes_1207 = {
                         + Hellcaller: Wither damage increased by 15% in PvP combat.
                         + Hellcaller: Mark of Xavius now causes Blackened Soul to deal 4% increased damage per stack of Wither in PvP combat (was 2%).
                     > Demonology
-                        + Developers’ notes: For Demonology and Destruction, we’re pulling back on some of the previous reductions to Conflagrate and Ruination as they were proving to be a little heavy handed. We’re also bringing up the damage of core casts like Incinerate and Hand of Gul’dan to reward Warlocks more for successful casts.
+                        + Developers’ notes: For Demonology and Destruction, we’re pulling back on some of the previous reductions to Conflagrate and Ruination as they were proving to be a
+                          little heavy handed. We’re also bringing up the damage of core casts like Incinerate and Hand of Gul’dan to reward Warlocks more for successful casts.
                         + Hand of Gul’dan damage increased by 30% in PvP combat.
                         + Diabolist: Ruination damage increased by 100% in PvP combat.
                     > Destruction
@@ -383,7 +412,8 @@ PatchNotesDelivered_Notes_1207 = {
             Midsummer Fire Festival
                 • “Reignite the Skies: Orgrimmar” and “Reignite the Skies: Stormwind” Midsummer dailies unlocks are now account-wide.
                 • Fixed an issue that allowed the contents Satchel of Chilled Goods to reroll each time it was opened.
-                • Sun Festival Painted Roc’s chance to drop in Satchel of Chilled Goods has been doubled for the first drop of the day on the account. The drop rate from the first satchel will continue to increase each day until it is obtained.
+                • Sun Festival Painted Roc’s chance to drop in Satchel of Chilled Goods has been doubled for the first drop of the day on the account. The drop rate from the first satchel
+                  will continue to increase each day until it is obtained.
             Player versus Player
                 • Fixed an issue where some important effects and major defensives were not displaying on enemy player nameplates.
             Professions
@@ -423,7 +453,8 @@ PatchNotesDelivered_Notes_1207 = {
         June 17, 2026
 
             Abundance
-                • Fixed an issue where players could not begin Abundance in Voidstorm. All players who lost Shards of Dundun due to this issue will be refunded with Unalloyed Abundance in an upcoming hotfix.
+                • Fixed an issue where players could not begin Abundance in Voidstorm. All players who lost Shards of Dundun due to this issue will be refunded with Unalloyed Abundance in an
+                  upcoming hotfix.
             Island Expeditions
                 • Island Expeditions should be queueing correctly once again.
             Items
@@ -432,8 +463,9 @@ PatchNotesDelivered_Notes_1207 = {
                 • Fixed an issue where the initial objective conversation for “The Prince Who Would Be King” would not complete.
             Naigtal
                 • The "Bouncy Mushrooms," "Aerospores", and "The Grappler" unlocks in Naigtal are now account wide.
-                • Fixed an issue that prevented Nexus-Captain Leth'ir from dropping the quest item for “Knocking Off the Top (Heroic).” Characters that encountered the issue can earn their emblem from another Heroic kill of Nexus-Captain Leth'ir or from a wrapper quest they have not completed.
-    ]],
+                • Fixed an issue that prevented Nexus-Captain Leth'ir from dropping the quest item for “Knocking Off the Top (Heroic).” Characters that encountered the issue can earn their
+                  emblem from another Heroic kill of Nexus-Captain Leth'ir or from a wrapper quest they have not completed.
+]],
     gameChangesPatch = [[
         June 16, 2026
 
@@ -443,20 +475,28 @@ PatchNotesDelivered_Notes_1207 = {
 
         TRAVEL TO VAL AND NAIGTAL TO QUELL LEADERS OF THE VOID
 
-            • Facing the forces of the Void in Void Assaults and Ritual Sites isn’t enough to stop their machinations. To cut the threat off at its source, you’ll need to hunt down the leaders behind these brutal attacks on Azeroth. Track them through a portal in Voidstorm leading to two new locations—Val and Naigtal.
+            • Facing the forces of the Void in Void Assaults and Ritual Sites isn’t enough to stop their machinations. To cut the threat off at its source, you’ll need to hunt down the
+              leaders behind these brutal attacks on Azeroth. Track them through a portal in Voidstorm leading to two new locations—Val and Naigtal.
                 > Naigtal: A fungal, arcane-rich world now occupied by an insidious ethereal faction known as the Hal'hadar.
                 > Val: An icy world once inhabited by the Legion where the Domanaar Imperator Pertinax has established his bastion of power.
-            • The portal to these worlds is unstable and switches destinations every week, bringing a rotating set of challenges and experiences. Players can undertake World Quests, defeat rare enemies, take part in events, and ultimately have a showdown with the leaders as world bosses.
+            • The portal to these worlds is unstable and switches destinations every week, bringing a rotating set of challenges and experiences. Players can undertake World Quests, defeat
+              rare enemies, take part in events, and ultimately have a showdown with the leaders as world bosses.
 
         GAIN NEW POWER WITH THE OMNIUM FOLIO
 
-            • Join Magister Umbric and Grand Magister Rommath on a mission to reconfigure and restore the Sunstrider Omnium. This ancient elven relic was originally created by Dath’remar Sunstrider to study and observe the various schools of magic and to serve as an academic repository. After years of silence, the Sunstrider Omnium has now reawakened, unsettling the Magisters and sowing disarray among them.
-            • Once unlocked, you’ll be entrusted with the Omnium Folio, a runic ledger containing powerful runes of power you can use in battle. Continue taking part in weekly activities to imbue more runes—customizing these initial runes and unlocking their maximum potential to aid you in the fight against the Void. These rune powers will be available to players throughout the rest of the Midnight expansion.
+            • Join Magister Umbric and Grand Magister Rommath on a mission to reconfigure and restore the Sunstrider Omnium. This ancient elven relic was originally created by Dath’remar
+              Sunstrider to study and observe the various schools of magic and to serve as an academic repository. After years of silence, the Sunstrider Omnium has now reawakened,
+              unsettling the Magisters and sowing disarray among them.
+            • Once unlocked, you’ll be entrusted with the Omnium Folio, a runic ledger containing powerful runes of power you can use in battle. Continue taking part in weekly activities to
+              imbue more runes—customizing these initial runes and unlocking their maximum potential to aid you in the fight against the Void. These rune powers will be available to players
+              throughout the rest of the Midnight expansion.
 
         PREPARE TO FACE ROTMIRE IN THE SPOREFALL RAID
 
-            • Introducing a new single-boss raid located in Harandar. You’ll face the fungal giant Rotmire in Raid Finder, Normal, Heroic, and Mythic difficulties. Players can also undertake Mythic difficulty in flexible groups of 15-25 players.
-            • Take on Rotmire to unlock a range of enticing rewards, including the Luminous Rotshroom housing decor item, Luminous Sporeglider mount, Sporefused gear ranging from item level 259 on Raid Finder difficulty to 298 on Mythic difficulty, and more.
+            • Introducing a new single-boss raid located in Harandar. You’ll face the fungal giant Rotmire in Raid Finder, Normal, Heroic, and Mythic difficulties. Players can also undertake
+              Mythic difficulty in flexible groups of 15-25 players.
+            • Take on Rotmire to unlock a range of enticing rewards, including the Luminous Rotshroom housing decor item, Luminous Sporeglider mount, Sporefused gear ranging from item level
+              259 on Raid Finder difficulty to 298 on Mythic difficulty, and more.
                 > Luminous Sporeglider Mount
                     + This mount is earned by collecting 4 x Delicious Sporesnacks, which you can earn once per week, per account, by defeating Rotmire in Sporefall on any difficulty.
 
@@ -466,25 +506,32 @@ PatchNotesDelivered_Notes_1207 = {
 
         HELP LOA SPEAKER BREK HATCH JAN'ALAI'S NEW EGGS
 
-            • With the return of Jan’alai, Loa of Fire comes a return to past traditions. She’s ready to bring a new clutch of eggs into the world, but Loa Speaker Brek requires assistance with the ceremony and with ensuring all the Loa’s young are released safely from their eggs. Be a part of welcoming the first of her offspring and protecting them as they take their first steps.
+            • With the return of Jan’alai, Loa of Fire comes a return to past traditions. She’s ready to bring a new clutch of eggs into the world, but Loa Speaker Brek requires assistance
+              with the ceremony and with ensuring all the Loa’s young are released safely from their eggs. Be a part of welcoming the first of her offspring and protecting them as they take
+              their first steps.
 
         RUN, LEAP, AND SPREAD CHEER DURING THE DARKSPEAR DASH MICRO-HOLIDAY JUNE 27
 
-            • Join the Darkspear trolls and their Zandalari allies as they race from Echo Isles to Silvermoon City for an in-game event inspired by the Running of the Trolls community event.  Prepare to run, leap, and spread rainbow cheer along the route.
+            • Join the Darkspear trolls and their Zandalari allies as they race from Echo Isles to Silvermoon City for an in-game event inspired by the Running of the Trolls community event.
+              Prepare to run, leap, and spread rainbow cheer along the route.
 
         SOAR THROUGH TURBULENT TIMEWAYS JUNE 30 TO AUGUST 11
 
-            • On the week of June 30, timewalk through a previous expansion each week for six consecutive weeks, beginning and ending with Dragonflight. This grand tour through World of Warcraft’s past features six Timewalking Dungeons: Algeth’ar Academy, Halls of Infusion, Neltharus, Ruby Life Pools, The Azure Vaults, and Brackenhide Hollow.
+            • On the week of June 30, timewalk through a previous expansion each week for six consecutive weeks, beginning and ending with Dragonflight. This grand tour through World of
+              Warcraft’s past features six Timewalking Dungeons: Algeth’ar Academy, Halls of Infusion, Neltharus, Ruby Life Pools, The Azure Vaults, and Brackenhide Hollow.
             • Players can also shop at a new Dragonflight vendor, Xydan, located in the Bronze Enclave in Valdrakken.
-            • Also, for the duration of Turbulent Timeways, the Timewalking quest available from the weekly quest giver will offer an increased reward—a Heroic Cache of Quel’Thalas Treasures with items level 259–276.
+            • Also, for the duration of Turbulent Timeways, the Timewalking quest available from the weekly quest giver will offer an increased reward—a Heroic Cache of Quel’Thalas Treasures
+              with items level 259–276.
 
         BEGIN THE NEXT CHAPTER WITH ZUL'JAN AVAILABLE JULY 7
 
-            • When the haranir call for a special gathering, Zul’jan attends as the Amani representative—only to be drawn into an ancient mystery surrounding the legacy of the Amani trolls. Join him and his uncle Kinduru on their journey of discovery to uncover the truth.
+            • When the haranir call for a special gathering, Zul’jan attends as the Amani representative—only to be drawn into an ancient mystery surrounding the legacy of the Amani trolls.
+              Join him and his uncle Kinduru on their journey of discovery to uncover the truth.
 
         ABUNDANCE
 
-            • Abundant Harvest now offers the option to harvest with multiple Shards of Dundun simultaneously, allowing players to use 1, 2, 4, or 8 Shards of Dundun at one time. The rewarded Unalloyed Abundance scales directly with the number of Shards consumed.
+            • Abundant Harvest now offers the option to harvest with multiple Shards of Dundun simultaneously, allowing players to use 1, 2, 4, or 8 Shards of Dundun at one time. The
+              rewarded Unalloyed Abundance scales directly with the number of Shards consumed.
 
         CHARACTERS
 
@@ -498,7 +545,8 @@ PatchNotesDelivered_Notes_1207 = {
         HOUSING
 
             • Lighting is now available outdoors! You can now add lights to your plot. Lighting Decor will have certain restraints outdoors that they do not have indoors.
-                > Two lights cannot overlap and will become unplaceable when too close. Light indicator radius visuals will appear when the lights are too close and will turn red when overlapping.
+                > Two lights cannot overlap and will become unplaceable when too close. Light indicator radius visuals will appear when the lights are too close and will turn red when
+                  overlapping.
             • Houses at level 5 and 6 have their exterior decor limit raised to 300.
             • Houses at level 7 and above have their exterior decor limit raised to 350.
             • Over 100 new common decor can be found on existing Neighborhood vendors.
@@ -506,9 +554,11 @@ PatchNotesDelivered_Notes_1207 = {
         ITEMS
 
             • Weapons and armor will no longer take durability damage from combat events (attacking, blocking, etc.).
-                > Developers’ notes: This type of durability damage affected different classes and specs in an asymmetrical way. With this change, all players should experience less durability damage in 12.0.7, but in particular, players who use shields or fast weapons should see significantly less durability damage from wear and tear.
+                > Developers’ notes: This type of durability damage affected different classes and specs in an asymmetrical way. With this change, all players should experience less
+                  durability damage in 12.0.7, but in particular, players who use shields or fast weapons should see significantly less durability damage from wear and tear.
             • Galactic Gladiator, Aspirant, Warmonger, and crafted PvP equipment have had their PvP item levels increased by 9.
-            • Galactic Voidsliver and Galactic Void Matrix items can no longer be acquired. Existing copies have been removed from player inventories and replaced with their equivalent gold value.
+            • Galactic Voidsliver and Galactic Void Matrix items can no longer be acquired. Existing copies have been removed from player inventories and replaced with their equivalent gold
+              value.
             • Rebuilt how the Moth Hunt feature in Harandar gives rewards. Players will not lose any existing progress on their moth collection.
             • Glowing Moths no longer give Luminous Dust when collected, and Luminous Dust has been removed from players' bags.
             • Mothkeeper Wew'tam no longer sells items for Luminous Dust, instead, Mothkeeper Wew'tam now has a quest to receive a reward for every 10 moths gathered on an account.
@@ -520,7 +570,9 @@ PatchNotesDelivered_Notes_1207 = {
         PLAYER VS PLAYER
 
             • Solo Shuffle and Battleground Blitz cutoffs for Galactic Legend, Galactic Marshal, and Galactic Warlord have been updated to the top 8 players for each specialization.
-                > Developers' notes: In order to better balance the Galactic Legend, Galactic Marshal, and Galactic Warlord awards across specializations, we are updating the cutoffs in Solo Shuffle and Battleground Blitz to guarantee these rewards for the top 8 players for each specialization. This should prevent the situation of some specializations having only a few Legend, Marshal, or Warlord titles and allows more players to gain these rewards.
+                > Developers' notes: In order to better balance the Galactic Legend, Galactic Marshal, and Galactic Warlord awards across specializations, we are updating the cutoffs in Solo
+                  Shuffle and Battleground Blitz to guarantee these rewards for the top 8 players for each specialization. This should prevent the situation of some specializations having
+                  only a few Legend, Marshal, or Warlord titles and allows more players to gain these rewards.
             • Evoker
                 > Fixed an issue where Precognition would trigger incorrectly if Oppressing Roar was active on the target.
 
@@ -530,7 +582,8 @@ PatchNotesDelivered_Notes_1207 = {
 
         QUESTS
 
-            • Significantly increased the amount of experience earned from completing the following types of Midnight quests: first time delves (Delver's Call), Midnight dungeon quests, Prey, and weekly Renown activities.
+            • Significantly increased the amount of experience earned from completing the following types of Midnight quests: first time delves (Delver's Call), Midnight dungeon quests,
+              Prey, and weekly Renown activities.
 
         RAIDS
 
@@ -555,8 +608,10 @@ PatchNotesDelivered_Notes_1207 = {
                 > You will also earn XP for most steps of Void Strikes and Void Incursions to help balance ones that have more steps.
                 > Increased the drop rate of Dark Particles from Void Strikes and Void Incursions.
                 > Increased the drop rate of Bulging Satchels that can drop after completing Void Strikes and Void Incursions.
-                > Trima Dawnsetter in Silvermoon City will also sell pouches with the same cosmetics from the Bulging Satchels for 150 Dark Particles. This also includes the cosmetic items that can drop from Ritual Sites end chest.
-                > Maren Silverwing in Silvermoon City now sells slot‑specific Bind‑on‑Pickup Heroic caches for 750 Field Accolades and slot‑specific Warbound Champion caches for 100 Field Accolades.
+                > Trima Dawnsetter in Silvermoon City will also sell pouches with the same cosmetics from the Bulging Satchels for 150 Dark Particles. This also includes the cosmetic items
+                  that can drop from Ritual Sites end chest.
+                > Maren Silverwing in Silvermoon City now sells slot‑specific Bind‑on‑Pickup Heroic caches for 750 Field Accolades and slot‑specific Warbound Champion caches for 100 Field
+                  Accolades.
             • RITUAL SITES
                 > New Tier 6 difficulty available.
                     + Requires 6 challenges to be selected.
@@ -590,7 +645,7 @@ PatchNotesDelivered_Notes_1207 = {
                 > Added a new "Show Bar Text" checkbox, which enables numbers on the health bar, power bar, and alternate power bar.
                 > The Personal Resource Display has been updated with new art.
                 > A few Personal Resource Display bugs have been fixed for Augmentation Evokers.
-    ]],
+]],
     deathKnightChangesPatch = [[
     ]],
     demonHunterChangesPatch = [[

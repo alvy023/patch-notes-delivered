@@ -168,11 +168,20 @@ function PatchNotesDelivered:ShowPatchNotesPopup()
     popup:SetTitle("Patch Notes Delivered")
     popup:SetTitleFont("Fonts\\FRIZQT__.TTF", 16, "OUTLINE")
 
+    -- Measure the real available width from the frame's own directly-set size (always
+    -- accurate immediately) rather than the Inset/content anchor chain (which depends on
+    -- anchor resolution having already run) or AceGUI's SetFullWidth (deferred layout,
+    -- can briefly leave pooled widgets at a stale width from whatever used them last).
+    -- These margins must match SetCompactHeader's (9 for Inset, 4 for content), each side.
+    local insetMargin, contentMargin = 9, 4
+    local availableWidth = popup.frame:GetWidth() - 2 * (insetMargin + contentMargin)
+
     -- Message label
     local label = AceGUI:Create("Label")
     label:SetText("\nThe patch notes have been updated!\nWould you like to view the latest changes?")
-    label:SetFullWidth(true)
+    label:SetWidth(availableWidth)
     label:SetJustifyH("CENTER")
+    label:SetFont("Fonts\\FRIZQT__.TTF", 13, "")
     popup:AddChild(label)
 
     -- Button bar
@@ -181,20 +190,20 @@ function PatchNotesDelivered:ShowPatchNotesPopup()
     buttonBar:SetFullWidth(true)
     popup:AddChild(buttonBar)
 
-    -- Spacer: centers the inner button group by measuring the actual available width
-    -- rather than assuming one, so it stays centered if the popup size ever changes.
-    local innerWidth = 120 + 16 + 120 -- showBtn + midSpacer + dismissBtn
-    local availableWidth = popup.content:GetWidth()
-    local leftPad = math.max(0, (availableWidth - innerWidth) / 2)
+    -- Spacer: centers the inner button group using the same measured width.
+    local innerContentWidth = 120 + 16 + 120 -- showBtn + midSpacer + dismissBtn
+    local leftPad = math.max(0, (availableWidth - innerContentWidth) / 2)
     local spacer = AceGUI:Create("Label")
     spacer:SetText("")
     spacer:SetWidth(leftPad)
     buttonBar:AddChild(spacer)
 
-    -- Inner group
+    -- Inner group. Given a few px more than its content needs (rather than an exact fit),
+    -- since AceGUI's Flow layout adds inter-widget gaps that can otherwise wrap the second
+    -- button onto its own row.
     local inner = AceGUI:Create("SimpleGroup")
     inner:SetLayout("Flow")
-    inner:SetWidth(innerWidth)
+    inner:SetWidth(innerContentWidth + 12)
     inner:SetFullWidth(false)
 
     -- Show Notes button
@@ -253,24 +262,22 @@ function PatchNotesDelivered:ShowPatchNotes()
     scroll:SetFullHeight(true)
     pnd:AddChild(scroll)
 
-    -- Section Dropdown
-    local sectionDropdown = AceGUI:Create("Dropdown")
+    -- Section list backing the tabs below (ordered, unlike a dropdown's key/value map,
+    -- since tabs have a fixed left-to-right position).
     local sectionList = {
-        hotfixes = "Hotfixes",
-        patch = "Patch Notes",
-        addon = "Addon Changes",
+        { key = "hotfixes", label = "Hotfixes" },
+        { key = "patch", label = "Patch Notes" },
+        { key = "addon", label = "Addon Changes" },
     }
-    sectionDropdown:SetList(sectionList)
-    sectionDropdown:SetValue("hotfixes")
-    sectionDropdown:SetWidth(140)
 
     -- Helper to populate selected section
     local function PopulateSelectedSection()
         scroll:ReleaseChildren()
         local bodyOptions = { font = "Fonts\\FRIZQT__.TTF", size = 14, flags = "" }
-        if sectionDropdown:GetValue() == "hotfixes" then
+        local selectedKey = sectionList[PanelTemplates_GetSelectedTab(pnd.frame)].key
+        if selectedKey == "hotfixes" then
             CreateSectionLabel(scroll, PATCH_NOTES.gameChangesHotfixes, "\n    |cffF89406Hotfix Changes|r\n\n", "\n\n", bodyOptions)
-        elseif sectionDropdown:GetValue() == "patch" then
+        elseif selectedKey == "patch" then
             CreateSectionLabel(scroll, PATCH_NOTES.gameChangesPatch, "\n    |cff00B4FFPatch Changes|r\n\n", "\n\n", bodyOptions)
             -- Add all class changes sections
             CreateSectionLabel(scroll, PATCH_NOTES.deathKnightChangesPatch, "    |cff00B4FFDeath Knight Changes|r\n\n", "\n", bodyOptions)
@@ -286,17 +293,40 @@ function PatchNotesDelivered:ShowPatchNotes()
             CreateSectionLabel(scroll, PATCH_NOTES.shamanChangesPatch, "    |cff00B4FFShaman Changes|r\n\n", "\n", bodyOptions)
             CreateSectionLabel(scroll, PATCH_NOTES.warlockChangesPatch, "    |cff00B4FFWarlock Changes|r\n\n", "\n", bodyOptions)
             CreateSectionLabel(scroll, PATCH_NOTES.warriorChangesPatch, "    |cff00B4FFWarrior Changes|r\n\n", "\n", bodyOptions)
-        elseif sectionDropdown:GetValue() == "addon" then
+        elseif selectedKey == "addon" then
             CreateSectionLabel(scroll, PATCH_NOTES.addonChanges, "\n    |cff32CD32Addon Changes|r\n\n", "", bodyOptions)
         end
     end
 
-    sectionDropdown:SetCallback("OnValueChanged", function(widget, event, key)
-        PopulateSelectedSection()
-    end)
-    pnd:AddButton(sectionDropdown)
+    -- Section Tabs (Hotfixes / Patch Notes / Addon Changes), using Blizzard's native
+    -- top-tab system (the same one the Wardrobe/Appearances window uses for Items/Sets)
+    -- instead of a dropdown, filling the previously-empty strip below the title.
+    local sectionTabs = {}
+    for i, section in ipairs(sectionList) do
+        local tab = CreateFrame("Button", nil, pnd.frame, "PanelTopTabButtonTemplate")
+        tab:SetID(i)
+        tab:SetText(section.label)
+        -- Must clear ButtonFrameTemplate's NineSlice border (level 500) or it renders
+        -- invisibly underneath it - match the close button's level, same fix as buttonBar
+        -- needed for the dropdowns previously.
+        tab:SetFrameLevel(pnd.frame.CloseButton:GetFrameLevel())
+        if i == 1 then
+            tab:SetPoint("TOPLEFT", pnd.frame, "TOPLEFT", 58, -28)
+        else
+            tab:SetPoint("TOPLEFT", sectionTabs[i - 1], "TOPRIGHT", 3, 0)
+        end
+        PanelTemplates_TabResize(tab, 0)
+        tab:SetScript("OnClick", function()
+            PanelTemplates_SetTab(pnd.frame, i)
+            PopulateSelectedSection()
+        end)
+        sectionTabs[i] = tab
+    end
+    pnd.frame.Tabs = sectionTabs
+    PanelTemplates_SetNumTabs(pnd.frame, #sectionList)
+    PanelTemplates_SetTab(pnd.frame, 1)
 
-    -- Version Dropdown
+    -- Version Dropdown, positioned to the right of the section tabs
     local versionDropdown = AceGUI:Create("Dropdown")
     local versionDropdownText = GetNotesListDropdown()
     versionDropdown:SetList(versionDropdownText)
@@ -312,24 +342,13 @@ function PatchNotesDelivered:ShowPatchNotes()
         PATCH_NOTES = BuildPatchNotes()
         PopulateSelectedSection()
     end)
-    pnd:AddButton(versionDropdown)
-
-    -- Fix Dropdown Spacing
-    if pnd.buttonBar and sectionDropdown.frame and versionDropdown.frame then
-        local rightPad = -4      -- gap from bar right edge
-        local spacing = 8        -- extra space between controls
-
-        -- rightmost (version)
-        versionDropdown.frame:SetParent(pnd.buttonBar)
-        versionDropdown.frame:ClearAllPoints()
-        versionDropdown.frame:SetPoint("RIGHT", pnd.buttonBar, "RIGHT", rightPad, 0)
-
-        -- left control (section) placed left of version control
-        local verW = versionDropdown.frame:GetWidth() or 100
-        sectionDropdown.frame:SetParent(pnd.buttonBar)
-        sectionDropdown.frame:ClearAllPoints()
-        sectionDropdown.frame:SetPoint("RIGHT", pnd.buttonBar, "RIGHT", rightPad - verW - spacing, 0)
-    end
+    versionDropdown.frame:SetParent(pnd.frame)
+    versionDropdown.frame:SetFrameLevel(pnd.frame.CloseButton:GetFrameLevel())
+    versionDropdown.frame:ClearAllPoints()
+    -- LEFT/RIGHT anchor points sit at each frame's own vertical center, so this centers
+    -- the dropdown's 26px frame against the tab's 32px frame regardless of their height
+    -- difference (BOTTOMLEFT/BOTTOMRIGHT previously left it visibly shifted upward).
+    versionDropdown.frame:SetPoint("LEFT", sectionTabs[#sectionTabs], "RIGHT", 12, 0)
 
     -- Initial population
     PopulateSelectedSection()

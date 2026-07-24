@@ -1,6 +1,6 @@
 [submodule "PatchNotesDelivered/libs/LibDataBroker-1.1"]
 	path = PatchNotesDelivered/libs/LibDataBroker-1.1
 	url = https://github.com/tekkub/libdatabroker-1-1.git
-[submodule "PatchNotesDelivered/libs/wow-ui-source"]
-	path = PatchNotesDelivered/libs/wow-ui-source
+[submodule "references/wow-ui-source"]
+	path = references/wow-ui-source
 	url = https://github.com/Gethe/wow-ui-source.git

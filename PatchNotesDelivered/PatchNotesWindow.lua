@@ -53,7 +53,12 @@ end
 --- @param: flags - The font flags.
 --- @return:
 local function SetTitleFont(self, font, size, flags)
-    self.frame:GetTitleText():SetFont(font, size, flags)
+    local titleText = self.frame:GetTitleText()
+    titleText:SetFont(font, size, flags)
+    -- GameFontNormal's inherited drop shadow combined with an OUTLINE-flagged font
+    -- doubles up into a muddy look; the outline alone is legible enough on its own.
+    -- Zero alpha (not just zero offset) so no shadow pixels blend in at the glyph edges.
+    titleText:SetShadowColor(0, 0, 0, 0)
 end
 
 --- Description: Compacts the header for small windows: hides the portrait icon and
@@ -63,26 +68,15 @@ end
 --- @return:
 local function SetCompactHeader(self, topOffset)
     ButtonFrameTemplate_HidePortrait(self.frame)
+    -- Match Blizzard's own no-portrait left/right inset offset (9, from
+    -- ButtonFrameTemplate_UpdateAnchors) symmetrically on both sides, rather than an
+    -- arbitrary asymmetric margin that throws off centering of anything inside.
     self.frame.Inset:ClearAllPoints()
-    self.frame.Inset:SetPoint("TOPLEFT", self.frame, "TOPLEFT", 4, -topOffset)
-    self.frame.Inset:SetPoint("BOTTOMRIGHT", self.frame, "BOTTOMRIGHT", -6, 4)
+    self.frame.Inset:SetPoint("TOPLEFT", self.frame, "TOPLEFT", 9, -topOffset)
+    self.frame.Inset:SetPoint("BOTTOMRIGHT", self.frame, "BOTTOMRIGHT", -9, 4)
     self.content:ClearAllPoints()
     self.content:SetPoint("TOPLEFT", self.frame.Inset, "TOPLEFT", 4, -4)
     self.content:SetPoint("BOTTOMRIGHT", self.frame.Inset, "BOTTOMRIGHT", -4, 4)
-end
-
---- Description: Adds a button to the button bar.
---- @param: button - The button to add.
---- @return:
-local function AddButtonToBar(self, button)
-    local numButtons = #self.buttonBar.buttons
-    button.frame:SetParent(self.buttonBar)
-    -- Reparenting alone doesn't guarantee the level clears the NineSlice border (500);
-    -- set it explicitly relative to the already-elevated buttonBar.
-    button.frame:SetFrameLevel(self.buttonBar:GetFrameLevel() + 1)
-    button.frame:SetPoint("RIGHT", self.buttonBar, "RIGHT", -numButtons * 26, 0)
-    button.frame:Show()
-    table.insert(self.buttonBar.buttons, button)
 end
 
 --- Description: Computes a fixed size as a proportion of the physical screen, corrected for
@@ -123,8 +117,8 @@ local function Constructor()
     frame:SetScript("OnDragStart", frame.StartMoving)
     frame:SetScript("OnDragStop", frame.StopMovingOrSizing)
 
-    -- We dock our own controls into a title-area bar instead of Blizzard's bottom
-    -- button-bar dock, so reclaim the vertical space it would otherwise reserve.
+    -- We don't use Blizzard's bottom button-bar dock, so reclaim the vertical space it
+    -- would otherwise reserve.
     ButtonFrameTemplate_HideButtonBar(frame)
 
     frame:SetPortraitToAsset("Interface\\AddOns\\PatchNotesDelivered\\assets\\pnd-icon.tga")
@@ -134,19 +128,9 @@ local function Constructor()
     content:SetPoint("TOPLEFT", frame.Inset, "TOPLEFT", 4, -4)
     content:SetPoint("BOTTOMRIGHT", frame.Inset, "BOTTOMRIGHT", -4, 4)
 
-    --- Create the button bar container, docked to the left of the native close button.
-    --- Frame level must clear the template's NineSlice border (500) and match the
-    --- close button's level (510), or docked controls render invisibly underneath it.
-    local buttonBar = CreateFrame("Frame", nil, frame)
-    buttonBar:SetFrameLevel(frame.CloseButton:GetFrameLevel())
-    buttonBar:SetPoint("RIGHT", frame.CloseButton, "LEFT", -6, 0)
-    buttonBar:SetSize(100, 24)
-    buttonBar.buttons = {}
-
     local widget = {
         frame = frame,
         content = content,
-        buttonBar = buttonBar,
         type = Type,
         Close = Hide,
         SetTitle = SetTitle,
@@ -155,7 +139,6 @@ local function Constructor()
         OnRelease = OnRelease,
         Hide = Hide,
         Show = Show,
-        AddButton = AddButtonToBar,
         SetProportionalSize = SetProportionalSize,
         SetCompactHeader = SetCompactHeader,
     }
