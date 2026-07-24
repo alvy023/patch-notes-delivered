@@ -68,11 +68,12 @@ end
 --- @return:
 local function SetCompactHeader(self, topOffset)
     ButtonFrameTemplate_HidePortrait(self.frame)
-    -- Match Blizzard's own no-portrait left/right inset offset (9, from
-    -- ButtonFrameTemplate_UpdateAnchors) symmetrically on both sides, rather than an
-    -- arbitrary asymmetric margin that throws off centering of anything inside.
+    -- Left/right offsets are asymmetric (13/9, not a plain 9/9) because the
+    -- "ButtonFrameTemplateNoPortrait" border art itself renders asymmetrically around the
+    -- frame's logical edges; a symmetric inset offset leaves visibly uneven padding against
+    -- it. Tuned empirically against screenshots, not derived from the border atlas.
     self.frame.Inset:ClearAllPoints()
-    self.frame.Inset:SetPoint("TOPLEFT", self.frame, "TOPLEFT", 9, -topOffset)
+    self.frame.Inset:SetPoint("TOPLEFT", self.frame, "TOPLEFT", 13, -topOffset)
     self.frame.Inset:SetPoint("BOTTOMRIGHT", self.frame, "BOTTOMRIGHT", -9, 4)
     self.content:ClearAllPoints()
     self.content:SetPoint("TOPLEFT", self.frame.Inset, "TOPLEFT", 4, -4)

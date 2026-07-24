@@ -168,27 +168,28 @@ function PatchNotesDelivered:ShowPatchNotesPopup()
     popup:SetTitle("Patch Notes Delivered")
     popup:SetTitleFont("Fonts\\FRIZQT__.TTF", 16, "OUTLINE")
 
-    -- Measure the real available width from the frame's own directly-set size (always
-    -- accurate immediately) rather than the Inset/content anchor chain (which depends on
-    -- anchor resolution having already run) or AceGUI's SetFullWidth (deferred layout,
-    -- can briefly leave pooled widgets at a stale width from whatever used them last).
-    -- These margins must match SetCompactHeader's (9 for Inset, 4 for content), each side.
+    -- Calculate width from insets
+    -- Margins must match SetCompactHeader's (9 for Inset, 4 for content), each side.
     local insetMargin, contentMargin = 9, 4
     local availableWidth = popup.frame:GetWidth() - 2 * (insetMargin + contentMargin)
 
+    -- Body Group
+    local body = AceGUI:Create("SimpleGroup")
+    body:SetLayout("List")
+    body:SetWidth(availableWidth)
+
     -- Message label
     local label = AceGUI:Create("Label")
-    label:SetText("\nThe patch notes have been updated!\nWould you like to view the latest changes?")
-    label:SetWidth(availableWidth)
+    label:SetText("The patch notes have been updated!\nWould you like to view the latest changes?")
+    label:SetFullWidth(true)
     label:SetJustifyH("CENTER")
     label:SetFont("Fonts\\FRIZQT__.TTF", 13, "")
-    popup:AddChild(label)
+    body:AddChild(label)
 
     -- Button bar
     local buttonBar = AceGUI:Create("SimpleGroup")
     buttonBar:SetLayout("Flow")
     buttonBar:SetFullWidth(true)
-    popup:AddChild(buttonBar)
 
     -- Spacer: centers the inner button group using the same measured width.
     local innerContentWidth = 120 + 16 + 120 -- showBtn + midSpacer + dismissBtn
@@ -198,9 +199,7 @@ function PatchNotesDelivered:ShowPatchNotesPopup()
     spacer:SetWidth(leftPad)
     buttonBar:AddChild(spacer)
 
-    -- Inner group. Given a few px more than its content needs (rather than an exact fit),
-    -- since AceGUI's Flow layout adds inter-widget gaps that can otherwise wrap the second
-    -- button onto its own row.
+    -- Inner group to center buttons
     local inner = AceGUI:Create("SimpleGroup")
     inner:SetLayout("Flow")
     inner:SetWidth(innerContentWidth + 12)
@@ -233,6 +232,17 @@ function PatchNotesDelivered:ShowPatchNotesPopup()
 
     -- Add Inner group
     buttonBar:AddChild(inner)
+
+    -- Add button bar
+    body:AddChild(buttonBar)
+
+    -- Set body height from child height
+    body:SetHeight(label.frame:GetHeight() + buttonBar.frame:GetHeight())
+
+    -- Add body group then center
+    popup:AddChild(body)
+    body.frame:ClearAllPoints()
+    body.frame:SetPoint("CENTER", popup.content, "CENTER")
 end
 
 --- Description: Show the patch notes frame
