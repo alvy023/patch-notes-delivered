@@ -12,6 +12,11 @@ PatchNotesDelivered_Notes_1207 = {
     build = "68887",
     hotfix = 11,
     gameChangesHotfixes = [[
+        July 22, 2026
+
+    WoW
+        • July 22nd by Blizzard Entertainment
+
         July 21, 2026
 
             Decor Duel
