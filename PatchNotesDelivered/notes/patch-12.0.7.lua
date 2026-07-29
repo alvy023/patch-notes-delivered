@@ -9,9 +9,28 @@
 --- Max note length [140] ------------------------------------------------------------------------------------------------------------------
 PatchNotesDelivered_Notes_1207 = {
     version = "12.0.7",
-    build = "68453",
-    hotfix = 10,
+    build = "68887",
+    hotfix = 11,
     gameChangesHotfixes = [[
+        July 28, 2026
+
+    Classes
+        • Death Knight
+            > Blood
+                + Fixed a bug that caused the Dance of Midnight Apex talent ranks 2 and 3
+                  to incorrectly increase damage taken. They now decrease damage taken, as
+                  intended.
+
+    Player versus Player
+        • Fixed an issue where using Will of the Forsaken to break Mind Control would
+          not show the cooldown on your PvP trinket.
+
+    World Bosses
+        • Fixed a bug that could prevent alt characters from receiving soulbound items
+          when killing the World Boss.
+        • Fixed a bug where rewards could include a piece unmatched to the player’s
+          chosen spec.
+
         July 21, 2026
 
             Decor Duel
