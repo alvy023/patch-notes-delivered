@@ -122,8 +122,9 @@ local function CreateSectionLabel(scroll, text, title, footer, options)
     local labelText = (title or "") .. text .. (footer or "")
 
     local label = AceGUI:Create("Label")
-    label:SetText(labelText)
-    label:SetRelativeWidth(0.96)
+    -- Measure the frame directly rather than SetRelativeWidth, which sizes off a cached
+    -- width that goes stale on a pooled/reused ScrollFrame.
+    label:SetWidth(scroll.frame:GetWidth() * 0.96)
 
     if options and options.font and options.size then
         label:SetFont(options.font, options.size, options.flags)
@@ -131,7 +132,76 @@ local function CreateSectionLabel(scroll, text, title, footer, options)
         label:SetFontObject(GameFontHighlight)
     end
 
+    -- Extra vertical space between wrapped lines, via the underlying native FontString
+    -- (AceGUI's Label doesn't expose this itself).
+    label.label:SetSpacing(6)
+
+    -- Must come last: SetText is what makes AceGUI measure and cache the label's height,
+    -- so width/font/spacing need to already be set beforehand.
+    label:SetText(labelText)
+
     scroll:AddChild(label)
+end
+
+--- Description: Normalizes a hotfix/patch/addon field into an array of { date, text }
+--- entries. Older single-string [[ ]] files get wrapped as one dateless entry.
+--- @param: value (table or string)
+--- @return: array of { date, text }
+local function NormalizeDatedEntries(value)
+    if type(value) == "table" then
+        return value
+    end
+    return { { text = value } }
+end
+
+-- Class change fields, populated mainly on big expansion/patch launches, shown as their
+-- own sidebar rows on the Patch Notes tab (see BuildSectionItems).
+local classFields = {
+    { key = "deathKnightChangesPatch", label = "Death Knight" },
+    { key = "demonHunterChangesPatch", label = "Demon Hunter" },
+    { key = "druidChangesPatch", label = "Druid" },
+    { key = "evokerChangesPatch", label = "Evoker" },
+    { key = "hunterChangesPatch", label = "Hunter" },
+    { key = "mageChangesPatch", label = "Mage" },
+    { key = "monkChangesPatch", label = "Monk" },
+    { key = "paladinChangesPatch", label = "Paladin" },
+    { key = "priestChangesPatch", label = "Priest" },
+    { key = "rogueChangesPatch", label = "Rogue" },
+    { key = "shamanChangesPatch", label = "Shaman" },
+    { key = "warlockChangesPatch", label = "Warlock" },
+    { key = "warriorChangesPatch", label = "Warrior" },
+}
+
+--- Description: Builds the ordered { label, text } items for a section tab - dated entries,
+--- plus (Patch Notes only) non-empty per-class fields. A lone entry is labeled "Overview".
+--- @param: key (section key: "hotfixes" | "patch" | "addon")
+--- @return: array of { label, text }
+local function BuildSectionItems(key)
+    local items = {}
+    if key == "hotfixes" then
+        for _, entry in ipairs(NormalizeDatedEntries(PATCH_NOTES.gameChangesHotfixes)) do
+            table.insert(items, { label = entry.date, text = entry.text })
+        end
+    elseif key == "addon" then
+        local entries = NormalizeDatedEntries(PATCH_NOTES.addonChanges)
+        local singleEntry = #entries == 1
+        for _, entry in ipairs(entries) do
+            table.insert(items, { label = singleEntry and "Overview" or entry.date, text = entry.text })
+        end
+    elseif key == "patch" then
+        local mainEntries = NormalizeDatedEntries(PATCH_NOTES.gameChangesPatch)
+        local singleMain = #mainEntries == 1
+        for _, entry in ipairs(mainEntries) do
+            table.insert(items, { label = singleMain and "Overview" or entry.date, text = entry.text })
+        end
+        for _, class in ipairs(classFields) do
+            local text = PATCH_NOTES[class.key]
+            if text and not text:match("^%s*$") then
+                table.insert(items, { label = class.label, text = text })
+            end
+        end
+    end
+    return items
 end
 
 --- Description: Check if we should show the patch notes
@@ -258,19 +328,16 @@ function PatchNotesDelivered:ShowPatchNotes()
     end
 
     local pnd = AceGUI:Create("Window-PND")
-    pnd:SetProportionalSize(0.62, 0.68, 1000, 700, 1500, 1000)
+    -- Fixed size, matching Blizzard's own large journal-style windows (e.g. CollectionsJournal
+    -- at 703x606) rather than a proportion of screen resolution - WoW's UI scale already keeps
+    -- a fixed size consistent across displays, so scaling off screen resolution instead just
+    -- made the window huge on lower-resolution/small laptop screens.
+    pnd.frame:SetSize(900, 650)
 
     -- Set the title area
     pnd:SetTitle("|cff00B4FFThe Weekly Mrrgl, |r|cffffffff" ..
         PATCH_NOTES.version .. "." .. PATCH_NOTES.build .. "." .. PATCH_NOTES.hotfix .. "|r")
     pnd:SetTitleFont("Fonts\\FRIZQT__.TTF", 16, "OUTLINE")
-
-    -- Scroll Frame
-    local scroll = AceGUI:Create("ScrollFrame")
-    scroll:SetLayout("Flow")
-    scroll:SetFullWidth(true)
-    scroll:SetFullHeight(true)
-    pnd:AddChild(scroll)
 
     -- Section list backing the tabs below (ordered, unlike a dropdown's key/value map,
     -- since tabs have a fixed left-to-right position).
@@ -280,31 +347,82 @@ function PatchNotesDelivered:ShowPatchNotes()
         { key = "addon", label = "Addon Changes" },
     }
 
-    -- Helper to populate selected section
+    local sectionHeaders = {
+        hotfixes = { title = "\n    |cffF89406Hotfix Changes|r\n\n", footer = "\n\n" },
+        patch = { title = "\n    |cff00B4FFPatch Changes|r\n\n", footer = "\n\n" },
+        addon = { title = "\n    |cff32CD32Addon Changes|r\n\n", footer = "" },
+    }
+
+    local bodyOptions = { font = "Fonts\\FRIZQT__.TTF", size = 14, flags = "" }
+
+    --- Description: Adds a widget as a container's only child and stretches it to fill the
+    --- container's content area. AceGUI's "List" layout only manages a fill child's width,
+    --- never its height, so this anchors directly instead of relying on SetFullHeight.
+    --- @param: container (AceGUI container widget)
+    --- @param: child (AceGUI widget)
+    --- @return:
+    local function AddFillChild(container, child)
+        container:AddChild(child)
+        child.frame:ClearAllPoints()
+        child.frame:SetPoint("TOPLEFT", container.content, "TOPLEFT")
+        child.frame:SetPoint("BOTTOMRIGHT", container.content, "BOTTOMRIGHT")
+    end
+
+    --- Description: Adds a ScrollFrame with a single label to a container - used for flat
+    --- sections and for a tree's selected-item pane. Anchors the scroll before populating
+    --- it, so the label wraps against its real final width instead of a stale pooled one.
+    --- @param: container (AceGUI container widget)
+    --- @param: text (string)
+    --- @param: title (string, only used for the no-sidebar case)
+    --- @param: footer (string, only used for the no-sidebar case)
+    --- @return:
+    local function AddTextScroll(container, text, title, footer)
+        local scroll = AceGUI:Create("ScrollFrame")
+        scroll:SetLayout("Flow")
+        AddFillChild(container, scroll)
+        CreateSectionLabel(scroll, text, title, footer, bodyOptions)
+    end
+
+    --- Description: Populates the selected tab. Sections with 2+ items (dated entries
+    --- and/or, on Patch Notes, class rows) get a date/class sidebar with the selected
+    --- item's text on the right (mirroring the Collections/Mounts page); otherwise a
+    --- single flat scrolling block.
+    --- @param:
+    --- @return:
     local function PopulateSelectedSection()
-        scroll:ReleaseChildren()
-        local bodyOptions = { font = "Fonts\\FRIZQT__.TTF", size = 14, flags = "" }
+        pnd:ReleaseChildren()
         local selectedKey = sectionList[PanelTemplates_GetSelectedTab(pnd.frame)].key
-        if selectedKey == "hotfixes" then
-            CreateSectionLabel(scroll, PATCH_NOTES.gameChangesHotfixes, "\n    |cffF89406Hotfix Changes|r\n\n", "\n\n", bodyOptions)
-        elseif selectedKey == "patch" then
-            CreateSectionLabel(scroll, PATCH_NOTES.gameChangesPatch, "\n    |cff00B4FFPatch Changes|r\n\n", "\n\n", bodyOptions)
-            -- Add all class changes sections
-            CreateSectionLabel(scroll, PATCH_NOTES.deathKnightChangesPatch, "    |cff00B4FFDeath Knight Changes|r\n\n", "\n", bodyOptions)
-            CreateSectionLabel(scroll, PATCH_NOTES.demonHunterChangesPatch, "    |cff00B4FFDemon Hunter Changes|r\n\n", "\n", bodyOptions)
-            CreateSectionLabel(scroll, PATCH_NOTES.druidChangesPatch, "    |cff00B4FFDruid Changes|r\n\n", "\n", bodyOptions)
-            CreateSectionLabel(scroll, PATCH_NOTES.evokerChangesPatch, "    |cff00B4FFEvoker Changes|r\n\n", "\n", bodyOptions)
-            CreateSectionLabel(scroll, PATCH_NOTES.hunterChangesPatch, "    |cff00B4FFHunter Changes|r\n\n", "\n", bodyOptions)
-            CreateSectionLabel(scroll, PATCH_NOTES.mageChangesPatch, "    |cff00B4FFMage Changes|r\n\n", "\n", bodyOptions)
-            CreateSectionLabel(scroll, PATCH_NOTES.monkChangesPatch, "    |cff00B4FFMonk Changes|r\n\n", "\n", bodyOptions)
-            CreateSectionLabel(scroll, PATCH_NOTES.paladinChangesPatch, "    |cff00B4FFPaladin Changes|r\n\n", "\n", bodyOptions)
-            CreateSectionLabel(scroll, PATCH_NOTES.priestChangesPatch, "    |cff00B4FFPriest Changes|r\n\n", "\n", bodyOptions)
-            CreateSectionLabel(scroll, PATCH_NOTES.rogueChangesPatch, "    |cff00B4FFRogue Changes|r\n\n", "\n", bodyOptions)
-            CreateSectionLabel(scroll, PATCH_NOTES.shamanChangesPatch, "    |cff00B4FFShaman Changes|r\n\n", "\n", bodyOptions)
-            CreateSectionLabel(scroll, PATCH_NOTES.warlockChangesPatch, "    |cff00B4FFWarlock Changes|r\n\n", "\n", bodyOptions)
-            CreateSectionLabel(scroll, PATCH_NOTES.warriorChangesPatch, "    |cff00B4FFWarrior Changes|r\n\n", "\n", bodyOptions)
-        elseif selectedKey == "addon" then
-            CreateSectionLabel(scroll, PATCH_NOTES.addonChanges, "\n    |cff32CD32Addon Changes|r\n\n", "", bodyOptions)
+        local items = BuildSectionItems(selectedKey)
+        -- Patch Notes/Addon Changes always show the sidebar for a consistent selector, even
+        -- with just their one "Overview" item; Hotfixes needs 2+ dated entries for one.
+        local useTree = #items >= 2 or (selectedKey ~= "hotfixes" and #items >= 1)
+
+        if not useTree then
+            local header = sectionHeaders[selectedKey]
+            AddTextScroll(pnd, items[1] and items[1].text, header.title, header.footer)
+        else
+            local tree = AceGUI:Create("TreeGroup")
+            -- Parent the tree before configuring it - TreeGroup defers its first build to
+            -- the next frame if its frame still has the pooled default parent (UIParent).
+            AddFillChild(pnd, tree)
+            tree:SetTreeWidth(160, false)
+            tree:EnableButtonTooltips(false)
+
+            local treeData = {}
+            for i, item in ipairs(items) do
+                treeData[i] = { value = tostring(i), text = item.label }
+            end
+            tree:SetTree(treeData)
+            tree:SetCallback("OnGroupSelected", function(widget, event, value)
+                widget:ReleaseChildren()
+                AddTextScroll(widget, items[tonumber(value)].text)
+            end)
+
+            -- Deferred a frame: selecting immediately builds the label before its width is
+            -- fully applied, undercounting the scroll range for the first entry.
+            C_Timer.After(0, function()
+                tree:SelectByValue("1")
+            end)
         end
     end
 

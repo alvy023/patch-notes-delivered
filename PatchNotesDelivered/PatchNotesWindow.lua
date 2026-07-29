@@ -68,39 +68,14 @@ end
 --- @return:
 local function SetCompactHeader(self, topOffset)
     ButtonFrameTemplate_HidePortrait(self.frame)
-    -- Left/right offsets are asymmetric (13/9, not a plain 9/9) because the
-    -- "ButtonFrameTemplateNoPortrait" border art itself renders asymmetrically around the
-    -- frame's logical edges; a symmetric inset offset leaves visibly uneven padding against
-    -- it. Tuned empirically against screenshots, not derived from the border atlas.
+    -- Left/right offsets are asymmetric (13/9) because the border art itself renders
+    -- asymmetrically around the frame's edges; tuned empirically against screenshots.
     self.frame.Inset:ClearAllPoints()
     self.frame.Inset:SetPoint("TOPLEFT", self.frame, "TOPLEFT", 13, -topOffset)
     self.frame.Inset:SetPoint("BOTTOMRIGHT", self.frame, "BOTTOMRIGHT", -9, 4)
     self.content:ClearAllPoints()
     self.content:SetPoint("TOPLEFT", self.frame.Inset, "TOPLEFT", 4, -4)
     self.content:SetPoint("BOTTOMRIGHT", self.frame.Inset, "BOTTOMRIGHT", -4, 4)
-end
-
---- Description: Computes a fixed size as a proportion of the physical screen, corrected for
---- the user's current UI scale, so the window occupies a consistent proportion of the
---- screen regardless of the user's chosen UI scale setting.
---- @param: widthPct/heightPct - target size as a fraction of screen width/height.
---- @param: minW/minH/maxW/maxH - clamp bounds in UI-scale-corrected pixels.
---- @return: width, height
-local function ComputeProportionalSize(widthPct, heightPct, minW, minH, maxW, maxH)
-    local screenWidth, screenHeight = GetPhysicalScreenSize()
-    local scale = UIParent:GetEffectiveScale()
-    local width = Clamp((screenWidth * widthPct) / scale, minW, maxW)
-    local height = Clamp((screenHeight * heightPct) / scale, minH, maxH)
-    return width, height
-end
-
---- Description: Sets a fixed, non-resizable size for the window computed proportionally to
---- the screen (see ComputeProportionalSize).
---- @param: widthPct/heightPct/minW/minH/maxW/maxH - see ComputeProportionalSize.
---- @return:
-local function SetProportionalSize(self, widthPct, heightPct, minW, minH, maxW, maxH)
-    local width, height = ComputeProportionalSize(widthPct, heightPct, minW, minH, maxW, maxH)
-    self.frame:SetSize(width, height)
 end
 
 -- Constructor
@@ -140,7 +115,6 @@ local function Constructor()
         OnRelease = OnRelease,
         Hide = Hide,
         Show = Show,
-        SetProportionalSize = SetProportionalSize,
         SetCompactHeader = SetCompactHeader,
     }
 
