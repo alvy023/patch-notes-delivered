@@ -6,7 +6,7 @@
 -- For more information, visit the project repository.
 
 --- Export global notes variable
---- Max line length [95] ----------------------------------------------------------------------
+--- Max line length [90] -----------------------------------------------------------------
 PatchNotesDelivered_Notes_Temp = {
     version = "1.0.0",
     build = "00000",
