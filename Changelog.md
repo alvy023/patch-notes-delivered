@@ -19,6 +19,14 @@ and this project adheres to a specific versioning schema: `A.B.C` where:
 - Removed the manual resize handle and "Reset Size" button, since the window size is no
   longer adjustable.
 
+## [1.12.69] - 2026-07-29
+### Added
+- Added 12.0.7 hotfix notes for July 28, 2026
+### Changed
+- Updated TOC to 1.12.69
+
+[1.12.69]: https://github.com/alvy023/patch-notes-delivered/releases/tag/v1.12.69
+
 ## [1.12.68] - 2026-07-22
 ### Added
 - Added 12.0.7 hotfix notes for July 21, 2026

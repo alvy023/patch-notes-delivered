@@ -6,16 +6,31 @@
 -- For more information, visit the project repository.
 
 --- Export global notes variable
---- gameChangesHotfixes/gameChangesPatch text is hard-wrapped at ~95 chars, sized for the
---- date-tree's detail pane. Bullet levels (•/>/+/-) get 4 spaces of indent each, headings/
---- paragraphs sit at 0; wrapped lines hang-indent to the bullet's text start, except
---- unmarked heading/paragraph continuations, which stay flush.
---- Other notes/*.lua files still use the older, wider-window 140/190-char convention.
+--- Max line length [95] ----------------------------------------------------------------------
 PatchNotesDelivered_Notes_1207 = {
     version = "12.0.7",
-    build = "68453",
-    hotfix = 10,
+    build = "68887",
+    hotfix = 11,
     gameChangesHotfixes = {
+        {
+            date = "July 28, 2026",
+            text = [[
+Classes
+    • Death Knight
+        > Blood
+            + Fixed a bug that caused the Dance of Midnight Apex talent ranks 2 and 3 to 
+              incorrectly increase damage taken. They now decrease damage taken, as intended.
+
+Player versus Player
+    • Fixed an issue where using Will of the Forsaken to break Mind Control would not show the
+      cooldown on your PvP trinket.
+
+World Bosses
+    • Fixed a bug that could prevent alt characters from receiving soulbound items when killing
+      the World Boss.
+    • Fixed a bug where rewards could include a piece unmatched to the player’s chosen spec.
+            ]],
+        },
         {
             date = "July 21, 2026",
             text = [[
