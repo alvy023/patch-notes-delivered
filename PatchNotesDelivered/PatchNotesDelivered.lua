@@ -456,8 +456,8 @@ function PatchNotesDelivered:ShowPatchNotes()
 
     -- Version Dropdown, positioned to the right of the section tabs
     local versionDropdown = AceGUI:Create("Dropdown")
-    local versionDropdownText = GetNotesListDropdown()
-    versionDropdown:SetList(versionDropdownText)
+    local versionDropdownText, versionDropdownOrder = GetNotesListDropdown()
+    versionDropdown:SetList(versionDropdownText, versionDropdownOrder)
     versionDropdown:SetValue(AVAILABLE_NOTES[1].version)
     versionDropdown:SetWidth(100)
     versionDropdown:SetCallback("OnValueChanged", function(widget, event, key)
