@@ -143,6 +143,68 @@ local function CreateSectionLabel(scroll, text, title, footer, options)
     scroll:AddChild(label)
 end
 
+--- Description: Adds a single Image-PND child to the scroll, scaled to the same width
+--- CreateSectionLabel uses so images line up flush with the surrounding text.
+--- @param: scroll (AceGUI ScrollFrame)
+--- @param: image ({ token, path, width, height, caption? })
+--- @return:
+local function AddImageChild(scroll, image)
+    if not image or not image.path or not image.width or not image.height or image.width <= 0 then
+        return
+    end
+
+    local widget = AceGUI:Create("Image-PND")
+    local displayWidth = scroll.frame:GetWidth() * 0.96
+    local displayHeight = displayWidth * (image.height / image.width)
+    widget:SetImage(image.path)
+    widget:SetImageSize(displayWidth, displayHeight)
+    scroll:AddChild(widget)
+
+    if image.caption and not image.caption:match("^%s*$") then
+        local caption = AceGUI:Create("Label")
+        caption:SetWidth(displayWidth)
+        caption:SetFontObject(GameFontDisableSmall)
+        caption:SetJustifyH("CENTER")
+        caption:SetText(image.caption)
+        scroll:AddChild(caption)
+    end
+end
+
+--- Description: Renders an entry's text and images into the scroll, splitting text on
+--- inline "[[img:N]]" markers and interleaving the matching Image-PND widget (looked up
+--- by token) between the surrounding text chunks, in order. Falls back to a single
+--- CreateSectionLabel call when there are no markers/images, preserving prior behavior.
+--- @param: scroll (AceGUI ScrollFrame)
+--- @param: text (string)
+--- @param: images (array of { token, path, width, height, caption? }, or nil)
+--- @param: title (string, only used for the no-sidebar case)
+--- @param: footer (string, only used for the no-sidebar case)
+--- @param: options (table)
+--- @return:
+local function RenderEntryBody(scroll, text, images, title, footer, options)
+    if not text or text:match("^%s*$") then return end
+
+    local labelText = (title or "") .. text .. (footer or "")
+
+    local imagesByToken = {}
+    for _, image in ipairs(images or {}) do
+        imagesByToken[image.token] = image
+    end
+
+    if not next(imagesByToken) then
+        CreateSectionLabel(scroll, labelText, nil, nil, options)
+        return
+    end
+
+    local pos = 1
+    for markerStart, token, markerEnd in labelText:gmatch("()%[%[img:(%d+)%]%]()") do
+        CreateSectionLabel(scroll, labelText:sub(pos, markerStart - 1), nil, nil, options)
+        AddImageChild(scroll, imagesByToken[token])
+        pos = markerEnd
+    end
+    CreateSectionLabel(scroll, labelText:sub(pos), nil, nil, options)
+end
+
 --- Description: Normalizes a hotfix/patch/addon field into an array of { date, text }
 --- entries. Older single-string [[ ]] files get wrapped as one dateless entry.
 --- @param: value (table or string)
@@ -180,19 +242,19 @@ local function BuildSectionItems(key)
     local items = {}
     if key == "hotfixes" then
         for _, entry in ipairs(NormalizeDatedEntries(PATCH_NOTES.gameChangesHotfixes)) do
-            table.insert(items, { label = entry.date, text = entry.text })
+            table.insert(items, { label = entry.date, text = entry.text, images = entry.images })
         end
     elseif key == "addon" then
         local entries = NormalizeDatedEntries(PATCH_NOTES.addonChanges)
         local singleEntry = #entries == 1
         for _, entry in ipairs(entries) do
-            table.insert(items, { label = singleEntry and "Overview" or entry.date, text = entry.text })
+            table.insert(items, { label = singleEntry and "Overview" or entry.date, text = entry.text, images = entry.images })
         end
     elseif key == "patch" then
         local mainEntries = NormalizeDatedEntries(PATCH_NOTES.gameChangesPatch)
         local singleMain = #mainEntries == 1
         for _, entry in ipairs(mainEntries) do
-            table.insert(items, { label = singleMain and "Overview" or entry.date, text = entry.text })
+            table.insert(items, { label = singleMain and "Overview" or entry.date, text = entry.text, images = entry.images })
         end
         for _, class in ipairs(classFields) do
             local text = PATCH_NOTES[class.key]
@@ -368,19 +430,21 @@ function PatchNotesDelivered:ShowPatchNotes()
         child.frame:SetPoint("BOTTOMRIGHT", container.content, "BOTTOMRIGHT")
     end
 
-    --- Description: Adds a ScrollFrame with a single label to a container - used for flat
-    --- sections and for a tree's selected-item pane. Anchors the scroll before populating
-    --- it, so the label wraps against its real final width instead of a stale pooled one.
+    --- Description: Adds a ScrollFrame with a single label (and any interleaved images) to
+    --- a container - used for flat sections and for a tree's selected-item pane. Anchors
+    --- the scroll before populating it, so content wraps against its real final width
+    --- instead of a stale pooled one.
     --- @param: container (AceGUI container widget)
     --- @param: text (string)
+    --- @param: images (array of { token, path, width, height, caption? }, or nil)
     --- @param: title (string, only used for the no-sidebar case)
     --- @param: footer (string, only used for the no-sidebar case)
     --- @return:
-    local function AddTextScroll(container, text, title, footer)
+    local function AddTextScroll(container, text, images, title, footer)
         local scroll = AceGUI:Create("ScrollFrame")
         scroll:SetLayout("Flow")
         AddFillChild(container, scroll)
-        CreateSectionLabel(scroll, text, title, footer, bodyOptions)
+        RenderEntryBody(scroll, text, images, title, footer, bodyOptions)
     end
 
     --- Description: Populates the selected tab. Sections with 2+ items (dated entries
@@ -399,7 +463,7 @@ function PatchNotesDelivered:ShowPatchNotes()
 
         if not useTree then
             local header = sectionHeaders[selectedKey]
-            AddTextScroll(pnd, items[1] and items[1].text, header.title, header.footer)
+            AddTextScroll(pnd, items[1] and items[1].text, items[1] and items[1].images, header.title, header.footer)
         else
             local tree = AceGUI:Create("TreeGroup")
             -- Parent the tree before configuring it - TreeGroup defers its first build to
@@ -415,7 +479,8 @@ function PatchNotesDelivered:ShowPatchNotes()
             tree:SetTree(treeData)
             tree:SetCallback("OnGroupSelected", function(widget, event, value)
                 widget:ReleaseChildren()
-                AddTextScroll(widget, items[tonumber(value)].text)
+                local item = items[tonumber(value)]
+                AddTextScroll(widget, item.text, item.images)
             end)
 
             -- Deferred a frame: selecting immediately builds the label before its width is

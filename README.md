@@ -42,13 +42,14 @@ patch-notes-delivered
 │   ├── assets/
 │   ├── libs/
 │   │   ├── Ace3/
-│   │   ├── Ace3-PND/
 │   │   ├── LibDBIcon-1.0/
 │   │   └── LibDataBroker-1.1/
 │   ├── notes/
 │   ├── PatchNotesDelivered.lua
 │   ├── PatchNotesDelivered.toc
-│   └── PatchNotesText.lua
+│   ├── PatchNotesImageWidget.lua
+│   ├── PatchNotesText.lua
+│   └── PatchNotesWindow.lua
 ├── License.txt
 ├── README.md
 └── ThirdPartyNotices.md
