@@ -19,8 +19,8 @@ and this project adheres to a specific versioning schema: `A.B.C` where:
 - Reworked the patch notes window to use Blizzard's native `ButtonFrameTemplate` chrome
   (portrait, title bar, and close button) instead of custom-drawn textures, for a
   higher-resolution, in-theme look.
-- The window is now a fixed size (no longer user-resizable), sized proportionally to your
-  screen and UI scale so it stays consistent across different display setups.
+- The window is now a fixed size (no longer user-resizable), so it stays consistent across
+  different display setups.
 - Narrowed the max patch note text line width from 95 to 90 characters across existing
   note files, since proportional-font word-wrap made 95 unsafe.
 - Updated TOC to 2.12.69
