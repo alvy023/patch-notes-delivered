@@ -957,6 +957,16 @@ USER INTERFACE AND ACCESSIBILITY
     ]],
     addonChanges = {
         {
+            date = "August 5, 2026",
+            text = [[
+    • Updated UI theme to be in line with the default Blizzard UI
+    • Moved notes type selection to tabs
+    • Reversed the patch selector dropdown
+    • Added the hotfix/class selector subsection
+    • Added the notes-specific subsection
+            ]],
+        },
+        {
             text = [[
 UI Updates Soon?
             ]],

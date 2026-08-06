@@ -394,7 +394,11 @@ function PatchNotesDelivered:ShowPatchNotes()
     -- at 703x606) rather than a proportion of screen resolution - WoW's UI scale already keeps
     -- a fixed size consistent across displays, so scaling off screen resolution instead just
     -- made the window huge on lower-resolution/small laptop screens.
-    pnd.frame:SetSize(900, 650)
+    -- Width is 60px wider than the journal-window baseline below specifically to give the
+    -- sidebar (see SetTreeWidth) room for long dates like "September 30, 2026" without
+    -- shrinking the notes pane - both were widened by the same 60px so the notes pane's
+    -- width, and therefore its 90-char wrap, is unaffected.
+    pnd.frame:SetSize(960, 650)
 
     -- Set the title area
     pnd:SetTitle("|cff00B4FFThe Weekly Mrrgl, |r|cffffffff" ..
@@ -469,7 +473,10 @@ function PatchNotesDelivered:ShowPatchNotes()
             -- Parent the tree before configuring it - TreeGroup defers its first build to
             -- the next frame if its frame still has the pooled default parent (UIParent).
             AddFillChild(pnd, tree)
-            tree:SetTreeWidth(160, false)
+            -- Widened from 160 so long dates ("September 30, 2026") don't get cut off; the
+            -- window was widened by the same amount (see pnd.frame:SetSize) to keep the
+            -- notes pane's width unchanged.
+            tree:SetTreeWidth(220, false)
             tree:EnableButtonTooltips(false)
 
             local treeData = {}
