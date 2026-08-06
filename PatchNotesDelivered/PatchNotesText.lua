@@ -24,13 +24,17 @@ PatchNotesDelivered_Text = nil
 
 --- Description: Get the patch notes list dropdown
 --- @param:
---- @return dropdown
+--- @return dropdown, order (order lists versions newest-to-oldest, matching
+---         AVAILABLE_NOTES - without it AceGUI's Dropdown falls back to sorting keys
+---         alphabetically, i.e. oldest-to-newest)
 function GetNotesListDropdown()
     local dropdown = {}
+    local order = {}
     for _, note in ipairs(AVAILABLE_NOTES) do
         dropdown[note.version] = note.version
+        table.insert(order, note.version)
     end
-    return dropdown
+    return dropdown, order
 end
 
 --- Description: Build the patch notes table
