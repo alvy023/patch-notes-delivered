@@ -8,7 +8,7 @@ and this project adheres to a specific versioning schema: `A.B.C` where:
 - **B** (Game Major): Tracks the WoW Game’s Major version (e.g., 12 in 12.0.0).
 - **C** (Iteration): Increments on every release update (Minor, Patch, or Hotfix compatibility).
 
-## [2.12.70] - 2026-08-06
+## [2.12.70] - 2026-08-07
 ### Added
 - Added 12.0.7 hotfix notes for July 28, 2026
 ### Changed
