@@ -7,15 +7,11 @@
 
 -- Global notes list
 AVAILABLE_NOTES = {
+    { version = "12.1.0", data = PatchNotesDelivered_Notes_1210 },
     { version = "12.0.7", data = PatchNotesDelivered_Notes_1207 },
     { version = "12.0.5", data = PatchNotesDelivered_Notes_1205 },
     { version = "12.0.1", data = PatchNotesDelivered_Notes_1201 },
     { version = "12.0.0", data = PatchNotesDelivered_Notes_1200 },
-    { version = "11.2.7", data = PatchNotesDelivered_Notes_1127 },
-    { version = "11.2.5", data = PatchNotesDelivered_Notes_1125 },
-    { version = "11.2.0", data = PatchNotesDelivered_Notes_1120 },
-    { version = "11.1.7", data = PatchNotesDelivered_Notes_1117 },
-    { version = "11.1.5", data = PatchNotesDelivered_Notes_1115 },
 }
 
 -- Variables used by BuildPatchNotes()
@@ -47,7 +43,7 @@ function BuildPatchNotes()
         hotfix = PatchNotesDelivered_Pointer.hotfix,
         gameChangesHotfixes = PatchNotesDelivered_Pointer.gameChangesHotfixes,
         gameChangesPatch = PatchNotesDelivered_Pointer.gameChangesPatch,
-        deathKnightChangesPatch = PatchNotesDelivered_Pointer.deathKnightChangesPatch, -- see patch-11.2.0.lua for reference
+        deathKnightChangesPatch = PatchNotesDelivered_Pointer.deathKnightChangesPatch, -- see notes_archive/patch-11.2.0.lua for reference
         demonHunterChangesPatch = PatchNotesDelivered_Pointer.demonHunterChangesPatch,
         druidChangesPatch = PatchNotesDelivered_Pointer.druidChangesPatch,
         evokerChangesPatch = PatchNotesDelivered_Pointer.evokerChangesPatch,

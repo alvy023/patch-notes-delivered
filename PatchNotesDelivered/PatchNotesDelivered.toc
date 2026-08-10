@@ -1,4 +1,4 @@
-## Interface: 120007, 120005, 120001, 120000
+## Interface: 120100, 120007, 120005, 120001, 120000
 ## Title: Patch Notes Delivered
 ## Notes: Displays patch notes on login and notifies of new versions.
 ## Author: alvy023
@@ -21,15 +21,11 @@ libs/LibDataBroker-1.1/LibDataBroker-1.1.lua
 libs/LibDBIcon-1.0/LibDBIcon-1.0.lua
 
 # Notes Files
-notes/patch-11.1.5.lua
-notes/patch-11.1.7.lua
-notes/patch-11.2.0.lua
-notes/patch-11.2.5.lua
-notes/patch-11.2.7.lua
 notes/patch-12.0.0.lua
 notes/patch-12.0.1.lua
 notes/patch-12.0.5.lua
 notes/patch-12.0.7.lua
+notes/patch-12.1.0.lua
 
 # Core Addon Files
 PatchNotesWindow.lua

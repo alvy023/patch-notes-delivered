@@ -9,12 +9,11 @@ and this project adheres to a specific versioning schema: `A.B.C` where:
 - **C** (Iteration): Increments on every release update (Minor, Patch, or Hotfix compatibility).
 
 ## [Unreleased]
-
-## [2.12.69] - 2026-08-05
 ### Added
 - Support for rendering inline images within patch note text via `[[img:N]]` markers and
   a per-entry `images` field (infrastructure only - no shipped notes reference an image
   yet).
+- Added 12.1.0 patch notes for August 11, 2026.
 ### Changed
 - Reworked the patch notes window to use Blizzard's native `ButtonFrameTemplate` chrome
   (portrait, title bar, and close button) instead of custom-drawn textures, for a
@@ -30,8 +29,6 @@ and this project adheres to a specific versioning schema: `A.B.C` where:
 ### Removed
 - Removed the manual resize handle and "Reset Size" button, since the window size is no
   longer adjustable.
-
-[2.12.69]: https://github.com/alvy023/patch-notes-delivered/releases/tag/v2.12.69
 
 ## [1.12.69] - 2026-07-29
 ### Added
