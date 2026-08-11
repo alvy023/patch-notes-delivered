@@ -8,9 +8,9 @@
 --- Export global notes variable
 --- Max line length [90] -----------------------------------------------------------------
 PatchNotesDelivered_Notes_1207 = {
-    version = "12.0.7",
-    build = "68887",
-    hotfix = 11,
+    version = "12.1.0",
+    build = "69214",
+    hotfix = 12,
     gameChangesHotfixes = {
         {
             date = "July 28, 2026",
