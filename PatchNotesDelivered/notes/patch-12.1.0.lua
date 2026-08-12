@@ -16,55 +16,55 @@ PatchNotesDelivered_Notes_1210 = {
     gameChangesPatch = {
         {
             date = "2026-08-06",
-            text = [[
+            text = [=[
 Continue the Midnight campaign as the Curse of Ula'tek content update opens the way to the Coiled Isle, where venomous foes, cursed waters, and long-buried secrets await. Take on new adventures, including the Venomous Abyss raid, Altar of Fangs dungeon, new Delves, Season 2 challenges, housing updates, and more.
 
 EXPLORE A NEW OUTDOOR ZONE—THE COILED ISLE
-[[img:4] ]
+[[img:4]]
     Continue the story of Zul'jan as the fog lifts from the island off the east coast of Zul'Aman. We'll join Zul'jarra as she pursues him to bring her brother and others home to Zul'Aman. We'll delve into a long-buried history of the Coiled Isle, learn more about what is locked away, and who was left behind.
 
 ENTER THE MOUNTAIN FOR NEW ADVENTURES
-[[img:5] ]
+[[img:5]]
     Undertake a variety of new activities within the mountain on the Coiled Isle as you explore this corrupted eco-system filled with poisonous waters and venomous foes.
 
     Plunge into the Vaults of Atal'Utek primed for challenging group content and rotating public events. Taking part in these public events will ultimately build up to a boss fight.
 
     While in the zone players will have access to a custom talent tree that will provide different perks of player power along with quality-of-life perks. These perks can include things such as something to reduce the potency of the venom found around the isle as you explore.
-[[img:6] ]
+[[img:6]]
 
 ENCOUNTER CURSE SURGES AND FACE RARE ELITES
-[[img:7] ]
+[[img:7]]
     As you adventure through the zone, you'll come across Curse Surges which will regularly spawn rare elites at five rotating locations throughout the isle.
-[[img:8] ]
+[[img:8]]
     Killing a rare elite unlocks Venom Fishing in that location. You'll also discover a Local story with a tortollan sea captain named Tokka, gain reputation with his crew, and learn to fish in more cursed waters around the isle.
 
 STEP INTO LAIRS AND FACE THE WORLD BOSS INSIDE
-[[img:9] ]
+[[img:9]]
     Introducing Lairs an evolution on world bosses located in instanced encounters with scaling difficulty up to flexible Mythic with 15-25 players. These will be found in specific locations similar to Delves and will come complete with a summoning stone outside the lair.
-[[img:10] ]
+[[img:10]]
 
 FACE THREE NEW BOSSES IN A NEW DUNGEON—ALTAR OF FANGS
-[[img:11] ]
+[[img:11]]
     This new three boss dungeon will be available up to Mythic 0 difficulty at the launch of the content update and will join the Mythic+ rotation once Midnight Season 2 begins a week after the launch.
 
 DESCEND INTO THE VENOMOUS ABYSS RAID AND CONFRONT ULA'TEK
-[[img:12] ]
+[[img:12]]
     Arriving with the start of Midnight Season 2, players face Ula'tek herself in the Venomous Abyss. An ancient powerful creature of hatred, corruption, and venom, Ula'tek has been unleashed by Zul'jan's actions. This new raid dungeon will feature eight new boss encounters and you'll ultimately face off against Ula'tek as the final boss.
 
 VENTURE INTO THREE NEW DELVES INCLUDING A NEW NEMESIS DELVE
-[[img:13] ]
+[[img:13]]
     The Ring of Glory
-[[img:14] ]
+[[img:14]]
     Gnarldor Isle
-[[img:15] ]
+[[img:15]]
     Venomfall Deeps Nemesis Delve
 
     Take on three new Delves with one of these as a new Nemesis Delve. You'll step into The Ring of Glory, Gnarldor Isle, and the Venomfall Deeps Nemesis Delve for new rewards (and a little glory). With the start of Midnight Season 2 on August 18, Bountiful Delves become available and players will be able to push into the upper tiers to challenge themselves beyond Tier 7 and face the new Nemesis boss.
-[[img:16] ]
+[[img:16]]
     Encounter new snake and venom variants in existing Midnight Delves.
 
 GET READY FOR MIDNIGHT SEASON 2
-[[img:17] ]
+[[img:17]]
     One week after the content update goes live the new season will begin, bringing with it a new dungeon rotation for Mythic+, a new raid, new PvP Season, more Prey, and Bountiful Delves, and keys become available.
 
     MYTHIC+ DUNGEON ROTATION
@@ -80,8 +80,8 @@ GET READY FOR MIDNIGHT SEASON 2
     • Temple of Sethraliss
 
 STALK NEW PREY IN SEASON 2
-[[img:18] ]
-[[img:19] ]
+[[img:18]]
+[[img:19]]
     When Season 2 begins on August 18, players can begin the A Slithering Threat questline as Nightmare Mode returns with four new serpent-themed targets and hunts across the Coiled Isle.
 
     In Nightmare Mode on the Coiled Isle, you'll collect Ossified Relics to activate a Haunted Braziers around the zone to summon Ral'kala and defeat him for unique rewards. This is meant to be something you work with other players on.
@@ -91,7 +91,7 @@ STALK NEW PREY IN SEASON 2
     Lastly, The Curse of the Isle introduces a permanent Nightmare Mode that can be toggled on to increase the danger across the Coiled Isle for players looking for an even greater challenge!
 
 TRAINING GROUNDS EXPANDS TO THE ARENA
-[[img:20] ]
+[[img:20]]
     Training Grounds have introduced more players to the PvP ecosystem. After the introduction to Battlegrounds versus bots, we're introducing 3v3 Arenas versus bots to players who want to dip their toes into the Arena and start learning the ropes. To give this new feature a try, select Training Grounds from the Player vs. Player tab in the Group Finder.
 
 HOUSING UPDATES
@@ -99,8 +99,8 @@ HOUSING UPDATES
     MAKE THE MOST OF HOUSING WITH BLUEPRINTS
 
     For players who want to share their cool builds with others, you'll be able to export the entirety of your exterior and your interior, or your interior, your exterior, or a single room alone as you like.
-[[img:21] ]
-[[img:22] ]
+[[img:21]]
+[[img:22]]
     • Blueprints let players save their housing creations to swap between or share them with other players!
     • Blueprint codes can be shared cross-region (excluding China) with other players for them to import as well.
     • Blueprints operate on the entire house (both inside and out), the interior only, the exterior only, or a single room.
@@ -116,8 +116,8 @@ HOUSING UPDATES
     WELCOME YOUR PETS HOME
 
     Let your pets roam free in your home by adding a Pet Bed decor item which will let you place your noncombat companion pet inside the house. Your pet will also be able to wander through your home through some new navigation technology allowing them to make their way around your decor.
-[[img:23] ]
-[[img:24] ]
+[[img:23]]
+[[img:24]]
     • Pet Beds allow players to show off their pets both in and outside their house.
     • Players can place up to 100 beds inside and up to 25 beds outside. Once a bed is placed, players can select a pet to make its home there.
     • Indoor pets can be set to either Stationary or Roaming while pets placed outdoors are only Stationary for the time being.
@@ -126,19 +126,19 @@ HOUSING UPDATES
     NEW ENDEAVORS IN YOUR NEIGHBORHOOD
 
     Four new Endeavors arrive to your neighborhood for the Amani trolls, kobolds, Ohn'ahran centaur, and tortollan.
-[[img:25] ]
+[[img:25]]
     Amani Trolls: Knock-off Amani
 
     Griftah and his travelling troupe of traders would like to visit the neighborhood to trade their traditional Amani goods. It's fairly obvious that these are not original Amani items, however the neighborhood residents are interested nonetheless.
-[[img:26] ]
+[[img:26]]
     Kobolds: Candle Culture
 
     Strange wax deposits have started to appear in the neighborhood. Who better to find a use than the Kobolds of the Ringing Deeps? Seek their counsel on illumination.
-[[img:27] ]
+[[img:27]]
     Ohn'ahran Centaurs: Every Bakar Has Its Day
 
     Residents of the neighborhood love their pets, but they could use some help training them. The centaurs of the Ohn'ahran Plains have very strong bonds with their bakar and they may be willing to pass on some training tips.
-[[img:28] ]
+[[img:28]]
     Tortollans: Vacation Season
 
     The Tortollans are a worldly folk. So worldly, in fact, that they need no introduction to your neighborhood--they've been vacationing here long before you put down your roots! Share in their recreational wisdom.
@@ -162,21 +162,21 @@ HOUSING UPDATES
 COOLDOWN MANAGER AND USER INTERFACE UPDATES AHEAD
 
     With the new updates, the Cooldown Manager will now be able to track trinkets and potions, helping with consumable management. It can also track racial ability cooldowns and durations.
-[[img:29] ]
-[[img:30] ]
+[[img:29]]
+[[img:30]]
     For managing other resources, more updates arrive to the ping system. Players can ping their action bar or the Cooldown Manager directly providing your team with the status of your spells.
-[[img:31] ]
+[[img:31]]
     Your own unit frames can also get pinged to convey the status of your health to the group and players who are acting in a healing role will also share the status of their mana saving them from needing to say, OOM before the next pull.
-[[img:32] ]
+[[img:32]]
     Healers can now configure or hide the buffs shown on Raid Frames, so the healing effects that matter most to you stay visible.
-[[img:33] ]
+[[img:33]]
 
 LINK YOUR BATTLE.NET ACCOUNT TO DISCORD
-[[img:34] ]
+[[img:34]]
     Speak with your guildmates both in and out of the game by connecting your Battle.net and Discord accounts to chat with your guild no matter where they are. Whether you're coordinating your next raid run, looking for more to join you in game for PvP, or just hanging out in your neighborhoods together, you'll be able to send messages between the two quickly and easily.
 
 CONTINUE THE HUNT FOR XAL'ATATH WITH ARATOR
-[[img:35] ]
+[[img:35]]
     After the start of Season 2, join Arator once more as he deals with the fallout from the Voidspire and also investigate the resurgence of the Twilight's Blade with him as we continue the hunt for Xal'atath.
 
 CHARACTERS
@@ -450,40 +450,40 @@ USER INTERFACE AND ACCESSIBILITY
 WORLD
     • The Amani Pass between Eversong Woods and Zul'Aman should no longer dismount players that pass through it.
     • Fixed several creature spawns across the entire game that could cause players to get stuck in combat.
-            ]],
+            ]=],
         images = {
-            { token = "4", path = "Interface\AddOns\PatchNotesDelivered\media\12.1.0\4.png", width = 1280, height = 720 },
-            { token = "5", path = "Interface\AddOns\PatchNotesDelivered\media\12.1.0\5.png", width = 1280, height = 720 },
-            { token = "6", path = "Interface\AddOns\PatchNotesDelivered\media\12.1.0\6.png", width = 1280, height = 720 },
-            { token = "7", path = "Interface\AddOns\PatchNotesDelivered\media\12.1.0\7.png", width = 1280, height = 720 },
-            { token = "8", path = "Interface\AddOns\PatchNotesDelivered\media\12.1.0\8.png", width = 1280, height = 720 },
-            { token = "9", path = "Interface\AddOns\PatchNotesDelivered\media\12.1.0\9.png", width = 1280, height = 720 },
-            { token = "10", path = "Interface\AddOns\PatchNotesDelivered\media\12.1.0\10.png", width = 1280, height = 720 },
-            { token = "11", path = "Interface\AddOns\PatchNotesDelivered\media\12.1.0\11.png", width = 1280, height = 720 },
-            { token = "12", path = "Interface\AddOns\PatchNotesDelivered\media\12.1.0\12.png", width = 1280, height = 720 },
-            { token = "13", path = "Interface\AddOns\PatchNotesDelivered\media\12.1.0\13.png", width = 1280, height = 720, caption = "alternate-image-name" },
-            { token = "14", path = "Interface\AddOns\PatchNotesDelivered\media\12.1.0\14.png", width = 1280, height = 720, caption = "alternate-image-name" },
-            { token = "15", path = "Interface\AddOns\PatchNotesDelivered\media\12.1.0\15.png", width = 1280, height = 720, caption = "alternate-image-name" },
-            { token = "16", path = "Interface\AddOns\PatchNotesDelivered\media\12.1.0\16.png", width = 1280, height = 720 },
-            { token = "17", path = "Interface\AddOns\PatchNotesDelivered\media\12.1.0\17.png", width = 1920, height = 1080 },
-            { token = "18", path = "Interface\AddOns\PatchNotesDelivered\media\12.1.0\18.png", width = 1280, height = 720, caption = "alternate-image-name" },
-            { token = "19", path = "Interface\AddOns\PatchNotesDelivered\media\12.1.0\19.png", width = 1280, height = 720, caption = "alternate-image-name" },
-            { token = "20", path = "Interface\AddOns\PatchNotesDelivered\media\12.1.0\20.png", width = 1280, height = 720 },
-            { token = "21", path = "Interface\AddOns\PatchNotesDelivered\media\12.1.0\21.png", width = 1280, height = 720, caption = "alternate-image-name" },
-            { token = "22", path = "Interface\AddOns\PatchNotesDelivered\media\12.1.0\22.png", width = 1280, height = 720, caption = "alternate-image-name" },
-            { token = "23", path = "Interface\AddOns\PatchNotesDelivered\media\12.1.0\23.png", width = 1280, height = 720, caption = "alternate-image-name" },
-            { token = "24", path = "Interface\AddOns\PatchNotesDelivered\media\12.1.0\24.png", width = 1280, height = 720, caption = "alternate-image-name" },
-            { token = "25", path = "Interface\AddOns\PatchNotesDelivered\media\12.1.0\25.png", width = 1280, height = 720, caption = "alternate-image-name" },
-            { token = "26", path = "Interface\AddOns\PatchNotesDelivered\media\12.1.0\26.png", width = 1280, height = 720, caption = "alternate-image-name" },
-            { token = "27", path = "Interface\AddOns\PatchNotesDelivered\media\12.1.0\27.png", width = 1280, height = 720, caption = "alternate-image-name" },
-            { token = "28", path = "Interface\AddOns\PatchNotesDelivered\media\12.1.0\28.png", width = 1280, height = 720, caption = "alternate-image-name" },
-            { token = "29", path = "Interface\AddOns\PatchNotesDelivered\media\12.1.0\29.png", width = 653, height = 800, caption = "alternate-image-name" },
-            { token = "30", path = "Interface\AddOns\PatchNotesDelivered\media\12.1.0\30.png", width = 653, height = 800, caption = "alternate-image-name" },
-            { token = "31", path = "Interface\AddOns\PatchNotesDelivered\media\12.1.0\31.png", width = 1280, height = 720, caption = "alternate-image-name" },
-            { token = "32", path = "Interface\AddOns\PatchNotesDelivered\media\12.1.0\32.png", width = 1920, height = 1080, caption = "alternate-image-name" },
-            { token = "33", path = "Interface\AddOns\PatchNotesDelivered\media\12.1.0\33.png", width = 1080, height = 1139, caption = "alternate-image-name" },
-            { token = "34", path = "Interface\AddOns\PatchNotesDelivered\media\12.1.0\34.png", width = 2400, height = 1350 },
-            { token = "35", path = "Interface\AddOns\PatchNotesDelivered\media\12.1.0\35.png", width = 1920, height = 1080 },
+            { token = "4", path = "Interface\\AddOns\\PatchNotesDelivered\\media\\12.1.0\\4.png", width = 1280, height = 720 },
+            { token = "5", path = "Interface\\AddOns\\PatchNotesDelivered\\media\\12.1.0\\5.png", width = 1280, height = 720 },
+            { token = "6", path = "Interface\\AddOns\\PatchNotesDelivered\\media\\12.1.0\\6.png", width = 1280, height = 720 },
+            { token = "7", path = "Interface\\AddOns\\PatchNotesDelivered\\media\\12.1.0\\7.png", width = 1280, height = 720 },
+            { token = "8", path = "Interface\\AddOns\\PatchNotesDelivered\\media\\12.1.0\\8.png", width = 1280, height = 720 },
+            { token = "9", path = "Interface\\AddOns\\PatchNotesDelivered\\media\\12.1.0\\9.png", width = 1280, height = 720 },
+            { token = "10", path = "Interface\\AddOns\\PatchNotesDelivered\\media\\12.1.0\\10.png", width = 1280, height = 720 },
+            { token = "11", path = "Interface\\AddOns\\PatchNotesDelivered\\media\\12.1.0\\11.png", width = 1280, height = 720 },
+            { token = "12", path = "Interface\\AddOns\\PatchNotesDelivered\\media\\12.1.0\\12.png", width = 1280, height = 720 },
+            { token = "13", path = "Interface\\AddOns\\PatchNotesDelivered\\media\\12.1.0\\13.png", width = 1280, height = 720, caption = "alternate-image-name" },
+            { token = "14", path = "Interface\\AddOns\\PatchNotesDelivered\\media\\12.1.0\\14.png", width = 1280, height = 720, caption = "alternate-image-name" },
+            { token = "15", path = "Interface\\AddOns\\PatchNotesDelivered\\media\\12.1.0\\15.png", width = 1280, height = 720, caption = "alternate-image-name" },
+            { token = "16", path = "Interface\\AddOns\\PatchNotesDelivered\\media\\12.1.0\\16.png", width = 1280, height = 720 },
+            { token = "17", path = "Interface\\AddOns\\PatchNotesDelivered\\media\\12.1.0\\17.png", width = 1920, height = 1080 },
+            { token = "18", path = "Interface\\AddOns\\PatchNotesDelivered\\media\\12.1.0\\18.png", width = 1280, height = 720, caption = "alternate-image-name" },
+            { token = "19", path = "Interface\\AddOns\\PatchNotesDelivered\\media\\12.1.0\\19.png", width = 1280, height = 720, caption = "alternate-image-name" },
+            { token = "20", path = "Interface\\AddOns\\PatchNotesDelivered\\media\\12.1.0\\20.png", width = 1280, height = 720 },
+            { token = "21", path = "Interface\\AddOns\\PatchNotesDelivered\\media\\12.1.0\\21.png", width = 1280, height = 720, caption = "alternate-image-name" },
+            { token = "22", path = "Interface\\AddOns\\PatchNotesDelivered\\media\\12.1.0\\22.png", width = 1280, height = 720, caption = "alternate-image-name" },
+            { token = "23", path = "Interface\\AddOns\\PatchNotesDelivered\\media\\12.1.0\\23.png", width = 1280, height = 720, caption = "alternate-image-name" },
+            { token = "24", path = "Interface\\AddOns\\PatchNotesDelivered\\media\\12.1.0\\24.png", width = 1280, height = 720, caption = "alternate-image-name" },
+            { token = "25", path = "Interface\\AddOns\\PatchNotesDelivered\\media\\12.1.0\\25.png", width = 1280, height = 720, caption = "alternate-image-name" },
+            { token = "26", path = "Interface\\AddOns\\PatchNotesDelivered\\media\\12.1.0\\26.png", width = 1280, height = 720, caption = "alternate-image-name" },
+            { token = "27", path = "Interface\\AddOns\\PatchNotesDelivered\\media\\12.1.0\\27.png", width = 1280, height = 720, caption = "alternate-image-name" },
+            { token = "28", path = "Interface\\AddOns\\PatchNotesDelivered\\media\\12.1.0\\28.png", width = 1280, height = 720, caption = "alternate-image-name" },
+            { token = "29", path = "Interface\\AddOns\\PatchNotesDelivered\\media\\12.1.0\\29.png", width = 653, height = 800, caption = "alternate-image-name" },
+            { token = "30", path = "Interface\\AddOns\\PatchNotesDelivered\\media\\12.1.0\\30.png", width = 653, height = 800, caption = "alternate-image-name" },
+            { token = "31", path = "Interface\\AddOns\\PatchNotesDelivered\\media\\12.1.0\\31.png", width = 1280, height = 720, caption = "alternate-image-name" },
+            { token = "32", path = "Interface\\AddOns\\PatchNotesDelivered\\media\\12.1.0\\32.png", width = 1920, height = 1080, caption = "alternate-image-name" },
+            { token = "33", path = "Interface\\AddOns\\PatchNotesDelivered\\media\\12.1.0\\33.png", width = 1080, height = 1139, caption = "alternate-image-name" },
+            { token = "34", path = "Interface\\AddOns\\PatchNotesDelivered\\media\\12.1.0\\34.png", width = 2400, height = 1350 },
+            { token = "35", path = "Interface\\AddOns\\PatchNotesDelivered\\media\\12.1.0\\35.png", width = 1920, height = 1080 },
         },
         },
     },
