@@ -10,7 +10,6 @@ and this project adheres to a specific versioning schema: `A.B.C` where:
 
 ## [2.12.70] - 2026-08-11
 ### Added
-- Added 12.1.0 hotfix notes for Curse of Ula'tek Content Update Notes
 - Support for rendering inline images within patch note text via `[[img:N]]` markers and
   a per-entry `images` field (infrastructure only - no shipped notes reference an image
   yet).
