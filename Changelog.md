@@ -11,13 +11,6 @@ and this project adheres to a specific versioning schema: `A.B.C` where:
 ## [2.12.70] - 2026-08-13
 ### Added
 - Added 12.1.0 hotfix notes for Curse of Ula'tek Content Update Notes
-### Changed
-- Updated TOC to 2.12.70
-
-[2.12.70]: https://github.com/alvy023/patch-notes-delivered/releases/tag/v2.12.70
-
-## [Unreleased]
-### Added
 - Support for rendering inline images within patch note text via `[[img:N]]` markers and
   a per-entry `images` field (infrastructure only - no shipped notes reference an image
   yet).
@@ -37,6 +30,8 @@ and this project adheres to a specific versioning schema: `A.B.C` where:
 ### Removed
 - Removed the manual resize handle and "Reset Size" button, since the window size is no
   longer adjustable.
+
+[2.12.70]: https://github.com/alvy023/patch-notes-delivered/releases/tag/v2.12.70
 
 ## [1.12.69] - 2026-07-29
 ### Added
