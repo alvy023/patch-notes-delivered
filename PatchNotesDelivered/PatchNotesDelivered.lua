@@ -56,8 +56,6 @@ function PatchNotesDelivered:OnInitialize()
             minimap = { hide = false },
             addonCompartment = { hide = false },
             showOnUpdate = true,
-            frameWidth = 1000,
-            frameHeight = 700,
         }
     }, true)
     -- Register minimap button
@@ -111,16 +109,6 @@ function PatchNotesDelivered_OnAddonCompartmentLeave()
 end
 
 -- Functions
---- Description: Save the size of the patch notes frame
---- @param: self (PatchNotesDelivered instance)
---- @param: width (number)
---- @param: height (number)
-local function SaveFrameSize(self, width, height)
-    self.db.profile.frameWidth = width
-    self.db.profile.frameHeight = height
-end
-
-
 --- Description: Creates a label and adds it to the scroll frame.
 --- @param: scroll (AceGUI ScrollFrame)
 --- @param: text (string)
@@ -134,8 +122,9 @@ local function CreateSectionLabel(scroll, text, title, footer, options)
     local labelText = (title or "") .. text .. (footer or "")
 
     local label = AceGUI:Create("Label")
-    label:SetText(labelText)
-    label:SetRelativeWidth(0.96)
+    -- Measure the frame directly rather than SetRelativeWidth, which sizes off a cached
+    -- width that goes stale on a pooled/reused ScrollFrame.
+    label:SetWidth(scroll.frame:GetWidth() * 0.96)
 
     if options and options.font and options.size then
         label:SetFont(options.font, options.size, options.flags)
@@ -143,7 +132,138 @@ local function CreateSectionLabel(scroll, text, title, footer, options)
         label:SetFontObject(GameFontHighlight)
     end
 
+    -- Extra vertical space between wrapped lines, via the underlying native FontString
+    -- (AceGUI's Label doesn't expose this itself).
+    label.label:SetSpacing(6)
+
+    -- Must come last: SetText is what makes AceGUI measure and cache the label's height,
+    -- so width/font/spacing need to already be set beforehand.
+    label:SetText(labelText)
+
     scroll:AddChild(label)
+end
+
+--- Description: Adds a single Image-PND child to the scroll, scaled to the same width
+--- CreateSectionLabel uses so images line up flush with the surrounding text.
+--- @param: scroll (AceGUI ScrollFrame)
+--- @param: image ({ token, path, width, height, caption? })
+--- @return:
+local function AddImageChild(scroll, image)
+    if not image or not image.path or not image.width or not image.height or image.width <= 0 then
+        return
+    end
+
+    local widget = AceGUI:Create("Image-PND")
+    local displayWidth = scroll.frame:GetWidth() * 0.96
+    local displayHeight = displayWidth * (image.height / image.width)
+    widget:SetImage(image.path)
+    widget:SetImageSize(displayWidth, displayHeight)
+    scroll:AddChild(widget)
+
+    if image.caption and not image.caption:match("^%s*$") then
+        local caption = AceGUI:Create("Label")
+        caption:SetWidth(displayWidth)
+        caption:SetFontObject(GameFontDisableSmall)
+        caption:SetJustifyH("CENTER")
+        caption:SetText(image.caption)
+        scroll:AddChild(caption)
+    end
+end
+
+--- Description: Renders an entry's text and images into the scroll, splitting text on
+--- inline "[[img:N]]" markers and interleaving the matching Image-PND widget (looked up
+--- by token) between the surrounding text chunks, in order. Falls back to a single
+--- CreateSectionLabel call when there are no markers/images, preserving prior behavior.
+--- @param: scroll (AceGUI ScrollFrame)
+--- @param: text (string)
+--- @param: images (array of { token, path, width, height, caption? }, or nil)
+--- @param: title (string, only used for the no-sidebar case)
+--- @param: footer (string, only used for the no-sidebar case)
+--- @param: options (table)
+--- @return:
+local function RenderEntryBody(scroll, text, images, title, footer, options)
+    if not text or text:match("^%s*$") then return end
+
+    local labelText = (title or "") .. text .. (footer or "")
+
+    local imagesByToken = {}
+    for _, image in ipairs(images or {}) do
+        imagesByToken[image.token] = image
+    end
+
+    if not next(imagesByToken) then
+        CreateSectionLabel(scroll, labelText, nil, nil, options)
+        return
+    end
+
+    local pos = 1
+    for markerStart, token, markerEnd in labelText:gmatch("()%[%[img:(%d+)%]%]()") do
+        CreateSectionLabel(scroll, labelText:sub(pos, markerStart - 1), nil, nil, options)
+        AddImageChild(scroll, imagesByToken[token])
+        pos = markerEnd
+    end
+    CreateSectionLabel(scroll, labelText:sub(pos), nil, nil, options)
+end
+
+--- Description: Normalizes a hotfix/patch/addon field into an array of { date, text }
+--- entries. Older single-string [[ ]] files get wrapped as one dateless entry.
+--- @param: value (table or string)
+--- @return: array of { date, text }
+local function NormalizeDatedEntries(value)
+    if type(value) == "table" then
+        return value
+    end
+    return { { text = value } }
+end
+
+-- Class change fields, populated mainly on big expansion/patch launches, shown as their
+-- own sidebar rows on the Patch Notes tab (see BuildSectionItems).
+local classFields = {
+    { key = "deathKnightChangesPatch", label = "Death Knight" },
+    { key = "demonHunterChangesPatch", label = "Demon Hunter" },
+    { key = "druidChangesPatch", label = "Druid" },
+    { key = "evokerChangesPatch", label = "Evoker" },
+    { key = "hunterChangesPatch", label = "Hunter" },
+    { key = "mageChangesPatch", label = "Mage" },
+    { key = "monkChangesPatch", label = "Monk" },
+    { key = "paladinChangesPatch", label = "Paladin" },
+    { key = "priestChangesPatch", label = "Priest" },
+    { key = "rogueChangesPatch", label = "Rogue" },
+    { key = "shamanChangesPatch", label = "Shaman" },
+    { key = "warlockChangesPatch", label = "Warlock" },
+    { key = "warriorChangesPatch", label = "Warrior" },
+}
+
+--- Description: Builds the ordered { label, text } items for a section tab - dated entries,
+--- plus (Patch Notes only) non-empty per-class fields. A lone entry is labeled "Overview".
+--- @param: key (section key: "hotfixes" | "patch" | "addon")
+--- @return: array of { label, text }
+local function BuildSectionItems(key)
+    local items = {}
+    if key == "hotfixes" then
+        for _, entry in ipairs(NormalizeDatedEntries(PATCH_NOTES.gameChangesHotfixes)) do
+            table.insert(items, { label = entry.date, text = entry.text, images = entry.images })
+        end
+    elseif key == "addon" then
+        local entries = NormalizeDatedEntries(PATCH_NOTES.addonChanges)
+        local singleEntry = #entries == 1
+        for _, entry in ipairs(entries) do
+            table.insert(items, { label = singleEntry and "Overview" or entry.date, text = entry.text, images = entry.images })
+        end
+    elseif key == "patch" then
+        local mainEntries = NormalizeDatedEntries(PATCH_NOTES.gameChangesPatch)
+        local singleMain = #mainEntries == 1
+        for _, entry in ipairs(mainEntries) do
+            table.insert(items, { label = singleMain and "Overview" or entry.date, text = entry.text, images = entry.images })
+        end
+        for _, class in ipairs(classFields) do
+            local text = PATCH_NOTES[class.key]
+            if text and not text:match("^%s*$") then
+                table.insert(items, { label = class.label, text = text })
+            end
+        end
+    end
+    return items
 end
 
 --- Description: Check if we should show the patch notes
@@ -175,35 +295,46 @@ end
 --- @return:
 function PatchNotesDelivered:ShowPatchNotesPopup()
     local popup = AceGUI:Create("Window-PND")
-    popup.frame:SetSize(350, 130)
+    popup.frame:SetSize(380, 150)
+    popup:SetCompactHeader(30)
     popup:SetTitle("Patch Notes Delivered")
     popup:SetTitleFont("Fonts\\FRIZQT__.TTF", 16, "OUTLINE")
-    popup:SetTitleAlignment("CENTER")
-    popup:EnableResize(false)
+
+    -- Calculate width from insets
+    -- Margins must match SetCompactHeader's (9 for Inset, 4 for content), each side.
+    local insetMargin, contentMargin = 9, 4
+    local availableWidth = popup.frame:GetWidth() - 2 * (insetMargin + contentMargin)
+
+    -- Body Group
+    local body = AceGUI:Create("SimpleGroup")
+    body:SetLayout("List")
+    body:SetWidth(availableWidth)
 
     -- Message label
     local label = AceGUI:Create("Label")
-    label:SetText("\nThe patch notes have been updated!\nWould you like to view the latest changes?")
+    label:SetText("The patch notes have been updated!\nWould you like to view the latest changes?")
     label:SetFullWidth(true)
     label:SetJustifyH("CENTER")
-    popup:AddChild(label)
+    label:SetFont("Fonts\\FRIZQT__.TTF", 13, "")
+    body:AddChild(label)
 
     -- Button bar
     local buttonBar = AceGUI:Create("SimpleGroup")
     buttonBar:SetLayout("Flow")
     buttonBar:SetFullWidth(true)
-    popup:AddChild(buttonBar)
 
-    -- Spacer
+    -- Spacer: centers the inner button group using the same measured width.
+    local innerContentWidth = 120 + 16 + 120 -- showBtn + midSpacer + dismissBtn
+    local leftPad = math.max(0, (availableWidth - innerContentWidth) / 2)
     local spacer = AceGUI:Create("Label")
     spacer:SetText("")
-    spacer:SetWidth(32)
+    spacer:SetWidth(leftPad)
     buttonBar:AddChild(spacer)
 
-    -- Inner group
+    -- Inner group to center buttons
     local inner = AceGUI:Create("SimpleGroup")
     inner:SetLayout("Flow")
-    inner:SetWidth(260)
+    inner:SetWidth(innerContentWidth + 12)
     inner:SetFullWidth(false)
 
     -- Show Notes button
@@ -233,6 +364,17 @@ function PatchNotesDelivered:ShowPatchNotesPopup()
 
     -- Add Inner group
     buttonBar:AddChild(inner)
+
+    -- Add button bar
+    body:AddChild(buttonBar)
+
+    -- Set body height from child height
+    body:SetHeight(label.frame:GetHeight() + buttonBar.frame:GetHeight())
+
+    -- Add body group then center
+    popup:AddChild(body)
+    body.frame:ClearAllPoints()
+    body.frame:SetPoint("CENTER", popup.content, "CENTER")
 end
 
 --- Description: Show the patch notes frame
@@ -248,87 +390,146 @@ function PatchNotesDelivered:ShowPatchNotes()
     end
 
     local pnd = AceGUI:Create("Window-PND")
-    local width = self.db.profile.frameWidth or 1000
-    local height = self.db.profile.frameHeight or 700
-    pnd.frame:SetSize(width, height)
-
-    -- Save size on resize
-    pnd.frame:HookScript("OnSizeChanged", function(frame)
-        SaveFrameSize(self, frame:GetWidth(), frame:GetHeight())
-    end)
+    -- Fixed size, matching Blizzard's own large journal-style windows (e.g. CollectionsJournal
+    -- at 703x606) rather than a proportion of screen resolution - WoW's UI scale already keeps
+    -- a fixed size consistent across displays, so scaling off screen resolution instead just
+    -- made the window huge on lower-resolution/small laptop screens.
+    -- Width is 60px wider than the journal-window baseline below specifically to give the
+    -- sidebar (see SetTreeWidth) room for long dates like "September 30, 2026" without
+    -- shrinking the notes pane - both were widened by the same 60px so the notes pane's
+    -- width, and therefore its 90-char wrap, is unaffected.
+    pnd.frame:SetSize(960, 650)
 
     -- Set the title area
     pnd:SetTitle("|cff00B4FFThe Weekly Mrrgl, |r|cffffffff" ..
         PATCH_NOTES.version .. "." .. PATCH_NOTES.build .. "." .. PATCH_NOTES.hotfix .. "|r")
     pnd:SetTitleFont("Fonts\\FRIZQT__.TTF", 16, "OUTLINE")
-    pnd:SetTitleAlignment("CENTER")
 
-    -- Reset Button
-    local resetButton = AceGUI:Create("IconButton-PND")
-    resetButton:SetImage("Interface\\AddOns\\PatchNotesDelivered\\assets\\CustomIcon-White-Reset.tga")
-    resetButton:SetTooltip("Reset Size")
-    resetButton:SetSize(16, 16)
-    resetButton:SetCallback("OnClick", function()
-        local defaultWidth, defaultHeight = 1000, 700
-        PatchNotesFrame.frame:SetSize(defaultWidth, defaultHeight)
-        SaveFrameSize(self, defaultWidth, defaultHeight)
-    end)
-    pnd:AddButton(resetButton)
-
-    -- Scroll Frame
-    local scroll = AceGUI:Create("ScrollFrame")
-    scroll:SetLayout("Flow")
-    scroll:SetFullWidth(true)
-    scroll:SetFullHeight(true)
-    pnd:AddChild(scroll)
-
-    -- Section Dropdown
-    local sectionDropdown = AceGUI:Create("Dropdown")
+    -- Section list backing the tabs below (ordered, unlike a dropdown's key/value map,
+    -- since tabs have a fixed left-to-right position).
     local sectionList = {
-        hotfixes = "Hotfixes",
-        patch = "Patch Notes",
-        addon = "Addon Changes",
+        { key = "hotfixes", label = "Hotfixes" },
+        { key = "patch", label = "Patch Notes" },
+        { key = "addon", label = "Addon Changes" },
     }
-    sectionDropdown:SetList(sectionList)
-    sectionDropdown:SetValue("hotfixes")
-    sectionDropdown:SetWidth(140)
 
-    -- Helper to populate selected section
+    local sectionHeaders = {
+        hotfixes = { title = "\n    |cffF89406Hotfix Changes|r\n\n", footer = "\n\n" },
+        patch = { title = "\n    |cff00B4FFPatch Changes|r\n\n", footer = "\n\n" },
+        addon = { title = "\n    |cff32CD32Addon Changes|r\n\n", footer = "" },
+    }
+
+    local bodyOptions = { font = "Fonts\\FRIZQT__.TTF", size = 14, flags = "" }
+
+    --- Description: Adds a widget as a container's only child and stretches it to fill the
+    --- container's content area. AceGUI's "List" layout only manages a fill child's width,
+    --- never its height, so this anchors directly instead of relying on SetFullHeight.
+    --- @param: container (AceGUI container widget)
+    --- @param: child (AceGUI widget)
+    --- @return:
+    local function AddFillChild(container, child)
+        container:AddChild(child)
+        child.frame:ClearAllPoints()
+        child.frame:SetPoint("TOPLEFT", container.content, "TOPLEFT")
+        child.frame:SetPoint("BOTTOMRIGHT", container.content, "BOTTOMRIGHT")
+    end
+
+    --- Description: Adds a ScrollFrame with a single label (and any interleaved images) to
+    --- a container - used for flat sections and for a tree's selected-item pane. Anchors
+    --- the scroll before populating it, so content wraps against its real final width
+    --- instead of a stale pooled one.
+    --- @param: container (AceGUI container widget)
+    --- @param: text (string)
+    --- @param: images (array of { token, path, width, height, caption? }, or nil)
+    --- @param: title (string, only used for the no-sidebar case)
+    --- @param: footer (string, only used for the no-sidebar case)
+    --- @return:
+    local function AddTextScroll(container, text, images, title, footer)
+        local scroll = AceGUI:Create("ScrollFrame")
+        scroll:SetLayout("Flow")
+        AddFillChild(container, scroll)
+        RenderEntryBody(scroll, text, images, title, footer, bodyOptions)
+    end
+
+    --- Description: Populates the selected tab. Sections with 2+ items (dated entries
+    --- and/or, on Patch Notes, class rows) get a date/class sidebar with the selected
+    --- item's text on the right (mirroring the Collections/Mounts page); otherwise a
+    --- single flat scrolling block.
+    --- @param:
+    --- @return:
     local function PopulateSelectedSection()
-        scroll:ReleaseChildren()
-        local bodyOptions = { font = "Fonts\\FRIZQT__.TTF", size = 14, flags = "" }
-        if sectionDropdown:GetValue() == "hotfixes" then
-            CreateSectionLabel(scroll, PATCH_NOTES.gameChangesHotfixes, "\n    |cffF89406Hotfix Changes|r\n\n", "\n\n", bodyOptions)
-        elseif sectionDropdown:GetValue() == "patch" then
-            CreateSectionLabel(scroll, PATCH_NOTES.gameChangesPatch, "\n    |cff00B4FFPatch Changes|r\n\n", "\n\n", bodyOptions)
-            -- Add all class changes sections
-            CreateSectionLabel(scroll, PATCH_NOTES.deathKnightChangesPatch, "    |cff00B4FFDeath Knight Changes|r\n\n", "\n", bodyOptions)
-            CreateSectionLabel(scroll, PATCH_NOTES.demonHunterChangesPatch, "    |cff00B4FFDemon Hunter Changes|r\n\n", "\n", bodyOptions)
-            CreateSectionLabel(scroll, PATCH_NOTES.druidChangesPatch, "    |cff00B4FFDruid Changes|r\n\n", "\n", bodyOptions)
-            CreateSectionLabel(scroll, PATCH_NOTES.evokerChangesPatch, "    |cff00B4FFEvoker Changes|r\n\n", "\n", bodyOptions)
-            CreateSectionLabel(scroll, PATCH_NOTES.hunterChangesPatch, "    |cff00B4FFHunter Changes|r\n\n", "\n", bodyOptions)
-            CreateSectionLabel(scroll, PATCH_NOTES.mageChangesPatch, "    |cff00B4FFMage Changes|r\n\n", "\n", bodyOptions)
-            CreateSectionLabel(scroll, PATCH_NOTES.monkChangesPatch, "    |cff00B4FFMonk Changes|r\n\n", "\n", bodyOptions)
-            CreateSectionLabel(scroll, PATCH_NOTES.paladinChangesPatch, "    |cff00B4FFPaladin Changes|r\n\n", "\n", bodyOptions)
-            CreateSectionLabel(scroll, PATCH_NOTES.priestChangesPatch, "    |cff00B4FFPriest Changes|r\n\n", "\n", bodyOptions)
-            CreateSectionLabel(scroll, PATCH_NOTES.rogueChangesPatch, "    |cff00B4FFRogue Changes|r\n\n", "\n", bodyOptions)
-            CreateSectionLabel(scroll, PATCH_NOTES.shamanChangesPatch, "    |cff00B4FFShaman Changes|r\n\n", "\n", bodyOptions)
-            CreateSectionLabel(scroll, PATCH_NOTES.warlockChangesPatch, "    |cff00B4FFWarlock Changes|r\n\n", "\n", bodyOptions)
-            CreateSectionLabel(scroll, PATCH_NOTES.warriorChangesPatch, "    |cff00B4FFWarrior Changes|r\n\n", "\n", bodyOptions)
-        elseif sectionDropdown:GetValue() == "addon" then
-            CreateSectionLabel(scroll, PATCH_NOTES.addonChanges, "\n    |cff32CD32Addon Changes|r\n\n", "", bodyOptions)
+        pnd:ReleaseChildren()
+        local selectedKey = sectionList[PanelTemplates_GetSelectedTab(pnd.frame)].key
+        local items = BuildSectionItems(selectedKey)
+        -- Patch Notes/Addon Changes always show the sidebar for a consistent selector, even
+        -- with just their one "Overview" item; Hotfixes needs 2+ dated entries for one.
+        local useTree = #items >= 2 or (selectedKey ~= "hotfixes" and #items >= 1)
+
+        if not useTree then
+            local header = sectionHeaders[selectedKey]
+            AddTextScroll(pnd, items[1] and items[1].text, items[1] and items[1].images, header.title, header.footer)
+        else
+            local tree = AceGUI:Create("TreeGroup")
+            -- Parent the tree before configuring it - TreeGroup defers its first build to
+            -- the next frame if its frame still has the pooled default parent (UIParent).
+            AddFillChild(pnd, tree)
+            -- Widened from 160 so long dates ("September 30, 2026") don't get cut off; the
+            -- window was widened by the same amount (see pnd.frame:SetSize) to keep the
+            -- notes pane's width unchanged.
+            tree:SetTreeWidth(220, false)
+            tree:EnableButtonTooltips(false)
+
+            local treeData = {}
+            for i, item in ipairs(items) do
+                treeData[i] = { value = tostring(i), text = item.label }
+            end
+            tree:SetTree(treeData)
+            tree:SetCallback("OnGroupSelected", function(widget, event, value)
+                widget:ReleaseChildren()
+                local item = items[tonumber(value)]
+                AddTextScroll(widget, item.text, item.images)
+            end)
+
+            -- Deferred a frame: selecting immediately builds the label before its width is
+            -- fully applied, undercounting the scroll range for the first entry.
+            C_Timer.After(0, function()
+                tree:SelectByValue("1")
+            end)
         end
     end
 
-    sectionDropdown:SetCallback("OnValueChanged", function(widget, event, key)
-        PopulateSelectedSection()
-    end)
-    pnd:AddButton(sectionDropdown)
+    -- Section Tabs (Hotfixes / Patch Notes / Addon Changes), using Blizzard's native
+    -- top-tab system (the same one the Wardrobe/Appearances window uses for Items/Sets)
+    -- instead of a dropdown, filling the previously-empty strip below the title.
+    local sectionTabs = {}
+    for i, section in ipairs(sectionList) do
+        local tab = CreateFrame("Button", nil, pnd.frame, "PanelTopTabButtonTemplate")
+        tab:SetID(i)
+        tab:SetText(section.label)
+        -- Must clear ButtonFrameTemplate's NineSlice border (level 500) or it renders
+        -- invisibly underneath it - match the close button's level, same fix as buttonBar
+        -- needed for the dropdowns previously.
+        tab:SetFrameLevel(pnd.frame.CloseButton:GetFrameLevel())
+        if i == 1 then
+            tab:SetPoint("TOPLEFT", pnd.frame, "TOPLEFT", 58, -28)
+        else
+            tab:SetPoint("TOPLEFT", sectionTabs[i - 1], "TOPRIGHT", 3, 0)
+        end
+        PanelTemplates_TabResize(tab, 0)
+        tab:SetScript("OnClick", function()
+            PanelTemplates_SetTab(pnd.frame, i)
+            PopulateSelectedSection()
+        end)
+        sectionTabs[i] = tab
+    end
+    pnd.frame.Tabs = sectionTabs
+    PanelTemplates_SetNumTabs(pnd.frame, #sectionList)
+    PanelTemplates_SetTab(pnd.frame, 1)
 
-    -- Version Dropdown
+    -- Version Dropdown, positioned to the right of the section tabs
     local versionDropdown = AceGUI:Create("Dropdown")
-    local versionDropdownText = GetNotesListDropdown()
-    versionDropdown:SetList(versionDropdownText)
+    local versionDropdownText, versionDropdownOrder = GetNotesListDropdown()
+    versionDropdown:SetList(versionDropdownText, versionDropdownOrder)
     versionDropdown:SetValue(AVAILABLE_NOTES[1].version)
     versionDropdown:SetWidth(100)
     versionDropdown:SetCallback("OnValueChanged", function(widget, event, key)
@@ -341,24 +542,13 @@ function PatchNotesDelivered:ShowPatchNotes()
         PATCH_NOTES = BuildPatchNotes()
         PopulateSelectedSection()
     end)
-    pnd:AddButton(versionDropdown)
-
-    -- Fix Dropdown Spacing
-    if pnd.buttonBar and sectionDropdown.frame and versionDropdown.frame then
-        local rightPad = -54      -- gap from bar right edge
-        local spacing = 8        -- extra space between controls
-
-        -- rightmost (version)
-        versionDropdown.frame:SetParent(pnd.buttonBar)
-        versionDropdown.frame:ClearAllPoints()
-        versionDropdown.frame:SetPoint("RIGHT", pnd.buttonBar, "RIGHT", rightPad, 0)
-
-        -- left control (section) placed left of version control
-        local verW = versionDropdown.frame:GetWidth() or 100
-        sectionDropdown.frame:SetParent(pnd.buttonBar)
-        sectionDropdown.frame:ClearAllPoints()
-        sectionDropdown.frame:SetPoint("RIGHT", pnd.buttonBar, "RIGHT", rightPad - verW - spacing, 0)
-    end
+    versionDropdown.frame:SetParent(pnd.frame)
+    versionDropdown.frame:SetFrameLevel(pnd.frame.CloseButton:GetFrameLevel())
+    versionDropdown.frame:ClearAllPoints()
+    -- LEFT/RIGHT anchor points sit at each frame's own vertical center, so this centers
+    -- the dropdown's 26px frame against the tab's 32px frame regardless of their height
+    -- difference (BOTTOMLEFT/BOTTOMRIGHT previously left it visibly shifted upward).
+    versionDropdown.frame:SetPoint("LEFT", sectionTabs[#sectionTabs], "RIGHT", 12, 0)
 
     -- Initial population
     PopulateSelectedSection()
@@ -437,3 +627,4 @@ end
 -- Slash Commands
 PatchNotesDelivered:RegisterChatCommand("pnd", "ShowPatchNotes")
 PatchNotesDelivered:RegisterChatCommand("pnd-mini", "ToggleMinimapButton")
+PatchNotesDelivered:RegisterChatCommand("pnd-popup", "ShowPatchNotesPopup")
