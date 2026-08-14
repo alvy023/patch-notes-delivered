@@ -12,11 +12,16 @@ PatchNotesDelivered_Notes_1210 = {
     build = "69299",
     hotfix = 0,
     gameChangesHotfixes = {
-        "Nothing yet, see patch notes!"
+        {
+            date = "August 11, 2026",
+            text = [[
+    "Nothing yet, see patch notes!"
+            ]],
+        },
     },
     gameChangesPatch = {
         {
-            date = "2026-08-06",
+            date = "2026-08-11",
             text = [=[
 Continue the Midnight campaign as the Curse of Ula'tek content update opens the way to the
 Coiled Isle, where venomous foes, cursed waters, and long-buried secrets await. Take on
