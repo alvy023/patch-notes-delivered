@@ -10,8 +10,185 @@
 PatchNotesDelivered_Notes_1210 = {
     version = "12.1.0",
     build = "69299",
-    hotfix = 0,
+    hotfix = 1,
     gameChangesHotfixes = {
+        {
+            date = "August 14, 2026",
+            text = [=[
+Achievements
+        • Reaching Renown 20 with Zul'jaara's Forces now correctly grants Zul'jarra's
+          Forces Champion.
+        • Family Battler of Outland and all associated type- Battler of Outland
+          achievements now require Bloodknight Antairi (was incorrectly Gorma Asaan).
+
+    Classes
+        • Evoker
+            > Devastation
+                + Shattering Star now correctly benefits from Mastery: Giantkiller.
+        • Warrior
+            > Arms, Fury
+                + Slayer: Fixed a bug that was causing Executioner to have double the
+                  intended effect.
+        • Warlock
+            > Fixed an issue where Warlock pets would continually learn Soul Leech.
+            > Demonology
+                + Soul Harvester: fixed an issue where Shadow Bolt and Hand of Gul'dan
+                  would be disabled in the cooldown manager.
+
+    Delves
+        • Fixed an issue where Gorgoneion Gaze would not trigger.
+        • Fixed an issue where Ula'tek's Gift would not deal damage.
+        • Fixed an issue where Ula'tek's Gift would not apply more stacks while poisoned.
+
+    Dungeons and Raids
+        • Archmage Timear again permits players to queue for the Raid Finder wings of
+          Tomb of Sargeras.
+        • Ruby Life Pools
+            > Thunderhead
+                + Fixed an issue where Electrical Discharge would sometimes fail to
+                  hit players.
+        • Voidscar Arena
+            > Addressed an issue where Brutok's Smashing Charge can charge through doors.
+
+    Items
+        • Void-Twisted Sporbits no longer grant Nebulous Voidcores. Nebulous Voidcores
+          obtained in this way after the end of Season 1 have been removed for Season 2.
+        • Tanks may now roll Need on Zul'jin's Guillotine Technique.
+        • Survival Hunters may now roll Need on two-handed axes and swords with Agility.
+        • Trinkets
+            > Coiled Fangstone: damage increased by 15%.
+            > Crucible of Erratic Energies: critical strike reduced by 15%.
+            > Fang of Umbral Malignance: damage increased by 15%.
+            > First Mate's Shellward: damage increased by 25%.
+            > Font of Venomous Rage: damage increased by 20%.
+            > Gaze of the Alnseer: primary stat reduced by 20%.
+            > Gebbo's Bottomless Bag: secondary stat effects reduced by 29%.
+            > Hex Lord's Dooming Idol: intellect lost per stack reduced by 33% and
+              intellect granted on use per stack increased by 15%.
+            > Idol of the Howling Nexus: agility and strength on proc increased by 5%.
+            > Knot of Writhing Serpents: damage increased by 15%.
+            > Knot of Writhing Serpents no longer drops for healing specializations.
+            > Kyrakka's Searing Embers: healing increased by 80% and damage increased
+              by 50%.
+            > Mindpiercer's Sigil: damage increased by 15%.
+            > Mycolic Medicine: all healing increased by 30%.
+            > Preternatural Antivenom: healing increased by 30% and fixed an issue
+              preventing the healing effect from consistently triggering after the aura
+              has been applied to an ally depending on the source of incoming damage.
+            > Sapling of the Dawnroot: damage increased by 15%.
+            > Soulcoiler Ritual Vessel: absorb reduced by 15%.
+            > Sszorak's Ferocity: damage increased by 15%.
+            > Tiny Electromental in a Jar: damage increased by 15%.
+            > Tumor of the Swarm: damage increased by 15% and healing increased by 40%.
+            > Unstable Felheart Crystal: absorb increased by 30%.
+            > Vaelgor's Final Stare: mastery reduced by 10%.
+            > Vashnik's Sanguine Rancor: damage increased by 15%.
+            > Vexhul's Everflowing Gland: damage increased by 15%.
+
+    Lairs
+        • Resolved an issue causing some Bubblefin Shorerunners to not despawn when
+          reaching the Alluring Bubble.
+
+    Player versus Player
+        • Fixed an issue where Ula'tek's Gift was dealing more damage to players
+          than expected.
+
+    Professions
+        • Fixed an issue that prevented Flat Snakeskin Canopy from being crafted.
+        • Fixed an issue that prevented Flat Snakeskin Canopy from being added to the
+          decor collection when used.
+
+    Quests
+        • Fixed a bug causing Amani Endeavor daily quests to only be offered weekly.
+        • Players on the quest Void Walk With Me are now correctly advanced in the
+          Traitor's Due story when entering The Shadow Enclave.
+        • Story of a Memorable Victory no longer drops outside of the Dragon Isles.
+        • Fixed an issue preventing progress on the quest Cut Her Strings in Voidstorm.
+        • Awe of She is no longer stalled by weather effects on the player.
+        • Fixed a bug preventing players who are seated before entering the Worldsoul
+          Terror as Nek'zali from properly interacting with Injured Hunters on Fuel
+          the Calling.
+
+    Trading Post
+        • The Trading Post activity Complete 'A Call for Aid' Storyline should now
+          require only quests within that storyline.
+            ]=],
+        },
+        {
+            date = "August 13, 2026",
+            text = [=[
+Classes
+        • Spirit Walk in the Vaults of Atal'utek should now apply to pets.
+        • Warlock
+            > Affliction
+                + Fixed an issue where Seed of Corruption would not consume Shard
+                  Instability on cast.
+
+    Delves
+        • Fixed an issue where the Delve Shadowguard Point: Shadowguard Survivor would
+          not grant Great Vault credit upon completion.
+        • Fixed a bug causing Ritual Sites to appear to grant Great Vault rewards that
+          were inconsistent with the available Tiers. Next week, the Great Vault will
+          reward the intended tiers 1-6 for week 1 activities.
+        • Fixed an issue with the Corrosive Codex that caused Corrosive Powers unlocked
+          on one character to not show up as available options in the Corrosive Codex for
+          other characters.
+
+    Dungeons
+        • Players who have not yet completed precursor campaign quests should now be
+          able to be summoned to the Vaults of Atal'Utek by Altar of Fangs dungeon groups.
+        • Altar of Fangs
+            > Addressed an issue where Uncoiled Writhe constantly switches target with
+              Spiteful Hunt.
+            > Addressed an issue where interacting with Infusion Totem may fail to
+              trigger the event.
+        • Voidscar Arena
+            > Addressed an issue where defeating Aegyra the Unyielding while she's
+              channeling Earthsplitter can fail to open the door to the arena.
+
+    Items
+        • Fixed an issue that caused Venomjade Necklace to sometimes be invisible.
+
+    Lairs
+        • Players cannot receive loot from Nymrissa Wavecaller more than once per week in
+          World difficulty.
+
+    Player versus Player
+        • Gorgoneion Gaze no longer petrifies players indefinitely.
+        • Fixed a bug preventing Otherworldly Sparks of War from dropping in Naigtal and
+          Val activities. The Naigtal and Val Sparks of War quests will no longer be
+          offered when Season 2 begins.
+
+    Professions
+        • [With realm restarts] Jewelcrafting and Tailoring Profession Knowledge books
+          from the forces of Zul'jarra should now correctly award profession Knowledge.
+          Players who got the books prior to this fix should be given
+          the Knowledge retroactively.
+        • Fixed an issue that caused Contract: Zul'jarra's Forces to sometimes
+          incorrectly apply Amani Tribe Contract when used.
+
+    Quests
+        • Fixed an issue where players could begin Curse of Ula'tek campaign quests
+          without first completing the main Midnight campaign.
+            > Developers' notes: The Curse of Ula'tek campaign was intended to require
+              account completion of the main Midnight campaign before it could be
+              started, as completing these features out of order could result in players
+              being in a misleading or confusing state. Players who have not yet started
+              the Curse of Ula'tek campaign must now complete the main Midnight campaign
+              on one character per account. Any player-characters who have already
+              started the Curse of Ula'tek campaign should be unaffected and can continue
+              it and complete it.
+        • Players who completed Legends of the Haranir quests split among multiple
+          characters will now be able to resume The Empty Cradle questline.
+        • Cold As Ice no longer sends players on a cold canoe ride into the abyss.
+        • Removed an incorrect map marker for A Suspicious Stew.
+        • Bob has been found and returned to his bartending.
+
+    World
+        • Fixed a bug that could cause players to disconnect when entering the Lunarfall
+          Garrison Excavation area.
+            ]=],
+        },
         {
             date = "August 11, 2026",
             text = [[
