@@ -189,12 +189,6 @@ PatchNotesDelivered_Notes_1210 = {
           Garrison Excavation area.
             ]=],
         },
-        {
-            date = "August 11, 2026",
-            text = [[
-    "Nothing yet, see patch notes!"
-            ]],
-        },
     },
     gameChangesPatch = {
         {
