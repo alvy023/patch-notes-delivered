@@ -15,7 +15,7 @@ PatchNotesDelivered_Notes_1210 = {
         {
             date = "August 14, 2026",
             text = [=[
-Achievements
+    Achievements
         • Reaching Renown 20 with Zul'jaara's Forces now correctly grants Zul'jarra's
           Forces Champion.
         • Family Battler of Outland and all associated type- Battler of Outland
@@ -117,7 +117,7 @@ Achievements
         {
             date = "August 13, 2026",
             text = [=[
-Classes
+    Classes
         • Spirit Walk in the Vaults of Atal'utek should now apply to pets.
         • Warlock
             > Affliction
