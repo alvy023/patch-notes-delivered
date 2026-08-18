@@ -15,43 +15,43 @@ PatchNotesDelivered_Notes_1210 = {
         {
             date = "August 17, 2026",
             text = [=[
-Classes
-    • Hunter
-        > Beast Mastery
-            + Corrected an issue where Dire Beast Kill Commands from the
-              Wildspeaker Talent did not properly benefit from Killer Instinct,
-              Alpha Predator, Specialized Arsenal, or Savagery.
-    • Priest
-        > Holy
-            + Corrected an issue where swapping from Shadow to Holy
-              specializations could improperly cause Shadow Word: Pain to not
-              turn into Holy Fire.
-    • Shaman
-        > Corrected an issue where swapping between specs may incorrectly
-          cause Lava Burst to show up as Primal Strike in your spellbook.
-    • Warlock
-        > Destruction
-            + Fixed an issue where the tooltip of Shadowburn would not display
-              the correct duration.
+    Classes
+        • Hunter
+            > Beast Mastery
+                + Corrected an issue where Dire Beast Kill Commands from the
+                  Wildspeaker Talent did not properly benefit from Killer Instinct,
+                  Alpha Predator, Specialized Arsenal, or Savagery.
+        • Priest
+            > Holy
+                + Corrected an issue where swapping from Shadow to Holy
+                  specializations could improperly cause Shadow Word: Pain to not
+                  turn into Holy Fire.
+        • Shaman
+            > Corrected an issue where swapping between specs may incorrectly
+              cause Lava Burst to show up as Primal Strike in your spellbook.
+        • Warlock
+            > Destruction
+                + Fixed an issue where the tooltip of Shadowburn would not display
+                  the correct duration.
 
-Delves
-    • In Delves, Ula'tek's Amphisbaena Writhing Strike poison can only get one
-      aura at a time. Damage reduced 25%, and the cooldown on Writhing Strike
-      increased.
-    • Fixed an issue causing Corrosive Bilespear to not proc at higher ranks.
+    Delves
+        • In Delves, Ula'tek's Amphisbaena Writhing Strike poison can only get one
+          aura at a time. Damage reduced 25%, and the cooldown on Writhing Strike
+          increased.
+        • Fixed an issue causing Corrosive Bilespear to not proc at higher ranks.
 
-Lairs
-    • Resolved an issue causing the sharks to not bite in The Tidebound Grotto.
+    Lairs
+        • Resolved an issue causing the sharks to not bite in The Tidebound Grotto.
 
-Naigtal and Val
-    • Players in Heroic World Tier can again talk with a sprit healer to exit
-      Heroic World Tier and resurrect.
+    Naigtal and Val
+        • Players in Heroic World Tier can again talk with a sprit healer to exit
+          Heroic World Tier and resurrect.
 
-Quests
-    • Ofi the Sly should now properly accept that the concoction is complete
-      for Acceptable Apprentice.
-    • Fixed an issue preventing characters under level 90 from completing
-      activities related to Saltheril's Soiree and Abundance.
+    Quests
+        • Ofi the Sly should now properly accept that the concoction is complete
+          for Acceptable Apprentice.
+        • Fixed an issue preventing characters under level 90 from completing
+          activities related to Saltheril's Soiree and Abundance.
             ]=],
         },
         {
