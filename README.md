@@ -33,18 +33,21 @@ Patch Notes Delivered (PND) is a lightweight World of Warcraft addon that displa
 ## Project Structure
 ```
 patch-notes-delivered
+├── notes_archive/
 ├── PatchNotesDelivered/
 │   ├── assets/
 │   ├── libs/
 │   │   ├── Ace3/
 │   │   ├── LibDBIcon-1.0/
 │   │   └── LibDataBroker-1.1/
+|   ├── media/
 │   ├── notes/
 │   ├── PatchNotesDelivered.lua
 │   ├── PatchNotesDelivered.toc
 │   ├── PatchNotesImageWidget.lua
 │   ├── PatchNotesText.lua
 │   └── PatchNotesWindow.lua
+├── references/
 ├── License.txt
 ├── README.md
 └── ThirdPartyNotices.md
