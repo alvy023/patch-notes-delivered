@@ -10,225 +10,640 @@
 PatchNotesDelivered_Notes_1210 = {
     version = "12.1.0",
     build = "69382",
-    hotfix = 2,
+    hotfix = 3,
     gameChangesHotfixes = {
+        {
+            date = "August 18, 2026",
+            text = [=[
+Classes
+    • Death Knight
+        > Blood
+            + Deathbringer: Resolved an issue causing Echoing Fury to grant
+              Exterminate stacks on Reaper's Mark casts.
+            + San'layn: Visceral Strength now grants 6% strength (was 10%).
+            + San'layn: Transfusion increases Dancing Rune Weapon damage by 5%
+              (was 10%).
+                - Developers' notes: The tooltip will be updated at a later
+                  date to reflect the new value.
+        > Frost
+            + All ability and auto-attack damage increased by 9%.
+            + Venomous Abyss 2-piece set bonus updated - Now grants 1% attack
+              speed per stack (was 2%), and now increases Icy Death Torrent
+              damage by 2% per stack (was 4%).
+    • Demon Hunter
+        > Devourer
+            + Developers' notes: Devourer's 4-piece set bonus is performing
+              significantly above expectations, so we're reducing its power.
+              To compensate for this set bonus reduction, we're increasing
+              all ability damage. Additionally, Devourer has been
+              overperforming, mostly in single target, so we are reducing the
+              damage of Reap/Cull/Eradicate while increasing the AoE damage
+              portion of Eradicate to reduce the impact of the change in AoE
+              combat.
+            + All ability damage increased by 14%. Does not affect PvP combat.
+            + Reap/Cull/Eradicate damage reduced by 12%.
+            + Eradicate's area-of-effect damage increased to 90% of base
+              damage (was 85%).
+            + Venomous Abyss 4-piece set bonus updated - Now generates 2 soul
+              fragments (was 8 soul fragments) and increases Reap damage by
+              10% (was 20%).
+    • Druid
+        > Restoration
+            + Developers' notes: We're increasing Restoration Druid's healing
+              and damage as both aspects are underperforming relative to
+              other healers.
+            + All healing increased by 4%. Does not affect PvP combat.
+            + All damage increased by 20%. Does not affect PvP combat.
+    • Hunter
+        > Reduced the size of several Hydra creatures after they have been
+          tamed.
+        > Beast Mastery
+            + Developers' notes: The new Venomous Abyss tier set bonus isn't
+              quite as strong as we would like it to be, so we're increasing
+              the effects of the 4-piece set bonus.
+            + Venomous Abyss 4-piece set bonus updated - Now causes Cobra
+              Shot to benefit from Beast Cleave at 30% effectiveness per
+              stack (was 20%) or strike your target for an additional 20%
+              damage per stack (was 15%).
+    • Mage
+        > Arcane
+            + Developers' notes: The Venomous Abyss set bonus is
+              overperforming our target tuning for set bonuses. However, the
+              amount we need to reduce its value by would be a greater impact
+              than intended to Arcane's overall damage, so we are also making
+              a small positive adjustment to Arcane's baseline.
+            + All ability damage increased by 3%.
+            + Venomous Abyss 2-piece set bonus updated - Arcane Missiles
+              damage bonus reduced to 5% (was 20%).
+            + Venomous Abyss 4-piece set bonus updated - Cumulative Power
+              damage bonus per stack reduced to 3% (was 5%).
+    • Monk
+        > Mistweaver
+            + Developers' notes: Mistweaver has been underperforming so we
+              are targeting increases to its casted healing and the Venomous
+              Abyss 4-set bonus to improve its performance and maintain build
+              diversity.
+            + All healing increased by 8%. Does not affect PvP combat.
+            + Venomous Abyss 4-piece set bonus updated - Activation rate
+              increased by 33%.
+    • Paladin
+        > Retribution
+            + All ability damage increased by 6%. Does not affect PvP combat.
+    • Priest
+        > Discipline
+            + Developers' notes: We're reducing Discipline's damage done and
+              offsetting this in Atonement to not affect their overall
+              healing, as their damage has been overperforming compared to
+              other healers. At the same time, we're increasing the damage of
+              Entropic Rift to minimize the impact this will have on
+              Voidweaver's dungeon viability and help maintain high damage as
+              one of its strengths.
+            + All damage reduced by 30%. Does not affect PvP combat.
+            + Oracle: Entropic Rift damage increased by 20%.
+            + Oracle: Atonement now transfers 46% of damage into healing (was
+              32%). Does not affect PvP combat.
+            + Oracle: Void Shield reflects 10% of damage (was 15%).
+        > Holy
+            + Developers' notes: We're increasing the healing throughput of
+              Oracle so that it can serve as a competitive option against
+              Archon. Furthermore, we are increasing the mana regeneration of
+              Enlightenment to further help Holy Priest's mana economy.
+            + Enlightenment now regenerates mana 25% faster (was 10%).
+            + Words of the Wise now increases the healing of Holy Word:
+              Serenity and Holy Word: Sanctify by 40% (was 10%). Does not
+              affect PvP combat.
+            + Prompt Prognosis healing increased by 55%. Does not affect PvP
+              combat.
+            + Preventive Measures now increases Prayer of Mending healing by
+              40% (was 15%). Does not affect PvP combat.
+    • Rogue
+        > Assassination
+            + All damage increased by 4%.
+        > Subtlety
+            + Developers' notes: Subtlety's 4-piece set bonus is
+              overperforming expectations, so its effectiveness is being
+              reduced. An overall buff to Subtlety's damage is being applied
+              to compensate.
+            + All damage increased by 6%.
+            + The Venomous Abyss 4-set bonus has been updated - Effectiveness
+              reduced to 60% (was 100%).
+            + Shadow Dance now cancels when swapping talents.
+            + Shadow Dance can no longer be cancelled manually.
+            + Deathstalker: Lingering Darkness now cancels when swapping
+              talents.
+            + Deathstalker: Lingering Darkness now cancels when a raid
+              encounter starts.
+            + Deathstalker: Lingering Darkness now cancels when an M+ dungeon
+              starts.
+    • Shaman
+        > Elemental
+            + Corrected an issue where the Venomous Abyss 4-piece set bonus
+              Overcharge! buff was sometimes not consumed when casting a
+              Maelstrom spending ability.
+            + All damage dealt increased by 5%.
+                - Developers' notes: We discovered and fixed a tricky bug
+                  that was active on the PTR, that was increasing the amount
+                  of free Maelstrom spending abilities Elemental Shaman could
+                  get from the Venomous Abyss 4-piece set bonus. This was
+                  inflating their damage dealt, so alongside the bug fix,
+                  we're increasing their damage to compensate.
+        > Enhancement
+            + All damage increased by 5%.
+    • Warlock
+        > Hellcaller: Fixed an issue where Blackened Soul would not function
+          with mouse-over casting.
+        > Affliction
+            + Fixed an issue where Withering Bolt would not account for
+              Wither.
+        > Demonology
+            + Burning Cleave (granted by Antoran Armaments) now strikes
+              enemies in a circular area, rather than a cone. The tooltip for
+              Burning Cleave will be updated in a future patch.
+            + Developers' notes: We are increasing the throughput of the
+              Venomous Abyss 2-set bonus for Demonology so that its
+              performance is closer to other specialization tier set bonuses.
+            + Venomous Abyss 2-piece set bonus updated - Wild Imps now
+              Implode at 350% effectiveness to their main target (was 250%)
+              and 315% effectiveness to other targets (was 225%).
+        > Destruction
+            + Fixed an issue where Conflagration of Chaos would not guarantee
+              a Conflagrate or Shadowburn to critically strike.
+            + Fixed an issue where Shadowburn would not apply its debuff
+              after dealing damage to a Havoc target.
+    • Warrior
+        > Developers' notes: Fury's 4-piece set bonus is currently
+          overperforming, but Fury is in a good place overall and we don't
+          want to disrupt that, so we're moving some of the value out of the
+          4-piece bonus and into Fury's baseline. Additionally, Slayer has
+          been overperforming for both specs due to a bug causing Executioner
+          to provide double value which was recently hotfixed. This fix has
+          brought overall Arms performance down into our intended range, but
+          we're happy with where Fury has been, so their baseline damage has
+          been increased below to compensate for this fix as well as the set
+          bonus change.
+        > Fury
+            + All damage increased by 6%.
+            + Venomous Abyss 4-piece set bonus updated - Bloodthirst damage
+              increased by 10%, and during Recklessness, Bloodthirst
+              increases the critical strike bonus of Recklessness by 3%, up
+              to 6% (was 5%, up to 10%).
+        > Protection
+            + Mountain Thane: Fixed an issue that would sometimes disable the
+              bonus Thunder Clap damage from Crashing Thunder.
+
+Delves
+    • The initial Ancient Golem in the Game Night variant of the Ring of
+      Glory delve no longer attacks before being activated.
+    • Delve into the Earth should no longer be blocked if selecting a combat
+      roll for Brann failed to advance the quest while outside a delve.
+    • Fixed an issue where Dundun's Favor would prevent Mislaid Curiosities
+      from being looted by more than one party member.
+
+Dungeons
+    • The lockout for Mythic difficulty for Season 2 dungeons now resets
+      daily.
+    • The Blinding Vale
+        > Thorny Saptor
+            + Hunting Leap visibility of ground visual improved.
+        > Ziekket
+            + Lightbloom's Essence periodic damage reduced by 25%.
+        > Altar of Fangs
+            + Added a way for players to return to the entrance from the
+              chamber of Rav'i.
+            + Hunting Leap visibility of ground visual improved.
+    • Den of Nalorakk
+        > Barrel of Apples are now interactable without requiring opposable
+          thumbs. Nature finds a way.
+        > Warding Incense
+            + Increased Versatility buff to 5% (was 3%).
+            + Now benefits all allies in the instance.
+            + Now persists through death.
+        > Sentinel of Winter
+            + Rimeshatter soak area visual updated.
+        > Spirit of Hunger
+            + Insatiable Hunger debuff now limited to 5 stacks.
+    • Kings' Rest
+        > The Council of Tribes
+        > Encounter now ends immediately after defeating Zanazal the Wise.
+        > Dazar, The First King
+            + Impaling Spear ground visual updated to improve visibility.
+        > Shadow of Zul
+            + Dark Revelation now prefers non-tank players.
+        > Ghostly Brute
+            + Seismic Upheaval visual updated to improve visual clarity.
+        > Honored Raptor
+            + Hunting Leap visibility of ground visual improved.
+    • Murder Row
+        > Reduced required enemy forces to 655 (was 690).
+        > Removed the creature pack of a Corrupted Warlock and two Wrathguard
+          Flayers before Xathuux the Annihilator.
+        > Cantina event
+            + Five Star Review duration increased to 5 minutes (was 4
+              minutes).
+            + Food Missiles now targets specific locations around the room.
+        > Felmaster Lucsei
+            + Blade Dance now has a 2-second cast time, and impact damage
+              reduced by 10%.
+    • Ruby Life Pools
+        > Melidrussa Chillworn
+            + Hailburst cast time increased to 3 seconds (was 2 seconds).
+        > Kyrakka and Erkhart Stormvein
+            + Flaming Embers
+                - Reduced radius of each ember to 5 yards (was 7 yards).
+                - Reduced amount of randomness in the spawn pattern.
+            + Kyrakka no longer immediately begins casting after she lands
+              for the final phase of the encounter, allowing for her to be
+              repositioned.
+            + Increased the movement speed of Kyrakka after she lands for the
+              final phase of the encounter.
+            + Addressed an issue where Kyrakka could melee attack unexpected
+              targets after landing for the final phase.
+        > Flashfrost Chillweaver
+            + Ice Shield precast visual visibility improved.
+        > Earthbound Guardian
+            + Multiple applications of the Earthbound's Imprint debuff can no
+              longer overlap.
+    • Temple of Sethraliss
+        > Avatar of Sethraliss
+            + Developers' notes: With the changes below, we're reducing the
+              amount of passive healing done to the boss via Cleansed
+              Lifeforce to make player healing more impactful. Additionally,
+              we are adjusting some mechanical tuning surrounding Corrupted
+              Lifeforce to encourage more group participation in this
+              mechanic. To counterbalance this adjustment, we're providing
+              more time for the group to handle this mechanic and also
+              increasing its visibility within the Avatar's chamber.
+            + Corrupted Guardian
+                - Corrupted Lifeforce time to soak increased to 6 seconds
+                  (was 4.5 seconds) and visibility improved.
+            + Corruption
+                - Reduced physical vulnerability to 250% (was 300%).
+                - Increased periodic damage by 33%.
+            + Tainted Strike
+                - Reduced periodic damage by 50%.
+                - Capped applications at 2.
+                - Increased duration to 25 seconds.
+            + Cleansed Lifeforce
+                - The passive healing aura can no longer grow beyond 3
+                  applications.
+                - Slowed the tick rate of the passive healing to every 3
+                  seconds (was every 2 seconds).
+            + Faithless Tormentor
+                - Reduced the size of the fixate visual over the head of the
+                  healer.
+                - Fixed an issue where Faithless Tormentors could melee their
+                  fixate target from further than intended.
+            + Essence Defiler
+                - Defiling Taint is now displayed as a debuff on the Avatar's
+                  unit frame.
+            + Lightning Serpent
+                - Multiple applications of the Lingering Storm debuff can no
+                  longer overlap.
+    • Voidscar Arena
+        > Proof of Mastery and Proof of Endurance are now buffs.
+        > Aegyra the Unyielding
+            + Champion's Spear health reduced by 15%.
+        > Raj'kess the Spellstorm
+            + Disruption Orb disruption cast time reduced to 13 seconds (was
+              15 seconds).
+
+Items
+    • Fixed an issue with Hunter's Ritual Stone providing more stats than
+      intended.
+    • Shirts collected from Free T-Shirt Day can now be sold to vendors.
+    • Zatha'tek, Breath of Corruption may now be equipped in either weapon
+      slot.
+    • Aman'muso, Warlord's Vengeance may now be equipped in either weapon
+      slot.
+    • Preternatural Antivenom - fixed an issue preventing the healing effect
+      from consistently triggering after the aura has been applied to an
+      ally depending on the source of incoming damage.
+    • Preyhunter's Trophy Stand cannot be used in areas where toys are
+      restricted.
+
+Player versus Player
+    • Training Grounds: Arenas
+        > The damage of enemy game-controlled opponents has been reduced in
+          Training Grounds: Arena.
+        > Resolved an issue that prevented Week 1 of 3: Gladiator's
+          Distinction quest credit from being earned in Training Grounds:
+          Arenas.
+    • Resolved an issue that could prevent quest credit for Sparks of War:
+      The Coiled Isle.
+    • The PvP trinket set bonus now increases primary stat by 20% for damage
+      dealers and tanks (was 15%).
+        > Developers' notes: We've felt the pace of PvP combat has been
+          slower than intended, so we're increasing the primary stat of
+          non-healer specializations to increase overall outgoing damage.
+    • Demon Hunter
+        > Devourer
+            + Developers' notes: Devourer Demon Hunters are both very
+              threatening and very defensible during Void Metamorphosis and
+              Surrender to the Void has provided the opportunity to increase
+              the duration of those windows too significantly, so its Fury
+              generation effect is being reduced.
+            + Surrender to the Void now increases Fury generated by 60% (was
+              100%).
+    • Druid
+        > Restoration
+            + Developers' notes: Restoration Druid received several changes
+              in Curse of Ula'tek that improved its throughput beyond what we
+              would like in PvP.
+            + All healing reduced by 5% in PvP combat.
+    • Mage
+        > Fire
+            + Developers' notes: Fire Mage's Venomous Abyss tier set bonus is
+              particularly difficult to take advantage of in PvP combat, so
+              we're making a few tweaks with the objective of increasing its
+              usability. We're also decreasing Meteor's damage to reduce Fire
+              Mage's burst capabilities.
+            + Pyroblast damage increased by 10% in PvP combat.
+            + Meteor damage decreased by 20% in PvP combat.
+            + Comet Storm damage decreased by 20% in PvP combat.
+            + Venomous Abyss 4-piece set bonus updated - Now decreases the
+              cast time of Pyroblast and Flamestrike by 30% (was 10%) and
+              increases Pyroclasm's damage bonus by 5% (was 10%) in PvP
+              combat.
+    • Paladin
+        > Holy
+            + Developers' notes: Holy Paladin's throughput has been higher
+              than we would like, and Judgment has been too effective as an
+              offensive tool. Avenging Crusader's effectiveness is being
+              increased to offset the decrease to Judgment's damage.
+            + All healing decreased by 5% in PvP combat.
+            + Judgment damage decreased by 30% in PvP combat.
+            + Avenging Crusader now transfers 80% of damage done into healing
+              in PvP combat (was 55%).
+        > Retribution
+            + Developers' notes: Retribution had been contributing to longer
+              PvP matches during Season 1 due to their frequent access to
+              team utility. We're shifting some of that effectiveness into
+              more consistent offensive power, and additionally giving
+              Templar an increase to Hammer of Light damage so they are a
+              solid offensive alternative to Herald of the Sun.
+            + All damage increased by 8% in PvP combat.
+            + Final Verdict damage increased by 15% in PvP combat.
+            + Hammer of Light damage increased by 25% in PvP combat.
+            + Sacrifice of the Just now reduces Blessing of Sacrifice's
+              cooldown by 30 seconds in PvP combat (was 60 seconds).
+            + Unbreakable Spirit reduces the cooldown of affected spells by
+              20% in PvP combat (was 30%).
+    • Shaman
+        > Restoration
+            + Developers' notes: We're making some targeted adjustments to
+              primarily improve Farseer's viability as we begin season 2.
+              We're also reducing the effectiveness of Storm Conduit which we
+              feel has been too powerful under the right circumstances.
+            + All healing increased by 4% in PvP combat.
+            + Storm Conduit now reduces the cooldown of affected spells by 2
+              seconds (was 4 seconds).
+            + Storm Conduit now reduces the duration of interrupts on
+              Lightning Bolt and Chain Lightning by 40% (was 65%).
+            + Farseer: Healing Wave, Healing Surge, and Chain Heal healing
+              from Ancestors increased by 35% in PvP combat.
+            + Farseer: Hydrobubble absorption increased by 35% in PvP combat.
+    • Warlock
+        > Destruction
+            + Soul Fire damage reduced by 30% in PvP combat.
+
+Professions
+    • Fixed an issue where players were not receiving Tidal Spark Dust from
+      quests such as Trailing Xal'atath and Midnight: World Tour.
+    • Raised the base cap of Tidal Spark Dust to 3 (was 1).
+    • Cooking
+        > Fixed a bug where the tooltips for Hearty Loa's Gathering, Hearty
+          Amani Cornucopia, and Hearty Feast of Knowledge listed incorrect
+          stat values.
+
+Quests
+    • Trailing Xal'atath and Midnight: World Tour should now correctly award
+      Tidal Spark Dust.
+    • Fixed bug preventing the Sparks of War related quests from displaying
+      Spark of Tides as a potential quest reward.
+    • Fixed an issue that would prevent Purging the Vaults or Vaults of
+      Atal'Utek: A Toxic Tour quests from being completed if you already had
+      Codex of the Soulcoilers in your inventory.
+    • For A Grave Concern, the Budget Friendly gravestone in the Silvermoon
+      Delve hub is now available for anyone to use.
+            ]=],
+        },
         {
             date = "August 17, 2026",
             text = [=[
-    Classes
-        • Hunter
-            > Beast Mastery
-                + Corrected an issue where Dire Beast Kill Commands from the
-                  Wildspeaker Talent did not properly benefit from Killer Instinct,
-                  Alpha Predator, Specialized Arsenal, or Savagery.
-        • Priest
-            > Holy
-                + Corrected an issue where swapping from Shadow to Holy
-                  specializations could improperly cause Shadow Word: Pain to not
-                  turn into Holy Fire.
-        • Shaman
-            > Corrected an issue where swapping between specs may incorrectly
-              cause Lava Burst to show up as Primal Strike in your spellbook.
-        • Warlock
-            > Destruction
-                + Fixed an issue where the tooltip of Shadowburn would not display
-                  the correct duration.
+Classes
+    • Hunter
+        > Beast Mastery
+            + Corrected an issue where Dire Beast Kill Commands from the
+              Wildspeaker Talent did not properly benefit from Killer Instinct,
+              Alpha Predator, Specialized Arsenal, or Savagery.
+    • Priest
+        > Holy
+            + Corrected an issue where swapping from Shadow to Holy
+              specializations could improperly cause Shadow Word: Pain to not
+              turn into Holy Fire.
+    • Shaman
+        > Corrected an issue where swapping between specs may incorrectly
+          cause Lava Burst to show up as Primal Strike in your spellbook.
+    • Warlock
+        > Destruction
+            + Fixed an issue where the tooltip of Shadowburn would not display
+              the correct duration.
 
-    Delves
-        • In Delves, Ula'tek's Amphisbaena Writhing Strike poison can only get one
-          aura at a time. Damage reduced 25%, and the cooldown on Writhing Strike
-          increased.
-        • Fixed an issue causing Corrosive Bilespear to not proc at higher ranks.
+Delves
+    • In Delves, Ula'tek's Amphisbaena Writhing Strike poison can only get one
+      aura at a time. Damage reduced 25%, and the cooldown on Writhing Strike
+      increased.
+    • Fixed an issue causing Corrosive Bilespear to not proc at higher ranks.
 
-    Lairs
-        • Resolved an issue causing the sharks to not bite in The Tidebound Grotto.
+Lairs
+    • Resolved an issue causing the sharks to not bite in The Tidebound Grotto.
 
-    Naigtal and Val
-        • Players in Heroic World Tier can again talk with a sprit healer to exit
-          Heroic World Tier and resurrect.
+Naigtal and Val
+    • Players in Heroic World Tier can again talk with a sprit healer to exit
+      Heroic World Tier and resurrect.
 
-    Quests
-        • Ofi the Sly should now properly accept that the concoction is complete
-          for Acceptable Apprentice.
-        • Fixed an issue preventing characters under level 90 from completing
-          activities related to Saltheril's Soiree and Abundance.
+Quests
+    • Ofi the Sly should now properly accept that the concoction is complete
+      for Acceptable Apprentice.
+    • Fixed an issue preventing characters under level 90 from completing
+      activities related to Saltheril's Soiree and Abundance.
             ]=],
         },
         {
             date = "August 14, 2026",
             text = [=[
-    Achievements
-        • Reaching Renown 20 with Zul'jaara's Forces now correctly grants Zul'jarra's
-          Forces Champion.
-        • Family Battler of Outland and all associated type- Battler of Outland
-          achievements now require Bloodknight Antairi (was incorrectly Gorma Asaan).
+Achievements
+    • Reaching Renown 20 with Zul'jaara's Forces now correctly grants Zul'jarra's
+      Forces Champion.
+    • Family Battler of Outland and all associated type- Battler of Outland
+      achievements now require Bloodknight Antairi (was incorrectly Gorma Asaan).
 
-    Classes
-        • Evoker
-            > Devastation
-                + Shattering Star now correctly benefits from Mastery: Giantkiller.
-        • Warrior
-            > Arms, Fury
-                + Slayer: Fixed a bug that was causing Executioner to have double the
-                  intended effect.
-        • Warlock
-            > Fixed an issue where Warlock pets would continually learn Soul Leech.
-            > Demonology
-                + Soul Harvester: fixed an issue where Shadow Bolt and Hand of Gul'dan
-                  would be disabled in the cooldown manager.
+Classes
+    • Evoker
+        > Devastation
+            + Shattering Star now correctly benefits from Mastery: Giantkiller.
+    • Warrior
+        > Arms, Fury
+            + Slayer: Fixed a bug that was causing Executioner to have double the
+              intended effect.
+    • Warlock
+        > Fixed an issue where Warlock pets would continually learn Soul Leech.
+        > Demonology
+            + Soul Harvester: fixed an issue where Shadow Bolt and Hand of Gul'dan
+              would be disabled in the cooldown manager.
 
-    Delves
-        • Fixed an issue where Gorgoneion Gaze would not trigger.
-        • Fixed an issue where Ula'tek's Gift would not deal damage.
-        • Fixed an issue where Ula'tek's Gift would not apply more stacks while poisoned.
+Delves
+    • Fixed an issue where Gorgoneion Gaze would not trigger.
+    • Fixed an issue where Ula'tek's Gift would not deal damage.
+    • Fixed an issue where Ula'tek's Gift would not apply more stacks while poisoned.
 
-    Dungeons and Raids
-        • Archmage Timear again permits players to queue for the Raid Finder wings of
-          Tomb of Sargeras.
-        • Ruby Life Pools
-            > Thunderhead
-                + Fixed an issue where Electrical Discharge would sometimes fail to
-                  hit players.
-        • Voidscar Arena
-            > Addressed an issue where Brutok's Smashing Charge can charge through doors.
+Dungeons and Raids
+    • Archmage Timear again permits players to queue for the Raid Finder wings of
+      Tomb of Sargeras.
+    • Ruby Life Pools
+        > Thunderhead
+            + Fixed an issue where Electrical Discharge would sometimes fail to
+              hit players.
+    • Voidscar Arena
+        > Addressed an issue where Brutok's Smashing Charge can charge through doors.
 
-    Items
-        • Void-Twisted Sporbits no longer grant Nebulous Voidcores. Nebulous Voidcores
-          obtained in this way after the end of Season 1 have been removed for Season 2.
-        • Tanks may now roll Need on Zul'jin's Guillotine Technique.
-        • Survival Hunters may now roll Need on two-handed axes and swords with Agility.
-        • Trinkets
-            > Coiled Fangstone: damage increased by 15%.
-            > Crucible of Erratic Energies: critical strike reduced by 15%.
-            > Fang of Umbral Malignance: damage increased by 15%.
-            > First Mate's Shellward: damage increased by 25%.
-            > Font of Venomous Rage: damage increased by 20%.
-            > Gaze of the Alnseer: primary stat reduced by 20%.
-            > Gebbo's Bottomless Bag: secondary stat effects reduced by 29%.
-            > Hex Lord's Dooming Idol: intellect lost per stack reduced by 33% and
-              intellect granted on use per stack increased by 15%.
-            > Idol of the Howling Nexus: agility and strength on proc increased by 5%.
-            > Knot of Writhing Serpents: damage increased by 15%.
-            > Knot of Writhing Serpents no longer drops for healing specializations.
-            > Kyrakka's Searing Embers: healing increased by 80% and damage increased
-              by 50%.
-            > Mindpiercer's Sigil: damage increased by 15%.
-            > Mycolic Medicine: all healing increased by 30%.
-            > Preternatural Antivenom: healing increased by 30% and fixed an issue
-              preventing the healing effect from consistently triggering after the aura
-              has been applied to an ally depending on the source of incoming damage.
-            > Sapling of the Dawnroot: damage increased by 15%.
-            > Soulcoiler Ritual Vessel: absorb reduced by 15%.
-            > Sszorak's Ferocity: damage increased by 15%.
-            > Tiny Electromental in a Jar: damage increased by 15%.
-            > Tumor of the Swarm: damage increased by 15% and healing increased by 40%.
-            > Unstable Felheart Crystal: absorb increased by 30%.
-            > Vaelgor's Final Stare: mastery reduced by 10%.
-            > Vashnik's Sanguine Rancor: damage increased by 15%.
-            > Vexhul's Everflowing Gland: damage increased by 15%.
+Items
+    • Void-Twisted Sporbits no longer grant Nebulous Voidcores. Nebulous Voidcores
+      obtained in this way after the end of Season 1 have been removed for Season 2.
+    • Tanks may now roll Need on Zul'jin's Guillotine Technique.
+    • Survival Hunters may now roll Need on two-handed axes and swords with Agility.
+    • Trinkets
+        > Coiled Fangstone: damage increased by 15%.
+        > Crucible of Erratic Energies: critical strike reduced by 15%.
+        > Fang of Umbral Malignance: damage increased by 15%.
+        > First Mate's Shellward: damage increased by 25%.
+        > Font of Venomous Rage: damage increased by 20%.
+        > Gaze of the Alnseer: primary stat reduced by 20%.
+        > Gebbo's Bottomless Bag: secondary stat effects reduced by 29%.
+        > Hex Lord's Dooming Idol: intellect lost per stack reduced by 33% and
+          intellect granted on use per stack increased by 15%.
+        > Idol of the Howling Nexus: agility and strength on proc increased by 5%.
+        > Knot of Writhing Serpents: damage increased by 15%.
+        > Knot of Writhing Serpents no longer drops for healing specializations.
+        > Kyrakka's Searing Embers: healing increased by 80% and damage increased
+          by 50%.
+        > Mindpiercer's Sigil: damage increased by 15%.
+        > Mycolic Medicine: all healing increased by 30%.
+        > Preternatural Antivenom: healing increased by 30% and fixed an issue
+          preventing the healing effect from consistently triggering after the aura
+          has been applied to an ally depending on the source of incoming damage.
+        > Sapling of the Dawnroot: damage increased by 15%.
+        > Soulcoiler Ritual Vessel: absorb reduced by 15%.
+        > Sszorak's Ferocity: damage increased by 15%.
+        > Tiny Electromental in a Jar: damage increased by 15%.
+        > Tumor of the Swarm: damage increased by 15% and healing increased by 40%.
+        > Unstable Felheart Crystal: absorb increased by 30%.
+        > Vaelgor's Final Stare: mastery reduced by 10%.
+        > Vashnik's Sanguine Rancor: damage increased by 15%.
+        > Vexhul's Everflowing Gland: damage increased by 15%.
 
-    Lairs
-        • Resolved an issue causing some Bubblefin Shorerunners to not despawn when
-          reaching the Alluring Bubble.
+Lairs
+    • Resolved an issue causing some Bubblefin Shorerunners to not despawn when
+      reaching the Alluring Bubble.
 
-    Player versus Player
-        • Fixed an issue where Ula'tek's Gift was dealing more damage to players
-          than expected.
+Player versus Player
+    • Fixed an issue where Ula'tek's Gift was dealing more damage to players
+      than expected.
 
-    Professions
-        • Fixed an issue that prevented Flat Snakeskin Canopy from being crafted.
-        • Fixed an issue that prevented Flat Snakeskin Canopy from being added to the
-          decor collection when used.
+Professions
+    • Fixed an issue that prevented Flat Snakeskin Canopy from being crafted.
+    • Fixed an issue that prevented Flat Snakeskin Canopy from being added to the
+      decor collection when used.
 
-    Quests
-        • Fixed a bug causing Amani Endeavor daily quests to only be offered weekly.
-        • Players on the quest Void Walk With Me are now correctly advanced in the
-          Traitor's Due story when entering The Shadow Enclave.
-        • Story of a Memorable Victory no longer drops outside of the Dragon Isles.
-        • Fixed an issue preventing progress on the quest Cut Her Strings in Voidstorm.
-        • Awe of She is no longer stalled by weather effects on the player.
-        • Fixed a bug preventing players who are seated before entering the Worldsoul
-          Terror as Nek'zali from properly interacting with Injured Hunters on Fuel
-          the Calling.
+Quests
+    • Fixed a bug causing Amani Endeavor daily quests to only be offered weekly.
+    • Players on the quest Void Walk With Me are now correctly advanced in the
+      Traitor's Due story when entering The Shadow Enclave.
+    • Story of a Memorable Victory no longer drops outside of the Dragon Isles.
+    • Fixed an issue preventing progress on the quest Cut Her Strings in Voidstorm.
+    • Awe of She is no longer stalled by weather effects on the player.
+    • Fixed a bug preventing players who are seated before entering the Worldsoul
+      Terror as Nek'zali from properly interacting with Injured Hunters on Fuel
+      the Calling.
 
-    Trading Post
-        • The Trading Post activity Complete 'A Call for Aid' Storyline should now
-          require only quests within that storyline.
+Trading Post
+    • The Trading Post activity Complete 'A Call for Aid' Storyline should now
+      require only quests within that storyline.
             ]=],
         },
         {
             date = "August 13, 2026",
             text = [=[
-    Classes
-        • Spirit Walk in the Vaults of Atal'utek should now apply to pets.
-        • Warlock
-            > Affliction
-                + Fixed an issue where Seed of Corruption would not consume Shard
-                  Instability on cast.
+Classes
+    • Spirit Walk in the Vaults of Atal'utek should now apply to pets.
+    • Warlock
+        > Affliction
+            + Fixed an issue where Seed of Corruption would not consume Shard
+              Instability on cast.
 
-    Delves
-        • Fixed an issue where the Delve Shadowguard Point: Shadowguard Survivor would
-          not grant Great Vault credit upon completion.
-        • Fixed a bug causing Ritual Sites to appear to grant Great Vault rewards that
-          were inconsistent with the available Tiers. Next week, the Great Vault will
-          reward the intended tiers 1-6 for week 1 activities.
-        • Fixed an issue with the Corrosive Codex that caused Corrosive Powers unlocked
-          on one character to not show up as available options in the Corrosive Codex for
-          other characters.
+Delves
+    • Fixed an issue where the Delve Shadowguard Point: Shadowguard Survivor would
+      not grant Great Vault credit upon completion.
+    • Fixed a bug causing Ritual Sites to appear to grant Great Vault rewards that
+      were inconsistent with the available Tiers. Next week, the Great Vault will
+      reward the intended tiers 1-6 for week 1 activities.
+    • Fixed an issue with the Corrosive Codex that caused Corrosive Powers unlocked
+      on one character to not show up as available options in the Corrosive Codex for
+      other characters.
 
-    Dungeons
-        • Players who have not yet completed precursor campaign quests should now be
-          able to be summoned to the Vaults of Atal'Utek by Altar of Fangs dungeon groups.
-        • Altar of Fangs
-            > Addressed an issue where Uncoiled Writhe constantly switches target with
-              Spiteful Hunt.
-            > Addressed an issue where interacting with Infusion Totem may fail to
-              trigger the event.
-        • Voidscar Arena
-            > Addressed an issue where defeating Aegyra the Unyielding while she's
-              channeling Earthsplitter can fail to open the door to the arena.
+Dungeons
+    • Players who have not yet completed precursor campaign quests should now be
+      able to be summoned to the Vaults of Atal'Utek by Altar of Fangs dungeon groups.
+    • Altar of Fangs
+        > Addressed an issue where Uncoiled Writhe constantly switches target with
+          Spiteful Hunt.
+        > Addressed an issue where interacting with Infusion Totem may fail to
+          trigger the event.
+    • Voidscar Arena
+        > Addressed an issue where defeating Aegyra the Unyielding while she's
+          channeling Earthsplitter can fail to open the door to the arena.
 
-    Items
-        • Fixed an issue that caused Venomjade Necklace to sometimes be invisible.
+Items
+    • Fixed an issue that caused Venomjade Necklace to sometimes be invisible.
 
-    Lairs
-        • Players cannot receive loot from Nymrissa Wavecaller more than once per week in
-          World difficulty.
+Lairs
+    • Players cannot receive loot from Nymrissa Wavecaller more than once per week in
+      World difficulty.
 
-    Player versus Player
-        • Gorgoneion Gaze no longer petrifies players indefinitely.
-        • Fixed a bug preventing Otherworldly Sparks of War from dropping in Naigtal and
-          Val activities. The Naigtal and Val Sparks of War quests will no longer be
-          offered when Season 2 begins.
+Player versus Player
+    • Gorgoneion Gaze no longer petrifies players indefinitely.
+    • Fixed a bug preventing Otherworldly Sparks of War from dropping in Naigtal and
+      Val activities. The Naigtal and Val Sparks of War quests will no longer be
+      offered when Season 2 begins.
 
-    Professions
-        • [With realm restarts] Jewelcrafting and Tailoring Profession Knowledge books
-          from the forces of Zul'jarra should now correctly award profession Knowledge.
-          Players who got the books prior to this fix should be given
-          the Knowledge retroactively.
-        • Fixed an issue that caused Contract: Zul'jarra's Forces to sometimes
-          incorrectly apply Amani Tribe Contract when used.
+Professions
+    • [With realm restarts] Jewelcrafting and Tailoring Profession Knowledge books
+      from the forces of Zul'jarra should now correctly award profession Knowledge.
+      Players who got the books prior to this fix should be given
+      the Knowledge retroactively.
+    • Fixed an issue that caused Contract: Zul'jarra's Forces to sometimes
+      incorrectly apply Amani Tribe Contract when used.
 
-    Quests
-        • Fixed an issue where players could begin Curse of Ula'tek campaign quests
-          without first completing the main Midnight campaign.
-            > Developers' notes: The Curse of Ula'tek campaign was intended to require
-              account completion of the main Midnight campaign before it could be
-              started, as completing these features out of order could result in players
-              being in a misleading or confusing state. Players who have not yet started
-              the Curse of Ula'tek campaign must now complete the main Midnight campaign
-              on one character per account. Any player-characters who have already
-              started the Curse of Ula'tek campaign should be unaffected and can continue
-              it and complete it.
-        • Players who completed Legends of the Haranir quests split among multiple
-          characters will now be able to resume The Empty Cradle questline.
-        • Cold As Ice no longer sends players on a cold canoe ride into the abyss.
-        • Removed an incorrect map marker for A Suspicious Stew.
-        • Bob has been found and returned to his bartending.
+Quests
+    • Fixed an issue where players could begin Curse of Ula'tek campaign quests
+      without first completing the main Midnight campaign.
+        > Developers' notes: The Curse of Ula'tek campaign was intended to require
+          account completion of the main Midnight campaign before it could be
+          started, as completing these features out of order could result in players
+          being in a misleading or confusing state. Players who have not yet started
+          the Curse of Ula'tek campaign must now complete the main Midnight campaign
+          on one character per account. Any player-characters who have already
+          started the Curse of Ula'tek campaign should be unaffected and can continue
+          it and complete it.
+    • Players who completed Legends of the Haranir quests split among multiple
+      characters will now be able to resume The Empty Cradle questline.
+    • Cold As Ice no longer sends players on a cold canoe ride into the abyss.
+    • Removed an incorrect map marker for A Suspicious Stew.
+    • Bob has been found and returned to his bartending.
 
-    World
-        • Fixed a bug that could cause players to disconnect when entering the Lunarfall
-          Garrison Excavation area.
+World
+    • Fixed a bug that could cause players to disconnect when entering the Lunarfall
+      Garrison Excavation area.
             ]=],
         },
     },
