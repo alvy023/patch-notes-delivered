@@ -10,8 +10,104 @@
 PatchNotesDelivered_Notes_1210 = {
     version = "12.1.0",
     build = "69382",
-    hotfix = 3,
+    hotfix = 4,
     gameChangesHotfixes = {
+        {
+            date = "August 19, 2026",
+            text = [=[
+Classes
+    • Death Knight
+        > Resolved an issue causing Army of the Dead Epidemic Orders to cast from the
+          Death Knight instead of the Lesser Ghoul.
+        > Unholy
+            + Resolved an issue causing Forbidden Knowledge Rank 4 to not have a chance
+              to activate when the Dread Plague target has a damage absorb effect.
+            + Resolved an issue causing Transfusion to not empower already summoned
+              Lesser Ghouls.
+            + Resolved an issue causing Lord of the Dead to occasionally have a delay
+              in between casts.
+            + Dark Simulacrum can now be tracked through the Cooldown Manager.
+    • Druid
+        > Restoration
+            + Fixed an issue where Rejuvenation could be removed early if the player
+              gained or lost haste while it was active.
+    • Hunter
+        > Marksmanship
+            + Corrected an issue where Rapid Fire fired fewer shots than intended when
+              hitting a second target with the Aspect of the Hydra talent.
+    • Paladin
+        > Retribution
+            + Fixed an issue where Paladins talented into Radiant Glory would not have
+              Avenging Wrath be applied after casting Wake of Ashes while silenced.
+    • Shaman
+        > Restoration
+            + Totemic: Corrected an issue where the Whirling Water effect was not
+              properly working.
+
+Delves
+    • Fixed an issue where the Seasonal Refresher: Midnight quest could not be
+      completed.
+    • Fasten from Engorged Gnarlticks on Gnarldor Isle should now be removed
+      properly when leaving a delve.
+
+Dungeons and Raids
+    • The Blinding Vale
+        > Ikuzz the Light Hunter
+            + Resolved an issue preventing Death Knights from casting Consumption after
+              the Death Knight has been picked up by Bloodthirsty Gaze.
+    • Ruby Life Pools
+        > Kyrakka and Erkhart Stormvein
+            + Addressed an issue where Ekhart could target an unexpected player with
+              Stormslam.
+    • Temple of Sethraliss
+        > Fixed an issue where Spark Channeler could be turned unexpectedly.
+        > Fixed an issue where Static Anomaly creatures did not contribute properly
+          to the enemy forces count.
+            + The enemy forces requirement has been adjusted to take this fix into
+              account. This change does not affect routing.
+    • The Venomous Abyss
+        > Resolved an issue where the door to The Twin Fangs room would close upon
+          engaging combat but would not reopen, preventing players from backtracking
+          to the entrance of the raid.
+        > Nek'zali the Soulcaller
+            + Addressed an issue preventing Nek'zali from leashing near the entrance of
+              the play space.
+        > Vashnik, The Malignant
+            + Fixed an issue causing Shrouded Venom to sometimes evade after spawning.
+        > The Lost Explorers
+            + Resolved an issue where Trader Gebbo would sometimes not despawn.
+        > The Twin Fangs
+            + Resolved an issue causing Coiling Ichor to impact game client
+              performance.
+            + Resolved an issue where Zul'jarra and Orweyna could fail to path across
+              the bridge after The Twin Fangs were defeated.
+        > The Coiled Altar
+            + Fixed an issue where the encounter would end unexpectedly.
+            + Resolved an issue causing Hex Lord Malacrass and Zul'jan to regain too
+              much health during their intermission.
+
+Items
+    • Aman'muso, Warlord's Vengeance is again restricted to the main-hand slot
+      only.
+        > Developers' notes: The recent change to this weapon was more disruptive
+          than anticipated and resulted in adverse incentives for certain
+          specializations. This does not impact Zatha'tek, Breath of Corruption.
+
+Player versus Player
+    • Conqueror's Venomous Lacquer should now add PvP item level to tier shoulders
+      when used.
+
+Quests
+    • Players above level 80 can once again complete Step Into the Light.
+    • The weekly quest Midnight: Vaults of Atal'Utek no longer incorrectly
+      suggests that it rewards two Sparks of Tide. This was a UI typo only.
+    • Fixed an issue that would prevent Purging the Vaults or Vaults of
+      Atal'Utek: A Toxic Tour quests from being completed if you already had
+      Trovehunter's Bounty in your inventory.
+    • The required Quest Item for Seeking Knowledge Week 5 of 5: Off-World Magic
+      can now drop from Elite Rares, Overseers, and Rivals on Val and Naigtal.
+            ]=],
+        },
         {
             date = "August 18, 2026",
             text = [=[
