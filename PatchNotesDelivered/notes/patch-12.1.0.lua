@@ -10,8 +10,119 @@
 PatchNotesDelivered_Notes_1210 = {
     version = "12.1.0",
     build = "69382",
-    hotfix = 4,
+    hotfix = 5,
     gameChangesHotfixes = {
+        {
+            date = "August 20, 2026",
+            text = [=[
+Classes
+    • Demon Hunter
+        > Havoc
+            + Aldrachi Reaver: Fixed an issue where Evasive Action was not granting an
+              extra cast of Vengeful Retreat.
+    • Druid
+        > Restoration
+            + Fixed an issue where the tooltip for Tranquility incorrectly described how
+              long it extended heal over time effects.
+            + Fixed an issue where Overgrowth was applying healing over time effects to
+              the incorrect target when used in tandem with Soul of the Forest.
+    • Hunter
+        > Marksmanship
+            + Corrected an issue where Hunters could benefit from the Precise Shots
+              effect twice by casting Arcane Shot or Multi-Shot as Rapid Fire finishes
+              channeling while talented into Unload.
+            + Corrected an issue where the AoE damage from Explosive Shot was not
+              properly reduced by damage taken reduction effects.
+    • Priest
+        > Holy
+            + Fixed an issue where casting Benediction and queuing a Holy Word would
+              consume the proc.
+    • Shaman
+        > Elemental
+            + Resolved an issue causing Master of the Elements to not increase the
+              damage of Earthquake.
+    • Warlock
+        > Hellcaller: Fixed an issue where Blackened Soul could trigger from Unstable
+          Affliction periodic damage.
+        > Affliction
+            + Fixed an issue where Malefic Grasp was not affected by Withering Bolt.
+            + Fixed an issue where Withering Bolt did not account for Wither when
+              increasing Shadowbolt Volley damage.
+            + Fixed an issue where Wither would not count toward Darkglare Eye Beam
+              damage increase.
+            + Fixed an issue where the Unstable Affliction granted by Venomous Abyss
+              4-piece set bonus would not grant a stack of Wither.
+
+Delves
+    • Fixed an issue where if Azta'rec killed a player it would display that Zek'vir
+      has burrowed away and did not drop loot.
+
+Dungeons and Raids
+    • Ruby Life Pools
+        > Thunderhead and Flamegullet
+            + Fixed an issue where certain abilities could cause their breath spells to
+              cancel unexpectedly.
+    • Temple of Sethraliss
+        > Avatar of Sethraliss
+            + Fixed an issue where the progress bar could reach 100% when the Avatar
+              reached 99% health.
+    • The Venomous Abyss
+        > Resolved an issue where players could fall through the world in The Serpent
+          Warren.
+        > Vashnik the Malignant
+            + Fixed an issue causing Stygian Burst to inflict damage in a larger area
+              than intended.
+            + Shrouded Venom health redistributed and now have 40% health and 60%
+              shields.
+            + Fixed an issue causing players to get hit multiple times from the same
+              wave in a short period of time.
+            + Fixed a rare issue where players using Harpoon on a Venom while inside the
+              Malignant Cavity would cause them to fall through the playspace.
+        > The Coiled Altar
+            + Fixed an issue where the encounter would rarely fail to properly transition
+              to Phase 3 at the end of the intermission.
+        > Ula'tek
+            + Blight Vein damage reduced on Heroic difficulty.
+            + Grasping Fangs now targets three players per side on Heroic difficulty, no
+              matter the instance group size.
+            + Volatile Purge's area of effect now scales with raid size in Normal and
+              Heroic difficulties. The effect radius is largest in a 10-player raid and
+              gradually decreases as raid size increases, reaching its smallest size in a
+              30-player raid.
+            + Resolved an issue causing the damage of Spectral Coils to unintentionally
+              scale on non-Mythic difficulties.
+            + Spectral Coils now requires 40% of the raid to reduce its damage to a
+              minimum value.
+            + Spectral Coils adjusted on Heroic difficulty so it has more consistent
+              timing.
+            + Corrected an issue where the Blight Vein debuff did not properly inflict
+              its damage based on the number of stacks applied, on Heroic and Mythic
+              difficulties.
+            + Corrected an issue where Hunters' Stampede pets from the Pack Leader hero
+              talents would not properly damage the Heart of Ula'tek during the
+              encounter.
+
+Items
+    • Companion Command Crystal is now bind-on-pickup.
+
+Omnium Folio
+    • Fixed an issue with a previous change to the Omnium Folio's Rune of Unleashed
+      Fire that resulted in pulling enemies you were not in combat with.
+
+Prey
+    • Decreased the damage and slow effect of Toxic Snare.
+
+Quests
+    • The Venomous Abyss campaign quest should now complete for players who were dead
+      at the end of the last encounter.
+    • Fixed an issue that reduced player-characters' turn speed after starting the
+      world quest Swift of Foot.
+
+Treasures
+    • Fixed an issue where the Unguarded Chest would spawn without Farthik the
+      Plunderer.
+            ]=],
+        },
         {
             date = "August 19, 2026",
             text = [=[
