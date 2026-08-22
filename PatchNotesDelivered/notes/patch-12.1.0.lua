@@ -9,9 +9,72 @@
 --- Max line length [90] -----------------------------------------------------------------
 PatchNotesDelivered_Notes_1210 = {
     version = "12.1.0",
-    build = "69382",
-    hotfix = 5,
+    build = "69404",
+    hotfix = 6,
     gameChangesHotfixes = {
+        {
+            date = "August 21, 2026",
+            text = [=[
+Delves
+    • Phantasmal Spore Toxin and Frostheart Venom will now properly be removed when
+      leaving the delve.
+    • Illusory Deceit no longer incorrectly scales the number of Twilight Illusions
+      based on the number of players during Infiltrator Gulkat's encounter in The
+      Darkway.
+    • Players may now only pick up and carry one Oddball Ingredient at a time.
+
+Dungeons and Raids
+    • Altar of Fangs
+        > Ravenous Descendant's Ravenous now grants 10% attack speed per stack (was
+          20%), and movement speed reduced by 20%.
+        > Twinfang Harrower's Paralyzing Shots initial damage reduced by 50%.
+        > Venom Leech's Septic Spatter no longer creates a puddle at the leech's
+          corpse location.
+        > Ritual Chieftain's Blood Sacrifice absorb reduced by 10%.
+        > Caustic Mist Totem's Unstable Totem damage reduced by 10%.
+        > High Evolutionist's Evolve cooldown increased, Envenom cast time increased
+          to 3 seconds (was 2.5 seconds), and Mass Envenom cast time increased to 3.5
+          seconds (was 2.5 seconds).
+        > Bloodletter's Bloodletting now procs less frequently.
+        > Ascendant Serpent health reduced by 10%.
+        > Rav'i
+            + Feeding Frenzy no longer increases the rate of Messy Eater and Carrion
+              Burst.
+            + Fresh Meat piles now display a warning visual when Rav'i is close
+              enough to eat from them.
+            + Hydrastrike damage reduced by 33%.
+        > Zul'jan
+            + The initial cast of Ritual of the Fang now occurs a few seconds later
+              in the encounter.
+            + Ritual of the Fang cast time increased to 5 seconds (was 4 seconds).
+            + Fang Empowered damage reduced by 20%.
+    • The Venomous Abyss
+        > Vashnik the Malignant
+            + Reduced target scaling for Adaptive infection to be less punishing for
+              larger group sizes.
+            + Fixed an issue causing Thinned Blood to be cast on non-mythic
+              difficulties.
+        > The Lost Explorers
+            + Resolved an issue causing Final Ascension to inflict less damage than
+              intended.
+    • Ula'tek
+        > Adjusted the Caustic Waves from the Gore Rattler so they remain above the
+          floor of the main platform.
+        > The tooltip for Ula'tek's Volatile Purge no longer contains an error.
+
+Housing
+    • Previewing decor in the Decor Catalog will now show accurate Voidlight Marl
+      prices for decor sold by Silvermoon's Disguised Decor Duel Vendor.
+
+Items
+    • Hex Lord's Dooming Idol - Hex Lord's Doom stacks are no longer removed upon
+      ending a Mythic+ boss encounter.
+
+Prey
+    • Fixed an issue that prevented alts from being able to access the Prey portal
+      between Silvermoon and The Coiled Isle.
+            ]=],
+        },
         {
             date = "August 20, 2026",
             text = [=[
