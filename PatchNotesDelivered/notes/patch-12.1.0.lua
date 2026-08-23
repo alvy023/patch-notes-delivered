@@ -50,13 +50,13 @@ Dungeons and Raids
             + Fang Empowered damage reduced by 20%.
     • The Venomous Abyss
         > Vashnik the Malignant
-            + Reduced target scaling for Adaptive infection to be less punishing for
-              larger group sizes.
+            + Reduced target scaling for Adaptive infection to be less punishing
+              for larger group sizes.
             + Fixed an issue causing Thinned Blood to be cast on non-mythic
               difficulties.
         > The Lost Explorers
-            + Resolved an issue causing Final Ascension to inflict less damage than
-              intended.
+            + Resolved an issue causing Final Ascension to inflict less damage
+              than intended.
     • Ula'tek
         > Adjusted the Caustic Waves from the Gore Rattler so they remain above the
           floor of the main platform.
