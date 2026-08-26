@@ -9,9 +9,456 @@
 --- Max line length [90] -----------------------------------------------------------------
 PatchNotesDelivered_Notes_1210 = {
     version = "12.1.0",
-    build = "69404",
-    hotfix = 6,
+    build = "69497",
+    hotfix = 7,
     gameChangesHotfixes = {
+        {
+            date = "August 25, 2026",
+            text = [=[
+Classes
+    • Death Knight
+        > Developers' notes: Frost Death Knight has performed under our expectations at
+          the beginning of Curse of Ula'tek, especially in the Venomous Abyss raid.
+        > Frost
+            + All ability damage and melee damage increased by 6%.
+            + Obliterate damage increased by 15%.
+        > Unholy
+            + Resolved an issue causing the Unholy Devotion attack speed increase to also
+              reduce attack damage and therefore have a neutral effect.
+    • Demon Hunter
+        > Havoc
+            + All damage increased by 3%.
+        > Vengeance
+            + Mastery: Fel Blood effectiveness increased by 24%.
+    • Druid
+        > Restoration
+            + Developers' notes: These changes are intended to address Rejuvenation and
+              Wild Growth feeling weak in season 2, particularly in dungeons. We're also
+              increasing the power of the 4-piece class set to make sure it's an
+              impactful and noticeable set bonus. These changes are accompanied by
+              slight nerfs to their raid healing to keep them around the same power in
+              raid while increasing their power in dungeons.
+            + 4-piece class set bonus increases Genesis duration by 8 seconds (was 4
+              seconds).
+            + Rejuvenation and Germination healing increased by 15%. Does not apply to
+              PvP combat.
+            + Wild Growth healing increased by 10%.
+            + Nature's Bounty replicates 10% of Regrowth's healing (was 20%).
+            + Everbloom heals 5 targets (was 6 targets).
+            + Everbloom heals for 48% of Lifebloom's final heal (was 40%). Does not apply
+              to PvP combat.
+    • Evoker
+        > Preservation
+            + Developers' notes: We're further increasing some of the Preservation triage
+              heals to help them keep up with other healers in dungeons.
+            + Verdant Embrace healing increased by 25%. Does not apply to PvP combat.
+            + Living Flame healing increased by 20%. Does not apply to PvP combat.
+            + Dream Simulacrum increases healing of Verdant Embrace by 40% (was 30%).
+    • Hunter
+        > Beast Mastery
+            + Developers' notes: We're looking to increase Beast Mastery area damage and
+              cleave capabilities.
+            + Wild Thrash now deals 300% increased damage when striking more than 2
+              targets (was 200%).
+            + Beast Cleave now causes your pets to strike nearby enemies for 70% of the
+              damage dealt (was 55%).
+        > Survival
+            + All damage dealt by you and your pets increased by 4%.
+    • Mage
+        > Frost
+            + Developers' notes: We're primarily focused on Frost's performance in
+              Mythic Keystone dungeons. The recent removal of the health increase from
+              Improved Ice Barrier had a greater effect on Frost's overall
+              survivability than intended. We like the symmetry of the three Improved
+              Barrier talents having one additional effect, and Frost has historically
+              had a slightly larger absorb than Arcane and Fire, so we're baking it
+              into the baseline absorb amount rather than re-attaching it to Improved
+              Ice Barrier. We're also making some targeted increases to Frost's area of
+              effect damage.
+            + Ice Barrier absorb amount increased to 35% of maximum health (was 30%).
+              Does not apply to PvP combat.
+            + Blizzard damage increased by 10%.
+            + Frostbite Talent: Shatter damage to nearby enemies increased by 10%.
+            + Frostfire: Isothermic Core - Meteor damage increased by 25%.
+    • Monk
+        > Brewmaster
+            + Developers' note: We're adjusting the absorption of Celestial Brew and
+              Celestial Infusion to improve its impact as a defensive option and to
+              help address pain points players are experiencing in some encounters.
+            + All damage increased by 3%.
+            + Celestial Brew and Celestial Infusion absorb value increased by 20%.
+    • Paladin
+        > Retribution
+            + Developers' notes: We're increasing the damage of the Curse of Ula'tek
+              4-piece set bonus Divine Arbiter significantly, to make sure its
+              rotational ask is worth executing.
+            + Class Set 4-piece Divine Arbiter main target damage increased by 150%.
+            + Class Set 4-piece Divine Arbiter secondary target damage increased by 75%.
+    • Warlock
+        > Developers' notes: We're increasing the throughput of Affliction and
+          Demonology by primarily focusing on their single-target tools with a
+          secondary focus on their multi-target kit. Additionally, we're considerably
+          increasing the damage of Warlock demons so that they have a larger
+          contribution to overall throughput. This should also help a bit more with
+          aggro concerns during solo play.
+        > Imp, Voidwalker, Sayaad, and Felhunter damage increased by 350%.
+        > Affliction
+            + Unstable Affliction damage increased by 15%. Does not apply to PvP combat.
+            + Hellcaller - Blackened Soul damage increased by 20%. Does not apply to
+              PvP combat.
+            + Wrath of Nathreza damage increased by 35%. Does not apply to PvP combat.
+            + Shadow of Nathreza damage increased by 25%. Does not apply to PvP combat.
+            + Agony damage increased by 20%. Does not apply to PvP combat.
+            + Corruption damage increased by 15%. Does not apply to PvP combat.
+            + Hellcaller - Wither damage increased by 10%. Does not apply to PvP combat.
+        > Demonology
+            + Shadow Bolt damage increased by 35%. Does not apply to PvP combat.
+            + Demonbolt damage increased by 30%.
+            + Wild Imp damage increased by 20%.
+            + Summon Felguard damage increased by 20%.
+            + Demons summoned by Dominion of Argus damage increased by 20%. Does not
+              apply to PvP combat.
+            + Call Dreadstalkers damage increased by 30%.
+        > Destruction
+            + Rain of Fire damage increased by 30%.
+    • Warrior
+        > Protection
+            + Fight Through the Flames reduces Magic damage by 8% (was 6%).
+
+Delves
+    • Fixed an issue where Valeera could no longer gain experience from mislaid
+      curiosities.
+
+Dungeons and Raids
+    • The Tidebound Grotto
+        > Health of Nymrissa Wavecaller reduced by 5% on Heroic difficulty and 10% on
+          Mythic difficulty.
+        > Abyssal Rain's initial damage reduced by 12.5%.
+        > Abyssal Rain's periodic damage reduced by 12% on Heroic difficulty and 20% on
+          Mythic difficulty.
+        > Reduced Abyssal Rain's damage scaling for larger groups.
+        > Frost Burst damage reduced by 40%.
+        > Shatter now occurs after 40 seconds (was 30 seconds).
+        > Chilling Frost duration reduced by 1.5 seconds.
+        > Reduced the number Bubblefin Frostscales that appear with each wave of
+          murlocs to 2 (was 3).
+    • Altar of Fangs
+        > Removed one High Evolutionist in the area after Rav'i.
+    • The Blinding Vale
+        > Increased enemy forces requirement to 686 (was 655).
+        > Adjusted spawning in the last area to reduce creature density.
+        > Removed a Radiant Spellsower before Ziekket.
+        > Potatoad Matriarch
+            + Increased enemy forces value to 60 (was 30).
+            + Reduced health by 10%.
+            + Toxic Spew initial damage reduced by 50%.
+            + Toadspawn target radius reduced to 3-7 yards (was 10 yards), and eggs now
+              finish hatching even if the Matriarch is dead.
+        > Ikuzz the Light Hunter
+            + Addressed an issue where Bloodthorn Root is affected by disorient
+              effects.
+    • Den of Nalorakk
+        > Reduced the number of Earthwhisper Tenders in the first area by 2.
+        > Thornclaw Gatherer
+            + Rotten Supplies cooldown increased to 17 seconds (was 14 seconds).
+    • Kings' Rest
+        > Finished Mummy and Half-Finished Mummy are now marked as elites.
+        > Risen Hexer now casts Shadow Bolt (was Shadowfrost Bolt).
+        > Phantom Hex Priest now uses Shadow magic (was Nature).
+        > Increased Shadow of Zul's ability cooldown.
+        > Bloodsworn Assassin's Sudden Rupture now prefers not targeting the same
+          player consecutively.
+        > The Council of Tribes
+            + Kula the Butcher's Whirling Axes visual updated.
+            + Aka'ali the Conqueror and Zanazal the Wise now wait briefly before
+              attacking players.
+    • Murder Row
+        > Addressed an issue where Malefic Wave can sometimes fail to hit players.
+        > Addressed an issue where Row Snitch can be uninteractable.
+        > Lithiel Cinderfury
+            + Fingers of Gul'dan now prefers non-tank players.
+            + Fingers of Gul'Dan number of targets reduced to 4 (was 5).
+            + Fingers of Gul'dan number of Wild Imps summoned increased to 4 (was 3).
+    • Ruby Life Pools
+        > Replaced the Flashfrost Chillweaver nearest to Defier Draghar with a Deepstone
+          Earthshaper, and moved one of the preceding Earthbound Guardians next
+          to this creature.
+            + Adjusted enemy forces requirement to keep routing the same as before.
+        > Deepstone Earthshaper's health reduced by 8%, and Techtonic Strikes damage
+          vulnerability reduced to 25% (was 35%).
+        > Flashfrost Chillweaver's health reduced by 10%.
+        > Primalist Cinderweaver's Living Bomb periodic damage and explosion damage
+          reduced by 10%.
+    • Temple of Sethraliss
+        > Replaced a Faithless Subjugator with a Lightning Serpent.
+            + Adjusted enemy forces requirement to keep routing the same as before.
+        > Swarming Krolusks now idle for longer after spawning before attacking.
+    • Voidscar Arena
+        > Adjusted spawning of a pack near the Harrower to be closer to the stairs.
+        > Taz'Rah
+            + Nether Dash line visuals now turn more smoothly.
+        > Atroxus
+            + Addressed issues with the voice lines not matching the spells.
+    • The Venomous Abyss
+        > Reduced the number of creature spawns throughout the zone.
+        > Reduced the blood required to open doors throughout the Venomous Abyss.
+        > Reduced the damage of Venom Withdrawal by 30%.
+        > Reduced the duration of Venom Withdrawal by 50%.
+        > Reduced the health of Serpent Wards by 75%.
+        > The Lost Explorers
+            + Resolved an issue where Hoji did not immediately stop casting when the
+              encounter ends, preventing the encounter from completing.
+        > Vashnik the Malignant
+            + Fixed an issue causing the Solidified Snake Venom to not spawn for
+              the achievement.
+            + Fixed an issue causing Burning Venom to not move towards the Malignant
+              Cavity after being gripped.
+            + Reduced the number of Malignant Totems per cast.
+            + Adjusted the spawn locations of Malignant Totems.
+            + Fixed a bug causing Imbibe to inflict more damage than intended on Normal
+              and Heroic difficulties.
+        > The Coiled Altar
+            + Fixed an issue where Sever's vulnerability aura lasted
+              longer than intended.
+            + Malacrass now casts Dreadmarch on all players 10 seconds after he enrages.
+            + Reduced Malacrass's phase 3 health by 10% on Normal and
+              Heroic difficulties.
+            + Eternal Nightfall is no longer affected by Curse of Tongues or
+              similar effects.
+            + Reduced the absorb value of Veil of Twilight by 15% on Normal and
+              Heroic difficulties.
+        > Ula'tek
+            + Corrected the target location of Ula'tek's Venomous Heart so that AoE spells
+              more consistently hit it and Ula'tek.
+            + Fixed a bug preventing the encounter from resetting when no players were
+              alive in Ula'tek's room.
+            + Increased the duration of Greasy Hatchling to 35 seconds (was 20 seconds).
+            + Players are now protected against being targeted by Virulent Spit while
+              crossing the venom pools.
+            + Resolved an issue causing Death Knights' Necrotic Coil to have
+              pathing issues.
+            + Causing the Doomscale Warden to cast Shadow Molt early no longer resets
+              their spell record timings.
+            + Reduced the number of players required to successfully soak Serpent's Bite
+              across the range of raid sizes.
+            + Players affected by Calcified Corpse now radiate massive raid damage on
+              Heroic and Mythic difficulties.
+            + An erroneous tenth stack of Stone Venom is no longer applied to the current
+              target during Ula'tek's Mother's Wrath.
+
+Housing
+    • Previewing decor in the Decor Catalog will now show accurate Voidlight Marl
+      prices for decor sold by Silvermoon's Disguised Decor Duel Vendor.
+
+Omnium Folio
+    • Fixed a bug that where the Rune of Lingering did not always activate for
+      healers.
+
+Player versus Player
+    • In Training Grounds, Arena opponents will now properly display their surrender
+      animation when forfeiting their match after a teammate has died.
+    • Demon Hunter
+        > Developers' notes: We feel the defensive kits of Devourer and Havoc are too
+          powerful, so we are reducing some of their passive and active defenses to
+          make them more viable targets for opponents.
+        > Glimpse now reduces damage taken by 20% while active (was 25%).
+        > Devourer
+            + Void Ray damage increased by 33% in PvP combat.
+            + Blur now reduces damage taken by 15% in PvP combat (was 25%).
+            + Armor of Souls now increases Armor by 65% (was 100%).
+        > Havoc
+            + Blur now reduces damage taken by 15% in PvP combat (was 25%).
+            + Desperate Instincts now reduces damage taken by 5% while below 35%
+              health in PvP combat (was 10%).
+    • Druid
+        > Feral
+            + Developers' notes: Feral's sustained damage is lower than our intended
+              target, so we're targeting their primary damage over time effects to
+              improve this. We're also targeting a buff for Druid of the Claw which
+              has fallen behind Wildstalker in viability.
+            + Druid of the Claw: Ravage damage increased by 20% in PvP combat.
+            + Rip damage increased by 15% in PvP combat.
+            + Rake damage increased by 15% in PvP combat.
+    • Evoker
+        > Augmentation
+            + Developers' notes: Augmentation has been underplayed in PvP, especially
+              arenas, for some time. We're increasing both their damage support
+              capabilities and their personal damage to increase their viability.
+            + Damage increased by 10% in PvP combat.
+            + Ebon Might grants 10% primary stat in PvP combat (was 8%).
+            + Inferno's Blessing damage increased by 25% in PvP combat.
+    • Hunter
+        > Developers' notes: Sentinel Hunters are slightly too strong during burst
+          windows in PvP, so we're reducing the damage of Moonlight Chakram and
+          increasing the throughput of rotational abilities to compensate.
+        > Marksmanship
+            + Sentinel: Moonlight Chakram damage reduced by 30% in PvP combat.
+            + Rapid Fire damage increased by 15% in PvP combat.
+            + Arcane Shot damage increased by 15% in PvP combat.
+        > Survival
+            + Sentinel: Moonlight Chakram damage reduced by 30% in PvP combat.
+            + Raptor Strike and Raptor Swipe damage increased by 20% in PvP combat.
+            + Kill Command damage increased by 15% in PvP combat.
+    • Mage
+        > Fire
+            + Developers' notes: Fire Mage execute windows and hard cast Pyroblast
+              damage have been higher than we would like, so we're reducing the
+              effectiveness of Molten Fury and Pyroclasm in PvP.
+            + Burnout now explodes for 50% of remaining Ignite damage in PvP combat
+              (was 75%).
+            + Pyroclasm now increases the damage of Pyroblast and Flamestrike by 180%
+              in PvP combat (was 230%).
+            + Molten Fury now increases damage to targets below 35% health by 10% in
+              PvP combat (was 15%).
+    • Monk
+        > Brewmaster
+            + Fixed an issue where Hot Trub PvP talent was incorrectly counting as both
+              a Disorient and an Incapacitate. It now counts as an Incapacitate only.
+        > Windwalker
+            + Rushing Wind Kick damage reduced by 20% in PvP combat.
+            + Rising Sun Kick damage reduced by 10% in PvP combat.
+            + Tigereye Brew now increases critical strike damage by 3/6% in PvP combat
+              (was 5/10%).
+    • Paladin
+        > Holy
+            + Developer's notes: Holy Paladin throughput has increased with recent
+              changes past our targets for them in PvP.
+            + All healing reduced by 4% in PvP combat.
+        > Protection
+            + Developers' note: Protection Paladins have been extending the duration of
+              the matches that they participate in with frequent access to group
+              utility. We're reducing the effectiveness of Blessing of Sacrifice and
+              Guardian of the Forgotten Queen to bring them in line.
+            + Guardian of the Forgotten Queen duration reduced to 6 seconds.
+            + Guardian of the Forgotten Queen cooldown increased to 4 minutes.
+            + Guardian of the Forgotten Queen now has a 6 second internal cooldown.
+            + Sacrifice of the Just reduces the cooldown of Blessing of Sacrifice by 30
+              seconds in PvP combat (was 60 seconds).
+        > Retribution
+            + Developers' notes: Retribution's personal durability has been higher than
+              we would like considering their complete team defensive package, and
+              Templar's damage has not been competitive with Herald of the Sun, so
+              we're increasing some sources specific to its hero tree.
+            + Shield of Vengeance absorption reduced by 25% in PvP combat.
+            + Divine Protection now reduces damage taken by 20% in PvP combat (was 25%).
+            + Templar: Seal of the Templar now increases the damage of Templar's Verdict
+              by 35% (was 25%).
+            + Templar: Hammer of Light's damage increased by 10% in PvP combat.
+    • Priest
+        > Developers' notes: Mindgames has fallen behind other spells and has been an
+          underutilized talent for some time, so we're increasing its viability to
+          offer all Priest specializations more PvP talent options.
+        > Mindgames direct damage increased by 150%.
+        > Mindgames healing and damage reversal increased by 150%.
+        > Discipline
+            + Flash Heal and Shadow Mend healing increased by 20% in PvP combat.
+            + Atonement healing increased by 5% in PvP combat.
+        > Holy
+            + Developers' notes: Holy Priest is vastly overperforming due to a mixture
+              of overall healing increases from the patch as well as some generous PvP
+              specific healing increases to Prayer of Mending and Holy Word: Serenity.
+              We're reducing these PvP increases to Prayer of Mending, Holy Word:
+              Serenity, and Prompt Prognosis which are all powerful instant
+              cast spells.
+            + Enlightenment regenerates mana 10% faster in PvP combat (was 25%).
+            + Prayer of Mending healing reduced by 25% in PvP combat.
+            + Holy Word: Serenity healing reduced by 15% in PvP combat.
+            + Oracle: Prompt Prognosis healing reduced by 25% in PvP combat.
+        > Shadow
+            + Developers' notes: We feel Shadow is lacking in kill power, so we're
+              increasing some of its primary sources of burst.
+            + Shadow Word: Madness damage increased by 15% in PvP combat.
+            + Void Volley damage increased by 15% in PvP combat.
+            + Shadow Word: Death damage increased by 15% in PvP combat.
+    • Rogue
+        > Assassination
+            + Developers' notes: Burst from Assassination's Apex Talent is exceeding
+              expectations and is getting toned down. Additionally, damage from
+              Fatebound Coins is higher than intended and is being reduced.
+            + Kingsbane initial damage reduced by 12% in PvP combat.
+            + Implacable (Rank 3) Physical and Nature damage reduced by 15% in PvP
+              combat.
+            + Fatebound: Fatebound Coin (Tails) damage reduced by 10% in PvP combat.
+        > Outlaw
+            + Developers' notes: Outlaw's damage and kill pressure is lower than we'd
+              expect, so we're putting more damage into core finishing moves.
+            + Dispatch damage increased by 20% in PvP combat.
+            + Between the Eyes damage increased by 12% in PvP combat.
+        > Subtlety
+            + Developers' notes: Subtlety's steady damage pressure is low, without
+              which it can be difficult to create windows that capitalize on their
+              burst potential. We're increasing Eviscerate damage moderately and
+              Goremaw's Bite bleed damage significantly to increase the frequency of
+              these windows.
+            + Eviscerate damage increased by 10% in PvP combat.
+            + Goremaw's Bite bleeding damage increased by 33% in PvP combat.
+    • Shaman
+        > Elemental
+            + Developers' notes: Elemental is lacking the sustained pressure we expect,
+              so we're targeting core damage sources to improve its viability.
+            + Stormbringer: Tempest damage increased by 10% in PvP combat.
+            + Lava Burst damage increased by 10% in PvP combat.
+            + Earth Shock damage increased by 10% in PvP combat.
+            + Earthquake damage increased by 10% in PvP combat.
+        > Restoration
+            + Developers' notes: Restoration Shaman is slightly too strong compared to
+              other healers (barring Holy Priest). We're making some small adjustments
+              to their mana and the Totemic hero talent tree to better balance their
+              mana and throughput.
+            + Mana regeneration is now reduced by 65% in PvP combat (was 60%).
+            + Totemic: Splitstream now causes Healing Stream Totem to heal an
+              additional ally at 15% effectiveness in PvP combat (was 30%).
+            + Totemic: Earthsurge now causes allies affected by your Earthliving to
+              receive 5% additional healing from you in PvP combat (was 15%).
+    • Warlock
+        > Affliction
+            + Developers' notes: We're increasing Affliction's ability to maintain
+              spread pressure by adjusting Agony's damage and making a small
+              adjustment to Unstable Affliction's backlash damage to make dispelling
+              all their damage over time effects more punishing.
+            + Agony damage increased by 50% in PvP combat.
+            + Unstable Affliction backlash damage increased by 20%.
+        > Demonology
+            + Developers' notes: We feel too much of Demonology's damage is focused on
+              Wicked Reaping and Power Siphon, so we're reducing the power of these
+              effects and increasing overall damage through our game-wide Demonology
+              changes above.
+            + Soul Harvester: Wicked Reaping damage reduced by 50% in PvP combat.
+            + Soul Harvester: Necrolyte Teachings now causes Power Siphon to increase
+              the damage of Demonbolt by an additional 10% in PvP combat (was 20%).
+            + Power Siphon now increases the damage of your next 2 Demonbolts by 20%
+              in PvP combat (was 30%).
+        > Destruction
+            + Developers' notes: Destruction is lacking in finishing power, so we're
+              increasing the damage of their primary nuke spells to allow for more
+              burst potential.
+            + Chaos Bolt damage increased by 15% in PvP combat.
+            + Shadowburn damage increased by 30% in PvP combat.
+    • Warrior
+        > Arms
+            + Developers' notes: To compensate for the reduction in Fueled by Violence
+              self-healing, we're increasing Arms' Hero Talents throughput by
+              increasing Slayer's Strike and Demolish damage in PvP.
+            + Colossus: Demolish damage increased by 15% in PvP combat.
+            + Slayer: Slayer's Strike damage increased by 5% in PvP combat.
+            + Fueled by Violence healing reduced by 15% in PvP combat.
+
+Prey
+    • Fixed a bug where the spell Noxious Spitfall was targeting players not on the
+      threat list.
+    • Fixed a bug where Ral'kala's invulnerability shield would interfere with his
+      timed despawn.
+    • Pack Hunters and Pack Ambushers will no longer spawn Venom-Bloated Pythons.
+
+Quests
+    • Fixed an issue causing Li Li Stormstout to comment when the player exits The War
+      Within Recap.
+    • Fixed an issue preventing Soridormi from offering the Legacy of the Amani
+      campaign chapter skip.
+    • The weekly quests Turn Back the Surge and Sparks of War: Eversong Woods no
+      longer incorrectly suggest that they reward two Sparks of Tide.
+            ]=],
+        },
         {
             date = "August 21, 2026",
             text = [=[
