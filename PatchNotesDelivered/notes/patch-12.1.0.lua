@@ -10,8 +10,67 @@
 PatchNotesDelivered_Notes_1210 = {
     version = "12.1.0",
     build = "69497",
-    hotfix = 7,
+    hotfix = 8,
     gameChangesHotfixes = {
+        {
+            date = "August 26, 2026",
+            text = [=[
+Classes
+    • Demon Hunter
+        > Devourer
+            + Fixed an issue that prevented the effect of the Devourer 2-piece set
+              bonus (Soulburst) from displaying correctly.
+    • Paladin
+        > Protection
+            + Fixed an issue where Avenger's Shield could sometimes fail to
+              activate Glory of the Vanguard while Divine Resonance was active.
+    • Priest
+        > Holy
+            + Fixed an issue where Divine Hymn would put Guardian Spirit on a
+              60-second cooldown with Guardian Angel talented.
+    • Shaman
+        > Elemental
+            + Farseer: Corrected an issue where Maelstrom Supremacy did not
+              increase the healing of Healing Surge.
+    • Warrior
+        > Fixed a bug that could cause Sudden Death to incorrectly increase
+          cooldowns.
+
+Delves
+    • Fixed a bug that could cause the Undergraduates in the Infiltrator Garand
+      encounter to spawn in unintended locations.
+    • Fixed an issue causing Gnok to cast Ejecting Decay while moving, and
+      Upheaval no longer targets pets.
+
+Dungeons and Raids
+    • The Venomous Abyss
+        > Story Mode: Dungeon followers will now properly lead players when
+          Dungeon Assistance is toggled on.
+        > The Lost Explorers
+            + Evokers' Cauterizing Flame should now properly remove the
+              Splinters effect during this encounter.
+        > Ula'tek
+            + Fixed an issue where the targeting of Mother's Wrath could fail,
+              causing Ula'tek to use her raid wide damage despite the tank
+              being in the bubble.
+            + Fixed an issue that could cause unintended duplicate applications
+              of Doomscale Shell.
+
+Items and Rewards
+    • Players who are offered a Silvermoon Splendor in their Great Vault can
+      still select that option and receive a Nebulous Voidcore.
+    • Fixed an issue where raid armor rewards from the Coiled Altar and
+      Ula'tek could not be catalyzed if sourced from the Great Vault or
+      Voidcore rolls. Existing items may now be catalyzed.
+    • Fixed an issue where some Season 2 items could not have a socket added.
+    • Overflowing caches for reaching maximum Renown should now contain
+      Veteran Mistcrests during Season 2.
+
+Player versus Player
+    • Resolved an issue that prevented Training Grounds: Arena from ending
+      the match when the game-controlled opponents surrender.
+            ]=],
+        },
         {
             date = "August 25, 2026",
             text = [=[
@@ -140,7 +199,7 @@ Dungeons and Raids
         > Frost Burst damage reduced by 40%.
         > Shatter now occurs after 40 seconds (was 30 seconds).
         > Chilling Frost duration reduced by 1.5 seconds.
-        > Reduced the number Bubblefin Frostscales that appear with each wave of
+        > Reduced the number of Bubblefin Frostscales that appear with each wave of
           murlocs to 2 (was 3).
     • Altar of Fangs
         > Removed one High Evolutionist in the area after Rav'i.
@@ -177,14 +236,14 @@ Dungeons and Raids
         > Addressed an issue where Row Snitch can be uninteractable.
         > Lithiel Cinderfury
             + Fingers of Gul'dan now prefers non-tank players.
-            + Fingers of Gul'Dan number of targets reduced to 4 (was 5).
+            + Fingers of Gul'dan number of targets reduced to 4 (was 5).
             + Fingers of Gul'dan number of Wild Imps summoned increased to 4 (was 3).
     • Ruby Life Pools
         > Replaced the Flashfrost Chillweaver nearest to Defier Draghar with a Deepstone
           Earthshaper, and moved one of the preceding Earthbound Guardians next
           to this creature.
             + Adjusted enemy forces requirement to keep routing the same as before.
-        > Deepstone Earthshaper's health reduced by 8%, and Techtonic Strikes damage
+        > Deepstone Earthshaper's health reduced by 8%, and Tectonic Strikes damage
           vulnerability reduced to 25% (was 35%).
         > Flashfrost Chillweaver's health reduced by 10%.
         > Primalist Cinderweaver's Living Bomb periodic damage and explosion damage
@@ -251,7 +310,7 @@ Housing
       prices for decor sold by Silvermoon's Disguised Decor Duel Vendor.
 
 Omnium Folio
-    • Fixed a bug that where the Rune of Lingering did not always activate for
+    • Fixed a bug where the Rune of Lingering did not always activate for
       healers.
 
 Player versus Player
