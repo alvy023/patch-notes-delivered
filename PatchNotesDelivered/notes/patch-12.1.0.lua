@@ -44,13 +44,13 @@ Delves
 
 Dungeons and Raids
     • Temple of Sethraliss
-        > Fixed an issue where the Voidbound Emisssary M+ affix creature could cause
+        > Fixed an issue where the Voidbound Emissary M+ affix creature could cause
           Galvazzt to despawn.
     • The Venomous Abyss
         > Vashnik the Malignant
             + Reduced the damage of Siphoning Infection by 33% on Raid Finder difficulty.
             + Reduced the damage of Siphon Blood by 33% on Raid Finder difficulty.
-            + Reduced the healing reduction 80% (was 100%) on Raid Finder difficulty.
+            + Reduced the healing reduction by 80% (was 100%) on Raid Finder difficulty.
             + Increased the healing of Siphoning Infection by 10% on Normal difficulty.
             + Increased the healing of Siphoning Infection by 500% on Raid
               Finder difficulty.
