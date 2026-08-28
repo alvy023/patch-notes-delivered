@@ -10,8 +10,71 @@
 PatchNotesDelivered_Notes_1210 = {
     version = "12.1.0",
     build = "69497",
-    hotfix = 8,
+    hotfix = 9,
     gameChangesHotfixes = {
+        {
+            date = "August 27, 2026",
+            text = [=[
+Classes
+    • Demon Hunter
+        > Fixed an issue that allowed Blur's recent PvP adjustments to affect PvE
+          situations. Blur damage reduction outside of PvP is restored to previous
+          intended values.
+    • Evoker
+        > Flameshaper: Fixed an issue where Lifecinders incorrectly stated that it
+          required Renewing Blaze.
+        > Preservation
+            + Fixed an issue where Emerald Communion would loop its visual even after
+              the effect had ended.
+    • Rogue
+        > Deathstalker: Fixed an issue where Deathstalker's Mark would be removed when
+          a target becomes unattackable. Darkest Night will now be granted when
+          Deathstalker's Mark is removed from an unattackable target.
+    • Paladin
+        > Protection
+            + Fixed an issue where Blessed Hammer could not hit Ula'tek's Venomous Heart.
+    • Warlock
+        > Destruction
+            + Fixed an issue where Mayhem would sometimes become untracked when refreshed
+              while active.
+
+Delves
+    • Fixed an issue that caused Mislaid Curiosities to not spawn in The Darkway variant
+      Eggsplosive Growth.
+
+Dungeons and Raids
+    • Temple of Sethraliss
+        > Fixed an issue where the Voidbound Emissary M+ affix creature could cause
+          Galvazzt to despawn.
+    • The Venomous Abyss
+        > Vashnik the Malignant
+            + Reduced the damage of Siphoning Infection by 33% on Raid Finder difficulty.
+            + Reduced the damage of Siphon Blood by 33% on Raid Finder difficulty.
+            + Reduced the healing reduction by 80% (was 100%) on Raid Finder difficulty.
+            + Increased the healing of Siphoning Infection by 10% on Normal difficulty.
+            + Increased the healing of Siphoning Infection by 500% on Raid
+              Finder difficulty.
+        > The Twin Fangs
+            + Resolved an issue that could cause Caustic Globule/Barbed Bulwark world
+              indicators to clear prior to the missile impact.
+        > The Coiled Altar
+            + Fixed an issue where bringing Zul'jan to 1 health at the end of the
+              intermission would prevent him from being killable during phase 3.
+
+Items
+    • Fixed an issue that prevented Contract: Zul'jarra's Forces from applying to your
+      entire Warband.
+    • Sszorak's Ferocity - The Tempest poison tornado effect is now only visible to the
+      trinket wearer and its size has been reduced.
+
+Mounts
+    • Increased the size of several writhe mounts to be more consistent.
+
+Player versus Player
+    • Fixed an issue that prevented players from earning progress towards their
+      next Vicious Saddle.
+            ]=],
+        },
         {
             date = "August 26, 2026",
             text = [=[
