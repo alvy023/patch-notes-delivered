@@ -10,8 +10,79 @@
 PatchNotesDelivered_Notes_1210 = {
     version = "12.1.0",
     build = "69497",
-    hotfix = 9,
+    hotfix = 10,
     gameChangesHotfixes = {
+        {
+            date = "August 31, 2026",
+            text = [=[
+Classes
+    • Death Knight
+        > Unholy
+            + Resolved an issue causing Dread and Virulent Plague Erupt effects to not
+              work as intended with the target damage modifiers and caster damage
+              modifiers Foul Infections, Thrill of Blood, Incite Terror, Morbidity, Soul
+              Reaper, Brittle, and the War debuff of Rune of the Apocalypse.
+    • Druid
+        > Restoration
+            + Fixed an issue where Grove Guardians were not prioritizing healing the
+              target of your Swiftmend or Wild Growth.
+            + Fixed an issue where Everbloom could incorrectly heal 6 targets instead of
+              the intended 5 targets.
+    • Mage
+        > Fire
+            + Resolved an issue where the 2-piece set bonus: Flamestrike did not
+              correctly always grant Hot Streak when it is a guaranteed critical strike
+              due to Pyroclasm.
+    • Monk
+        > Mistweaver
+            + Fixed an issue where Soothing Mist could rarely cause the incorrect aura
+              to be canceled.
+    • Priest
+        > Holy
+            + Fixed an issue where Guardian Angel would not reduce the cooldown of
+              Guardian Spirit when placed on an ally.
+    • Warlock
+        > Affliction
+            + Hellcaller: Fixed an issue where Blackened Soul would not activate from
+              Unstable Affliction applied via Fatal Echoes.
+
+Delves
+    • Gnarldor Isle
+        > Minchi has been hitting the books and now requires adventurers to help him
+          investigate only 4 bone piles (was 6) in the Minchi's Osseous
+          Adventure story.
+
+Dungeons and Raids
+    • The Venomous Abyss
+        > The Coiled Alter
+            + Fixed a rare issue where Coalesced Venom's could spawn inside a Virulent
+              Mutation rim on Mythic difficulty.
+            + Fixed an issue where Soul Sever was incorrectly highlighting which
+              Manifestations of Dread would be destroyed.
+            + Defilement of the Coiled Altar healing absorb reduced by 20% in
+              Mythic difficulty.
+        > Ula'tek
+            + Damage from carrying eggs is now treated as periodic damage (was
+              direct damage).
+            + Resolved an issue where Blight Vein could occasionally inflict
+              additional damage.
+            + Resolved an issue where Toxic Burn could occasionally inflict
+              additional damage.
+            + Resolved an issue that could cause Dancing Rune Weapon to fail to cast
+              spells when targeting the Venomous Heart.
+            + Increased the range of Grasping Fangs.
+            + Corrected an issue that would cause Ula'tek to re-emerge during
+              the intermission.
+
+Omnium Folio
+    • Fixed a bug that could cause the Rune of Lingering to break
+      crowd-controlled enemies.
+
+User Interface
+    • Groups for the Housewarming housing quest are now found in the Questing section
+      of the Premade Group Finder (was the Custom section).
+            ]=],
+        },
         {
             date = "August 27, 2026",
             text = [=[
