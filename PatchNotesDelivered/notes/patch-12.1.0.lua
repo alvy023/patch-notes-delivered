@@ -10,8 +10,292 @@
 PatchNotesDelivered_Notes_1210 = {
     version = "12.1.0",
     build = "69497",
-    hotfix = 10,
+    hotfix = 11,
     gameChangesHotfixes = {
+        {
+            date = "September 1, 2026",
+            text = [=[
+Classes
+    • Death Knight
+        > Frost
+            + Developers' notes: We're aiming to increase Frost Death Knight's
+              performance in single target and two target cleave scenarios.
+            + Howling Blast main target damage increased by 15%.
+            + Obliterate damage increased by 15%.
+            + Frost Strike damage increased by 20%.
+            + Melee damage increased by 10%.
+        > Unholy
+            + Resolved an issue causing Mastery: Dreadblade and Foul Infections
+              to not increase the critical strike chance of Plague Erupt effects.
+    • Demon Hunter
+        > Havoc
+            + All damage increased by 4%. This does not affect PvP combat.
+        > Vengeance
+            + Developers' notes: Vengeance is still performing below expectations
+              defensively, so universal mitigation effects are getting a buff.
+              Additionally, Fel Devastation's effectiveness as a recovery tool has
+              fallen behind as maximum health pools go up, so its healing is
+              being increased.
+            + Demonic Wards now reduces damage taken by 15% (was 12%).
+            + Void Reaver now causes Frailty to reduce damage taken by 6% (was 5%).
+            + Fel Devastation healing increased by 25%.
+    • Druid
+        > Shred damage increased by 10%.
+        > Balance
+            + All ability damage increased by 4%. Does not affect PvP combat.
+        > Feral
+            + Developers' notes: Feral is performing below expectations,
+              particularly in raid encounters, so we're providing both an overall
+              lift as well as some specific buffs to single-target abilities.
+            + All ability damage increased by 5%. Does not apply to PvP combat.
+            + Auto-attack damage increased by 10%.
+            + Ferocious Bite damage increased by 10%.
+        > Restoration
+            + All healing increased by 4%.
+    • Hunter
+        > Beast Mastery
+            + All damage dealt by you and your pets increased by 7%.
+            + Resolved an issue causing Wild Thrash to not take target
+              bounding radius into account.
+        > Survival
+            + All damage dealt by you and your pet increased by 7%. This increase is
+              only 3% while engaged in PvP combat.
+    • Mage
+        > Fire
+            + All ability damage increased by 3%. Does not apply to PvP combat.
+        > Frost
+            + All ability damage increased by 6%.
+    • Monk
+        > Mistweaver
+            + Developers' notes: We're looking to increase Mistweavers' healing
+              capabilities while increasing their 4-piece set bonus value.
+            + All healing done increased by 5%.
+            + The Venomous Abyss 4-piece set bonus chance to activate has been
+              increased to 25% (was 20%).
+        > Windwalker
+            + All ability damage increased by 4%. Does not affect PvP combat.
+    • Paladin
+        > Protection
+            + Developers' notes: We're adjusting Protection Paladin damage to help
+              them keep up with other tanks, especially in dungeons.
+            + Blaze of Glory damage increased by 150%.
+            + Consecration damage increased by 30%.
+            + Divine Guidance damage increased by 30%.
+    • Priest
+        > Discipline
+            + Shadow Mend mana cost reduced by 20%.
+    • Rogue
+        > Assassination
+            + Fixed an issue allowing Caustic Spatter to trigger from non-class
+              Nature damage sources, such as trinkets.
+    • Shaman
+        > Hero Talents
+            + Farseer
+                - Fixed an issue that caused Natural Harmony to increase the healing
+                  of Nature's Guardian by 20% instead of its listed and intended 10%.
+
+Delves
+    • Trinkets no longer drop as abundantly in Delves.
+
+Dungeons and Raids
+    • Den of Nalorakk
+        > Addressed an issue where interacting with Food Offering while mounted can
+          cause it to no longer be interactable for a short period.
+    • Murder Row
+        > Addressed an issue where Xathuux the Annihilator's Axe Toss can sometimes
+          inflict less damage than intended.
+    • The Venomous Abyss
+        > Nek'zali the Soulcoiler
+            + Nek'zali's health reduced by 15% on Raid Finder difficulty.
+        > Entombed Sentinels
+            + Breath of Ula'tek and Blood of Ula'tek health reduced by 15% on
+              Raid Finder difficulty.
+        > Sszorak
+            + Sszorak's health reduced by up to 10% for smaller raid sizes on
+              Normal and Heroic difficulties.
+            + Reduced the number of players targeted by Raging Crosswinds on Normal
+              and Heroic difficulties.
+        > The Twin Fangs
+            + Resolved an issue where immunities would prevent players from receiving
+              additional applications of Eternal Venom beyond the death threshold
+              on Mythic difficulty.
+            + Increased the number of applications before the target dies from Eternal
+              Venom to 10 on Mythic difficulty.
+            + Increased the number of minimum targets to 4 for Ravenous Feast
+              on Mythic difficulty.
+            + Vexhul and Ithraz health reduced by 20% on Raid Finder difficulty.
+            + Reduced the maximum health damage effect of Eternal Venom to 50% on
+              Raid Finder difficulty.
+            + Resolved an issue where Protection Paladin's Mastery did not function
+              correctly against Caustic Deluge or Eternal Venom.
+        > The Coiled Altar
+            + Coalesced Venom damage reduced by 15% on Mythic difficulty.
+            + Venom Rupture damage reduced by 10% on Mythic difficulty.
+            + Venom Rupture damage reduced by up to 15% on smaller group sizes
+              on Heroic difficulty.
+            + Volatile Venom damage reduced by up to 15% on smaller group sizes
+              on Raid Finder, Normal, and Heroic difficulties.
+            + Spiteful Soulcoiler health reduced by up to 10% on smaller group sizes
+              on Heroic difficulty.
+            + Zul'jan's health reduced by up to 10% on smaller group sizes on Raid
+              Finder, Normal, and Heroic difficulties.
+            + Wail of Terror cast time increased by up to 20% on smaller group sizes
+              on Heroic difficulty.
+            + Reduced the minimum players needed to be hit by Guillotine and Grim
+              Guillotine to avoid failure damage to 3 players on Raid Finder, Normal,
+              and Heroic difficulties.
+        > Ula'tek
+            + Killing a Blightscale Wretch while outside of its Toxic Womb no longer
+              triggers the Spectral Head to submerge.
+            + Adjusted the impact animation on a creature affected by the application
+              of Revenge so their nameplate does not shift making interrupts
+              more difficult.
+    • Tidebound Grotto
+        > Nymrissa Wavecaller and her murlocs' health reduced by up to 10% for lower
+          group sizes on Normal, Heroic, and Mythic difficulties.
+        > Frost Orb initial and periodic damage reduced by up to 33% for lower group
+          sizes on Normal and Heroic difficulty.
+        > Frost Orb initial and periodic damage reduced by up to 17% for lower group
+          sizes on Mythic difficulty.
+        > Frost Orb aura duration reduced to 12 seconds (was 16 seconds).
+    • Voidscar Arena
+        > Updated visuals of Taz'Rah's Darkbloom orbs to better match their
+          impact radius.
+
+Items
+    • Satchel of Corrosive Coins sold by Er'iyne is no longer unique.
+
+Player versus Player
+    • Developers' notes: Healers are able to top off targets too quickly in PvP,
+      resulting in very long combat times. We're reducing the primary stat from the PvP
+      trinket set bonus for all healer specializations to increase the pace of combat.
+    • Gladiator's Distinction set bonus grants 5% primary stat for all healing
+      specializations (was 10%).
+    • Fixed an issue where the Training Grounds quest for casting an interrupt was
+      not properly granting credit. Note that you may need to abandon and re-accept the
+      quest for this fix to apply.
+    • Demon Hunter
+        > Devourer
+            + All ability damage increased by 5% in PvP combat.
+        > Havoc
+            + Rain from Above now deals damage equal to 6% of max health per bolt
+              (was 8%).
+    • Druid
+        > Innervate grants 20% mana in PvP combat (was 25%).
+        > Feral
+            + Developers' notes: We're increasing Feral's general damage, especially
+              for Druid of the Claw, and nudging down their defensiveness to speed up the
+              pace of combat for Feral.
+            + Ravage (Druid of the Claw) damage increased by 15% in PvP combat.
+            + Survival Instincts reduces damage taken by 40% in PvP combat (was 50%).
+        > Restoration
+            + Developers' notes: We're increasing Restoration's overall healing while
+              at the same time reducing the power of Swiftmend and some of their mana
+              regeneration talents. The goal is to better balance Restoration's healing
+              kit to not be so reliant on Swiftmend to top up allies.
+            + Potent Enchantments increases the duration of Incarnation: Tree of Life
+              by 4 seconds in PvP combat (was 6 seconds).
+            + Reforestation grants Incarnation: Tree of Life for 8 seconds in PvP
+              combat (was 10 seconds).
+            + Swiftmend healing reduced by 20% in PvP combat.
+            + Blossom Burst (Ancient of Lore PvP talent) costs 1.89% base mana
+              (was free).
+            + Blossom Burst (Ancient of Lore PvP talent) now prioritizes applying
+              Rejuvenation over Lifebloom.
+            + Mass Blooming (Ancient of Lore PvP talent) costs 3.5% base mana
+              (was free).
+    • Evoker
+        > Devastation
+            + Developers' notes: The Devastation Flameshaper build is not being
+              utilized much compared to Scalecommander. We're increasing the power of some
+              Flameshaper focused spells to open up more options for them.
+            + Disintegrate triggers Consume Flame at 200% effectiveness in PvP combat
+              (was 150%).
+            + Enkindle damage increased to 30% in PvP combat (was 20%).
+            + Expanded Lungs increases damage of Fire Breath's periodic by 40% in PvP
+              combat (was 30%).
+        > Preservation
+            + Mana regeneration is now reduced by 35% in PvP combat (was 30%).
+    • Hunter
+        > Beast Mastery
+            + Developers' notes: Beast Mastery's damage during burst windows is higher
+              than we'd like in PvP, reducing some of the abilities that can contribute
+              to this situation.
+            + Bloodshed damage reduced by 25% in PvP combat.
+            + Bestial Wrath initial damage reduced by 10% in PvP combat.
+            + Pack Leader: Stampede! damage reduced by 10% in PvP combat.
+    • Mage
+        > Developers' notes: Mages have been extending the duration of PvP matches
+          with frequent access to strong defensive abilities, so we're reducing the
+          effectiveness of their barriers and the cooldown of Ice Block. Fire damage is
+          also being reduced to bring them in line with other specializations.
+        > Improved Conjuration reduces the cooldown of Mirror Image by 15 sec in
+          PvP combat.
+        > Winter's Protection reduces Ice Block cooldown by 15/30 sec in PvP combat.
+          Tooltip in PvP will be updated in a later patch.
+        > Arcane
+            + Prismatic Barrier absorb reduced by 25% in PvP combat.
+        > Fire
+            + Blazing Barrier absorb reduced by 25% in PvP combat.
+            + All damage reduced by 3% in PvP combat.
+        > Frost
+            + Ice Barrier absorb reduced by 25% in PvP combat.
+    • Priest
+        > Discipline
+            + Developers' notes: Discipline could use some help, particularly
+              Voidweaver, so we're increasing some of its absorption and Atonement healing
+              capabilities to bring them on par with other healers.
+            + Void Shield absorption increased by 15% in PvP combat.
+            + Power Word: Shield absorption increased by 15% in PvP combat.
+            + Atonement healing increased by 10% in PvP combat.
+    • Rogue
+        > Developers' notes: Rogues' defensive potential improves in coordinated play
+          and as ratings increase, with the predictive effect of Preemptive Maneuver
+          standing out as being too rewarding, so it's being brought down to be
+          more appropriate.
+        > Preemptive Maneuver now reduces damage taken by 25% while its effect is
+          active (was 40%).
+        > Assassination
+            + All ability damage reduced by 4% in PvP combat.
+    • Shaman
+        > Elemental
+            + Developers' notes: Elemental's Farseer hero talent tree is performing
+              better than expected defensively, and its Stormbringer hero talent tree is
+              performing below expectations offensively. As a result we're targeting key
+              effects of each type to adjust: Natural Harmony's improvements for the
+              Nature's Guardian effect are being diminished, while multiple key
+              Stormbringer effects (including Tempest itself) are receiving buffs intended
+              to improve overall damage and burst potential.
+            + Farseer: Natural Harmony now reduces the cooldown of Nature's Guardian
+              by 10 seconds in PvP combat (was 15 seconds).
+            + Stormbringer: Tempest damage increased by 20% in PvP combat.
+            + Stormbringer: Natural Gift now increases Nature damage by 4% in PvP
+              combat (was 2%).
+            + Stormbringer: Stormcaller now increases Nature spell critical strike
+              damage by 10% in PvP combat (was 5%).
+        > Enhancement
+            + Developers' notes: Enhancement is on the weaker side offensively, so
+              we're increasing some of its sustained damage while also reducing its
+              healing capabilities slightly.
+            + Healing Surge healing reduced by 20% in PvP combat.
+            + Stormstrike damage increased by 15% in PvP combat.
+            + Lava Lash damage increased by 15% in PvP combat.
+    • Warrior
+        > Developers' notes: Arms and Fury Warriors provide strong group defensive
+          utility through the Safeguard PvP talent, but the frequency of damage reduction
+          prevented enemy teams from having a window of time to strike.
+        > Arms
+            + Safeguard (PvP Talent) now increases the cooldown of Intervene by
+              20 seconds.
+        > Fury
+            + Safeguard (PvP Talent) now increases the cooldown of Intervene by
+              20 seconds.
+
+Quests
+    • Fixed an issue that prevented Midnight World Quests from rewarding
+      Adventurer Crests.
+            ]=],
+        },
         {
             date = "August 31, 2026",
             text = [=[
