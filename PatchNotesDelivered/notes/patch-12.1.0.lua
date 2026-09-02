@@ -278,7 +278,7 @@ Player versus Player
               we're increasing some of its sustained damage while also reducing its
               healing capabilities slightly.
             + Healing Surge healing reduced by 20% in PvP combat.
-            + Stromstrike damage increased by15% in PvP combat.
+            + Stormstrike damage increased by 15% in PvP combat.
             + Lava Lash damage increased by 15% in PvP combat.
     • Warrior
         > Developers' notes: Arms and Fury Warriors provide strong group defensive
