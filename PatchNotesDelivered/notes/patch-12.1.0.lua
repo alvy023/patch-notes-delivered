@@ -9,9 +9,52 @@
 --- Max line length [90] -----------------------------------------------------------------
 PatchNotesDelivered_Notes_1210 = {
     version = "12.1.0",
-    build = "69497",
-    hotfix = 11,
+    build = "69587",
+    hotfix = 12,
     gameChangesHotfixes = {
+        {
+            date = "September 2, 2026",
+            text = [=[
+Classes
+    • Druid
+        > Feral
+            + Apex Talent: Unseen Predator (Rank 1) now prefers targets that are not
+              immune to damage or taking less than 5% physical damage.
+    • Warlock
+        > Destruction
+            + Fixed an issue where the Font of Venomous Rage trinket channel could be
+              immediately canceled if spell-queued after Cataclysm.
+    • Warrior
+        > Bladestorm now displays as an important aura on nameplates.
+
+Dungeons and Raids
+    • The Venomous Abyss
+        > Ula'tek
+            + Soul Constrictor duration reduced to 5 seconds on Mythic difficulty.
+            + Blight Vein damage reduced by 25% on Mythic difficulty.
+            + Corrected an issue where a Doomscale Egg could still be picked up after the
+              Ravenous Doomscale spawns while the Doomscale Warden is alive.
+            + Added additional protections against triggering an egg pickup
+              multiple times from one egg.
+
+Items
+    • Any remaining items sourced from the Great Vault that could not be converted with
+      the Catalyst have been fixed.
+    • Fixed an issue where certain non-armor items could appear to be convertible at the
+      Catalyst. Affected characters may need to relog.
+
+Player versus Player
+    • Druid
+        > Balance
+            + Fixed an issue where Faerie Swarm was not a large debuff on raid frames.
+    • Evoker
+        > Fixed an issue where staves were not being shown for Evokers on the PvP
+          gear vendor.
+        > Preservation
+            + Fixed an issue where Rewind could fail to reverse damage taken on allies if
+              the Evoker was affected by Cyclone.
+            ]=],
+        },
         {
             date = "September 1, 2026",
             text = [=[
