@@ -10,8 +10,46 @@
 PatchNotesDelivered_Notes_1210 = {
     version = "12.1.0",
     build = "69587",
-    hotfix = 12,
+    hotfix = 13,
     gameChangesHotfixes = {
+        {
+            date = "September 3, 2026",
+            text = [=[
+Achievements
+    • Fixed an issue where the achievement Spark in the Night was not granting credit
+      for the Sparks of War quest if completed in the Coiled Isle, Val, or Naigtal.
+
+Classes
+    • Priest
+        > Holy
+            + Fixed an issue with the Venomous Abyss 2-set bonus that caused Renew to
+              not reliably grant Renewed Vigor.
+    • Shaman
+        > Restoration
+            + Totemic: Corrected an issue where Oversurge did not properly increase the
+              healing done by Surging Totem or Overflowing Shores.
+
+Dungeons and Raids
+    • Ruby Life Pools
+        > Fixed an issue where the Radiant Drake entrance-return NPC did not appear in
+          Mythic+ after defeating the final boss.
+    • The Venomous Abyss
+        > Ula'tek
+            + Caustic Waves have been adjusted so they cannot be avoided by swimming
+              under them.
+            + Corrected an error in the Blight Vein spell description that was pointing
+              to the wrong damage value.
+
+Items
+    • The Zul'jin's Guillotine Technique trinket effect, Perfected Guillotine, will no
+      longer target enemies who are not engaged in combat for its second target.
+
+Quests
+    • The Darkwell should now remain for characters who have not finished the War of
+      Light and Shadow Campaign but have completed the Arator quests for the Curse of
+      Ula'tek Campaign.
+            ]=],
+        },
         {
             date = "September 2, 2026",
             text = [=[
