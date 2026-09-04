@@ -46,7 +46,7 @@ Items
 
 Quests
     • The Darkwell should now remain for characters who have not finished the War of
-      Light and Shadow Campaign but have completed the Arator quests for Curse of
+      Light and Shadow Campaign but have completed the Arator quests for the Curse of
       Ula'tek Campaign.
             ]=],
         },
