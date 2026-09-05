@@ -10,8 +10,44 @@
 PatchNotesDelivered_Notes_1210 = {
     version = "12.1.0",
     build = "69587",
-    hotfix = 13,
+    hotfix = 14,
     gameChangesHotfixes = {
+        {
+            date = "September 4, 2026",
+            text = [=[
+Classes
+    • Druid
+        > Balance
+            + Stellar Amplification can now be tracked in the Cooldown Manager.
+            + Twin Moons' range is now increased by target combat reach, meaning it can
+              spread to farther targets when attacking large enemies.
+    • Shaman
+        > Enhancement
+            + Corrected an issue where the Venomous Abyss 4-set bonus was not
+              properly increasing the upfront damage of Crash Lightning.
+
+Dungeons and Raid
+    • The Venomous Abyss
+        > Ula'tek
+            + Fixed an issue where applications of Ingested Venom could apply on a
+              target affected by Serpent's Bite.
+
+Housing
+    • Endeavors
+        > Vacation Season
+            + Fixed instances where collecting a Secret Souvenir could fail to grant
+              achievement credit. Players who were affected by this bug should see
+              their achievement progress retroactively granted upon entering a
+              housing neighborhood. Taggi is sorry for the mishap.
+
+Items
+    • Fixed an issue where some non-set class armor items appeared to be eligible
+      for redundant Catalyst conversion.
+    • Fixed an issue causing the Preternatural Antivenom trinket absorb effect to
+      have a reduced cap for healer specializations as well as healing for a lower
+      percentage of incoming damage than intended.
+            ]=],
+        },
         {
             date = "September 3, 2026",
             text = [=[
