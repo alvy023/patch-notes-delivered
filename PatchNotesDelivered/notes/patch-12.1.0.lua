@@ -10,8 +10,87 @@
 PatchNotesDelivered_Notes_1210 = {
     version = "12.1.0",
     build = "69587",
-    hotfix = 14,
+    hotfix = 15,
     gameChangesHotfixes = {
+        {
+            date = "September 9, 2026",
+            text = [=[
+Achievements
+    • Soft Underbelly is now an account-wide achievement.
+
+Classes
+    • Death Knight
+        > Blood
+            + Resolved an issue causing Grip of the Dead from Death and Decay to
+              permanently be active on targets.
+    • Druid
+        > Guardian
+            + Fixed an issue where Wild Guardian was incorrectly increasing Thrash and
+              Mangle damage regardless of whether Rank 3 was selected.
+    • Paladin
+        > Protection
+            + Fixed an issue that caused Glory of the Vanguard to sometimes fail to
+              deal damage to distant targets.
+    • Priest
+        > Fixed an issue where Flash Heal could not be tracked on the Cooldown Manager
+          for Discipline and Shadow specializations.
+    • Shaman
+        > Enhancement
+            + Fixed an issue where damage from Doom Winds could interrupt channeled
+              effects, such as the Font of Venomous Rage trinket.
+            + Totemic: Fixed an issue where Crash Lightning could cause unintended
+              targets to be hit by Windfury Weapon.
+    • Warrior
+        > Arms
+            + The Venomous Abyss 4-set Bonus - The Winding Up bonus Slam damage buff
+              can now be tracked in the Cooldown Manager.
+            + Rend is now able to be tracked in the Cooldown Manager.
+        > Protection
+            + The Venomous Abyss 2-set Bonus - The Vengeful Shield bonus Shield Slam
+              damage buff can now be tracked in the Cooldown Manager.
+            + Rend is now able to be tracked in the Cooldown Manager.
+
+Delves
+    • Fixed an issue that prevented Bountiful Coffers from rewarding Zul'jarra's
+      Forces reputation.
+
+Dungeons and Raids
+    • Den of Nalorakk
+        > Addressed an issue where player pets were unable to damage The Winter
+          Squall.
+    • The Venomous Abyss
+        > Entombed Sentinels
+            + Toxic Droplets are no longer instantly stepped on if they land directly
+              on top of a player.
+            + Living Venom no longer pierces immunities.
+        > The Lost Explorers
+            + Fixed a visual effect issue that sometimes occurred when the tortollans
+              were empowered.
+            + Hoji will now teleport back to the main platform if he falls from
+              the bridge.
+        > Ula'tek
+            + Added in health backstops to ensure the boss transitions out of Rage of
+              the Shackled when reaching specific health thresholds.
+
+Items
+    • Fixed an issue causing the Preternatural Antivenom trinket effect to only be
+      applied to the trinket wearer.
+    • Void Elf and Blood Elf eyebrows are now visible when wearing either the Aquatic
+      or Brick Gloomcap.
+    • Removed Bouncy Mushrooms collision.
+
+Player versus Player
+    • Evoker
+        > Preservation
+            + Fixed an issue where Stasis could be used in the starting room of arenas
+              and battlegrounds to store spells for after the gates opened.
+
+Prey
+    • Players may now receive 500 Corrosive Coin daily on each character that defeats
+      Ral'kala after reaching Preyhunter's Journey rank 6 (was only the
+      first character).
+            ]=],
+        },
         {
             date = "September 4, 2026",
             text = [=[
