@@ -26,7 +26,7 @@ Classes
               happen if the Hunter was affected by crowd control effects while the bomb
               hit the target.
             + Corrected an issue where Strike As One would not deal damage with a Raptor
-              Swipe that benefit from Tip of the Spear if Aspect of the Eagle is active.
+              Swipe that benefits from Tip of the Spear if Aspect of the Eagle is active.
     • Mage
         > Hero Talents
             + Spellslinger
@@ -48,7 +48,7 @@ Classes
               of Healing Rain by 0.5 seconds.
 
 Delves
-    • Fixed an issue where Domanaar Enforcer's could Devour an already dead corpse.
+    • Fixed an issue where Domanaar Enforcers could Devour an already dead corpse.
     • Explorer's League Supplies and the Abandoned Restoration Stone will now appear in
       the Twilight Crypts delve variant Loosed Loa.
 
