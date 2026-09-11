@@ -150,7 +150,7 @@ Player versus Player
               and battlegrounds to store spells for after the gates opened.
 
 Prey
-    • Players may now receive 500 Corrosive Coin daily on each character that defeats
+    • Players may now receive 500 Corrosive Coins daily on each character that defeats
       Ral'kala after reaching Preyhunter's Journey rank 6 (was only the
       first character).
             ]=],
