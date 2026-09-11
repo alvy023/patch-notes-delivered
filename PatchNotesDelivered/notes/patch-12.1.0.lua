@@ -10,8 +10,72 @@
 PatchNotesDelivered_Notes_1210 = {
     version = "12.1.0",
     build = "69587",
-    hotfix = 15,
+    hotfix = 16,
     gameChangesHotfixes = {
+        {
+            date = "September 10, 2026",
+            text = [=[
+Classes
+    • Death Knight
+        > Unholy
+            + Resolved an issue causing Magus of the Dead to occasionally spawn at
+              extreme vertical differences.
+    • Hunter
+        > Survival
+            + Corrected an issue where the initial damage of Wildfire Bomb would not
+              happen if the Hunter was affected by crowd control effects while the bomb
+              hit the target.
+            + Corrected an issue where Strike As One would not deal damage with a Raptor
+              Swipe that benefit from Tip of the Spear if Aspect of the Eagle is active.
+    • Mage
+        > Hero Talents
+            + Spellslinger
+                - Fixed an issue causing Splinters from Augury Abounds to sometimes
+                  strike crowd-controlled targets when other non-crowd controlled
+                  targets are available.
+    • Paladin
+        > Holy
+            + Fixed an issue that caused Ringing of the Heavens to not function if cast
+              as Lightsmith while targeting an enemy.
+        > Protection
+            + Fixed an issue where Glory of the Vanguard was not dealing full damage to
+              its primary target.
+    • Rogue
+        > Both versions of Thistle Tea can now be tracked in the Cooldown Manager.
+    • Shaman
+        > Restoration
+            + Fixed an issue where Soothing Rain did not properly reduce the cast time
+              of Healing Rain by 0.5 seconds.
+
+Delves
+    • Fixed an issue where Domanaar Enforcer's could Devour an already dead corpse.
+    • Explorer's League Supplies and the Abandoned Restoration Stone will now appear in
+      the Twilight Crypts delve variant Loosed Loa.
+
+Dungeons and Raids
+    • Den of Nalorakk
+        > Addressed an issue where Nalorakk's Echoing Maul can sometimes trigger
+          unintentionally.
+    • The Venomous Abyss
+        > The Lost Explorers
+            + Mor'zahi's damage escalation during Final Ascension will now reset if his
+              cast is interrupted.
+
+Player versus Player
+    • Evoker
+        > Fixed an issue where Unburdened Flight was causing Deep Breath to move the
+          player forward during Hover.
+        > Hero Talents
+            + Chronowarden
+                - Fixed an issue where Warp was still causing the player to become
+                  immune to snares while talented into Unburdened Flight.
+
+Prey
+    • The buff from Afflicted and Tormented Souls is no longer removed on death, by
+      entering a battleground or arena, or by switching specializations, and cannot be
+      accidentally removed by the player.
+            ]=],
+        },
         {
             date = "September 9, 2026",
             text = [=[
