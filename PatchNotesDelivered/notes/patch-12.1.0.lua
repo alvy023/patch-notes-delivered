@@ -9,9 +9,98 @@
 --- Max line length [90] -----------------------------------------------------------------
 PatchNotesDelivered_Notes_1210 = {
     version = "12.1.0",
-    build = "69587",
-    hotfix = 16,
+    build = "69814",
+    hotfix = 17,
     gameChangesHotfixes = {
+        {
+            date = "September 15, 2026",
+            text = [=[
+Classes
+    • Hunter
+        > Marksmanship
+            + Fixed an issue where Aimed Shot was not properly playing its cast
+              animation when using a gun or crossbow.
+    • Paladin
+        > Protection
+            + Fixed an issue where Consecration's first tick would not benefit
+              from the Venomous Abyss tier set's increase to its critical strike
+              chance.
+    • Priest
+        > Holy
+            + Fixed an issue where Renewed Vigor from the Venomous Abyss 2-piece
+              tier bonus could exceed 3 stacks.
+
+Dungeons and Raids
+    • The Venomous Abyss
+        > Sszorak
+            + Tempest damage reduced by 20% on Heroic and Mythic difficulties.
+            + Caustic Claws no longer forms a pool of Caustic Residue on Heroic
+              difficulty.
+        > Twin Fangs
+            + Corrosive Spit damage reduced by 20% on Mythic difficulty.
+            + Reduced the amount of Broodlings of Ithraz spawned by Rouse the
+              Brood to 10.
+            + Visceral Burst cast time increased by 0.5 seconds.
+        > The Coiled Altar
+            + Venom Rupture damage reduced by 10% on Heroic and Mythic
+              difficulty.
+            + Mutagenic Venom damage reduced by 15%.
+            + Wail of Terror cast time increased to 12 seconds on Heroic
+              difficulty.
+            + Wail of Terror cast time increased to 10 seconds on Mythic
+              difficulty.
+            + Spiteful Soulcoiler's spawning and relocation when interrupted
+              are now more predictable.
+            + 1 Spiteful Soulcoiler will always spawn nearby Malacrass on
+              Mythic difficulty.
+            + The number of players targeted by Dreadmarch no longer increases
+              throughout the phase on all difficulties.
+            + Manifestations of Dread now deprioritize fixating on players
+              that currently have Unnerving Fixation.
+            + Manifestations of Dread revealed by interrupting Wail of Terror
+              now remain visible for an additional 3 seconds.
+            + The number of Fragments of Malacrass that spawn during the
+              intermission reduced by 25% on Mythic difficulty.
+            + Fixed an issue where Coalesced Venoms and Virulent Mutations
+              would fail to drop on the ground if a priest carrying one enters
+              Spirit of Redemption.
+        > Ula'tek
+            + Failing to stand within Mother's Wrath now only inflicts 1 stack
+              of Stone Venom onto the raid on Raid Finder difficulty.
+            + Doomscale Warden's Malice cast time increased to 5 seconds (was
+              1.5 seconds) and damage reduced on Raid Finder difficulty.
+            + The number of Blightscale Spawn reduced to 6 during Stage 2 on
+              Raid Finder difficulty.
+            + Ula'tek's Unchecked Rage damage reduced on Raid Finder
+              difficulty.
+            + Gore Rattler's Rattler Slam damage reduced on Raid Finder
+              difficulty.
+            + Stone Venom damage reduced on all difficulties.
+            + Putrid Membrane duration reduced to 30 seconds on Mythic
+              difficulty (was 1 hour).
+            + The number of Blightscale Spawn summoned from Serpent's Call
+              reduced to 8 per wave during Stage 1 on Mythic difficulty (was
+              13).
+            + The number of Blightscale Spawn reduced to 12 per side during
+              Stage 2 on Mythic difficulty (was 14).
+            + The number of eggs dropped by Serpent's Call during the
+              intermission reduced to 8 on Mythic difficulty (was 14).
+
+Items
+    • Players who are behind on Spark of Tides (they have more Spark Dust than
+      they do Sparks in their bags/gear), will be receiving their missing
+      sparks directly into their bags upon login.
+
+Quests
+    • Fixed an issue where the Hijacked Portal for Still Behind Enemy Portals
+      was failing to teleport players to the correct destination.
+    • Delves should once again count for progress towards the objective of
+      Hope in the Darkest Corners.
+
+The Coiled Isle
+    • Curse Surges now rotate every 30 minutes (was 45 minutes).
+            ]=],
+        },
         {
             date = "September 10, 2026",
             text = [=[
