@@ -69,7 +69,7 @@ Dungeons and Raids
               of Stone Venom onto the raid on Raid Finder difficulty.
             + Doomscale Warden's Malice cast time increased to 5 seconds (was
               1.5 seconds) and damage reduced on Raid Finder difficulty.
-            + The number of Bligthscale Spawn reduced to 6 during Stage 2 on
+            + The number of Blightscale Spawn reduced to 6 during Stage 2 on
               Raid Finder difficulty.
             + Ula'tek's Unchecked Rage damage reduced on Raid Finder
               difficulty.
