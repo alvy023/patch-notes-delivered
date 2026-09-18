@@ -10,8 +10,39 @@
 PatchNotesDelivered_Notes_1210 = {
     version = "12.1.0",
     build = "69814",
-    hotfix = 17,
+    hotfix = 18,
     gameChangesHotfixes = {
+        {
+            date = "September 17, 2026",
+            text = [=[
+Dungeons and Raids
+    • Ruby Life Pools
+        > Addressed an issue where Blazebound Destroyers or Primalist Flamedancers
+          could fail to contribute towards enemy forces if no player was on their
+          threat table when they finished their death sequence.
+            + Developers' notes: A known side-effect of this change is that these
+              creatures will no longer display their contribution towards enemy
+              forces on their tooltip in the default UI.
+    • The Venomous Abyss
+        > The Coiled Altar
+            + Fixed an issue where Unnerving Fixation was targeting tanks more
+              often than intended.
+
+Player versus Player
+    • Significantly increased PvP rating inflation for all rated PvP modes with
+      emphasis on Battleground Blitz, Rated Battlegrounds, and Rated 3v3 Arena.
+        > Developers' notes: We've seen your feedback that achievable PvP ratings
+          are not meeting expectations, so we're applying a significant increase
+          to PvP rating inflation starting now for all rated PvP modes with
+          emphasis on Battleground Blitz, Rated Battlegrounds, and Rated 3v3
+          Arena. As with past changes to inflation, this adjustment is intended
+          to improve progression as the season continues and support healthier
+          ladder movement. We'll continue monitoring rating distribution and
+          make further adjustments as necessary. Thank you for your continued
+          feedback and we'll see you on the battlefield!
+    • Font of Venomous Rage trinket damage reduced by 50% in PvP combat.
+            ]=],
+        },
         {
             date = "September 15, 2026",
             text = [=[
