@@ -13,6 +13,34 @@ PatchNotesDelivered_Notes_1210 = {
     hotfix = 19,
     gameChangesHotfixes = {
         {
+            date = "September 21, 2026",
+            text = [=[
+Classes
+    • Evoker
+        > Fixed an issue preventing Unravel from activating when Fire Breath was cast with
+          Tip the Scales.
+        > Fixed an issue where Unravel may not hit all targets struck by Fire Breath.
+
+Dungeons and Raids
+    • Fixed an issue where following Lindormi's Guidance in Den of Nalorakk and Altar of
+      Fangs would lead to ending the dungeon short of the enemy forces requirement.
+    • The Venomous Abyss
+        > The Coiled Altar
+            + Fixed a rare issue where Toxic Deluge would fail to create Coalesced Venoms
+              and Virulent Mutations.
+            + Fixed a rare issue where Fangs of the Crucible and Defilement of the
+              Crucible would not create area denial on both halves of the platform.
+            + Resolved an issue where pets could engage Zul'jan during the roleplay.
+        > Ula'tek
+            + [With weekly restarts] Ula'tek's Stone Venom damage reduced by 40% on
+              all difficulties.
+            + [With weekly restarts] Boiling Venom on Mythic difficulty is now an
+              Important Aura.
+            + Fixed an issue where Stone Venom could fail to inflict damage to players far
+              from Ula'tek.
+            ]=],
+        },
+        {
             date = "September 17, 2026",
             text = [=[
 Dungeons and Raids
