@@ -13,6 +13,370 @@ PatchNotesDelivered_Notes_1210 = {
     hotfix = 19,
     gameChangesHotfixes = {
         {
+            date = "September 22, 2026",
+            text = [=[
+Classes
+    • Death Knight
+        > Blood
+            + Developers' notes: San'layn is dealing quite a bit more damage in AoE
+              than our intended target for tanks. We will be reducing their overall
+              damage to reduce the disparity. However, we will be increasing Death
+              Strike's damage and reducing its cleave effectiveness to buff Blood's
+              single target which is a little on the lower end of tanks. In addition,
+              we are making some Deathbringer specific targeted buffs to counter the
+              overall aura nerf and be a small net positive buff to both their AoE and
+              single target damage.
+            + All ability and minion damage reduced by 6%.
+            + Death Strike damage increased by 15%.
+            + Deadly Reach now causes Death Strike now to deal 60% of its damage to 2
+              nearby enemies (was 75%).
+            + Deathbringer
+                - Exterminate damage increased by 25%.
+                - Reaper's Mark damage increased by 20%.
+                - Wave of Souls damage increased by 20%.
+                - Bind in Darkness now increases Blood Boil damage by 50% (was 30%).
+                - Deathly Blows now increases Death Strike damage by 20% (was 12%).
+                - Swift and Painful now increases Strength by 15% (was 10%).
+        > Frost
+            + Developers' notes: Frost Death Knight has been lacking in single target and
+              two target cleave scenarios.
+            + Frostreaper damage increased by 100%. Does not apply to PvP combat.
+            + Obliterate damage increased by 10%. Does not apply to PvP combat.
+        > Unholy
+            + Developers' notes: We're looking to increase Unholy Death Knight's damage
+              output in raid. In parallel, we're aiming to bring Blightfall build back
+              to where it was prior to the bug fixes that made it no longer viable.
+            + Scourging now causes your plagues to erupt at 65%/100% (was 50%/70%). Does
+              not apply to PvP combat.
+            + Blightfall deals 200% of the plague damage remaining (was 100%). Does not
+              apply to PvP combat.
+            + San'layn
+                - Infliction of Sorrow causes Vampiric Strike to erupt plagues with 75%
+                  increased effectiveness (was 30%).
+                - Thrill of Blood increases Dread Plague damage by 20% (was 10%).
+                - Frenzied Bloodthirst now increases Death Coil and Death Strike damage
+                  by 5% per stack.
+    • Demon Hunter
+        > Devourer
+            + Developers' notes: These changes are intended to primarily benefit the
+              raid and single target performance of Annihilator hero talent builds and
+              improve Annihilator's viability in more content.
+            + Collapsing Star damage to primary target increased by 25%. Does not apply
+              to PvP combat.
+            + Consume/Devour damage increased by 8%. Does not apply to PvP combat.
+        > Havoc
+            + Aldrachi Reaver
+                - Developers' notes: Aldrachi Reaver has fallen well behind the
+                  alternative hero talent options for both specs it is available to. We
+                  are improving some of its core effects for both specs, and for Havoc
+                  specifically the soul fragment generation from Broken Spirit is
+                  increasing to give a small boost to Fury generation and hasten the
+                  cycle of Reaver's Glaive and its bonuses.
+                - Art of the Glaive now increases the damage of enhanced strikes by 15%
+                  (was 10%) and 30% (was 20%).
+                - Reaver's Glaive damage increased by 25%.
+                - Reaver's Mark now increases your damage to the target by 7% (was 6%).
+                - Broken Spirit chance to shatter a Soul Fragment increased to 20% (was
+                  15%).
+        > Vengeance
+            + Aldrachi Reaver
+                - Developers' notes: Aldrachi Reaver has fallen well behind the
+                  alternative hero talent options for both specs it is available to. We
+                  are improving some of its core effects for both specs.
+                - Art of the Glaive now increases the damage of enhanced strikes by 15%
+                  (was 10%) and 30% (was 20%).
+                - Reaver's Glaive damage increased by 25%.
+                - Reaver's Mark now increases your damage to the target by 8% (was 7%).
+    • Druid
+        > Hero Talents
+            + Wildstalker
+                - Bursting Growth damage increased by 15%. Does not apply to PvP combat.
+        > Feral
+            + Wildstalker
+                - Patient Custodian increases bleed damage by 10% (was 8%). Does not
+                  apply to PvP combat.
+        > Restoration
+            + All healing increased by 4%. Does not apply to PvP combat.
+            + Fixed an issue where Photosynthesis could trigger from other players'
+              heal over time effects.
+    • Evoker
+        > Augmentation
+            + Developers' notes: We're making some targeted adjustments to parts of
+              Augmentation's kit that have lower representation in their breakdown than
+              they should be relative to their intended strength or time spent
+              performing them.
+            + Eruption damage increased by 15%.
+            + Fire Breath damage increased by 60%.
+            + Upheaval damage increased by 40%.
+            + Blistering Scales damage increased by 100%.
+        > Devastation
+            + Developers' notes: Devastation's overall damage in M+ is slightly lower
+              than we'd like, so we're broadly targeting AoE abilities for buffs. We're
+              increasing Unbound Flame's damage to maintain its appeal as the focus of
+              the Apex talents. And finally, we're increasing Shattering Star's damage
+              so that players talenting for their tier set can feel confident they are
+              making a competitive character building decision. We anticipate this
+              package giving a larger buff to Flameshaper than to Scalecommander, as
+              we're seeing Scalecommander outperform it in most content.
+            + Pyre damage increased by 10%. Does not apply to PvP combat.
+            + Unbound Flame damage increased by 25%. Does not apply to PvP combat.
+            + Fire Breath damage increased by 5%. Does not apply to PvP combat.
+            + Azure Strike damage increased by 50%. Does not apply to PvP combat.
+            + Azure Sweep damage increased by 50%. Does not apply to PvP combat.
+            + Shattering Star damage increased by 10%. Does not apply to PvP combat.
+    • Hunter
+        > Marksmanship
+            + Developers' notes: We're looking to increase the area damage capabilities
+              of Marksmanship Hunters with these changes.
+            + Trick Shots now causes Aimed Shot or Rapid Fire ricochets to hit for 75%
+              of damage (was 60%).
+            + Volley damage increased by 10%.
+        > Survival
+            + Developers' notes: We're increasing the damage that Wildfire Bomb deals
+              to all targets, but reducing the bonus damage to the primary target. This
+              should be a neutral change against a single target, but an increase to
+              area damage when fighting more than one enemy.
+            + Wildfire Bomb damage increased by 20%.
+            + Wildfire Bomb now only hits the primary target for 50% additional damage
+              (was 80% additional).
+    • Mage
+        > Developers' notes: For both Fire and Frost, these changes are intended to
+          primarily improve performance in M+, with a smaller impact in raids.
+        > Fire
+            + Meteor's damage over time increased by 100%. Does not apply to PvP
+              combat.
+            + Frostfire
+                - Dualcasting Adept now increases Flamestrike damage by 15% (was 10%).
+            + Sunfury
+                - Burden of Power now increases Flamestrike damage by 6% (was 3%).
+        > Frost
+            + Frozen Orb damage increased by 15%.
+            + Comet Storm damage increased by 50%. Does not apply to PvP combat.
+            + Frostbite's Shatter damage to nearby enemies increased by 10%.
+            + Glacial Assault icy comet damage increased by 50%.
+    • Monk
+        > Mistweaver
+            + All healing increased by 5%. Does not apply to PvP combat.
+            + Vivify healing increased by 15%. Does not apply to PvP combat.
+            + Sheilun's Gift healing increased by 15%. Does not apply to PvP combat.
+        > Windwalker
+            + Melee auto-attack damage increased by 25%. Does not apply to PvP combat.
+            + Dual Threat damage increased by 20%. Does not apply to PvP combat.
+            + Rising Sun Kick damage increased by 8%. Does not apply to PvP combat.
+    • Paladin
+        > Protection
+            + All ability damage increased by 6%. Does not apply to PvP combat.
+        > Retribution
+            + Templar
+                - Developers' notes: Templar has been underperforming compared to
+                  Herald of the Sun this season. We're increasing its throughput to
+                  make it a more viable option against Herald of the Sun, for those who
+                  enjoy Templar's playstyle.
+                - Hammer of Light damage increased by 50%. Does not apply to PvP combat.
+                - Empyrean Hammer damage increased by 12%.
+    • Priest
+        > Discipline
+            + Developers' notes: Discipline isn't able to dish out proper healing in
+              dungeon environments due to how strong Atonement is in raids. We're
+              reintroducing an Atonement healing bonus outside of raid environments and
+              significantly increasing Atonement healing outside raid to help
+              Discipline shine in dungeons.
+            + Atonement healing is increased by 40% when not in a raid or battleground
+              instance.
+            + Penance mana cost reduced by 20%.
+        > Shadow
+            + Developers' notes: We feel Shadow is lacking in single target damage, so
+              these changes are intended to improve Shadow's damage against singular
+              targets while remaining neutral in multi-target situations.
+            + Mind Blast damage increased by 15%.
+            + Void Blast damage increased by 15%.
+            + Shadow Word: Death damage increased by 15%.
+            + Shadow Word: Madness damage increased by 15%. Does not apply to PvP
+              combat.
+            + Mind Flay damage increased by 15%. Does not apply to PvP combat.
+            + Mind Flay: Insanity damage increased by 15%. Does not apply to PvP
+              combat.
+            + Psychic Link now causes direct damage spells to inflict 20% of their
+              damage to all other targets afflicted by Vampiric Touch (was 25%). Does
+              not apply to PvP combat.
+            + Shadeburst damage reduced by 5%. Does not apply to PvP combat.
+    • Rogue
+        > Subtlety
+            + Trickster
+                - Developers' notes: Trickster has performed well below Deathstalker
+                  for Subtlety this tier and is receiving a damage boost to its core
+                  effects to make Trickster a more reasonable choice in a wider range
+                  of content.
+                - Unseen Blade damage increased by 50%. Does not apply to PvP combat.
+                - Coup de Grace damage increased by 30%. Does not apply to PvP combat.
+    • Warrior
+        > Developers' notes: Warriors are in a good state overall, but we feel that
+          Mountain Thane is a bit behind their partner hero specs on both Fury and
+          Prot, so we're giving a small boost there to help Mountain Thane enjoyers.
+        > Fury
+            + Mountain Thane
+                - Lightning Strike damage increased by 50%. Does not apply to PvP
+                  combat.
+                - Ground Current damage increased by 50%. Does not apply to PvP combat.
+        > Protection
+            + Mountain Thane
+                - Lightning Strike damage increased by 50%. Does not apply to PvP
+                  combat.
+                - Ground Current damage increased by 50%. Does not apply to PvP combat.
+
+Dungeons and Raids
+    • Altar of Fangs
+        > Fixed an issue that allowed Blade of the Altar's Laced Edge to cast while
+          crowd controlled.
+    • Temple of Sethraliss
+        > Fixed an issue that allowed Shrouded Fang's Slither Strike to cast while
+          crowd controlled.
+
+Housing
+    • The Rustbolt Jetpack has received a firmware update. It will now engage Ocular
+      Non-Obstruction Mode upon detection of unstable decor environments.
+
+Items
+    • Preternatural Antivenom – Healing increased by 75%.
+    • Seed of Radiant Hope – Cooldown reduced to 1 minute (was 1.5 minutes). Healing
+      increased by 40%.
+    • Mycolic Medicine – Effect frequency increased by 33%. Healing increased by 58%.
+    • Unstable Felheart Crystal – Cooldown reduced to 1.5 minutes (was 2 minutes).
+      Healing increased by 58%.
+    • Ruby Whelp Shell – Frequency of all effects increased by 100%. All damage reduced
+      by 42%. Single target healing effect increased by 37%. Multi-target healing
+      increased by 5%. Stat effects reduced by 50%.
+    • Gaze of the Alnseer – Primary stat reduced by 10%.
+    • Vaelgor's Final Stare – Mastery reduced by 10%.
+    • Algeth'ar Puzzle Box – Mastery reduced by 25%.
+
+Player versus Player
+    • Death Knight
+        > Unholy
+            + San'layn
+                - Developers' notes: We would like to push for the San'layn hero talent
+                  tree to be a more viable option for Unholy Death Knights in PvP.
+                - Inevitable now causes plagues to deal up to 60% increased damage
+                  based on the target's missing health (was 30%) in PvP combat.
+                - Vampiric Strike damage increased by 100% in PvP combat.
+    • Druid
+        > Feral
+            + Druid of the Claw
+                - Ravage damage increased by 20% in PvP combat.
+                - Dreadful Wound damage increased by 25% in PvP combat.
+                - Exacerbating Wounds increases damage taken from your bleed effects by
+                  10% in PvP combat (was 8%).
+        > Restoration
+            + Developers' notes: Restoration Druid's burst healing and instant
+              crowd-control capabilities have limited counterplay for other players, so
+              we're targeting these aspects to decrease their overall performance.
+            + Call of Ohn'ahra increases the cooldown of Nature's Swiftness by 60
+              seconds (was 30 seconds).
+            + Swiftmend healing reduced by 20% in PvP combat.
+    • Evoker
+        > Augmentation
+            + Ebon Might grants 12% primary stat in PvP combat (was 10%).
+        > Preservation
+            + Flameshaper
+                - Consume Flame healing reduced by 30% in PvP combat.
+    • Hunter
+        > Beast Mastery
+            + Dark Ranger
+                - Developers' notes: Dark Ranger has been underperforming for Beast
+                  Mastery, so we're adjusting their Black Arrow damage to increase
+                  their performance.
+                - Black Arrow damage increased by 30% in PvP combat.
+        > Survival
+            + Developers' notes: Survival Hunter's burst window has been particularly
+              powerful this season, so we are targeting reductions in that area to
+              allow other players more time to react.
+            + Takedown Hunter damage reduced by 10% in PvP combat.
+            + Takedown Pet damage reduced by 15% in PvP combat.
+            + Sentinel
+                - Moonlight Chakram damage reduced by 15% in PvP combat.
+    • Mage
+        > Fire
+            + Developers' notes: We feel Fire Mage burst damage continues to be too
+              high even outside of Combustion, so we're further reducing the damage
+              bonus from Pyroclasm to lessen its potential to lead to quick kills.
+            + Pyroclasm now increases the damage of Pyroblast or Flamestrike by 160% in
+              PvP combat (was 180%).
+    • Monk
+        > Windwalker
+            + Developers' notes: We're decreasing the performance gap between
+              Windwalker's hero talent trees as Shado-Pan has been overperforming and
+              Conduit of the Celestials has been underperforming.
+            + Conduit of the Celestials
+                - Celestial Conduit damage increased by 50% in PvP combat.
+            + Shado-Pan
+                - Flurry Strikes damage reduced by 15% in PvP combat.
+    • Paladin
+        > Retribution
+            + Templar
+                - Developers' notes: We're bringing Templar's performance up also in
+                  PvP, but we believe the gap to Herald of the Sun is less drastic
+                  compared to PvE.
+                - Hammer of Light damage increased by 20%.
+    • Priest
+        > Developers' notes: We're increasing the effectiveness of Mindgames once more
+          in this pass to solidify its usability. We'd like for it to be able to
+          compete with other powerful PvP talent options in Priest's kit.
+        > Mindgames direct damage and reversal increased by 50%.
+        > Holy
+            + Archon
+                - Developers' notes: We feel Oracle Holy is in a good place, but Archon
+                  has difficulties keeping up, so we're targeting buffs to its
+                  throughput and offensive potential.
+                - Halo damage and healing increased by 30% in PvP combat.
+                - Focused Outburst now reduces the cast time of Prayer of Healing by
+                  40% in PvP combat (was 15%).
+                - Realized Potential now increases Flash Heal healing by 20% in PvP
+                  combat (was 10%).
+        > Discipline
+            + Atonement healing is no longer increased by 40% in PvP combat.
+        > Shadow
+            + Developers' notes: We're increasing the damage of Shadow Word: Death
+              significantly in addition to the Mind Blast changes above to allow for
+              more opportunities to finish enemies off.
+            + Shadow Word: Death damage increased by 30% in PvP combat.
+    • Rogue
+        > Assassination
+            + All damage reduced by 4% in PvP combat.
+            + Deathmark now shows as a large aura on raid frames.
+        > Outlaw
+            + All damage increased by 5% in PvP combat.
+    • Shaman
+        > Elemental
+            + Developers' notes: We feel Elemental should shine more in their damage
+              against their primary target and less in their cleave, so we're making
+              some improvement to core spell damage and reducing the effect of the
+              Voltaic Blaze and Purging Flames combo.
+            + Lightning Bolt damage increased by 25% in PvP combat.
+            + Lava Burst damage increased by 15% in PvP combat.
+            + Voltaic Blaze instant damage reduced by 25% in PvP combat.
+            + Purging Flames now causes Lava Bursts to fire at 25% effectiveness in PvP
+              combat (was 40%).
+        > Enhancement
+            + All damage increased by 3% in PvP combat.
+    • Warlock
+        > Affliction
+            + Agony damage increased by 40% in PvP combat.
+            + Unstable Affliction damage increased by 10% in PvP combat.
+    • Warrior
+        > Arms
+            + Colossus
+                - Developers' notes: We're increasing the effectiveness of Colossus for
+                  Arms in PvP to increase hero talent viability with a focus on
+                  improving the effectiveness of your post-Demolish window.
+                - Practiced Strikes increases the damage of Slam and Mortal Strike by
+                  40% in PvP combat (was 25%).
+                - Arterial Bleed now increases Rend and Deep Wounds damage by 5% per
+                  stack in PvP combat (was 3%).
+                - Cut to the Bone now increases Rend and Deep Wounds damage by 30% in
+                  PvP combat (was 15%).
+            ]=],
+        },
+        {
             date = "September 21, 2026",
             text = [=[
 Classes
