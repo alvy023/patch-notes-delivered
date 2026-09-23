@@ -38,8 +38,8 @@ Classes
                 - Deathly Blows now increases Death Strike damage by 20% (was 12%).
                 - Swift and Painful now increases Strength by 15% (was 10%).
         > Frost
-            + Developers' notes: Frost Death has been lacking in single target and two
-              target cleave scenarios.
+            + Developers' notes: Frost Death Knight has been lacking in single target and
+              two target cleave scenarios.
             + Frostreaper damage increased by 100%. Does not apply to PvP combat.
             + Obliterate damage increased by 10%. Does not apply to PvP combat.
         > Unholy
@@ -204,7 +204,7 @@ Classes
         > Subtlety
             + Trickster
                 - Developers' notes: Trickster has performed well below Deathstalker
-                  for Subtlety this tier and is receiving damage boost to its core
+                  for Subtlety this tier and is receiving a damage boost to its core
                   effects to make Trickster a more reasonable choice in a wider range
                   of content.
                 - Unseen Blade damage increased by 50%. Does not apply to PvP combat.
@@ -241,7 +241,7 @@ Items
     • Seed of Radiant Hope – Cooldown reduced to 1 minute (was 1.5 minutes). Healing
       increased by 40%.
     • Mycolic Medicine – Effect frequency increased by 33%. Healing increased by 58%.
-    • Unstable Felheart Crystal - Cooldown reduced to 1.5 minutes (was 2 minutes).
+    • Unstable Felheart Crystal – Cooldown reduced to 1.5 minutes (was 2 minutes).
       Healing increased by 58%.
     • Ruby Whelp Shell – Frequency of all effects increased by 100%. All damage reduced
       by 42%. Single target healing effect increased by 37%. Multi-target healing
@@ -304,7 +304,7 @@ Player versus Player
     • Monk
         > Windwalker
             + Developers' notes: We're decreasing the performance gap between
-              Windwalker's hero talent trees as Shado-pan has been overperforming and
+              Windwalker's hero talent trees as Shado-Pan has been overperforming and
               Conduit of the Celestials has been underperforming.
             + Conduit of the Celestials
                 - Celestial Conduit damage increased by 50% in PvP combat.
@@ -326,7 +326,7 @@ Player versus Player
             + Archon
                 - Developers' notes: We feel Oracle Holy is in a good place, but Archon
                   has difficulties keeping up, so we're targeting buffs to its
-                  throughout and offensive potential.
+                  throughput and offensive potential.
                 - Halo damage and healing increased by 30% in PvP combat.
                 - Focused Outburst now reduces the cast time of Prayer of Healing by
                   40% in PvP combat (was 15%).
