@@ -9,9 +9,53 @@
 --- Max line length [90] -----------------------------------------------------------------
 PatchNotesDelivered_Notes_1210 = {
     version = "12.1.0",
-    build = "69875",
-    hotfix = 19,
+    build = "69933",
+    hotfix = 20,
     gameChangesHotfixes = {
+        {
+            date = "September 24, 2026",
+            text = [=[
+Delves
+    • In the Shadow Enclave delve variant Infiltrate and Ameliorate, Oddball
+      Ingredient now teleports to one of several points in the play space if
+      dropped into the pit.
+
+Player versus Player
+    • Developers' notes: We've added a few more adjustments to our prior
+      changes to movement speed reduction effects.
+    • Hunter
+        > Wing Clip now reduces movement speed by 40% in PvP combat.
+        > Improved Snaring now increases the movement speed reduction of Wing
+          Clip by 10% in PvP combat.
+    • Mage
+        > Arcane
+            + Chrono Shift (PvP Talent) now reduces movement speed by 30% in
+              PvP combat (was 50%).
+    • Paladin
+        > Consecrated Ground now reduces movement speed by 20% in PvP combat
+          (was 50%).
+            ]=],
+        },
+        {
+            date = "September 23, 2026",
+            text = [=[
+Classes
+    • Death Knight
+        > Unholy
+            + Resolved an issue with Blightfall doing less damage as more
+              time passes since the plague was applied.
+    • Monk
+        > Windwalker
+            + Fixed an issue that caused PvP adjustments to Windwalker's
+              Celestial Conduit and Flurry Strikes to apply in PvE as well.
+
+Delves
+    • Fixed an issue where Valeera becomes unable to change talents and gain
+      abilities after a faction change. Players experiencing this will need
+      to enter a delve on the affected character, then leave the delve, and
+      then log out to correct the issue.
+            ]=],
+        },
         {
             date = "September 22, 2026",
             text = [=[
