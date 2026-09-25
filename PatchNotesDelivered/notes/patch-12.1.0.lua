@@ -17,7 +17,7 @@ PatchNotesDelivered_Notes_1210 = {
             text = [=[
 Delves
     • In the Shadow Enclave delve variant Infiltrate and Ameliorate, Oddball
-      Ingredient now teleport to one of several points in the play space if
+      Ingredient now teleports to one of several points in the play space if
       dropped into the pit.
 
 Player versus Player
@@ -50,7 +50,7 @@ Classes
               Celestial Conduit and Flurry Strikes to apply in PvE as well.
 
 Delves
-    • Fixed issue where Valeera becomes unable to change talents and gain
+    • Fixed an issue where Valeera becomes unable to change talents and gain
       abilities after a faction change. Players experiencing this will need
       to enter a delve on the affected character, then leave the delve, and
       then log out to correct the issue.
