@@ -10,8 +10,25 @@
 PatchNotesDelivered_Notes_1210 = {
     version = "12.1.0",
     build = "69933",
-    hotfix = 20,
+    hotfix = 21,
     gameChangesHotfixes = {
+        {
+            date = "September 29, 2026",
+            text = [=[
+Dungeons and Raids
+    • The Venomous Abyss
+        > Ula'tek
+            + Fixed an issue with Ula'tek's Mother's Wrath where it can be cast at a
+              target that isn't the current target if a non-target has higher threat
+              but hasn't passed the threat threshold to force a target change.
+
+Events
+    • Brewfest
+        > Items that drop from Coren Direbrew should now have the required level set
+          to the player who receives the item. They could still trade it but players
+          at lower levels will have to reach the required level to equip it.
+            ]=],
+        },
         {
             date = "September 24, 2026",
             text = [=[
