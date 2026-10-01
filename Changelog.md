@@ -3,10 +3,32 @@
 All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
-and this project adheres to a specific versioning schema: `A.B.C` where:
-- **A** (Feature): Increments when big features are added.
-- **B** (Game Major): Tracks the WoW Game’s Major version (e.g., 12 in 12.0.0).
-- **C** (Iteration): Increments on every release update (Minor, Patch, or Hotfix compatibility).
+and this project adheres to a specific versioning schema: `<major>.<minor>.<hotfix>`
+where:
+- **major**: Static; bumps only for epoch-defining rewrites (e.g. adding multi-flavor
+  support).
+- **minor**: New game flavors, expansions, or patches.
+- **hotfix**: Any small change to any flavor's content or the addon itself.
+
+## [3.0.0] - 2026-10-01
+### Added
+- Support for WoW: Forever (Classic+), launching 2026-11-04, alongside Retail. A new
+  `PatchNotesDelivered_Camelot.toc` (interface `16001`) ships alongside the existing
+  Retail `.toc`, each loading only its own flavor's notes files so the addon shows
+  Retail-only content on Retail and Forever-only content on Forever, with no manual
+  toggle.
+- Added `forever-notes/patch-1.60.1.lua` as a placeholder/template entry for Forever
+  patch notes (no content yet — populated once real Forever patch content exists).
+### Changed
+- Split the flat `notes/` directory into `retail-notes/` and `forever-notes/`, and
+  split `PatchNotesText.lua`'s single `AVAILABLE_NOTES` list into explicit
+  `RETAIL_NOTES`/`FOREVER_NOTES` tables, picked at load time by client flavor.
+- Replaced the old `A.B.C` (feature/game-major/iteration) versioning schema with
+  `<major>.<minor>.<hotfix>`, since a single "game major version" field can no longer
+  represent both Retail and Forever at once — bumped to `3.0.0` to mark the schema
+  change and multi-flavor support together.
+
+[3.0.0]: https://github.com/alvy023/patch-notes-delivered/releases/tag/v3.0.0
 
 ## [2.12.92] - 2026-09-30
 ### Added

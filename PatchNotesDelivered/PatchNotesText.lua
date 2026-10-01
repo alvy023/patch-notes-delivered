@@ -5,14 +5,31 @@
 -- License: License.txt
 -- For more information, visit the project repository.
 
--- Global notes list
-AVAILABLE_NOTES = {
+-- Per-flavor notes lists (newest-first)
+RETAIL_NOTES = {
     { version = "12.1.0", data = PatchNotesDelivered_Notes_1210 },
     { version = "12.0.7", data = PatchNotesDelivered_Notes_1207 },
     { version = "12.0.5", data = PatchNotesDelivered_Notes_1205 },
     { version = "12.0.1", data = PatchNotesDelivered_Notes_1201 },
     { version = "12.0.0", data = PatchNotesDelivered_Notes_1200 },
 }
+
+FOREVER_NOTES = {
+    { version = "1.60.1", data = PatchNotesDelivered_Notes_Forever1601 },
+}
+
+local FOREVER_INTERFACE = 16001
+
+--- Description: Determine which game flavor the addon is currently running under
+--- @param:
+--- @return "retail" or "forever"
+local function GetClientFlavor()
+    local interfaceVersion = select(4, GetBuildInfo())
+    return interfaceVersion == FOREVER_INTERFACE and "forever" or "retail"
+end
+
+-- Global notes list - whichever flavor's table matches the running client
+AVAILABLE_NOTES = (GetClientFlavor() == "forever") and FOREVER_NOTES or RETAIL_NOTES
 
 -- Variables used by BuildPatchNotes()
 PatchNotesDelivered_Pointer = AVAILABLE_NOTES[1].data
