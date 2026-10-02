@@ -10,8 +10,31 @@
 PatchNotesDelivered_Notes_1210 = {
     version = "12.1.0",
     build = "69933",
-    hotfix = 21,
+    hotfix = 22,
     gameChangesHotfixes = {
+        {
+            date = "October 1, 2026",
+            text = [=[
+Classes
+    • Druid
+        > Feral
+            + Fixed an issue that could cause Rampant Ferocity to trigger
+              incorrectly against a single target.
+    • Hunter
+        > Survival
+            + Wildfire Bomb's periodic damage increased by 20%.
+                - Developer's notes: The tuning hotfix from the week of
+                  September 22 did not properly increase the periodic damage
+                  of an untalented variant of Wildfire Bomb. This hotfix
+                  corrects that issue.
+
+Dungeons and Raids
+    • The Venomous Abyss
+        > Ula'tek
+            + Fixed an issue where the Venomous Heart would sometimes melee
+              a player.
+            ]=],
+        },
         {
             date = "September 29, 2026",
             text = [=[
