@@ -117,8 +117,7 @@ Player versus Player
             + Cooldown reduced to 15 seconds (was 20 seconds).
             + Range increased to 15 yards (was 10 yards).
     • Death Knight
-        > Dark Simulacrum (PvP Talent) cooldown reduced to 15 seconds (was 20
-          seconds).
+        > Dark Simulacrum (PvP Talent) cooldown reduced to 15 seconds (was 20 seconds).
         > Blood
             + Death Chain (PvP Talent) now affects 4 targets (was 3).
             + Death Chain (PvP Talent) initial damage increased by 500%.
@@ -130,8 +129,7 @@ Player versus Player
             + Death's Cold Embrace (PvP Talent) now increases the damage of
               Remorseless Winter by 450% (was 400%).
     • Demon Hunter
-        > Cover of Darkness now increases Darkness duration by 4 seconds (was 2
-          seconds).
+        > Cover of Darkness now increases Darkness duration by 4 seconds (was 2 seconds).
         > Havoc
             + Illidan's Grasp damage increased by 50%.
         > Vengeance
@@ -1856,7 +1854,7 @@ Player versus Player
               (was 5/10%).
     • Paladin
         > Holy
-            + Developer's notes: Holy Paladin throughput has increased with recent
+            + Developers' notes: Holy Paladin throughput has increased with recent
               changes past our targets for them in PvP.
             + All healing reduced by 4% in PvP combat.
         > Protection
