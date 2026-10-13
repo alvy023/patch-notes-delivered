@@ -7,6 +7,7 @@
 
 -- Per-flavor notes lists (newest-first)
 RETAIL_NOTES = {
+    { version = "12.1.5", data = PatchNotesDelivered_Notes_1215 },
     { version = "12.1.0", data = PatchNotesDelivered_Notes_1210 },
     { version = "12.0.7", data = PatchNotesDelivered_Notes_1207 },
     { version = "12.0.5", data = PatchNotesDelivered_Notes_1205 },
