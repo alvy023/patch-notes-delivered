@@ -12,6 +12,7 @@ PatchNotesDelivered_Notes_1215 = {
     build = "70340",
     hotfix = 0,
     gameChangesHotfixes = {
+      "It's working, but at what cost?"
     },
     gameChangesPatch = {
         {
@@ -466,5 +467,6 @@ WARBAND REPUTATION
           cost reduced by 10.
     ]=],
     addonChanges = {
+      "Working on Forever support..."
     },
 }
