@@ -12,11 +12,14 @@ PatchNotesDelivered_Notes_1215 = {
     build = "70340",
     hotfix = 0,
     gameChangesHotfixes = {
-      "It's working, but at what cost?"
+        {
+            date = "2026-10-14",
+            text = [["It's working, but at what cost?"]]
+        }
     },
     gameChangesPatch = {
         {
-            date = "2026-10-01",
+            date = "2026-10-14",
             text = [=[
 Midnight's 12.1.5 content update brings the Labyrinth of Kindo'jan—a massive
 nine-chamber Delve-like challenge, a new single-boss raid, Season 2's mid-season
@@ -467,6 +470,9 @@ WARBAND REPUTATION
           cost reduced by 10.
     ]=],
     addonChanges = {
-      "Working on Forever support..."
+        {
+            date = "2026-10-14",
+            text = [["Working on Forever support..."]]
+        }
     },
 }
