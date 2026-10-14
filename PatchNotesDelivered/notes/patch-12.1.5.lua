@@ -237,11 +237,11 @@ WARBAND REPUTATION
       warband.
             ]=],
         images = {
-            { token = "4", path = "Interface\AddOns\PatchNotesDelivered\media\12.1.5\4.png", width = 1920, height = 1080 },
-            { token = "5", path = "Interface\AddOns\PatchNotesDelivered\media\12.1.5\5.png", width = 1200, height = 675 },
-            { token = "6", path = "Interface\AddOns\PatchNotesDelivered\media\12.1.5\6.png", width = 1920, height = 1080 },
-            { token = "7", path = "Interface\AddOns\PatchNotesDelivered\media\12.1.5\7.png", width = 1920, height = 1080 },
-            { token = "8", path = "Interface\AddOns\PatchNotesDelivered\media\12.1.5\8.png", width = 1920, height = 1080 },
+            { token = "4", path = "Interface\\AddOns\\PatchNotesDelivered\\media\\12.1.5\\4.png", width = 1920, height = 1080 },
+            { token = "5", path = "Interface\\AddOns\\PatchNotesDelivered\\media\\12.1.5\\5.png", width = 1200, height = 675 },
+            { token = "6", path = "Interface\\AddOns\\PatchNotesDelivered\\media\\12.1.5\\6.png", width = 1920, height = 1080 },
+            { token = "7", path = "Interface\\AddOns\\PatchNotesDelivered\\media\\12.1.5\\7.png", width = 1920, height = 1080 },
+            { token = "8", path = "Interface\\AddOns\\PatchNotesDelivered\\media\\12.1.5\\8.png", width = 1920, height = 1080 },
         },
         },
     },
