@@ -9,8 +9,8 @@
 --- Max line length [90] -----------------------------------------------------------------
 PatchNotesDelivered_Notes_1215 = {
     version = "12.1.5",
-    build = "70340",
-    hotfix = 0,
+    build = "70391",
+    hotfix = 1,
     gameChangesHotfixes = {
         {
             date = "2026-10-14",
@@ -253,207 +253,224 @@ WARBAND REPUTATION
     ]],
     demonHunterChangesPatch = [=[
 • Devourer
-    > Developers' notes: Cancelled casts of Collapsing Star have been a noted pain
-      point since Devourer's introduction, and the changes in this update are aimed at
-      alleviating some of that frustration.
+    > Developer's Notes: Cancelled casts of Collapsing Star have been a noted
+      pain point since Devourer's introduction, and the changes in this
+      update are aimed at alleviating some of that frustration.
 
-      Until now there has been a cooldown enforced on Collapsing Star after it was
-      interrupted or cancelled; this was in place to discourage gameplay that would
-      capitalize on the slowed Fury drain during its cast to extend Void Metamorphosis
-      and land a Collapsing Star at the 'right' time. While it was effective at that
-      primary goal, the cooldown was also jarring for players when a cast was
-      interrupted or manually cancelled for very normal gameplay reasons. We hope the
-      changes to Collapsing Star in this update will be able to find a middle ground
-      where normal gameplay will not be punished and rarely notice the new underlying
-      restriction, while still minimizing the opportunity and incentive to manipulate
-      its slowed Fury drain mechanic.
+      Until now there has been a cooldown enforced on Collapsing Star after it
+      was interrupted or cancelled; this was in place to discourage gameplay
+      that would capitalize on the slowed Fury drain during its cast to
+      extend Void Metamorphosis and land a Collapsing Star at the right time.
+      While it was effective at that primary goal, the cooldown was also
+      jarring for players when a cast was interrupted or manually cancelled
+      for very normal gameplay reasons. We hope the changes to Collapsing
+      Star in this update will be able to find a middle ground where normal
+      gameplay will not be punished and rarely notice the new underlying
+      restriction, while still minimizing the opportunity and incentive to
+      manipulate its slowed Fury drain mechanic.
 
-      Second, because of Collapsing Star's long cast time combined with its medium
-      range, the circumstances where Collapsing Star would be cancelled by its target
-      moving out of range were too common. We're giving Collapsing Star more wiggle
-      room to finish its cast by giving it extra range after its cast begins.
-    > Collapsing Star now has increased range after it starts casting, reducing the
-      circumstances where it will fail from the target moving out of range.
+      Second, because of Collapsing Star's long cast time combined with its
+      medium range, the circumstances where Collapsing Star would be
+      cancelled by its target moving out of range were too common. We're
+      giving Collapsing Star more wiggle room to finish its cast by giving it
+      extra range after its cast begins.
+    > Collapsing Star now has increased range after it starts casting,
+      reducing the circumstances where it will fail from the target moving
+      out of range.
     > Collapsing Star no longer goes on cooldown for 5 seconds when its cast
       is cancelled.
     > Collapsing Star will now only slow Fury drain during its cast for a
       limited time.
-        + If Collapsing Star's cast is cancelled then cast again, it will only be
-          able to slow Fury drain for a total time of approximately 1.5 full casts.
-        + After that time limit has been reached, Fury drain will resume in full
-          regardless of whether or not a cast is interrupted or starts again.
-    > Soulforged Blades now increases the critical strike chance of Hungering Slash
-      and Voidblade by 18% (was 15%).
-    > Voidpurge now reduces the cooldown of Void Ray during Void Metamorphosis by 2.5
-      seconds (was 2 seconds).
+      + If Collapsing Star's cast is cancelled then cast again, it will only
+        be able to slow Fury drain for a total time of approximately 1.5
+        full casts.
+      + After that time limit has been reached, Fury drain will resume in
+        full regardless of whether or not a cast is interrupted or starts
+        again.
+    > Soulforged Blades now increases the critical strike chance of
+      Hungering Slash and Voidblade by 18% (was 15%).
+    > Voidpurge now reduces the cooldown of Void Ray during Void
+      Metamorphosis by 2.5 seconds (was 2 seconds).
     > Many talents have changed positions.
-        + Developers' notes: We are shuffling some talents around to make it a little
-          easier for builds to access core functional effects. The final gate was very
-          dense and two of its talents are moving to the middle gate. The final gate's
-          capstone talents also notably included effects that are core building
-          blocks: The Hunt is featured for Void-Scarred builds, and Eradicate is a
-          key component of any build's AoE damage. Those two talents are moving to
-          more accessible locations in the middle gate of the tree, with other talents
-          moving into their capstone positions.
+      + Developer's Notes: We are shuffling some talents around to make it a
+        little easier for builds to access core functional effects. The
+        final gate was very dense and two of its talents are moving to the
+        middle gate. The final gate's capstone talents also notably included
+        effects that are core building blocks: The Hunt is featured for
+        Void-Scarred builds, and Eradicate is a key component of any build's
+        AoE damage. Those two talents are moving to more accessible
+        locations in the middle gate of the tree, with other talents moving
+        into their capstone positions.
     > Void-Scarred
-        + Developers' notes: The Void-Scarred talent tree had multiple powerful
-          bonuses that all centered around entering Void Metamorphosis, which was
-          discouraging players from casting Collapsing Star because doing so would
-          delay how long it would be until entering Void Metamorphosis and benefiting
-          from those bonuses again. Collapsing Star is intended to be a feature
-          ability of Devourer's rotation regardless of which Hero Talents are selected,
-          so some of Void-Scarred's bonuses will now be granted by casting
-          Collapsing Star instead of only being granted by entering
-          Void Metamorphosis.
-        + Demonic Intensity now causes Collapsing Star to reset the cooldown of
-          The Hunt.
-        + Demonic Intensity's empower effect for The Hunt now increases its damage
-          by 30%.
-        + Violent Transformation now resets the cooldown of Soul Immolation.
-        + Violent Transformation no longer resets the cooldown of The Hunt.
-        + Violent Transformation no longer increases the damage of The Hunt (was 25%)
-          or causes it to reset the cooldown of Soul Immolation.
-        + Monster Rising now increases Intellect by 10% while not in demon form
-          (was 15%).
-        + Monster Rising now increases Collapsing Star damage by 20% (was 15%).
+      + Developer's Notes: The Void-Scarred talent tree had multiple
+        powerful bonuses that all centered around entering Void
+        Metamorphosis, which was discouraging players from casting
+        Collapsing Star because doing so would delay how long it would be
+        until entering Void Metamorphosis and benefiting from those bonuses
+        again. Collapsing Star is intended to be a feature ability of
+        Devourer's rotation regardless of which Hero Talents are selected,
+        so some of Void-Scarred's bonuses will now be granted by casting
+        Collapsing Star instead of only being granted by entering Void
+        Metamorphosis.
+      + Demonic Intensity now causes Collapsing Star to reset the cooldown
+        of The Hunt.
+      + Demonic Intensity's empower effect for The Hunt now increases its
+        damage by 30%.
+      + Violent Transformation now resets the cooldown of Soul Immolation.
+      + Violent Transformation no longer resets the cooldown of The Hunt.
+      + Violent Transformation no longer increases the damage of The Hunt
+        (was 25%) or causes it to reset the cooldown of Soul Immolation.
+      + Monster Rising now increases Intellect by 10% while not in demon
+        form (was 15%).
+      + Monster Rising now increases Collapsing Star damage by 20% (was
+        15%).
     ]=],
     druidChangesPatch = [=[
 • Restoration
-    > Developers' notes: The current design of Nature's Bounty causes some rotational
-      friction. We're redesigning it to work more synergistically with the rest of the
-      healing kit.
-    > Nature's Bounty has been redesigned – Regrowth heals up to 3 allies with
-      Rejuvenation active for 15% of its healing, prioritizing allies with the
-      lowest health.
+    > Developer's Notes: The current design of Nature's Bounty causes some
+      rotational friction. We're redesigning it to work more synergistically
+      with the rest of the healing kit.
+    > Nature's Bounty has been redesigned - Regrowth heals up to 3 allies
+      with Rejuvenation active for 15% of its healing, prioritizing allies
+      with the lowest health.
     ]=],
     evokerChangesPatch = [=[
 • Augmentation
     > Chronowarden
-        + Temporality duration is now increased by Mastery: Timewalker.
-        + Temporal Burst duration is now increased by Mastery: Timewalker.
+      + Temporality duration is now increased by Mastery: Timewalker.
+      + Temporal Burst duration is now increased by Mastery: Timewalker.
     > Scalecommander
-        + Melt Armor damage increased by 100%.
-• Preservation
+      + Melt Armor damage increased by 100%.
+  • Preservation
     > Merithra's Blessing duration reduced to 30 seconds (was 1 minute).
-    > Consume Flame no longer double dips from healing increases on the target.
+    > Consume Flame no longer double dips from healing increases on the
+      target.
     > Chronowarden
-        + Fixed an issue where extending Fire Breath with Double-time could cause
-          Life-Giver's Flame to stop healing.
-        + Fixed an issue where Afterimage was causing Deep Breath to sometimes cast
-          Living Flame on the Evoker.
+      + Fixed an issue where extending Fire Breath with Double-time could
+        cause Life-Giver's Flame to stop healing.
+      + Fixed an issue where Afterimage was causing Deep Breath to sometimes
+        cast Living Flame on the Evoker.
     > Flameshaper
-        + Developers' notes: We recently fixed Consume Flame to not double dip with
-          healing increases, which resulted in a fairly significant decrease to
-          Flameshaper's throughput. We're offsetting the bug fix by increasing Consume
-          Flame's healing.
-        + Consume Flame healing increased by 20%.
+      + Developer's Notes: We recently fixed Consume Flame to not double
+        dip with healing increases, which resulted in a fairly significant
+        decrease to Flameshaper's throughput. We're offsetting the bug fix
+        by increasing Consume Flame's healing.
+      + Consume Flame healing increased by 20%.
     ]=],
     hunterChangesPatch = [=[
 • Marksmanship
-    > Developers' notes: We're replacing Unload with a talent focused more around
-      Aimed Shot, giving a window of opportunity when you get an Aimed Shot critical
-      strike.
-    > New Talent: Blood Fletching – Aimed Shot critical strikes now cause the Master
-      Marksman bleed effect at 20% of the damage dealt. For 4 seconds after a critical
-      Aimed Shot, the target will take additional bleed damage any time your abilities
-      damage that target.
-    > Fixed an issue where Explosive Shot would automatically select and fire at a
-      nearby target if pressed without a target currently selected.
+    > Developer's Notes: We're replacing Unload with a talent focused more
+      around Aimed Shot, giving a window of opportunity when you get an
+      Aimed Shot critical strike.
+    > New Talent: Blood Fletching - Aimed Shot critical strikes now cause
+      the Master Marksman bleed effect at 20% of the damage dealt. For 4
+      seconds after a critical Aimed Shot, the target will take additional
+      bleed damage any time your abilities damage that target.
+    > Fixed an issue where Explosive Shot would automatically select and
+      fire at a nearby target if pressed without a target currently
+      selected.
     > Unload has been removed.
     > Dark Ranger
-        + Fixed an issue where Umbral Reach was not generating Trick Shots when Bleak
-          Powder hit exactly 2 targets.
-• Survival
-    > Fixed an issue where Strike as One bonus damage from Raptor Swipe (Rank 3) did
-      not properly work while Aspect of the Eagle was active.
-    > Fixed an issue where Raptor Swipe had a longer range than intended while Aspect
-      of the Eagle was active.
+      + Fixed an issue where Umbral Reach was not generating Trick Shots
+        when Bleak Powder hit exactly 2 targets.
+  • Survival
+    > Fixed an issue where Strike as One bonus damage from Raptor Swipe
+      (Rank 3) did not properly work while Aspect of the Eagle was active.
+    > Fixed an issue where Raptor Swipe had a longer range than intended
+      while Aspect of the Eagle was active.
     ]=],
     mageChangesPatch = [=[
 • Arcane
-    > Several Arcane spells have been added to the Spell Density system for additional
-      visibility options for non-Mage players.
-• Frost
-    > Fixed an issue where Splitting Ice's damage modifier would not apply to
-      Frostbolt, causing both Frostbolts to hit for full damage.
-    > Fixed an issue where casting a Frostfire Bolt and then switching to Spellslinger
-      Hero Specialization would cause Frostbolt to have the Splitting Ice damage
-      multiplier apply to the main target in addition to the secondary target.
-    > Fixed an issue where a Splitting Ice Frostbolt had a smaller search radius for
-      its second target than other spells.
-    > Fixed an issue with Shatter where if two Ice Lances were in the air at the
-      same time, with the first benefitting from Fingers of Frost and the second
-      not, neither would benefit from Fingers of Frost. This could also occur with
-      Thermal Void, which is also fixed.
-    > Fixed an issue with Crystalline Refraction where interrupting Ray of Frost by
-      casting Ray of Frost could cause it to not generate Fingers of Frost.
+    > Several Arcane spells have been added to the Spell Density system for
+      additional visibility options for non-Mage players.
+  • Frost
+    > Fixed an issue where Splitting Ice's damage modifier would not apply
+      to Frostbolt, causing both Frostbolts to hit for full damage.
+    > Fixed an issue where casting a Frostfire Bolt and then switching to
+      Spellslinger Hero Specialization would cause Frostbolt to have the
+      Splitting Ice damage multiplier apply to the main target in addition
+      to the secondary target.
+    > Fixed an issue where a Splitting Ice Frostbolt had a smaller search
+      radius for its second target than other spells.
+    > Fixed an issue with Shatter where if two Ice Lances were in the air
+      at the same time, with the first benefitting from Fingers of Frost
+      and the second not, neither would benefit from Fingers of Frost. This
+      could also occur with Thermal Void, which is also fixed.
+    > Fixed an issue with Crystalline Refraction where interrupting Ray of
+      Frost by casting Ray of Frost could cause it to not generate Fingers
+      of Frost.
     > Frostfire
-        + Fixed an issue preventing Frostfire Empowerment's effects from applying to
-          the second target when Frostfire Bolt hit a second target due to
-          Splitting Ice.
-        + Frostfire Infusion's tooltip has been updated, functionality unchanged.
+      + Fixed an issue preventing Frostfire Empowerment's effects from
+        applying to the second target when Frostfire Bolt hit a second
+        target due to Splitting Ice.
+      + Frostfire Infusion's tooltip has been updated, functionality
+        unchanged.
     > Spellslinger
-        + Splinterstorm is now trackable in the Cooldown Manager as a Buff.
-        + Splinterstorm is no longer removed on start of a raid encounter or Mythic+.
+      + Splinterstorm is now trackable in the Cooldown Manager as a Buff.
+      + Splinterstorm is no longer removed on start of a raid encounter or
+        Mythic+.
     ]=],
     monkChangesPatch = [=[
-• Fixed an issue where Transcendence: Transfer could be used while silenced if talented
-  into Transcendence: Linked Spirits.
+• Fixed an issue where Transcendence: Transfer could be used while
+    silenced if talented into Transcendence: Linked Spirits.
     ]=],
     paladinChangesPatch = [[
     ]],
     priestChangesPatch = [=[
 • Discipline
     > Master the Darkness duration reduced to 30 seconds (was 1 minute).
-• Holy
-    > Holy Celerity and Ultimate Serenity have swapped positions on the specialization
-      tree.
-        + Developers' notes: Ultimate Serenity is a powerful tool for Holy priests,
-          specifically in M+. We are moving it up in the talent tree to reduce the
-          amount of investment required for Holy priests to take it so that it enables
-          more choice amongst talents beyond the second gate.
+  • Holy
+    > Holy Celerity and Ultimate Serenity have swapped positions on the
+      specialization tree.
+      + Developer's Notes: Ultimate Serenity is a powerful tool for Holy
+        priests, specifically in M+. We are moving it up in the talent tree
+        to reduce the amount of investment required for Holy priests to
+        take it so that it enables more choice amongst talents beyond the
+        second gate.
     ]=],
     rogueChangesPatch = [=[
 • Shiv no longer incorrectly plays an impact visual on the Rogue.
-• Assassination
+  • Assassination
     > Mutilate has an updated weapon trail.
-    > Crimson Tempest animation has been updated and now has a weapon trail.
-• Outlaw
-    > Deft Maneuvers has been updated – No longer increases Blade Flurry's Energy cost
-      by 30. Instead, it increases Blade Flurry's Energy cost by 5 per target hit, up
-      to 30.
-        + Developers' notes: This change is intended to make it a little less
-          expensive to maintain Blade Flurry when fighting small numbers of
-          additional targets.
-• Subtlety
-    > All modifiers to Shadow damage and many Shadow damage abilities have been
-      updated to resolve circumstances where damage bonuses could be applied
-      incorrectly.
-        + Developers' notes: Shadow damage bonuses should now consistently apply to
-          any individual Shadow damage abilities (e.g. Secret Technique's secondary
-          hits, Shadowed Finishers attacks, and Shadow Cloned attacks). Effects that
-          deal Shadow damage based on how much damage attacks dealt (e.g. Shadow
-          Blades' effect, Goremaw's Bite mirror damage effect, and Lingering Shadow)
-          should now benefit correctly when the input attacks are physical and no
-          longer double dip when the input attacks are Shadow. The impact these
-          changes will have on overall damage output remains under review.
+    > Crimson Tempest animation has been updated and now has a weapon
+      trail.
+  • Outlaw
+    > Deft Maneuvers has been updated - No longer increases Blade Flurry's
+      Energy cost by 30. Instead, it increases Blade Flurry's Energy cost
+      by 5 per target hit, up to 30.
+      + Developer's Notes: This change is intended to make it a little
+        less expensive to maintain Blade Flurry when fighting small
+        numbers of additional targets.
+  • Subtlety
+    > All modifiers to Shadow damage and many Shadow damage abilities have
+      been updated to resolve circumstances where damage bonuses could be
+      applied incorrectly.
+      + Developer's Notes: Shadow damage bonuses should now consistently
+        apply to any individual Shadow damage abilities (e.g. Secret
+        Technique's secondary hits, Shadowed Finishers attacks, and Shadow
+        Cloned attacks). Effects that deal Shadow damage based on how much
+        damage attacks dealt (e.g. Shadow Blades' effect, Goremaw's Bite
+        mirror damage effect, and Lingering Shadow) should now benefit
+        correctly when the input attacks are physical and no longer double
+        dip when the input attacks are Shadow. The impact these changes
+        will have on overall damage output remains under review.
     > Shadow Blades has an updated cast visual and weapon visual.
     > All ability damage increased by 14%.
-        + Developers' notes: We're increasing Subtlety's ability damage to compensate
-          for the changes to Subtlety's Shadow damage modifiers and any occurrences
-          where those modifiers were previously applying their effects more than
-          once.
+      + Developer's Notes: We're increasing Subtlety's ability damage to
+        compensate for the changes to Subtlety's Shadow damage modifiers
+        and any occurrences where those modifiers were previously applying
+        their effects more than once.
     ]=],
     shamanChangesPatch = [=[
 • Enhancement
-    > Fixed an issue where Static Accumulation could cause Maelstrom Weapon
-      stacks to stop automatically generating if activated during certain points of
-      Ascendance or Doom Winds being active.
-• Restoration
-    > Extending Riptide through Swelling Tides now causes Riptide's timer to extend
-      rather than reset.
-    > Fixed an issue where Nature's Swiftness and Ancestral Swiftness did not
-      properly make Healing Rain instant cast.
+    > Fixed an issue where Static Accumulation could cause Maelstrom
+      Weapon stacks to stop automatically generating if activated during
+      certain points of Ascendance or Doom Winds being active.
+  • Restoration
+    > Extending Riptide through Swelling Tides now causes Riptide's timer
+      to extend rather than reset.
+    > Fixed an issue where Nature's Swiftness and Ancestral Swiftness did
+      not properly make Healing Rain instant cast.
     ]=],
     warlockChangesPatch = [[
     ]],
@@ -461,13 +478,13 @@ WARBAND REPUTATION
 • Protection
     > Execute damage increased by 30%.
     > Colossus
-        + Developers' notes: Colossus is intended to reflect a Warrior's innate
-          prowess and skill, and this represents itself for Protection by being more
-          efficient with Rage. We feel that Colossus will benefit from having more
-          efficient access to Revenge and Execute for a more unique rotation and
-          better threat management tools.
-        + Practiced Strikes now has an additional effect – Execute and Revenge Rage
-          cost reduced by 10.
+      + Developer's Notes: Colossus is intended to reflect a Warrior's
+        innate prowess and skill, and this represents itself for Protection
+        by being more efficient with Rage. We feel that Colossus will
+        benefit from having more efficient access to Revenge and Execute
+        for a more unique rotation and better threat management tools.
+      + Practiced Strikes now has an additional effect - Execute and
+        Revenge Rage cost reduced by 10.
     ]=],
     addonChanges = {
         {
