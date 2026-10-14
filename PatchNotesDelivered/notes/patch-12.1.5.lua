@@ -14,7 +14,7 @@ PatchNotesDelivered_Notes_1215 = {
     gameChangesHotfixes = {
         {
             date = "2026-10-14",
-            text = [["It's working, but at what cost?"]]
+            text = [["    It's working, but at what cost?"]]
         }
     },
     gameChangesPatch = {
