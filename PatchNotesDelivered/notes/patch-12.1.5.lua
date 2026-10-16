@@ -9,9 +9,31 @@
 --- Max line length [90] -----------------------------------------------------------------
 PatchNotesDelivered_Notes_1215 = {
     version = "12.1.5",
-    build = "70340",
-    hotfix = 0,
+    build = "70391",
+    hotfix = 1,
     gameChangesHotfixes = {
+        {
+            date = "2026-10-15",
+            text = [=[
+Items
+        • Fixed an issue where faction-specific mounts were hidden from the Mount Journal
+          on characters of the opposite faction.
+
+    Labyrinth
+        • Fixed an issue where Sullied Revenant and Sha’Kuro's health would not reset
+          properly when failing the encounter.
+        • Impressive Treasure Chest, Impressive Treasure Pile, and Impressive Treasure
+          Trove now require level 80 to loot (was 90).
+        • Scenario bosses should now properly give credit if defeated a second time on
+          the same run.
+
+    Quests
+        • Battle for Azeroth quests should no longer be appearing on the quest logs of
+          characters that didn't complete them when outside of Battle for Azeroth content.
+        • Fixed an issue where quest NPCs weren't available to turn in De Legend of de
+          Hash'ey in Zul'Aman.
+            ]=],
+        },
         {
             date = "2026-10-14",
             text = [[    It's working, but at what cost?]]
