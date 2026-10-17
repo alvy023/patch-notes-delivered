@@ -30,6 +30,22 @@ where:
 
 [3.0.0]: https://github.com/alvy023/patch-notes-delivered/releases/tag/v3.0.0
 
+## [2.12.96] - 2026-10-16
+### Added
+- Added 12.1.5 hotfix notes for October 15, 2026
+### Changed
+- Updated TOC to 2.12.96
+
+[2.12.96]: https://github.com/alvy023/patch-notes-delivered/releases/tag/v2.12.96
+
+## [2.12.95] - 2026-10-13
+### Added
+- Added 12.1.5 patch notes for 12.1.5 Content Update
+### Changed
+- Updated TOC to 2.12.95
+
+[2.12.95]: https://github.com/alvy023/patch-notes-delivered/releases/tag/v2.12.95
+
 ## [2.12.94] - 2026-10-10
 ### Added
 - Added 12.1.0 hotfix notes for October 6, 2026
