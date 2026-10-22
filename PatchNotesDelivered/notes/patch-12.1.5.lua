@@ -111,8 +111,8 @@ Labyrinth and Delves
     • Fixed a rare issue that could cause players to fall through the map in
       The Speaker's Chamber area of The Labyrinth of Kindo'jan.
     • The Loa-Blessed Wayfarer mount and Loa-Blessed Victory toy are now granted after
-      completing the labyrinth by speaking with Kinduru if they were forgotten to be
-      looted from the Ancestral Bounty chest before leaving.
+      completing the labyrinth by speaking with Kinduru if players forgot to loot them
+      from the Ancestral Bounty chest before leaving.
     • Fixed an issue where some creatures and bosses scaled their health and damage
       values higher than intended when playing in a group.
     • Fixed an issue where Sha'kuro's Soul Storm could be interrupted before all
@@ -129,7 +129,7 @@ Items
       on characters of the opposite faction.
 
 Labyrinth
-    • Fixed an issue where Sullied Revenant and Sha’Kuro's health would not reset
+    • Fixed an issue where Sullied Revenant and Sha’kuro's health would not reset
       properly when failing the encounter.
     • Impressive Treasure Chest, Impressive Treasure Pile, and Impressive Treasure
       Trove now require level 80 to loot (was 90).
@@ -174,9 +174,9 @@ Labyrinth
       when Kindo'jan reached 1 health.
     • Fixed an issue in the Returning the Bounty scenario that could sometimes prevent
       the initial bag interaction from being completable.
-    • Fixed an issue in the Returning the Bounty scenario where Hording Looters could
+    • Fixed an issue in the Returning the Bounty scenario where Hoarding Looters could
       sometimes stop spawning.
-    • Fixed an issue where Ancient Hash'ey Battle Arts enchantment effects can trigger
+    • Fixed an issue where Ancient Hash'ey Battle Arts enchantment effects could trigger
       outside of delves and The Labyrinth of Kindo'jan.
     • Increased the maximum item level for the Ancient Hash'ey Battle Art enchantment
       to 344 (was 334).
@@ -188,8 +188,8 @@ Labyrinth
 Quests
     • Ancient Foes in the Vaults of Atal'Utek will now properly reward Primordial
       Venom Motes to players who defeat them while in raid groups.
-    • Fixed issue where NPCs in Amani'Zar Village weren't visible during the quest
-      De Legend of de Hash’ey.
+    • Fixed an issue where NPCs in Amani'Zar Village weren't visible during the quest
+      De Legend of de Hash'ey.
             ]=],
         },
         {
@@ -280,7 +280,7 @@ Dungeons and Raids
             + The number of players Dreadmarch targets reduced to 3 on Mythic
               difficulty (was 4).
             + Manifestations of Dread now immediately display their red glow visuals
-              to their fixated target the moment they began fixating on
+              to their fixated target the moment they begin fixating on
               all difficulties.
             + Manifestations of Dread now despawn if their fixated target dies instead
               of re-fixating on a new player on all difficulties.
