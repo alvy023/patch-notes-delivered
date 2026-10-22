@@ -9,9 +9,118 @@
 --- Max line length [90] -----------------------------------------------------------------
 PatchNotesDelivered_Notes_1215 = {
     version = "12.1.5",
-    build = "70391",
-    hotfix = 3,
+    build = "70448",
+    hotfix = 4,
     gameChangesHotfixes = {
+        {
+            date = "2026-10-21",
+            text = [=[
+Labyrinth
+    • Players can now speak to Kinduru in De Empire's Rest antechamber to leave the
+      labyrinth while on the Kindo'jan scenario.
+    • Fixed an issue where L00T RAID-R Minis could not be used in a group inside
+      the labyrinth.
+    • The lever to start the scenario A Golden Opportunity in the Labyrinth of Kindo'jan
+      can now be used by players level 80 and above.
+    • Players can now hold up to 4 stacks of the Carrying a Jan'alai Tear buff at a
+      time (was 1).
+    • Fixed an issue in the Returning the Bounty scenario that could cause the Pit Boss
+      to despawn when it left combat, preventing the scenario from completing.
+
+Items
+    • Fixed an issue where the Seriously Sharp Seashell effect from Gebbo's Bottomless
+      Bag could break stealth and invisibility effects.
+    • Fixed an issue where Jan'thrazet, the Soul Fang could sometimes fail to trigger
+      reliably from the start of combat for healers.
+    • Fixed an issue preventing Nebulous Voidcache bonus roll item list previews from
+      updating as items were acquired and removed from consideration. This was only
+      a display issue and did not affect which items a character was eligible for.
+
+Player versus Player
+    • Priest
+        > Holy
+            + Fixed an issue where Sanctified Ground applying to allies would interrupt
+              channeled spells such as Divine Hymn.
+            ]=],
+        },
+        {
+            date = "2026-10-20",
+            text = [=[
+Achievements
+    • The availability of Fabled: Let Me Solo Him: Kindo'jan has been extended and can
+      now be earned until weekly maintenance during the week of October 27.
+
+Labyrinth
+    • Fixed an issue that could sometimes prevent the Fools and Curses scenario
+      from completing.
+    • Fixed an issue where Spirit Conduit Loa powers could be used during
+      Kindo'jan's fight.
+
+Items
+    • Mistcrests are now uncapped.
+    • Ascendant Venomstones are now available after completing the quest
+      Ascending with Venomstones.
+    • The Ancient Hash'ey Battle Art glove enchantments can now be applied to Warbound
+      Until Equipped items.
+    • The Void Eruption effect on Kith'ix's armor pieces can no longer hit targets you
+      aren't in combat with.
+
+Player versus Player
+    • Conquest and Bloody Tokens are now uncapped.
+    • The Spoils of War buff is now available – Conquest gains increased by 50% and
+      Honor gains increased by 40% in Battlegrounds and Arenas.
+    • The Venomous Equipment Chest is now available for purchase from the conquest
+      quartermaster, Irissa Bloodstar.
+
+Quests
+    • The furbolgs required for the quest Not Quite Nalorakk have returned from
+      their hibernation.
+    • Fixed an issue where spending Nebulous Voidcores on non-raid sources would not
+      grant credit towards completing the A Nebulous Endeavour tutorial quest. This
+      objective will be completed the next time a character spends a Nebulous Voidcore
+      on any Season 2 bonus roll source.
+    • Resolved an issue where the Skardyn Behemoth could become unattackable, preventing
+      completion of Draw Its Ire.
+    • Fixed an issue that prevented the completion of the Voidstorm quest To Be Changed.
+            ]=],
+        },
+        {
+            date = "2026-10-16",
+            text = [=[
+Dungeons and Raids
+    • Murder Row
+        > Added a visual indicating the safe zone of a barrel during Murder in a Row.
+            + Developers’ notes: Recently, we addressed an issue where Zaen Bladesorrow’s
+              Murder in a Row could incorrectly assign a player’s safe spot to
+              a barrel they weren’t hiding behind. With the fix, players must stand
+              closer to a barrel to be protected. To better communicate this change,
+              each barrel will now have a visual indicator showing the radius of the
+              safe area players need to hide behind a barrel during Murder in a Row.
+    • The Venomous Abyss
+        > The Coiled Altar
+            + Fixed an issue where the achievement Watch Out Behind You was unable to be
+              completed by raid groups larger than 20 players.
+
+Labyrinth and Delves
+    • Fixed an issue with the Returning the Bounty scenario in Jan'alai's Refuge that
+      would occasionally prevent the Pit Boss from spawning in the labyrinth.
+    • Fixed an issue that caused Valeera’s Stagger to not function when there was
+      a healer present in the delve or labyrinth.
+    • Fixed an issue that caused the Scar of Kathra’natir damage over time effect to
+      deal more damage to Valeera than intended.
+    • Fixed a rare issue that could cause players to fall through the map in
+      The Speaker's Chamber area of The Labyrinth of Kindo'jan.
+    • The Loa-Blessed Wayfarer mount and Loa-Blessed Victory toy are now granted after
+      completing the labyrinth by speaking with Kinduru if players forgot to loot them
+      from the Ancestral Bounty chest before leaving.
+    • Fixed an issue where some creatures and bosses scaled their health and damage
+      values higher than intended when playing in a group.
+    • Fixed an issue where Sha'kuro's Soul Storm could be interrupted before all
+      Unfortunate Souls were defeated, negating the damage window gained from the stun.
+    • Fixed an issue where L00T RAID-R Mini could only be used once while inside
+      The Labyrinth of Kindo'jan.
+            ]=],
+        },
         {
             date = "2026-10-15",
             text = [=[
@@ -20,7 +129,7 @@ Items
       on characters of the opposite faction.
 
 Labyrinth
-    • Fixed an issue where Sullied Revenant and Sha’Kuro's health would not reset
+    • Fixed an issue where Sullied Revenant and Sha’kuro's health would not reset
       properly when failing the encounter.
     • Impressive Treasure Chest, Impressive Treasure Pile, and Impressive Treasure
       Trove now require level 80 to loot (was 90).
@@ -65,9 +174,9 @@ Labyrinth
       when Kindo'jan reached 1 health.
     • Fixed an issue in the Returning the Bounty scenario that could sometimes prevent
       the initial bag interaction from being completable.
-    • Fixed an issue in the Returning the Bounty scenario where Hording Looters could
+    • Fixed an issue in the Returning the Bounty scenario where Hoarding Looters could
       sometimes stop spawning.
-    • Fixed an issue where Ancient Hash'ey Battle Arts enchantment effects can trigger
+    • Fixed an issue where Ancient Hash'ey Battle Arts enchantment effects could trigger
       outside of delves and The Labyrinth of Kindo'jan.
     • Increased the maximum item level for the Ancient Hash'ey Battle Art enchantment
       to 344 (was 334).
@@ -79,8 +188,8 @@ Labyrinth
 Quests
     • Ancient Foes in the Vaults of Atal'Utek will now properly reward Primordial
       Venom Motes to players who defeat them while in raid groups.
-    • Fixed issue where NPCs in Amani'Zar Village weren't visible during the quest
-      De Legend of de Hash’ey.
+    • Fixed an issue where NPCs in Amani'Zar Village weren't visible during the quest
+      De Legend of de Hash'ey.
             ]=],
         },
         {
@@ -171,7 +280,7 @@ Dungeons and Raids
             + The number of players Dreadmarch targets reduced to 3 on Mythic
               difficulty (was 4).
             + Manifestations of Dread now immediately display their red glow visuals
-              to their fixated target the moment they began fixating on
+              to their fixated target the moment they begin fixating on
               all difficulties.
             + Manifestations of Dread now despawn if their fixated target dies instead
               of re-fixating on a new player on all difficulties.
