@@ -9,9 +9,44 @@
 --- Max line length [90] -----------------------------------------------------------------
 PatchNotesDelivered_Notes_1215 = {
     version = "12.1.5",
-    build = "70448",
-    hotfix = 4,
+    build = "70575",
+    hotfix = 5,
     gameChangesHotfixes = {
+        {
+            date = "2026-10-23",
+            text = [=[
+Classes
+    • Shaman
+        > Enhancement
+            + Resolved an issue causing Surging Elements to not appear on the
+              Cooldown Manager.
+    • Warlock
+        > Fixed issues that caused some warlock summons and Diabolic Occuli to sometimes
+          incorrectly target enemies outside of combat. This corrects summons from
+          Affliction's Shadows of Nath'reza, Demonology's Dominion of Argus, as well as
+          Diabolist summons.
+
+Dungeons
+    • Den of Nalorakk
+        > Addressed an issue where Nalorakk's Echoing Maul can sometimes happen in the
+          wrong location.
+    • Murder Row
+        > Addressed an issue where Nibbles' Fel Spray can hit targets outside of the
+          intended area.
+
+Hallow’s End
+    • Neighborhoods
+        > Players can now exit combat with the Shade of Seabreaker Skoloth.
+
+Items
+    • Fixed an issue that caused items upgraded with Ascendant Venomstones to have
+      incorrect item levels.
+
+Labyrinth
+    • Shorter character models will no longer fall through floor when respawning in
+      Jan'alai's Refuge.
+            ]=],
+        },
         {
             date = "2026-10-21",
             text = [=[
