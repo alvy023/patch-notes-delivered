@@ -21,7 +21,7 @@ Classes
             + Resolved an issue causing Surging Elements to not appear on the
               Cooldown Manager.
     • Warlock
-        > Fixed issues that caused some warlock summons and Diabolic Occuli to sometimes
+        > Fixed issues that caused some warlock summons and Diabolic Oculi to sometimes
           incorrectly target enemies outside of combat. This corrects summons from
           Affliction's Shadows of Nath'reza, Demonology's Dominion of Argus, as well as
           Diabolist summons.
@@ -43,7 +43,7 @@ Items
       incorrect item levels.
 
 Labyrinth
-    • Shorter character models will no longer fall through floor when respawning in
+    • Shorter character models will no longer fall through the floor when respawning in
       Jan'alai's Refuge.
             ]=],
         },
