@@ -10,10 +10,43 @@
 PatchNotesDelivered_Notes_1215 = {
     version = "12.1.5",
     build = "70575",
-    hotfix = 5,
+    hotfix = 6,
     gameChangesHotfixes = {
         {
-            date = "2026-10-23",
+            date = "October 26, 2026",
+            text = [=[
+Classes
+    • Shaman
+        > Enhancement
+            + Resolved an issue causing Voltaic Blaze to not hit secondary targets when
+              Ula'tek is the main target.
+    • Warlock
+        > Affliction
+            + Fixed an issue where the Cooldown Manager would sometimes not display
+              Summon Darkglare correctly.
+
+Hallow’s End
+    • Neighborhoods
+        > Now only one chest will spawn when capturing Shade of Seabreaker Skoloth.
+
+Labyrinth
+    • Fixed an issue in The Wandering scenario that would cause the Remnant to stop
+      moving for a moment when additional players walked in and out of the spirit's
+      tether proximity.
+    • Fixed an issue in the Containment Breach scenario where re-igniting a single Flame
+      of Jan'alai brazier counted twice toward the Flames Relit objective.
+    • Fixed an issue that would sometimes cause the Come to Your Senses bonus objective
+      to complete multiple times outside the Encroaching Darkness scenario.
+
+Player versus Player
+    • Paladin
+        > Holy
+            + Fixed an issue that caused Spreading the Word to place Cleanse on cooldown
+              when casting Blessing of Protection.
+            ]=],
+        },
+        {
+            date = "October 23, 2026",
             text = [=[
 Classes
     • Shaman
@@ -48,7 +81,7 @@ Labyrinth
             ]=],
         },
         {
-            date = "2026-10-21",
+            date = "October 21, 2026",
             text = [=[
 Labyrinth
     • Players can now speak to Kinduru in De Empire's Rest antechamber to leave the
@@ -79,7 +112,7 @@ Player versus Player
             ]=],
         },
         {
-            date = "2026-10-20",
+            date = "October 20, 2026",
             text = [=[
 Achievements
     • The availability of Fabled: Let Me Solo Him: Kindo'jan has been extended and can
@@ -120,7 +153,7 @@ Quests
             ]=],
         },
         {
-            date = "2026-10-16",
+            date = "October 16, 2026",
             text = [=[
 Dungeons and Raids
     • Murder Row
@@ -157,7 +190,7 @@ Labyrinth and Delves
             ]=],
         },
         {
-            date = "2026-10-15",
+            date = "October 15, 2026",
             text = [=[
 Items
     • Fixed an issue where faction-specific mounts were hidden from the Mount Journal
@@ -179,7 +212,7 @@ Quests
             ]=],
         },
         {
-            date = "2026-10-14",
+            date = "October 14, 2026",
             text = [=[
 Aqir Invasions
     • Fixed an issue where the final boss of the invasion was not properly randomizing
@@ -228,7 +261,7 @@ Quests
             ]=],
         },
         {
-            date = "2026-10-13",
+            date = "October 13, 2026",
             text = [=[
 Dungeons and Raids
     • Altar of Fangs
@@ -339,7 +372,7 @@ Dungeons and Raids
     },
     gameChangesPatch = {
         {
-            date = "2026-10-14",
+            date = "October 14, 2026",
             text = [=[
 Midnight's 12.1.5 content update brings the Labyrinth of Kindo'jan—a massive
 nine-chamber Delve-like challenge, a new single-boss raid, Season 2's mid-season
@@ -791,7 +824,7 @@ WARBAND REPUTATION
     ]=],
     addonChanges = {
         {
-            date = "2026-10-14",
+            date = "October 14, 2026",
             text = [["Working on Forever support..."]]
         }
     },
