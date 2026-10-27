@@ -10,8 +10,41 @@
 PatchNotesDelivered_Notes_1215 = {
     version = "12.1.5",
     build = "70575",
-    hotfix = 5,
+    hotfix = 6,
     gameChangesHotfixes = {
+        {
+            date = "2026-10-26",
+            text = [=[
+Classes
+    • Shaman
+        > Enhancement
+            + Resolved an issue causing Voltaic Blaze to not hit secondary targets when
+              Ula'tek is the main target.
+    • Warlock
+        > Affliction
+            + Fixed an issue where the Cooldown Manager would sometimes not display
+              Summon Darkglare correctly.
+
+Hallow’s End
+    • Neighborhoods
+        > Now only one chest will spawn when capturing Shade of Seabreaker Skoloth.
+
+Labyrinth
+    • Fixed an issue in The Wandering scenario that would cause the Remnant to stop
+      moving for a moment when additional players walked in and out of the spirits
+      tether proximity.
+    • Fixed an issue in the Containment Breach scenario where re-igniting a single Flame
+      of Jan'alai brazier counted twice toward the Flames Relit objective.
+    • Fixed an issue that would sometimes cause the Come to Your Senses bonus objective
+      to complete multiple times outside the Encroaching Darkness scenario.
+
+Player versus Player
+    • Paladin
+        > Holy
+            + Fixed an issue that caused Spreading the Word to place Cleanse on cooldown
+              when casting Blessing of Protection.
+            ]=],
+        },
         {
             date = "2026-10-23",
             text = [=[
