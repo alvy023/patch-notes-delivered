@@ -83,8 +83,8 @@ Player versus Player
     • Hunter
         > Marksmanship
             + Kill Shot damage increased by 40% in PvP combat.
-            + Deathblow’s chance to be activated by Aimed Shot increased to 25%
-              in PvP combat.
+            + Deathblow’s chance to be activated by Aimed Shot increased to 25% in
+              PvP combat.
             + Dark Ranger: Black Arrow damage increased by 40% in PvP combat.
     • Mage
         > Fire
@@ -102,8 +102,8 @@ Player versus Player
             + Developers’ notes: Conduit of the Celestials has not been a competitive
               option for Mistweavers this season, so we’re increasing its consistent and
               burst healing.
-            + Conduit of the Celestials: Celestial Conduit healing increased by 35%
-              in PvP combat.
+            + Conduit of the Celestials: Celestial Conduit healing increased by 35% in
+              PvP combat.
             + Conduit of the Celestials: Strength of the Black Ox absorb increased by 25%
               in PvP combat.
     • Paladin
@@ -111,8 +111,8 @@ Player versus Player
             + Developers’ notes: Holy Paladin’s throughput has been underperforming and
               we’re decreasing the mana cost of Holy Light to promote casted healing.
             + All healing increased by 5% in PvP combat.
-            + Divine Favor now reduces the mana cost of Holy Light by 50% in PvP
-              combat (was 30%).
+            + Divine Favor now reduces the mana cost of Holy Light by 50% in PvP combat
+              (was 30%).
     • Priest
         > Holy
             + Developers’ notes: These changes are aimed at further improving Archon’s
@@ -135,8 +135,8 @@ Player versus Player
               by 15% in PvP combat (was 8%).
     • Shaman
         > Restoration
-            + Healing Stream Totem and Stormstream Totem healing increased by 20%
-              in PvP combat.
+            + Healing Stream Totem and Stormstream Totem healing increased by 20% in
+              PvP combat.
             ]=],
         },
         {
