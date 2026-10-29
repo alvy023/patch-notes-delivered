@@ -20,7 +20,7 @@ Classes
         > Feral
             + All damage done increased by 5%. Does not affect PvP combat.
         > Restoration
-            + Developer’s note: These changes are intended to help Restoration Druid deal
+            + Developer’s notes: These changes are intended to help Restoration Druid deal
               with burst damage in dungeons, as they are behind other healers. They are
               performing well in raid settings, so we are targeting talents and abilities
               that are favored when healing a 5-person group.
@@ -109,7 +109,7 @@ Player versus Player
     • Paladin
         > Holy
             + Developers’ notes: Holy Paladin’s throughput has been underperforming and
-              we’re decreasing the mana cost of Holy Light to promote casted healing.
+              we’re decreasing the mana cost of Holy Light to promote cast healing.
             + All healing increased by 5% in PvP combat.
             + Divine Favor now reduces the mana cost of Holy Light by 50% in PvP combat
               (was 30%).
