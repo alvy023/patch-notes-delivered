@@ -10,7 +10,7 @@
 PatchNotesDelivered_Notes_1215 = {
     version = "12.1.5",
     build = "70575",
-    hotfix = 7,
+    hotfix = 8,
     gameChangesHotfixes = {
         {
             date = "October 27, 2026",
