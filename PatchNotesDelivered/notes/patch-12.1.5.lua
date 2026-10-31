@@ -9,9 +9,27 @@
 --- Max line length [90] -----------------------------------------------------------------
 PatchNotesDelivered_Notes_1215 = {
     version = "12.1.5",
-    build = "70575",
+    build = "70688",
     hotfix = 8,
     gameChangesHotfixes = {
+        {
+            date = "October 30, 2026",
+            text = [=[
+Housing
+    • Tracking the source for the Nagrand plant decor sold by Botanist Gril'ka in Nagrand
+      now properly leads to her location.
+
+Items
+    • Azshara's Darkscale Cloak and Azshara's Deepscale Cloak were adjusted to resolve
+      a dividing line that was visible under specific lighting.
+
+Labyrinth
+    • Fixed an issue with the Voices of Stone bonus objective in the Bear's Burden
+      scenario that caused it to become stuck on the UI.
+    • Fixed an issue with The Wandering scenario that caused some Tether icons to
+      flicker erratically.
+            ]=],
+        },
         {
             date = "October 27, 2026",
             text = [=[
