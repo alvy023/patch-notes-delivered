@@ -20,8 +20,8 @@ Housing
       now properly leads to her location.
 
 Items
-    • Azshara's Darkscale Cloak and Azshara's Deepscale Cloak were adjusted to resolve
-      a dividing line that was visible under specific lighting.
+    • Azshara's Darkscale Cloak and Azshara's Deepscale Cloak were adjusted to resolve a
+      dividing line that was visible under specific lighting.
 
 Labyrinth
     • Fixed an issue with the Voices of Stone bonus objective in the Bear's Burden
