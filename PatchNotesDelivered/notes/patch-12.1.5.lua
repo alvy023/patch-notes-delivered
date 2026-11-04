@@ -9,8 +9,8 @@
 --- Max line length [90] -----------------------------------------------------------------
 PatchNotesDelivered_Notes_1215 = {
     version = "12.1.5",
-    build = "70688",
-    hotfix = 8,
+    build = "70783",
+    hotfix = 9,
     gameChangesHotfixes = {
         {
             date = "October 30, 2026",
