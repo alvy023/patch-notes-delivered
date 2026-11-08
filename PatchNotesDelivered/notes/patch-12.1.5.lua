@@ -43,8 +43,8 @@ Dungeons and Raids
               Heroic, and 36% on Mythic difficulties.
             + Falling Debris damage reduced by 46% on Raid Finder, 33% on Normal and
               Heroic, and 77% on Mythic difficulties.
-            + Viscous Echoes impact damage reduced by 53% and damage over time reduced by
-              25% on all difficulties.
+            + Viscous Echoes impact damage reduced by 53% and damage over time reduced
+              by 25% on all difficulties.
             + Reduced the number of eggs summoned by Call of the Serpent on Normal and
               Heroic difficulty.
             + Reduced the number of targets selected by Serpent's Bite on
@@ -56,8 +56,8 @@ Dungeons and Raids
             + Ula'tek no longer generates additional Caustic Waves from Spectral Tails
               when sending walls of waves across the platforms during Phase 3 on
               Heroic difficulty.
-            + Noxious Splash initial damage reduced by 33% and damage over time reduced by
-              84% on Mythic difficulty.
+            + Noxious Splash initial damage reduced by 33% and damage over time reduced
+              by 84% on Mythic difficulty.
             + Putrid Membrane duration reduced to 20 seconds (was 30 seconds) on
               Mythic difficulty.
             ]=],
