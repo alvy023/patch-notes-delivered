@@ -78,7 +78,7 @@ Dungeons and Raids
     • The Venomous Abyss
         > Entombed Sentinels
             + Reduced the maximum scale of Blood Venom pools on Heroic and
-              Mythic difficulty.
+              Mythic difficulties.
             + Blood Venom pool duration reduced to 2 minutes on Mythic difficulty
               (was 5 minutes).
         > Twin Fangs
