@@ -10,8 +10,58 @@
 PatchNotesDelivered_Notes_1215 = {
     version = "12.1.5",
     build = "70783",
-    hotfix = 9,
+    hotfix = 10,
     gameChangesHotfixes = {
+        {
+            date = "November 6, 2026",
+            text = [=[
+Dungeons and Raids
+    • The Venomous Abyss
+        > Vashnik, the Malignant
+            + Malignance damage reduced by 37% on Mythic difficulty.
+            + Malignance damage over time duration reduced to 16 seconds on
+              Mythic difficulty.
+        > Ula'tek
+            + Adjusted the health scaling on the following enemies on Raid Finder, Normal,
+              and Heroic difficulties to better account for smaller raid sizes. Their base
+              health has also been reduced on these difficulties to ensure the health
+              scaling does not increase their health with larger raid sizes.
+                - Ula'tek
+                - Blightscale Rawling
+                - Blightscale Viper
+                - Blightscale Shrieker
+                - Weakened Doomscale
+            + Ula'tek health reduced by 15% on Heroic difficulty.
+            + Unchecked Rage damage reduced by 61% on all difficulties.
+            + Caustic Waves impact damage reduced by 32% on Heroic and
+              Mythic difficulties.
+            + Caustic Waves damage over time reduced by 75% on Normal, 61% on Heroic, and
+              89% on Mythic difficulties.
+            + Malice damage reduced by 63% on Normal and Heroic difficulties, and 45% on
+              Mythic difficulty.
+            + Virulent Spit damage reduced by 46% on Raid Finder, 33% on Normal and
+              Heroic, and 36% on Mythic difficulties.
+            + Falling Debris damage reduced by 46% on Raid Finder, 33% on Normal and
+              Heroic, and 77% on Mythic difficulties.
+            + Viscous Echoes impact damage reduced by 53% and damage over time reduced by
+              25% on all difficulties.
+            + Reduced the number of eggs summoned by Call of the Serpent on Normal and
+              Heroic difficulties.
+            + Reduced the number of targets selected by Serpent's Bite on
+              all difficulties.
+            + Reduced the number of targets selected by Grasping Fangs on Normal and
+              Heroic difficulties.
+            + Removed 2 eggs from each side during Phase 2, reducing the total to 8 eggs
+              per side on Heroic difficulty.
+            + Ula'tek no longer generates additional Caustic Waves from Spectral Tails
+              when sending walls of waves across the platforms during Phase 3 on
+              Heroic difficulty.
+            + Noxious Splash initial damage reduced by 33% and damage over time reduced by
+              84% on Mythic difficulty.
+            + Putrid Membrane duration reduced to 20 seconds (was 30 seconds) on
+              Mythic difficulty.
+            ]=],
+        },
         {
             date = "November 5, 2026",
             text = [=[
@@ -28,7 +78,7 @@ Dungeons and Raids
     • The Venomous Abyss
         > Entombed Sentinels
             + Reduced the maximum scale of Blood Venom pools on Heroic and
-              Mythic difficulty.
+              Mythic difficulties.
             + Blood Venom pool duration reduced to 2 minutes on Mythic difficulty
               (was 5 minutes).
         > Twin Fangs
