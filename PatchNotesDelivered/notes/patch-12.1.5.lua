@@ -21,7 +21,7 @@ Dungeons and Raids
             + Malignance damage reduced by 37% on Mythic difficulty.
             + Malignance damage over time duration reduced to 16 seconds on
               Mythic difficulty.
-        > Ula’tek
+        > Ula'tek
             + Adjusted the health scaling on the following enemies on Raid Finder, Normal,
               and Heroic difficulties to better account for smaller raid sizes. Their base
               health has also been reduced on these difficulties to ensure the health
@@ -37,7 +37,7 @@ Dungeons and Raids
               Mythic difficulties.
             + Caustic Waves damage over time reduced by 75% on Normal, 61% on Heroic, and
               89% on Mythic difficulties.
-            + Malice damage reduced by 63% on Normal and Heroic difficulty, and 45% on
+            + Malice damage reduced by 63% on Normal and Heroic difficulties, and 45% on
               Mythic difficulty.
             + Virulent Spit damage reduced by 46% on Raid Finder, 33% on Normal and
               Heroic, and 36% on Mythic difficulties.
@@ -46,11 +46,11 @@ Dungeons and Raids
             + Viscous Echoes impact damage reduced by 53% and damage over time reduced by
               25% on all difficulties.
             + Reduced the number of eggs summoned by Call of the Serpent on Normal and
-              Heroic difficulty.
+              Heroic difficulties.
             + Reduced the number of targets selected by Serpent's Bite on
               all difficulties.
             + Reduced the number of targets selected by Grasping Fangs on Normal and
-              Heroic difficulty.
+              Heroic difficulties.
             + Removed 2 eggs from each side during Phase 2, reducing the total to 8 eggs
               per side on Heroic difficulty.
             + Ula'tek no longer generates additional Caustic Waves from Spectral Tails
