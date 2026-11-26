@@ -9,9 +9,25 @@
 --- Max line length [90] -----------------------------------------------------------------
 PatchNotesDelivered_Notes_1215 = {
     version = "12.1.5",
-    build = "70783",
-    hotfix = 10,
+    build = "70961",
+    hotfix = 11,
     gameChangesHotfixes = {
+        {
+            date = "November 24, 2026",
+            text = [=[
+Items
+    • Ascendant Venomstones will now drop in greater quantities depending on content
+      difficulty. More details about this change will be shared in an upcoming article.
+    • Content Type - Ascendant Venomstone Quantity
+        > Mythic Raid Bosses - 4
+        > Heroic Raid Bosses - 2
+        > Mythic Keystone Dungeon (+10) - 1
+        > Mythic Keystone Dungeon (+14) - 2
+        > Mythic Keystone Dungeon (+18) - 3
+        > Delve Bountiful Coffers (Tier 11) - 1
+        > Nightmare Prey Equipment Caches - 1
+            ]=],
+        },
         {
             date = "November 6, 2026",
             text = [=[
